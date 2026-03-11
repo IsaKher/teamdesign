@@ -50,7 +50,7 @@ export default function Navigation() {
             />
           </span>
           <span className={styles.divider} />
-          <span className={styles.firmName}>Team Design Architects</span>
+          <span className={styles.firmName}>Team Design</span>
         </Link>
 
         {/* Desktop nav links */}
