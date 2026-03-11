@@ -1,0 +1,191 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  transition: background var(--transition-nav), border-color var(--transition-nav);
+}
+
+.transparent {
+  background: rgba(20, 16, 12, 0.48);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(244, 238, 230, 0.08);
+}
+
+.solid {
+  background: var(--color-ground);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+/* Inner uses its own fluid padding — not the 80px page margin */
+.inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Fluid nav padding: tighter than page section padding */
+  padding: 0 clamp(24px, 5vw, 72px);
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ─── Wordmark ─────────────────────────────────────────────── */
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* PNG logo seal */
+.seal {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* On dark/transparent nav: force pure white seal */
+.transparent .logoImage {
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition-nav);
+}
+
+/* On solid/light nav: force pure black seal on warm beige */
+.solid .logoImage {
+  filter: brightness(0);
+  transition: filter var(--transition-nav);
+}
+
+.divider {
+  display: block;
+  width: 1px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.transparent .divider { background: rgba(244, 238, 230, 0.22); }
+.solid .divider { background: var(--color-rule); }
+
+/* Bold, pronounced firm name */
+.firmName {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: color var(--transition-nav);
+}
+
+.transparent .firmName { color: rgba(244, 238, 230, 0.95); }
+.solid .firmName { color: var(--color-text-primary); }
+
+/* ─── Desktop nav links — fluid gap, always fits ───────────── */
+.links {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  /* Gap scales with viewport so links never crowd or overflow */
+  gap: clamp(16px, 2.2vw, 40px);
+}
+
+.link {
+  font-family: var(--font-sans);
+  font-size: var(--size-nav);
+  font-weight: 400;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  transition: opacity 0.3s ease, color var(--transition-nav);
+  position: relative;
+  white-space: nowrap;
+}
+
+.transparent .link { color: rgba(244, 238, 230, 0.80); }
+.solid .link { color: var(--color-text-secondary); }
+
+.link:hover { opacity: 1 !important; }
+.transparent .link:hover { color: rgba(244, 238, 230, 1); }
+.solid .link:hover { color: var(--color-text-primary); }
+
+.active { opacity: 1; }
+.transparent .active { color: rgba(244, 238, 230, 1) !important; }
+.solid .active { color: var(--color-text-primary) !important; }
+
+/* ─── Mobile burger ────────────────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent .burger { color: rgba(244, 238, 230, 0.92); }
+.solid .burger { color: var(--color-text-primary); }
+
+/* ─── Mobile menu ──────────────────────────────────────────── */
+.mobileMenu {
+  background: var(--color-ground);
+  padding: 32px clamp(24px, 5vw, 72px) 40px;
+  border-top: 1px solid var(--color-rule);
+}
+
+.mobileLink {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.mobileContact {
+  margin-top: 24px;
+}
+
+.mobileContact a {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+
+/* Hide firm name at medium-narrow viewports to free space for links */
+@media (max-width: 1024px) {
+  .firmName {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .links { display: none; }
+  .burger { display: flex; }
+  .nav.menuOpen { background: var(--color-ground); }
+  .menuOpen .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .menuOpen .burger span:nth-child(2) { opacity: 0; }
+  .menuOpen .burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .menuOpen .logoImage { filter: brightness(0) !important; }
+  .menuOpen.transparent { background: var(--color-ground) !important; }
+}

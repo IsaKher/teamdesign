@@ -1,0 +1,111 @@
+/* ─── Testimonial Slider ──────────────────────────────────────────────────── */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  /* Reserve enough height so layout doesn't jump between slides */
+  min-height: 220px;
+}
+
+/* ─── Track: all slides in a row, moves horizontally ──────── */
+.track {
+  display: flex;
+  width: 100%;
+  /* Slow, silky swipe — 1.2s ease-out */
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-right: 8px; /* tiny right pad so text breathes at edge */
+}
+
+/* ─── Quote ─────────────────────────────────────────────────── */
+.quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  max-width: var(--body-max-width);
+}
+
+/* ─── Author ─────────────────────────────────────────────────── */
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-rule);
+}
+
+.authorName {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.authorTitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Progress bar ───────────────────────────────────────────── */
+.progressBar {
+  height: 1px;
+  background: var(--color-rule);
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-text-secondary);
+  animation: fillProgress linear forwards;
+  animation-play-state: running;
+}
+
+@keyframes fillProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ─── Dot navigation ─────────────────────────────────────────── */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 20px;
+  height: 1px;
+  background: var(--color-rule);
+  transition: background 0.4s ease, width 0.4s ease;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: var(--color-text-secondary);
+  width: 32px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .slider {
+    min-height: 260px;
+  }
+}

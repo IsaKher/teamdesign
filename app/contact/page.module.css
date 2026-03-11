@@ -1,0 +1,272 @@
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) var(--margin-page) 64px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.pageLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: var(--size-hero);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  line-height: var(--lh-body);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  padding: 80px var(--margin-page) var(--margin-section);
+  align-items: start;
+}
+
+/* ─── Info col ─────────────────────────────────────────── */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: sticky;
+  top: calc(var(--nav-height) + 40px);
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoLabel {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.address {
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.infoLink {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.infoLink:hover { color: var(--color-text-secondary); }
+
+.whatsappLink {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-whatsapp);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.whatsappLink:hover { opacity: 0.75; }
+
+.whatsappNote {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.infoText {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.responseNote {
+  padding: 24px;
+  background: var(--color-ground-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.responseName {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.responseText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Form ─────────────────────────────────────────────── */
+.formCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.formLabel {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.input,
+.textarea,
+.select {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-rule);
+  padding: 12px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  appearance: none;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-bottom-color: var(--color-text-primary);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-rule);
+}
+
+.textarea { resize: vertical; min-height: 160px; }
+
+.submit {
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.90);
+  background: var(--color-text-primary);
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+  margin-top: 8px;
+  border: none;
+}
+.submit:hover:not(:disabled) { background: #2e2620; }
+.submit:disabled { opacity: 0.55; cursor: default; }
+
+/* ─── Success state ─────────────────────────────────────────── */
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 40px;
+  background: var(--color-ground-dark);
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--color-text-primary);
+}
+
+.successText {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+  max-width: 440px;
+}
+
+.successWhatsapp {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-whatsapp);
+  transition: opacity 0.3s ease;
+  margin-top: 8px;
+}
+.successWhatsapp:hover { opacity: 0.75; }
+
+/* ─── Error state ───────────────────────────────────────────── */
+.errorMessage {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: #c0392b;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 48px; }
+  .infoCol { position: static; }
+}
+
+@media (max-width: 600px) {
+  .fieldRow { grid-template-columns: 1fr; }
+}

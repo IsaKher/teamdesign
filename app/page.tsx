@@ -1,0 +1,266 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './page.module.css';
+import TestimonialSlider from '@/components/TestimonialSlider';
+import type { Testimonial } from '@/components/TestimonialSlider';
+
+// Static content — replace with Sanity data once connected
+const STATS = [
+  { value: '25+', label: 'Years in Practice' },
+  { value: '300+', label: 'Projects Completed' },
+  { value: '500+', label: 'Clients Served' },
+  { value: '20L+ sq ft', label: 'Built Space' },
+];
+
+const FEATURED_PROJECTS = [
+  {
+    slug: 'mont-blanc-mariwala-residence',
+    title: 'Mont Blanc Residence',
+    client: 'Kishore Mariwala',
+    type: 'Residential',
+    location: 'August Kranti Marg, Mumbai',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+  },
+  {
+    slug: 'unilazer-ventures-office',
+    title: 'Unilazer Ventures Office',
+    client: 'Ronnie Screwvala',
+    type: 'Commercial',
+    location: 'Mumbai',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+  },
+  {
+    slug: 'jk-bank-business-centre',
+    title: 'National Business Centre',
+    client: 'J&K Bank',
+    type: 'Commercial',
+    location: 'BKC, Mumbai',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
+  },
+  {
+    slug: 'itm-college-navi-mumbai',
+    title: 'ITM College Extension',
+    client: 'ITM Group',
+    type: 'Institutional',
+    location: 'Navi Mumbai',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80',
+  },
+];
+
+const SELECTED_CLIENTS = [
+  { name: 'Kishore Mariwala', description: 'Founder, Marico', project: 'Mont Blanc Residence, Mumbai' },
+  { name: 'Ronnie Screwvala', description: 'Founder, UTV / UpGrad', project: 'Unilazer Ventures Office, Mumbai' },
+  { name: 'J&K Bank', description: 'National Commercial Bank', project: 'Business Centre, BKC Mumbai' },
+  { name: 'ITM Group', description: 'Educational Institution', project: 'College Extension & MBA Hostel, Navi Mumbai' },
+];
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    quote: 'Team Design managed the entire project lifecycle — from concept and design to contractor management, budget adherence, and on-time delivery. The result exceeded every expectation.',
+    name: 'Kishore Mariwala',
+    title: 'Founder, Marico',
+    project: 'Mont Blanc Residence, Mumbai',
+  },
+  {
+    quote: 'What struck us most was how the design translated our company\'s character into architecture. The Unilazer office doesn\'t just look good — it shapes how our teams think and collaborate every day.',
+    name: 'Ronnie Screwvala',
+    title: 'Founder, UTV / UpGrad',
+    project: 'Unilazer Ventures Office, Mumbai',
+  },
+  {
+    quote: 'The Business Centre sets a new standard for banking architecture in India. Team Design delivered a building that is both operationally rigorous and genuinely inspiring to work in.',
+    name: 'J&K Bank',
+    title: 'National Commercial Bank',
+    project: 'National Business Centre, BKC Mumbai',
+  },
+  {
+    quote: 'From the initial brief to handover, Team Design demonstrated exceptional professionalism at every stage. The ITM expansion has elevated the campus experience for thousands of students.',
+    name: 'ITM Group',
+    title: 'Educational Institution',
+    project: 'College Extension & MBA Hostel, Navi Mumbai',
+  },
+];
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ─── Hero ──────────────────────────────────────────────────────── */}
+      <section className={styles.hero}>
+        <div className={styles.heroImageWrap}>
+          <Image
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85"
+            alt="Team Design — Architecture & Interiors"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+            className={styles.heroImage}
+          />
+          <div className={styles.heroOverlayTop} />
+          <div className={styles.heroOverlayBottom} />
+        </div>
+
+        <div className={styles.heroText}>
+          <div className={styles.heroTaglineBlock}>
+            <span className={styles.heroLabel}>Mumbai · Est. 1999 · Architecture & Interiors</span>
+            <span className={styles.heroPhilosophy}>Spaces shaped by site, light, and the people who inhabit them.</span>
+          </div>
+          <h1 className={styles.heroTitle}>Team Design<br />Architects</h1>
+          <div className={styles.heroCtas}>
+            <Link href="/work" className={styles.heroCta}>View Our Work</Link>
+            <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Stat Bar ──────────────────────────────────────────────────── */}
+      <section className={styles.statBar}>
+        {STATS.map((stat, i) => (
+          <div key={i} className={styles.stat}>
+            <span className={styles.statValue}>{stat.value}</span>
+            <span className={styles.statLabel}>{stat.label}</span>
+          </div>
+        ))}
+      </section>
+
+      {/* ─── Selected Work ─────────────────────────────────────────────── */}
+      <section className={styles.workSection}>
+        <div className={styles.sectionHeader}>
+          <div>
+            <span className="label">Portfolio</span>
+            <h2 className={styles.sectionTitle}>Selected Work</h2>
+          </div>
+          <Link href="/work" className={styles.viewAll}>View All Work →</Link>
+        </div>
+
+        <div className={styles.categoryLinks}>
+          <Link href="/work?type=Residential" className={styles.categoryLink}>Residential</Link>
+          <Link href="/work?type=Commercial" className={styles.categoryLink}>Commercial</Link>
+          <Link href="/work?type=Institutional" className={styles.categoryLink}>Institutional</Link>
+          <Link href="/interiors" className={styles.categoryLink}>Interiors</Link>
+        </div>
+
+        <div className={styles.projectGrid}>
+          {FEATURED_PROJECTS.map((project) => (
+            <Link key={project.slug} href={`/work/${project.slug}`} className={styles.projectCard}>
+              <div className={styles.projectImageWrap}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                  className={styles.projectImage}
+                />
+                <div className={styles.projectOverlay}>
+                  <span className={styles.viewLabel}>View Project</span>
+                </div>
+              </div>
+              <div className={styles.projectMeta}>
+                <span className={styles.projectType}>{project.type}</span>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <span className={styles.projectClient}>{project.client} · {project.location}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Credentials ───────────────────────────────────────────────── */}
+      <section className={styles.credentials}>
+        <div className={styles.credentialsInner}>
+
+          {/* Testimonial carousel */}
+          <div className={styles.testimonialCol}>
+            <span className="label">Client Testimonials</span>
+            <TestimonialSlider testimonials={TESTIMONIALS} interval={6000} />
+          </div>
+
+          {/* Selected clients list */}
+          <div className={styles.clientsCol}>
+            <span className="label">Selected Clients</span>
+            <div className={styles.clientList}>
+              {SELECTED_CLIENTS.map((client, i) => (
+                <div key={i} className={styles.clientItem}>
+                  <div className={styles.clientLeft}>
+                    <span className={styles.clientName}>{client.name}</span>
+                    <span className={styles.clientDesc}>{client.description}</span>
+                  </div>
+                  <span className={styles.clientProject}>{client.project}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Press strip */}
+            <div className={styles.pressStrip}>
+              <span className={styles.pressStripLabel}>As featured in</span>
+              <div className={styles.pressStripLogos}>
+                {['Architectural Digest India', 'Architect & Interiors India', 'The Times of India'].map((pub) => (
+                  <span key={pub} className={styles.pressStripItem}>{pub}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Principal ─────────────────────────────────────────────────── */}
+      <section className={styles.principal}>
+        <div className={styles.principalInner}>
+          <div className={styles.principalImageCol}>
+            <div className={styles.principalImageWrap}>
+              <Image
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                alt="Tasadduq Kher — Principal Architect"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.principalTextCol}>
+            <span className="label">Principal Architect</span>
+            <h2 className={styles.principalName}>Tasadduq Kher</h2>
+            <p className={styles.principalBio}>
+              Tasadduq Kher founded Team Design in 1999 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over 25 years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
+            </p>
+            <p className={styles.principalBio}>
+              His approach begins with understanding how people live and work — then finding the design logic that serves those needs precisely. The result is work that is quiet rather than declarative, and enduring rather than fashionable.
+            </p>
+            <div className={styles.principalCredentials}>
+              <div className={styles.credential}>
+                <span className={styles.credValue}>B.Arch</span>
+                <span className={styles.credLabel}>Rachana Sansad Academy of Architecture, Mumbai</span>
+              </div>
+              <div className={styles.credential}>
+                <span className={styles.credValue}>1999</span>
+                <span className={styles.credLabel}>Year Practice Founded</span>
+              </div>
+            </div>
+            <Link href="/people" className={styles.principalLink}>Meet the Team →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Interiors CTA ─────────────────────────────────────────────── */}
+      <section className={styles.interiorsCta}>
+        <div className={styles.interiorsImageWrap}>
+          <Image
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=2000&q=80"
+            alt="Interior Design — Team Design"
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+          />
+          <div className={styles.interiorsOverlay} />
+        </div>
+        <div className={styles.interiorsContent}>
+          <span className="label" style={{ color: 'rgba(244,238,230,0.55)' }}>Interior Design</span>
+          <h2 className={styles.interiorsTitle}>Spaces that feel<br />like they belong to you.</h2>
+          <Link href="/interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
+        </div>
+      </section>
+    </>
+  );
+}
