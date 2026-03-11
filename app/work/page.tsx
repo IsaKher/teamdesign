@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const PROJECTS = [
   { slug: 'villa-lonavala', title: 'Weekend Villa', client: 'Private Client', type: 'Residential', location: 'Lonavala, Maharashtra', year: 2021, area: '4,200 sq ft', image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80' },
 ];
 
-export default function WorkPage() {
+function WorkContent() {
   const searchParams = useSearchParams();
   const typeParam = searchParams.get('type');
   const initial = FILTERS.includes(typeParam ?? '') ? typeParam! : 'All';
@@ -79,5 +79,13 @@ export default function WorkPage() {
         ))}
       </div>
     </>
+  );
+}
+
+export default function WorkPage() {
+  return (
+    <Suspense>
+      <WorkContent />
+    </Suspense>
   );
 }
