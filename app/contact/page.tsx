@@ -14,11 +14,13 @@ export default function ContactPage() {
 
     const form = e.currentTarget;
     const data = {
-      name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      name:    (form.elements.namedItem('name')    as HTMLInputElement).value,
+      phone:   (form.elements.namedItem('phone')   as HTMLInputElement).value,
+      email:   (form.elements.namedItem('email')   as HTMLInputElement).value,
       project: (form.elements.namedItem('project') as HTMLTextAreaElement).value,
-      type: (form.elements.namedItem('type') as HTMLSelectElement).value,
+      type:    (form.elements.namedItem('type')    as HTMLSelectElement).value,
+      // Honeypot — real users never fill this; bots do
+      website: (form.elements.namedItem('website') as HTMLInputElement)?.value ?? '',
     };
 
     try {
@@ -118,6 +120,15 @@ export default function ContactPage() {
             </div>
           ) : (
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
+              {/* Honeypot — visually hidden, only bots fill this in */}
+              <input
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+              />
               <div className={styles.fieldRow}>
                 <div className={styles.field}>
                   <label htmlFor="name" className={styles.label}>Your Name</label>
