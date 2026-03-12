@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans, Josefin_Sans } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -17,6 +17,13 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const josefinSans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['100', '300'],
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -70,7 +77,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${josefinSans.variable}`}>
       <body>
         <Navigation />
         <main>{children}</main>
