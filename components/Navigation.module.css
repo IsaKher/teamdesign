@@ -120,6 +120,70 @@
 .transparent .active { color: rgba(244, 238, 230, 1) !important; }
 .solid .active { color: var(--color-text-primary) !important; }
 
+/* ─── Desktop dropdown ─────────────────────────────────────── */
+
+/* Wrapper fills full nav height so hover area has no gap to dropdown */
+.navItem {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 164px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+
+.navItem:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Transparent state (hero pages, before scroll) */
+.transparent .dropdown {
+  background: rgba(20, 16, 12, 0.90);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 238, 230, 0.10);
+  border-top: none;
+}
+
+/* Solid state (non-hero pages, after scroll) */
+.solid .dropdown {
+  background: var(--color-ground);
+  border: 1px solid var(--color-rule);
+  border-top: none;
+}
+
+.dropdownLink {
+  font-family: var(--font-sans);
+  font-size: var(--size-nav);
+  font-weight: 400;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 24px;
+  white-space: nowrap;
+  transition: color 0.18s ease, padding-left 0.18s ease;
+}
+
+.transparent .dropdownLink { color: rgba(244, 238, 230, 0.60); }
+.solid .dropdownLink       { color: var(--color-text-secondary); }
+
+.transparent .dropdownLink:hover { color: rgba(244, 238, 230, 1); padding-left: 28px; }
+.solid .dropdownLink:hover       { color: var(--color-text-primary); padding-left: 28px; }
+
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {
   display: none;
@@ -155,6 +219,26 @@
   padding: 12px 0;
   border-bottom: 1px solid var(--color-rule);
 }
+
+.mobileSublinks {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 12px 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.mobileSublinkItem {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 8px 0 8px 24px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobileSublinkItem:hover { color: var(--color-text-primary); }
 
 .mobileContact {
   margin-top: 24px;

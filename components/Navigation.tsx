@@ -7,10 +7,26 @@ import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
 
 const navItems = [
-  { label: 'Work', href: '/work' },
-  { label: 'Interiors', href: '/interiors' },
-  { label: 'Studio', href: '/studio' },
-  { label: 'People', href: '/people' },
+  {
+    label: 'Work',
+    href: '/work',
+    dropdown: [
+      { label: 'Residential', href: '/work?type=Residential' },
+      { label: 'Commercial',  href: '/work?type=Commercial'  },
+      { label: 'Institutional', href: '/work?type=Institutional' },
+    ],
+  },
+  {
+    label: 'Interiors',
+    href: '/interiors',
+    dropdown: [
+      { label: 'Residential', href: '/interiors?type=Residential' },
+      { label: 'Commercial',  href: '/interiors?type=Commercial'  },
+      { label: 'Institutional', href: '/interiors?type=Institutional' },
+    ],
+  },
+  { label: 'Studio',  href: '/studio'  },
+  { label: 'People',  href: '/people'  },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -19,7 +35,6 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Only homepage and individual project pages have a full-screen dark hero
   const isHeroPage = pathname === '/' || pathname.startsWith('/work/');
 
   useEffect(() => {
@@ -55,15 +70,39 @@ export default function Navigation() {
 
         {/* Desktop nav links */}
         <nav className={styles.links}>
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.dropdown ? (
+              /* Items with dropdown — wrapper fills full nav height to close the gap */
+              <div key={item.href} className={styles.navItem}>
+                <Link
+                  href={item.href}
+                  className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
+                >
+                  {item.label}
+                </Link>
+
+                <div className={styles.dropdown}>
+                  {item.dropdown.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      className={styles.dropdownLink}
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Mobile menu toggle */}
@@ -82,9 +121,20 @@ export default function Navigation() {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={styles.mobileLink}>
-              {item.label}
-            </Link>
+            <div key={item.href}>
+              <Link href={item.href} className={styles.mobileLink}>
+                {item.label}
+              </Link>
+              {item.dropdown && (
+                <div className={styles.mobileSublinks}>
+                  {item.dropdown.map((sub) => (
+                    <Link key={sub.href} href={sub.href} className={styles.mobileSublinkItem}>
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <div className={styles.mobileContact}>
             <a href="tel:+919876543210">Call Studio</a>
