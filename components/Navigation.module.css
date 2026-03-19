@@ -1,10 +1,11 @@
+/* ─── Nav shell — min-height so it can expand for the sub-row ─ */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  height: var(--nav-height);
+  min-height: var(--nav-height);
   transition: background var(--transition-nav), border-color var(--transition-nav);
 }
 
@@ -19,14 +20,13 @@
   border-bottom: 1px solid var(--color-rule);
 }
 
-/* Inner uses its own fluid padding — not the 80px page margin */
+/* ─── Main nav row ─────────────────────────────────────────── */
 .inner {
   width: 100%;
-  height: 100%;
+  height: var(--nav-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Fluid nav padding: tighter than page section padding */
   padding: 0 clamp(24px, 5vw, 72px);
   max-width: 1440px;
   margin: 0 auto;
@@ -43,7 +43,6 @@
   min-width: 0;
 }
 
-/* PNG logo seal */
 .seal {
   position: relative;
   width: 68px;
@@ -53,13 +52,11 @@
   overflow: hidden;
 }
 
-/* On dark/transparent nav: force pure white seal */
 .transparent .logoImage {
   filter: brightness(0) invert(1);
   transition: filter var(--transition-nav);
 }
 
-/* On solid/light nav: force pure black seal on warm beige */
 .solid .logoImage {
   filter: brightness(0);
   transition: filter var(--transition-nav);
@@ -73,7 +70,7 @@
 }
 
 .transparent .divider { background: rgba(244, 238, 230, 0.22); }
-.solid .divider { background: var(--color-rule); }
+.solid .divider        { background: var(--color-rule); }
 
 /* Firm name — Josefin Sans geometric, architectural */
 .firmName {
@@ -87,15 +84,21 @@
 }
 
 .transparent .firmName { color: rgba(244, 238, 230, 0.95); }
-.solid .firmName { color: var(--color-text-primary); }
+.solid .firmName        { color: var(--color-text-primary); }
 
-/* ─── Desktop nav links — fluid gap, always fits ───────────── */
+/* ─── Desktop nav links ────────────────────────────────────── */
 .links {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  /* Gap scales with viewport so links never crowd or overflow */
   gap: clamp(16px, 2.2vw, 40px);
+}
+
+/* Wrapper for each link — needed for hover events */
+.navItem {
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
 }
 
 .link {
@@ -110,79 +113,62 @@
 }
 
 .transparent .link { color: rgba(244, 238, 230, 0.80); }
-.solid .link { color: var(--color-text-secondary); }
+.solid .link        { color: var(--color-text-secondary); }
 
 .link:hover { opacity: 1 !important; }
 .transparent .link:hover { color: rgba(244, 238, 230, 1); }
-.solid .link:hover { color: var(--color-text-primary); }
+.solid .link:hover        { color: var(--color-text-primary); }
 
 .active { opacity: 1; }
 .transparent .active { color: rgba(244, 238, 230, 1) !important; }
-.solid .active { color: var(--color-text-primary) !important; }
+.solid .active        { color: var(--color-text-primary) !important; }
 
-/* ─── Desktop dropdown ─────────────────────────────────────── */
-
-/* Wrapper fills full nav height so hover area has no gap to dropdown */
-.navItem {
-  position: relative;
-  height: 100%;
+/* ─── Sub-row — nav bar extension ──────────────────────────── */
+/*
+ * Sits directly below .inner inside the same <header>.
+ * Because it shares the header's background, the extension looks
+ * like one seamless widening of the nav bar.
+ */
+.subRow {
+  width: 100%;
   display: flex;
   align-items: center;
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 164px;
-  padding: 8px 0;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: clamp(48px, 8vw, 140px);
+  padding: 0 clamp(24px, 5vw, 72px);
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.18s ease, visibility 0.18s ease;
+  transition: max-height 0.22s ease, opacity 0.18s ease;
+  box-sizing: border-box;
 }
 
-.navItem:hover .dropdown {
+.subRowVisible {
+  max-height: 56px;
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
 }
 
-/* Transparent state (hero pages, before scroll) */
-.transparent .dropdown {
-  background: rgba(20, 16, 12, 0.90);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(244, 238, 230, 0.10);
-  border-top: none;
-}
+/* Subtle separator between main row and sub-row */
+.transparent .subRowVisible { border-top: 1px solid rgba(244, 238, 230, 0.08); }
+.solid .subRowVisible        { border-top: 1px solid var(--color-rule); }
 
-/* Solid state (non-hero pages, after scroll) */
-.solid .dropdown {
-  background: var(--color-ground);
-  border: 1px solid var(--color-rule);
-  border-top: none;
-}
-
-.dropdownLink {
+.subLink {
   font-family: var(--font-sans);
   font-size: var(--size-nav);
   font-weight: 400;
   letter-spacing: var(--tracking-nav);
   text-transform: uppercase;
   text-decoration: none;
-  padding: 11px 24px;
+  padding: 16px 0;
   white-space: nowrap;
-  transition: color 0.18s ease, padding-left 0.18s ease;
+  transition: color 0.18s ease;
 }
 
-.transparent .dropdownLink { color: rgba(244, 238, 230, 0.60); }
-.solid .dropdownLink       { color: var(--color-text-secondary); }
+.transparent .subLink { color: rgba(244, 238, 230, 0.60); }
+.solid .subLink        { color: var(--color-text-secondary); }
 
-.transparent .dropdownLink:hover { color: rgba(244, 238, 230, 1); padding-left: 28px; }
-.solid .dropdownLink:hover       { color: var(--color-text-primary); padding-left: 28px; }
+.transparent .subLink:hover { color: rgba(244, 238, 230, 1); }
+.solid .subLink:hover        { color: var(--color-text-primary); }
 
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {
@@ -201,7 +187,7 @@
 }
 
 .transparent .burger { color: rgba(244, 238, 230, 0.92); }
-.solid .burger { color: var(--color-text-primary); }
+.solid .burger        { color: var(--color-text-primary); }
 
 /* ─── Mobile menu ──────────────────────────────────────────── */
 .mobileMenu {
@@ -254,18 +240,14 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 
-/* Hide firm name at medium-narrow viewports to free space for links */
 @media (max-width: 1024px) {
-  .firmName {
-    display: none;
-  }
-  .divider {
-    display: none;
-  }
+  .firmName { display: none; }
+  .divider  { display: none; }
 }
 
 @media (max-width: 768px) {
-  .links { display: none; }
+  .links  { display: none; }
+  .subRow { display: none; }
   .burger { display: flex; }
   .nav.menuOpen { background: var(--color-ground); }
   .menuOpen .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }

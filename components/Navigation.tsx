@@ -11,8 +11,8 @@ const navItems = [
     label: 'Work',
     href: '/work',
     dropdown: [
-      { label: 'Residential', href: '/work?type=Residential' },
-      { label: 'Commercial',  href: '/work?type=Commercial'  },
+      { label: 'Residential',   href: '/work?type=Residential'   },
+      { label: 'Commercial',    href: '/work?type=Commercial'    },
       { label: 'Institutional', href: '/work?type=Institutional' },
     ],
   },
@@ -20,8 +20,8 @@ const navItems = [
     label: 'Interiors',
     href: '/interiors',
     dropdown: [
-      { label: 'Residential', href: '/interiors?type=Residential' },
-      { label: 'Commercial',  href: '/interiors?type=Commercial'  },
+      { label: 'Residential',   href: '/interiors?type=Residential'   },
+      { label: 'Commercial',    href: '/interiors?type=Commercial'    },
       { label: 'Institutional', href: '/interiors?type=Institutional' },
     ],
   },
@@ -31,8 +31,9 @@ const navItems = [
 ];
 
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled]       = useState(false);
+  const [menuOpen, setMenuOpen]       = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const pathname = usePathname();
 
   const isHeroPage = pathname === '/' || pathname.startsWith('/work/');
@@ -45,12 +46,17 @@ export default function Navigation() {
 
   useEffect(() => {
     setMenuOpen(false);
+    setHoveredItem(null);
   }, [pathname]);
+
+  const activeDropdown = navItems.find(item => item.href === hoveredItem)?.dropdown ?? null;
 
   return (
     <header
       className={`${styles.nav} ${scrolled || !isHeroPage ? styles.solid : styles.transparent} ${menuOpen ? styles.menuOpen : ''}`}
+      onMouseLeave={() => setHoveredItem(null)}
     >
+      {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
         {/* Wordmark */}
         <Link href="/" className={styles.wordmark}>
@@ -68,56 +74,44 @@ export default function Navigation() {
           <span className={styles.firmName}>Team Design</span>
         </Link>
 
-        {/* Desktop nav links */}
+        {/* Desktop links */}
         <nav className={styles.links}>
-          {navItems.map((item) =>
-            item.dropdown ? (
-              /* Items with dropdown — wrapper fills full nav height to close the gap */
-              <div key={item.href} className={styles.navItem}>
-                <Link
-                  href={item.href}
-                  className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
-                >
-                  {item.label}
-                </Link>
-
-                <div className={styles.dropdown}>
-                  {item.dropdown.map((sub) => (
-                    <Link
-                      key={sub.href}
-                      href={sub.href}
-                      className={styles.dropdownLink}
-                    >
-                      {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
+          {navItems.map((item) => (
+            <div
+              key={item.href}
+              className={styles.navItem}
+              onMouseEnter={() => setHoveredItem(item.dropdown ? item.href : null)}
+            >
               <Link
-                key={item.href}
                 href={item.href}
                 className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
               >
                 {item.label}
               </Link>
-            )
-          )}
+            </div>
+          ))}
         </nav>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile toggle */}
         <button
           className={styles.burger}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span />
-          <span />
-          <span />
+          <span /><span /><span />
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* ─── Sub-row — nav bar extends down when Work / Interiors hovered ── */}
+      <div className={`${styles.subRow} ${activeDropdown ? styles.subRowVisible : ''}`}>
+        {(activeDropdown ?? []).map((sub) => (
+          <Link key={sub.href} href={sub.href} className={styles.subLink}>
+            {sub.label}
+          </Link>
+        ))}
+      </div>
+
+      {/* ─── Mobile menu ───────────────────────────────────────────── */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {navItems.map((item) => (
