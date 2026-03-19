@@ -118,13 +118,13 @@
   color: var(--color-text-secondary);
 }
 
-/* ─── Team ───────────────────────────────────────────────────── */
-.teamSection {
+/* ─── Core Management ────────────────────────────────────────── */
+.coreSection {
   padding: var(--margin-section) var(--margin-page);
 }
 
-.teamHeader {
-  margin-bottom: 56px;
+.coreHeader {
+  margin-bottom: 64px;
 }
 
 .teamTitle {
@@ -133,6 +133,46 @@
   font-weight: 300;
   color: var(--color-text-primary);
   margin-top: 12px;
+}
+
+/* Tier 1: single card centred */
+.coreTier1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.coreTier1 .memberCard {
+  width: clamp(220px, 22vw, 320px);
+}
+
+/* Tier 2: five cards in a row */
+.coreTier2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+/* Larger image for tier-1 card */
+.memberCardLarge .memberImage {
+  aspect-ratio: 3/4;
+}
+
+.memberAward {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent, #b8860b);
+  margin-top: 4px;
+}
+
+/* ─── Team (legacy — kept for reference) ─────────────────────── */
+.teamSection {
+  padding: var(--margin-section) var(--margin-page);
+}
+
+.teamHeader {
+  margin-bottom: 56px;
 }
 
 .teamGrid {
@@ -205,12 +245,22 @@
   color: var(--color-text-secondary);
 }
 
+@media (max-width: 1100px) {
+  .coreTier2 { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 900px) {
   .principalInner { grid-template-columns: 1fr; }
   .principalImage { aspect-ratio: 4/3; }
-  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+  .coreTier2 { grid-template-columns: repeat(2, 1fr); }
+  .coreTier1 .memberCard { width: clamp(180px, 40vw, 280px); }
 }
 
 @media (max-width: 600px) {
-  .teamGrid { grid-template-columns: 1fr; }
+  .coreTier2 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .coreTier1 .memberCard { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .coreTier2 { grid-template-columns: 1fr 1fr; }
 }
