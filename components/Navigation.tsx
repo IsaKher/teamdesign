@@ -27,6 +27,7 @@ const navItems = [
   },
   { label: 'Studio',  href: '/studio'  },
   { label: 'People',  href: '/people'  },
+  { label: 'Process', href: '/process' },
   { label: 'Contact', href: '/contact' },
 ];
 
