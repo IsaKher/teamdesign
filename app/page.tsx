@@ -88,12 +88,12 @@ export default function HomePage() {
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85"
-            alt="Team Design — Architecture & Interiors"
+            src="/hero-building.png"
+            alt="Team Design — Architecture & Interiors, Mumbai"
             fill
             priority
             sizes="100vw"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
             className={styles.heroImage}
           />
           <div className={styles.heroOverlayTop} />
