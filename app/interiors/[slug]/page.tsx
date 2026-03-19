@@ -1,11 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import styles from './page.module.css';
+import styles from '../../work/[slug]/page.module.css';
 import FadeIn from '@/components/FadeIn';
 import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
 
-const ALL_SLUGS = Object.keys(PROJECT_DATA);
+const INTERIOR_SLUGS = [
+  'womens-bank-branch-srinagar',
+  'show-flat-mumbai',
+  'unilazer-ventures-office',
+  'jk-bank-nbc-bkc',
+  'high-networth-branch-shopian',
+  'hdfc-bank-office-jammu',
+  'garden-glory-penthouse-thane',
+  'airport-lounge-srinagar',
+  'exclusive-villa-mumbai',
+  'electronic-bank-lobby-srinagar',
+  'kishore-mariwala-home-mumbai',
+  'gordon-serrao-home-navi-mumbai',
+  'cinemarc-cinema-theatre',
+];
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const project = PROJECT_DATA[params.slug];
@@ -17,10 +31,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export function generateStaticParams() {
-  return ALL_SLUGS.map((slug) => ({ slug }));
+  return INTERIOR_SLUGS.map((slug) => ({ slug }));
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
+export default function InteriorDetailPage({ params }: { params: { slug: string } }) {
   const project = PROJECT_DATA[params.slug] ?? {
     ...FALLBACK,
     title: params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),

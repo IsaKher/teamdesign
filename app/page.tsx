@@ -15,36 +15,36 @@ const STATS = [
 
 const FEATURED_PROJECTS = [
   {
-    slug: 'mont-blanc-mariwala-residence',
-    title: 'Mont Blanc Residence',
+    slug: 'kishore-mariwala-home-mumbai',
+    title: 'Contemporary Modern Home',
     client: 'Kishore Mariwala',
     type: 'Residential',
-    location: 'August Kranti Marg, Mumbai',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    location: 'Kemps Corner, Mumbai',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg',
   },
   {
     slug: 'unilazer-ventures-office',
-    title: 'Unilazer Ventures Office',
+    title: 'Office for Unilazer Ventures',
     client: 'Ronnie Screwvala',
     type: 'Commercial',
-    location: 'Mumbai',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+    location: 'Worli, Mumbai',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-3-1.jpg',
   },
   {
-    slug: 'jk-bank-business-centre',
+    slug: 'jk-bank-nbc-bkc',
     title: 'National Business Centre',
     client: 'J&K Bank',
     type: 'Commercial',
     location: 'BKC, Mumbai',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg',
   },
   {
-    slug: 'itm-college-navi-mumbai',
-    title: 'ITM College Extension',
+    slug: 'college-campus-extension-itm',
+    title: 'College Campus Extension',
     client: 'ITM Group',
     type: 'Institutional',
     location: 'Navi Mumbai',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg',
   },
 ];
 

@@ -172,7 +172,7 @@ function InteriorsContent() {
 
       <div className={styles.grid}>
         {filtered.map((p) => (
-          <Link key={p.slug} href={`/work/${p.slug}`} className={styles.card}>
+          <Link key={p.slug} href={`/interiors/${p.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
               <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} />
               <div className={styles.cardOverlay}><span className={styles.viewLabel}>View Project</span></div>
