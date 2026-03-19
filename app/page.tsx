@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className={styles.principalImageCol}>
             <div className={styles.principalImageWrap}>
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                src="/tasadduq-kher.png"
                 alt="Tasadduq Kher — Principal Architect"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
