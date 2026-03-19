@@ -221,7 +221,7 @@ export default function HomePage() {
                 alt="Tasadduq Kher — Principal Architect"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
               />
             </div>
           </div>
