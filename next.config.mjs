@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'teamdesign.in',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
   },

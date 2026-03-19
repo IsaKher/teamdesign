@@ -1,30 +1,167 @@
 'use client';
-import { useState } from 'react';
+
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 
-const FILTERS = ['All', 'Residential', 'Commercial', 'Hospitality'];
+const FILTERS = ['All', 'Commercial', 'Institutional', 'Residential', 'Concept'];
 
 const PROJECTS = [
-  { slug: 'mariwala-interior', title: 'Mont Blanc Residence — Interiors', type: 'Residential', location: 'Mumbai', year: 2012, area: '8,200 sq ft', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80' },
-  { slug: 'unilazer-interiors', title: 'Unilazer Ventures — Office Interiors', type: 'Commercial', location: 'Mumbai', year: 2015, area: '4,500 sq ft', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
-  { slug: 'apartment-worli', title: 'Penthouse Apartment', type: 'Residential', location: 'Worli, Mumbai', year: 2020, area: '3,200 sq ft', image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80' },
-  { slug: 'villa-lonavala-interiors', title: 'Weekend Villa Interiors', type: 'Residential', location: 'Lonavala', year: 2021, area: '4,200 sq ft', image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80' },
-  { slug: 'restaurant-bkc', title: 'Restaurant Interior', type: 'Hospitality', location: 'BKC, Mumbai', year: 2019, area: '2,800 sq ft', image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80' },
-  { slug: 'home-powai', title: 'Family Home', type: 'Residential', location: 'Powai, Mumbai', year: 2022, area: '2,600 sq ft', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80' },
+  {
+    slug: 'womens-bank-branch-srinagar',
+    title: "Women's Bank Branch — J&K Bank",
+    client: 'Jammu & Kashmir Bank',
+    type: 'Institutional',
+    location: 'Srinagar, J&K',
+    year: 2018,
+    area: '6,500 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-1-1.jpg',
+  },
+  {
+    slug: 'show-flat-mumbai',
+    title: 'Show Flat',
+    client: 'Mumbai Builder',
+    type: 'Residential',
+    location: 'Mumbai',
+    year: 2014,
+    area: '1,500 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/DSC_5975-1.jpg',
+  },
+  {
+    slug: 'unilazer-ventures-office',
+    title: 'Office for Unilazer Ventures',
+    client: 'Ronnie Screwvala',
+    type: 'Commercial',
+    location: 'Worli, Mumbai',
+    year: 2014,
+    area: '6,500 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-3-1.jpg',
+  },
+  {
+    slug: 'jk-bank-nbc-bkc',
+    title: 'National Business Centre — J&K Bank',
+    client: 'Jammu & Kashmir Bank',
+    type: 'Commercial',
+    location: 'BKC, Mumbai',
+    year: 2013,
+    area: '70,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg',
+  },
+  {
+    slug: 'high-networth-branch-shopian',
+    title: 'High Networth Bank Branch',
+    client: 'Jammu & Kashmir Bank',
+    type: 'Concept',
+    location: 'Shopian, J&K',
+    year: 2017,
+    area: '4,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/High-Networth-Bank-Branch-Shopian-5-1.jpg',
+  },
+  {
+    slug: 'hdfc-bank-office-jammu',
+    title: 'HDFC Bank Corporate Office',
+    client: 'HDFC Bank',
+    type: 'Commercial',
+    location: 'Narhwal, Jammu',
+    year: 2015,
+    area: '13,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_9833-1.jpg',
+  },
+  {
+    slug: 'garden-glory-penthouse-thane',
+    title: 'Garden Glory Penthouse',
+    client: 'Indian Family',
+    type: 'Residential',
+    location: 'Thane',
+    year: 2013,
+    area: '15,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Garden-Glory-Penthouse-Indian-Family-Thane-India-7-1.jpg',
+  },
+  {
+    slug: 'airport-lounge-srinagar',
+    title: 'Executive Airport Lounge — J&K Bank',
+    client: 'Jammu & Kashmir Bank',
+    type: 'Concept',
+    location: 'Airport Terminal, Srinagar',
+    year: 2013,
+    area: '2,500 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-2-1.jpg',
+  },
+  {
+    slug: 'exclusive-villa-mumbai',
+    title: 'Exclusive Villa',
+    client: 'Private Client',
+    type: 'Residential',
+    location: 'Mumbai',
+    year: 2016,
+    area: '10,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg',
+  },
+  {
+    slug: 'electronic-bank-lobby-srinagar',
+    title: 'Electronic Bank Lobby — J&K Bank',
+    client: 'J&K Bank',
+    type: 'Concept',
+    location: 'Lal Chowk, Srinagar',
+    year: 2018,
+    area: '2,000 sq ft',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Electronic-Bank-Lobby-J_K-Bank-Srinagar-5-1.jpg',
+  },
+  {
+    slug: 'kishore-mariwala-home-mumbai',
+    title: 'Contemporary Modern Home',
+    client: 'Mr. Kishore Mariwala',
+    type: 'Residential',
+    location: "Kemps Corner, Mumbai",
+    year: 2009,
+    area: '2,600 sq mt',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg',
+  },
+  {
+    slug: 'gordon-serrao-home-navi-mumbai',
+    title: 'Classic Modern Home',
+    client: 'Gordon Serrao',
+    type: 'Residential',
+    location: 'Vashi, Navi Mumbai',
+    year: 2012,
+    area: '3,500 sq mt',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-4-1.jpg',
+  },
+  {
+    slug: 'cinemarc-cinema-theatre',
+    title: 'Cinemarc Cinema Theatre',
+    client: 'Mr. N Suryavanshi',
+    type: 'Commercial',
+    location: 'Vadodara, India',
+    year: 2015,
+    area: '20,000 sq mt',
+    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Cinemarc-Cinema-Theatre-3-1.jpg',
+  },
 ];
 
-export default function InteriorsPage() {
-  const [active, setActive] = useState('All');
-  const filtered = active === 'All' ? PROJECTS : PROJECTS.filter(p => p.type === active);
+function InteriorsContent() {
+  const searchParams = useSearchParams();
+  const typeParam = searchParams.get('type');
+  const initial = FILTERS.includes(typeParam ?? '') ? typeParam! : 'All';
+  const [active, setActive] = useState(initial);
+
+  useEffect(() => {
+    const t = searchParams.get('type');
+    if (t && FILTERS.includes(t)) setActive(t);
+  }, [searchParams]);
+
+  const filtered = active === 'All'
+    ? PROJECTS
+    : PROJECTS.filter(p => p.type === active);
 
   return (
     <>
       <div className={styles.pageHero}>
         <span className={styles.pageLabel}>Interior Design</span>
         <h1 className={styles.pageTitle}>Interiors</h1>
-        <p className={styles.pageSubtitle}>Spaces that feel like they belong to you — not to a catalogue or a trend. Interior design for homes, offices, and hospitality spaces across Mumbai.</p>
+        <p className={styles.pageSubtitle}>Spaces that feel like they belong to you — not to a catalogue or a trend. Interior design for homes, offices, and hospitality spaces across India.</p>
       </div>
 
       <div className={styles.filterBar}>
@@ -44,7 +181,7 @@ export default function InteriorsPage() {
               <span className={styles.cardType}>{p.type}</span>
               <h2 className={styles.cardTitle}>{p.title}</h2>
               <div className={styles.cardDetails}>
-                <span>{p.location}</span>
+                <span>{p.client}</span>
                 <span>{p.year}</span>
                 <span>{p.area}</span>
               </div>
@@ -53,5 +190,13 @@ export default function InteriorsPage() {
         ))}
       </div>
     </>
+  );
+}
+
+export default function InteriorsPage() {
+  return (
+    <Suspense>
+      <InteriorsContent />
+    </Suspense>
   );
 }

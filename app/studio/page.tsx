@@ -17,37 +17,69 @@ export default function StudioPage() {
           <div className={styles.storyText}>
             <span className={styles.sectionLabel}>Founded 1999</span>
             <h2 className={styles.storyTitle}>Twenty-five years of<br />considered practice.</h2>
-            <p className={styles.para}>Team Design was founded in Mumbai in 1999 by Tasadduq Kher, after graduating from Rachana Sansad Academy of Architecture. From its original studio in Lower Parel East, the practice has grown into a team of ten architects and designers working across residential, commercial, and institutional projects.</p>
-            <p className={styles.para}>The firm's philosophy is that the best architecture serves people precisely — it begins with understanding how a client actually lives or works, and ends with spaces that make those routines easier, more beautiful, and more meaningful. Not everything needs to be a statement. Some buildings just need to be right.</p>
-            <p className={styles.para}>Over 25 years and 300+ completed projects, Team Design has worked with some of Mumbai&apos;s most prominent figures — Kishore Mariwala, founder of Marico; Ronnie Screwvala, founder of UTV and UpGrad — and with institutions, developers, and individual clients who return again and again because the process works.</p>
-            <p className={styles.para}>While the studio is rooted in Mumbai, Team Design accepts commissions across India. Current and recent projects span Mumbai, Navi Mumbai, Pune, Tamil Nadu, Lonavala, and Jammu &amp; Kashmir.</p>
+            <p className={styles.para}>M/s. Team Design Architects was established in 1999 with a small office in Lower Parel East, Mumbai. Over the years, it has grown significantly in both range and scale of projects — accumulating extensive experience in planning, designing, and executing large architectural and interior projects.</p>
+            <p className={styles.para}>Work spans from high-tech banking dealing rooms in Mumbai to environmental-friendly rural projects. Projects range from Srinagar in North India to Thrissur in South India. The firm has created design guidelines for ICICI Bank, Reliance General Insurance, J&K Bank, Tata Capital, and Kotak Mahindra Bank.</p>
+            <p className={styles.para}>The collaborative process is as important as the outcome. Translating ideas and dreams skillfully into the language of architecture is neither simple nor linear — it calls for experience and creativity, elegant solutions to complicated problems. Team Design brings both.</p>
+            <p className={styles.para}>A young, energetic architectural practice with a mix of experience and youthful creativity — working to craft exquisitely designed spaces that complement their surroundings and reflect their clients' values.</p>
           </div>
           <div className={styles.storyImageCol}>
             <div className={styles.storyImage}>
-              <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80" alt="Team Design Studio" fill sizes="(max-width: 768px) 100vw, 45vw" style={{ objectFit: 'cover' }} />
+              <Image
+                src="https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg"
+                alt="Team Design Studio"
+                fill
+                sizes="(max-width: 768px) 100vw, 45vw"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
             <div className={styles.storyStats}>
               <div className={styles.stat}><span className={styles.statVal}>1999</span><span className={styles.statLbl}>Year Founded</span></div>
-              <div className={styles.stat}><span className={styles.statVal}>10+</span><span className={styles.statLbl}>Team Members</span></div>
-              <div className={styles.stat}><span className={styles.statVal}>Navi Mumbai</span><span className={styles.statLbl}>Current Studio</span></div>
+              <div className={styles.stat}><span className={styles.statVal}>300+</span><span className={styles.statLbl}>Projects Completed</span></div>
+              <div className={styles.stat}><span className={styles.statVal}>2M+</span><span className={styles.statLbl}>Square Feet Built</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Engagement Process */}
+      {/* Core Values */}
       <section className={styles.process}>
         <div className={styles.processHeader}>
-          <span className={styles.sectionLabel}>How We Work</span>
-          <h2 className={styles.processTitle}>The Commission Process</h2>
-          <p className={styles.processSub}>From first conversation to handover — a clear, collaborative process designed to protect your investment and deliver an exceptional result.</p>
+          <span className={styles.sectionLabel}>What We Stand For</span>
+          <h2 className={styles.processTitle}>Six Core Values</h2>
+          <p className={styles.processSub}>The principles that guide every project — from first conversation to final handover.</p>
         </div>
         <div className={styles.processSteps}>
           {[
-            { num: '01', title: 'Brief & Discovery', desc: 'We meet at the site or studio to understand your brief, lifestyle, budget, and aspirations. No design work begins until we deeply understand the project.' },
-            { num: '02', title: 'Concept Design', desc: 'We develop two to three concept directions — plans, sections, and key perspectives. You choose the direction that resonates, and we refine it together.' },
-            { num: '03', title: 'Design Development', desc: 'The approved concept is developed into construction drawings, specifications, and material selections. All regulatory approvals are managed by our team.' },
-            { num: '04', title: 'Construction & Site', desc: 'We supervise construction through qualified contractors, conduct regular site visits, and manage quality control from foundation to finish. Typical residential projects run 12–18 months on site.' },
+            {
+              num: '01',
+              title: 'Dependable Professionalism',
+              desc: 'A beautiful project is delivered through good service, detailed drawings and specifications with excellent project management. We pride ourselves on offering clients certainty and confidence in keeping projects on time and on budget.',
+            },
+            {
+              num: '02',
+              title: 'Reliable Team Depth',
+              desc: 'Team members communicate well and are motivated by architectural innovation. The depth of our team means no project outgrows our capacity — and every client has access to the full knowledge of the practice.',
+            },
+            {
+              num: '03',
+              title: 'Strong Domain Knowledge',
+              desc: 'We lead by design, combining global research with local action. Our experience across residential, commercial, institutional, and interior projects means we bring informed precedent to every new brief.',
+            },
+            {
+              num: '04',
+              title: 'Freshness of Concepts',
+              desc: 'We deliver bespoke, global-standard buildings and interiors — no two being the same. There is no predetermined style or model. We take a fresh approach with every project, our work evolving organically without preconceived constraints.',
+            },
+            {
+              num: '05',
+              title: 'Energetic Competence',
+              desc: 'Projects manifest macro-to-micro attention at every level. The delivery stage is a central element in ensuring design integrity is maintained and provides a smooth, efficient progression through all stages.',
+            },
+            {
+              num: '06',
+              title: 'Wisdom of Experience',
+              desc: 'If a building can feel like it naturally belongs — fitting logically in a place, an environment, a time and culture — then the people who inhabit it will likely feel a sense of belonging there as well. This methodology connects theories of beauty, confidence, economy, and comfort.',
+            },
           ].map(step => (
             <div key={step.num} className={styles.processStep}>
               <span className={styles.processNum}>{step.num}</span>
@@ -60,14 +92,35 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Design Ideals */}
       <section className={styles.services}>
-        <span className={styles.sectionLabel}>What We Do</span>
+        <span className={styles.sectionLabel}>Design Philosophy</span>
         <div className={styles.serviceGrid}>
           {[
-            { title: 'Architecture', desc: 'Full-service architectural design from feasibility through construction administration. Residential, commercial, and institutional projects.' },
-            { title: 'Interior Design', desc: 'Integrated interior design for homes, offices, hospitality spaces. Material selection, furniture, lighting, and joinery to the finish.' },
-            { title: 'Sustainable Design', desc: 'Sustainable design principles integrated into every project — passive cooling, material lifecycle, orientation, and IGBC/GRIHA certification support.' },
+            {
+              title: 'Approach Over Aesthetic',
+              desc: 'There is no predetermined style or model — we take a fresh approach with every project. We recognise each issue as unique and adapt to multiple sectors and applications.',
+            },
+            {
+              title: 'Honest & Authentic',
+              desc: 'Every element is part of an integrated whole and contributes to the bigger picture. Our approach suits the local climate, landscape, and culture — authentic material, authentic process.',
+            },
+            {
+              title: 'Balance & Dialogue',
+              desc: 'Space versus form. Object versus place. All brief and site parameters are addressed — we aim for the best solution, ticking every box without compromising the design integrity of the whole.',
+            },
+            {
+              title: 'The Idea Behind the Design',
+              desc: '"The Egg" — the idea behind every solution provides order and strength beyond merely responding to the brief. Good architecture has a reason that can be articulated, even when it is felt before it is understood.',
+            },
+            {
+              title: 'Holistic Thinking',
+              desc: 'A culture of continuous improvement fosters innovation and excellence. We take a fresh approach to every project — our work evolves organically without the constraints of preconceived ideas or prescribed formulas.',
+            },
+            {
+              title: 'Belonging',
+              desc: 'If a building feels like it naturally belongs in its environment, a time and culture — then the people who inhabit it will feel a sense of belonging there as well. This belief underpins everything we design.',
+            },
           ].map(s => (
             <div key={s.title} className={styles.serviceItem}>
               <h3 className={styles.serviceTitle}>{s.title}</h3>
@@ -77,16 +130,36 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* Awards */}
+      {/* Services */}
       <section className={styles.awards}>
-        <span className={styles.sectionLabel}>Recognition</span>
-        <h2 className={styles.awardsTitle}>Awards & Accreditation</h2>
+        <span className={styles.sectionLabel}>What We Do</span>
+        <h2 className={styles.awardsTitle}>Services</h2>
         <div className={styles.awardsGrid}>
           {[
-            { title: 'IIID Award for Excellence', body: 'Institute of Indian Interior Designers', year: '2019', type: 'Award' },
-            { title: 'CREDAI MCHI Award — Commercial', body: 'Confederation of Real Estate Developers', year: '2018', type: 'Award' },
-            { title: 'IGBC Green Building Certification', body: 'Indian Green Building Council', year: 'Active', type: 'Certification' },
-            { title: 'COA Registered Practice', body: 'Council of Architecture, India', year: 'Since 1999', type: 'Accreditation' },
+            {
+              title: 'Architectural Design',
+              body: 'Space and light design with contextual sensitivity',
+              year: 'Full Service',
+              type: 'Architecture',
+            },
+            {
+              title: 'Interior Design',
+              body: 'Residential, commercial, retail, hospitality and religious spaces',
+              year: 'Full Service',
+              type: 'Interiors',
+            },
+            {
+              title: 'Sustainable Design',
+              body: 'Solar power, rainwater harvesting, eco-friendly materials, IGBC/GRIHA support',
+              year: 'Integrated',
+              type: 'Sustainability',
+            },
+            {
+              title: 'Design Guidelines',
+              body: 'Corporate identity systems for ICICI Bank, J&K Bank, Tata Capital, Kotak Mahindra Bank',
+              year: 'Consulting',
+              type: 'Brand & Standards',
+            },
           ].map((a, i) => (
             <div key={i} className={styles.awardItem}>
               <div className={styles.awardTop}>
@@ -106,9 +179,21 @@ export default function StudioPage() {
         <h2 className={styles.pressTitle}>In the News</h2>
         <div className={styles.pressList}>
           {[
-            { pub: 'Architectural Digest India', title: 'The Mont Blanc Residence — A Study in Restraint', year: '2013' },
-            { pub: 'Architect & Interiors India', title: 'Team Design: 20 Years of Mumbai Practice', year: '2019' },
-            { pub: 'The Times of India', title: 'J&K Bank\'s BKC Business Centre Opens', year: '2018' },
+            {
+              pub: 'Architects & Interiors India',
+              title: "Zainab Kher recognised as one of India's top 50 architects under 35",
+              year: '2016',
+            },
+            {
+              pub: 'iGEN Design Forum',
+              title: '5th iGEN Design Forum — honouring 50 young and dynamic design practitioners',
+              year: '2016',
+            },
+            {
+              pub: 'DuPont India & Corian®',
+              title: 'Women Leadership in Architecture & Design — discussing leadership roles of women in India',
+              year: '2015',
+            },
           ].map((p, i) => (
             <div key={i} className={styles.pressItem}>
               <span className={styles.pressYear}>{p.year}</span>
