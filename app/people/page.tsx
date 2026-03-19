@@ -21,6 +21,11 @@ const CORE_TIER1 = [
   },
 ];
 
+const OPERATIONS_TEAM = [
+  { name: 'Hamid',  role: 'Head of Transportation' },
+  { name: 'Vijay',  role: 'Head of Day-to-Day Management' },
+];
+
 const CORE_TIER2 = [
   {
     name: 'Zakir',
@@ -130,6 +135,21 @@ export default function PeoplePage() {
                 <span className={styles.memberName}>{member.name}</span>
                 <span className={styles.memberRole}>{member.role}</span>
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Core Operations */}
+      <section className={styles.opsSection}>
+        <div className={styles.opsHeader}>
+          <span className={styles.sectionLabel}>Core Operations</span>
+          <h2 className={styles.opsTitle}>Keeping the studio running.</h2>
+        </div>
+        <div className={styles.opsRow}>
+          {OPERATIONS_TEAM.map((member) => (
+            <div key={member.name} className={styles.opsCard}>
+              <span className={styles.opsName}>{member.name}</span>
+              <span className={styles.opsRole}>{member.role}</span>
             </div>
           ))}
         </div>
