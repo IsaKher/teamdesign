@@ -297,7 +297,8 @@
   padding: var(--margin-section) var(--margin-page);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 56px;
+  border-top: 1px solid var(--color-rule);
 }
 
 .pressTitle {
@@ -305,48 +306,60 @@
   font-size: var(--size-h2);
   font-weight: 300;
   color: var(--color-text-primary);
+  margin-top: 12px;
 }
 
 .pressList {
   display: flex;
   flex-direction: column;
+  max-width: 880px;
 }
 
 .pressItem {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: 40px;
-  padding: 28px 0;
+  padding: 36px 0;
   border-bottom: 1px solid var(--color-rule);
-  align-items: center;
+  align-items: start;
 }
+.pressItem:first-child { border-top: 1px solid var(--color-rule); }
 
 .pressYear {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  letter-spacing: var(--tracking-label);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   color: var(--color-text-secondary);
+  opacity: 0.55;
+  padding-top: 4px;
 }
 
 .pressContent {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
 }
 
 .pressPub {
   font-family: var(--font-sans);
-  font-size: 12px;
-  letter-spacing: var(--tracking-label);
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
+  opacity: 0.65;
 }
 
 .pressTitle2 {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 400;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 300;
+  line-height: 1.45;
   color: var(--color-text-primary);
+}
+
+@media (max-width: 600px) {
+  .pressItem { grid-template-columns: 1fr; gap: 8px; }
 }
 
 @media (max-width: 900px) {

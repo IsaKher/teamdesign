@@ -1,0 +1,249 @@
+/* ─── Hero ──────────────────────────────────────────────────────────────── */
+.pageHero {
+  padding: calc(var(--nav-height) + 80px) var(--margin-page) 80px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.heroInner { max-width: 720px; }
+
+.heroLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 300;
+  line-height: 1.08;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+}
+
+.heroSub {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}
+
+/* ─── Phases ─────────────────────────────────────────────────────────────── */
+.phases {
+  padding: 80px var(--margin-page);
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 48px;
+}
+
+.phaseLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.phaseNumber {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.phaseLine {
+  width: 1px;
+  flex: 1;
+  background: var(--color-rule);
+  margin-top: 16px;
+  min-height: 40px;
+}
+
+.phase:last-child .phaseLine { display: none; }
+
+.phaseRight {
+  padding-bottom: 72px;
+}
+
+.phase:last-child .phaseRight { padding-bottom: 0; }
+
+.phaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.phaseDuration {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.phaseTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.phaseSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.phaseDesc {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.deliverables {
+  background: var(--color-ground-dark);
+  padding: 32px 36px;
+  border-radius: 2px;
+  max-width: 600px;
+}
+
+.deliverablesLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  margin-bottom: 18px;
+}
+
+.deliverablesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deliverableItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.deliverableDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-text-secondary);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.phaseRule {
+  display: none; /* vertical line handled by phaseLeft */
+}
+
+/* ─── CTA ────────────────────────────────────────────────────────────────── */
+.cta {
+  border-top: 1px solid var(--color-rule);
+  padding: 100px var(--margin-page);
+}
+
+.ctaInner { max-width: 640px; }
+
+.ctaLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.ctaText {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
+}
+
+.ctaLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.ctaPrimary:hover { opacity: 0.6; }
+
+.ctaWhatsApp {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-whatsapp);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.ctaWhatsApp:hover { opacity: 0.7; }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .phase { grid-template-columns: 1fr; gap: 0; }
+  .phaseLeft { flex-direction: row; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .phaseLine { width: 100%; height: 1px; min-height: auto; margin: 0; flex: 1; }
+  .deliverables { padding: 24px; }
+}

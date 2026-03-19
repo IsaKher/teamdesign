@@ -1,0 +1,164 @@
+import Link from 'next/link';
+import styles from './page.module.css';
+import FadeIn from '@/components/FadeIn';
+
+export const metadata = {
+  title: 'How We Work',
+  description:
+    'The Team Design process — from first meeting to handover. Discover how we approach Discovery, Concept, Design Development, Technical Documentation, and Site Supervision.',
+};
+
+const PHASES = [
+  {
+    number: '01',
+    title: 'Discovery',
+    subtitle: 'Understanding you, your site, and your ambition.',
+    duration: '2 – 4 weeks',
+    description:
+      'Every project begins with listening. We spend time understanding who you are, how you live or work, what this building must accomplish, and what it must feel like. We visit the site, study its orientation, access, context, and constraints. We ask questions others don\'t — about light at different times of day, about how a family actually uses a kitchen, about what you loved and disliked about every space you\'ve ever occupied.',
+    deliverables: [
+      'Site analysis report',
+      'Client brief document',
+      'Preliminary space programme',
+      'Project timeline & fee proposal',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Concept Design',
+    subtitle: 'Finding the idea that will hold everything together.',
+    duration: '4 – 6 weeks',
+    description:
+      'We explore multiple design directions, testing ideas against your brief, your budget, and the logic of the site. This is the most creative phase — where spatial diagrams become plans, where the relationship between inside and outside is resolved, where the character of the building first emerges. We present concepts as sketches, moodboards, and physical or digital models, and refine based on your response until the design direction is locked.',
+    deliverables: [
+      'Concept sketches & diagrams',
+      'Moodboard & material references',
+      'Preliminary floor plans & sections',
+      'Outline cost estimate',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Design Development',
+    subtitle: 'Turning a concept into a building you can build.',
+    duration: '6 – 10 weeks',
+    description:
+      'Once the concept is approved, we develop it into a complete design. Every room, every detail, every material is resolved. We coordinate with structural and MEP engineers, ensure the design meets regulatory requirements, and prepare detailed drawings that are precise enough to get an accurate contractor quote. We refine the interior palette, select fixtures and finishes, and present 3D renders and walkthroughs so you can experience the space before it is built.',
+    deliverables: [
+      'Detailed architectural drawings',
+      'Interior design specifications',
+      '3D renders & walkthroughs',
+      'Coordinated structural & MEP drawings',
+      'Regulatory submission package',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Technical Documentation',
+    subtitle: 'The instruction manual for your contractor.',
+    duration: '4 – 6 weeks',
+    description:
+      'This phase produces the complete construction documentation package — working drawings, schedules, specifications, and Bill of Quantities. These are the documents that contractors price from and build from. The quality of this documentation directly determines the quality of the building and the accuracy of the budget. We take this phase seriously because ambiguity on paper becomes dispute on site.',
+    deliverables: [
+      'Construction drawings (all disciplines)',
+      'Material & finish schedules',
+      'Door, window & joinery schedules',
+      'Bill of Quantities',
+      'Tender documents & contractor evaluation',
+    ],
+  },
+  {
+    number: '05',
+    title: 'Site Supervision',
+    subtitle: 'Ensuring what was designed is what gets built.',
+    duration: 'Duration of construction',
+    description:
+      'Design does not end when drawings are issued. We make regular site visits, review contractor shop drawings, issue clarifications, and ensure that every detail is being executed as specified. When conditions on site differ from what was assumed — as they inevitably do — we resolve them with decisions that honour the design intent. We manage the handover process, compile as-built drawings, and remain available after occupation for any queries.',
+    deliverables: [
+      'Regular site inspection reports',
+      'Shop drawing review',
+      'Variation orders & cost control',
+      'Snagging & defects list',
+      'Handover documentation & as-built drawings',
+    ],
+  },
+];
+
+export default function ProcessPage() {
+  return (
+    <>
+      {/* Page hero */}
+      <div className={styles.pageHero}>
+        <div className={styles.heroInner}>
+          <span className={styles.heroLabel}>How We Work</span>
+          <h1 className={styles.heroTitle}>A process built<br />around your project.</h1>
+          <p className={styles.heroSub}>
+            Architecture is not a commodity. Every project is different — in site, client, programme, and budget. What stays constant is the rigour and care we bring to each phase.
+          </p>
+        </div>
+      </div>
+
+      {/* Phases */}
+      <section className={styles.phases}>
+        {PHASES.map((phase, i) => (
+          <FadeIn key={phase.number} direction="up" delay={0.05} threshold={0.08}>
+          <div className={styles.phase}>
+            <div className={styles.phaseLeft}>
+              <span className={styles.phaseNumber}>{phase.number}</span>
+              <div className={styles.phaseLine} />
+            </div>
+
+            <div className={styles.phaseRight}>
+              <div className={styles.phaseHeader}>
+                <div>
+                  <span className={styles.phaseDuration}>{phase.duration}</span>
+                  <h2 className={styles.phaseTitle}>{phase.title}</h2>
+                  <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
+                </div>
+              </div>
+
+              <p className={styles.phaseDesc}>{phase.description}</p>
+
+              <div className={styles.deliverables}>
+                <span className={styles.deliverablesLabel}>Deliverables</span>
+                <ul className={styles.deliverablesList}>
+                  {phase.deliverables.map((d) => (
+                    <li key={d} className={styles.deliverableItem}>
+                      <span className={styles.deliverableDot} />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {i < PHASES.length - 1 && <div className={styles.phaseRule} />}
+            </div>
+          </div>
+          </FadeIn>
+        ))}
+      </section>
+
+      {/* CTA */}
+      <section className={styles.cta}>
+        <div className={styles.ctaInner}>
+          <span className={styles.ctaLabel}>Ready to begin?</span>
+          <h2 className={styles.ctaTitle}>Start with a conversation.</h2>
+          <p className={styles.ctaText}>
+            The first meeting costs nothing and commits you to nothing. We&apos;ll listen to your project, ask the right questions, and tell you honestly whether and how we can help.
+          </p>
+          <div className={styles.ctaLinks}>
+            <Link href="/contact" className={styles.ctaPrimary}>Get in Touch →</Link>
+            <a
+              href={`https://wa.me/919876543210?text=${encodeURIComponent("Hi, I'd like to learn more about how Team Design works and discuss a potential project.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaWhatsApp}
+            >
+              WhatsApp Studio →
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

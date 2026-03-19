@@ -519,6 +519,95 @@
 }
 .principalLink:hover { color: var(--color-text-primary); }
 
+/* ─── Recognition ──────────────────────────────────────────────────────── */
+.recognition {
+  padding: var(--margin-section) var(--margin-page);
+  border-top: 1px solid var(--color-rule);
+}
+
+.recognitionInner { max-width: 960px; }
+
+.recognitionHeader {
+  margin-bottom: 64px;
+}
+
+.recognitionTitle {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--color-text-primary);
+  margin-top: 12px;
+}
+
+.recognitionItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.recognitionItem {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.recognitionItem:first-child { border-top: 1px solid var(--color-rule); }
+
+.recognitionYear {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  opacity: 0.55;
+  padding-top: 4px;
+}
+
+.recognitionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recognitionPub {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.65;
+}
+
+.recognitionHeadline {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.recognitionFooter {
+  margin-top: 48px;
+}
+
+.recognitionLink {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.recognitionLink:hover { color: var(--color-text-primary); }
+
+@media (max-width: 600px) {
+  .recognitionItem { grid-template-columns: 1fr; gap: 8px; }
+}
+
 /* ─── Interiors CTA ────────────────────────────────────────────────────── */
 .interiorsCta {
   position: relative;

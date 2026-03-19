@@ -75,9 +75,74 @@ export const viewport: Viewport = {
   themeColor: '#F4EEE6',
 };
 
+const schemaOrgJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['ArchitecturalService', 'LocalBusiness'],
+      '@id': 'https://teamdesign.in/#business',
+      name: 'Team Design Architects',
+      alternateName: 'Team Design',
+      description:
+        'Architecture & Interior Design practice based in Navi Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
+      url: 'https://teamdesign.in',
+      telephone: '+91-9876543210',
+      foundingDate: '1999',
+      image: 'https://teamdesign.in/hero-building.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Navi Mumbai',
+        addressRegion: 'Maharashtra',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 19.033,
+        longitude: 73.0297,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Mumbai' },
+        { '@type': 'City', name: 'Navi Mumbai' },
+        { '@type': 'State', name: 'Maharashtra' },
+        { '@type': 'Country', name: 'India' },
+      ],
+      serviceType: [
+        'Residential Architecture',
+        'Commercial Architecture',
+        'Institutional Architecture',
+        'Interior Design',
+        'Urban Planning',
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Architectural & Interior Design Services',
+      },
+      sameAs: ['https://teamdesign.in'],
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://teamdesign.in/people#tasadduq-kher',
+      name: 'Tasadduq Kher',
+      jobTitle: 'Principal Architect',
+      worksFor: { '@id': 'https://teamdesign.in/#business' },
+      alumniOf: {
+        '@type': 'EducationalOrganization',
+        name: 'Rachana Sansad Academy of Architecture',
+        address: { '@type': 'PostalAddress', addressLocality: 'Mumbai' },
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${josefinSans.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
+        />
+      </head>
       <body>
         <Navigation />
         <main>{children}</main>

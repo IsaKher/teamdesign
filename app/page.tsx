@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import type { Testimonial } from '@/components/TestimonialSlider';
+import FadeIn from '@/components/FadeIn';
 
 // Static content — replace with Sanity data once connected
 const STATS = [
@@ -116,15 +117,18 @@ export default function HomePage() {
       {/* ─── Stat Bar ──────────────────────────────────────────────────── */}
       <section className={styles.statBar}>
         {STATS.map((stat, i) => (
-          <div key={i} className={styles.stat}>
-            <span className={styles.statValue}>{stat.value}</span>
-            <span className={styles.statLabel}>{stat.label}</span>
-          </div>
+          <FadeIn key={i} delay={i * 0.1} direction="up">
+            <div className={styles.stat}>
+              <span className={styles.statValue}>{stat.value}</span>
+              <span className={styles.statLabel}>{stat.label}</span>
+            </div>
+          </FadeIn>
         ))}
       </section>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
       <section className={styles.workSection}>
+        <FadeIn direction="up">
         <div className={styles.sectionHeader}>
           <div>
             <span className="label">Portfolio</span>
@@ -132,6 +136,7 @@ export default function HomePage() {
           </div>
           <Link href="/work" className={styles.viewAll}>View All Work →</Link>
         </div>
+        </FadeIn>
 
         <div className={styles.categoryLinks}>
           <Link href="/work?type=Residential" className={styles.categoryLink}>Residential</Link>
@@ -141,8 +146,9 @@ export default function HomePage() {
         </div>
 
         <div className={styles.projectGrid}>
-          {FEATURED_PROJECTS.map((project) => (
-            <Link key={project.slug} href={`/work/${project.slug}`} className={styles.projectCard}>
+          {FEATURED_PROJECTS.map((project, i) => (
+            <FadeIn key={project.slug} delay={i * 0.12} direction="up">
+            <Link href={`/work/${project.slug}`} className={styles.projectCard}>
               <div className={styles.projectImageWrap}>
                 <Image
                   src={project.image}
@@ -162,6 +168,7 @@ export default function HomePage() {
                 <span className={styles.projectClient}>{project.client} · {project.location}</span>
               </div>
             </Link>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -193,9 +200,9 @@ export default function HomePage() {
 
             {/* Press strip */}
             <div className={styles.pressStrip}>
-              <span className={styles.pressStripLabel}>As featured in</span>
+              <span className={styles.pressStripLabel}>As recognised by</span>
               <div className={styles.pressStripLogos}>
-                {['Architectural Digest India', 'Architect & Interiors India', 'The Times of India'].map((pub) => (
+                {['Architects & Interiors India', 'iGEN Design Forum', 'DuPont Corian® India'].map((pub) => (
                   <span key={pub} className={styles.pressStripItem}>{pub}</span>
                 ))}
               </div>
@@ -239,6 +246,59 @@ export default function HomePage() {
               </div>
             </div>
             <Link href="/people" className={styles.principalLink}>Meet the Team →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Recognition ───────────────────────────────────────────────── */}
+      <section className={styles.recognition}>
+        <div className={styles.recognitionInner}>
+          <div className={styles.recognitionHeader}>
+            <span className="label">Press & Recognition</span>
+            <h2 className={styles.recognitionTitle}>25 years of practice,<br />noticed and published.</h2>
+          </div>
+
+          <div className={styles.recognitionItems}>
+            <FadeIn direction="up" delay={0}>
+            <div className={styles.recognitionItem}>
+              <span className={styles.recognitionYear}>2016</span>
+              <div className={styles.recognitionContent}>
+                <span className={styles.recognitionPub}>Architects &amp; Interiors India</span>
+                <p className={styles.recognitionHeadline}>
+                  Zainab Kher recognised as one of India&apos;s 50 Most Talented Young Architects Under 35 — the firm&apos;s most prominent individual award.
+                </p>
+              </div>
+            </div>
+
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.1}>
+            <div className={styles.recognitionItem}>
+              <span className={styles.recognitionYear}>2016</span>
+              <div className={styles.recognitionContent}>
+                <span className={styles.recognitionPub}>iGEN Design Forum</span>
+                <p className={styles.recognitionHeadline}>
+                  Honoured at the 5th iGEN Design Forum, celebrating 50 young and dynamic design practitioners shaping the future of Indian architecture.
+                </p>
+              </div>
+            </div>
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.2}>
+            <div className={styles.recognitionItem}>
+              <span className={styles.recognitionYear}>2015</span>
+              <div className={styles.recognitionContent}>
+                <span className={styles.recognitionPub}>DuPont India &amp; Corian®</span>
+                <p className={styles.recognitionHeadline}>
+                  Featured in Women Leadership in Architecture &amp; Design — a national discussion on the rising influence of women in Indian design practice.
+                </p>
+              </div>
+            </div>
+            </FadeIn>
+          </div>
+
+          <div className={styles.recognitionFooter}>
+            <Link href="/studio" className={styles.recognitionLink}>Full Studio Profile →</Link>
           </div>
         </div>
       </section>
