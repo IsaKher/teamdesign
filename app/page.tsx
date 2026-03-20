@@ -307,8 +307,8 @@ export default function HomePage() {
       <section className={styles.interiorsCta}>
         <div className={styles.interiorsImageWrap}>
           <Image
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=2000&q=80"
-            alt="Interior Design — Team Design"
+            src="https://teamdesign.in/wp-content/uploads/2018/12/Kishore-Mariwala-1.jpg"
+            alt="Interior Design — Kishore Mariwala Residence, Mumbai by Team Design Architects"
             fill
             sizes="100vw"
             style={{ objectFit: 'cover' }}

@@ -210,6 +210,12 @@ function WorkContent() {
 
       {/* Grid */}
       <div className={styles.grid}>
+        {filtered.length === 0 && (
+          <div className={styles.emptyState}>
+            <p>No projects found under &ldquo;{active}&rdquo;.</p>
+            <button className={styles.filterBtn} onClick={() => setActive('All')}>View all projects →</button>
+          </div>
+        )}
         {filtered.map((project) => (
           <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
