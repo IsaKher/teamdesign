@@ -127,8 +127,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
-  min-height: 44vw;
-  padding: 80px var(--margin-page);
+  min-height: 36vw;
+  padding: 56px var(--margin-page);
   gap: 1px;
 }
 
