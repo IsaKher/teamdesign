@@ -142,7 +142,7 @@ export default function HomePage() {
           <Link href="/work?type=Residential" className={styles.categoryLink}>Residential</Link>
           <Link href="/work?type=Commercial" className={styles.categoryLink}>Commercial</Link>
           <Link href="/work?type=Institutional" className={styles.categoryLink}>Institutional</Link>
-          <Link href="/interiors" className={styles.categoryLink}>Interiors</Link>
+          <Link href="/work?type=Interiors" className={styles.categoryLink}>Interiors</Link>
         </div>
 
         <div className={styles.projectGrid}>
@@ -319,7 +319,7 @@ export default function HomePage() {
         <div className={styles.interiorsContent}>
           <span className="label" style={{ color: 'rgba(244,238,230,0.55)' }}>Interior Design</span>
           <h2 className={styles.interiorsTitle}>Spaces that feel<br />like they belong to you.</h2>
-          <Link href="/interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
+          <Link href="/work?type=Interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
         </div>
       </section>
     </>

@@ -45,7 +45,6 @@ export default function Footer() {
           <span className={styles.colLabel}>Navigate</span>
           <nav className={styles.links}>
             <Link href="/work">Work</Link>
-            <Link href="/interiors">Interiors</Link>
             <Link href="/studio">Studio</Link>
             <Link href="/people">People</Link>
             <Link href="/process">How We Work</Link>

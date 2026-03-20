@@ -16,15 +16,6 @@ const navItems = [
       { label: 'Institutional', href: '/work?type=Institutional' },
     ],
   },
-  {
-    label: 'Interiors',
-    href: '/interiors',
-    dropdown: [
-      { label: 'Residential',   href: '/interiors?type=Residential'   },
-      { label: 'Commercial',    href: '/interiors?type=Commercial'    },
-      { label: 'Institutional', href: '/interiors?type=Institutional' },
-    ],
-  },
   { label: 'Studio',  href: '/studio'  },
   { label: 'People',  href: '/people'  },
   { label: 'Process', href: '/process' },
