@@ -123,7 +123,7 @@
   position: relative;
   background:
     linear-gradient(rgba(28, 22, 18, 0.86), rgba(28, 22, 18, 0.86)),
-    url('/interiors-cta.png') center center / cover no-repeat;
+    url('/interiors-cta.png') center 30% / cover no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
