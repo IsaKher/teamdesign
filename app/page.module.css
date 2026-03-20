@@ -123,10 +123,12 @@
   position: relative;
   background:
     linear-gradient(rgba(28, 22, 18, 0.86), rgba(28, 22, 18, 0.86)),
-    url('/interiors-cta.png') center 35% / cover no-repeat;
+    url('/interiors-cta.png') center center / cover no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 190px var(--margin-page);
+  align-content: center;
+  min-height: 44vw;
+  padding: 80px var(--margin-page);
   gap: 1px;
 }
 
