@@ -120,7 +120,10 @@
 
 /* ─── Stat Bar ─────────────────────────────────────────────────────────── */
 .statBar {
-  background: var(--color-text-primary);
+  position: relative;
+  background:
+    linear-gradient(rgba(28, 22, 18, 0.88), rgba(28, 22, 18, 0.88)),
+    url('/interiors-cta.png') center / cover no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 56px var(--margin-page);
