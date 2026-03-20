@@ -5,6 +5,8 @@ import styles from '../../work/[slug]/page.module.css';
 import FadeIn from '@/components/FadeIn';
 import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
 
+const BASE = 'https://teamdesign.in';
+
 const INTERIOR_SLUGS = [
   'womens-bank-branch-srinagar',
   'show-flat-mumbai',
@@ -23,10 +25,37 @@ const INTERIOR_SLUGS = [
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const project = PROJECT_DATA[params.slug];
-  if (!project) return { title: 'Project' };
+  if (!project) return { title: 'Project Not Found' };
+
+  const desc = project.description.replace(/\n+/g, ' ').slice(0, 155).trim();
+  const canonical = `${BASE}/interiors/${params.slug}`;
+  const ogTitle = `${project.title} — Team Design Architects`;
+
   return {
-    title: project.title,
-    description: `${project.type} · ${project.location} · ${project.year} — Team Design Architects`,
+    title: `${project.title} · ${project.location}`,
+    description: desc,
+    keywords: [
+      'interior design ' + project.location,
+      project.type.toLowerCase() + ' interior design',
+      project.title,
+      'Team Design Architects',
+      'interior design Mumbai',
+    ],
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
+      url: canonical,
+      title: ogTitle,
+      description: desc,
+      siteName: 'Team Design Architects',
+      images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: ogTitle,
+      description: desc,
+      images: [project.mainImage],
+    },
   };
 }
 
@@ -40,14 +69,38 @@ export default function InteriorDetailPage({ params }: { params: { slug: string 
     title: params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
   };
 
+  const projectJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.title,
+    description: project.description.replace(/\n+/g, ' ').slice(0, 300),
+    image: project.mainImage,
+    dateCreated: String(project.year),
+    locationCreated: {
+      '@type': 'Place',
+      name: project.location,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Team Design Architects',
+      url: 'https://teamdesign.in',
+    },
+    genre: project.type,
+    url: `${BASE}/interiors/${params.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
             src={project.mainImage}
-            alt={project.title}
+            alt={`${project.title} — ${project.type} interior design by Team Design Architects, ${project.location}`}
             fill
             priority
             sizes="100vw"
@@ -119,7 +172,7 @@ export default function InteriorDetailPage({ params }: { params: { slug: string 
               >
                 <Image
                   src={src}
-                  alt={`${project.title} — image ${i + 1}`}
+                  alt={`${project.title}, ${project.location} — gallery image ${i + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
@@ -177,7 +230,7 @@ export default function InteriorDetailPage({ params }: { params: { slug: string 
                 <div className={styles.relatedImage}>
                   <Image
                     src={r.image}
-                    alt={r.title}
+                    alt={`${r.title} — ${r.type} by Team Design Architects`}
                     fill
                     sizes="33vw"
                     style={{ objectFit: 'cover' }}

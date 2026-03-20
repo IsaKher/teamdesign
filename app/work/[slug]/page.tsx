@@ -7,12 +7,41 @@ import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
 
 const ALL_SLUGS = Object.keys(PROJECT_DATA);
 
+const BASE = 'https://teamdesign.in';
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const project = PROJECT_DATA[params.slug];
-  if (!project) return { title: 'Project' };
+  if (!project) return { title: 'Project Not Found' };
+
+  const desc = project.description.replace(/\n+/g, ' ').slice(0, 155).trim();
+  const canonical = `${BASE}/work/${params.slug}`;
+  const ogTitle = `${project.title} — Team Design Architects`;
+
   return {
-    title: project.title,
-    description: `${project.type} · ${project.location} · ${project.year} — Team Design Architects`,
+    title: `${project.title} · ${project.location}`,
+    description: desc,
+    keywords: [
+      project.type.toLowerCase() + ' architecture',
+      `architect ${project.location}`,
+      project.title,
+      'Team Design Architects',
+      'architecture India',
+    ],
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
+      url: canonical,
+      title: ogTitle,
+      description: desc,
+      siteName: 'Team Design Architects',
+      images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: ogTitle,
+      description: desc,
+      images: [project.mainImage],
+    },
   };
 }
 
@@ -26,14 +55,38 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     title: params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
   };
 
+  const projectJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.title,
+    description: project.description.replace(/\n+/g, ' ').slice(0, 300),
+    image: project.mainImage,
+    dateCreated: String(project.year),
+    locationCreated: {
+      '@type': 'Place',
+      name: project.location,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Team Design Architects',
+      url: 'https://teamdesign.in',
+    },
+    genre: project.type,
+    url: `${BASE}/work/${params.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
             src={project.mainImage}
-            alt={project.title}
+            alt={`${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
             fill
             priority
             sizes="100vw"
@@ -105,7 +158,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               >
                 <Image
                   src={src}
-                  alt={`${project.title} — image ${i + 1}`}
+                  alt={`${project.title}, ${project.location} — gallery image ${i + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
@@ -163,7 +216,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                 <div className={styles.relatedImage}>
                   <Image
                     src={r.image}
-                    alt={r.title}
+                    alt={`${r.title} — ${r.type} by Team Design Architects`}
                     fill
                     sizes="33vw"
                     style={{ objectFit: 'cover' }}
