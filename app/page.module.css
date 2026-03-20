@@ -122,7 +122,7 @@
 .statBar {
   position: relative;
   background:
-    linear-gradient(rgba(28, 22, 18, 0.86), rgba(28, 22, 18, 0.86)),
+    linear-gradient(rgba(28, 22, 18, 0.93), rgba(28, 22, 18, 0.93)),
     url('/interiors-cta.png') center 30% / cover no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
