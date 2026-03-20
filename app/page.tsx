@@ -309,9 +309,10 @@ export default function HomePage() {
           <Image
             src="/interiors-cta.png"
             alt="Team Design Architects — Studio wall of architectural sketches and drawings, Mumbai"
-            fill
+            width={1536}
+            height={1024}
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center center' }}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
           />
           <div className={styles.interiorsOverlay} />
         </div>
