@@ -126,7 +126,7 @@
     url('/interiors-cta.png') center 35% / cover no-repeat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 100px var(--margin-page);
+  padding: 190px var(--margin-page);
   gap: 1px;
 }
 
