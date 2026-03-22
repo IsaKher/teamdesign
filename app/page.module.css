@@ -32,7 +32,7 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 480px;
-  background: linear-gradient(to top, rgba(20,16,12,0.88) 0%, rgba(20,16,12,0.60) 40%, transparent 100%);
+  background: linear-gradient(to top, rgba(20,16,12,1) 0%, rgba(20,16,12,0.88) 12%, rgba(20,16,12,0.60) 40%, transparent 100%);
   z-index: 1;
 }
 
@@ -122,12 +122,16 @@
 .statBar {
   position: relative;
   background:
-    linear-gradient(rgba(28, 22, 18, 0.93), rgba(28, 22, 18, 0.93)),
-    url('/interiors-cta.png') center 30% / cover no-repeat;
+    linear-gradient(
+      to bottom,
+      rgba(20,16,12,1) 0%,
+      rgba(20,16,12,0.88) 100%
+    ),
+    url('/hero-building.png') center 40% / cover fixed;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
-  min-height: 36vw;
+  min-height: 28vw;
   padding: 56px var(--margin-page);
   gap: 1px;
 }
@@ -664,7 +668,12 @@
 
 /* ─── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .statBar { grid-template-columns: repeat(2, 1fr); }
+  .statBar {
+    grid-template-columns: repeat(2, 1fr);
+    background:
+      linear-gradient(rgba(20,16,12,0.92), rgba(20,16,12,0.92)),
+      url('/hero-building.png') center 40% / cover no-repeat;
+  }
   .credentialsInner { grid-template-columns: 1fr; gap: 48px; }
   .principalInner { grid-template-columns: 1fr; }
   .principalImageWrap { aspect-ratio: 3/4; max-height: 480px; }
