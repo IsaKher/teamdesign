@@ -178,9 +178,8 @@ function WorkContent() {
   const [active, setActive] = useState(initial);
 
   useEffect(() => {
-    const t = searchParams.get('type');
-    if (t && FILTERS.includes(t)) setActive(t);
-  }, [searchParams]);
+    if (typeParam && FILTERS.includes(typeParam)) setActive(typeParam);
+  }, [typeParam]);
 
   const filtered = active === 'All'
     ? PROJECTS
