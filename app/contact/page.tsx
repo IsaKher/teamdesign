@@ -105,9 +105,8 @@ export default function ContactPage() {
           </div>
 
           <div className={styles.responseNote}>
-            <span className={styles.responseName}>Tasadduq Kher</span>
             <span className={styles.responseText}>
-              or a member of the team will respond within one business day.
+              A member of the team will respond within one business day.
             </span>
           </div>
         </div>
