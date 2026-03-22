@@ -6,8 +6,9 @@ export const STUDIO = {
   whatsappNumber: '919876543210',
   email: 'studio@teamdesign.in',
   address: {
-    area: 'Kopar Khairane',
-    city: 'Navi Mumbai, Maharashtra',
+    line1: 'A-145/6A, Pawane Village Midc Road T.T.C. Industrial Area',
+    line2: 'MIDC Industrial Area, Sector 2, Kopar Khairane',
+    city: 'Navi Mumbai, Maharashtra 400710',
     country: 'India',
   },
   founded: 1999,

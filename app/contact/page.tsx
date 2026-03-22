@@ -69,9 +69,10 @@ export default function ContactPage() {
           <div className={styles.infoGroup}>
             <span className={styles.infoLabel}>Studio</span>
             <address className={styles.address}>
-              Kopar Khairane<br />
-              Navi Mumbai, Maharashtra<br />
-              India
+              A-145/6A, Pawane Village Midc Road<br />
+              T.T.C. Industrial Area, MIDC Sector 2<br />
+              Kopar Khairane, Navi Mumbai<br />
+              Maharashtra 400710, India
             </address>
           </div>
 
