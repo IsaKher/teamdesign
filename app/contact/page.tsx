@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import styles from './page.module.css';
+import { STUDIO } from '@/lib/siteContent';
 
 export default function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -65,18 +66,18 @@ export default function ContactPage() {
 
           <div className={styles.infoGroup}>
             <span className={styles.infoLabel}>Phone</span>
-            <a href="tel:+919876543210" className={styles.infoLink}>+91 98765 43210</a>
+            <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`} className={styles.infoLink}>{STUDIO.phone}</a>
           </div>
 
           <div className={styles.infoGroup}>
             <span className={styles.infoLabel}>Email</span>
-            <a href="mailto:studio@teamdesign.in" className={styles.infoLink}>studio@teamdesign.in</a>
+            <a href={`mailto:${STUDIO.email}`} className={styles.infoLink}>{STUDIO.email}</a>
           </div>
 
           <div className={styles.infoGroup}>
             <span className={styles.infoLabel}>WhatsApp</span>
             <a
-              href="https://wa.me/919876543210"
+              href={`https://wa.me/${STUDIO.whatsappNumber}`}
               className={styles.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +111,7 @@ export default function ContactPage() {
                 Thank you — we&apos;ll be in touch within one business day. For a faster response, please WhatsApp us directly.
               </p>
               <a
-                href="https://wa.me/919876543210"
+                href={`https://wa.me/${STUDIO.whatsappNumber}`}
                 className={styles.successWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"

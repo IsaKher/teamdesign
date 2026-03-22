@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
+import { STUDIO } from '@/lib/siteContent';
 
 const navItems = [
   {
@@ -123,7 +124,7 @@ export default function Navigation() {
             </div>
           ))}
           <div className={styles.mobileContact}>
-            <a href="tel:+919876543210">Call Studio</a>
+            <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
           </div>
         </div>
       )}

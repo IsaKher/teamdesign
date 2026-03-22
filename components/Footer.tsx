@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import { STUDIO } from '@/lib/siteContent';
 
 export default function Footer() {
   return (
@@ -35,9 +36,9 @@ export default function Footer() {
         <div className={styles.col}>
           <span className={styles.colLabel}>Contact</span>
           <div className={styles.links}>
-            <a href="tel:+919876543210">+91 98765 43210</a>
-            <a href="mailto:studio@teamdesign.in">studio@teamdesign.in</a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>{STUDIO.phone}</a>
+            <a href={`mailto:${STUDIO.email}`}>{STUDIO.email}</a>
+            <a href={`https://wa.me/${STUDIO.whatsappNumber}`} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
 

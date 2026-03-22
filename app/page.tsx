@@ -2,85 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import type { Testimonial } from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
-
-// Static content — replace with Sanity data once connected
-const STATS = [
-  { value: '25+', label: 'Years in Practice' },
-  { value: '300+', label: 'Projects Completed' },
-  { value: '500+', label: 'Clients Served' },
-  { value: '20L+ sq ft', label: 'Built Space' },
-];
-
-const FEATURED_PROJECTS = [
-  {
-    slug: 'kishore-mariwala-home-mumbai',
-    title: 'Contemporary Modern Home',
-    client: 'Kishore Mariwala',
-    type: 'Residential',
-    location: 'Kemps Corner, Mumbai',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg',
-  },
-  {
-    slug: 'unilazer-ventures-office',
-    title: 'Office for Unilazer Ventures',
-    client: 'Ronnie Screwvala',
-    type: 'Commercial',
-    location: 'Worli, Mumbai',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-3-1.jpg',
-  },
-  {
-    slug: 'jk-bank-nbc-bkc',
-    title: 'National Business Centre',
-    client: 'J&K Bank',
-    type: 'Commercial',
-    location: 'BKC, Mumbai',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg',
-  },
-  {
-    slug: 'college-campus-extension-itm',
-    title: 'College Campus Extension',
-    client: 'ITM Group',
-    type: 'Institutional',
-    location: 'Navi Mumbai',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg',
-  },
-];
-
-const SELECTED_CLIENTS = [
-  { name: 'Kishore Mariwala', description: 'Founder, Marico', project: 'Mont Blanc Residence, Mumbai' },
-  { name: 'Ronnie Screwvala', description: 'Founder, UTV / UpGrad', project: 'Unilazer Ventures Office, Mumbai' },
-  { name: 'J&K Bank', description: 'National Commercial Bank', project: 'Business Centre, BKC Mumbai' },
-  { name: 'ITM Group', description: 'Educational Institution', project: 'College Extension & MBA Hostel, Navi Mumbai' },
-];
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: 'Team Design managed the entire project lifecycle — from concept and design to contractor management, budget adherence, and on-time delivery. The result exceeded every expectation.',
-    name: 'Kishore Mariwala',
-    title: 'Founder, Marico',
-    project: 'Mont Blanc Residence, Mumbai',
-  },
-  {
-    quote: 'What struck us most was how the design translated our company\'s character into architecture. The Unilazer office doesn\'t just look good — it shapes how our teams think and collaborate every day.',
-    name: 'Ronnie Screwvala',
-    title: 'Founder, UTV / UpGrad',
-    project: 'Unilazer Ventures Office, Mumbai',
-  },
-  {
-    quote: 'The Business Centre sets a new standard for banking architecture in India. Team Design delivered a building that is both operationally rigorous and genuinely inspiring to work in.',
-    name: 'J&K Bank',
-    title: 'National Commercial Bank',
-    project: 'National Business Centre, BKC Mumbai',
-  },
-  {
-    quote: 'From the initial brief to handover, Team Design demonstrated exceptional professionalism at every stage. The ITM expansion has elevated the campus experience for thousands of students.',
-    name: 'ITM Group',
-    title: 'Educational Institution',
-    project: 'College Extension & MBA Hostel, Navi Mumbai',
-  },
-];
+import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS } from '@/lib/siteContent';
 
 export default function HomePage() {
   return (

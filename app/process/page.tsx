@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
+import { STUDIO } from '@/lib/siteContent';
 
 export const metadata = {
   title: 'How We Work',
@@ -149,7 +150,7 @@ export default function ProcessPage() {
           <div className={styles.ctaLinks}>
             <Link href="/contact" className={styles.ctaPrimary}>Get in Touch →</Link>
             <a
-              href={`https://wa.me/919876543210?text=${encodeURIComponent("Hi, I'd like to learn more about how Team Design works and discuss a potential project.")}`}
+              href={`https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent("Hi, I'd like to learn more about how Team Design works and discuss a potential project.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaWhatsApp}

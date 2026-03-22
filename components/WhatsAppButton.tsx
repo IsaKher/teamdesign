@@ -1,7 +1,8 @@
 'use client';
 import styles from './WhatsAppButton.module.css';
+import { STUDIO } from '@/lib/siteContent';
 
-export default function WhatsAppButton({ number = '919876543210' }: { number?: string }) {
+export default function WhatsAppButton({ number = STUDIO.whatsappNumber }: { number?: string }) {
   const message = encodeURIComponent("Hello, I'd like to discuss a project with Team Design Architects.");
   const href = `https://wa.me/${number}?text=${message}`;
 
