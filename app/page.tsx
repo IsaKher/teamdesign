@@ -8,8 +8,8 @@ import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS } from '@/lib/
 export default function HomePage() {
   return (
     <>
-      {/* ─── Hero ──────────────────────────────────────────────────────── */}
-      <section className={styles.hero}>
+      {/* ─── Hero + Stats (one shared image) ──────────────────────────── */}
+      <div className={styles.heroWrapper}>
         <div className={styles.heroImageWrap}>
           <Image
             src="/hero-building.png"
@@ -24,30 +24,31 @@ export default function HomePage() {
           <div className={styles.heroOverlayBottom} />
         </div>
 
-        <div className={styles.heroText}>
-          <div className={styles.heroTaglineBlock}>
-            <span className={styles.heroLabel}>Mumbai · Est. 1999 · Architecture & Interiors</span>
-            <span className={styles.heroPhilosophy}>Spaces shaped by site, light, and the people who inhabit them.</span>
-          </div>
-          <h1 className={styles.heroTitle}>Team Design</h1>
-          <div className={styles.heroCtas}>
-            <Link href="/work" className={styles.heroCta}>View Our Work</Link>
-            <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Stat Bar ──────────────────────────────────────────────────── */}
-      <section className={styles.statBar}>
-        {STATS.map((stat, i) => (
-          <FadeIn key={i} delay={i * 0.1} direction="up">
-            <div className={styles.stat}>
-              <span className={styles.statValue}>{stat.value}</span>
-              <span className={styles.statLabel}>{stat.label}</span>
+        <section className={styles.hero}>
+          <div className={styles.heroText}>
+            <div className={styles.heroTaglineBlock}>
+              <span className={styles.heroLabel}>Mumbai · Est. 1999 · Architecture & Interiors</span>
+              <span className={styles.heroPhilosophy}>Spaces shaped by site, light, and the people who inhabit them.</span>
             </div>
-          </FadeIn>
-        ))}
-      </section>
+            <h1 className={styles.heroTitle}>Team Design</h1>
+            <div className={styles.heroCtas}>
+              <Link href="/work" className={styles.heroCta}>View Our Work</Link>
+              <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.statBar}>
+          {STATS.map((stat, i) => (
+            <FadeIn key={i} delay={i * 0.1} direction="up">
+              <div className={styles.stat}>
+                <span className={styles.statValue}>{stat.value}</span>
+                <span className={styles.statLabel}>{stat.label}</span>
+              </div>
+            </FadeIn>
+          ))}
+        </section>
+      </div>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
       <section className={styles.workSection}>
