@@ -24,12 +24,17 @@ export default function ContactPage() {
       website: (form.elements.namedItem('website') as HTMLInputElement)?.value ?? '',
     };
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10_000);
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
+      clearTimeout(timeout);
       if (!res.ok) {
         const err = await res.json();
         throw new Error(err.error || 'Submission failed');
@@ -37,8 +42,14 @@ export default function ContactPage() {
       setStatus('success');
       form.reset();
     } catch (err: unknown) {
+      clearTimeout(timeout);
       setStatus('error');
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.');
+      const isTimeout = err instanceof Error && err.name === 'AbortError';
+      setErrorMsg(
+        isTimeout
+          ? 'Request timed out — please try WhatsApp or call us directly.'
+          : err instanceof Error ? err.message : 'Something went wrong.'
+      );
     }
   }
 
