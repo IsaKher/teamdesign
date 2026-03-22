@@ -26,12 +26,19 @@ export default function Footer() {
       <div className={styles.grid}>
         <div className={styles.col}>
           <span className={styles.colLabel}>Studio</span>
-          <address className={styles.address}>
-            A-145/6A, Pawane Village Midc Road<br />
-            T.T.C. Industrial Area, MIDC Sector 2<br />
-            Kopar Khairane, Navi Mumbai<br />
-            Maharashtra 400710, India
-          </address>
+          <a
+            href={STUDIO.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.addressLink}
+          >
+            <address className={styles.address}>
+              A-145/6A, Pawane Village Midc Road<br />
+              T.T.C. Industrial Area, MIDC Sector 2<br />
+              Kopar Khairane, Navi Mumbai<br />
+              Maharashtra 400710, India
+            </address>
+          </a>
         </div>
 
         <div className={styles.col}>

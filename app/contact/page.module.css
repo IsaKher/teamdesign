@@ -61,6 +61,14 @@
   color: var(--color-text-secondary);
 }
 
+.addressLink {
+  text-decoration: none;
+}
+.addressLink:hover .address {
+  color: var(--color-text-primary);
+  opacity: 0.7;
+}
+
 .address {
   font-style: normal;
   font-family: var(--font-sans);
@@ -68,6 +76,7 @@
   font-weight: 300;
   line-height: 1.8;
   color: var(--color-text-primary);
+  transition: opacity 0.2s ease;
 }
 
 .infoLink {
