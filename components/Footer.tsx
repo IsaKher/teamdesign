@@ -6,7 +6,7 @@ import { STUDIO } from '@/lib/siteContent';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
+      <Link href="/" className={styles.top}>
         <div className={styles.seal}>
           <Image
             src="/logo.png"
@@ -21,7 +21,7 @@ export default function Footer() {
           <span className={styles.name}>Team Design Architects</span>
           <span className={styles.sub}>& Interior Designers · Est. 1999</span>
         </div>
-      </div>
+      </Link>
 
       <div className={styles.grid}>
         <div className={styles.col}>
