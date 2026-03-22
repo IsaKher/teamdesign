@@ -13,7 +13,7 @@ export const STUDIO = {
   },
   founded: 1999,
   site: 'https://teamdesign.in',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=A-145%2F6A+Pawane+Village+Midc+Road+TTC+Industrial+Area+Kopar+Khairane+Navi+Mumbai+400710',
+  mapsUrl: 'geo:19.1077,73.0081?q=A-145%2F6A+Pawane+Village+Midc+Road+Kopar+Khairane+Navi+Mumbai+400710',
 } as const;
 
 // ─── Homepage data ───────────────────────────────────────────────────────────
