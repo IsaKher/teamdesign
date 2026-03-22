@@ -121,6 +121,25 @@
   color: rgba(244, 238, 230, 0.60);
 }
 
+.bottomRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.instagramLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(244, 238, 230, 0.60);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.instagramLink:hover {
+  color: rgba(244, 238, 230, 0.95);
+}
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -128,5 +147,6 @@
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
   .top { flex-direction: column; align-items: flex-start; }
-  .bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .bottomRight { flex-direction: column; gap: 8px; }
 }

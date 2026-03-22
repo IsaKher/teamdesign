@@ -14,6 +14,7 @@ export const STUDIO = {
   founded: 1999,
   site: 'https://teamdesign.in',
   mapsUrl: 'geo:19.1077,73.0081?q=A-145%2F6A+Pawane+Village+Midc+Road+Kopar+Khairane+Navi+Mumbai+400710',
+  instagramUrl: 'https://www.instagram.com/teamdesign2004/',
 } as const;
 
 // ─── Homepage data ───────────────────────────────────────────────────────────
