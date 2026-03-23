@@ -124,8 +124,8 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.95);
-  background: rgba(20, 16, 12, 0.82);
-  border: 1px solid rgba(20, 16, 12, 0.60);
+  background: rgba(20, 16, 12, 0.48);
+  border: 1px solid rgba(20, 16, 12, 0.35);
   padding: 14px 32px;
   text-decoration: none;
   backdrop-filter: blur(8px);
