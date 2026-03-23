@@ -257,8 +257,95 @@
 }
 
 .projectGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+/* ── Hero (lead) project card ─────────────────────────────────────────── */
+.projectHeroCard {
+  display: block;
+  text-decoration: none;
+}
+
+.projectHeroImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: var(--color-ground-dark);
+}
+
+.projectHeroImage {
+  transition: transform var(--transition-hover);
+}
+
+.projectHeroCard:hover .projectHeroImage {
+  transform: scale(1.03);
+}
+
+.projectHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 16, 12, 0.82) 0%,
+    rgba(20, 16, 12, 0.38) 38%,
+    rgba(20, 16, 12, 0.05) 65%,
+    rgba(20, 16, 12, 0)    100%
+  );
+  z-index: 1;
+}
+
+.projectHeroContent {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  right: 48px;
+  z-index: 2;
+}
+
+.projectHeroType {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.60);
+  margin-bottom: 10px;
+}
+
+.projectHeroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 300;
+  color: rgba(244, 238, 230, 0.97);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 4px 20px rgba(0,0,0,0.35);
+}
+
+.projectHeroTagline {
+  font-family: var(--font-serif);
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(244, 238, 230, 0.80);
+  line-height: 1.6;
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.projectHeroCard:hover .projectHeroTagline {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Supporting three cards ───────────────────────────────────────────── */
+.projectRow {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--grid-gap);
 }
 
@@ -289,26 +376,27 @@
   transition: background 0.5s ease;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  padding: 24px;
+  justify-content: flex-start;
+  padding: 20px 22px;
 }
 
 .projectCard:hover .projectOverlay {
-  background: rgba(28, 22, 18, 0.12);
+  background: rgba(28, 22, 18, 0.52);
 }
 
-.viewLabel {
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
+.projectCardTagline {
+  font-family: var(--font-serif);
+  font-size: clamp(12px, 0.95vw, 14px);
+  font-style: italic;
+  font-weight: 300;
   color: rgba(244, 238, 230, 0.90);
+  line-height: 1.55;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
 }
 
-.projectCard:hover .viewLabel {
+.projectCard:hover .projectCardTagline {
   opacity: 1;
   transform: translateY(0);
 }

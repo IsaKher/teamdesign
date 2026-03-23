@@ -70,30 +70,58 @@ export default function HomePage() {
         </div>
 
         <div className={styles.projectGrid}>
-          {FEATURED_PROJECTS.map((project, i) => (
-            <FadeIn key={project.slug} delay={i * 0.12} direction="up">
-            <Link href={`/work/${project.slug}`} className={styles.projectCard}>
-              <div className={styles.projectImageWrap}>
+
+          {/* ── Lead project — full-width cinematic strip ── */}
+          <FadeIn direction="up">
+            <Link href={`/work/${FEATURED_PROJECTS[0].slug}`} className={styles.projectHeroCard}>
+              <div className={styles.projectHeroImageWrap}>
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  src={FEATURED_PROJECTS[0].image}
+                  alt={FEATURED_PROJECTS[0].title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                  sizes="100vw"
                   style={{ objectFit: 'cover' }}
-                  className={styles.projectImage}
+                  className={styles.projectHeroImage}
                 />
-                <div className={styles.projectOverlay}>
-                  <span className={styles.viewLabel}>View Project</span>
+                <div className={styles.projectHeroOverlay} />
+                <div className={styles.projectHeroContent}>
+                  <span className={styles.projectHeroType}>{FEATURED_PROJECTS[0].type}</span>
+                  <h3 className={styles.projectHeroTitle}>{FEATURED_PROJECTS[0].title}</h3>
+                  <p className={styles.projectHeroTagline}>{FEATURED_PROJECTS[0].tagline}</p>
                 </div>
               </div>
-              <div className={styles.projectMeta}>
-                <span className={styles.projectType}>{project.type}</span>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <span className={styles.projectClient}>{project.client} · {project.location}</span>
-              </div>
             </Link>
-            </FadeIn>
-          ))}
+          </FadeIn>
+
+          {/* ── Supporting three ── */}
+          <div className={styles.projectRow}>
+            {FEATURED_PROJECTS.slice(1).map((project, i) => (
+              <FadeIn key={project.slug} delay={i * 0.12} direction="up">
+                <Link href={`/work/${project.slug}`} className={styles.projectCard}>
+                  <div className={styles.projectImageWrap}>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                      className={styles.projectImage}
+                    />
+                    <div className={styles.projectOverlay}>
+                      <p className={styles.projectCardTagline}>{project.tagline}</p>
+                    </div>
+                  </div>
+                  <div className={styles.projectMeta}>
+                    <span className={styles.projectType}>{project.type}</span>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                    <span className={styles.projectClient}>{project.client} · {project.location}</span>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+
         </div>
       </section>
 

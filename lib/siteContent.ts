@@ -33,6 +33,7 @@ export const FEATURED_PROJECTS = [
     type: 'Residential',
     location: 'Kemps Corner, Mumbai',
     image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg',
+    tagline: 'A private residence shaped around art, restraint, and the quality of Mumbai light.',
   },
   {
     slug: 'unilazer-ventures-office',
@@ -41,6 +42,7 @@ export const FEATURED_PROJECTS = [
     type: 'Commercial',
     location: 'Worli, Mumbai',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-3-1.jpg',
+    tagline: 'A workspace for a media entrepreneur that thinks like a creative studio.',
   },
   {
     slug: 'jk-bank-nbc-bkc',
@@ -49,6 +51,7 @@ export const FEATURED_PROJECTS = [
     type: 'Commercial',
     location: 'BKC, Mumbai',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg',
+    tagline: 'A Kashmiri institution arriving at the heart of Mumbai\'s financial district.',
   },
   {
     slug: 'college-campus-extension-itm',
@@ -57,6 +60,7 @@ export const FEATURED_PROJECTS = [
     type: 'Institutional',
     location: 'Navi Mumbai',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg',
+    tagline: 'An expansion built to serve ten thousand students without losing human scale.',
   },
 ];
 
