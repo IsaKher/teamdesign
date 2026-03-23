@@ -1,5 +1,8 @@
 import type { Testimonial } from '@/components/TestimonialSlider';
 
+// Warm beige blur placeholder for next/image — avoids grey flash on load
+export const WARM_BLUR = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxJyBoZWlnaHQ9JzEnPjxyZWN0IGZpbGw9JyNFREU1RDgnIHdpZHRoPScxJyBoZWlnaHQ9JzEnLz48L3N2Zz4=' as const;
+
 // ─── Studio constants ────────────────────────────────────────────────────────
 export const STUDIO = {
   phone: '+91 98765 43210',

@@ -14,14 +14,17 @@ export default function ContactPage() {
     setErrorMsg('');
 
     const form = e.currentTarget;
+    const typeField = form.elements.namedItem('type');
     const data = {
-      name:    (form.elements.namedItem('name')    as HTMLInputElement).value,
-      phone:   (form.elements.namedItem('phone')   as HTMLInputElement).value,
-      email:   (form.elements.namedItem('email')   as HTMLInputElement).value,
-      project: (form.elements.namedItem('project') as HTMLTextAreaElement).value,
-      type:    (form.elements.namedItem('type')    as HTMLSelectElement).value,
+      name:     (form.elements.namedItem('name')    as HTMLInputElement).value,
+      phone:    (form.elements.namedItem('phone')   as HTMLInputElement).value,
+      email:    (form.elements.namedItem('email')   as HTMLInputElement).value,
+      project:  (form.elements.namedItem('project') as HTMLTextAreaElement).value,
+      type:     typeField instanceof RadioNodeList ? typeField.value : (typeField as HTMLInputElement)?.value ?? '',
+      budget:   (form.elements.namedItem('budget')   as HTMLSelectElement)?.value ?? '',
+      timeline: (form.elements.namedItem('timeline') as HTMLSelectElement)?.value ?? '',
       // Honeypot — real users never fill this; bots do
-      website: (form.elements.namedItem('website') as HTMLInputElement)?.value ?? '',
+      website:  (form.elements.namedItem('website') as HTMLInputElement)?.value ?? '',
     };
 
     const controller = new AbortController();
@@ -184,27 +187,56 @@ export default function ContactPage() {
               </div>
 
               <div className={styles.field}>
+                <span className={styles.label}>Type of Project</span>
+                <div className={styles.typeCards}>
+                  {[
+                    { value: 'residential-bungalow', label: 'Bungalow / Villa' },
+                    { value: 'residential-apartment', label: 'Apartment' },
+                    { value: 'commercial', label: 'Commercial' },
+                    { value: 'institutional', label: 'Institutional' },
+                    { value: 'interiors', label: 'Interiors Only' },
+                    { value: 'other', label: 'Not Sure Yet' },
+                  ].map(({ value, label }) => (
+                    <label key={value} className={styles.typeCard}>
+                      <input type="radio" name="type" value={value} className={styles.typeCardInput} />
+                      <span className={styles.typeCardLabel}>{label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.fieldRow}>
+                <div className={styles.field}>
+                  <label htmlFor="budget" className={styles.label}>Approximate Budget</label>
+                  <select id="budget" name="budget" className={styles.select}>
+                    <option value="">Prefer not to say</option>
+                    <option value="under-50l">Under ₹50 Lakhs</option>
+                    <option value="50l-1cr">₹50L – ₹1 Crore</option>
+                    <option value="1cr-3cr">₹1 – ₹3 Crore</option>
+                    <option value="3cr-plus">₹3 Crore+</option>
+                  </select>
+                </div>
+                <div className={styles.field}>
+                  <label htmlFor="timeline" className={styles.label}>Timeline</label>
+                  <select id="timeline" name="timeline" className={styles.select}>
+                    <option value="">Not sure yet</option>
+                    <option value="asap">As soon as possible</option>
+                    <option value="6-months">Within 6 months</option>
+                    <option value="1-year">Within a year</option>
+                    <option value="flexible">Flexible / Exploring</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.field}>
                 <label htmlFor="project" className={styles.label}>Tell us about your project</label>
                 <textarea
                   id="project"
                   name="project"
                   className={styles.textarea}
-                  rows={6}
+                  rows={5}
                   placeholder="I'm planning a 4,000 sq ft bungalow in Juhu. I have a plot and am looking for an architect to lead the design and manage the build..."
                 />
-              </div>
-
-              <div className={styles.field}>
-                <label htmlFor="type" className={styles.label}>Project Type</label>
-                <select id="type" name="type" className={styles.select}>
-                  <option value="">Select a type</option>
-                  <option value="residential">Residential — Bungalow / Villa</option>
-                  <option value="apartment">Residential — Apartment / Flat</option>
-                  <option value="commercial">Commercial — Office / Retail</option>
-                  <option value="institutional">Institutional</option>
-                  <option value="interiors">Interiors Only</option>
-                  <option value="other">Other / Not Sure</option>
-                </select>
               </div>
 
               {status === 'error' && (

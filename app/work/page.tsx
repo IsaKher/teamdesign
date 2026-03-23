@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { WARM_BLUR } from '@/lib/siteContent';
 
 const FILTERS = ['All', 'Bungalows', 'Commercial', 'Institutional', 'Residential'];
 
@@ -218,7 +219,7 @@ function WorkContent() {
         {filtered.map((project) => (
           <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
-              <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} />
+              <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
               <div className={styles.cardOverlay}>
                 <span className={styles.viewLabel}>View Project</span>
               </div>

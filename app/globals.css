@@ -114,3 +114,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     --margin-section: 72px;
   }
 }
+
+/* ─── Focus styles (keyboard navigation) ────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-text-secondary);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--color-text-secondary);
+  outline-offset: 4px;
+}
+
+/* ─── Custom cursor — hide native pointer on hover-capable devices ───────── */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}

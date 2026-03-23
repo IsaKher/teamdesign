@@ -1,0 +1,37 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 22, 18, 0.55);
+  background: transparent;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.3s ease,
+    width 0.25s ease,
+    height 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+  will-change: transform;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.expand {
+  width: 28px;
+  height: 28px;
+  background: rgba(28, 22, 18, 0.07);
+  border-color: rgba(28, 22, 18, 0.35);
+}
+
+/* Hide on touch / pointer-coarse devices */
+@media (hover: none), (pointer: coarse) {
+  .cursor { display: none !important; }
+}

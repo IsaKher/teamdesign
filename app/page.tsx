@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
-import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS } from '@/lib/siteContent';
+import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
 
 export default function HomePage() {
   return (
@@ -19,6 +19,8 @@ export default function HomePage() {
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
             className={styles.heroImage}
+            placeholder="blur"
+            blurDataURL={WARM_BLUR}
           />
           <div className={styles.heroOverlayTop} />
           <div className={styles.heroOverlayBottom} />
@@ -83,6 +85,8 @@ export default function HomePage() {
                   sizes="100vw"
                   style={{ objectFit: 'cover' }}
                   className={styles.projectHeroImage}
+                  placeholder="blur"
+                  blurDataURL={WARM_BLUR}
                 />
                 <div className={styles.projectHeroOverlay} />
                 <div className={styles.projectHeroContent}>
@@ -107,6 +111,8 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       style={{ objectFit: 'cover' }}
                       className={styles.projectImage}
+                      placeholder="blur"
+                      blurDataURL={WARM_BLUR}
                     />
                     <div className={styles.projectOverlay}>
                       <p className={styles.projectCardTagline}>{project.tagline}</p>
@@ -174,6 +180,8 @@ export default function HomePage() {
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                placeholder="blur"
+                blurDataURL={WARM_BLUR}
               />
             </div>
           </div>
@@ -265,6 +273,8 @@ export default function HomePage() {
             height={1024}
             sizes="100vw"
             style={{ width: '100%', height: 'auto', display: 'block' }}
+            placeholder="blur"
+            blurDataURL={WARM_BLUR}
           />
           <div className={styles.interiorsOverlay} />
         </div>

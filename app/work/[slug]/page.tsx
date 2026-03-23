@@ -5,9 +5,16 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
 import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
-import { STUDIO } from '@/lib/siteContent';
+import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
 const ALL_SLUGS = Object.keys(PROJECT_DATA);
+
+// Next project (wraps around)
+function getNextProject(currentSlug: string) {
+  const idx = ALL_SLUGS.indexOf(currentSlug);
+  const nextSlug = ALL_SLUGS[(idx + 1) % ALL_SLUGS.length];
+  return { slug: nextSlug, ...PROJECT_DATA[nextSlug] };
+}
 
 const BASE = STUDIO.site;
 
@@ -57,6 +64,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     title: params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
   };
 
+  const nextProj = getNextProject(params.slug);
+
   const projectJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
@@ -93,6 +102,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             priority
             sizes="100vw"
             style={{ objectFit: 'cover' }}
+            placeholder="blur"
+            blurDataURL={WARM_BLUR}
           />
           <div className={styles.heroOverlay} />
         </div>
@@ -116,6 +127,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           )}
         </div>
       </section>
+
+      {/* Opening brief — first paragraph displayed large */}
+      <div className={styles.openingBrief}>
+        <p className={styles.openingBriefText}>
+          {project.description.split('\n\n')[0]}
+        </p>
+      </div>
 
       {/* Project Story — Challenge / Strategy / Result */}
       <section className={styles.content}>
@@ -161,6 +179,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
+                  placeholder="blur"
+                  blurDataURL={WARM_BLUR}
                 />
               </div>
             ))}
@@ -219,6 +239,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     fill
                     sizes="33vw"
                     style={{ objectFit: 'cover' }}
+                    placeholder="blur"
+                    blurDataURL={WARM_BLUR}
                   />
                 </div>
                 <span className={styles.relatedType}>{r.type}</span>
@@ -228,6 +250,28 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
         </section>
       )}
+
+      {/* Next Project */}
+      <Link href={`/work/${nextProj.slug}`} className={styles.nextProject}>
+        <div className={styles.nextProjectImageWrap}>
+          <Image
+            src={nextProj.mainImage}
+            alt={nextProj.title}
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+            placeholder="blur"
+            blurDataURL={WARM_BLUR}
+            className={styles.nextProjectImage}
+          />
+          <div className={styles.nextProjectOverlay} />
+        </div>
+        <div className={styles.nextProjectContent}>
+          <span className={styles.nextProjectLabel}>Next Project</span>
+          <span className={styles.nextProjectTitle}>{nextProj.title}</span>
+          <span className={styles.nextProjectMeta}>{nextProj.type} · {nextProj.location}</span>
+        </div>
+      </Link>
     </>
   );
 }
