@@ -47,6 +47,20 @@
   z-index: 1;
 }
 
+/* Left-side vignette — darkens the text zone without touching the right side */
+.heroOverlayLeft {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20,16,12,0.58) 0%,
+    rgba(20,16,12,0.32) 30%,
+    rgba(20,16,12,0.10) 55%,
+    rgba(20,16,12,0)    72%
+  );
+  z-index: 1;
+}
+
 .heroText {
   position: absolute;
   bottom: 80px;
@@ -91,7 +105,11 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.95);
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  /* Option B: tight shadow for crispness + wide diffuse shadow for depth */
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.80),
+    0 4px 24px rgba(0, 0, 0, 0.55),
+    0 8px 48px rgba(0, 0, 0, 0.30);
 }
 
 .heroCtas {
