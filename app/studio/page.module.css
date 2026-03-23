@@ -20,6 +20,117 @@
   color: var(--color-text-primary);
 }
 
+/* ─── Architectural Drawing ──────────────────────────── */
+.drawing {
+  padding: 56px var(--margin-page) 72px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.drawingFrame {
+  position: relative;
+  border: 1px solid var(--color-rule);
+}
+
+/* Inset hairline — double-ruled border like a technical drawing sheet */
+.drawingImageWrap::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(221, 213, 200, 0.50);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Corner bracket marks */
+.corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  z-index: 4;
+}
+.cornerTL { top: -1px;    left: -1px;   border-top:    1.5px solid var(--color-text-primary); border-left:   1.5px solid var(--color-text-primary); }
+.cornerTR { top: -1px;    right: -1px;  border-top:    1.5px solid var(--color-text-primary); border-right:  1.5px solid var(--color-text-primary); }
+.cornerBL { bottom: -1px; left: -1px;   border-bottom: 1.5px solid var(--color-text-primary); border-left:   1.5px solid var(--color-text-primary); }
+.cornerBR { bottom: -1px; right: -1px;  border-bottom: 1.5px solid var(--color-text-primary); border-right:  1.5px solid var(--color-text-primary); }
+
+.drawingImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Annotation callouts */
+.annot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+  pointer-events: none;
+}
+.annotA { top: 10%; left: 16%; }
+.annotB { top: 28%; right: 22%; flex-direction: row-reverse; }
+.annotC { top: 72%; left: 34%; }
+
+.annotDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(28, 22, 18, 0.45);
+  flex-shrink: 0;
+}
+
+.annotLine {
+  display: block;
+  width: 52px;
+  height: 1px;
+  background: rgba(28, 22, 18, 0.25);
+  flex-shrink: 0;
+}
+
+.annotText {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(28, 22, 18, 0.55);
+  white-space: nowrap;
+}
+
+/* Title block */
+.titleBlock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--color-rule);
+}
+
+.titleCell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 18px 24px;
+  border-right: 1px solid var(--color-rule);
+}
+.titleCell:last-child { border-right: none; }
+
+.titleCellLabel {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.60;
+}
+
+.titleCellValue {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
 /* ─── Story ──────────────────────────────────────────── */
 .story {
   padding: var(--margin-section) var(--margin-page);
@@ -367,9 +478,18 @@
   .serviceGrid { grid-template-columns: 1fr; }
   .processSteps { grid-template-columns: repeat(2, 1fr); }
   .awardsGrid { grid-template-columns: repeat(2, 1fr); }
+  .titleBlock { grid-template-columns: repeat(2, 1fr); }
+  .titleCell:nth-child(2) { border-right: none; }
+  .titleCell:nth-child(3) { border-top: 1px solid var(--color-rule); }
+  .titleCell:nth-child(4) { border-top: 1px solid var(--color-rule); }
+  .annot { display: none; }
 }
 
 @media (max-width: 600px) {
   .processSteps { grid-template-columns: 1fr; }
   .awardsGrid { grid-template-columns: 1fr; }
+  .drawing { padding: 40px 24px 56px; }
+  .titleBlock { grid-template-columns: 1fr; }
+  .titleCell { border-right: none !important; border-top: 1px solid var(--color-rule); }
+  .titleCell:first-child { border-top: none; }
 }

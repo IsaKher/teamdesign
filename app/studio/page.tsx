@@ -12,6 +12,60 @@ export default function StudioPage() {
         <h1 className={styles.pageTitle}>Studio</h1>
       </div>
 
+      {/* ─── Architectural Drawing ─────────────────────────── */}
+      <section className={styles.drawing}>
+        <div className={styles.drawingFrame}>
+          <span className={`${styles.corner} ${styles.cornerTL}`} aria-hidden="true" />
+          <span className={`${styles.corner} ${styles.cornerTR}`} aria-hidden="true" />
+          <span className={`${styles.corner} ${styles.cornerBL}`} aria-hidden="true" />
+          <span className={`${styles.corner} ${styles.cornerBR}`} aria-hidden="true" />
+
+          <div className={styles.drawingImageWrap}>
+            <Image
+              src="/studio-sketch.png"
+              alt="Team Design Studio Building — Architectural Illustration, Kopar Khairane"
+              fill
+              sizes="(max-width: 900px) 100vw, calc(100vw - 160px)"
+              style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
+            />
+            <div className={`${styles.annot} ${styles.annotA}`}>
+              <span className={styles.annotDot} />
+              <span className={styles.annotLine} />
+              <span className={styles.annotText}>Primary Tower</span>
+            </div>
+            <div className={`${styles.annot} ${styles.annotB}`}>
+              <span className={styles.annotText}>Rooftop Planting</span>
+              <span className={styles.annotLine} />
+              <span className={styles.annotDot} />
+            </div>
+            <div className={`${styles.annot} ${styles.annotC}`}>
+              <span className={styles.annotDot} />
+              <span className={styles.annotLine} />
+              <span className={styles.annotText}>Studio Entrance</span>
+            </div>
+          </div>
+
+          <div className={styles.titleBlock}>
+            <div className={styles.titleCell}>
+              <span className={styles.titleCellLabel}>Practice</span>
+              <span className={styles.titleCellValue}>Team Design Architects</span>
+            </div>
+            <div className={styles.titleCell}>
+              <span className={styles.titleCellLabel}>Location</span>
+              <span className={styles.titleCellValue}>Kopar Khairane, Navi Mumbai</span>
+            </div>
+            <div className={styles.titleCell}>
+              <span className={styles.titleCellLabel}>Established</span>
+              <span className={styles.titleCellValue}>1999</span>
+            </div>
+            <div className={styles.titleCell}>
+              <span className={styles.titleCellLabel}>Drawing</span>
+              <span className={styles.titleCellValue}>Studio Building — Exterior Elevation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founding story */}
       <section className={styles.story}>
         <div className={styles.storyInner}>
