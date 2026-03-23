@@ -48,10 +48,10 @@
   height: 16px;
   z-index: 3;
 }
-.cornerTL { top: -4px;    left: -4px;   border-top: 2px solid var(--color-text-primary); border-left:  2px solid var(--color-text-primary); }
-.cornerTR { top: -4px;    right: -4px;  border-top: 2px solid var(--color-text-primary); border-right: 2px solid var(--color-text-primary); }
-.cornerBL { bottom: -4px; left: -4px;   border-bottom: 2px solid var(--color-text-primary); border-left:  2px solid var(--color-text-primary); }
-.cornerBR { bottom: -4px; right: -4px;  border-bottom: 2px solid var(--color-text-primary); border-right: 2px solid var(--color-text-primary); }
+.cornerTL { top: 0; left: 0;     border-top: 2px solid var(--color-text-primary); border-left:  2px solid var(--color-text-primary); }
+.cornerTR { top: 0; right: 0;    border-top: 2px solid var(--color-text-primary); border-right: 2px solid var(--color-text-primary); }
+.cornerBL { bottom: 0; left: 0;  border-bottom: 2px solid var(--color-text-primary); border-left:  2px solid var(--color-text-primary); }
+.cornerBR { bottom: 0; right: 0; border-bottom: 2px solid var(--color-text-primary); border-right: 2px solid var(--color-text-primary); }
 
 .drawingImageWrap {
   position: relative;
