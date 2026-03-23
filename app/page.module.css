@@ -105,11 +105,10 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.95);
-  /* Option B: tight shadow for crispness + wide diffuse shadow for depth */
   text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.80),
-    0 4px 24px rgba(0, 0, 0, 0.55),
-    0 8px 48px rgba(0, 0, 0, 0.30);
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .heroCtas {
