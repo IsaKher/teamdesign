@@ -22,8 +22,7 @@ export default function HomePage() {
             placeholder="blur"
             blurDataURL={WARM_BLUR}
           />
-          <div className={styles.heroOverlayTop} />
-          <div className={styles.heroOverlayBottom} />
+          <div className={styles.heroOverlayLeft} />
         </div>
 
         <section className={styles.hero}>

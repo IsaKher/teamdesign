@@ -124,20 +124,17 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.95);
-  background: rgba(20, 16, 12, 0.28);
-  border: 1px solid rgba(244, 238, 230, 0.45);
+  background: rgba(20, 16, 12, 0.82);
+  border: 1px solid rgba(20, 16, 12, 0.60);
   padding: 14px 32px;
   text-decoration: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: background 0.3s ease, border-color 0.3s ease;
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.90),
-    0 2px 12px rgba(0, 0, 0, 0.60);
 }
 .heroCta:hover {
-  background: rgba(20, 16, 12, 0.42);
-  border-color: rgba(244, 238, 230, 0.70);
+  background: rgba(20, 16, 12, 0.96);
+  border-color: rgba(20, 16, 12, 0.80);
 }
 
 .heroCtaSecondary {
@@ -147,17 +144,22 @@
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.80);
   text-decoration: none;
-  transition: color 0.3s ease;
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.90),
-    0 2px 12px rgba(0, 0, 0, 0.60);
+  border-bottom: 1px solid rgba(244, 238, 230, 0.30);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
-.heroCtaSecondary:hover { color: rgba(244, 238, 230, 0.95); }
+.heroCtaSecondary:hover {
+  color: rgba(244, 238, 230, 0.97);
+  border-bottom-color: rgba(244, 238, 230, 0.65);
+}
 
 /* ─── Stat Bar ─────────────────────────────────────────────────────────── */
 .statBar {
   position: relative;
   z-index: 1;
+  background: rgba(244, 238, 230, 0.82);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
@@ -171,7 +173,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 0 32px;
-  border-right: 1px solid rgba(244, 238, 230, 0.08);
+  border-right: 1px solid rgba(28, 22, 18, 0.10);
 }
 
 .stat:first-child { padding-left: 0; }
@@ -181,12 +183,8 @@
   font-family: var(--font-serif);
   font-size: clamp(36px, 3.5vw, 52px);
   font-weight: 300;
-  color: rgba(244, 238, 230, 1);
+  color: rgba(28, 22, 18, 0.88);
   line-height: 1;
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.95),
-    0 4px 24px rgba(0, 0, 0, 0.80),
-    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .statLabel {
@@ -194,11 +192,7 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.72);
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.95),
-    0 4px 24px rgba(0, 0, 0, 0.80),
-    0 8px 64px rgba(0, 0, 0, 0.60);
+  color: rgba(28, 22, 18, 0.50);
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
