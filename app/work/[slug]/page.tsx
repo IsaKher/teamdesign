@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
-import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
+import { PROJECT_DATA, FALLBACK, type ContentBlock } from '@/lib/projectData';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
 const ALL_SLUGS = Object.keys(PROJECT_DATA);
@@ -164,8 +164,81 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* Gallery */}
-      {project.gallery.length > 0 && (
+      {/* Editorial content blocks — replaces gallery when defined for a project */}
+      {project.contentBlocks && project.contentBlocks.length > 0 ? (
+        <section className={styles.blocks}>
+          {project.contentBlocks.map((block: ContentBlock, i: number) => {
+            switch (block.type) {
+              case 'paragraph':
+                return (
+                  <FadeIn key={i} direction="up">
+                    <div className={styles.blockPara}>
+                      <p className={styles.blockParaText}>{block.text}</p>
+                    </div>
+                  </FadeIn>
+                );
+              case 'fullWidthImage':
+                return (
+                  <FadeIn key={i} direction="up" threshold={0.05}>
+                    <div className={styles.blockFullImage}>
+                      <div className={styles.blockFullImageWrap}>
+                        <Image
+                          src={block.src}
+                          alt={block.caption ?? `${project.title} — image ${i + 1}`}
+                          fill
+                          sizes="100vw"
+                          style={{ objectFit: 'cover' }}
+                          placeholder="blur"
+                          blurDataURL={WARM_BLUR}
+                        />
+                      </div>
+                      {block.caption && (
+                        <span className={styles.blockCaption}>{block.caption}</span>
+                      )}
+                    </div>
+                  </FadeIn>
+                );
+              case 'halfWidthImages':
+                return (
+                  <FadeIn key={i} direction="up" threshold={0.05}>
+                    <div className={styles.blockHalf}>
+                      {block.images.map((src, j) => (
+                        <div key={j} className={styles.blockHalfItem}>
+                          <div className={styles.blockHalfImageWrap}>
+                            <Image
+                              src={src}
+                              alt={block.captions?.[j] ?? `${project.title} — image ${j + 1}`}
+                              fill
+                              sizes="50vw"
+                              style={{ objectFit: 'cover' }}
+                              placeholder="blur"
+                              blurDataURL={WARM_BLUR}
+                            />
+                          </div>
+                          {block.captions?.[j] && (
+                            <span className={styles.blockCaption}>{block.captions[j]}</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </FadeIn>
+                );
+              case 'pullQuote':
+                return (
+                  <FadeIn key={i} direction="up">
+                    <div className={styles.blockPullQuote}>
+                      <blockquote className={styles.blockPullQuoteText}>
+                        &ldquo;{block.text}&rdquo;
+                      </blockquote>
+                    </div>
+                  </FadeIn>
+                );
+              default:
+                return null;
+            }
+          })}
+        </section>
+      ) : project.gallery.length > 0 ? (
         <FadeIn direction="up" threshold={0.05}>
           <section className={styles.gallery}>
             {project.gallery.map((src, i) => (
@@ -186,7 +259,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             ))}
           </section>
         </FadeIn>
-      )}
+      ) : null}
 
       {/* Testimonial */}
       {project.testimonial && (

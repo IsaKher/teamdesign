@@ -79,11 +79,13 @@
   border-radius: 50%;
   background: var(--color-text-primary);
   flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0);
 }
 
 .annotLine {
   display: block;
-  width: 44px;
+  width: 0;
   height: 1px;
   background: var(--color-text-primary);
   opacity: 0.50;
@@ -97,7 +99,44 @@
   text-transform: uppercase;
   color: var(--color-text-primary);
   white-space: nowrap;
+  opacity: 0;
 }
+
+/* ─── Annotation keyframes ───────────────────────────────── */
+@keyframes dotIn {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lineExtend {
+  from { width: 0; }
+  to   { width: 44px; }
+}
+
+@keyframes textFadeRight {
+  from { opacity: 0; transform: translateX(6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes textFadeLeft {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Annotation A — dot → line → text  (stagger starts at 0.3s) */
+.drawingVisible .annotA .annotDot  { animation: dotIn        0.25s ease-out 0.30s forwards; }
+.drawingVisible .annotA .annotLine { animation: lineExtend   0.45s ease-out 0.50s forwards; }
+.drawingVisible .annotA .annotText { animation: textFadeRight 0.35s ease-out 0.80s forwards; }
+
+/* Annotation B — reversed: text → line → dot  (stagger starts at 0.9s) */
+.drawingVisible .annotB .annotText { animation: textFadeLeft  0.35s ease-out 0.90s forwards; }
+.drawingVisible .annotB .annotLine { animation: lineExtend    0.45s ease-out 1.10s forwards; }
+.drawingVisible .annotB .annotDot  { animation: dotIn         0.25s ease-out 1.40s forwards; }
+
+/* Annotation C — dot → line → text  (stagger starts at 1.5s) */
+.drawingVisible .annotC .annotDot  { animation: dotIn         0.25s ease-out 1.50s forwards; }
+.drawingVisible .annotC .annotLine { animation: lineExtend    0.45s ease-out 1.70s forwards; }
+.drawingVisible .annotC .annotText { animation: textFadeRight 0.35s ease-out 2.00s forwards; }
 
 /* ─── Title block ────────────────────────────────────────── */
 .titleBlock {

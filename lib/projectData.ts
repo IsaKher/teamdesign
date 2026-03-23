@@ -11,6 +11,12 @@ export interface Testimonial {
   title: string;
 }
 
+export type ContentBlock =
+  | { type: 'paragraph'; text: string }
+  | { type: 'fullWidthImage'; src: string; caption?: string }
+  | { type: 'halfWidthImages'; images: [string, string]; captions?: [string, string] }
+  | { type: 'pullQuote'; text: string };
+
 export interface Project {
   title: string;
   client: string;
@@ -23,6 +29,7 @@ export interface Project {
   gallery: string[];
   testimonial: Testimonial | null;
   related: RelatedProject[];
+  contentBlocks?: ContentBlock[];
 }
 
 export const PROJECT_DATA: Record<string, Project> = {
@@ -51,6 +58,13 @@ Each event space has been conceived to accommodate gatherings of varying scales,
       { slug: 'mariwala-estate-annexe-lonavala', title: 'Mariwala Estate Annexe', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Mariwala-Estate-Annexe-6-1.jpg' },
       { slug: 'nrb-bearings-guest-house-aurangabad', title: 'Guest House — NRB Bearings', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-4-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A wedding destination conceived at the scale of ceremony itself — seven acres in Raipur designed to hold intimate family gatherings and large public celebrations simultaneously, without interference between them.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/w-4-1.jpg', caption: 'Landscape gardens — Raipur, Chhattisgarh, 2014' },
+      { type: 'pullQuote', text: 'The result is a campus that is simultaneously rooted in Indian cultural tradition and unmistakably modern in its execution.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/w-8-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/w-10-1.jpg'], captions: ['Banquet corridor', 'Event pavilion'] },
+      { type: 'paragraph', text: 'Landscaped corridors between event spaces allow multiple functions to run in parallel. The Rajasthani architectural vocabulary — arches, jaali screens, carved stonework — is reinterpreted in a contemporary material language.' },
+    ],
   },
 
   'kalimata-mandir-navi-mumbai': {
@@ -76,6 +90,13 @@ The building is experienced as much as seen: the transition from the bright fore
       { slug: 'college-campus-extension-itm', title: 'College Campus Extension — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg' },
       { slug: 'mba-hostel-towers-itm', title: 'MBA Hostel Towers — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MBA-Hostel-Building-ITM-Navi-Mumbai-India-5-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A temple designed after extensive research on Kalimata temples across India — translating the vertical hierarchy of the shikara and the processional logic of the mandapa into a contemporary material language rooted in its Bengali community.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_03-1.jpg', caption: 'East elevation — Kharghar, Navi Mumbai, 2017' },
+      { type: 'pullQuote', text: 'The building is experienced as much as seen: the transition from the bright forecourt into the cool interior of the sanctum.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_04-1.jpg', caption: 'Rooftop courtyard fronting the main temple' },
+      { type: 'paragraph', text: 'The temple has become a significant community landmark in Kharghar since its completion — a building that honours the spiritual gravity of its programme while serving a large and growing devotee community.' },
+    ],
   },
 
   'service-industry-campus-goa': {
@@ -100,6 +121,13 @@ At 1.5 million square feet, this is one of the largest projects in the firm's po
       { slug: 'college-engineering-management-nagpur', title: 'College for Engineering & Management', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-OF-ENG-_-MANAGEMENT-5.jpg' },
       { slug: 'college-campus-extension-itm', title: 'College Campus Extension — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg' },
       { slug: 'mba-hostel-towers-itm', title: 'MBA Hostel Towers — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MBA-Hostel-Building-ITM-Navi-Mumbai-India-5-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'At 1.5 million square feet across 70 acres in Bicholim, this is one of the largest projects in the firm\'s portfolio — a five-institute campus whose radiating geometry is legible from the air and navigable on foot.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-4-1.jpg', caption: 'Campus entrance — Bicholim, Goa, 2009' },
+      { type: 'pullQuote', text: 'The five-finger concept allows each institute to maintain its own identity while sharing infrastructure and connecting back to a common arrival sequence.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-6-1.jpg', caption: 'Institute facade and landscaped approach' },
+      { type: 'paragraph', text: 'Each finger functions as a separate institute — covering hospitality, management, health sciences, banking training, and a centre of excellence — radiating from the entrance through zones of common facilities and forest.' },
     ],
   },
 
@@ -127,6 +155,13 @@ The project demonstrates how sensitive site planning can achieve privacy and ind
       { slug: 'bhandari-house-bhinmal', title: 'Bhandari House', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/11/Bhandari-House.jpg' },
       { slug: 'villa-merchant-tirupur', title: 'Luxurious 5BHK Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Luxurious-5BHK-Villa-Mr-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'Located at 2,200 feet elevation near Tungarli Lake, four bungalows on a 25,000 sq ft hillside plot — each designed with Vaastu principles, south-facing solar roofs, and a careful site plan that achieves genuine privacy within a multi-unit development.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-4-1.jpg', caption: 'Exterior elevation — Lonavala, Maharashtra, 2010' },
+      { type: 'pullQuote', text: 'Each bungalow occupies its own distinct position on the hillside, connected by landscaped paths rather than shared walls.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-10-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-6-1.jpg'], captions: ['Terrace living area', 'South-facing facade'] },
+      { type: 'paragraph', text: 'The outdoor terrace is private and the form of each house shields it from its neighbour. The Western Ghats setting — misty mornings, forested slopes, the lake below — is the primary material of the design.' },
+    ],
   },
 
   'mba-hostel-towers-itm': {
@@ -151,6 +186,13 @@ Student accommodation at this scale risks becoming anonymous. The design resists
       { slug: 'college-campus-extension-itm', title: 'College Campus Extension — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg' },
       { slug: 'college-engineering-management-nagpur', title: 'College for Engineering & Management', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-OF-ENG-_-MANAGEMENT-5.jpg' },
       { slug: 'service-industry-campus-goa', title: 'Service Industry Education Campus', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-5-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'Twin hostel towers of 11 and 16 floors in Navi Mumbai, providing each of the 600 students with a private furnished room — and the whole community with a courtyard, computer lab, gym, and social kitchen alcoves that resist the anonymity of large-scale student housing.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-4-1.jpg', caption: 'Twin towers — Navi Mumbai, 2005' },
+      { type: 'pullQuote', text: 'Student accommodation at this scale risks becoming anonymous. The design resists this through careful treatment of the common spaces.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-3-1.jpg', caption: 'Podium level — landscaped courtyard and lounges' },
+      { type: 'paragraph', text: 'Sky terraces at alternate floors and ground-level courtyards give each resident a sense of neighbourhood within the larger building — the quality that defines student life at its best.' },
     ],
   },
 
@@ -182,6 +224,13 @@ The project is a study in the art of the annexe — how to add to a beloved exis
       { slug: 'bhandari-house-bhinmal', title: 'Bhandari House', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/11/Bhandari-House.jpg' },
       { slug: 'glass-kitchen-alibaug', title: 'Glass Kitchen', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Glass-Kitchen-5-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'The art of the annexe: how to add a cantilever lap pool, clubhouse, and redesigned landscape to a beloved 70,000 sq ft Art Deco estate in Lonavala without diminishing a single element of what was already there.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/5-1.jpg', caption: 'Cantilever lap pool — Lonavala, Maharashtra, 2016' },
+      { type: 'pullQuote', text: 'Each new element was tested against the question of whether it improves the estate as a whole, and only those that passed were retained in the final design.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Mariwala-Estate-Annexe-4-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/1-1.jpg'], captions: ['Estate grounds and landscape', 'Restored Art Deco facade'] },
+      { type: 'paragraph', text: 'The gallery provides views of mountains, waterfalls, and the scenic Lonavala skies — a setting that demanded restraint as the primary design virtue.' },
+    ],
   },
 
   'villa-merchant-tirupur': {
@@ -207,6 +256,13 @@ The design orientates main living spaces to catch the prevailing breeze, with de
       { slug: 'bhandari-house-bhinmal', title: 'Bhandari House', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/11/Bhandari-House.jpg' },
       { slug: 'mist-view-bungalows-lonavala', title: 'Mist View Bungalows', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-7-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 5BHK villa in Tirupur designed strictly to Vaastu and the Tamil Nadu climate — deep cantilever roofs for shade, stone floors for coolness, heavy masonry walls that moderate the internal temperature through the long summer.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Luxuerious-5BHK-Villa-Mr-1.jpg', caption: 'Garden elevation — Tirupur, Tamil Nadu, 2017' },
+      { type: 'pullQuote', text: 'Materials are responsive to the Tamil Nadu climate: cool stone floors, lime render on the exterior, and heavy masonry walls that moderate the internal temperature.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Luxuriewous-5BHK-Villa-Mr-1.jpg', caption: 'Dining room opening to the garden sit-out' },
+      { type: 'paragraph', text: 'Main living spaces are oriented to catch the prevailing breeze. The cantilever roofs serve simultaneously as shade structure and as the villa\'s most distinctive external gesture.' },
+    ],
   },
 
   'jk-bank-branch-samba': {
@@ -231,6 +287,13 @@ The design balances institutional credibility with accessibility — the ATM lob
       { slug: 'nrb-bearings-guest-house-aurangabad', title: 'Guest House — NRB Bearings', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-4-1.jpg' },
       { slug: 'venus-wires-office-khopoli', title: 'Building for Precision Metals', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/PRECISION-METALS-9-1.jpg' },
       { slug: 'gokul-cultural-centre-mumbai', title: 'Gokul Cultural Centre', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Gokul-Cam_01-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A ground-plus-one bank branch in Samba, J&K — designed to serve the industrialists of Jammu with a 24-hour ATM lobby at street level and a fully equipped business centre above for high-value client meetings.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-Branch-Building-Samba-J_K-State-3-1.jpg', caption: 'Branch exterior — Samba, J&K State, 2018' },
+      { type: 'pullQuote', text: 'The design balances institutional credibility with accessibility — the ATM lobby designed for frictionless 24-hour use, the business centre carrying discretion required for high-value client meetings.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-Branch-Building-Samba-J_K-State-4-1.jpg', caption: 'Business centre — upper floor' },
+      { type: 'paragraph', text: 'The two programmes are distinct in character but unified by a consistent material language — the same approach to banking architecture that Team Design has refined across dozens of J&K Bank commissions.' },
     ],
   },
 
@@ -262,6 +325,13 @@ This project was followed, in 2005, by the adjacent MBA Hostel Towers, which bro
       { slug: 'college-engineering-management-nagpur', title: 'College for Engineering & Management', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-OF-ENG-_-MANAGEMENT-5.jpg' },
       { slug: 'service-industry-campus-goa', title: 'Service Industry Education Campus', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-5-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'Fifteen years after the original ITM Kharghar campus was built, a 5,876 sq mt expansion — requiring simultaneous demolition, live-campus construction, and the continuation of an established architectural language.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-1-1.jpg', caption: 'Campus facade — Kharghar, Navi Mumbai, 2014' },
+      { type: 'pullQuote', text: 'The challenge was threefold: demolish part of the complex, enable the campus to operate unhindered during construction, and continue the architectural language so the whole reads as one.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-3-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-2-1.jpg'], captions: ['Central connecting spine', 'Faculty wing entrance'] },
+      { type: 'paragraph', text: 'Team Design\'s decade-long involvement with ITM — from the campus extension to the adjacent MBA Hostel Towers — represents one of the firm\'s deepest and most enduring institutional relationships.' },
+    ],
   },
 
   'nrb-bearings-guest-house-aurangabad': {
@@ -288,6 +358,13 @@ The brief called for a facility that would impress senior guests while remaining
       { slug: 'venus-wires-office-khopoli', title: 'Building for Precision Metals', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/PRECISION-METALS-9-1.jpg' },
       { slug: 'wedding-destination-raipur', title: 'Wedding Destination', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/w-2-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A guest house for NRB Bearings in Aurangabad — a building designed to house and impress senior officials from a world-class bearings manufacturer, with a gym, business centre, and a café-activated terrace garden at the podium.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-1-1.jpg', caption: 'Main entrance — Aurangabad, Maharashtra, 2011' },
+      { type: 'pullQuote', text: 'The suite arrangement balances the hotel-like quality expected by visiting executives with the comfort and ease of serviced accommodation.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-2-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-3-1.jpg'], captions: ['Executive suite interior', 'Terrace garden at podium'] },
+      { type: 'paragraph', text: 'A leading café chain at ground level creates an active street presence, while the upper floors maintain the privacy and discretion required for extended corporate stays.' },
+    ],
   },
 
   'gokul-cultural-centre-mumbai': {
@@ -311,6 +388,12 @@ The project posed a particular challenge: honouring the religious and community 
       { slug: 'kalimata-mandir-navi-mumbai', title: 'Temple Building — Goddess Kali', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_01-1.jpg' },
       { slug: 'wedding-destination-raipur', title: 'Wedding Destination', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/w-2-1.jpg' },
       { slug: 'college-campus-extension-itm', title: 'College Campus Extension — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A mixed-use cultural centre for the South Kanara Brahmin\'s Association in Mumbai — new temple, marriage halls, dining spaces, dance academy, and guest house, all within a single building that honours its sacred programme while serving a contemporary community.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Gokul-Cam_021-1.jpg', caption: 'Gokul Cultural Centre — Mumbai, 2017' },
+      { type: 'pullQuote', text: 'The solution carefully layers the secular and sacred so that each is enhanced by proximity to the other — the hall and the temple in quiet dialogue.' },
+      { type: 'paragraph', text: 'The building aligns itself to the axis of the existing temple and is designed to look both traditional and modern — a formal commitment that demanded precision in every material and proportional decision.' },
     ],
   },
 
@@ -338,6 +421,13 @@ The result is a small structure with an outsized relationship to its site: from 
       { slug: 'bungalow-ahmedabad', title: 'Bungalow in Ahmedabad', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Bungalow-in-Ahmedabad-Inida-4.jpg' },
       { slug: 'mist-view-bungalows-lonavala', title: 'Mist View Bungalows', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-7-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A dedicated kitchen and study for a chef-client in Alibaug — designed as a "no-building" surrounded by four large trees, with glass walls that dissolve the boundary between interior and garden entirely.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Glass-Kitchen-4-1.jpg', caption: 'Glass Kitchen — Mandwa, Alibaug, 2014' },
+      { type: 'pullQuote', text: 'From inside, the four trees become the walls, and the garden beyond becomes the room. The kitchen operates as much outdoors as in.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Glass-Kitchen-2-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Glass-Kitchen-3-copy-1.jpg'], captions: ['Interior looking out to the garden', 'Evening — glass panels open'] },
+      { type: 'paragraph', text: 'Opposite an existing swimming pool, this small structure has an outsized relationship to its site — the concept grew from the idea of a seed reaching out to its surroundings.' },
+    ],
   },
 
   'college-engineering-management-nagpur': {
@@ -363,6 +453,13 @@ The challenge was to give coherence to a campus that had begun without a master 
       { slug: 'mba-hostel-towers-itm', title: 'MBA Hostel Towers — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MBA-Hostel-Building-ITM-Navi-Mumbai-India-5-1.jpg' },
       { slug: 'college-campus-extension-itm', title: 'College Campus Extension — ITM', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg' },
       { slug: 'service-industry-campus-goa', title: 'Service Industry Education Campus', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-5-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 14-acre campus in Kamptee, 20km from Nagpur — a management institute and engineering college inherited part-built, completed by Team Design with a master plan, arrival sequence, and a new front gate that makes the campus feel intentional and whole.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/College-of-Engineerin-_-Management-Nagpur-1-1.jpg', caption: 'Main entrance gate — Kamptee, Nagpur, 2010' },
+      { type: 'pullQuote', text: 'The challenge was to give coherence to a campus that had begun without a master plan — establishing a clear arrival sequence that makes it feel intentional and complete.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/College-of-Engineerin-_-Management-Nagp-2-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/College-of-Engineerin-_-Management-Nagp-3-1.jpg'], captions: ['Academic wing', 'Campus courtyard'] },
+      { type: 'paragraph', text: 'New wings continue the architectural language of the inherited structures while the gate-to-courtyard-to-entrance arrival sequence provides the order and legibility the campus previously lacked.' },
     ],
   },
 
@@ -390,6 +487,13 @@ The project demonstrates the firm's commitment to integrated design: the archite
       { slug: 'villa-merchant-tirupur', title: 'Luxurious 5BHK Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Luxurious-5BHK-Villa-Mr-1.jpg' },
       { slug: 'glass-kitchen-alibaug', title: 'Glass Kitchen', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Glass-Kitchen-5-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 4-bedroom bungalow on a 6,500 sq ft plot in Ahmedabad — architecture, interiors, and landscape developed as a single composition, with an east-facing sun terrace that captures the morning light while shielding rooms from the intense afternoon heat.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Bungalow-in-Ahmedabad-Inida-1.jpg', caption: 'East terrace elevation — Ahmedabad, Gujarat, 2014' },
+      { type: 'pullQuote', text: 'The bungalow has been meticulously planned, offering a perfect symphony of elegance and privacy.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Bungalow-in-Ahmedabad-Inida-6.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Bungalow-in-Ahmedabad-Inida-5.jpg'], captions: ['Living room interior', 'Garden landscape'] },
+      { type: 'paragraph', text: 'The east terrace is the climatic logic made visible — the design\'s most distinctive external gesture, responsible simultaneously for shade, privacy, and the quality of light inside.' },
+    ],
   },
 
   'bhandari-house-bhinmal': {
@@ -416,6 +520,13 @@ The project is a reminder that the finest residential architecture is measured n
       { slug: 'villa-merchant-tirupur', title: 'Luxurious 5BHK Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Luxurious-5BHK-Villa-Mr-1.jpg' },
       { slug: 'mist-view-bungalows-lonavala', title: 'Mist View Bungalows', type: 'Bungalows', image: 'https://teamdesign.in/wp-content/uploads/2018/12/MIST-VIEW-7-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'Two identical 4-bedroom villas in Bhinmal, Rajasthan — drawing on the formal traditions of the region: thick walls, sheltered courtyards, and carefully positioned openings that modulate the desert climate while creating a sense of family continuity within the compound.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/11/REVISED-CAM-3-.jpg', caption: 'Exterior elevation — Bhinmal, Rajasthan, 2013' },
+      { type: 'pullQuote', text: 'The finest residential architecture is measured not by its ambition but by how naturally it becomes home to the people who live in it.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/11/REVISED-CAM-1-.jpg', 'https://teamdesign.in/wp-content/uploads/2018/11/LAYOUT.jpg'], captions: ['Villa entrance courtyard', 'Site plan — compound layout'] },
+      { type: 'paragraph', text: 'Each villa is independent in plan but shares a common architectural language — the project is a reminder that home is not a style, it is a quality of inhabitation.' },
+    ],
   },
 
   'venus-wires-office-khopoli': {
@@ -440,6 +551,13 @@ The building demonstrates that corporate architecture at the scale of an industr
       { slug: 'nrb-bearings-guest-house-aurangabad', title: 'Guest House — NRB Bearings', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-4-1.jpg' },
       { slug: 'jk-bank-branch-samba', title: 'J&K Bank Branch Building', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-Branch-Building-Samba-J_K-State-1-1.jpg' },
       { slug: 'wedding-destination-raipur', title: 'Wedding Destination', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/w-2-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 10,000 sq ft office building for a precision steel manufacturer on a 14-acre industrial property in Khopoli — designed to assert a civic quality appropriate to a client-facing headquarters while responding honestly to its industrial context.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/PRECISION-METALS-1.jpg', caption: 'Office building — Khopoli, Maharashtra, 2009' },
+      { type: 'pullQuote', text: 'Corporate architecture at the scale of an industrial estate can still be thoughtful and dignified — it need not apologise for its context, but it need not be defined by it either.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/PRECISION-METALS-3-1.jpg', caption: 'Reception and entrance lobby' },
+      { type: 'paragraph', text: 'A grand entrance space enables employees to work with leisure and complete peace of mind — a reminder that the quality of the working environment is itself a form of operational investment.' },
     ],
   },
 
@@ -468,6 +586,13 @@ The layout allows women from all walks of life — a young mother with a newborn
       { slug: 'airport-lounge-srinagar', title: 'Executive Airport Lounge', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-2-1.jpg' },
       { slug: 'high-networth-branch-shopian', title: 'High Networth Bank Branch', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/High-Networth-Bank-Branch-Shopian-5-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 6,500 sq ft, ground-plus-three bank branch designed to embody the women of Jammu and Kashmir — each floor given a different seasonal palette derived from the region\'s landscape, demarcated through fabrics, graphics, lattice work, and light.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-2-1.jpg', caption: 'Ground floor — autumn palette. Srinagar, 2018' },
+      { type: 'pullQuote', text: 'Ground floor: autumn. First floor: spring. Second floor: winter. Third floor: summer. Each a different season, each a different palette, each the same bank.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-3-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-4-1.jpg'], captions: ['First floor — spring palette', 'Second floor — winter palette'] },
+      { type: 'paragraph', text: 'The layout allows women from all walks of life — a young mother, a senior citizen, a professional, a teenager — to conduct banking with ease and satisfaction.' },
+    ],
   },
 
   'show-flat-mumbai': {
@@ -492,6 +617,13 @@ The result is a flat that works hard for its size — intelligent planning makes
       { slug: 'exclusive-villa-mumbai', title: 'Exclusive Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg' },
       { slug: 'kishore-mariwala-home-mumbai', title: 'Contemporary Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg' },
       { slug: 'gordon-serrao-home-navi-mumbai', title: 'Classic Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-4-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 3BHK show flat in Mumbai — designed to inspire potential buyers while remaining believably livable. Every storage decision made visible, every awkward corner resolved, every room staged to suggest the quality of life available within a compact footprint.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/DSC_5945-1.jpg', caption: 'Living and dining area — Mumbai, 2014' },
+      { type: 'pullQuote', text: 'Intelligent planning makes the flat feel larger than its area suggests, while material choices ensure it presents with warmth rather than the clinical sterility that too often defines show homes.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/DSC_6006-1.jpg', caption: 'Master bedroom' },
+      { type: 'paragraph', text: 'The challenge is deceptively simple: design a home that looks lived-in before anyone has lived in it. The result is a flat that works hard for its size.' },
     ],
   },
 
@@ -519,6 +651,13 @@ The 600 sq mt office space sports executive cabins in the centre with staff alon
       { slug: 'hdfc-bank-office-jammu', title: 'HDFC Bank Corporate Office', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_9833-1.jpg' },
       { slug: 'cinemarc-cinema-theatre', title: 'Cinemarc Cinema Theatre', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Cinemarc-Cinema-Theatre-3-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'Completed in 60 days from start to handover — a 6,500 sq ft office in Worli for a media entrepreneur and NGO, designed with glass walls, natural light, and Yellow Jaisalmer stone floors that set the entire register of the space.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-10-1.jpg', caption: 'Open workspace — Worli, Mumbai, 2014' },
+      { type: 'pullQuote', text: 'Clean lines dress the office with a focus on functionality without compromising on storage, security and privacy.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-8-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-5-1.jpg'], captions: ['Executive cabin', 'Entrance reception'] },
+      { type: 'paragraph', text: 'Executive cabins in the centre, staff along the periphery. Glass walls open up the area, allowing natural light to flood the space. The delivery timescale demanded material decisions that could be made quickly and still last.' },
+    ],
   },
 
   'jk-bank-nbc-bkc': {
@@ -545,6 +684,13 @@ The palette is deliberately restrained — walnut, stone, and polished metal —
       { slug: 'hdfc-bank-office-jammu', title: 'HDFC Bank Corporate Office', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_9833-1.jpg' },
       { slug: 'womens-bank-branch-srinagar', title: "Women's Bank Branch — J&K Bank", type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-1-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 70,000 sq ft National Business Centre for J&K Bank in Mumbai\'s BKC — balancing Kashmiri art and craft with the present-day contemporary look and feel expected in India\'s financial capital.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-12-1.jpg', caption: 'Banking hall — Bandra Kurla Complex, Mumbai, 2013' },
+      { type: 'pullQuote', text: 'The palette is deliberately restrained — walnut, stone, and polished metal — allowing the Kashmiri craft elements to bring warmth, regional identity, and the unmistakable quality of handwork.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-9-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-23-1.jpg'], captions: ['Walnut lattice and Paper Mache detail', 'Private consultation room'] },
+      { type: 'paragraph', text: 'Walnut wood lattices, Paper Mache panels, carved furniture, and bidri metal artifacts from Srinagar — at 70,000 sq ft, the project demanded a design language that could hold together from the double-height banking hall to the intimate private rooms above.' },
+    ],
   },
 
   'high-networth-branch-shopian': {
@@ -569,6 +715,13 @@ This concept demonstrates how the bank branch — traditionally a civic space de
       { slug: 'airport-lounge-srinagar', title: 'Executive Airport Lounge', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-2-1.jpg' },
       { slug: 'electronic-bank-lobby-srinagar', title: 'Electronic Bank Lobby', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Electronic-Bank-Lobby-J_K-Bank-Srinagar-5-1.jpg' },
       { slug: 'jk-bank-nbc-bkc', title: 'National Business Centre — J&K Bank', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A premium bank branch concept for J&K Bank in Shopian — designed to give high net worth individuals a lounge-like experience with an Elite reception, waiting lounge, relationship manager office, and business rooms.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/High-Networth-Bank-Branch-Shopian-10-1.jpg', caption: 'Elite lounge — Shopian, J&K, 2017' },
+      { type: 'pullQuote', text: 'This concept demonstrates how the bank branch can be reimagined as a place of discretion and ease, where the transaction is almost incidental to the quality of the environment.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/High-Networth-Bank-Branch-Shopian-7-1.jpg', caption: 'Relationship manager suite' },
+      { type: 'paragraph', text: 'Team Design is helping J&K Bank set up these premium premises across the state and beyond — making a statement about how banking can feel at its best.' },
     ],
   },
 
@@ -596,6 +749,13 @@ The design creates a workplace that balances the efficiency HDFC Bank requires w
       { slug: 'jk-bank-nbc-bkc', title: 'National Business Centre — J&K Bank', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg' },
       { slug: 'cinemarc-cinema-theatre', title: 'Cinemarc Cinema Theatre', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Cinemarc-Cinema-Theatre-3-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 13,000 sq ft corporate office for HDFC Bank in Jammu — private offices, open workstations, training rooms, cafeteria, and breakout spaces, designed to balance the efficiency a bank requires with an environment that genuinely attracts and retains talent.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_0096-1.jpg', caption: 'Corporate office — Narhwal, Jammu, 2015' },
+      { type: 'pullQuote', text: 'A workplace warm enough to feel like a place where people choose to spend time, and disciplined enough to make that time productive.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/NSP_0010-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_9972-1.jpg'], captions: ['Open plan workstations', 'Training and presentation room'] },
+      { type: 'paragraph', text: 'Ever-changing space requirements, real estate costs, talent retention, sustainability goals — the modern corporate office must respond to all of these simultaneously, and within a budget that leaves no room for waste.' },
+    ],
   },
 
   'garden-glory-penthouse-thane': {
@@ -621,6 +781,13 @@ A neutral interior palette serves as backdrop, with colour introduced through ru
       { slug: 'exclusive-villa-mumbai', title: 'Exclusive Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg' },
       { slug: 'kishore-mariwala-home-mumbai', title: 'Contemporary Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg' },
       { slug: 'gordon-serrao-home-navi-mumbai', title: 'Classic Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-4-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A penthouse in Thane with 10,000 sq ft of terrace garden surrounding just 5,000 sq ft of livable space — in a city starved of green, a home that inverts the usual ratio and puts nature at its centre.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Garden-Glory-Penthouse-Indian-Family-Thane-India-5-1.jpg', caption: 'Terrace garden — Thane, Maharashtra, 2013' },
+      { type: 'pullQuote', text: 'The home centres on a terrace garden, transforming the living area into an oasis of calm in a city that rarely offers one.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Garden-Glory-Penthouse-Indian-Family-Thane-India-4-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Garden-Glory-Penthouse-Indian-Family-Thane-India-10-1.jpg'], captions: ['Garden terrace looking inward', 'Floor-to-ceiling glass corridor'] },
+      { type: 'paragraph', text: 'A neutral interior palette serves as backdrop, with colour introduced through rugs, jaali designs, and soft furnishings. All six bedrooms open to corridors overlooking gardens and terraces.' },
     ],
   },
 
@@ -648,6 +815,13 @@ The result is a lounge that feels unmistakably of its place: specific to Srinaga
       { slug: 'electronic-bank-lobby-srinagar', title: 'Electronic Bank Lobby', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Electronic-Bank-Lobby-J_K-Bank-Srinagar-5-1.jpg' },
       { slug: 'womens-bank-branch-srinagar', title: "Women's Bank Branch — J&K Bank", type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-1-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'An executive airport lounge for J&K Bank at Srinagar Airport — designed as the traveller\'s final encounter with the Kashmir Valley, drawing on the region\'s craft traditions to create a space that feels unmistakably of its place.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-3-1.jpg', caption: 'Lounge — Srinagar Airport, J&K, 2013' },
+      { type: 'pullQuote', text: 'A lounge that feels unmistakably of its place: specific to Srinagar in the way that the best airport environments honour their cities rather than erasing them.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-6-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-5-1.jpg'], captions: ['Kashmiri craft detail', 'Seating area'] },
+      { type: 'paragraph', text: 'Carved wood, papier-mâché, and intricate geometric patterns of the region — translated into a contemporary hospitality setting. The brief emphasised the ultimate in pre-flight comfort for a lounge that invites you to stay awhile.' },
+    ],
   },
 
   'exclusive-villa-mumbai': {
@@ -674,6 +848,13 @@ The result is a home that feels simultaneously disciplined and alive — a space
       { slug: 'kishore-mariwala-home-mumbai', title: 'Contemporary Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-1.jpg' },
       { slug: 'show-flat-mumbai', title: 'Show Flat', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/DSC_5975-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A two-level villa in Mumbai merging contemporary and organic aesthetics — living and entertainment below, bedrooms above for privacy. Abundant windows, dark flooring, accent lines, wood-panelled walls: a home that feels simultaneously disciplined and alive.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-2-1.jpg', caption: 'Living room — Mumbai, 2016' },
+      { type: 'pullQuote', text: 'The result is a home in which the owners\' collections, personalities, and daily routines are all given room to breathe.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-1-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-6-1.jpg'], captions: ['Entertainment level', 'Upper bedroom floor'] },
+      { type: 'paragraph', text: 'What happens when an unstoppable force meets an immovable object? Symbiosis. The design answers the question by making nature and human habitation not adversaries but complements.' },
+    ],
   },
 
   'electronic-bank-lobby-srinagar': {
@@ -698,6 +879,13 @@ A much-talked-about design waiting to be built — this concept demonstrates how
       { slug: 'high-networth-branch-shopian', title: 'High Networth Bank Branch', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/High-Networth-Bank-Branch-Shopian-5-1.jpg' },
       { slug: 'airport-lounge-srinagar', title: 'Executive Airport Lounge', type: 'Concept', image: 'https://teamdesign.in/wp-content/uploads/2018/12/AIRPORT-LOUNGE-J_K-BANK-Srinagar-2-1.jpg' },
       { slug: 'womens-bank-branch-srinagar', title: "Women's Bank Branch — J&K Bank", type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Women_s-Bank-Branch-J_K-Bank-Srinagar-1-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'An E-Lobby concept for J&K Bank at Lal Chowk, Srinagar — state-of-the-art and confidently modern, while inheriting the corporate brand and the cultural heritage of the region in equal measure.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Electronic-Bank-Lobby-J_K-Bank-Srinagar-1-1.jpg', caption: 'E-Lobby concept — Lal Chowk, Srinagar, 2018' },
+      { type: 'pullQuote', text: 'Soft forms that reflect the gentleness of the people, whites that depict the magic of snow, digital lines on the floor that signify today\'s tech era.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Electronic-Bank-Lobby-J_K-Bank-Srinagar-4-1.jpg', caption: 'Digital floor graphics and service counter' },
+      { type: 'paragraph', text: 'A much-talked-about design waiting to be built — demonstrating how banking infrastructure can become a cultural landmark rather than a generic utility.' },
     ],
   },
 
@@ -729,6 +917,33 @@ The project is one of the firm's most personally meaningful commissions — a pr
       { slug: 'exclusive-villa-mumbai', title: 'Exclusive Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg' },
       { slug: 'gordon-serrao-home-navi-mumbai', title: 'Classic Modern Home', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-4-1.jpg' },
     ],
+    contentBlocks: [
+      {
+        type: 'paragraph',
+        text: 'A private residence for one of Mumbai\'s most prominent industrialists, designed at the full scale of South Mumbai living. The brief was deceptively simple: create a home that belongs to its owner without feeling designed — where every object earns its place.',
+      },
+      {
+        type: 'fullWidthImage',
+        src: 'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-5.jpg',
+        caption: 'Living room — Kemps Corner, Mumbai',
+      },
+      {
+        type: 'pullQuote',
+        text: 'Every colour, every picture, every piece of furniture and fabric was specifically chosen to make the home unique to its owner.',
+      },
+      {
+        type: 'halfWidthImages',
+        images: [
+          'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-7.jpg',
+          'https://teamdesign.in/wp-content/uploads/2018/01/Kishore-Mariwala-8.jpg',
+        ],
+        captions: ['Private study', 'Master bedroom'],
+      },
+      {
+        type: 'paragraph',
+        text: 'The project represents over two decades of a working relationship between the firm and the Mariwala family. Its completion — on time, on budget, and to the satisfaction of an exceptionally discerning client — remains one of Team Design\'s most personally meaningful commissions.',
+      },
+    ],
   },
 
   'gordon-serrao-home-navi-mumbai': {
@@ -759,6 +974,13 @@ The project comes with the endorsement of the client himself — Gordon Serrao, 
       { slug: 'garden-glory-penthouse-thane', title: 'Garden Glory Penthouse', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Garden-Glory-Penthouse-Indian-Family-Thane-India-7-1.jpg' },
       { slug: 'exclusive-villa-mumbai', title: 'Exclusive Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg' },
     ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A home in Vashi, Navi Mumbai, filled with contemporary warmth — earth tones, layered textures from smoothly polished to rough and weathered, designed for a hotelier whose professional life is spent evaluating the quality of hospitality environments.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-3-1.jpg', caption: 'Living room — Vashi, Navi Mumbai, 2012' },
+      { type: 'pullQuote', text: 'A palette of earth tones combined with a variety of textures — from smoothly polished to rough and weathered — that together create a sophisticated and warm feel.' },
+      { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-6-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-8-1.jpg'], captions: ['Family room', 'Master bedroom'] },
+      { type: 'paragraph', text: 'The interiors avoid the extremes of cool minimalism or heavy traditionalism, finding instead a register that feels effortlessly lived-in from the moment the family moves in.' },
+    ],
   },
 
   'cinemarc-cinema-theatre': {
@@ -783,6 +1005,13 @@ The cinema sits within a retail complex, and the design had to establish a disti
       { slug: 'unilazer-ventures-office', title: 'Office for Unilazer Ventures', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Unilazer-Ventures-Pvt-Ltd-3-1.jpg' },
       { slug: 'hdfc-bank-office-jammu', title: 'HDFC Bank Corporate Office', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/NSP_9833-1.jpg' },
       { slug: 'jk-bank-nbc-bkc', title: 'National Business Centre — J&K Bank', type: 'Commercial', image: 'https://teamdesign.in/wp-content/uploads/2018/12/J_K-Bank-NBC-BKC-20-1.jpg' },
+    ],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A modern cineplex on the top floor of a new shopping complex in Vadodara — 20,000 sq ft designed to establish a destination identity distinct from the retail below, with bold colour, clear circulation, and an arrival sequence that is itself part of the experience.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Cinemarc-Cinema-Theatre-2-1.jpg', caption: 'Cineplex entrance — Vadodara, Gujarat, 2015' },
+      { type: 'pullQuote', text: 'The arrival sequence, from ground-floor entrance to upper-floor auditorium, is as much a part of the experience as the auditorium itself.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Cinemarc-Cinema-Theatre-5-1.jpg', caption: 'Auditorium interior' },
+      { type: 'paragraph', text: 'Bold use of colour, clear circulation, all services carefully thought through and designed to suit the needs of the end user — fast-paced brief, delivered with clarity.' },
     ],
   },
 };
