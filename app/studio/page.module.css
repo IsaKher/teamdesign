@@ -103,7 +103,6 @@
 .titleBlock {
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto;
-  border-bottom: 1px solid var(--color-text-primary);
 }
 
 .titleCell {
