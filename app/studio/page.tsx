@@ -1,18 +1,22 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { CORE_VALUES, DESIGN_IDEALS, SERVICES, PRESS_ITEMS } from '@/lib/siteContent';
+import { CORE_VALUES, DESIGN_IDEALS, SERVICES } from '@/lib/siteContent';
 
 export const metadata = { title: 'Studio' };
 
 export default function StudioPage() {
   return (
     <>
+      {/* ─── Page Hero ───────────────────────────────────────────── */}
       <div className={styles.pageHero}>
-        <span className={styles.pageLabel}>About</span>
+        <span className={styles.pageLabel}>About the Practice</span>
         <h1 className={styles.pageTitle}>Studio</h1>
+        <p className={styles.pageSubtitle}>
+          Twenty-five years of architecture and interiors — built across India, rooted in Mumbai.
+        </p>
       </div>
 
-      {/* ─── Architectural Drawing ─────────────────────────── */}
+      {/* ─── Architectural Drawing ───────────────────────────────── */}
       <section className={styles.drawing}>
         <div className={styles.drawingFrame}>
           <span className={`${styles.corner} ${styles.cornerTL}`} aria-hidden="true" />
@@ -25,6 +29,7 @@ export default function StudioPage() {
               src="/studio-sketch.png"
               alt="Team Design Studio Building — Architectural Illustration, Kopar Khairane"
               fill
+              priority
               sizes="(max-width: 900px) 100vw, calc(100vw - 160px)"
               style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
             />
@@ -66,42 +71,62 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* Founding story */}
+      {/* ─── Founding Story ──────────────────────────────────────── */}
       <section className={styles.story}>
         <div className={styles.storyInner}>
           <div className={styles.storyText}>
-            <span className={styles.sectionLabel}>Founded 1999</span>
-            <h2 className={styles.storyTitle}>Twenty-five years of<br />considered practice.</h2>
-            <p className={styles.para}>M/s. Team Design Architects was established in 1999 with a small office in Lower Parel East, Mumbai. Over the years, it has grown significantly in both range and scale of projects — accumulating extensive experience in planning, designing, and executing large architectural and interior projects.</p>
-            <p className={styles.para}>Work spans from high-tech banking dealing rooms in Mumbai to environmental-friendly rural projects. Projects range from Srinagar in North India to Thrissur in South India. The firm has created design guidelines for ICICI Bank, Reliance General Insurance, J&K Bank, Tata Capital, and Kotak Mahindra Bank.</p>
-            <p className={styles.para}>The collaborative process is as important as the outcome. Translating ideas and dreams skillfully into the language of architecture is neither simple nor linear — it calls for experience and creativity, elegant solutions to complicated problems. Team Design brings both.</p>
-            <p className={styles.para}>A young, energetic architectural practice with a mix of experience and youthful creativity — working to craft exquisitely designed spaces that complement their surroundings and reflect their clients' values.</p>
+            <h2 className={styles.storyTitle}>A practice built on<br />craft and conviction.</h2>
+            <p className={styles.para}>
+              Team Design began in 1999 as a small office in Lower Parel, Mumbai. Over twenty-five years the practice has grown across scales and sectors — from private apartments to institutional campuses, from banking environments designed to national standards to homes shaped entirely around the daily rhythms of a single family.
+            </p>
+            <p className={styles.para}>
+              The work spans from high-tech banking dealing rooms in the city to environmental-friendly rural projects — from Srinagar in the north to Thrissur in the south. For institutions like ICICI Bank, J&K Bank, Tata Capital, and Kotak Mahindra Bank, the firm has authored the design language that defines how those brands are experienced in built form.
+            </p>
+            <p className={styles.para}>
+              The collaborative process is as important as the outcome. Translating ideas into architecture is neither simple nor linear — it calls for experience and creativity, and for elegant solutions to genuinely complicated problems.
+            </p>
           </div>
           <div className={styles.storyImageCol}>
             <div className={styles.storyImage}>
               <Image
                 src="https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg"
-                alt="Team Design Studio"
+                alt="ITM College Campus Extension — Team Design Architects"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 style={{ objectFit: 'cover' }}
               />
             </div>
             <div className={styles.storyStats}>
-              <div className={styles.stat}><span className={styles.statVal}>1999</span><span className={styles.statLbl}>Year Founded</span></div>
-              <div className={styles.stat}><span className={styles.statVal}>300+</span><span className={styles.statLbl}>Projects Completed</span></div>
-              <div className={styles.stat}><span className={styles.statVal}>2M+</span><span className={styles.statLbl}>Square Feet Built</span></div>
+              <div className={styles.stat}>
+                <span className={styles.statVal}>300+</span>
+                <span className={styles.statLbl}>Projects</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statVal}>500+</span>
+                <span className={styles.statLbl}>Clients</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statVal}>20L+</span>
+                <span className={styles.statLbl}>Sq Ft Built</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* ─── Pull Quote ──────────────────────────────────────────── */}
+      <div className={styles.pullQuote}>
+        <blockquote className={styles.pullQuoteText}>
+          "If a building can feel like it naturally belongs — fitting logically in a place, an environment,
+          a time and culture — then the people who inhabit it will feel a sense of belonging there as well."
+        </blockquote>
+      </div>
+
+      {/* ─── Core Values — inverted triangle ─────────────────────── */}
       <section className={styles.process}>
         <div className={styles.processHeader}>
           <span className={styles.sectionLabel}>What We Stand For</span>
-          <h2 className={styles.processTitle}>Six Core Values</h2>
-          <p className={styles.processSub}>The principles that guide every project — from first conversation to final handover.</p>
+          <h2 className={styles.processTitle}>Six principles.<br />Every project.</h2>
         </div>
         <div className={styles.processSteps}>
           {CORE_VALUES.map(step => (
@@ -116,7 +141,7 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* Design Ideals */}
+      {/* ─── Design Philosophy ───────────────────────────────────── */}
       <section className={styles.services}>
         <span className={styles.sectionLabel}>Design Philosophy</span>
         <div className={styles.serviceGrid}>
@@ -129,7 +154,7 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* ─── Services ────────────────────────────────────────────── */}
       <section className={styles.awards}>
         <span className={styles.sectionLabel}>What We Do</span>
         <h2 className={styles.awardsTitle}>Services</h2>
@@ -142,23 +167,6 @@ export default function StudioPage() {
               </div>
               <h3 className={styles.awardTitle}>{a.title}</h3>
               <span className={styles.awardBody}>{a.body}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Press */}
-      <section className={styles.press}>
-        <span className={styles.sectionLabel}>Press & Recognition</span>
-        <h2 className={styles.pressTitle}>In the News</h2>
-        <div className={styles.pressList}>
-          {PRESS_ITEMS.map((p, i) => (
-            <div key={i} className={styles.pressItem}>
-              <span className={styles.pressYear}>{p.year}</span>
-              <div className={styles.pressContent}>
-                <span className={styles.pressPub}>{p.pub}</span>
-                <span className={styles.pressTitle2}>{p.title}</span>
-              </div>
             </div>
           ))}
         </div>
