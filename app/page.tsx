@@ -12,16 +12,18 @@ export default function HomePage() {
       <div className={styles.heroWrapper}>
         <div className={styles.heroImageWrap}>
           <Image
-            src="/hero-sketch.png"
+            src="/hero-building.png"
             alt="Team Design — Architecture & Interiors, Mumbai"
             fill
             priority
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+            className={styles.heroImage}
             placeholder="blur"
             blurDataURL={WARM_BLUR}
           />
-          <div className={styles.heroOverlayLeft} />
+          <div className={styles.heroOverlayTop} />
+          <div className={styles.heroOverlayBottom} />
         </div>
 
         <section className={styles.hero}>

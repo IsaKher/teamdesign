@@ -25,16 +25,38 @@
   to   { transform: scale(1.04); }
 }
 
-/* Left-side warm vignette — gently lifts text from the illustration */
+.heroOverlayTop {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(20,16,12,0.55), transparent);
+  z-index: 1;
+}
+
+.heroOverlayBottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20,16,12,0)    0%,
+    rgba(20,16,12,0.12) 30%,
+    rgba(20,16,12,0.38) 58%,
+    rgba(20,16,12,0.68) 76%,
+    rgba(20,16,12,0.80) 100%
+  );
+  z-index: 1;
+}
+
+/* Left-side vignette — darkens the text zone without touching the right side */
 .heroOverlayLeft {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(244,238,230,0.60) 0%,
-    rgba(244,238,230,0.30) 28%,
-    rgba(244,238,230,0.08) 52%,
-    rgba(244,238,230,0)    70%
+    rgba(20,16,12,0.58) 0%,
+    rgba(20,16,12,0.32) 30%,
+    rgba(20,16,12,0.10) 55%,
+    rgba(20,16,12,0)    72%
   );
   z-index: 1;
 }
@@ -52,8 +74,9 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(28, 22, 18, 0.55);
+  color: rgba(244, 238, 230, 0.80);
   margin-bottom: 12px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
 
 .heroTaglineBlock {
@@ -68,9 +91,10 @@
   font-size: clamp(15px, 1.4vw, 19px);
   font-weight: 300;
   font-style: italic;
-  color: rgba(28, 22, 18, 0.75);
+  color: rgba(244, 238, 230, 0.95);
   letter-spacing: 0.02em;
   line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65), 0 2px 20px rgba(0, 0, 0, 0.45);
 }
 
 .heroTitle {
@@ -78,9 +102,13 @@
   font-size: var(--size-hero);
   font-weight: 100;
   line-height: var(--lh-display);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(28, 22, 18, 0.88);
+  color: rgba(244, 238, 230, 0.95);
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .heroCtas {
@@ -96,17 +124,20 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.95);
-  background: rgba(28, 22, 18, 0.78);
-  border: 1px solid rgba(28, 22, 18, 0.35);
+  background: rgba(20, 16, 12, 0.28);
+  border: 1px solid rgba(244, 238, 230, 0.45);
   padding: 14px 32px;
   text-decoration: none;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: background 0.3s ease, border-color 0.3s ease;
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.90),
+    0 2px 12px rgba(0, 0, 0, 0.60);
 }
 .heroCta:hover {
-  background: rgba(28, 22, 18, 0.92);
-  border-color: rgba(28, 22, 18, 0.60);
+  background: rgba(20, 16, 12, 0.42);
+  border-color: rgba(244, 238, 230, 0.70);
 }
 
 .heroCtaSecondary {
@@ -114,24 +145,19 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(28, 22, 18, 0.65);
+  color: rgba(244, 238, 230, 0.80);
   text-decoration: none;
-  border-bottom: 1px solid rgba(28, 22, 18, 0.22);
-  padding-bottom: 2px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease;
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.90),
+    0 2px 12px rgba(0, 0, 0, 0.60);
 }
-.heroCtaSecondary:hover {
-  color: rgba(28, 22, 18, 0.92);
-  border-bottom-color: rgba(28, 22, 18, 0.55);
-}
+.heroCtaSecondary:hover { color: rgba(244, 238, 230, 0.95); }
 
 /* ─── Stat Bar ─────────────────────────────────────────────────────────── */
 .statBar {
   position: relative;
   z-index: 1;
-  background: rgba(244, 238, 230, 0.82);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
@@ -145,7 +171,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 0 32px;
-  border-right: 1px solid rgba(28, 22, 18, 0.10);
+  border-right: 1px solid rgba(244, 238, 230, 0.08);
 }
 
 .stat:first-child { padding-left: 0; }
@@ -155,8 +181,12 @@
   font-family: var(--font-serif);
   font-size: clamp(36px, 3.5vw, 52px);
   font-weight: 300;
-  color: rgba(28, 22, 18, 0.88);
+  color: rgba(244, 238, 230, 1);
   line-height: 1;
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .statLabel {
@@ -164,7 +194,11 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(28, 22, 18, 0.50);
+  color: rgba(244, 238, 230, 0.72);
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
