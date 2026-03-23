@@ -183,7 +183,10 @@
   font-weight: 300;
   color: rgba(244, 238, 230, 1);
   line-height: 1;
-  text-shadow: 0 0 32px rgba(244, 220, 160, 0.45), 0 1px 8px rgba(0, 0, 0, 0.55);
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .statLabel {
@@ -192,6 +195,10 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: rgba(244, 238, 230, 0.72);
+  text-shadow:
+    0 1px 4px  rgba(0, 0, 0, 0.95),
+    0 4px 24px rgba(0, 0, 0, 0.80),
+    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
