@@ -21,6 +21,7 @@ const navItems = [
   { label: 'People',  href: '/people'  },
   { label: 'Process', href: '/process' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Careers', href: '/careers' },
 ];
 
 export default function Navigation() {

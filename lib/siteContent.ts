@@ -18,6 +18,8 @@ export const STUDIO = {
   site: 'https://teamdesign.in',
   mapsUrl: 'geo:19.1077,73.0081?q=A-145%2F6A+Pawane+Village+Midc+Road+Kopar+Khairane+Navi+Mumbai+400710',
   instagramUrl: 'https://www.instagram.com/teamdesign2004/',
+  linkedinUrl: 'https://www.linkedin.com/company/teamdesign',
+  careersEmail: 'careers@teamdesign.in',
 } as const;
 
 // ─── Homepage data ───────────────────────────────────────────────────────────
@@ -206,3 +208,15 @@ export const SERVICES = [
     type: 'Brand & Standards',
   },
 ];
+
+// ─── Careers ─────────────────────────────────────────────────────────────────
+export interface Job {
+  title: string;
+  type: 'Full-time' | 'Intern';
+  duration?: string;
+  brief: string;
+  linkedinUrl?: string;
+}
+
+// Empty = no openings. Add entries here when a position goes live.
+export const JOBS: Job[] = [];
