@@ -67,6 +67,10 @@ export default function StudioPage() {
               <span className={styles.titleCellLabel}>Drawing</span>
               <span className={styles.titleCellValue}>Studio Building — Exterior Elevation</span>
             </div>
+            <div className={styles.titleCellCoords}>
+              <span className={styles.titleCellLabel}>Coordinates</span>
+              <span className={styles.coordsValue}>19°6′27″N&nbsp;&nbsp;73°0′29″E</span>
+            </div>
           </div>
         </div>
       </section>
@@ -76,15 +80,24 @@ export default function StudioPage() {
         <div className={styles.storyInner}>
           <div className={styles.storyText}>
             <h2 className={styles.storyTitle}>A practice built on<br />craft and conviction.</h2>
-            <p className={styles.para}>
-              Team Design began in 1999 as a small office in Lower Parel, Mumbai. Over twenty-five years the practice has grown across scales and sectors — from private apartments to institutional campuses, from banking environments designed to national standards to homes shaped entirely around the daily rhythms of a single family.
-            </p>
-            <p className={styles.para}>
-              The work spans from high-tech banking dealing rooms in the city to environmental-friendly rural projects — from Srinagar in the north to Thrissur in the south. For institutions like ICICI Bank, J&K Bank, Tata Capital, and Kotak Mahindra Bank, the firm has authored the design language that defines how those brands are experienced in built form.
-            </p>
-            <p className={styles.para}>
-              The collaborative process is as important as the outcome. Translating ideas into architecture is neither simple nor linear — it calls for experience and creativity, and for elegant solutions to genuinely complicated problems.
-            </p>
+            <div className={styles.annotatedPara}>
+              <span className={styles.paraNote}>Scale</span>
+              <p className={styles.para}>
+                Team Design began in 1999 as a small office in Lower Parel, Mumbai. Over twenty-five years the practice has grown across scales and sectors — from private apartments to institutional campuses, from banking environments designed to national standards to homes shaped entirely around the daily rhythms of a single family.
+              </p>
+            </div>
+            <div className={styles.annotatedPara}>
+              <span className={styles.paraNote}>Context</span>
+              <p className={styles.para}>
+                The work spans from high-tech banking dealing rooms in the city to environmental-friendly rural projects — from Srinagar in the north to Thrissur in the south. For institutions like ICICI Bank, J&K Bank, Tata Capital, and Kotak Mahindra Bank, the firm has authored the design language that defines how those brands are experienced in built form.
+              </p>
+            </div>
+            <div className={styles.annotatedPara}>
+              <span className={styles.paraNote}>Process</span>
+              <p className={styles.para}>
+                The collaborative process is as important as the outcome. Translating ideas into architecture is neither simple nor linear — it calls for experience and creativity, and for elegant solutions to genuinely complicated problems.
+              </p>
+            </div>
           </div>
           <div className={styles.storyImageCol}>
             <div className={styles.storyImage}>
@@ -154,19 +167,27 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* ─── Services ────────────────────────────────────────────── */}
-      <section className={styles.awards}>
-        <span className={styles.sectionLabel}>What We Do</span>
-        <h2 className={styles.awardsTitle}>Services</h2>
-        <div className={styles.awardsGrid}>
-          {SERVICES.map((a, i) => (
-            <div key={i} className={styles.awardItem}>
-              <div className={styles.awardTop}>
-                <span className={styles.awardType}>{a.type}</span>
-                <span className={styles.awardYear}>{a.year}</span>
-              </div>
-              <h3 className={styles.awardTitle}>{a.title}</h3>
-              <span className={styles.awardBody}>{a.body}</span>
+      {/* ─── Services — specification table ──────────────────────── */}
+      <section className={styles.specSection}>
+        <div className={styles.specHeader}>
+          <span className={styles.sectionLabel}>What We Do</span>
+          <h2 className={styles.awardsTitle}>Services</h2>
+        </div>
+        <div className={styles.specTable}>
+          <div className={styles.specHeadRow}>
+            <span>Ref</span>
+            <span>Service</span>
+            <span>Type</span>
+            <span>Scope</span>
+            <span>Description</span>
+          </div>
+          {SERVICES.map((s, i) => (
+            <div key={i} className={styles.specRow}>
+              <span className={styles.specRef}>{String(i + 1).padStart(2, '0')}</span>
+              <span className={styles.specTitle}>{s.title}</span>
+              <span className={styles.specType}>{s.type}</span>
+              <span className={styles.specScope}>{s.year}</span>
+              <span className={styles.specDesc}>{s.body}</span>
             </div>
           ))}
         </div>
