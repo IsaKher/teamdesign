@@ -22,7 +22,6 @@ export default function HomePage() {
           />
           <div className={styles.heroOverlayTop} />
           <div className={styles.heroOverlayBottom} />
-          <div className={styles.heroOverlayLeft} />
         </div>
 
         <section className={styles.hero}>
