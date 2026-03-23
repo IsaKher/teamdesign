@@ -4,20 +4,26 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './CustomCursor.module.css';
 
 export default function CustomCursor() {
-  const cursorRef = useRef<HTMLDivElement>(null);
+  const dotRef  = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const el = cursorRef.current;
-    if (!el) return;
+    const dot  = dotRef.current;
+    const ring = ringRef.current;
+    if (!dot || !ring) return;
 
     let rafId: number;
-    let mx = -100, my = -100;
+    // Actual pointer position
+    let mx = -200, my = -200;
+    // Ring's current lerped position
+    let rx = -200, ry = -200;
+    let isHover = false;
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
-      if (!visible) setVisible(true);
+      setVisible(true);
     };
 
     const onLeave = () => setVisible(false);
@@ -25,15 +31,28 @@ export default function CustomCursor() {
 
     const onOver = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (t.closest('a, button, [role="button"], label')) {
-        el.classList.add(styles.expand);
-      } else {
-        el.classList.remove(styles.expand);
-      }
+      isHover = !!t.closest('a, button, [role="button"], label');
     };
 
     const tick = () => {
-      el.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+      // Dot sits exactly at pointer
+      dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+
+      // Ring lerps toward pointer — 0.10 = heavier lag, 0.18 = lighter
+      const ease = isHover ? 0.14 : 0.10;
+      rx += (mx - rx) * ease;
+      ry += (my - ry) * ease;
+      ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+
+      // Toggle hover classes
+      if (isHover) {
+        ring.classList.add(styles.ringExpand);
+        dot.classList.add(styles.dotHide);
+      } else {
+        ring.classList.remove(styles.ringExpand);
+        dot.classList.remove(styles.dotHide);
+      }
+
       rafId = requestAnimationFrame(tick);
     };
 
@@ -50,13 +69,22 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', onOver);
       cancelAnimationFrame(rafId);
     };
-  }, [visible]);
+  }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      className={`${styles.cursor} ${visible ? styles.visible : ''}`}
-      aria-hidden="true"
-    />
+    <>
+      {/* Dot — sits exactly at pointer tip */}
+      <div
+        ref={dotRef}
+        className={`${styles.dot} ${visible ? styles.visible : ''}`}
+        aria-hidden="true"
+      />
+      {/* Ring — trails behind with eased lag */}
+      <div
+        ref={ringRef}
+        className={`${styles.ring} ${visible ? styles.visible : ''}`}
+        aria-hidden="true"
+      />
+    </>
   );
 }

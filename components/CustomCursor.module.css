@@ -1,38 +1,64 @@
-.cursor {
+/* ─── Dot — sits exactly at the pointer ─────────────────────────────────── */
+.dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 2px solid rgba(28, 22, 18, 1);
-  background: rgba(28, 22, 18, 0.15);
+  background: rgba(28, 22, 18, 0.90);
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  will-change: transform;
+}
+
+.dot.visible { opacity: 1; }
+
+/* Dot shrinks slightly when over interactive elements */
+.dot.dotHide {
+  width: 4px;
+  height: 4px;
+  background: rgba(28, 22, 18, 0.60);
+}
+
+/* ─── Ring — trails the pointer with lerp lag ────────────────────────────── */
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(28, 22, 18, 0.55);
+  background: transparent;
   pointer-events: none;
   z-index: 9999;
   opacity: 0;
   transform: translate(-50%, -50%);
   transition:
     opacity 0.3s ease,
-    width 0.25s ease,
-    height 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+    width 0.35s ease,
+    height 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
   will-change: transform;
   mix-blend-mode: multiply;
 }
 
-.visible {
-  opacity: 1;
+.ring.visible { opacity: 1; }
+
+/* Ring expands on hover over links / buttons */
+.ring.ringExpand {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(28, 22, 18, 0.80);
+  background: rgba(28, 22, 18, 0.05);
 }
 
-.expand {
-  width: 40px;
-  height: 40px;
-  background: rgba(28, 22, 18, 0.10);
-  border-color: rgba(28, 22, 18, 0.90);
-}
-
-/* Hide on touch / pointer-coarse devices */
+/* ─── Hide entirely on touch / stylus devices ────────────────────────────── */
 @media (hover: none), (pointer: coarse) {
-  .cursor { display: none !important; }
+  .dot, .ring { display: none !important; }
 }
