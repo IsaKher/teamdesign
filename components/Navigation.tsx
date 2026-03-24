@@ -86,7 +86,7 @@ export default function Navigation() {
               <div
                 key={item.href}
                 className={styles.navItem}
-                onMouseEnter={() => setHoveredItem(null)}
+                onMouseEnter={() => setHoveredItem(item.dropdown ? item.href : null)}
               >
                 <Link
                   href={item.href}
