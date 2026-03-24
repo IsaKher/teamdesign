@@ -791,6 +791,13 @@
 }
 .interiorsLink:hover { color: rgba(244, 238, 230, 0.95); }
 
+/* Touch devices — always show taglines since hover never fires */
+@media (hover: none) {
+  .projectCardTagline { opacity: 1; transform: translateY(0); }
+  .projectHeroTagline { opacity: 1; transform: translateY(0); }
+  .projectOverlay { background: rgba(28, 22, 18, 0.30); }
+}
+
 /* ─── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .statBar { grid-template-columns: repeat(2, 1fr); }

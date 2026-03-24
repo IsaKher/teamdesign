@@ -1,0 +1,35 @@
+/* Hidden on desktop */
+.bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background: var(--color-whatsapp);
+    color: rgba(244, 238, 230, 0.95);
+    padding: 18px var(--margin-page);
+    text-decoration: none;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .barVisible {
+    transform: translateY(0);
+  }
+
+  .text {
+    font-family: var(--font-sans);
+    font-size: var(--size-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+}

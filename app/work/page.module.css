@@ -156,9 +156,19 @@
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Touch devices — always show overlay text since hover never fires */
+@media (hover: none) {
+  .viewLabel { opacity: 1; transform: translateY(0); }
+  .cardOverlay { background: rgba(28, 22, 18, 0.12); }
+}
+
 @media (max-width: 600px) {
   .pageHero { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px; }
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .cardImage { aspect-ratio: 3 / 4; }
+  .cardMeta { padding: 12px 10px 20px; }
+  .cardTitle { font-size: 15px; }
+  .cardDetails { flex-direction: column; gap: 1px; font-size: 9px; }
   .filterBar { padding: 0 var(--margin-page); }
   .filterBtn { padding: 16px 20px; }
 }

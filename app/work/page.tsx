@@ -2,8 +2,8 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
+import FadeImage from '@/components/FadeImage';
 import styles from './page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
@@ -219,7 +219,7 @@ function WorkContent() {
         {filtered.map((project) => (
           <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
-              <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
+              <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 600px) 50vw, (max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
               <div className={styles.cardOverlay}>
                 <span className={styles.viewLabel}>View Project</span>
               </div>

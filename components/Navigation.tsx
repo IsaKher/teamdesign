@@ -105,30 +105,34 @@ export default function Navigation() {
         ))}
       </div>
 
-      {/* ─── Mobile menu ───────────────────────────────────────────── */}
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          {navItems.map((item) => (
-            <div key={item.href}>
-              <Link href={item.href} className={styles.mobileLink}>
-                {item.label}
-              </Link>
-              {item.dropdown && (
-                <div className={styles.mobileSublinks}>
-                  {item.dropdown.map((sub) => (
-                    <Link key={sub.href} href={sub.href} className={styles.mobileSublinkItem}>
-                      {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <div className={styles.mobileContact}>
-            <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
+      {/* ─── Mobile backdrop ───────────────────────────────────────── */}
+      <div
+        className={`${styles.mobileBackdrop} ${menuOpen ? styles.mobileBackdropVisible : ''}`}
+        onClick={() => setMenuOpen(false)}
+      />
+
+      {/* ─── Mobile menu — always rendered, slides in/out ──────────── */}
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
+        {navItems.map((item) => (
+          <div key={item.href}>
+            <Link href={item.href} className={styles.mobileLink}>
+              {item.label}
+            </Link>
+            {item.dropdown && (
+              <div className={styles.mobileSublinks}>
+                {item.dropdown.map((sub) => (
+                  <Link key={sub.href} href={sub.href} className={styles.mobileSublinkItem}>
+                    {sub.label}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
+        ))}
+        <div className={styles.mobileContact}>
+          <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

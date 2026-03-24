@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
+import FadeImage from '@/components/FadeImage';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
+import StickyProjectCTA from '@/components/StickyProjectCTA';
 import { PROJECT_DATA, FALLBACK, type ContentBlock } from '@/lib/projectData';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
@@ -86,8 +88,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     url: `${BASE}/work/${params.slug}`,
   };
 
+  const whatsappHref = `https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`;
+
   return (
     <>
+      <StickyProjectCTA href={whatsappHref} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
@@ -182,7 +187,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   <FadeIn key={i} direction="up" threshold={0.05}>
                     <div className={styles.blockFullImage}>
                       <div className={styles.blockFullImageWrap}>
-                        <Image
+                        <FadeImage
                           src={block.src}
                           alt={block.caption ?? `${project.title} — image ${i + 1}`}
                           fill
@@ -205,7 +210,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                       {block.images.map((src, j) => (
                         <div key={j} className={styles.blockHalfItem}>
                           <div className={styles.blockHalfImageWrap}>
-                            <Image
+                            <FadeImage
                               src={src}
                               alt={block.captions?.[j] ?? `${project.title} — image ${j + 1}`}
                               fill
