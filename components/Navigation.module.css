@@ -122,8 +122,8 @@
   white-space: nowrap;
 }
 
-.transparent .link { color: rgba(244, 238, 230, 0.80); }
-.solid .link        { color: var(--color-text-secondary); }
+.transparent .link { color: rgba(244, 238, 230, 0.95); }
+.solid .link        { color: var(--color-text-primary); }
 
 .link:hover { opacity: 1 !important; }
 .transparent .link:hover { color: rgba(244, 238, 230, 1); }

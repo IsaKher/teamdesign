@@ -146,11 +146,12 @@
   width: clamp(220px, 22vw, 320px);
 }
 
-/* Tier 2: five cards in a row */
+/* Tier 2: centered grid */
 .coreTier2 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 220px));
   gap: 32px;
+  justify-content: center;
 }
 
 /* Larger image for tier-1 card */

@@ -224,7 +224,7 @@ export default function HomePage() {
               <div className={styles.recognitionContent}>
                 <span className={styles.recognitionPub}>Architects &amp; Interiors India</span>
                 <p className={styles.recognitionHeadline}>
-                  Zainab Kher recognised as one of India&apos;s 50 Most Talented Young Architects Under 35 — the firm&apos;s most prominent individual award.
+                  Zainab recognised as one of India&apos;s 50 Most Talented Young Architects Under 35 — the firm&apos;s most prominent individual award.
                 </p>
               </div>
             </div>

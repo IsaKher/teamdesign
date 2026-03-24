@@ -106,7 +106,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const PRESS_ITEMS = [
   {
     pub: 'Architects & Interiors India',
-    title: "Zainab Kher recognised as one of India's top 50 architects under 35",
+    title: "Zainab recognised as one of India's top 50 architects under 35",
     year: '2016',
   },
   {
