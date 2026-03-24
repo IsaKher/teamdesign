@@ -16,8 +16,6 @@ export default function CustomCursor() {
     let rafId: number;
     // Actual pointer position
     let mx = -200, my = -200;
-    // Ring's current lerped position
-    let rx = -200, ry = -200;
     let isHover = false;
 
     const onMove = (e: MouseEvent) => {
@@ -35,14 +33,9 @@ export default function CustomCursor() {
     };
 
     const tick = () => {
-      // Dot sits exactly at pointer
-      dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-
-      // Ring lerps toward pointer — 0.10 = heavier lag, 0.18 = lighter
-      const ease = isHover ? 0.14 : 0.10;
-      rx += (mx - rx) * ease;
-      ry += (my - ry) * ease;
-      ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+      // Both dot and ring sit exactly at pointer — no lag
+      dot.style.transform  = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+      ring.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
 
       // Toggle hover classes
       if (isHover) {

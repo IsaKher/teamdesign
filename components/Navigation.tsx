@@ -17,11 +17,16 @@ const navItems = [
       { label: 'Institutional', href: '/work?type=Institutional' },
     ],
   },
-  { label: 'Studio',  href: '/studio'  },
-  { label: 'People',  href: '/people'  },
-  { label: 'Process', href: '/process' },
+  {
+    label: 'Studio',
+    href: '/studio',
+    dropdown: [
+      { label: 'People',  href: '/people'  },
+      { label: 'Process', href: '/process' },
+      { label: 'Careers', href: '/careers' },
+    ],
+  },
   { label: 'Contact', href: '/contact' },
-  { label: 'Careers', href: '/careers' },
 ];
 
 export default function Navigation() {
