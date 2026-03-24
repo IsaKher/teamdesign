@@ -47,8 +47,8 @@ export default function StudioPage() {
           <div className={styles.storyImageCol}>
             <div className={styles.storyImage}>
               <Image
-                src="https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg"
-                alt="ITM College Campus Extension — Team Design Architects"
+                src="/studio-story.png"
+                alt="Team Design Studio — Architecture & Interiors, Mumbai"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 style={{ objectFit: 'cover' }}
