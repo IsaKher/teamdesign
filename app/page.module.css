@@ -77,7 +77,11 @@
   text-transform: uppercase;
   color: rgba(244, 238, 230, 1);
   margin-bottom: 12px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.90), 0 2px 20px rgba(0, 0, 0, 0.70);
+  text-shadow:
+    0 0 12px rgba(0, 0, 0, 1),
+    0 0 24px rgba(0, 0, 0, 1),
+    0 0 48px rgba(0, 0, 0, 0.95),
+    0 1px 4px  rgba(0, 0, 0, 1);
 }
 
 .heroTaglineBlock {
