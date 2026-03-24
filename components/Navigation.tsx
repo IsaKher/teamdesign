@@ -29,6 +29,9 @@ const navItems = [
   { label: 'Contact', href: '/contact' },
 ];
 
+const leftItems  = navItems.filter(i => i.label !== 'Contact');
+const rightItems = navItems.filter(i => i.label === 'Contact');
+
 export default function Navigation() {
   const [scrolled, setScrolled]       = useState(false);
   const [menuOpen, setMenuOpen]       = useState(false);
@@ -57,25 +60,10 @@ export default function Navigation() {
     >
       {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
-        {/* Wordmark */}
-        <Link href="/" className={styles.wordmark}>
-          <span className={styles.seal}>
-            <Image
-              src="/logo.png"
-              alt="Team Design Architects"
-              fill
-              sizes="56px"
-              className={styles.logoImage}
-              priority
-            />
-          </span>
-          <span className={styles.divider} />
-          <span className={styles.firmName}>Team Design</span>
-        </Link>
 
-        {/* Desktop links */}
-        <nav className={styles.links}>
-          {navItems.map((item) => (
+        {/* Left links — Work, Studio */}
+        <nav className={`${styles.links} ${styles.linksLeft}`}>
+          {leftItems.map((item) => (
             <div
               key={item.href}
               className={styles.navItem}
@@ -91,17 +79,54 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className={styles.burger}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span /><span /><span />
-        </button>
+        {/* Center — Wordmark */}
+        <Link href="/" className={styles.wordmark}>
+          <span className={styles.seal}>
+            <Image
+              src="/logo.png"
+              alt="Team Design Architects"
+              fill
+              sizes="80px"
+              className={styles.logoImage}
+              priority
+            />
+          </span>
+          <span className={styles.divider} />
+          <span className={styles.firmName}>Team Design</span>
+        </Link>
+
+        {/* Right — Contact + mobile burger */}
+        <div className={styles.navRight}>
+          <nav className={`${styles.links} ${styles.linksRight}`}>
+            {rightItems.map((item) => (
+              <div
+                key={item.href}
+                className={styles.navItem}
+                onMouseEnter={() => setHoveredItem(null)}
+              >
+                <Link
+                  href={item.href}
+                  className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          </nav>
+
+          {/* Mobile toggle */}
+          <button
+            className={styles.burger}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span /><span /><span />
+          </button>
+        </div>
+
       </div>
 
-      {/* ─── Sub-row — nav bar extends down when Work / Interiors hovered ── */}
+      {/* ─── Sub-row — nav bar extends down when Work / Studio hovered ── */}
       <div className={`${styles.subRow} ${activeDropdown ? styles.subRowVisible : ''}`}>
         {(activeDropdown ?? []).map((sub) => (
           <Link key={sub.href} href={sub.href} className={styles.subLink}>
