@@ -29,8 +29,7 @@ const navItems = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const leftItems  = navItems.filter(i => i.label !== 'Contact');
-const rightItems = navItems.filter(i => i.label === 'Contact');
+const rightItems = navItems;
 
 export default function Navigation() {
   const [scrolled, setScrolled]       = useState(false);
@@ -61,23 +60,8 @@ export default function Navigation() {
       {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
 
-        {/* Left links — Work, Studio */}
-        <nav className={`${styles.links} ${styles.linksLeft}`}>
-          {leftItems.map((item) => (
-            <div
-              key={item.href}
-              className={styles.navItem}
-              onMouseEnter={() => setHoveredItem(item.dropdown ? item.href : null)}
-            >
-              <Link
-                href={item.href}
-                className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
-              >
-                {item.label}
-              </Link>
-            </div>
-          ))}
-        </nav>
+        {/* Left — intentional empty space */}
+        <div />
 
         {/* Center — Wordmark */}
         <Link href="/" className={styles.wordmark}>

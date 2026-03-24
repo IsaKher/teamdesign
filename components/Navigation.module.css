@@ -258,8 +258,6 @@
 }
 
 @media (max-width: 768px) {
-  /* visibility: hidden keeps the left column occupying grid space so logo stays centred */
-  .linksLeft  { visibility: hidden; }
   .linksRight { display: none; }
   .subRow     { display: none; }
   .burger     { display: flex; }
