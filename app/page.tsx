@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
+import HeroParallax from '@/components/HeroParallax';
+import MagneticButton from '@/components/MagneticButton';
 import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
 
 export default function HomePage() {
@@ -10,7 +12,8 @@ export default function HomePage() {
     <>
       {/* ─── Hero + Stats (one shared image) ──────────────────────────── */}
       <div className={styles.heroWrapper}>
-        <div className={styles.heroImageWrap}>
+        <HeroParallax />
+        <div className={styles.heroImageWrap} data-hero-parallax>
           <Image
             src="/hero-building.png"
             alt="Team Design — Architecture & Interiors, Mumbai"
@@ -30,8 +33,8 @@ export default function HomePage() {
             <span className={styles.heroLabel}>Architecture &amp; Interior Design · Mumbai</span>
             <h1 className={styles.heroTitle}>Team Design</h1>
             <div className={styles.heroCtas}>
-              <Link href="/work" className={styles.heroCta}>View Our Work</Link>
-              <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
+              <MagneticButton><Link href="/work" className={styles.heroCta}>View Our Work</Link></MagneticButton>
+              <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link></MagneticButton>
             </div>
           </div>
         </section>
