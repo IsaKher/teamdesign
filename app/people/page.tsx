@@ -28,12 +28,6 @@ const OPERATIONS_TEAM = [
 
 const CORE_TIER2 = [
   {
-    name: 'Zakir',
-    role: 'Partner & Senior Designer',
-    bio: 'With over 25 years in design and construction, Zakir\'s approach is characterised by a tenacious focus on creative design through every stage of every project. He believes that complexities and limitations are not allowed to impact a project negatively — the search for design opportunities is perpetual.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Gokul-Cam_01-1.jpg',
-  },
-  {
     name: 'Ali',
     role: 'Project Manager / Project Head',
     bio: 'With over 10 years in construction and project management, Ali focuses on technical details, analyses, budgets, specifications, measurements, site supervision, and final acceptance. His keen eye for detail, site coordination, and troubleshooting skills keep complex projects running on time.',
