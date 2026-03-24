@@ -820,13 +820,25 @@
   .clientProject { text-align: left; max-width: 100%; }
   /* Hero polish */
   .hero { height: 85vh; min-height: 520px; }
-  .heroText { bottom: 40px; right: var(--margin-page); }
+  .heroText {
+    bottom: 40px;
+    left: var(--margin-page);
+    right: var(--margin-page);
+    text-align: center;
+  }
   .heroTitle { letter-spacing: 0.08em; }
   .heroLabel { font-size: 9px; white-space: nowrap; }
   .heroPhilosophy { font-size: clamp(17px, 4.5vw, 19px); }
   .heroCtas { flex-direction: column; align-items: stretch; gap: 16px; margin-top: 28px; }
   .heroCta { text-align: center; padding: 16px; }
-  .heroCtaSecondary { text-align: center; }
+  .heroCtaSecondary {
+    text-align: center;
+    color: rgba(244, 238, 230, 0.95);
+    border: 1px solid rgba(244, 238, 230, 0.50);
+    border-bottom: 1px solid rgba(244, 238, 230, 0.50);
+    padding: 14px 32px;
+    padding-bottom: 14px;
+  }
   .projectHeroImageWrap { aspect-ratio: 1/1; }
   .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
   .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
