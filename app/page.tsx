@@ -31,7 +31,6 @@ export default function HomePage() {
               <span className={styles.heroLabel}>Mumbai · Est. 1999 · Architecture & Interiors</span>
               <span className={styles.heroPhilosophy}>Spaces shaped by site, light, and the people who inhabit them.</span>
             </div>
-            <h1 className={styles.heroTitle}>Team Design</h1>
             <div className={styles.heroCtas}>
               <Link href="/work" className={styles.heroCta}>View Our Work</Link>
               <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
