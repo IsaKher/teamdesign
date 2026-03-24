@@ -5,7 +5,6 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import FadeImage from '@/components/FadeImage';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
-import StickyProjectCTA from '@/components/StickyProjectCTA';
 import { PROJECT_DATA, FALLBACK, type ContentBlock } from '@/lib/projectData';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
@@ -92,7 +91,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
   return (
     <>
-      <StickyProjectCTA href={whatsappHref} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
