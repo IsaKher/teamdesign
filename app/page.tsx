@@ -27,9 +27,11 @@ export default function HomePage() {
 
         <section className={styles.hero}>
           <div className={styles.heroText}>
+            <span className={styles.heroLabel}>Architecture &amp; Interior Design · Mumbai</span>
             <h1 className={styles.heroTitle}>Team Design</h1>
             <div className={styles.heroCtas}>
               <Link href="/work" className={styles.heroCta}>View Our Work</Link>
+              <Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link>
             </div>
           </div>
         </section>

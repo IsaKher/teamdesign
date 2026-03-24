@@ -7,7 +7,7 @@ import FadeImage from '@/components/FadeImage';
 import styles from './page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
-const FILTERS = ['All', 'Bungalows', 'Commercial', 'Institutional', 'Residential'];
+const FILTERS = ['All', 'Residential', 'Commercial', 'Institutional', 'Interiors'];
 
 const PROJECTS = [
   {
@@ -44,7 +44,7 @@ const PROJECTS = [
     slug: 'mist-view-bungalows-lonavala',
     title: 'Mist View Bungalows',
     client: 'Private Clients',
-    type: 'Bungalows',
+    type: 'Residential',
     location: 'Lonavala, Maharashtra',
     year: 2010,
     area: '15,000 sq ft',
@@ -64,7 +64,7 @@ const PROJECTS = [
     slug: 'mariwala-estate-annexe-lonavala',
     title: 'Mariwala Estate Annexe',
     client: 'Mr. Harsh Mariwala',
-    type: 'Bungalows',
+    type: 'Residential',
     location: 'Lonavala, Maharashtra',
     year: 2016,
     area: '12,000 sq ft',
@@ -124,7 +124,7 @@ const PROJECTS = [
     slug: 'glass-kitchen-alibaug',
     title: 'Glass Kitchen',
     client: 'Private Client',
-    type: 'Bungalows',
+    type: 'Residential',
     location: 'Mandwa, Alibaug',
     year: 2014,
     area: '1,500 sq ft',
@@ -144,7 +144,7 @@ const PROJECTS = [
     slug: 'bungalow-ahmedabad',
     title: 'Bungalow in Ahmedabad',
     client: 'Mr. Y Sulliya',
-    type: 'Bungalows',
+    type: 'Residential',
     location: 'Ahmedabad',
     year: 2014,
     area: '3,000 sq ft',
@@ -154,7 +154,7 @@ const PROJECTS = [
     slug: 'bhandari-house-bhinmal',
     title: 'Bhandari House',
     client: 'Mr. Gautam Bhandari',
-    type: 'Bungalows',
+    type: 'Residential',
     location: 'Bhinmal, Rajasthan',
     year: 2013,
     area: '8,000 sq ft',
