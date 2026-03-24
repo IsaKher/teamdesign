@@ -9,7 +9,7 @@ import { STUDIO } from '@/lib/siteContent';
 
 const navItems = [
   {
-    label: 'Work',
+    label: 'Portfolio',
     href: '/work',
     dropdown: [
       { label: 'Residential',   href: '/work?type=Residential'   },
@@ -21,7 +21,7 @@ const navItems = [
     label: 'Studio',
     href: '/studio',
     dropdown: [
-      { label: 'People',  href: '/people'  },
+      { label: 'Team',    href: '/people'  },
       { label: 'Process', href: '/process' },
       { label: 'Careers', href: '/careers' },
     ],
