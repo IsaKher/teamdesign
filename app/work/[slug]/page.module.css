@@ -168,13 +168,12 @@
 
 .blockCaption {
   display: block;
-  padding: 0 var(--margin-page);
+  padding: 10px var(--margin-page) 0;
   font-family: var(--font-sans);
-  font-size: var(--size-meta);
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
-  opacity: 0.55;
+  color: var(--color-text-primary);
 }
 
 .blockHalf {
