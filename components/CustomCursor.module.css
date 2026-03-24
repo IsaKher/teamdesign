@@ -6,13 +6,14 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(28, 22, 18, 0.90);
+  background: #fff;
   pointer-events: none;
   z-index: 10000;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease;
   will-change: transform;
+  mix-blend-mode: difference;
 }
 
 .dot.visible { opacity: 1; }
@@ -21,7 +22,6 @@
 .dot.dotHide {
   width: 4px;
   height: 4px;
-  background: rgba(28, 22, 18, 0.60);
 }
 
 /* ─── Ring — trails the pointer with lerp lag ────────────────────────────── */
@@ -32,7 +32,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba(28, 22, 18, 0.55);
+  border: 1.5px solid #fff;
   background: transparent;
   pointer-events: none;
   z-index: 9999;
@@ -41,11 +41,9 @@
   transition:
     opacity 0.3s ease,
     width 0.35s ease,
-    height 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease;
+    height 0.35s ease;
   will-change: transform;
-  mix-blend-mode: multiply;
+  mix-blend-mode: difference;
 }
 
 .ring.visible { opacity: 1; }
@@ -54,8 +52,6 @@
 .ring.ringExpand {
   width: 56px;
   height: 56px;
-  border-color: rgba(28, 22, 18, 0.80);
-  background: rgba(28, 22, 18, 0.05);
 }
 
 /* ─── Hide entirely on touch / stylus devices ────────────────────────────── */
