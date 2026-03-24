@@ -15,7 +15,7 @@
 
 .pageTitle {
   font-family: var(--font-serif);
-  font-size: clamp(64px, 8vw, 120px);
+  font-size: clamp(36px, 10vw, 120px);
   font-weight: 300;
   color: var(--color-text-primary);
   line-height: 1;
@@ -545,7 +545,8 @@
 }
 
 @media (max-width: 600px) {
-  .drawing      { padding: 0 24px 56px; }
+  .pageHero     { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 48px; }
+  .drawing      { padding: 0 24px 48px; }
   .processSteps { grid-template-columns: 1fr; }
   .serviceGrid  { grid-template-columns: 1fr; }
   .titleBlock   { grid-template-columns: 1fr 1fr; }
@@ -555,4 +556,9 @@
   .specHeadRow,
   .specRow      { grid-template-columns: 40px 1fr; }
   .specType     { display: none; }
+  .pullQuote    { padding: 56px var(--margin-page); }
+  .story        { padding: 56px var(--margin-page); }
+  .process      { padding: 56px var(--margin-page); }
+  .services     { padding: 56px var(--margin-page); }
+  .specSection  { padding: 56px var(--margin-page); }
 }

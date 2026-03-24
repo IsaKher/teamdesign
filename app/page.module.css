@@ -808,8 +808,13 @@
   .sectionHeader { flex-direction: column; align-items: flex-start; gap: 16px; }
   .clientItem { flex-direction: column; }
   .clientProject { text-align: left; max-width: 100%; }
+  .heroText { bottom: 40px; }
   .heroCtas { flex-direction: column; align-items: flex-start; gap: 16px; }
   .projectHeroImageWrap { aspect-ratio: 1/1; }
   .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
   .categoryLinks { gap: 6px; }
+  .workSection { padding: 56px var(--margin-page); }
+  .credentials { padding: 56px var(--margin-page); }
+  .principal { padding: 56px var(--margin-page); }
+  .recognition { padding: 56px var(--margin-page); }
 }

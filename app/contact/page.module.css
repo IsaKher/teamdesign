@@ -322,6 +322,8 @@
 }
 
 @media (max-width: 600px) {
+  .pageHero { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px; }
+  .layout { padding-top: 48px; padding-bottom: 56px; }
   .fieldRow { grid-template-columns: 1fr; }
   .typeCards { grid-template-columns: repeat(2, 1fr); }
 }

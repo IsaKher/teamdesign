@@ -197,8 +197,8 @@
   gap: 4px;
   padding: 28px 32px;
   border: 1px solid var(--color-rule);
-  min-width: 220px;
-  flex: 1;
+  min-width: 0;
+  flex: 1 1 200px;
   max-width: 320px;
 }
 
@@ -318,6 +318,16 @@
   .coreTier1 .memberCard { width: 100%; }
 }
 
+@media (max-width: 600px) {
+  .pageHero { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px; }
+  .principalSection { padding: 56px var(--margin-page); }
+  .coreSection { padding: 56px var(--margin-page); }
+  .opsSection { padding-top: 48px; padding-bottom: 56px; }
+  .coreHeader { margin-bottom: 40px; }
+}
+
 @media (max-width: 480px) {
   .coreTier2 { grid-template-columns: 1fr 1fr; }
+  .opsRow { flex-direction: column; }
+  .opsCard { max-width: 100%; }
 }

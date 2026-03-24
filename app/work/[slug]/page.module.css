@@ -459,3 +459,13 @@
   .nextProject { aspect-ratio: 4/3; }
   .nextProjectContent { bottom: 24px; left: var(--margin-page); }
 }
+
+@media (max-width: 600px) {
+  .header       { padding: 40px var(--margin-page) 32px; }
+  .openingBrief { padding: 40px var(--margin-page) 0; }
+  .content      { padding: 40px var(--margin-page); }
+  .blocks       { padding: 48px 0 72px; gap: 48px; }
+  .cta          { padding: 64px var(--margin-page); }
+  .related      { padding: 56px var(--margin-page); }
+  .blockPullQuote { padding: 48px var(--margin-page); }
+}

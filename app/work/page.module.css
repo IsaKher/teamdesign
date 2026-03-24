@@ -157,8 +157,10 @@
 }
 
 @media (max-width: 600px) {
+  .pageHero { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px; }
   .grid { grid-template-columns: 1fr; }
   .filterBar { padding: 0 var(--margin-page); }
+  .filterBtn { padding: 16px 20px; }
 }
 
 .emptyState {
