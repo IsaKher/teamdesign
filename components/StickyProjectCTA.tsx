@@ -8,7 +8,12 @@ export default function StickyProjectCTA({ href }: { href: string }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setVisible(window.scrollY > window.innerHeight * 0.75);
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const nearBottom =
+        scrolled + window.innerHeight >= document.documentElement.scrollHeight - 200;
+      setVisible(scrolled > window.innerHeight * 0.75 && !nearBottom);
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
