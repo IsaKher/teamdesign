@@ -4,6 +4,26 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .hero { height: 50vh; min-height: 280px; }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover { color: var(--color-text-primary); }
+
 .heroImageWrap { position: absolute; inset: 0; }
 
 .heroOverlay {

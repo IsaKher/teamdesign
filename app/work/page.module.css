@@ -32,13 +32,36 @@
 }
 
 /* ─── Filters ──────────────────────────────────────────────────── */
+.filterBarWrap {
+  position: relative;
+}
+
+.filterBarWrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--color-ground));
+  pointer-events: none;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .filterBarWrap::after { display: block; }
+}
+
 .filterBar {
   display: flex;
   gap: 0;
   padding: 0 var(--margin-page);
   border-bottom: 1px solid var(--color-rule);
   overflow-x: auto;
+  scrollbar-width: none;
 }
+
+.filterBar::-webkit-scrollbar { display: none; }
 
 .filterBtn {
   font-family: var(--font-sans);

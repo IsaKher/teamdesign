@@ -117,6 +117,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       {/* Project header */}
       <section className={styles.header}>
         <div className={styles.headerInner}>
+          <Link href="/work" className={styles.backLink}>← All Work</Link>
           <div className={styles.meta}>
             <span className={styles.metaItem}>{project.type}</span>
             <span className={styles.metaDot}>·</span>

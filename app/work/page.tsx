@@ -196,16 +196,18 @@ function WorkContent() {
       </div>
 
       {/* Filters */}
-      <div className={styles.filterBar}>
-        {FILTERS.map(f => (
-          <button
-            key={f}
-            className={`${styles.filterBtn} ${active === f ? styles.filterActive : ''}`}
-            onClick={() => setActive(f)}
-          >
-            {f}
-          </button>
-        ))}
+      <div className={styles.filterBarWrap}>
+        <div className={styles.filterBar}>
+          {FILTERS.map(f => (
+            <button
+              key={f}
+              className={`${styles.filterBtn} ${active === f ? styles.filterActive : ''}`}
+              onClick={() => setActive(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Grid */}

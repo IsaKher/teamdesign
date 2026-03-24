@@ -57,6 +57,7 @@
 @media (max-width: 768px) {
   .button {
     bottom: 24px;
-    right: 20px;
+    right: auto;
+    left: 20px;
   }
 }

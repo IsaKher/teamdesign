@@ -190,7 +190,7 @@ export default function ContactPage() {
                 <span className={styles.label}>Type of Project</span>
                 <div className={styles.typeCards}>
                   {[
-                    { value: 'residential-bungalow', label: 'Bungalow / Villa' },
+                    { value: 'residential-bungalow', label: 'Bungalow' },
                     { value: 'residential-apartment', label: 'Apartment' },
                     { value: 'commercial', label: 'Commercial' },
                     { value: 'institutional', label: 'Institutional' },
