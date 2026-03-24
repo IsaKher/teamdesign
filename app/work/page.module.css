@@ -120,17 +120,18 @@
   padding: 20px;
 }
 
-.card:hover .cardOverlay { background: rgba(28, 22, 18, 0.14); }
+.card:hover .cardOverlay { background: rgba(28, 22, 18, 0.52); }
 
 .viewLabel {
   font-family: var(--font-sans);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.90);
+  color: #F4EEE6;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 .card:hover .viewLabel { opacity: 1; transform: translateY(0); }
