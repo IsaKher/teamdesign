@@ -113,6 +113,13 @@ export default function Navigation() {
 
       {/* ─── Mobile menu — always rendered, slides in/out ──────────── */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
+        <button
+          className={styles.mobileClose}
+          onClick={() => setMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
         {navItems.map((item) => (
           <div key={item.href}>
             <Link href={item.href} className={styles.mobileLink}>

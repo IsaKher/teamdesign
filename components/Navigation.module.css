@@ -280,6 +280,19 @@
     pointer-events: auto;
   }
 
+  /* Close button inside panel */
+  .mobileClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    padding: 8px;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+  .mobileClose:hover { color: var(--color-text-primary); }
+
   /* Slide-in panel from right */
   .mobileMenu {
     display: flex;
