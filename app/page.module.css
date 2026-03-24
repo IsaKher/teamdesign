@@ -811,7 +811,8 @@
   .heroCta { text-align: center; padding: 16px; }
   .projectHeroImageWrap { aspect-ratio: 1/1; }
   .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
-  .categoryLinks { gap: 6px; }
+  .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
+  .categoryLink { text-align: center; }
   .workSection { padding: 56px var(--margin-page); }
   .credentials { padding: 56px var(--margin-page); }
   .principal { padding: 56px var(--margin-page); }
