@@ -1014,6 +1014,173 @@ The cinema sits within a retail complex, and the design had to establish a disti
       { type: 'paragraph', text: 'Bold use of colour, clear circulation, all services carefully thought through and designed to suit the needs of the end user — fast-paced brief, delivered with clarity.' },
     ],
   },
+
+  // ─── 2026 PROJECTS ─────────────────────────────────────────────────────────
+
+  'qudrati-greens-indore': {
+    title: 'Qudrati Greens',
+    client: 'Bakir Qudrati',
+    type: 'Commercial',
+    location: 'Indore, Madhya Pradesh',
+    year: 2026,
+    area: '40,000 sq ft',
+    description: `A mixed-use residential and commercial building in Indore for Bakir Qudrati, director of Bombay Machine Tools Private Limited. The programme brings together residential and commercial functions within a single built form, addressing the density and scale of a rapidly growing city.
+
+The design seeks a civic presence appropriate to its corner site — a building that reads as both welcoming and purposeful, offering the neighbourhood a new kind of ground-level engagement while providing its residents with calm above.`,
+    mainImage: '/projects/qudrati-greens-indore/1.png',
+    gallery: [
+      '/projects/qudrati-greens-indore/2.png',
+      '/projects/qudrati-greens-indore/3.png',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A mixed-use residential and commercial building in Indore — 40,000 sq ft designed to balance civic presence with practical utility.' },
+      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/2.png', caption: 'Qudrati Greens — Indore, Madhya Pradesh, 2026' },
+      { type: 'pullQuote', text: 'A building that reads as both welcoming and purposeful, offering the neighbourhood a new kind of ground-level engagement.' },
+      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/3.png' },
+    ],
+  },
+
+  'nikhil-gupta-bungalow': {
+    title: "Nikhil Gupta's Bungalow",
+    client: 'Nikhil Gupta',
+    type: 'Residential',
+    location: 'Awas, Alibaug',
+    year: 2026,
+    area: '15,000 sq ft',
+    description: `A private bungalow in Alibaug for a client who travels widely and lives deliberately. At 15,000 sq ft the brief was generous but undemanding — the client asked only for spaces that settle into the landscape without demanding attention.
+
+The design reflects an ease of occupation. Rooms open to the outside in multiple directions, light moves through the day, and the distinction between inside and outside is consistently softened. A home that holds its occupant lightly.`,
+    mainImage: '/projects/nikhil-gupta-bungalow/1.jpg',
+    gallery: [
+      '/projects/nikhil-gupta-bungalow/2.jpg',
+      '/projects/nikhil-gupta-bungalow/3.jpg',
+      '/projects/nikhil-gupta-bungalow/4.jpg',
+      '/projects/nikhil-gupta-bungalow/5.jpg',
+      '/projects/nikhil-gupta-bungalow/6.png',
+      '/projects/nikhil-gupta-bungalow/7.png',
+      '/projects/nikhil-gupta-bungalow/8.png',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 15,000 sq ft private residence in Alibaug — designed for a client who travels widely and asked only for spaces that feel easy to inhabit.' },
+      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/2.jpg', caption: 'Awas, Alibaug, 2026' },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/6.png', '/projects/nikhil-gupta-bungalow/7.png'], captions: ['Dining area', 'Entrance porch'] },
+      { type: 'pullQuote', text: 'Rooms open to the outside in multiple directions. The distinction between inside and outside is consistently softened.' },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/3.jpg', '/projects/nikhil-gupta-bungalow/8.png'], captions: ['Living spaces', 'Living room'] },
+      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/4.jpg' },
+    ],
+  },
+
+  'jhaveri-zaveri-residence': {
+    title: 'Jhaveri Zaveri Residence',
+    client: 'Rupen Jhaveri & Binaisha Zaveri',
+    type: 'Interiors',
+    location: 'Mumbai',
+    year: 2019,
+    area: '2,500 sq ft',
+    description: `A residence in Mumbai designed for Rupen Jhaveri, Group President at Piramal Finance Limited, and Binaisha Zaveri, Director at Tribhovandas Bhimji Zaveri. The 2,500 sq ft apartment balances the demands of a working couple's life with quiet moments of domesticity.
+
+Considered material choices, controlled light, and spaces that shift in character through the day. The interior language is warm but precise — nothing is incidental.`,
+    mainImage: '/projects/jhaveri-zaveri-residence/1.jpg',
+    gallery: [
+      '/projects/jhaveri-zaveri-residence/2.jpg',
+      '/projects/jhaveri-zaveri-residence/3.jpg',
+      '/projects/jhaveri-zaveri-residence/4.jpg',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence for two professionally active clients — designed to balance the energy of working life with spaces of genuine domestic calm.' },
+      { type: 'fullWidthImage', src: '/projects/jhaveri-zaveri-residence/2.jpg', caption: 'Jhaveri Zaveri Residence — Mumbai, 2019' },
+      { type: 'pullQuote', text: 'Considered material choices, controlled light, and spaces that shift in character through the day. Nothing is incidental.' },
+      { type: 'halfWidthImages', images: ['/projects/jhaveri-zaveri-residence/3.jpg', '/projects/jhaveri-zaveri-residence/4.jpg'] },
+    ],
+  },
+
+  'mohan-shenoi-residence': {
+    title: 'Mohan Shenoi Residence',
+    client: 'Mohan Shenoi',
+    type: 'Interiors',
+    location: 'Mumbai',
+    year: 2022,
+    area: '5,000 sq ft',
+    description: `A 5,000 sq ft residence in Mumbai for Mohan Shenoi, formerly Director at Kotak Mahindra Prime and Head of Retail Segment at ICICI Bank. The brief called for spaces of quiet authority — rooms that work as well for large family gatherings as for solitary evenings.
+
+The material palette is warm and restrained. Proportions are generous without being excessive. The apartment reads as the home of someone who has earned their comfort and wears it without display.`,
+    mainImage: '/projects/mohan-shenoi-residence/1.jpg',
+    gallery: [
+      '/projects/mohan-shenoi-residence/2.jpg',
+      '/projects/mohan-shenoi-residence/3.jpg',
+      '/projects/mohan-shenoi-residence/4.jpg',
+      '/projects/mohan-shenoi-residence/5.jpg',
+      '/projects/mohan-shenoi-residence/6.jpg',
+      '/projects/mohan-shenoi-residence/7.jpg',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 5,000 sq ft residence in Mumbai — spaces of quiet authority that work as well for large family gatherings as for solitary evenings.' },
+      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/6.jpg', caption: 'Mohan Shenoi Residence — Mumbai, 2022' },
+      { type: 'pullQuote', text: 'The apartment reads as the home of someone who has earned their comfort and wears it without display.' },
+      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/2.jpg', '/projects/mohan-shenoi-residence/3.jpg'] },
+      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/7.jpg' },
+      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/4.jpg', '/projects/mohan-shenoi-residence/5.jpg'] },
+    ],
+  },
+
+  'rahul-sanjana-residence': {
+    title: 'Rahul & Sanjana Residence',
+    client: 'Rahul & Sanjana Shenoi',
+    type: 'Interiors',
+    location: 'Mumbai',
+    year: 2017,
+    area: '2,500 sq ft',
+    description: `A 2,500 sq ft Mumbai residence designed for Rahul Shenoi, Director at EY specialising in Risk Analytics and Digital Transformation, and Sanjana Shenoi. The programme navigates the overlap of home and work life that defines their schedule.
+
+Spaces that read as relaxed but are precisely considered in their arrangement. The interior holds two different modes of living — the focused and the unwound — without forcing a choice between them.`,
+    mainImage: '/projects/rahul-sanjana-residence/1.jpg',
+    gallery: [
+      '/projects/rahul-sanjana-residence/2.jpg',
+      '/projects/rahul-sanjana-residence/3.jpg',
+      '/projects/rahul-sanjana-residence/4.jpg',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence that navigates the overlap of home and work life without forcing a choice between the two.' },
+      { type: 'fullWidthImage', src: '/projects/rahul-sanjana-residence/2.jpg', caption: 'Rahul & Sanjana Residence — Mumbai, 2017' },
+      { type: 'pullQuote', text: 'Spaces that read as relaxed but are precisely considered in their arrangement.' },
+      { type: 'halfWidthImages', images: ['/projects/rahul-sanjana-residence/3.jpg', '/projects/rahul-sanjana-residence/4.jpg'] },
+    ],
+  },
+
+  'usha-shenoi-residence': {
+    title: 'Usha Shenoi Residence',
+    client: 'Usha Shenoi',
+    type: 'Interiors',
+    location: 'Mumbai',
+    year: 2016,
+    area: '2,500 sq ft',
+    description: `A residence in Mumbai for Usha Shenoi — teacher, humanitarian, and social worker. The design reflects her character directly: warm, unpretentious, filled with light.
+
+At 2,500 sq ft the apartment is not large, but it holds people easily. Spaces open generously, materials are honest, and nothing asks for more attention than it deserves. A home shaped entirely by who lives in it.`,
+    mainImage: '/projects/usha-shenoi-residence/1.jpg',
+    gallery: [
+      '/projects/usha-shenoi-residence/2.jpg',
+      '/projects/usha-shenoi-residence/3.jpg',
+    ],
+    testimonial: null,
+    related: [],
+    contentBlocks: [
+      { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence for a teacher and social worker — warm, unpretentious, and filled with light.' },
+      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/2.jpg', caption: 'Usha Shenoi Residence — Mumbai, 2016' },
+      { type: 'pullQuote', text: 'A home shaped entirely by who lives in it.' },
+      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/3.jpg' },
+    ],
+  },
 };
 
 export const FALLBACK: Project = {
