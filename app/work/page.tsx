@@ -188,7 +188,7 @@ const PROJECTS = [
     location: 'Awas, Alibaug',
     year: 2026,
     area: '15,000 sq ft',
-    image: '/projects/nikhil-gupta-bungalow/1.jpg',
+    image: '/projects/nikhil-gupta-bungalow/2.jpg',
   },
   {
     slug: 'jhaveri-zaveri-residence',
@@ -242,9 +242,10 @@ function WorkContent() {
     if (typeParam && FILTERS.includes(typeParam)) setActive(typeParam);
   }, [typeParam]);
 
-  const filtered = active === 'All'
+  const filtered = (active === 'All'
     ? PROJECTS
-    : PROJECTS.filter(p => p.type === active);
+    : PROJECTS.filter(p => p.type === active)
+  ).slice().sort((a, b) => b.year - a.year);
 
   return (
     <>

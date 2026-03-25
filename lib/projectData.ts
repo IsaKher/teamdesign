@@ -1052,9 +1052,9 @@ The design seeks a civic presence appropriate to its corner site — a building 
     description: `A private bungalow in Alibaug for a client who travels widely and lives deliberately. At 15,000 sq ft the brief was generous but undemanding — the client asked only for spaces that settle into the landscape without demanding attention.
 
 The design reflects an ease of occupation. Rooms open to the outside in multiple directions, light moves through the day, and the distinction between inside and outside is consistently softened. A home that holds its occupant lightly.`,
-    mainImage: '/projects/nikhil-gupta-bungalow/1.jpg',
+    mainImage: '/projects/nikhil-gupta-bungalow/2.jpg',
     gallery: [
-      '/projects/nikhil-gupta-bungalow/2.jpg',
+      '/projects/nikhil-gupta-bungalow/1.jpg',
       '/projects/nikhil-gupta-bungalow/3.jpg',
       '/projects/nikhil-gupta-bungalow/4.jpg',
       '/projects/nikhil-gupta-bungalow/5.jpg',
@@ -1071,6 +1071,7 @@ The design reflects an ease of occupation. Rooms open to the outside in multiple
       { type: 'pullQuote', text: 'Rooms open to the outside in multiple directions. The distinction between inside and outside is consistently softened.' },
       { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/3.jpg', '/projects/nikhil-gupta-bungalow/8.png'], captions: ['Living spaces', 'Living room'] },
       { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/4.jpg' },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/1.jpg', '/projects/nikhil-gupta-bungalow/5.jpg'], captions: ['Under construction — Awas, Alibaug', 'Structure nearing completion'] },
     ],
   },
 
