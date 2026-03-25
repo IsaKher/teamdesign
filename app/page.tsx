@@ -189,7 +189,7 @@ export default function HomePage() {
             <span className="label">Principal Architect</span>
             <h2 className={styles.principalName}>Tasadduq Kher</h2>
             <p className={styles.principalBio}>
-              Tasadduq Kher founded Team Design in 1999 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over 25 years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
+              Tasadduq Kher founded Team Design in 1996 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over 25 years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
             </p>
             <p className={styles.principalBio}>
               His approach begins with understanding how people live and work — then finding the design logic that serves those needs precisely. The result is work that is quiet rather than declarative, and enduring rather than fashionable.
@@ -200,7 +200,7 @@ export default function HomePage() {
                 <span className={styles.credLabel}>Rachana Sansad Academy of Architecture, Mumbai</span>
               </div>
               <div className={styles.credential}>
-                <span className={styles.credValue}>1999</span>
+                <span className={styles.credValue}>1996</span>
                 <span className={styles.credLabel}>Year Practice Founded</span>
               </div>
             </div>

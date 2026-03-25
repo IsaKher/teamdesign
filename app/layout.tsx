@@ -89,7 +89,7 @@ const schemaOrgJsonLd = {
         'Architecture & Interior Design practice based in Navi Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
       url: 'https://teamdesign.in',
       telephone: '+91-9876543210',
-      foundingDate: '1999',
+      foundingDate: '1996',
       image: 'https://teamdesign.in/hero-building.png',
       address: {
         '@type': 'PostalAddress',

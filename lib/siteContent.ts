@@ -14,7 +14,7 @@ export const STUDIO = {
     city: 'Navi Mumbai, Maharashtra 400710',
     country: 'India',
   },
-  founded: 1999,
+  founded: 1996,
   site: 'https://teamdesign.in',
   mapsUrl: 'geo:19.1077,73.0081?q=A-145%2F6A+Pawane+Village+Midc+Road+Kopar+Khairane+Navi+Mumbai+400710',
   instagramUrl: 'https://www.instagram.com/teamdesign2004/',

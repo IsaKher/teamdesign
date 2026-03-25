@@ -19,7 +19,7 @@ export default function Footer() {
 
         <div className={styles.firmTitle}>
           <span className={styles.name}>Team Design Architects</span>
-          <span className={styles.sub}>& Interior Designers · Est. 1999</span>
+          <span className={styles.sub}>& Interior Designers · Est. 1996</span>
         </div>
       </Link>
 

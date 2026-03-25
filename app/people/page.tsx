@@ -7,7 +7,7 @@ const PRINCIPAL = {
   education: 'B.Arch, Rachana Sansad Academy of Architecture, Mumbai',
   bio: 'Tasadduq founded the practice in 1996, beginning his career under Architect P K Das as mentor. A former visiting professor at the Academy of Architecture, Mumbai for nearly a decade, he believes deeply that the quality of our surroundings affects the quality of our lives. A traveler, book lover, and motorcycle enthusiast, his personal philosophy is simple: "There is one life to live and one must live it in every aspect, leaving no regrets." His expertise spans acknowledged design talent, mentoring the design team, and demonstrated success across 25+ years of practice.',
   image: '/tasadduq-kher.png',
-  founding: 1999,
+  founding: 1996,
 };
 
 const CORE_TIER1 = [

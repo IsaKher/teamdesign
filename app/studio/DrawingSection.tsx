@@ -68,7 +68,7 @@ export default function DrawingSection() {
           </div>
           <div className={styles.titleCell}>
             <span className={styles.titleCellLabel}>Established</span>
-            <span className={styles.titleCellValue}>1999</span>
+            <span className={styles.titleCellValue}>1996</span>
           </div>
           <div className={styles.titleCell}>
             <span className={styles.titleCellLabel}>Drawing</span>

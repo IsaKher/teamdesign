@@ -28,7 +28,7 @@ export default function StudioPage() {
             <div className={styles.annotatedPara}>
               <span className={styles.paraNote}>Scale</span>
               <p className={styles.para}>
-                Team Design began in 1999 as a small office in Lower Parel, Mumbai. Over twenty-five years the practice has grown across scales and sectors — from private apartments to institutional campuses, from banking environments designed to national standards to homes shaped entirely around the daily rhythms of a single family.
+                Team Design began in 1996 as a small office in Lower Parel, Mumbai. Over twenty-five years the practice has grown across scales and sectors — from private apartments to institutional campuses, from banking environments designed to national standards to homes shaped entirely around the daily rhythms of a single family.
               </p>
             </div>
             <div className={styles.annotatedPara}>
