@@ -25,7 +25,7 @@ export default function HomePage() {
             <h1 className={styles.heroTitle}>Team Design</h1>
             <p className={styles.heroPositioning}>Private homes and institutional buildings. Thirty years of practice in Mumbai.</p>
             <div className={styles.heroCtas}>
-              <MagneticButton><Link href="/work" className={styles.heroCta}>View Our Work</Link></MagneticButton>
+              <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
               <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
             </div>
           </div>
@@ -51,22 +51,22 @@ export default function HomePage() {
             <span className="label">Portfolio</span>
             <h2 className={styles.sectionTitle}>Selected Work</h2>
           </div>
-          <Link href="/work" className={styles.viewAll}>View Portfolio →</Link>
+          <Link href="/portfolio" className={styles.viewAll}>View Portfolio →</Link>
         </div>
         </FadeIn>
 
         <div className={styles.categoryLinks}>
-          <Link href="/work?type=Residential" className={styles.categoryLink}>Residential</Link>
-          <Link href="/work?type=Commercial" className={styles.categoryLink}>Commercial</Link>
-          <Link href="/work?type=Institutional" className={styles.categoryLink}>Institutional</Link>
-          <Link href="/work?type=Interiors" className={styles.categoryLink}>Interiors</Link>
+          <Link href="/portfolio?type=Residential" className={styles.categoryLink}>Residential</Link>
+          <Link href="/portfolio?type=Commercial" className={styles.categoryLink}>Commercial</Link>
+          <Link href="/portfolio?type=Institutional" className={styles.categoryLink}>Institutional</Link>
+          <Link href="/portfolio?type=Interiors" className={styles.categoryLink}>Interiors</Link>
         </div>
 
         <div className={styles.projectGrid}>
 
           {/* ── Lead project — full-width cinematic strip ── */}
           <FadeIn direction="up">
-            <Link href={`/work/${FEATURED_PROJECTS[0].slug}`} className={styles.projectHeroCard}>
+            <Link href={`/portfolio/${FEATURED_PROJECTS[0].slug}`} className={styles.projectHeroCard}>
               <div className={styles.projectHeroImageWrap}>
                 <Image
                   src={FEATURED_PROJECTS[0].image}
@@ -94,7 +94,7 @@ export default function HomePage() {
           <div className={styles.projectRow}>
             {FEATURED_PROJECTS.slice(1).map((project, i) => (
               <FadeIn key={project.slug} delay={i * 0.12} direction="up">
-                <Link href={`/work/${project.slug}`} className={styles.projectCard}>
+                <Link href={`/portfolio/${project.slug}`} className={styles.projectCard}>
                   <div className={styles.projectImageWrap}>
                     <Image
                       src={project.image}
@@ -219,7 +219,7 @@ export default function HomePage() {
         <div className={styles.interiorsContent}>
           <span className="label" style={{ color: 'rgba(244,238,230,0.55)' }}>Interior Design</span>
           <h2 className={styles.interiorsTitle}>Spaces that feel<br />like they belong to you.</h2>
-          <Link href="/work?type=Interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
+          <Link href="/portfolio?type=Interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
         </div>
       </section>
     </>

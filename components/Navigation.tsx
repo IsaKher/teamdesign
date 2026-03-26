@@ -10,7 +10,7 @@ import { STUDIO } from '@/lib/siteContent';
 const navItems = [
   {
     label: 'Portfolio',
-    href: '/work',
+    href: '/portfolio',
   },
   {
     label: 'Studio',
@@ -31,7 +31,7 @@ export default function Navigation() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const pathname = usePathname();
 
-  const isHeroPage = pathname === '/' || pathname.startsWith('/work/');
+  const isHeroPage = pathname === '/' || pathname.startsWith('/portfolio/');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);

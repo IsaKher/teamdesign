@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!project) return { title: 'Project Not Found' };
 
   const desc = project.description.replace(/\n+/g, ' ').slice(0, 155).trim();
-  const canonical = `${BASE}/work/${params.slug}`;
+  const canonical = `${BASE}/portfolio/${params.slug}`;
   const ogTitle = `${project.title} — Team Design Architects`;
 
   return {
@@ -97,7 +97,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       url: 'https://teamdesign.in',
     },
     genre: project.type,
-    url: `${BASE}/work/${params.slug}`,
+    url: `${BASE}/portfolio/${params.slug}`,
   };
 
   const whatsappHref = `https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`;
@@ -128,7 +128,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       {/* Project header */}
       <section className={styles.header}>
         <div className={styles.headerInner}>
-          <Link href="/work" className={styles.backLink}>← All Work</Link>
+          <Link href="/portfolio" className={styles.backLink}>← Portfolio</Link>
           <div className={styles.meta}>
             <span className={styles.metaItem}>{project.type}</span>
             <span className={styles.metaDot}>·</span>
@@ -231,7 +231,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
           <div className={styles.relatedGrid}>
             {project.related.map((r) => (
-              <Link key={r.slug} href={`/work/${r.slug}`} className={styles.relatedCard}>
+              <Link key={r.slug} href={`/portfolio/${r.slug}`} className={styles.relatedCard}>
                 <div className={styles.relatedImage}>
                   <Image
                     src={r.image}
@@ -253,17 +253,17 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
       {/* Project nav — prev / position / all work */}
       <nav className={styles.projectNav}>
-        <Link href={`/work/${prevProj.slug}`} className={styles.projectNavPrev}>
+        <Link href={`/portfolio/${prevProj.slug}`} className={styles.projectNavPrev}>
           <span>←</span><span>{prevProj.title}</span>
         </Link>
         <span className={styles.projectNavCounter}>{position} / {TOTAL}</span>
-        <Link href="/work" className={styles.projectNavAll}>
+        <Link href="/portfolio" className={styles.projectNavAll}>
           <span>Portfolio</span><span>→</span>
         </Link>
       </nav>
 
       {/* Next Project */}
-      <Link href={`/work/${nextProj.slug}`} className={styles.nextProject}>
+      <Link href={`/portfolio/${nextProj.slug}`} className={styles.nextProject}>
         <div className={styles.nextProjectImageWrap}>
           <Image
             src={nextProj.mainImage}
