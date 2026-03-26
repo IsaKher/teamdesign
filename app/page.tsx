@@ -5,7 +5,7 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
-import { STATS, FEATURED_PROJECTS, SELECTED_CLIENTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
+import { STATS, FEATURED_PROJECTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
 
 export default function HomePage() {
   return (
@@ -133,37 +133,9 @@ export default function HomePage() {
       {/* ─── Credentials ───────────────────────────────────────────────── */}
       <section className={styles.credentials}>
         <div className={styles.credentialsInner}>
-
-          {/* Testimonial carousel */}
           <div className={styles.testimonialCol}>
-            <span className="label">Client Testimonials</span>
+            <span className="label">From Our Clients</span>
             <TestimonialSlider testimonials={TESTIMONIALS} interval={6000} />
-          </div>
-
-          {/* Selected clients list */}
-          <div className={styles.clientsCol}>
-            <span className="label">Selected Clients</span>
-            <div className={styles.clientList}>
-              {SELECTED_CLIENTS.map((client, i) => (
-                <div key={i} className={styles.clientItem}>
-                  <div className={styles.clientLeft}>
-                    <span className={styles.clientName}>{client.name}</span>
-                    <span className={styles.clientDesc}>{client.description}</span>
-                  </div>
-                  <span className={styles.clientProject}>{client.project}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Press strip */}
-            <div className={styles.pressStrip}>
-              <span className={styles.pressStripLabel}>As recognised by</span>
-              <div className={styles.pressStripLogos}>
-                {['Architects & Interiors India', 'iGEN Design Forum', 'DuPont Corian® India'].map((pub) => (
-                  <span key={pub} className={styles.pressStripItem}>{pub}</span>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>

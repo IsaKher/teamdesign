@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { CORE_VALUES, DESIGN_IDEALS, SERVICES } from '@/lib/siteContent';
+import { CORE_VALUES, SERVICES } from '@/lib/siteContent';
 import DrawingSection from './DrawingSection';
 
 export const metadata = { title: 'Studio' };
@@ -99,20 +99,7 @@ export default function StudioPage() {
         </div>
       </section>
 
-      {/* ─── Design Philosophy ───────────────────────────────────── */}
-      <section className={styles.services}>
-        <span className={styles.sectionLabel}>Design Philosophy</span>
-        <div className={styles.serviceGrid}>
-          {DESIGN_IDEALS.map(s => (
-            <div key={s.title} className={styles.serviceItem}>
-              <h3 className={styles.serviceTitle}>{s.title}</h3>
-              <p className={styles.serviceDesc}>{s.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Services — specification table ──────────────────────── */}
+{/* ─── Services — specification table ──────────────────────── */}
       <section className={styles.specSection}>
         <div className={styles.specHeader}>
           <span className={styles.sectionLabel}>What We Do</span>
