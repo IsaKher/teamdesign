@@ -142,8 +142,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       {/* Project Story — Challenge / Strategy / Result */}
       <section className={styles.content}>
         <div className={styles.contentInner}>
-          {project.description.split('\n\n').map((para, i) => {
-            const labels = ['The Brief', 'The Approach', 'The Outcome'];
+          {project.description.split('\n\n').slice(1).map((para, i) => {
+            const labels = ['The Approach', 'The Outcome'];
             const label = labels[i] ?? null;
             return (
               <div key={i} className={styles.storyBeat}>
