@@ -6,32 +6,14 @@ import styles from './HeroCarousel.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
 const SLIDES = [
-  // Round 1 — establishing shots
-  { src: '/projects/jhaveri-zaveri-residence/1.jpg',    alt: 'Jhaveri Zaveri Residence',   position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/1.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/rahul-sanjana-residence/1.jpg',     alt: 'Rahul & Sanjana Residence',  position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/2.jpg',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  // Round 2
-  { src: '/projects/jhaveri-zaveri-residence/2.jpg',    alt: 'Jhaveri Zaveri Residence',   position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/2.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/rahul-sanjana-residence/2.jpg',     alt: 'Rahul & Sanjana Residence',  position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/3.jpg',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  // Round 3
-  { src: '/projects/jhaveri-zaveri-residence/3.jpg',    alt: 'Jhaveri Zaveri Residence',   position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/3.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/rahul-sanjana-residence/3.jpg',     alt: 'Rahul & Sanjana Residence',  position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/4.jpg',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  // Round 4
-  { src: '/projects/jhaveri-zaveri-residence/4.jpg',    alt: 'Jhaveri Zaveri Residence',   position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/4.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/rahul-sanjana-residence/4.jpg',     alt: 'Rahul & Sanjana Residence',  position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/6.png',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  // Mohan Shenoi extras + Nikhil Gupta extras
-  { src: '/projects/mohan-shenoi-residence/5.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/7.png',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/6.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/8.png',       alt: 'Nikhil Gupta Bungalow',      position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/7.jpg',      alt: 'Mohan Shenoi Residence',     position: 'center center' },
+  { src: '/projects/nikhil-gupta-bungalow/2.jpg',    alt: 'Nikhil Gupta Bungalow — Alibaug',          position: 'center center' },
+  { src: '/projects/mohan-shenoi-residence/6.jpg',   alt: 'Mohan Shenoi Residence — Mumbai',          position: 'center center' },
+  { src: '/projects/jhaveri-zaveri-residence/2.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
+  { src: '/projects/nikhil-gupta-bungalow/7.png',    alt: 'Nikhil Gupta Bungalow — Entrance Porch',  position: 'center center' },
+  { src: '/projects/rahul-sanjana-residence/1.jpg',  alt: 'Rahul & Sanjana Residence — Mumbai',       position: 'center center' },
+  { src: '/projects/mohan-shenoi-residence/1.jpg',   alt: 'Mohan Shenoi Residence — Mumbai',          position: 'center center' },
+  { src: '/projects/nikhil-gupta-bungalow/3.jpg',    alt: 'Nikhil Gupta Bungalow — Living Spaces',   position: 'center center' },
+  { src: '/projects/jhaveri-zaveri-residence/1.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
 ];
 
 const INTERVAL   = 5500;  // ms between transitions
