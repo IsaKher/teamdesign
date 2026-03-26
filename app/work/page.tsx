@@ -1,13 +1,8 @@
-'use client';
-
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import FadeImage from '@/components/FadeImage';
 import styles from './page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
-
-const FILTERS = ['All', 'Residential', 'Commercial', 'Institutional', 'Interiors'];
 
 const PROJECTS = [
   {
@@ -232,21 +227,9 @@ const PROJECTS = [
   },
 ];
 
+const sorted = PROJECTS.slice().sort((a, b) => b.year - a.year);
+
 function WorkContent() {
-  const searchParams = useSearchParams();
-  const typeParam = searchParams.get('type');
-  const initial = FILTERS.includes(typeParam ?? '') ? typeParam! : 'All';
-  const [active, setActive] = useState(initial);
-
-  useEffect(() => {
-    if (typeParam && FILTERS.includes(typeParam)) setActive(typeParam);
-  }, [typeParam]);
-
-  const filtered = (active === 'All'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.type === active)
-  ).slice().sort((a, b) => b.year - a.year);
-
   return (
     <>
       {/* Hero */}
@@ -256,30 +239,9 @@ function WorkContent() {
         <p className={styles.pageSubtitle}>300+ completed projects across residential, commercial, and institutional architecture in Mumbai and beyond.</p>
       </div>
 
-      {/* Filters */}
-      <div className={styles.filterBarWrap}>
-        <div className={styles.filterBar}>
-          {FILTERS.map(f => (
-            <button
-              key={f}
-              className={`${styles.filterBtn} ${active === f ? styles.filterActive : ''}`}
-              onClick={() => setActive(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Grid */}
       <div className={styles.grid}>
-        {filtered.length === 0 && (
-          <div className={styles.emptyState}>
-            <p>No projects found under &ldquo;{active}&rdquo;.</p>
-            <button className={styles.filterBtn} onClick={() => setActive('All')}>View all projects →</button>
-          </div>
-        )}
-        {filtered.map((project) => (
+        {sorted.map((project) => (
           <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
               <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 900px) 50vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />

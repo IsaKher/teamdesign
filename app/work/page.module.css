@@ -31,58 +31,6 @@
   max-width: 520px;
 }
 
-/* ─── Filters ──────────────────────────────────────────────────── */
-.filterBarWrap {
-  position: relative;
-}
-
-.filterBarWrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 48px;
-  background: linear-gradient(to right, transparent, var(--color-ground));
-  pointer-events: none;
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .filterBarWrap::after { display: block; }
-}
-
-.filterBar {
-  display: flex;
-  gap: 0;
-  padding: 0 var(--margin-page);
-  border-bottom: 1px solid var(--color-rule);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.filterBar::-webkit-scrollbar { display: none; }
-
-.filterBtn {
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  padding: 20px 28px;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  white-space: nowrap;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.filterBtn:hover { color: var(--color-text-primary); }
-
-.filterActive {
-  color: var(--color-text-primary) !important;
-  border-bottom-color: var(--color-text-primary) !important;
-}
-
 /* ─── Project Grid ─────────────────────────────────────────────── */
 .grid {
   display: grid;
@@ -198,19 +146,4 @@
   .cardMeta { padding: 12px 10px 20px; }
   .cardTitle { font-size: 15px; }
   .cardDetails { flex-direction: column; gap: 1px; font-size: 9px; }
-  .filterBar { padding: 0 var(--margin-page); }
-  .filterBtn { padding: 16px 20px; }
-}
-
-.emptyState {
-  grid-column: 1 / -1;
-  padding: 80px var(--margin-page);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  color: var(--color-text-secondary);
-  font-family: var(--font-sans);
-  font-size: var(--size-body);
 }
