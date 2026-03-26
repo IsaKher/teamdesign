@@ -232,11 +232,22 @@ const PROJECTS = [
   },
 ];
 
-function WorkContent() {
+const SCROLL_KEY = 'portfolio_scroll';
+
+function PortfolioContent() {
   const searchParams = useSearchParams();
   const typeParam = searchParams.get('type');
   const initial = FILTERS.includes(typeParam ?? '') ? typeParam! : 'All';
   const [active, setActive] = useState(initial);
+
+  // Restore scroll position when returning from a project page
+  useEffect(() => {
+    const saved = sessionStorage.getItem(SCROLL_KEY);
+    if (saved) {
+      window.scrollTo({ top: parseInt(saved, 10), behavior: 'instant' });
+      sessionStorage.removeItem(SCROLL_KEY);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeParam && FILTERS.includes(typeParam)) setActive(typeParam);
@@ -280,7 +291,9 @@ function WorkContent() {
           </div>
         )}
         {filtered.map((project) => (
-          <Link key={project.slug} href={`/portfolio/${project.slug}`} className={styles.card}>
+          <Link key={project.slug} href={`/portfolio/${project.slug}`} className={styles.card}
+            onClick={() => sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))}
+          >
             <div className={styles.cardImage}>
               <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 900px) 50vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
               <div className={styles.cardOverlay}>
@@ -304,10 +317,10 @@ function WorkContent() {
   );
 }
 
-export default function WorkPage() {
+export default function PortfolioPage() {
   return (
     <Suspense>
-      <WorkContent />
+      <PortfolioContent />
     </Suspense>
   );
 }
