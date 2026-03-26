@@ -1026,7 +1026,9 @@ The cinema sits within a retail complex, and the design had to establish a disti
     area: '40,000 sq ft',
     description: `A mixed-use residential and commercial building in Indore for Bakir Qudrati, director of Bombay Machine Tools Private Limited. The programme brings together residential and commercial functions within a single built form, addressing the density and scale of a rapidly growing city.
 
-The design seeks a civic presence appropriate to its corner site — a building that reads as both welcoming and purposeful, offering the neighbourhood a new kind of ground-level engagement while providing its residents with calm above.`,
+The design seeks a civic presence appropriate to its corner site — a building that reads as both welcoming and purposeful, offering the neighbourhood a new kind of ground-level engagement while providing its residents with calm above.
+
+The building is going up on a corner in Indore, visible from two streets. The facade has to hold in both directions. The harder problem was keeping the residential floors genuinely quiet from the commercial activity below, which lives in the structure rather than the finishes. That work is done.`,
     mainImage: '/projects/qudrati-greens-indore/1.png',
     gallery: [
       '/projects/qudrati-greens-indore/2.png',
@@ -1051,7 +1053,9 @@ The design seeks a civic presence appropriate to its corner site — a building 
     area: '15,000 sq ft',
     description: `A private bungalow in Alibaug for a client who travels widely and lives deliberately. At 15,000 sq ft the brief was generous but undemanding — the client asked only for spaces that settle into the landscape without demanding attention.
 
-The design reflects an ease of occupation. Rooms open to the outside in multiple directions, light moves through the day, and the distinction between inside and outside is consistently softened. A home that holds its occupant lightly.`,
+The design reflects an ease of occupation. Rooms open to the outside in multiple directions, light moves through the day, and the distinction between inside and outside is consistently softened. A home that holds its occupant lightly.
+
+The early site photographs show a building that looks like it picked its spot rather than was placed on it. The overhangs do their job quietly. A home that holds its occupant lightly. That was the brief, and the structure is already keeping its end of the bargain.`,
     mainImage: '/projects/nikhil-gupta-bungalow/2.jpg',
     gallery: [
       '/projects/nikhil-gupta-bungalow/1.jpg',
@@ -1084,7 +1088,9 @@ The design reflects an ease of occupation. Rooms open to the outside in multiple
     area: '2,500 sq ft',
     description: `A residence in Mumbai designed for Rupen Jhaveri, Group President at Piramal Finance Limited, and Binaisha Zaveri, Director at Tribhovandas Bhimji Zaveri. The 2,500 sq ft apartment balances the demands of a working couple's life with quiet moments of domesticity.
 
-Considered material choices, controlled light, and spaces that shift in character through the day. The interior language is warm but precise — nothing is incidental.`,
+Considered material choices, controlled light, and spaces that shift in character through the day. The interior language is warm but precise — nothing is incidental.
+
+Nothing in the apartment looks dated. That wasn't inevitable; it means the choices were made for the right reasons. Two demanding careers, one home to come back to. Five years in, it's still doing what it was asked to do.`,
     mainImage: '/projects/jhaveri-zaveri-residence/1.jpg',
     gallery: [
       '/projects/jhaveri-zaveri-residence/2.jpg',
@@ -1110,7 +1116,9 @@ Considered material choices, controlled light, and spaces that shift in characte
     area: '5,000 sq ft',
     description: `A 5,000 sq ft residence in Mumbai for Mohan Shenoi, formerly Director at Kotak Mahindra Prime and Head of Retail Segment at ICICI Bank. The brief called for spaces of quiet authority — rooms that work as well for large family gatherings as for solitary evenings.
 
-The material palette is warm and restrained. Proportions are generous without being excessive. The apartment reads as the home of someone who has earned their comfort and wears it without display.`,
+The material palette is warm and restrained. Proportions are generous without being excessive. The apartment reads as the home of someone who has earned their comfort and wears it without display.
+
+A few years on and nothing has been rearranged to accommodate daily life, because daily life was what it was designed around. The surfaces have picked up the slight wear that separates a home from a show flat.`,
     mainImage: '/projects/mohan-shenoi-residence/1.jpg',
     gallery: [
       '/projects/mohan-shenoi-residence/2.jpg',
@@ -1141,7 +1149,9 @@ The material palette is warm and restrained. Proportions are generous without be
     area: '2,500 sq ft',
     description: `A 2,500 sq ft Mumbai residence designed for Rahul Shenoi, Director at EY specialising in Risk Analytics and Digital Transformation, and Sanjana Shenoi. The programme navigates the overlap of home and work life that defines their schedule.
 
-Spaces that read as relaxed but are precisely considered in their arrangement. The interior holds two different modes of living — the focused and the unwound — without forcing a choice between them.`,
+Spaces that read as relaxed but are precisely considered in their arrangement. The interior holds two different modes of living — the focused and the unwound — without forcing a choice between them.
+
+Eight years is long enough for a layout to show its hand. This one has handled working from home, late evenings, and everything in between, without the floor plan feeling like a trade-off either way. They've said it quietly shapes how their day runs.`,
     mainImage: '/projects/rahul-sanjana-residence/1.jpg',
     gallery: [
       '/projects/rahul-sanjana-residence/2.jpg',
@@ -1167,7 +1177,9 @@ Spaces that read as relaxed but are precisely considered in their arrangement. T
     area: '2,500 sq ft',
     description: `A residence in Mumbai for Usha Shenoi — teacher, humanitarian, and social worker. The design reflects her character directly: warm, unpretentious, filled with light.
 
-At 2,500 sq ft the apartment is not large, but it holds people easily. Spaces open generously, materials are honest, and nothing asks for more attention than it deserves. A home shaped entirely by who lives in it.`,
+At 2,500 sq ft the apartment is not large, but it holds people easily. Spaces open generously, materials are honest, and nothing asks for more attention than it deserves. A home shaped entirely by who lives in it.
+
+The apartment is warm and catches good light through most of the day. For a client who spends herself looking after others, the ask was simple: a place that looks after you. The rooms do it without drawing attention to the fact.`,
     mainImage: '/projects/usha-shenoi-residence/1.jpg',
     gallery: [
       '/projects/usha-shenoi-residence/2.jpg',
