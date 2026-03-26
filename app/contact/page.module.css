@@ -341,9 +341,10 @@
 
 .mapGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
   max-width: 1200px;
+  width: 100%;
 }
 
 .mapCard {

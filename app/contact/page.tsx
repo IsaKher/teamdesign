@@ -92,7 +92,7 @@ export default function ContactPage() {
           <div className={styles.infoGroup}>
             <span className={styles.infoLabel}>Studio — Parel</span>
             <a
-              href="https://maps.google.com/?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013"
+              href="https://maps.app.goo.gl/ygVTjd4QU5RYgFLS6"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.addressLink}
@@ -304,7 +304,7 @@ export default function ContactPage() {
             <span className={styles.mapCardLabel}>Parel Studio</span>
             <div className={styles.mapEmbed}>
               <iframe
-                src="https://maps.google.com/maps?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013&output=embed&z=15"
+                src="https://maps.google.com/maps?q=18.9919709,72.8314168&output=embed&z=17"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -315,7 +315,7 @@ export default function ContactPage() {
               />
             </div>
             <a
-              href="https://maps.google.com/?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013"
+              href="https://maps.app.goo.gl/ygVTjd4QU5RYgFLS6"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapDirections}
