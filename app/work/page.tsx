@@ -25,7 +25,7 @@ const PROJECTS = [
     title: 'Temple Building — Goddess Kali',
     client: 'Bengali Cultural Association',
     type: 'Institutional',
-    location: 'Kharghar, Navi Mumbai',
+    location: 'Kharghar, Mumbai',
     year: 2017,
     area: '15,000 sq ft',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_01-1.jpg',
@@ -55,7 +55,7 @@ const PROJECTS = [
     title: 'MBA Hostel Towers — ITM',
     client: 'Institute of Technology and Management',
     type: 'Institutional',
-    location: 'Navi Mumbai',
+    location: 'Mumbai',
     year: 2005,
     area: '85,000 sq ft',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/MBA-Hostel-Building-ITM-Navi-Mumbai-India-5-1.jpg',
@@ -95,7 +95,7 @@ const PROJECTS = [
     title: 'College Campus Extension — ITM',
     client: 'Institute of Technology and Management',
     type: 'Institutional',
-    location: 'Kharghar, Navi Mumbai',
+    location: 'Kharghar, Mumbai',
     year: 2014,
     area: '5,876 sq mt',
     image: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-4.jpg',
@@ -252,7 +252,7 @@ function WorkContent() {
       {/* Hero */}
       <div className={styles.pageHero}>
         <span className={styles.pageLabel}>Portfolio</span>
-        <h1 className={styles.pageTitle}>Work</h1>
+        <h1 className={styles.pageTitle}>Portfolio</h1>
         <p className={styles.pageSubtitle}>300+ completed projects across residential, commercial, and institutional architecture in Mumbai and beyond.</p>
       </div>
 

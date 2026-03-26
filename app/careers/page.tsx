@@ -169,7 +169,7 @@ export default function CareersPage() {
           <ul className={styles.trackList}>
             <li>3rd year architecture students and above</li>
             <li>Portfolio of academic and studio work required</li>
-            <li>Navi Mumbai / Mumbai base preferred; outstation applicants considered</li>
+            <li>Mumbai / Mumbai base preferred; outstation applicants considered</li>
             <li>Stipend provided</li>
           </ul>
           <a href={waIntern} target="_blank" rel="noopener noreferrer" className={styles.trackWhatsapp}>

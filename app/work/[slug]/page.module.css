@@ -216,20 +216,20 @@
 }
 
 .blockPullQuote {
-  padding: 72px var(--margin-page);
-  background: var(--color-ground-dark);
+  padding: 48px var(--margin-page);
 }
 
 .blockPullQuoteText {
   font-family: var(--font-serif);
-  font-size: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(17px, 1.5vw, 22px);
   font-weight: 300;
-  font-style: italic;
-  color: var(--color-text-primary);
-  line-height: 1.55;
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
+  font-style: normal;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0;
+  padding-left: 24px;
+  border-left: 2px solid var(--color-rule);
   letter-spacing: 0.01em;
 }
 

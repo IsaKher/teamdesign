@@ -116,7 +116,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
                   <FadeIn key={i} direction="up">
                     <div className={styles.blockPullQuote}>
                       <blockquote className={styles.blockPullQuoteText}>
-                        &ldquo;{block.text}&rdquo;
+                        {block.text}
                       </blockquote>
                     </div>
                   </FadeIn>

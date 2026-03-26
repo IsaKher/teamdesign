@@ -23,7 +23,6 @@ const navItems = [
     dropdown: [
       { label: 'Team',    href: '/people'  },
       { label: 'Process', href: '/process' },
-      { label: 'Careers', href: '/careers' },
     ],
   },
   { label: 'Contact', href: '/contact' },

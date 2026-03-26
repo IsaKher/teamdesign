@@ -21,7 +21,7 @@ export default function Footer() {
           <div className={styles.firmInfo}>
             <span className={styles.name}>Team Design Architects</span>
             <span className={styles.meta}>
-              Navi Mumbai, India&ensp;·&ensp;
+              Mumbai, India&ensp;·&ensp;
               <a href={`mailto:${STUDIO.email}`}>{STUDIO.email}</a>&ensp;·&ensp;
               <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>{STUDIO.phone}</a>
             </span>
@@ -29,10 +29,11 @@ export default function Footer() {
         </div>
 
         <nav className={styles.nav} aria-label="Footer navigation">
-          <Link href="/work">Work</Link>
+          <Link href="/work">Portfolio</Link>
           <Link href="/studio">Studio</Link>
           <Link href="/studio#team">Team</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/careers">Careers</Link>
         </nav>
 
       </div>

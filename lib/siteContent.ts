@@ -11,7 +11,7 @@ export const STUDIO = {
   address: {
     line1: 'A-145/6A, Pawane Village Midc Road T.T.C. Industrial Area',
     line2: 'MIDC Industrial Area, Sector 2, Kopar Khairane',
-    city: 'Navi Mumbai, Maharashtra 400710',
+    city: 'Mumbai, Maharashtra 400710',
     country: 'India',
   },
   founded: 1996,
@@ -73,7 +73,7 @@ export const SELECTED_CLIENTS = [
   { name: 'Kishore Mariwala', description: 'Founder, Marico', project: 'Mont Blanc Residence, Mumbai' },
   { name: 'Ronnie Screwvala', description: 'Founder, UTV / UpGrad', project: 'Unilazer Ventures Office, Mumbai' },
   { name: 'J&K Bank', description: 'National Commercial Bank', project: 'Business Centre, BKC Mumbai' },
-  { name: 'ITM Group', description: 'Educational Institution', project: 'College Extension & MBA Hostel, Navi Mumbai' },
+  { name: 'ITM Group', description: 'Educational Institution', project: 'College Extension & MBA Hostel, Mumbai' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -99,7 +99,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'From the initial brief to handover, Team Design demonstrated exceptional professionalism at every stage. The ITM expansion has elevated the campus experience for thousands of students.',
     name: 'ITM Group',
     title: 'Educational Institution',
-    project: 'College Extension & MBA Hostel, Navi Mumbai',
+    project: 'College Extension & MBA Hostel, Mumbai',
   },
 ];
 

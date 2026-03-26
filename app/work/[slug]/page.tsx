@@ -258,7 +258,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </Link>
         <span className={styles.projectNavCounter}>{position} / {TOTAL}</span>
         <Link href="/work" className={styles.projectNavAll}>
-          <span>All Work</span><span>→</span>
+          <span>Portfolio</span><span>→</span>
         </Link>
       </nav>
 

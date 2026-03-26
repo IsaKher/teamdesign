@@ -71,7 +71,7 @@ Each event space has been conceived to accommodate gatherings of varying scales,
     title: 'Temple Building — Goddess Kali',
     client: 'Bengali Cultural Association',
     type: 'Institutional',
-    location: 'Kharghar, Navi Mumbai',
+    location: 'Kharghar, Mumbai',
     year: 2017,
     area: '15,000 sq ft',
     description: `A temple designed after extensive research on Kalimata temples across India. The structure incorporates East Indian and Bengal architectural elements — a stilted floor for cultural performances, first floor residential space, and a rooftop courtyard fronting the main temple.
@@ -92,7 +92,7 @@ The building is experienced as much as seen: the transition from the bright fore
     ],
     contentBlocks: [
       { type: 'paragraph', text: 'A temple designed after extensive research on Kalimata temples across India — translating the vertical hierarchy of the shikara and the processional logic of the mandapa into a contemporary material language rooted in its Bengali community.' },
-      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_03-1.jpg', caption: 'East elevation — Kharghar, Navi Mumbai, 2017' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_03-1.jpg', caption: 'East elevation — Kharghar, Mumbai, 2017' },
       { type: 'pullQuote', text: 'The building is experienced as much as seen: the transition from the bright forecourt into the cool interior of the sanctum.' },
       { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_04-1.jpg', caption: 'Rooftop courtyard fronting the main temple' },
       { type: 'paragraph', text: 'The temple has become a significant community landmark in Kharghar since its completion — a building that honours the spiritual gravity of its programme while serving a large and growing devotee community.' },
@@ -168,12 +168,12 @@ The project demonstrates how sensitive site planning can achieve privacy and ind
     title: 'MBA Hostel Towers — ITM',
     client: 'Institute of Technology and Management',
     type: 'Institutional',
-    location: 'Navi Mumbai',
+    location: 'Mumbai',
     year: 2005,
     area: '85,000 sq ft',
     description: `This twin hostel building — 11 floors and 16 floors each — provides each student with a handsomely furnished private living area and bath, plus a shared study space. Students also share access to a beautiful podium with comfortable lounges, a computer lab, gym facility, and common study rooms.
 
-The facility was created to accommodate growing enrollment at Institute of Technology and Management, one of Navi Mumbai's respected colleges offering degrees in Business Management, Hospitality, and Engineering.
+The facility was created to accommodate growing enrollment at Institute of Technology and Management, one of Mumbai's respected colleges offering degrees in Business Management, Hospitality, and Engineering.
 
 Student accommodation at this scale risks becoming anonymous. The design resists this through careful treatment of the common spaces — the ground-floor courtyard, the sky terraces at alternate floors, the social kitchen alcoves — that give each resident a sense of neighbourhood within the larger building.`,
     mainImage: 'https://teamdesign.in/wp-content/uploads/2018/12/MBA-Hostel-Building-ITM-Navi-Mumbai-India-5-1.jpg',
@@ -188,8 +188,8 @@ Student accommodation at this scale risks becoming anonymous. The design resists
       { slug: 'service-industry-campus-goa', title: 'Service Industry Education Campus', type: 'Institutional', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Service-Industru-Education-Complex-Goa-5-1.jpg' },
     ],
     contentBlocks: [
-      { type: 'paragraph', text: 'Twin hostel towers of 11 and 16 floors in Navi Mumbai, providing each of the 600 students with a private furnished room — and the whole community with a courtyard, computer lab, gym, and social kitchen alcoves that resist the anonymity of large-scale student housing.' },
-      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-4-1.jpg', caption: 'Twin towers — Navi Mumbai, 2005' },
+      { type: 'paragraph', text: 'Twin hostel towers of 11 and 16 floors in Mumbai, providing each of the 600 students with a private furnished room — and the whole community with a courtyard, computer lab, gym, and social kitchen alcoves that resist the anonymity of large-scale student housing.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-4-1.jpg', caption: 'Twin towers — Mumbai, 2005' },
       { type: 'pullQuote', text: 'Student accommodation at this scale risks becoming anonymous. The design resists this through careful treatment of the common spaces.' },
       { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-3-1.jpg', caption: 'Podium level — landscaped courtyard and lounges' },
       { type: 'paragraph', text: 'Sky terraces at alternate floors and ground-level courtyards give each resident a sense of neighbourhood within the larger building — the quality that defines student life at its best.' },
@@ -301,7 +301,7 @@ The design balances institutional credibility with accessibility — the ATM lob
     title: 'College Campus Extension — ITM',
     client: 'Institute of Technology and Management',
     type: 'Institutional',
-    location: 'Kharghar, Navi Mumbai',
+    location: 'Kharghar, Mumbai',
     year: 2014,
     area: '5,876 sq mt',
     description: `Fifteen years after the ITM Kharghar campus was built, growth in student intake demand, coupled with an FSI limit increase for institutional projects, necessitated an expansion to the building in the complex. The challenge in extending this campus was threefold: demolish a part of the complex to create room for a bigger building; enable the campus to operate unhindered while construction work is in progress; continue the language and style of the architecture in the new building so that the whole design has a cohesive appearance.
@@ -327,7 +327,7 @@ This project was followed, in 2005, by the adjacent MBA Hostel Towers, which bro
     ],
     contentBlocks: [
       { type: 'paragraph', text: 'Fifteen years after the original ITM Kharghar campus was built, a 5,876 sq mt expansion — requiring simultaneous demolition, live-campus construction, and the continuation of an established architectural language.' },
-      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-1-1.jpg', caption: 'Campus facade — Kharghar, Navi Mumbai, 2014' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-1-1.jpg', caption: 'Campus facade — Kharghar, Mumbai, 2014' },
       { type: 'pullQuote', text: 'The challenge was threefold: demolish part of the complex, enable the campus to operate unhindered during construction, and continue the architectural language so the whole reads as one.' },
       { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-3-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/COLLEGE-CAMPUS-EXT-2-1.jpg'], captions: ['Central connecting spine', 'Faculty wing entrance'] },
       { type: 'paragraph', text: 'Team Design\'s decade-long involvement with ITM — from the campus extension to the adjacent MBA Hostel Towers — represents one of the firm\'s deepest and most enduring institutional relationships.' },
@@ -950,7 +950,7 @@ The project is one of the firm's most personally meaningful commissions — a pr
     title: 'Classic Modern Home',
     client: 'Gordon Serrao',
     type: 'Residential',
-    location: 'Vashi, Navi Mumbai',
+    location: 'Vashi, Mumbai',
     year: 2012,
     area: '3,500 sq mt',
     description: `Located in Vashi, a suburb of Mumbai, this is a home filled with contemporary warmth that is inviting, cosy, and elegant all at the same time. This was achieved by creating a palette of earth tones combined with a variety of textures running the gamut from smoothly polished to rough and weathered.
@@ -975,8 +975,8 @@ The project comes with the endorsement of the client himself — Gordon Serrao, 
       { slug: 'exclusive-villa-mumbai', title: 'Exclusive Villa', type: 'Residential', image: 'https://teamdesign.in/wp-content/uploads/2018/12/Exclusive-Villa-Renouned-Indian-Family-Mumbai-India-4-1.jpg' },
     ],
     contentBlocks: [
-      { type: 'paragraph', text: 'A home in Vashi, Navi Mumbai, filled with contemporary warmth — earth tones, layered textures from smoothly polished to rough and weathered, designed for a hotelier whose professional life is spent evaluating the quality of hospitality environments.' },
-      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-3-1.jpg', caption: 'Living room — Vashi, Navi Mumbai, 2012' },
+      { type: 'paragraph', text: 'A home in Vashi, Mumbai, filled with contemporary warmth — earth tones, layered textures from smoothly polished to rough and weathered, designed for a hotelier whose professional life is spent evaluating the quality of hospitality environments.' },
+      { type: 'fullWidthImage', src: 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-3-1.jpg', caption: 'Living room — Vashi, Mumbai, 2012' },
       { type: 'pullQuote', text: 'A palette of earth tones combined with a variety of textures — from smoothly polished to rough and weathered — that together create a sophisticated and warm feel.' },
       { type: 'halfWidthImages', images: ['https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-6-1.jpg', 'https://teamdesign.in/wp-content/uploads/2018/12/Serrao-Home-8-1.jpg'], captions: ['Family room', 'Master bedroom'] },
       { type: 'paragraph', text: 'The interiors avoid the extremes of cool minimalism or heavy traditionalism, finding instead a register that feels effortlessly lived-in from the moment the family moves in.' },

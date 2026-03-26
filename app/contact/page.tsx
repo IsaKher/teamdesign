@@ -90,7 +90,23 @@ export default function ContactPage() {
         {/* Contact info */}
         <div className={styles.infoCol}>
           <div className={styles.infoGroup}>
-            <span className={styles.infoLabel}>Studio</span>
+            <span className={styles.infoLabel}>Studio — Parel</span>
+            <a
+              href="https://maps.google.com/?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.addressLink}
+            >
+              <address className={styles.address}>
+                10G, Thacker Industrial Estate<br />
+                NM Joshi Marg, Parel (E)<br />
+                Mumbai, Maharashtra 400013
+              </address>
+            </a>
+          </div>
+
+          <div className={styles.infoGroup}>
+            <span className={styles.infoLabel}>Studio — Kopar Khairane</span>
             <a
               href={STUDIO.mapsUrl}
               target="_blank"
@@ -100,8 +116,7 @@ export default function ContactPage() {
               <address className={styles.address}>
                 A-145/6A, Pawane Village Midc Road<br />
                 T.T.C. Industrial Area, MIDC Sector 2<br />
-                Kopar Khairane, Navi Mumbai<br />
-                Maharashtra 400710, India
+                Kopar Khairane, Mumbai 400710
               </address>
             </a>
           </div>
@@ -279,6 +294,59 @@ export default function ContactPage() {
               </button>
             </form>
           )}
+        </div>
+      </div>
+
+      {/* ─── Map ─────────────────────────────────────────────────────────── */}
+      <div className={styles.mapSection}>
+        <div className={styles.mapGrid}>
+          <div className={styles.mapCard}>
+            <span className={styles.mapCardLabel}>Parel Studio</span>
+            <div className={styles.mapEmbed}>
+              <iframe
+                src="https://maps.google.com/maps?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013&output=embed&z=15"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Parel Studio location"
+              />
+            </div>
+            <a
+              href="https://maps.google.com/?q=10G+Thacker+Industrial+Estate+NM+Joshi+Marg+Parel+Mumbai+400013"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapDirections}
+            >
+              Get Directions →
+            </a>
+          </div>
+
+          <div className={styles.mapCard}>
+            <span className={styles.mapCardLabel}>Kopar Khairane Studio</span>
+            <div className={styles.mapEmbed}>
+              <iframe
+                src="https://maps.google.com/maps?q=A-145+Pawane+Village+MIDC+Kopar+Khairane+Mumbai+400710&output=embed&z=15"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kopar Khairane Studio location"
+              />
+            </div>
+            <a
+              href={STUDIO.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapDirections}
+            >
+              Get Directions →
+            </a>
+          </div>
         </div>
       </div>
     </>

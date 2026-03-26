@@ -23,9 +23,10 @@ export default function HomePage() {
           <div className={styles.heroText}>
             <span className={styles.heroLabel}>Architecture &amp; Interior Design · Mumbai</span>
             <h1 className={styles.heroTitle}>Team Design</h1>
+            <p className={styles.heroPositioning}>Private homes and institutional buildings. Thirty years of practice in Mumbai.</p>
             <div className={styles.heroCtas}>
               <MagneticButton><Link href="/work" className={styles.heroCta}>View Our Work</Link></MagneticButton>
-              <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Begin a Conversation →</Link></MagneticButton>
+              <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
             </div>
           </div>
         </section>
@@ -50,7 +51,7 @@ export default function HomePage() {
             <span className="label">Portfolio</span>
             <h2 className={styles.sectionTitle}>Selected Work</h2>
           </div>
-          <Link href="/work" className={styles.viewAll}>View All Work →</Link>
+          <Link href="/work" className={styles.viewAll}>View Portfolio →</Link>
         </div>
         </FadeIn>
 

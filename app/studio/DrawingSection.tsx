@@ -64,7 +64,7 @@ export default function DrawingSection() {
           </div>
           <div className={styles.titleCell}>
             <span className={styles.titleCellLabel}>Location</span>
-            <span className={styles.titleCellValue}>Kopar Khairane, Navi Mumbai</span>
+            <span className={styles.titleCellValue}>Kopar Khairane, Mumbai</span>
           </div>
           <div className={styles.titleCell}>
             <span className={styles.titleCellLabel}>Established</span>

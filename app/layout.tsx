@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     template: '%s — Team Design Architects',
   },
   description:
-    'Architecture & Interior Design practice based in Navi Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
+    'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
   keywords: [
     'architecture firm Mumbai',
-    'architect Navi Mumbai',
+    'architect Mumbai',
     'interior design Mumbai',
     'residential architect Mumbai',
     'commercial architect Mumbai',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: 'Team Design Architects',
     title: 'Team Design Architects',
     description:
-      'Architecture & Interior Design practice based in Navi Mumbai. 25+ years, 300+ projects.',
+      'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
   },
   twitter: {
     card: 'summary_large_image',
@@ -86,14 +86,14 @@ const schemaOrgJsonLd = {
       name: 'Team Design Architects',
       alternateName: 'Team Design',
       description:
-        'Architecture & Interior Design practice based in Navi Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
+        'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
       url: 'https://teamdesign.in',
       telephone: '+91-9876543210',
       foundingDate: '1996',
       image: 'https://teamdesign.in/hero-building.png',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Navi Mumbai',
+        addressLocality: 'Mumbai',
         addressRegion: 'Maharashtra',
         addressCountry: 'IN',
       },
@@ -104,7 +104,7 @@ const schemaOrgJsonLd = {
       },
       areaServed: [
         { '@type': 'City', name: 'Mumbai' },
-        { '@type': 'City', name: 'Navi Mumbai' },
+        { '@type': 'City', name: 'Mumbai' },
         { '@type': 'State', name: 'Maharashtra' },
         { '@type': 'Country', name: 'India' },
       ],
