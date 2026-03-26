@@ -28,7 +28,7 @@ export default function HeroCarousel() {
     const timer = setInterval(() => {
       setCurrent(c => {
         const next = (c + 1) % SLIDES.length;
-        setRendered(prev => new Set([...prev, next]));
+        setRendered(prev => { const s = new Set(prev); s.add(next); return s; });
         return next;
       });
     }, INTERVAL);
