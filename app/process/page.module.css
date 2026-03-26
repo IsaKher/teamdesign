@@ -116,9 +116,9 @@
 
 .phaseDesc {
   font-family: var(--font-sans);
-  font-size: var(--size-body);
+  font-size: clamp(16px, 1.1vw, 18px);
   font-weight: 300;
-  line-height: var(--lh-body);
+  line-height: 1.75;
   color: var(--color-text-secondary);
   max-width: 680px;
   margin-bottom: 40px;
