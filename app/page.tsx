@@ -84,6 +84,7 @@ export default function HomePage() {
                   <span className={styles.projectHeroType}>{FEATURED_PROJECTS[0].type}</span>
                   <h3 className={styles.projectHeroTitle}>{FEATURED_PROJECTS[0].title}</h3>
                   <p className={styles.projectHeroTagline}>{FEATURED_PROJECTS[0].tagline}</p>
+                  <span className={styles.projectHeroViewHint}>View →</span>
                 </div>
               </div>
             </Link>
@@ -139,17 +140,17 @@ export default function HomePage() {
             <div className={styles.recognitionLines}>
               <FadeIn direction="up" delay={0}>
                 <p className={styles.recognitionLine}>
-                  Named one of India&apos;s 50 Most Talented Young Architects Under 35 by <em>Architects &amp; Interiors India</em>, 2016.
+                  Named one of India&apos;s 50 Most Talented Young Architects Under 35 by <em>Architects &amp; Interiors India</em>.
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.1}>
                 <p className={styles.recognitionLine}>
-                  Honoured at the 5th <em>iGEN Design Forum</em> among 50 young practitioners shaping Indian architecture, 2016.
+                  Honoured at the <em>iGEN Design Forum</em> among 50 young practitioners shaping Indian architecture.
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.2}>
                 <p className={styles.recognitionLine}>
-                  Featured in <em>DuPont India &amp; Corian®</em> Women Leadership in Architecture &amp; Design, 2015.
+                  Featured in <em>DuPont India &amp; Corian®</em> Women Leadership in Architecture &amp; Design.
                 </p>
               </FadeIn>
             </div>

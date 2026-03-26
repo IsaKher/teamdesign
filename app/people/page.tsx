@@ -16,7 +16,7 @@ const CORE_TIER1 = [
     role: 'Partner & Head of Design',
     education: 'B.Arch with Honours, Academy of Architecture, Mumbai (2004)',
     bio: 'Zainab co-drives the design direction of the practice alongside Tasadduq. Registered with the Council of Architecture, New Delhi, she was recognised by Architects & Interiors India magazine in 2016 as one of India\'s top 50 architects under the age of 35 — an award presented by Hafeez Contractor at the iGEN Design Forum. Her intellectually rigorous approach to the analysis and interpretation of a client brief informs every project she leads.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/KALIMATA-MANDIR_Cam_01-1.jpg',
+    image: '/team/zainab.jpg',
     award: 'Top 50 Architects Under 35 — Architects & Interiors India, 2016',
   },
 ];
@@ -31,25 +31,25 @@ const CORE_TIER2 = [
     name: 'Ali',
     role: 'Project Manager / Project Head',
     bio: 'With over 10 years in construction and project management, Ali focuses on technical details, analyses, budgets, specifications, measurements, site supervision, and final acceptance. His keen eye for detail, site coordination, and troubleshooting skills keep complex projects running on time.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/NRB-Bearings-Auragabad-4-1.jpg',
+    image: '/team/ali.jpg',
   },
   {
     name: 'Mustafa',
     role: 'Construction Partner / Project Head',
     bio: 'Over 15 years in interior fit-out works, Mustafa also runs his own construction company. He believes every finished project — big or small — is the product of a team, and that the right partnerships and respect for everyone\'s role are crucial in achieving a great result.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/Mariwala-Estate-Annexe-6-1.jpg',
+    image: '/team/mustafa.jpg',
   },
   {
     name: 'Taher',
     role: 'Junior Architect',
     bio: 'Associated with Team Design since 2016, Taher\'s thesis on rehabilitation centres for widows introduced a social dimension to his practice that has never left. He approaches design as a tool for dignity — spaces that restore as much as they shelter.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/HOSTEL-BUILDING-3-1.jpg',
+    image: '/team/taher.jpg',
   },
   {
     name: 'Sarrah',
     role: 'Design & Operations',
     bio: 'Sarrah brings a meticulous and organised approach to both design coordination and operational flow within the studio. Her ability to balance creative demands with practical execution makes her an integral part of the core management team.',
-    image: 'https://teamdesign.in/wp-content/uploads/2018/12/DSC_5975-1.jpg',
+    image: '/team/sarrah.jpg',
   },
 ];
 

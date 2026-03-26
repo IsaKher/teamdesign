@@ -20,10 +20,17 @@ const INTERVAL = 5500;  // ms between transitions
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
+  // Only render an image once the carousel has reached that slide —
+  // avoids loading 8 full-res images on first paint.
+  const [rendered, setRendered] = useState<Set<number>>(new Set([0]));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent(c => (c + 1) % SLIDES.length);
+      setCurrent(c => {
+        const next = (c + 1) % SLIDES.length;
+        setRendered(prev => new Set([...prev, next]));
+        return next;
+      });
     }, INTERVAL);
     return () => clearInterval(timer);
   }, []);
@@ -35,16 +42,18 @@ export default function HeroCarousel() {
           key={slide.src}
           className={`${styles.slide} ${i === current ? styles.active : ''}`}
         >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: slide.position }}
-            priority={i === 0}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-          />
+          {rendered.has(i) && (
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              style={{ objectFit: 'cover', objectPosition: slide.position }}
+              priority={i === 0}
+              placeholder="blur"
+              blurDataURL={WARM_BLUR}
+            />
+          )}
         </div>
       ))}
     </div>

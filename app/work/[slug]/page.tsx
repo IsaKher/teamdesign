@@ -278,7 +278,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <div className={styles.nextProjectOverlay} />
         </div>
         <div className={styles.nextProjectContent}>
-          <span className={styles.nextProjectLabel}>Next Project</span>
+          <span className={styles.nextProjectLabel}>{position === TOTAL ? 'Back to Start' : 'Next Project'}</span>
           <span className={styles.nextProjectTitle}>{nextProj.title}</span>
           <span className={styles.nextProjectMeta}>{nextProj.type} · {nextProj.location}</span>
         </div>
