@@ -5,6 +5,7 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
+import HeroCarousel from '@/components/HeroCarousel';
 import { STATS, FEATURED_PROJECTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
 
 export default function HomePage() {
@@ -14,17 +15,7 @@ export default function HomePage() {
       <div className={styles.heroWrapper}>
         <HeroParallax />
         <div className={styles.heroImageWrap} data-hero-parallax>
-          <Image
-            src="/hero-building.png"
-            alt="Team Design — Architecture & Interiors, Mumbai"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
-            className={styles.heroImage}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-          />
+          <HeroCarousel />
           <div className={styles.heroOverlayLeft} />
         </div>
 
