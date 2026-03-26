@@ -282,7 +282,7 @@ function WorkContent() {
         {filtered.map((project) => (
           <Link key={project.slug} href={`/work/${project.slug}`} className={styles.card}>
             <div className={styles.cardImage}>
-              <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 600px) 50vw, (max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
+              <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 900px) 50vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
               <div className={styles.cardOverlay}>
                 <span className={styles.viewLabel}>View Project</span>
               </div>
