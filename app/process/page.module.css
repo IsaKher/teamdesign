@@ -73,7 +73,7 @@
 .phase:last-child .phaseLine { display: none; }
 
 .phaseRight {
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
 
 .phase:last-child .phaseRight { padding-bottom: 0; }
@@ -82,7 +82,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .phaseDuration {
@@ -93,7 +93,7 @@
   text-transform: uppercase;
   color: var(--color-text-secondary);
   opacity: 0.6;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .phaseTitle {
@@ -102,7 +102,7 @@
   font-weight: 300;
   line-height: 1.1;
   color: var(--color-text-primary);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .phaseSubtitle {
@@ -111,6 +111,7 @@
   font-weight: 300;
   font-style: italic;
   color: var(--color-text-secondary);
+  margin-bottom: 0;
 }
 
 .phaseDesc {
