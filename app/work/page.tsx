@@ -284,7 +284,8 @@ function WorkContent() {
             <div className={styles.cardImage}>
               <FadeImage src={project.image} alt={project.title} fill sizes="(max-width: 900px) 50vw, 33vw" style={{ objectFit: 'cover' }} className={styles.img} placeholder="blur" blurDataURL={WARM_BLUR} />
               <div className={styles.cardOverlay}>
-                <span className={styles.viewLabel}>View Project</span>
+                <span className={styles.viewLabel}>View →</span>
+                <span className={styles.cardTagline}>{project.client} · {project.location}</span>
               </div>
             </div>
             <div className={styles.cardMeta}>
