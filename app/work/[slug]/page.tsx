@@ -3,18 +3,29 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
-import FadeImage from '@/components/FadeImage';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
-import { PROJECT_DATA, FALLBACK, type ContentBlock } from '@/lib/projectData';
+import ProjectContent from '@/components/ProjectContent';
+import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
 const ALL_SLUGS = Object.keys(PROJECT_DATA);
+const TOTAL = ALL_SLUGS.length;
 
-// Next project (wraps around)
+// Next / Prev project (both wrap around)
 function getNextProject(currentSlug: string) {
   const idx = ALL_SLUGS.indexOf(currentSlug);
-  const nextSlug = ALL_SLUGS[(idx + 1) % ALL_SLUGS.length];
+  const nextSlug = ALL_SLUGS[(idx + 1) % TOTAL];
   return { slug: nextSlug, ...PROJECT_DATA[nextSlug] };
+}
+
+function getPrevProject(currentSlug: string) {
+  const idx = ALL_SLUGS.indexOf(currentSlug);
+  const prevSlug = ALL_SLUGS[(idx - 1 + TOTAL) % TOTAL];
+  return { slug: prevSlug, ...PROJECT_DATA[prevSlug] };
+}
+
+function getPosition(currentSlug: string) {
+  return ALL_SLUGS.indexOf(currentSlug) + 1;
 }
 
 const BASE = STUDIO.site;
@@ -66,6 +77,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   };
 
   const nextProj = getNextProject(params.slug);
+  const prevProj = getPrevProject(params.slug);
+  const position = getPosition(params.slug);
 
   const projectJsonLd = {
     '@context': 'https://schema.org',
@@ -168,102 +181,12 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* Editorial content blocks — replaces gallery when defined for a project */}
-      {project.contentBlocks && project.contentBlocks.length > 0 ? (
-        <section className={styles.blocks}>
-          {project.contentBlocks.map((block: ContentBlock, i: number) => {
-            switch (block.type) {
-              case 'paragraph':
-                return (
-                  <FadeIn key={i} direction="up">
-                    <div className={styles.blockPara}>
-                      <p className={styles.blockParaText}>{block.text}</p>
-                    </div>
-                  </FadeIn>
-                );
-              case 'fullWidthImage':
-                return (
-                  <FadeIn key={i} direction="up" threshold={0.05}>
-                    <div className={styles.blockFullImage}>
-                      <div className={styles.blockFullImageWrap}>
-                        <FadeImage
-                          src={block.src}
-                          alt={block.caption ?? `${project.title} — image ${i + 1}`}
-                          fill
-                          sizes="100vw"
-                          style={{ objectFit: 'cover' }}
-                          placeholder="blur"
-                          blurDataURL={WARM_BLUR}
-                        />
-                      </div>
-                      {block.caption && (
-                        <span className={styles.blockCaption}>{block.caption}</span>
-                      )}
-                    </div>
-                  </FadeIn>
-                );
-              case 'halfWidthImages':
-                return (
-                  <FadeIn key={i} direction="up" threshold={0.05}>
-                    <div className={styles.blockHalf}>
-                      {block.images.map((src, j) => (
-                        <div key={j} className={styles.blockHalfItem}>
-                          <div className={styles.blockHalfImageWrap}>
-                            <FadeImage
-                              src={src}
-                              alt={block.captions?.[j] ?? `${project.title} — image ${j + 1}`}
-                              fill
-                              sizes="50vw"
-                              style={{ objectFit: 'cover' }}
-                              placeholder="blur"
-                              blurDataURL={WARM_BLUR}
-                            />
-                          </div>
-                          {block.captions?.[j] && (
-                            <span className={styles.blockCaption}>{block.captions[j]}</span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </FadeIn>
-                );
-              case 'pullQuote':
-                return (
-                  <FadeIn key={i} direction="up">
-                    <div className={styles.blockPullQuote}>
-                      <blockquote className={styles.blockPullQuoteText}>
-                        &ldquo;{block.text}&rdquo;
-                      </blockquote>
-                    </div>
-                  </FadeIn>
-                );
-              default:
-                return null;
-            }
-          })}
-        </section>
-      ) : project.gallery.length > 0 ? (
-        <FadeIn direction="up" threshold={0.05}>
-          <section className={styles.gallery}>
-            {project.gallery.map((src, i) => (
-              <div
-                key={i}
-                className={`${styles.galleryItem} ${i % 3 === 0 ? styles.galleryFull : ''}`}
-              >
-                <Image
-                  src={src}
-                  alt={`${project.title}, ${project.location} — gallery image ${i + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                  placeholder="blur"
-                  blurDataURL={WARM_BLUR}
-                />
-              </div>
-            ))}
-          </section>
-        </FadeIn>
-      ) : null}
+      {/* Editorial content blocks / gallery — with lightbox */}
+      <ProjectContent
+        contentBlocks={project.contentBlocks}
+        gallery={project.gallery}
+        projectTitle={project.title}
+      />
 
       {/* Testimonial */}
       {project.testimonial && (
@@ -293,9 +216,9 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           >
             WhatsApp Studio →
           </a>
-          <Link href="/contact" className={styles.ctaContact}>
-            Or use the contact form
-          </Link>
+          <a href={`mailto:${STUDIO.email}`} className={styles.ctaEmail}>
+            {STUDIO.email}
+          </a>
         </div>
       </section>
 
@@ -314,7 +237,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     src={r.image}
                     alt={`${r.title} — ${r.type} by Team Design Architects`}
                     fill
-                    sizes="33vw"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                     placeholder="blur"
                     blurDataURL={WARM_BLUR}
@@ -327,6 +250,17 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
         </section>
       )}
+
+      {/* Project nav — prev / position / all work */}
+      <nav className={styles.projectNav}>
+        <Link href={`/work/${prevProj.slug}`} className={styles.projectNavPrev}>
+          <span>←</span><span>{prevProj.title}</span>
+        </Link>
+        <span className={styles.projectNavCounter}>{position} / {TOTAL}</span>
+        <Link href="/work" className={styles.projectNavAll}>
+          <span>All Work</span><span>→</span>
+        </Link>
+      </nav>
 
       {/* Next Project */}
       <Link href={`/work/${nextProj.slug}`} className={styles.nextProject}>

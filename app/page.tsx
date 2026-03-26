@@ -114,6 +114,7 @@ export default function HomePage() {
                       blurDataURL={WARM_BLUR}
                     />
                     <div className={styles.projectOverlay}>
+                      <span className={styles.viewHint}>View →</span>
                       <p className={styles.projectCardTagline}>{project.tagline}</p>
                     </div>
                   </div>

@@ -4,16 +4,36 @@ import { useState, FormEvent } from 'react';
 import styles from './page.module.css';
 import { STUDIO } from '@/lib/siteContent';
 
+type FieldErrors = Record<string, string>;
+
+function validateContact(name: string, email: string): FieldErrors {
+  const e: FieldErrors = {};
+  if (!name.trim()) e.name = 'Please enter your name.';
+  if (!email.trim()) e.email = 'Email address is required.';
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
+    e.email = 'Please enter a valid email address.';
+  return e;
+}
+
 export default function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus('submitting');
     setErrorMsg('');
 
     const form = e.currentTarget;
+    const nameVal  = (form.elements.namedItem('name')  as HTMLInputElement).value;
+    const emailVal = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const errs = validateContact(nameVal, emailVal);
+    if (Object.keys(errs).length > 0) {
+      setFieldErrors(errs);
+      return;
+    }
+    setFieldErrors({});
+    setStatus('submitting');
     const typeField = form.elements.namedItem('type');
     const data = {
       name:     (form.elements.namedItem('name')    as HTMLInputElement).value,
@@ -153,15 +173,18 @@ export default function ContactPage() {
               />
               <div className={styles.fieldRow}>
                 <div className={styles.field}>
-                  <label htmlFor="name" className={styles.label}>Your Name</label>
+                  <label htmlFor="name" className={styles.label}>
+                    Your Name <span className={styles.required}>*</span>
+                  </label>
                   <input
                     id="name"
                     name="name"
                     type="text"
-                    className={styles.input}
+                    className={`${styles.input} ${fieldErrors.name ? styles.inputError : ''}`}
                     placeholder="Priya Sharma"
-                    required
+                    onChange={() => fieldErrors.name && setFieldErrors(p => ({ ...p, name: '' }))}
                   />
+                  {fieldErrors.name && <span className={styles.fieldError}>{fieldErrors.name}</span>}
                 </div>
                 <div className={styles.field}>
                   <label htmlFor="phone" className={styles.label}>Phone / WhatsApp</label>
@@ -176,14 +199,18 @@ export default function ContactPage() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="email" className={styles.label}>Email Address</label>
+                <label htmlFor="email" className={styles.label}>
+                  Email Address <span className={styles.required}>*</span>
+                </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  className={styles.input}
+                  className={`${styles.input} ${fieldErrors.email ? styles.inputError : ''}`}
                   placeholder="priya@example.com"
+                  onChange={() => fieldErrors.email && setFieldErrors(p => ({ ...p, email: '' }))}
                 />
+                {fieldErrors.email && <span className={styles.fieldError}>{fieldErrors.email}</span>}
               </div>
 
               <div className={styles.field}>

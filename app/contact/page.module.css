@@ -207,6 +207,23 @@
   color: var(--color-rule);
 }
 
+.inputError {
+  border-bottom-color: #b83232;
+}
+
+.fieldError {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: #b83232;
+  margin-top: 2px;
+}
+
+.required {
+  color: #b83232;
+  margin-left: 2px;
+}
+
 .textarea { resize: vertical; min-height: 160px; }
 
 .submit {

@@ -249,6 +249,10 @@
 }
 
 
+.clickable {
+  cursor: zoom-in;
+}
+
 .galleryItem {
   position: relative;
   aspect-ratio: 4/3;
@@ -343,13 +347,16 @@
 }
 .ctaWhatsApp:hover { opacity: 0.75; }
 
-.ctaContact {
+.ctaEmail {
   font-family: var(--font-sans);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+.ctaEmail:hover { color: var(--color-text-primary); }
 
 .related {
   padding: var(--margin-section) var(--margin-page);
@@ -400,6 +407,74 @@
   font-size: 18px;
   font-weight: 400;
   color: var(--color-text-primary);
+}
+
+/* ─── Project Nav ───────────────────────────────────────────────── */
+.projectNav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px var(--margin-page);
+  border-top: 1px solid rgba(20, 16, 12, 0.10);
+  background: var(--color-ground);
+}
+
+.projectNavPrev {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.projectNavPrev:hover {
+  color: var(--color-text-primary);
+  gap: 10px;
+  text-decoration: underline;
+  text-decoration-color: rgba(74, 56, 40, 0.35);
+  text-underline-offset: 3px;
+}
+
+.projectNavCounter {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: rgba(74, 56, 40, 0.45);
+  text-align: center;
+  padding: 0 24px;
+}
+
+.projectNavAll {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.projectNavAll:hover {
+  color: var(--color-text-primary);
+  gap: 10px;
+  text-decoration: underline;
+  text-decoration-color: rgba(74, 56, 40, 0.35);
+  text-underline-offset: 3px;
 }
 
 /* ─── Next Project ──────────────────────────────────────────────── */
@@ -478,6 +553,8 @@
   .meta { flex-wrap: wrap; }
   .nextProject { aspect-ratio: 4/3; }
   .nextProjectContent { bottom: 24px; left: var(--margin-page); }
+  .projectNavPrev { max-width: 120px; }
+  .projectNavAll { white-space: nowrap; }
 }
 
 @media (max-width: 600px) {

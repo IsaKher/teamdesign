@@ -15,14 +15,26 @@ function LinkedInIcon() {
   );
 }
 
+type FieldErrors = Record<string, string>;
+
+function validateCareers(name: string, email: string, portfolio: string): FieldErrors {
+  const e: FieldErrors = {};
+  if (!name.trim()) e.name = 'Please enter your name.';
+  if (!email.trim()) e.email = 'Email address is required.';
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
+    e.email = 'Please enter a valid email address.';
+  if (!portfolio.trim()) e.portfolio = 'A portfolio link is required.';
+  return e;
+}
+
 export default function CareersPage() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [role, setRole] = useState<Role | ''>('');
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus('submitting');
     setErrorMsg('');
     const form = e.currentTarget;
     const data = {
@@ -34,6 +46,10 @@ export default function CareersPage() {
       note:      (form.elements.namedItem('note')      as HTMLTextAreaElement).value,
       website:   (form.elements.namedItem('website')   as HTMLInputElement).value,
     };
+    const errs = validateCareers(data.name, data.email, data.portfolio);
+    if (Object.keys(errs).length > 0) { setFieldErrors(errs); return; }
+    setFieldErrors({});
+    setStatus('submitting');
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10_000);
     try {
@@ -139,6 +155,9 @@ export default function CareersPage() {
           <a href={waArchitect} target="_blank" rel="noopener noreferrer" className={styles.trackWhatsapp}>
             Send portfolio via WhatsApp →
           </a>
+          <a href={`mailto:${STUDIO.email}?subject=Architect Application — Team Design`} className={styles.trackEmail}>
+            or email {STUDIO.email}
+          </a>
         </div>
 
         <div className={styles.trackCard}>
@@ -155,6 +174,9 @@ export default function CareersPage() {
           </ul>
           <a href={waIntern} target="_blank" rel="noopener noreferrer" className={styles.trackWhatsapp}>
             Send portfolio via WhatsApp →
+          </a>
+          <a href={`mailto:${STUDIO.email}?subject=Intern Application — Team Design`} className={styles.trackEmail}>
+            or email {STUDIO.email}
           </a>
         </div>
       </div>
@@ -187,8 +209,14 @@ export default function CareersPage() {
 
               <div className={styles.fieldRow}>
                 <div className={styles.field}>
-                  <label htmlFor="name" className={styles.label}>Your Name</label>
-                  <input id="name" name="name" type="text" className={styles.input} placeholder="Rahul Mehta" required />
+                  <label htmlFor="name" className={styles.label}>
+                    Your Name <span className={styles.required}>*</span>
+                  </label>
+                  <input id="name" name="name" type="text"
+                    className={`${styles.input} ${fieldErrors.name ? styles.inputError : ''}`}
+                    placeholder="Rahul Mehta"
+                    onChange={() => fieldErrors.name && setFieldErrors(p => ({ ...p, name: '' }))} />
+                  {fieldErrors.name && <span className={styles.fieldError}>{fieldErrors.name}</span>}
                 </div>
                 <div className={styles.field}>
                   <label htmlFor="phone" className={styles.label}>Phone / WhatsApp</label>
@@ -197,8 +225,14 @@ export default function CareersPage() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="email" className={styles.label}>Email Address</label>
-                <input id="email" name="email" type="email" className={styles.input} placeholder="rahul@example.com" required />
+                <label htmlFor="email" className={styles.label}>
+                  Email Address <span className={styles.required}>*</span>
+                </label>
+                <input id="email" name="email" type="email"
+                  className={`${styles.input} ${fieldErrors.email ? styles.inputError : ''}`}
+                  placeholder="rahul@example.com"
+                  onChange={() => fieldErrors.email && setFieldErrors(p => ({ ...p, email: '' }))} />
+                {fieldErrors.email && <span className={styles.fieldError}>{fieldErrors.email}</span>}
               </div>
 
               <div className={styles.field}>
@@ -215,9 +249,14 @@ export default function CareersPage() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="portfolio" className={styles.label}>Portfolio Link</label>
-                <input id="portfolio" name="portfolio" type="url" className={styles.input}
-                  placeholder="Behance, Google Drive, Issuu, or personal site" required />
+                <label htmlFor="portfolio" className={styles.label}>
+                  Portfolio Link <span className={styles.required}>*</span>
+                </label>
+                <input id="portfolio" name="portfolio" type="url"
+                  className={`${styles.input} ${fieldErrors.portfolio ? styles.inputError : ''}`}
+                  placeholder="Behance, Google Drive, Issuu, or personal site"
+                  onChange={() => fieldErrors.portfolio && setFieldErrors(p => ({ ...p, portfolio: '' }))} />
+                {fieldErrors.portfolio && <span className={styles.fieldError}>{fieldErrors.portfolio}</span>}
                 <span className={styles.fieldHint}>Any link we can open — Google Drive, Behance, Issuu, Dropbox, or your own website</span>
               </div>
 

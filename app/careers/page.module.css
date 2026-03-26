@@ -260,6 +260,18 @@
 }
 .trackWhatsapp:hover { opacity: 0.75; }
 
+.trackEmail {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: 8px;
+}
+.trackEmail:hover { color: var(--color-text-primary); }
+
 /* ─── Application form ───────────────────────────────────────────────────── */
 .formSection {
   display: grid;
@@ -500,6 +512,23 @@
   color: #c0392b;
   line-height: 1.6;
   margin: 0;
+}
+
+.inputError {
+  border-bottom-color: #b83232;
+}
+
+.fieldError {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: #b83232;
+  margin-top: 2px;
+}
+
+.required {
+  color: #b83232;
+  margin-left: 2px;
 }
 
 /* ─── LinkedIn section ───────────────────────────────────────────────────── */

@@ -158,6 +158,11 @@
   font-weight: 400;
   color: var(--color-text-primary);
   line-height: 1.3;
+  transition: color 0.25s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--color-text-secondary);
 }
 
 .cardDetails {
