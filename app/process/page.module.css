@@ -73,7 +73,7 @@
 .phase:last-child .phaseLine { display: none; }
 
 .phaseRight {
-  padding-bottom: 120px;
+  padding-bottom: 160px;
 }
 
 .phase:last-child .phaseRight { padding-bottom: 0; }
