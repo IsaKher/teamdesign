@@ -85,6 +85,14 @@ const PHASES = [
   },
 ];
 
+// Parallax images shown between phases — narrative order
+const PARALLAX_IMAGES = [
+  '/images/Concept%20Design.png',           // after Discovery
+  '/images/Design%20Development.png',       // after Concept Design
+  '/images/Technical%20Documentation.png',  // after Design Development
+  '/images/Site%20Supervision.png',         // after Technical Documentation
+];
+
 export default function ProcessPage() {
   return (
     <>
@@ -99,45 +107,58 @@ export default function ProcessPage() {
         </div>
       </div>
 
-      {/* Phases */}
-      <section className={styles.phases}>
-        {PHASES.map((phase, i) => (
-          <FadeIn key={phase.number} direction="up" delay={0.05} threshold={0.08}>
-          <div className={styles.phase}>
-            <div className={styles.phaseLeft}>
-              <span className={styles.phaseNumber}>{phase.number}</span>
-              <div className={styles.phaseLine} />
-            </div>
+      {/* Phases interleaved with parallax panels */}
+      <div className={styles.phasesTop} />
 
-            <div className={styles.phaseRight}>
-              <div className={styles.phaseHeader}>
-                <div>
-                  <span className={styles.phaseDuration}>{phase.duration}</span>
-                  <h2 className={styles.phaseTitle}>{phase.title}</h2>
-                  <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
+      {PHASES.map((phase, i) => (
+        <div key={phase.number}>
+          <section className={styles.phaseWrapper}>
+            <FadeIn direction="up" delay={0.05} threshold={0.08}>
+              <div className={styles.phase}>
+                <div className={styles.phaseLeft}>
+                  <span className={styles.phaseNumber}>{phase.number}</span>
+                  {i < PHASES.length - 1 && <div className={styles.phaseLine} />}
+                </div>
+
+                <div className={styles.phaseRight}>
+                  <div className={styles.phaseHeader}>
+                    <div>
+                      <span className={styles.phaseDuration}>{phase.duration}</span>
+                      <h2 className={styles.phaseTitle}>{phase.title}</h2>
+                      <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
+                    </div>
+                  </div>
+
+                  <p className={styles.phaseDesc}>{phase.description}</p>
+
+                  <div className={styles.deliverables}>
+                    <span className={styles.deliverablesLabel}>Deliverables</span>
+                    <ul className={styles.deliverablesList}>
+                      {phase.deliverables.map((d) => (
+                        <li key={d} className={styles.deliverableItem}>
+                          <span className={styles.deliverableDot} />
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
+            </FadeIn>
+          </section>
 
-              <p className={styles.phaseDesc}>{phase.description}</p>
+          {/* Parallax image panel between phases */}
+          {i < PHASES.length - 1 && (
+            <div
+              className={styles.parallaxPanel}
+              style={{ backgroundImage: `url(${PARALLAX_IMAGES[i]})` }}
+              aria-hidden="true"
+            />
+          )}
+        </div>
+      ))}
 
-              <div className={styles.deliverables}>
-                <span className={styles.deliverablesLabel}>Deliverables</span>
-                <ul className={styles.deliverablesList}>
-                  {phase.deliverables.map((d) => (
-                    <li key={d} className={styles.deliverableItem}>
-                      <span className={styles.deliverableDot} />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {i < PHASES.length - 1 && <div className={styles.phaseRule} />}
-            </div>
-          </div>
-          </FadeIn>
-        ))}
-      </section>
+      <div className={styles.phasesBottom} />
 
       {/* CTA */}
       <section className={styles.cta}>
