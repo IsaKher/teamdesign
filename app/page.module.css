@@ -454,16 +454,23 @@
 }
 
 .credentialsInner {
-  display: flex;
-  flex-direction: column;
-  max-width: 720px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1200px;
 }
 
 .testimonialCol {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.recognitionCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 2px;
 }
 
 .testimonialQuote {

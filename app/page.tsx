@@ -133,10 +133,47 @@ export default function HomePage() {
       {/* ─── Credentials ───────────────────────────────────────────────── */}
       <section className={styles.credentials}>
         <div className={styles.credentialsInner}>
+
+          {/* Left — testimonials */}
           <div className={styles.testimonialCol}>
             <span className="label">From Our Clients</span>
             <TestimonialSlider testimonials={TESTIMONIALS} interval={6000} />
           </div>
+
+          {/* Right — press recognition */}
+          <div className={styles.recognitionCol}>
+            <span className="label">Press &amp; Recognition</span>
+            <div className={styles.recognitionItems}>
+              <FadeIn direction="up" delay={0}>
+                <div className={styles.recognitionItem}>
+                  <span className={styles.recognitionYear}>2016</span>
+                  <div className={styles.recognitionContent}>
+                    <span className={styles.recognitionPub}>Architects &amp; Interiors India</span>
+                    <p className={styles.recognitionHeadline}>Zainab recognised as one of India&apos;s 50 Most Talented Young Architects Under 35.</p>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn direction="up" delay={0.1}>
+                <div className={styles.recognitionItem}>
+                  <span className={styles.recognitionYear}>2016</span>
+                  <div className={styles.recognitionContent}>
+                    <span className={styles.recognitionPub}>iGEN Design Forum</span>
+                    <p className={styles.recognitionHeadline}>Honoured at the 5th iGEN Design Forum — 50 young practitioners shaping Indian architecture.</p>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn direction="up" delay={0.2}>
+                <div className={styles.recognitionItem}>
+                  <span className={styles.recognitionYear}>2015</span>
+                  <div className={styles.recognitionContent}>
+                    <span className={styles.recognitionPub}>DuPont India &amp; Corian®</span>
+                    <p className={styles.recognitionHeadline}>Featured in Women Leadership in Architecture &amp; Design.</p>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -181,58 +218,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Recognition ───────────────────────────────────────────────── */}
-      <section className={styles.recognition}>
-        <div className={styles.recognitionInner}>
-          <div className={styles.recognitionHeader}>
-            <span className="label">Press & Recognition</span>
-            <h2 className={styles.recognitionTitle}>25 years of practice,<br />noticed and published.</h2>
-          </div>
-
-          <div className={styles.recognitionItems}>
-            <FadeIn direction="up" delay={0}>
-            <div className={styles.recognitionItem}>
-              <span className={styles.recognitionYear}>2016</span>
-              <div className={styles.recognitionContent}>
-                <span className={styles.recognitionPub}>Architects &amp; Interiors India</span>
-                <p className={styles.recognitionHeadline}>
-                  Zainab recognised as one of India&apos;s 50 Most Talented Young Architects Under 35 — the firm&apos;s most prominent individual award.
-                </p>
-              </div>
-            </div>
-
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.1}>
-            <div className={styles.recognitionItem}>
-              <span className={styles.recognitionYear}>2016</span>
-              <div className={styles.recognitionContent}>
-                <span className={styles.recognitionPub}>iGEN Design Forum</span>
-                <p className={styles.recognitionHeadline}>
-                  Honoured at the 5th iGEN Design Forum, celebrating 50 young and dynamic design practitioners shaping the future of Indian architecture.
-                </p>
-              </div>
-            </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.2}>
-            <div className={styles.recognitionItem}>
-              <span className={styles.recognitionYear}>2015</span>
-              <div className={styles.recognitionContent}>
-                <span className={styles.recognitionPub}>DuPont India &amp; Corian®</span>
-                <p className={styles.recognitionHeadline}>
-                  Featured in Women Leadership in Architecture &amp; Design — a national discussion on the rising influence of women in Indian design practice.
-                </p>
-              </div>
-            </div>
-            </FadeIn>
-          </div>
-
-          <div className={styles.recognitionFooter}>
-            <Link href="/studio" className={styles.recognitionLink}>Full Studio Profile →</Link>
-          </div>
-        </div>
-      </section>
 
       {/* ─── Interiors CTA ─────────────────────────────────────────────── */}
       <section className={styles.interiorsCta}>
