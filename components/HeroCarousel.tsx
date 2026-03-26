@@ -16,8 +16,7 @@ const SLIDES = [
   { src: '/projects/jhaveri-zaveri-residence/1.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
 ];
 
-const INTERVAL   = 5500;  // ms between transitions
-const FADE_DURATION = 1400; // ms — must match CSS transition
+const INTERVAL = 5500;  // ms between transitions
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
