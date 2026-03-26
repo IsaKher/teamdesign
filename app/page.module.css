@@ -696,53 +696,29 @@
   margin-top: 12px;
 }
 
-.recognitionItems {
+.recognitionLines {
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
-.recognitionItem {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 40px;
-  align-items: start;
-  padding: 36px 0;
+.recognitionLine {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  padding: 28px 0;
   border-bottom: 1px solid var(--color-rule);
 }
 
-.recognitionItem:first-child { border-top: 1px solid var(--color-rule); }
+.recognitionLine:first-child {
+  border-top: 1px solid var(--color-rule);
+}
 
-.recognitionYear {
-  font-family: var(--font-serif);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+.recognitionLine em {
+  font-style: italic;
   color: var(--color-text-secondary);
-  opacity: 0.55;
-  padding-top: 4px;
-}
-
-.recognitionContent {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.recognitionPub {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  opacity: 0.65;
-}
-
-.recognitionHeadline {
-  font-family: var(--font-serif);
-  font-size: clamp(16px, 1.5vw, 20px);
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--color-text-primary);
 }
 
 .recognitionFooter {
