@@ -11,11 +11,6 @@ const navItems = [
   {
     label: 'Portfolio',
     href: '/work',
-    dropdown: [
-      { label: 'Residential',   href: '/work?type=Residential'   },
-      { label: 'Commercial',    href: '/work?type=Commercial'    },
-      { label: 'Institutional', href: '/work?type=Institutional' },
-    ],
   },
   {
     label: 'Studio',
