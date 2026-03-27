@@ -1,37 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
 import ProjectContent from '@/components/ProjectContent';
-import { PROJECT_DATA, FALLBACK } from '@/lib/projectData';
+import { getProjectBySlug, getAllProjectsForNav, getAllProjectSlugs } from '@/lib/sanity';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
-
-const ALL_SLUGS = Object.keys(PROJECT_DATA);
-const TOTAL = ALL_SLUGS.length;
-
-// Next / Prev project (both wrap around)
-function getNextProject(currentSlug: string) {
-  const idx = ALL_SLUGS.indexOf(currentSlug);
-  const nextSlug = ALL_SLUGS[(idx + 1) % TOTAL];
-  return { slug: nextSlug, ...PROJECT_DATA[nextSlug] };
-}
-
-function getPrevProject(currentSlug: string) {
-  const idx = ALL_SLUGS.indexOf(currentSlug);
-  const prevSlug = ALL_SLUGS[(idx - 1 + TOTAL) % TOTAL];
-  return { slug: prevSlug, ...PROJECT_DATA[prevSlug] };
-}
-
-function getPosition(currentSlug: string) {
-  return ALL_SLUGS.indexOf(currentSlug) + 1;
-}
 
 const BASE = STUDIO.site;
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const project = PROJECT_DATA[params.slug];
+  const project = await getProjectBySlug(params.slug);
   if (!project) return { title: 'Project Not Found' };
 
   const desc = project.description.replace(/\n+/g, ' ').slice(0, 155).trim();
@@ -55,52 +36,48 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: ogTitle,
       description: desc,
       siteName: 'Team Design Architects',
-      images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.title }],
+      ...(project.mainImage ? { images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.title }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: ogTitle,
       description: desc,
-      images: [project.mainImage],
+      ...(project.mainImage ? { images: [project.mainImage] } : {}),
     },
   };
 }
 
-export function generateStaticParams() {
-  return ALL_SLUGS.map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllProjectSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = PROJECT_DATA[params.slug] ?? {
-    ...FALLBACK,
-    title: params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
-  };
+export default async function ProjectDetailPage({ params }: { params: { slug: string } }) {
+  const [project, allProjects] = await Promise.all([
+    getProjectBySlug(params.slug),
+    getAllProjectsForNav(),
+  ]);
 
-  const nextProj = getNextProject(params.slug);
-  const prevProj = getPrevProject(params.slug);
-  const position = getPosition(params.slug);
+  if (!project) notFound();
+
+  const TOTAL = allProjects.length;
+  const idx = allProjects.findIndex(p => p.slug === params.slug);
+  const position = idx + 1;
+  const prevProj = allProjects[(idx - 1 + TOTAL) % TOTAL];
+  const nextProj = allProjects[(idx + 1) % TOTAL];
 
   const projectJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: project.title,
     description: project.description.replace(/\n+/g, ' ').slice(0, 300),
-    image: project.mainImage,
+    ...(project.mainImage ? { image: project.mainImage } : {}),
     dateCreated: String(project.year),
-    locationCreated: {
-      '@type': 'Place',
-      name: project.location,
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Team Design Architects',
-      url: 'https://teamdesign.in',
-    },
+    locationCreated: { '@type': 'Place', name: project.location },
+    author: { '@type': 'Organization', name: 'Team Design Architects', url: 'https://teamdesign.in' },
     genre: project.type,
     url: `${BASE}/portfolio/${params.slug}`,
   };
-
-  const whatsappHref = `https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`;
 
   return (
     <>
@@ -108,19 +85,24 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
       />
+
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
-          <Image
-            src={project.mainImage}
-            alt={`${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-          />
+          {project.mainImage ? (
+            <Image
+              src={project.mainImage}
+              alt={`${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
+              fill
+              priority
+              sizes="100vw"
+              style={{ objectFit: 'cover' }}
+              placeholder="blur"
+              blurDataURL={WARM_BLUR}
+            />
+          ) : (
+            <div style={{ position: 'absolute', inset: 0, background: 'var(--color-surface)' }} />
+          )}
           <div className={styles.heroOverlay} />
         </div>
       </section>
@@ -145,14 +127,14 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* Opening brief — first paragraph displayed large */}
+      {/* Opening brief */}
       <div className={styles.openingBrief}>
         <p className={styles.openingBriefText}>
           {project.description.split('\n\n')[0]}
         </p>
       </div>
 
-      {/* Project Story — Challenge / Strategy / Result */}
+      {/* Project story */}
       <section className={styles.content}>
         <div className={styles.contentInner}>
           {project.description.split('\n\n').slice(1).map((para, i) => {
@@ -167,7 +149,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           })}
         </div>
 
-        {/* Inline WhatsApp — project-specific */}
         <div className={styles.whatsappInline}>
           <a
             href={`https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`}
@@ -181,7 +162,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* Editorial content blocks / gallery — with lightbox */}
+      {/* Editorial content blocks / gallery */}
       <ProjectContent
         contentBlocks={project.contentBlocks}
         gallery={project.gallery}
@@ -191,15 +172,15 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       {/* Testimonial */}
       {project.testimonial && (
         <FadeIn direction="up">
-        <section className={styles.testimonial}>
-          <blockquote className={styles.quote}>
-            &ldquo;{project.testimonial.quote}&rdquo;
-          </blockquote>
-          <div className={styles.quoteAuthor}>
-            <span className={styles.authorName}>{project.testimonial.author}</span>
-            <span className={styles.authorTitle}>{project.testimonial.title}</span>
-          </div>
-        </section>
+          <section className={styles.testimonial}>
+            <blockquote className={styles.quote}>
+              &ldquo;{project.testimonial.quote}&rdquo;
+            </blockquote>
+            <div className={styles.quoteAuthor}>
+              <span className={styles.authorName}>{project.testimonial.author}</span>
+              <span className={styles.authorTitle}>{project.testimonial.title}</span>
+            </div>
+          </section>
         </FadeIn>
       )}
 
@@ -230,7 +211,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             <h2 className={styles.relatedTitle}>Related Projects</h2>
           </div>
           <div className={styles.relatedGrid}>
-            {project.related.map((r) => (
+            {project.related.map((r) => r.image && (
               <Link key={r.slug} href={`/portfolio/${r.slug}`} className={styles.relatedCard}>
                 <div className={styles.relatedImage}>
                   <Image
@@ -251,7 +232,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </section>
       )}
 
-      {/* Project nav — prev / position / all work */}
+      {/* Project nav */}
       <nav className={styles.projectNav}>
         <Link href={`/portfolio/${prevProj.slug}`} className={styles.projectNavPrev}>
           <span>←</span><span>{prevProj.title}</span>
@@ -265,16 +246,20 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       {/* Next Project */}
       <Link href={`/portfolio/${nextProj.slug}`} className={styles.nextProject}>
         <div className={styles.nextProjectImageWrap}>
-          <Image
-            src={nextProj.mainImage}
-            alt={nextProj.title}
-            fill
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-            className={styles.nextProjectImage}
-          />
+          {nextProj.mainImage ? (
+            <Image
+              src={nextProj.mainImage}
+              alt={nextProj.title}
+              fill
+              sizes="100vw"
+              style={{ objectFit: 'cover' }}
+              placeholder="blur"
+              blurDataURL={WARM_BLUR}
+              className={styles.nextProjectImage}
+            />
+          ) : (
+            <div style={{ position: 'absolute', inset: 0, background: 'var(--color-surface)' }} />
+          )}
           <div className={styles.nextProjectOverlay} />
         </div>
         <div className={styles.nextProjectContent}>

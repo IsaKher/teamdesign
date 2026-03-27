@@ -18,7 +18,8 @@
     "next-sanity": "^9.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "sanity": "^3.44.0"
+    "sanity": "^3.44.0",
+    "sanity-plugin-media": "^4.1.1"
   },
   "devDependencies": {
     "@sanity/vision": "^3.44.0",
@@ -28,6 +29,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "sharp": "^0.34.5",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   },
   "engines": {

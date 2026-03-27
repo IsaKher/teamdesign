@@ -1,5 +1,3 @@
-import type { Testimonial } from '@/components/TestimonialSlider';
-
 // Warm beige blur placeholder for next/image — avoids grey flash on load
 export const WARM_BLUR = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxJyBoZWlnaHQ9JzEnPjxyZWN0IGZpbGw9JyNFREU1RDgnIHdpZHRoPScxJyBoZWlnaHQ9JzEnLz48L3N2Zz4=' as const;
 
@@ -30,77 +28,11 @@ export const STATS = [
   { value: '20L+ sq ft', label: 'Built Space' },
 ];
 
-export const FEATURED_PROJECTS = [
-  {
-    slug: 'nikhil-gupta-bungalow',
-    title: "Nikhil Gupta's Bungalow",
-    client: 'Nikhil Gupta',
-    type: 'Residential',
-    location: 'Awas, Alibaug',
-    image: '/projects/nikhil-gupta-bungalow/2.jpg',
-    tagline: 'A private bungalow in Alibaug — spaces that settle into the landscape without demanding attention.',
-  },
-  {
-    slug: 'jhaveri-zaveri-residence',
-    title: 'Jhaveri Zaveri Residence',
-    client: 'Rupen Jhaveri & Binaisha Zaveri',
-    type: 'Interiors',
-    location: 'Mumbai',
-    image: '/projects/jhaveri-zaveri-residence/1.jpg',
-    tagline: 'Considered material choices and controlled light for a working couple in Mumbai.',
-  },
-  {
-    slug: 'mohan-shenoi-residence',
-    title: 'Mohan Shenoi Residence',
-    client: 'Mohan Shenoi',
-    type: 'Interiors',
-    location: 'Mumbai',
-    image: '/projects/mohan-shenoi-residence/1.jpg',
-    tagline: 'Spaces of quiet authority — warm, restrained, and precisely considered.',
-  },
-  {
-    slug: 'rahul-sanjana-residence',
-    title: 'Rahul & Sanjana Residence',
-    client: 'Rahul & Sanjana Shenoi',
-    type: 'Interiors',
-    location: 'Mumbai',
-    image: '/projects/rahul-sanjana-residence/1.jpg',
-    tagline: 'A Mumbai home that holds two different modes of living without forcing a choice.',
-  },
-];
-
 export const SELECTED_CLIENTS = [
   { name: 'Kishore Mariwala', description: 'Founder, Marico', project: 'Mont Blanc Residence, Mumbai' },
   { name: 'Ronnie Screwvala', description: 'Founder, UTV / UpGrad', project: 'Unilazer Ventures Office, Mumbai' },
   { name: 'J&K Bank', description: 'National Commercial Bank', project: 'Business Centre, BKC Mumbai' },
   { name: 'ITM Group', description: 'Educational Institution', project: 'College Extension & MBA Hostel, Mumbai' },
-];
-
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: 'Team Design managed the entire project lifecycle — from concept and design to contractor management, budget adherence, and on-time delivery. The result exceeded every expectation.',
-    name: 'Kishore Mariwala',
-    title: 'Founder, Marico',
-    project: 'Mont Blanc Residence, Mumbai',
-  },
-  {
-    quote: "What struck us most was how the design translated our company's character into architecture. The Unilazer office doesn't just look good — it shapes how our teams think and collaborate every day.",
-    name: 'Ronnie Screwvala',
-    title: 'Founder, UTV / UpGrad',
-    project: 'Unilazer Ventures Office, Mumbai',
-  },
-  {
-    quote: 'The Business Centre sets a new standard for banking architecture in India. Team Design delivered a building that is both operationally rigorous and genuinely inspiring to work in.',
-    name: 'J&K Bank',
-    title: 'National Commercial Bank',
-    project: 'National Business Centre, BKC Mumbai',
-  },
-  {
-    quote: 'From the initial brief to handover, Team Design demonstrated exceptional professionalism at every stage. The ITM expansion has elevated the campus experience for thousands of students.',
-    name: 'ITM Group',
-    title: 'Educational Institution',
-    project: 'College Extension & MBA Hostel, Mumbai',
-  },
 ];
 
 export const PRESS_ITEMS = [

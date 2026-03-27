@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import MemberImage from './MemberImage';
 import styles from './page.module.css';
 
 const PRINCIPAL = {
@@ -99,7 +100,7 @@ export default function PeoplePage() {
           {CORE_TIER1.map((member) => (
             <div key={member.name} className={`${styles.memberCard} ${styles.memberCardLarge}`}>
               <div className={styles.memberImage}>
-                <Image src={member.image} alt={member.name} fill sizes="(max-width: 768px) 100vw, 30vw" style={{ objectFit: 'cover' }} />
+                <MemberImage src={member.image} name={member.name} sizes="(max-width: 768px) 100vw, 30vw" />
                 <div className={styles.memberOverlay}>
                   <p className={styles.memberBioHover}>{member.bio.split('.')[0]}.</p>
                 </div>
@@ -120,7 +121,7 @@ export default function PeoplePage() {
           {CORE_TIER2.map((member) => (
             <div key={member.name} className={styles.memberCard}>
               <div className={styles.memberImage}>
-                <Image src={member.image} alt={member.name} fill sizes="(max-width: 768px) 50vw, 20vw" style={{ objectFit: 'cover' }} />
+                <MemberImage src={member.image} name={member.name} sizes="(max-width: 768px) 50vw, 20vw" />
                 <div className={styles.memberOverlay}>
                   <p className={styles.memberBioHover}>{member.bio.split('.')[0]}.</p>
                 </div>

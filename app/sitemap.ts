@@ -19,9 +19,7 @@ const PORTFOLIO_SLUGS = [
   'bungalow-ahmedabad',
   'bhandari-house-bhinmal',
   'venus-wires-office-khopoli',
-];
-
-const INTERIOR_SLUGS = [
+  // formerly under /interiors — consolidated here
   'womens-bank-branch-srinagar',
   'show-flat-mumbai',
   'unilazer-ventures-office',
@@ -35,13 +33,19 @@ const INTERIOR_SLUGS = [
   'kishore-mariwala-home-mumbai',
   'gordon-serrao-home-navi-mumbai',
   'cinemarc-cinema-theatre',
+  // newer projects
+  'qudrati-greens-indore',
+  'nikhil-gupta-bungalow',
+  'jhaveri-zaveri-residence',
+  'mohan-shenoi-residence',
+  'rahul-sanjana-residence',
+  'usha-shenoi-residence',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL,                        lastModified: new Date(), changeFrequency: 'monthly', priority: 1.0 },
     { url: `${BASE_URL}/portfolio`,         lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/interiors`,         lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/process`,           lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.7 },
     { url: `${BASE_URL}/studio`,            lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.7 },
     { url: `${BASE_URL}/people`,            lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.6 },
@@ -55,12 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const interiorPages: MetadataRoute.Sitemap = INTERIOR_SLUGS.map((slug) => ({
-    url: `${BASE_URL}/interiors/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'yearly' as const,
-    priority: 0.6,
-  }));
-
-  return [...staticPages, ...workPages, ...interiorPages];
+  return [...staticPages, ...workPages];
 }

@@ -6,9 +6,17 @@ import FadeIn from '@/components/FadeIn';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
-import { STATS, FEATURED_PROJECTS, TESTIMONIALS, WARM_BLUR } from '@/lib/siteContent';
+import { STATS, WARM_BLUR } from '@/lib/siteContent';
+import { getFeaturedProjects, getTestimonials } from '@/lib/sanity';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [featuredProjects, testimonials] = await Promise.all([
+    getFeaturedProjects(),
+    getTestimonials(),
+  ]);
+
+  // Safety guard — don't render the portfolio section until we have projects
+  const hasFeatured = featuredProjects.length >= 4;
   return (
     <>
       {/* ─── Hero + Stats (one shared image) ──────────────────────────── */}
@@ -44,7 +52,7 @@ export default function HomePage() {
       </div>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
-      <section className={styles.workSection}>
+      <section className={styles.portfolioSection}>
         <FadeIn direction="up">
         <div className={styles.sectionHeader}>
           <div>
@@ -62,28 +70,30 @@ export default function HomePage() {
           <Link href="/portfolio?type=Interiors" className={styles.categoryLink}>Interiors</Link>
         </div>
 
-        <div className={styles.projectGrid}>
+        {hasFeatured && <div className={styles.projectGrid}>
 
           {/* ── Lead project — full-width cinematic strip ── */}
           <FadeIn direction="up">
-            <Link href={`/portfolio/${FEATURED_PROJECTS[0].slug}`} className={styles.projectHeroCard}>
+            <Link href={`/portfolio/${featuredProjects[0].slug}`} className={styles.projectHeroCard}>
               <div className={styles.projectHeroImageWrap}>
-                <Image
-                  src={FEATURED_PROJECTS[0].image}
-                  alt={FEATURED_PROJECTS[0].title}
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{ objectFit: 'cover' }}
-                  className={styles.projectHeroImage}
-                  placeholder="blur"
-                  blurDataURL={WARM_BLUR}
-                />
+                {featuredProjects[0].image && (
+                  <Image
+                    src={featuredProjects[0].image}
+                    alt={featuredProjects[0].title}
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{ objectFit: 'cover' }}
+                    className={styles.projectHeroImage}
+                    placeholder="blur"
+                    blurDataURL={WARM_BLUR}
+                  />
+                )}
                 <div className={styles.projectHeroOverlay} />
                 <div className={styles.projectHeroContent}>
-                  <span className={styles.projectHeroType}>{FEATURED_PROJECTS[0].type}</span>
-                  <h3 className={styles.projectHeroTitle}>{FEATURED_PROJECTS[0].title}</h3>
-                  <p className={styles.projectHeroTagline}>{FEATURED_PROJECTS[0].tagline}</p>
+                  <span className={styles.projectHeroType}>{featuredProjects[0].type}</span>
+                  <h3 className={styles.projectHeroTitle}>{featuredProjects[0].title}</h3>
+                  <p className={styles.projectHeroTagline}>{featuredProjects[0].tagline}</p>
                   <span className={styles.projectHeroViewHint}>View →</span>
                 </div>
               </div>
@@ -92,11 +102,11 @@ export default function HomePage() {
 
           {/* ── Supporting three ── */}
           <div className={styles.projectRow}>
-            {FEATURED_PROJECTS.slice(1).map((project, i) => (
+            {featuredProjects.slice(1).map((project, i) => (
               <FadeIn key={project.slug} delay={i * 0.12} direction="up">
                 <Link href={`/portfolio/${project.slug}`} className={styles.projectCard}>
                   <div className={styles.projectImageWrap}>
-                    <Image
+                    {project.image && <Image
                       src={project.image}
                       alt={project.title}
                       fill
@@ -105,7 +115,7 @@ export default function HomePage() {
                       className={styles.projectImage}
                       placeholder="blur"
                       blurDataURL={WARM_BLUR}
-                    />
+                    />}
                     <div className={styles.projectOverlay}>
                       <span className={styles.viewHint}>View →</span>
                       <p className={styles.projectCardTagline}>{project.tagline}</p>
@@ -121,7 +131,7 @@ export default function HomePage() {
             ))}
           </div>
 
-        </div>
+        </div>}
       </section>
 
       {/* ─── Credentials ───────────────────────────────────────────────── */}
@@ -131,7 +141,7 @@ export default function HomePage() {
           {/* Left — testimonials */}
           <div className={styles.testimonialCol}>
             <span className="label">From Our Clients</span>
-            <TestimonialSlider testimonials={TESTIMONIALS} interval={6000} />
+            <TestimonialSlider testimonials={testimonials} interval={6000} />
           </div>
 
           {/* Right — press recognition */}

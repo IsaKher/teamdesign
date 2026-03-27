@@ -1055,7 +1055,7 @@ The building is going up on a corner in Indore, visible from two streets. The fa
 
 The design reflects an ease of occupation. Rooms open to the outside in multiple directions, light moves through the day, and the distinction between inside and outside is consistently softened. A home that holds its occupant lightly.
 
-The early site photographs show a building that looks like it picked its spot rather than was placed on it. The overhangs do their job quietly. A home that holds its occupant lightly. That was the brief, and the structure is already keeping its end of the bargain.`,
+The early site photographs show a building that looks like it picked its spot rather than was placed on it. The overhangs do their job quietly. That was the brief, and the structure is already keeping its end of the bargain.`,
     mainImage: '/projects/nikhil-gupta-bungalow/2.jpg',
     gallery: [
       '/projects/nikhil-gupta-bungalow/1.jpg',
@@ -1073,7 +1073,7 @@ The early site photographs show a building that looks like it picked its spot ra
       { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/2.jpg', caption: 'The completed front elevation — stone cladding, angled roof planes, timber fins framing the upper openings. The garden was planted in the drawings before the building existed.' },
       { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/6.png', '/projects/nikhil-gupta-bungalow/7.png'], captions: ['The dining room — a long table, a cluster of pendants overhead, the client\'s own art on the wall. The room already has a life to it.', 'The entrance porch — a Buddha figure, stone benches, a solid timber door. A moment of stillness before the house begins.'] },
       { type: 'pullQuote', text: 'Rooms open to the outside in multiple directions. The distinction between inside and outside is consistently softened.' },
-      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/3.jpg', '/projects/nikhil-gupta-bungalow/8.png'], captions: ['The entry canopy taking shape. Scaffolding still up, but the proportions of the arrival are already clear.', 'The main living room — vaulted timber-beam ceiling, large glazed doors opening fully to the garden. Inside and outside read as one room.'] },
+      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/8.png', caption: 'The main living room — vaulted timber-beam ceiling, large glazed doors opening fully to the garden. Inside and outside read as one room.' },
       { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/4.jpg', caption: 'The pool terrace under a timber-slatted pergola — outdoor seating, a fire pit, water alongside. Given the same consideration as any interior room.' },
       { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/1.jpg', '/projects/nikhil-gupta-bungalow/5.jpg'], captions: ['Under construction, Awas, 2024. The coconut palms on site were a constraint from the start — the building was planned around them.', 'The arrival — a long car porch under a sloping timber-and-steel canopy, planting on both sides. The approach to the house was given as much thought as the house itself.'] },
     ],

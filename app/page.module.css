@@ -220,7 +220,7 @@
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
-.workSection {
+.portfolioSection {
   padding: var(--margin-section) var(--margin-page);
 }
 
@@ -878,7 +878,7 @@
   .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
   .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
   .categoryLink { text-align: center; }
-  .workSection { padding: 56px var(--margin-page); }
+  .portfolioSection { padding: 56px var(--margin-page); }
   .credentials { padding: 56px var(--margin-page); }
   .principal { padding: 56px var(--margin-page); }
   .recognition { padding: 56px var(--margin-page); }
