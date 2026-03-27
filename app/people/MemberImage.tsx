@@ -18,7 +18,7 @@ function initials(name: string) {
 }
 
 export default function MemberImage({ src, name, sizes }: Props) {
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState(!src); // immediately show initials if no src
 
   if (failed) {
     return (

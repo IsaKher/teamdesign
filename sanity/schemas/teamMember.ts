@@ -7,11 +7,26 @@ export default defineType({
   fields: [
     defineField({ name: 'name', title: 'Full Name', type: 'string', validation: r => r.required() }),
     defineField({ name: 'role', title: 'Role / Title', type: 'string' }),
+    defineField({
+      name: 'tier',
+      title: 'Display Tier',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Principal Architect', value: 'principal' },
+          { title: 'Core Management — Featured (large card)', value: 'featured' },
+          { title: 'Core Management — Standard', value: 'core' },
+          { title: 'Core Operations (text only)', value: 'operations' },
+        ],
+        layout: 'radio',
+      },
+      validation: r => r.required(),
+    }),
     defineField({ name: 'bio', title: 'Biography', type: 'text', rows: 4 }),
     defineField({ name: 'education', title: 'Education / Credentials', type: 'string' }),
+    defineField({ name: 'award', title: 'Award / Recognition (optional)', type: 'string' }),
+    defineField({ name: 'founding', title: 'Practice Founded Year (principal only)', type: 'number' }),
     defineField({ name: 'photo', title: 'Photo', type: 'image', options: { hotspot: true } }),
-    defineField({ name: 'isPrincipal', title: 'Is this the Principal Architect?', type: 'boolean', initialValue: false }),
-    defineField({ name: 'founding', title: 'Founding Year (for principal only)', type: 'number' }),
     defineField({ name: 'orderRank', title: 'Display Order', type: 'number' }),
   ],
   preview: {

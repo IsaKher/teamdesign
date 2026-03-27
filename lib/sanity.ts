@@ -214,6 +214,39 @@ export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
   );
 }
 
+// ─── Team Member types & query ───────────────────────────────────────────────
+
+export interface SanityTeamMember {
+  name: string;
+  role: string;
+  tier: 'principal' | 'featured' | 'core' | 'operations';
+  bio: string | null;
+  education: string | null;
+  award: string | null;
+  founding: number | null;
+  photoUrl: string | null;
+  orderRank: number;
+}
+
+/** All team members ordered by display rank */
+export async function getTeamMembers(): Promise<SanityTeamMember[]> {
+  return client.fetch(
+    `*[_type == "teamMember"] | order(orderRank asc) {
+      name,
+      role,
+      tier,
+      bio,
+      education,
+      award,
+      founding,
+      "photoUrl": photo.asset->url,
+      orderRank
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  );
+}
+
 /** Testimonials for homepage slider */
 export async function getTestimonials(): Promise<SanityTestimonial[]> {
   return client.fetch(
