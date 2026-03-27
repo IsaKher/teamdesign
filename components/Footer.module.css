@@ -26,11 +26,13 @@
 .sealWrap {
   display: block;
   flex-shrink: 0;
-  opacity: 0.55;
-  transition: opacity 0.2s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.sealWrap:hover { opacity: 0.85; }
+.sealWrap:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 8px rgba(244, 238, 230, 0.35));
+}
 
 .sealImage {
   width: 72px;
