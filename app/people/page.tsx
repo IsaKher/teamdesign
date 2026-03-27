@@ -28,20 +28,16 @@ export default async function PeoplePage() {
         <section className={styles.principalSection}>
           <div className={styles.principalInner}>
             <div className={styles.principalImage}>
-              {principal.photoUrl ? (
-                <Image
-                  src={principal.photoUrl}
-                  alt={principal.name}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                  placeholder="blur"
-                  blurDataURL={WARM_BLUR}
-                />
-              ) : (
-                <MemberImage src="/tasadduq-kher.webp" name={principal.name} sizes="(max-width: 768px) 100vw, 40vw" />
-              )}
+              <Image
+                src={principal.photoUrl ?? '/tasadduq-kher.webp'}
+                alt={principal.name}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                placeholder="blur"
+                blurDataURL={WARM_BLUR}
+              />
             </div>
             <div className={styles.principalText}>
               <span className={styles.sectionLabel}>Principal Architect</span>
