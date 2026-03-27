@@ -55,11 +55,6 @@ export default function HeroCarousel() {
           )}
         </div>
       ))}
-      <div className={styles.dots} aria-hidden="true">
-        {SLIDES.map((_, i) => (
-          <span key={i} className={`${styles.dot} ${i === current ? styles.dotActive : ''}`} />
-        ))}
-      </div>
     </div>
   );
 }

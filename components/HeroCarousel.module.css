@@ -13,30 +13,3 @@
 .slide.active {
   opacity: 1;
 }
-
-.dots {
-  position: absolute;
-  /* The image wrap extends 12vh below the visible hero area for parallax.
-     Add that offset so the dots land inside the visible viewport. */
-  bottom: calc(12vh + 32px);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(244, 238, 230, 0.45);
-  transition: background 0.4s ease, transform 0.4s ease;
-  pointer-events: none;
-}
-
-.dotActive {
-  background: rgba(244, 238, 230, 0.95);
-  transform: scale(1.3);
-}
