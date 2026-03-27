@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { getAllProjects } from '@/lib/sanity';
 import PortfolioClient from './PortfolioClient';
 
