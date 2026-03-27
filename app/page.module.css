@@ -249,9 +249,15 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  transition: color 0.3s ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
-.viewAll:hover { color: var(--color-text-primary); }
+.viewAll:hover {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-text-primary);
+}
 
 .categoryLinks {
   display: flex;
