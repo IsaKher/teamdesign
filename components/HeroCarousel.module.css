@@ -13,3 +13,28 @@
 .slide.active {
   opacity: 1;
 }
+
+.dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(244, 238, 230, 0.35);
+  transition: background 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.dotActive {
+  background: rgba(244, 238, 230, 0.90);
+  transform: scale(1.25);
+}

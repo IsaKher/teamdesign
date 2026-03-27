@@ -12,7 +12,6 @@ const SLIDES = [
   { src: '/projects/jhaveri-zaveri-residence/4.jpg', alt: 'Jhaveri Zaveri Residence — Entrance Foyer', position: 'center center' },
   { src: '/projects/rahul-sanjana-residence/1.jpg',  alt: 'Rahul & Sanjana Residence — Mumbai',       position: 'center center' },
   { src: '/projects/mohan-shenoi-residence/1.jpg',   alt: 'Mohan Shenoi Residence — Mumbai',          position: 'center center' },
-  { src: '/projects/nikhil-gupta-bungalow/8.png',    alt: 'Nikhil Gupta Bungalow — Living Room',     position: 'center center' },
   { src: '/projects/jhaveri-zaveri-residence/1.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
 ];
 
@@ -56,6 +55,11 @@ export default function HeroCarousel() {
           )}
         </div>
       ))}
+      <div className={styles.dots} aria-hidden="true">
+        {SLIDES.map((_, i) => (
+          <span key={i} className={`${styles.dot} ${i === current ? styles.dotActive : ''}`} />
+        ))}
+      </div>
     </div>
   );
 }
