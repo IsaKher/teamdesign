@@ -1,4 +1,4 @@
-import { createClient } from '@sanity/client';
+import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import type { ContentBlock } from '@/lib/projectData';
@@ -104,9 +104,15 @@ function transformContentBlocks(raw: RawSanityBlock[]): ContentBlock[] {
 
 // ─── Queries ─────────────────────────────────────────────────────────────────
 
+const CACHE_TAG = 'sanity';
+
 /** All project slugs — for generateStaticParams */
 export async function getAllProjectSlugs(): Promise<string[]> {
-  return client.fetch(`*[_type == "project"].slug.current`);
+  return client.fetch(
+    `*[_type == "project"].slug.current`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  );
 }
 
 /** Full list for portfolio grid page — only published */
@@ -121,7 +127,9 @@ export async function getAllProjects(): Promise<SanityProject[]> {
       year,
       area,
       "image": mainImage.asset->url
-    }`
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
   );
 }
 
@@ -160,7 +168,8 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
         "image": mainImage.asset->url
       }
     }`,
-    { slug }
+    { slug },
+    { next: { tags: [CACHE_TAG] } }
   );
 
   if (!raw) return null;
@@ -182,7 +191,9 @@ export async function getAllProjectsForNav(): Promise<{ slug: string; title: str
       "type": projectType,
       location,
       "mainImage": mainImage.asset->url
-    }`
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
   );
 }
 
@@ -197,7 +208,9 @@ export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
       location,
       "image": mainImage.asset->url,
       "tagline": shortDescription
-    }`
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
   );
 }
 
@@ -209,6 +222,8 @@ export async function getTestimonials(): Promise<SanityTestimonial[]> {
       "name": clientName,
       "title": clientTitle,
       "project": projectName
-    }`
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
   );
 }
