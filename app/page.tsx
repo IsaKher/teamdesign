@@ -183,7 +183,7 @@ export default async function HomePage() {
           <div className={styles.principalImageCol}>
             <div className={styles.principalImageWrap}>
               <Image
-                src="/tasadduq-kher.png"
+                src="/tasadduq-kher.webp"
                 alt="Tasadduq Kher — Principal Architect"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -223,7 +223,7 @@ export default async function HomePage() {
       <section className={styles.interiorsCta}>
         <div className={styles.interiorsImageWrap}>
           <Image
-            src="/interiors-cta.png"
+            src="/interiors-cta.webp"
             alt="Team Design Architects — Studio wall of architectural sketches and drawings, Mumbai"
             width={1536}
             height={1024}

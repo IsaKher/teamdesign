@@ -33,7 +33,7 @@ export default function DrawingSection() {
 
         <div className={styles.drawingImageWrap}>
           <Image
-            src="/studio-sketch.png"
+            src="/studio-sketch.webp"
             alt="Team Design Studio Building — Architectural Illustration, Kopar Khairane"
             fill
             priority

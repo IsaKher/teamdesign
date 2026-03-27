@@ -90,10 +90,10 @@ const PHASES = [
 
 // Parallax images shown between phases — narrative order
 const PARALLAX_IMAGES = [
-  '/images/Concept%20Design.png',           // after Discovery
-  '/images/Design%20Development.png',       // after Concept Design
-  '/images/Technical%20Documentation.png',  // after Design Development
-  '/images/Site%20Supervision.png',         // after Technical Documentation
+  '/images/Concept%20Design.webp',           // after Discovery
+  '/images/Design%20Development.webp',       // after Concept Design
+  '/images/Technical%20Documentation.webp',  // after Design Development
+  '/images/Site%20Supervision.webp',         // after Technical Documentation
 ];
 
 export default async function ProcessPage() {

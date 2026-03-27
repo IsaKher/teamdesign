@@ -33,13 +33,14 @@ export default async function PeoplePage() {
                   src={principal.photoUrl}
                   alt={principal.name}
                   fill
+                  priority
                   sizes="(max-width: 768px) 100vw, 40vw"
                   style={{ objectFit: 'cover', objectPosition: 'center top' }}
                   placeholder="blur"
                   blurDataURL={WARM_BLUR}
                 />
               ) : (
-                <MemberImage src="/tasadduq-kher.png" name={principal.name} sizes="(max-width: 768px) 100vw, 40vw" />
+                <MemberImage src="/tasadduq-kher.webp" name={principal.name} sizes="(max-width: 768px) 100vw, 40vw" />
               )}
             </div>
             <div className={styles.principalText}>

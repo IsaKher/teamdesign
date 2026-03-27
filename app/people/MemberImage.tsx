@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './MemberImage.module.css';
+import { WARM_BLUR } from '@/lib/siteContent';
 
 interface Props {
   src: string;
@@ -35,6 +36,8 @@ export default function MemberImage({ src, name, sizes }: Props) {
       fill
       sizes={sizes}
       style={{ objectFit: 'cover' }}
+      placeholder="blur"
+      blurDataURL={WARM_BLUR}
       onError={() => setFailed(true)}
     />
   );

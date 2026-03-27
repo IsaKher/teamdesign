@@ -47,7 +47,7 @@ export default function StudioPage() {
           <div className={styles.storyImageCol}>
             <div className={styles.storyImage}>
               <Image
-                src="/studio-story.png"
+                src="/studio-story.webp"
                 alt="Team Design Studio — Architecture & Interiors, Mumbai"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
