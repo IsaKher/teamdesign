@@ -1038,9 +1038,9 @@ The building is going up on a corner in Indore, visible from two streets. The fa
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A mixed-use residential and commercial building in Indore — 40,000 sq ft designed to balance civic presence with practical utility.' },
-      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/2.png', caption: 'A mixed-use building for a rapidly growing city. Civic presence at ground level, quiet residential above — the section holds both without compromise.' },
+      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/2.png', caption: 'The corner plot gave the building two street faces — retail frontage at grade, timber fins and full-height glazing on the residential floors above.' },
       { type: 'pullQuote', text: 'A building that reads as both welcoming and purposeful, offering the neighbourhood a new kind of ground-level engagement.' },
-      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/3.png', caption: 'The facade was designed to be read from the street before anything else. Scale, material, proportion — the building needs to earn its place in the neighbourhood.' },
+      { type: 'fullWidthImage', src: '/projects/qudrati-greens-indore/3.png', caption: 'The bedroom opens through a steel-framed glass partition into a private sitting room beyond — rest and retreat separated by a pane of light.' },
     ],
   },
 
@@ -1070,12 +1070,12 @@ The early site photographs show a building that looks like it picked its spot ra
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A 15,000 sq ft private residence in Alibaug — designed for a client who travels widely and asked only for spaces that feel easy to inhabit.' },
-      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/2.jpg', caption: 'Fifteen thousand square feet on the Alibaug coast. The plan was drawn several times before this one — each revision softening the boundary between inside and outside.' },
-      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/6.png', '/projects/nikhil-gupta-bungalow/7.png'], captions: ['The dining area opens in three directions. The client travels widely and has eaten in many rooms. We were designing for someone who knows what a good room feels like.', 'The entrance porch is generous — sized for the moment of arrival, not just the act of entering.'] },
+      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/2.jpg', caption: 'The completed front elevation — stone cladding, angled roof planes, timber fins framing the upper openings. The garden was planted in the drawings before the building existed.' },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/6.png', '/projects/nikhil-gupta-bungalow/7.png'], captions: ['The dining room — a long table, a cluster of pendants overhead, the client\'s own art on the wall. The room already has a life to it.', 'The entrance porch — a Buddha figure, stone benches, a solid timber door. A moment of stillness before the house begins.'] },
       { type: 'pullQuote', text: 'Rooms open to the outside in multiple directions. The distinction between inside and outside is consistently softened.' },
-      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/3.jpg', '/projects/nikhil-gupta-bungalow/8.png'], captions: ['Living spaces arranged so that light changes character through the day. Morning in the east wing. Evening in the west. The house follows the sun.', 'The living room was the last plan to be fixed. It had to work for a single person on a Tuesday evening and for a family gathering on a weekend.'] },
-      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/4.jpg' },
-      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/1.jpg', '/projects/nikhil-gupta-bungalow/5.jpg'], captions: ['Under construction, Awas, 2024. The concrete frame gives the proportions before the walls arrive — this is when final decisions get made.', 'The structure nearing completion. The building is already beginning to belong to its site, which is how you know the planning was right.'] },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/3.jpg', '/projects/nikhil-gupta-bungalow/8.png'], captions: ['The entry canopy taking shape. Scaffolding still up, but the proportions of the arrival are already clear.', 'The main living room — vaulted timber-beam ceiling, large glazed doors opening fully to the garden. Inside and outside read as one room.'] },
+      { type: 'fullWidthImage', src: '/projects/nikhil-gupta-bungalow/4.jpg', caption: 'The pool terrace under a timber-slatted pergola — outdoor seating, a fire pit, water alongside. Given the same consideration as any interior room.' },
+      { type: 'halfWidthImages', images: ['/projects/nikhil-gupta-bungalow/1.jpg', '/projects/nikhil-gupta-bungalow/5.jpg'], captions: ['Under construction, Awas, 2024. The coconut palms on site were a constraint from the start — the building was planned around them.', 'The arrival — a long car porch under a sloping timber-and-steel canopy, planting on both sides. The approach to the house was given as much thought as the house itself.'] },
     ],
   },
 
@@ -1101,9 +1101,9 @@ Nothing in the apartment looks dated. That wasn't inevitable; it means the choic
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence for two professionally active clients — designed to balance the energy of working life with spaces of genuine domestic calm.' },
-      { type: 'fullWidthImage', src: '/projects/jhaveri-zaveri-residence/2.jpg', caption: 'A 2,500 sq ft apartment for two people with demanding professional lives. The design began with the question of what rest looks like for people who don\'t stop easily.' },
+      { type: 'fullWidthImage', src: '/projects/jhaveri-zaveri-residence/2.jpg', caption: 'The formal dining room — a marble-top table for ten, a double-ring pendant overhead, warm wood panelling on three sides. A room sized for the full family.' },
       { type: 'pullQuote', text: 'Considered material choices, controlled light, and spaces that shift in character through the day. Nothing is incidental.' },
-      { type: 'halfWidthImages', images: ['/projects/jhaveri-zaveri-residence/3.jpg', '/projects/jhaveri-zaveri-residence/4.jpg'], captions: ['The kitchen was placed at the heart of the apartment — not behind a door. For this couple, cooking is not a separate activity.', 'The bedroom faces east. The curtain is thick enough to block the light until it is wanted, sheer enough to let it through when it is.'] },
+      { type: 'halfWidthImages', images: ['/projects/jhaveri-zaveri-residence/3.jpg', '/projects/jhaveri-zaveri-residence/4.jpg'], captions: ['A secondary sitting room with a more private character — leather sofa, wooden blinds, the client\'s art collection on the wall behind.', 'The entrance foyer — a sunburst-patterned timber door, a gold console table, white marble underfoot. The first room sets the tone for everything that follows.'] },
     ],
   },
 
@@ -1132,11 +1132,11 @@ A few years on and nothing has been rearranged to accommodate daily life, becaus
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A 5,000 sq ft residence in Mumbai — spaces of quiet authority that work as well for large family gatherings as for solitary evenings.' },
-      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/6.jpg', caption: 'A view toward the terrace. The apartment is grounded and calm — which was the brief in a single word.' },
+      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/6.jpg', caption: 'A bedroom with an unobstructed view of the Mumbai skyline and the waterfront. The window is the design — everything else steps back.' },
       { type: 'pullQuote', text: 'The apartment reads as the home of someone who has earned their comfort and wears it without display.' },
-      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/2.jpg', '/projects/mohan-shenoi-residence/3.jpg'], captions: ['5,000 sq ft with enough room to be generous — to corridors, to thresholds, to the spaces between furniture. That generosity is what makes the apartment feel calm.', 'The living room was designed for both gatherings and solitude. The furniture arrangement can change. The room accommodates both without feeling designed for either.'] },
-      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/7.jpg', caption: 'The master bedroom is the quietest room in the apartment. Materials chosen for how they feel at arm\'s reach, not just how they photograph.' },
-      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/4.jpg', '/projects/mohan-shenoi-residence/5.jpg'], captions: ['Warm timber, stone floors, white walls. A palette that doesn\'t age because it doesn\'t follow a moment.', 'The dining room is the formal heart of the apartment. It receives the afternoon light. The table has been the site of many important conversations.'] },
+      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/2.jpg', '/projects/mohan-shenoi-residence/3.jpg'], captions: ['The prayer room — gold-framed glass doors with arched cutouts, marble and hexagonal tile floor, the deities lit from within. Treated as a room of its own, not an alcove.', 'The formal sitting room — a green leather sofa, paired white armchairs, a chandelier. A room for guests that doesn\'t feel stiff.'] },
+      { type: 'fullWidthImage', src: '/projects/mohan-shenoi-residence/7.jpg', caption: 'The master bedroom — quilted upholstered bed, moulded wall panelling, and a geometric inlaid marble floor that anchors the whole room.' },
+      { type: 'halfWidthImages', images: ['/projects/mohan-shenoi-residence/4.jpg', '/projects/mohan-shenoi-residence/5.jpg'], captions: ['A bedroom — upholstered headboard with vertical fluting, a bold teal velvet bench at the foot of the bed. One strong colour note in an otherwise quiet room.', 'The master bathroom — vessel sinks on a marble counter, dramatic stone-vein wall behind the glass shower. The bathroom was given no less consideration than any other room.'] },
     ],
   },
 
@@ -1162,9 +1162,9 @@ Eight years is long enough for a layout to show its hand. This one has handled w
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence that navigates the overlap of home and work life without forcing a choice between the two.' },
-      { type: 'fullWidthImage', src: '/projects/rahul-sanjana-residence/2.jpg', caption: 'Rahul works from home. Sanjana works at the apartment for long stretches. The plan was organised around the overlap — and the need, sometimes, to be in the same space doing different things.' },
+      { type: 'fullWidthImage', src: '/projects/rahul-sanjana-residence/2.jpg', caption: 'The bedroom — a white slatted screen separates sleeping from dressing beyond. Open enough to feel connected, structured enough to give each space its own character.' },
       { type: 'pullQuote', text: 'Spaces that read as relaxed but are precisely considered in their arrangement.' },
-      { type: 'halfWidthImages', images: ['/projects/rahul-sanjana-residence/3.jpg', '/projects/rahul-sanjana-residence/4.jpg'], captions: ['The study-living area holds two modes without forcing a choice. The partition can close. The room can be silent or social.', 'The bedroom is separated from the working part of the apartment by more than a door. The transition was designed to be felt.'] },
+      { type: 'halfWidthImages', images: ['/projects/rahul-sanjana-residence/3.jpg', '/projects/rahul-sanjana-residence/4.jpg'], captions: ['The other side of the bedroom screen — wardrobe with mixed-tone panels, a work desk tucked behind, a leather armchair in the corner. Two programmes, one room.', 'The powder room — full stone cladding on walls and floor, a wall-mounted basin, a textured stone panel framing the mirror. Small rooms deserve the same care.'] },
     ],
   },
 
@@ -1189,9 +1189,9 @@ The apartment is warm and catches good light through most of the day. For a clie
     related: [],
     contentBlocks: [
       { type: 'paragraph', text: 'A 2,500 sq ft Mumbai residence for a teacher and social worker — warm, unpretentious, and filled with light.' },
-      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/2.jpg', caption: 'Designed for a teacher and social worker who fills her home with people. The plan is open and warm — a room for gathering, not for display.' },
+      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/2.jpg', caption: 'The master bedroom — a dark timber-panelled headboard wall, patterned bed linen, an open dressing area beyond. Warm materials, simply arranged.' },
       { type: 'pullQuote', text: 'A home shaped entirely by who lives in it.' },
-      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/3.jpg', caption: 'The materials were chosen to improve with use. Stone floors that polish underfoot. Timber that darkens. A home that grows into itself over time.' },
+      { type: 'fullWidthImage', src: '/projects/usha-shenoi-residence/3.jpg', caption: 'The kitchen — warm timber cabinetry, white stone countertop, strip lighting under the upper cabinets. Practical and honest in its materials.' },
     ],
   },
 };
