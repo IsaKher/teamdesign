@@ -8,7 +8,7 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import WhatsAppIcon from '@/components/icons/WhatsAppIcon';
 import ProjectContent from '@/components/ProjectContent';
-import { getProjectBySlug, getAllProjectsForNav, getAllProjectSlugs } from '@/lib/sanity';
+import { getProjectBySlug, getAllProjectsForNav, getAllProjectSlugs, getSiteSettings } from '@/lib/sanity';
 import { STUDIO, WARM_BLUR } from '@/lib/siteContent';
 
 const BASE = STUDIO.site;
@@ -55,10 +55,13 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const [project, allProjects] = await Promise.all([
+  const [project, allProjects, settings] = await Promise.all([
     getProjectBySlug(params.slug),
     getAllProjectsForNav(),
+    getSiteSettings(),
   ]);
+  const whatsapp = settings?.whatsapp ?? STUDIO.whatsappNumber;
+  const email    = settings?.email    ?? STUDIO.email;
 
   if (!project) notFound();
 
@@ -153,7 +156,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
 
         <div className={styles.whatsappInline}>
           <a
-            href={`https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`}
+            href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in discussing a project similar to "${project.title}" (${project.location}). Can we connect?`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.whatsappInlineLink}
@@ -192,15 +195,15 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         <h2 className={styles.ctaTitle}>Begin a conversation.</h2>
         <div className={styles.ctaLinks}>
           <a
-            href={`https://wa.me/${STUDIO.whatsappNumber}`}
+            href={`https://wa.me/${whatsapp}`}
             className={styles.ctaWhatsApp}
             target="_blank"
             rel="noopener noreferrer"
           >
             WhatsApp Studio →
           </a>
-          <a href={`mailto:${STUDIO.email}`} className={styles.ctaEmail}>
-            {STUDIO.email}
+          <a href={`mailto:${email}`} className={styles.ctaEmail}>
+            {email}
           </a>
         </div>
       </section>

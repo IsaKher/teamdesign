@@ -45,6 +45,64 @@ export interface SanityProjectDetail {
   related: { slug: string; title: string; type: string; image: string | null }[];
 }
 
+// ─── Site Settings ───────────────────────────────────────────────────────────
+
+export interface SanitySiteSettings {
+  phone: string;
+  email: string;
+  whatsapp: string;
+  linkedinUrl: string;
+  instagramUrl: string;
+  yearsInPractice: string;
+  projectCount: string;
+  clientCount: string;
+  sqftCompleted: string;
+}
+
+/** Global site settings — contact info & stats */
+export async function getSiteSettings(): Promise<SanitySiteSettings | null> {
+  return client.fetch(
+    `*[_type == "siteSettings"][0] {
+      phone,
+      email,
+      whatsapp,
+      linkedinUrl,
+      instagramUrl,
+      yearsInPractice,
+      projectCount,
+      clientCount,
+      sqftCompleted
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  );
+}
+
+// ─── Jobs ─────────────────────────────────────────────────────────────────────
+
+export interface SanityJob {
+  title: string;
+  type: string;
+  duration: string | null;
+  brief: string;
+  linkedinUrl: string | null;
+}
+
+/** Currently open job listings */
+export async function getJobs(): Promise<SanityJob[]> {
+  return client.fetch(
+    `*[_type == "job" && isOpen == true] | order(orderRank asc) {
+      title,
+      type,
+      duration,
+      brief,
+      linkedinUrl
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  );
+}
+
 export interface SanityTestimonial {
   quote: string;
   name: string;

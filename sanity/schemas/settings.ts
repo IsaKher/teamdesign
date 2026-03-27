@@ -34,6 +34,7 @@ export const siteSettingsSchema = defineType({
     defineField({ name: 'clientCount', title: 'Clients Served (e.g. 500+)', type: 'string', initialValue: '500+' }),
     defineField({ name: 'sqftCompleted', title: 'Square Feet Completed (e.g. 20,00,000+)', type: 'string', initialValue: '20,00,000+' }),
     defineField({ name: 'instagramUrl', title: 'Instagram URL', type: 'url' }),
+    defineField({ name: 'linkedinUrl', title: 'LinkedIn URL', type: 'url' }),
     defineField({
       name: 'selectedClients',
       title: 'Selected Clients (for homepage credentials section)',

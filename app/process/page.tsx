@@ -1,6 +1,9 @@
+export const revalidate = 0;
+
 import Link from 'next/link';
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
+import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
 export const metadata = {
@@ -93,7 +96,9 @@ const PARALLAX_IMAGES = [
   '/images/Site%20Supervision.png',         // after Technical Documentation
 ];
 
-export default function ProcessPage() {
+export default async function ProcessPage() {
+  const settings = await getSiteSettings();
+  const whatsapp = settings?.whatsapp ?? STUDIO.whatsappNumber;
   return (
     <>
       {/* Page hero */}
@@ -171,7 +176,7 @@ export default function ProcessPage() {
           <div className={styles.ctaLinks}>
             <Link href="/contact" className={styles.ctaPrimary}>Get in Touch →</Link>
             <a
-              href={`https://wa.me/${STUDIO.whatsappNumber}?text=${encodeURIComponent("Hi, I'd like to learn more about how Team Design works and discuss a potential project.")}`}
+              href={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Hi, I'd like to learn more about how Team Design works and discuss a potential project.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaWhatsApp}

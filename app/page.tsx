@@ -8,13 +8,14 @@ import FadeIn from '@/components/FadeIn';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
-import { STATS, WARM_BLUR } from '@/lib/siteContent';
-import { getFeaturedProjects, getTestimonials } from '@/lib/sanity';
+import { WARM_BLUR } from '@/lib/siteContent';
+import { getFeaturedProjects, getTestimonials, getSiteSettings } from '@/lib/sanity';
 
 export default async function HomePage() {
-  const [featuredProjects, testimonials] = await Promise.all([
+  const [featuredProjects, testimonials, settings] = await Promise.all([
     getFeaturedProjects(),
     getTestimonials(),
+    getSiteSettings(),
   ]);
 
   // Safety guard — don't render the portfolio section until we have projects
@@ -42,7 +43,12 @@ export default async function HomePage() {
         </section>
 
         <section className={styles.statBar}>
-          {STATS.map((stat, i) => (
+          {[
+            { value: settings?.yearsInPractice ?? '25+',       label: 'Years in Practice' },
+            { value: settings?.projectCount    ?? '300+',      label: 'Projects Completed' },
+            { value: settings?.clientCount     ?? '500+',      label: 'Clients Served' },
+            { value: settings?.sqftCompleted   ?? '20L+ sq ft', label: 'Built Space' },
+          ].map((stat, i) => (
             <FadeIn key={i} delay={i * 0.1} direction="up">
               <div className={styles.stat}>
                 <span className={styles.statValue}>{stat.value}</span>
