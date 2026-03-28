@@ -17,6 +17,9 @@
   --size-meta: 10px;
 
   /* Tracking */
+  --tracking-display: -0.02em;   /* 48px+ display headings — tightens optical gaps */
+  --tracking-heading: -0.01em;   /* 28–48px section/sub headings */
+  --tracking-body: 0.015em;      /* body copy — opens light-weight sans for legibility */
   --tracking-nav: 0.12em;
   --tracking-label: 0.16em;
   --tracking-wordmark: 0.04em;

@@ -239,6 +239,7 @@
   font-size: var(--size-h2);
   font-weight: 300;
   line-height: var(--lh-display);
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 12px;
 }
@@ -348,6 +349,7 @@
   font-weight: 300;
   color: rgba(244, 238, 230, 0.97);
   line-height: 1.2;
+  letter-spacing: var(--tracking-heading);
   margin-bottom: 14px;
   text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 4px 20px rgba(0,0,0,0.35);
 }
@@ -535,6 +537,7 @@
   font-size: clamp(22px, 2.4vw, 32px);
   font-weight: 300;
   line-height: 1.5;
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
 }
 
@@ -678,6 +681,7 @@
   font-size: clamp(36px, 3.5vw, 48px);
   font-weight: 300;
   line-height: 1.1;
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 12px;
 }
@@ -687,6 +691,7 @@
   font-size: var(--size-body);
   font-weight: 300;
   line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
   color: var(--color-text-secondary);
   max-width: var(--body-max-width);
 }
@@ -748,6 +753,7 @@
   font-size: var(--size-h2);
   font-weight: 300;
   line-height: 1.12;
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 12px;
 }
@@ -832,6 +838,7 @@
   font-size: var(--size-h2);
   font-weight: 300;
   line-height: 1.15;
+  letter-spacing: var(--tracking-heading);
   color: rgba(244, 238, 230, 0.95);
 }
 

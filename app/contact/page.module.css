@@ -17,6 +17,8 @@
   font-family: var(--font-serif);
   font-size: var(--size-hero);
   font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
   color: var(--color-text-primary);
   margin-bottom: 24px;
 }
@@ -28,6 +30,7 @@
   color: var(--color-text-secondary);
   max-width: 520px;
   line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
 }
 
 .layout {

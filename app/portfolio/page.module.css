@@ -18,6 +18,7 @@
   font-size: var(--size-hero);
   font-weight: 300;
   line-height: 1.05;
+  letter-spacing: var(--tracking-display);
   color: var(--color-text-primary);
   margin-bottom: 24px;
 }
@@ -27,6 +28,7 @@
   font-size: var(--size-body);
   font-weight: 300;
   line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
   color: var(--color-text-secondary);
   max-width: 520px;
 }

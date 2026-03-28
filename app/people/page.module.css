@@ -17,6 +17,8 @@
   font-family: var(--font-serif);
   font-size: var(--size-hero);
   font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
   color: var(--color-text-primary);
   margin-bottom: 24px;
 }
@@ -28,6 +30,7 @@
   color: var(--color-text-secondary);
   max-width: 480px;
   line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
 }
 
 /* ─── Principal ──────────────────────────────────────────────── */
@@ -69,6 +72,8 @@
   font-family: var(--font-serif);
   font-size: clamp(36px, 3.5vw, 48px);
   font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 4px;
 }
@@ -85,6 +90,7 @@
   font-size: var(--size-body);
   font-weight: 300;
   line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
   color: var(--color-text-secondary);
   max-width: var(--body-max-width);
 }
@@ -131,6 +137,8 @@
   font-family: var(--font-serif);
   font-size: var(--size-h2);
   font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 12px;
 }
@@ -182,6 +190,8 @@
   font-family: var(--font-serif);
   font-size: var(--size-h2);
   font-weight: 300;
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-top: 12px;
 }
