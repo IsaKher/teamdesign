@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import FadeImage from '@/components/FadeImage';
+import Image from 'next/image';
 import FadeUpReveal from '@/components/FadeUpReveal';
 import styles from './page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
@@ -80,7 +80,7 @@ function PortfolioContent({ projects }: Props) {
           >
             <div className={styles.cardImage}>
               {project.image ? (
-                <FadeImage
+                <Image
                   src={project.image}
                   alt={project.title}
                   fill
