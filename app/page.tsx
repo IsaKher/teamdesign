@@ -50,12 +50,10 @@ export default async function HomePage() {
             { value: settings?.clientCount     ?? '500+',      label: 'Clients Served' },
             { value: settings?.sqftCompleted   ?? '20L+ sq ft', label: 'Built Space' },
           ].map((stat, i) => (
-            <FadeIn key={i} delay={i * 0.1} direction="up">
-              <div className={styles.stat}>
-                <span className={styles.statValue}>{stat.value}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
-              </div>
-            </FadeIn>
+            <div key={i} className={styles.stat}>
+              <span className={styles.statValue}>{stat.value}</span>
+              <span className={styles.statLabel}>{stat.label}</span>
+            </div>
           ))}
         </section>
       </div>
