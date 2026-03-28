@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeIn from '@/components/FadeIn';
+import FadeUpReveal from '@/components/FadeUpReveal';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
@@ -61,15 +62,15 @@ export default async function HomePage() {
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
       <section className={styles.portfolioSection}>
-        <FadeIn direction="up">
-        <div className={styles.sectionHeader}>
-          <div>
-            <span className="label">Portfolio</span>
-            <h2 className={styles.sectionTitle}>Selected Work</h2>
+        <FadeUpReveal>
+          <div className={styles.sectionHeader}>
+            <div>
+              <span className="label">Portfolio</span>
+              <h2 className={styles.sectionTitle}>Selected Work</h2>
+            </div>
+            <Link href="/portfolio" className={styles.viewAll}>View Portfolio →</Link>
           </div>
-          <Link href="/portfolio" className={styles.viewAll}>View Portfolio →</Link>
-        </div>
-        </FadeIn>
+        </FadeUpReveal>
 
         <div className={styles.categoryLinks}>
           <Link href="/portfolio?type=Residential" className={styles.categoryLink}>Residential</Link>
@@ -81,7 +82,7 @@ export default async function HomePage() {
         {hasFeatured && <div className={styles.projectGrid}>
 
           {/* ── Lead project — full-width cinematic strip ── */}
-          <FadeIn direction="up">
+          <FadeUpReveal>
             <Link href={`/portfolio/${featuredProjects[0].slug}`} className={styles.projectHeroCard}>
               <div className={styles.projectHeroImageWrap}>
                 {featuredProjects[0].image && (
@@ -106,12 +107,12 @@ export default async function HomePage() {
                 </div>
               </div>
             </Link>
-          </FadeIn>
+          </FadeUpReveal>
 
           {/* ── Supporting three ── */}
           <div className={styles.projectRow}>
             {featuredProjects.slice(1).map((project, i) => (
-              <FadeIn key={project.slug} delay={i * 0.12} direction="up">
+              <FadeUpReveal key={project.slug} delay={i * 0.1}>
                 <Link href={`/portfolio/${project.slug}`} className={styles.projectCard}>
                   <div className={styles.projectImageWrap}>
                     {project.image && <Image
@@ -135,7 +136,7 @@ export default async function HomePage() {
                     <span className={styles.projectClient}>{project.client} · {project.location}</span>
                   </div>
                 </Link>
-              </FadeIn>
+              </FadeUpReveal>
             ))}
           </div>
 
@@ -156,21 +157,21 @@ export default async function HomePage() {
           <div className={styles.recognitionCol}>
             <span className="label">Press &amp; Recognition</span>
             <div className={styles.recognitionLines}>
-              <FadeIn direction="up" delay={0}>
+              <FadeUpReveal delay={0}>
                 <p className={styles.recognitionLine}>
                   Named one of India&apos;s 50 Most Talented Young Architects Under 35 by <em>Architects &amp; Interiors India</em>.
                 </p>
-              </FadeIn>
-              <FadeIn direction="up" delay={0.1}>
+              </FadeUpReveal>
+              <FadeUpReveal delay={0.1}>
                 <p className={styles.recognitionLine}>
                   Honoured at the <em>iGEN Design Forum</em> among 50 young practitioners shaping Indian architecture.
                 </p>
-              </FadeIn>
-              <FadeIn direction="up" delay={0.2}>
+              </FadeUpReveal>
+              <FadeUpReveal delay={0.2}>
                 <p className={styles.recognitionLine}>
                   Featured in <em>DuPont India &amp; Corian®</em> Women Leadership in Architecture &amp; Design.
                 </p>
-              </FadeIn>
+              </FadeUpReveal>
             </div>
           </div>
 
@@ -194,7 +195,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className={styles.principalTextCol}>
+          <FadeUpReveal delay={0.1} className={styles.principalTextCol}>
             <span className="label">Principal Architect</span>
             <h2 className={styles.principalName}>Tasadduq Kher</h2>
             <p className={styles.principalBio}>
@@ -214,7 +215,7 @@ export default async function HomePage() {
               </div>
             </div>
             <Link href="/people" className={styles.principalLink}>Meet the Team →</Link>
-          </div>
+          </FadeUpReveal>
         </div>
       </section>
 

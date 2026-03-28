@@ -31,6 +31,7 @@ export default function Footer() {
         <nav className={styles.nav} aria-label="Footer navigation">
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/studio">Studio</Link>
+          <Link href="/process">Process</Link>
           <Link href="/people">Team</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/careers">Careers</Link>

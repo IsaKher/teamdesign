@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import FadeImage from '@/components/FadeImage';
+import FadeUpReveal from '@/components/FadeUpReveal';
 import styles from './page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 import type { SanityProject } from '@/lib/sanity';
@@ -70,9 +71,9 @@ function PortfolioContent({ projects }: Props) {
             <button className={styles.filterBtn} onClick={() => setActive('All')}>View all projects →</button>
           </div>
         )}
-        {filtered.map((project) => (
+        {filtered.map((project, i) => (
+          <FadeUpReveal key={project.slug} delay={(i % 3) * 0.08}>
           <Link
-            key={project.slug}
             href={`/portfolio/${project.slug}`}
             className={styles.card}
             onClick={() => sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))}
@@ -107,6 +108,7 @@ function PortfolioContent({ projects }: Props) {
               </div>
             </div>
           </Link>
+          </FadeUpReveal>
         ))}
       </div>
     </>
