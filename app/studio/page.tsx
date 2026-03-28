@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { CORE_VALUES, SERVICES } from '@/lib/siteContent';
+import { CORE_VALUES, SERVICES, WARM_BLUR } from '@/lib/siteContent';
 import DrawingSection from './DrawingSection';
 
 export const metadata = { title: 'Studio' };
@@ -52,6 +52,8 @@ export default function StudioPage() {
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 style={{ objectFit: 'cover' }}
+                placeholder="blur"
+                blurDataURL={WARM_BLUR}
               />
             </div>
             <div className={styles.storyStats}>

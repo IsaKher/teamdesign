@@ -36,7 +36,7 @@ export default async function PeoplePage() {
                 sizes="(max-width: 768px) 100vw, 40vw"
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
                 placeholder="blur"
-                blurDataURL={WARM_BLUR}
+                blurDataURL={principal.photoLqip ?? WARM_BLUR}
               />
             </div>
             <div className={styles.principalText}>

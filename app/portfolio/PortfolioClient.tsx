@@ -87,7 +87,7 @@ function PortfolioContent({ projects }: Props) {
                   style={{ objectFit: 'cover' }}
                   className={styles.img}
                   placeholder="blur"
-                  blurDataURL={WARM_BLUR}
+                  blurDataURL={project.lqip ?? WARM_BLUR}
                 />
               ) : (
                 <div className={styles.imagePlaceholder} />

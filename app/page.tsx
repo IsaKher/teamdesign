@@ -94,7 +94,7 @@ export default async function HomePage() {
                     style={{ objectFit: 'cover' }}
                     className={styles.projectHeroImage}
                     placeholder="blur"
-                    blurDataURL={WARM_BLUR}
+                    blurDataURL={featuredProjects[0].lqip ?? WARM_BLUR}
                   />
                 )}
                 <div className={styles.projectHeroOverlay} />
@@ -122,7 +122,7 @@ export default async function HomePage() {
                       style={{ objectFit: 'cover' }}
                       className={styles.projectImage}
                       placeholder="blur"
-                      blurDataURL={WARM_BLUR}
+                      blurDataURL={project.lqip ?? WARM_BLUR}
                     />}
                     <div className={styles.projectOverlay}>
                       <span className={styles.viewHint}>View →</span>

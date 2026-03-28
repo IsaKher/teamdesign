@@ -13,8 +13,8 @@ export interface Testimonial {
 
 export type ContentBlock =
   | { type: 'paragraph'; text: string }
-  | { type: 'fullWidthImage'; src: string; caption?: string }
-  | { type: 'halfWidthImages'; images: [string, string]; captions?: [string, string] }
+  | { type: 'fullWidthImage'; src: string; caption?: string; lqip?: string | null }
+  | { type: 'halfWidthImages'; images: [string, string]; captions?: [string, string]; lqips?: [string | null | undefined, string | null | undefined] }
   | { type: 'pullQuote'; text: string };
 
 export interface Project {

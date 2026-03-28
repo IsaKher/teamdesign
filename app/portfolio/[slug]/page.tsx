@@ -103,7 +103,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
               sizes="100vw"
               style={{ objectFit: 'cover' }}
               placeholder="blur"
-              blurDataURL={WARM_BLUR}
+              blurDataURL={project.mainImageLqip ?? WARM_BLUR}
             />
           ) : (
             <div style={{ position: 'absolute', inset: 0, background: 'var(--color-surface)' }} />
@@ -226,7 +226,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                     sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                     placeholder="blur"
-                    blurDataURL={WARM_BLUR}
+                    blurDataURL={r.lqip ?? WARM_BLUR}
                   />
                 </div>
                 <span className={styles.relatedType}>{r.type}</span>
@@ -259,7 +259,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
               sizes="100vw"
               style={{ objectFit: 'cover' }}
               placeholder="blur"
-              blurDataURL={WARM_BLUR}
+              blurDataURL={nextProj.mainImageLqip ?? WARM_BLUR}
               className={styles.nextProjectImage}
             />
           ) : (

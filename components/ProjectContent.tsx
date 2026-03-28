@@ -70,7 +70,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
                           sizes="100vw"
                           style={{ objectFit: 'cover' }}
                           placeholder="blur"
-                          blurDataURL={WARM_BLUR}
+                          blurDataURL={block.lqip ?? WARM_BLUR}
                         />
                       </div>
                       {block.caption && (
@@ -99,7 +99,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 style={{ objectFit: 'cover' }}
                                 placeholder="blur"
-                                blurDataURL={WARM_BLUR}
+                                blurDataURL={block.lqips?.[j] ?? WARM_BLUR}
                               />
                             </div>
                             {block.captions?.[j] && (

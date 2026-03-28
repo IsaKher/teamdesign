@@ -28,6 +28,7 @@ export interface SanityProject {
   year: number;
   area: string;
   image: string | null;
+  lqip: string | null;
 }
 
 export interface SanityProjectDetail {
@@ -39,10 +40,11 @@ export interface SanityProjectDetail {
   area: string;
   description: string;
   mainImage: string | null;
+  mainImageLqip: string | null;
   gallery: string[];
   contentBlocks: ContentBlock[];
   testimonial: { quote: string; author: string; title: string } | null;
-  related: { slug: string; title: string; type: string; image: string | null }[];
+  related: { slug: string; title: string; type: string; image: string | null; lqip: string | null }[];
 }
 
 // ─── Site Settings ───────────────────────────────────────────────────────────
@@ -117,6 +119,7 @@ export interface SanityFeaturedProject {
   type: string;
   location: string;
   image: string | null;
+  lqip: string | null;
   tagline: string;
 }
 
@@ -127,10 +130,13 @@ interface RawSanityBlock {
   _type: string;
   text?: string;
   imageUrl?: string | null;
+  imageLqip?: string | null;
   caption?: string;
   imageLeftUrl?: string | null;
+  imageLeftLqip?: string | null;
   captionLeft?: string;
   imageRightUrl?: string | null;
+  imageRightLqip?: string | null;
   captionRight?: string;
 }
 
@@ -145,13 +151,14 @@ function transformContentBlocks(raw: RawSanityBlock[]): ContentBlock[] {
           return { type: 'pullQuote', text: block.text ?? '' };
         case 'fullWidthImageBlock':
           if (!block.imageUrl) return null;
-          return { type: 'fullWidthImage', src: block.imageUrl, caption: block.caption };
+          return { type: 'fullWidthImage', src: block.imageUrl, caption: block.caption, lqip: block.imageLqip };
         case 'halfWidthImagesBlock':
           if (!block.imageLeftUrl || !block.imageRightUrl) return null;
           return {
             type: 'halfWidthImages',
             images: [block.imageLeftUrl, block.imageRightUrl],
             captions: [block.captionLeft ?? '', block.captionRight ?? ''],
+            lqips: [block.imageLeftLqip, block.imageRightLqip],
           };
         default:
           return null;
@@ -184,7 +191,8 @@ export async function getAllProjects(): Promise<SanityProject[]> {
       location,
       year,
       area,
-      "image": mainImage.asset->url
+      "image": mainImage.asset->url,
+      "lqip": mainImage.asset->metadata.lqip
     }`,
     {},
     { next: { tags: [CACHE_TAG] } }
@@ -203,15 +211,19 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
       area,
       description,
       "mainImage": mainImage.asset->url,
+      "mainImageLqip": mainImage.asset->metadata.lqip,
       "gallery": gallery[].asset->url,
       "contentBlocks": contentBlocks[] {
         _type,
         text,
         "imageUrl": image.asset->url,
+        "imageLqip": image.asset->metadata.lqip,
         caption,
         "imageLeftUrl": imageLeft.asset->url,
+        "imageLeftLqip": imageLeft.asset->metadata.lqip,
         captionLeft,
         "imageRightUrl": imageRight.asset->url,
+        "imageRightLqip": imageRight.asset->metadata.lqip,
         captionRight
       },
       "testimonial": testimonial-> {
@@ -223,7 +235,8 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
         "slug": slug.current,
         title,
         "type": projectType,
-        "image": mainImage.asset->url
+        "image": mainImage.asset->url,
+        "lqip": mainImage.asset->metadata.lqip
       }
     }`,
     { slug },
@@ -241,14 +254,15 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
 }
 
 /** Lightweight list for prev/next navigation — only published */
-export async function getAllProjectsForNav(): Promise<{ slug: string; title: string; type: string; location: string; mainImage: string | null }[]> {
+export async function getAllProjectsForNav(): Promise<{ slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }[]> {
   return client.fetch(
     `*[_type == "project" && isPublished == true] | order(orderRank asc) {
       "slug": slug.current,
       title,
       "type": projectType,
       location,
-      "mainImage": mainImage.asset->url
+      "mainImage": mainImage.asset->url,
+      "mainImageLqip": mainImage.asset->metadata.lqip
     }`,
     {},
     { next: { tags: [CACHE_TAG] } }
@@ -265,6 +279,7 @@ export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
       "type": projectType,
       location,
       "image": mainImage.asset->url,
+      "lqip": mainImage.asset->metadata.lqip,
       "tagline": shortDescription
     }`,
     {},
@@ -283,6 +298,7 @@ export interface SanityTeamMember {
   award: string | null;
   founding: number | null;
   photoUrl: string | null;
+  photoLqip: string | null;
   orderRank: number;
 }
 
@@ -298,6 +314,7 @@ export async function getTeamMembers(): Promise<SanityTeamMember[]> {
       award,
       founding,
       "photoUrl": photo.asset->url,
+      "photoLqip": photo.asset->metadata.lqip,
       orderRank
     }`,
     {},
