@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import FadeIn from './FadeIn';
 import FadeImage from './FadeImage';
 import Image from 'next/image';
 import Lightbox, { LightboxImage } from './Lightbox';
@@ -48,78 +47,70 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
             switch (block.type) {
               case 'paragraph':
                 return (
-                  <FadeIn key={i} direction="up">
-                    <div className={styles.blockPara}>
-                      <p className={styles.blockParaText}>{block.text}</p>
-                    </div>
-                  </FadeIn>
+                  <div key={i} className={styles.blockPara}>
+                    <p className={styles.blockParaText}>{block.text}</p>
+                  </div>
                 );
               case 'fullWidthImage': {
                 const idx = imageIndexMap.get(block.src) ?? 0;
                 return (
-                  <FadeIn key={i} direction="up" threshold={0.05}>
-                    <div className={styles.blockFullImage}>
-                      <div
-                        className={`${styles.blockFullImageWrap} ${styles.clickable}`}
-                        onClick={() => setLightboxIndex(idx)}
-                      >
-                        <FadeImage
-                          src={block.src}
-                          alt={block.alt ?? block.caption ?? `${projectTitle} — image ${i + 1}`}
-                          fill
-                          sizes="100vw"
-                          style={{ objectFit: 'cover' }}
-                          placeholder="blur"
-                          blurDataURL={block.lqip ?? WARM_BLUR}
-                        />
-                      </div>
-                      {block.caption && (
-                        <span className={styles.blockCaption}>{block.caption}</span>
-                      )}
+                  <div key={i} className={styles.blockFullImage}>
+                    <div
+                      className={`${styles.blockFullImageWrap} ${styles.clickable}`}
+                      onClick={() => setLightboxIndex(idx)}
+                    >
+                      <FadeImage
+                        src={block.src}
+                        alt={block.alt ?? block.caption ?? `${projectTitle} — image ${i + 1}`}
+                        fill
+                        sizes="100vw"
+                        style={{ objectFit: 'cover' }}
+                        placeholder="blur"
+                        blurDataURL={block.lqip ?? WARM_BLUR}
+                      />
                     </div>
-                  </FadeIn>
+                    {block.caption && (
+                      <span className={styles.blockCaption}>{block.caption}</span>
+                    )}
+                  </div>
                 );
               }
               case 'halfWidthImages':
                 return (
-                  <FadeIn key={i} direction="up" threshold={0.05}>
-                    <div className={styles.blockHalf}>
-                      {block.images.map((src, j) => {
-                        const idx = imageIndexMap.get(src) ?? 0;
-                        return (
-                          <div key={j} className={styles.blockHalfItem}>
-                            <div
-                              className={`${styles.blockHalfImageWrap} ${styles.clickable}`}
-                              onClick={() => setLightboxIndex(idx)}
-                            >
-                              <FadeImage
-                                src={src}
-                                alt={block.alts?.[j] ?? block.captions?.[j] ?? `${projectTitle} — image ${j + 1}`}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                style={{ objectFit: 'cover' }}
-                                placeholder="blur"
-                                blurDataURL={block.lqips?.[j] ?? WARM_BLUR}
-                              />
-                            </div>
-                            {block.captions?.[j] && (
-                              <span className={styles.blockCaption}>{block.captions[j]}</span>
-                            )}
+                  <div key={i} className={styles.blockHalf}>
+                    {block.images.map((src, j) => {
+                      const idx = imageIndexMap.get(src) ?? 0;
+                      return (
+                        <div key={j} className={styles.blockHalfItem}>
+                          <div
+                            className={`${styles.blockHalfImageWrap} ${styles.clickable}`}
+                            onClick={() => setLightboxIndex(idx)}
+                          >
+                            <FadeImage
+                              src={src}
+                              alt={block.alts?.[j] ?? block.captions?.[j] ?? `${projectTitle} — image ${j + 1}`}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                              style={{ objectFit: 'cover' }}
+                              placeholder="blur"
+                              blurDataURL={block.lqips?.[j] ?? WARM_BLUR}
+                            />
                           </div>
-                        );
-                      })}
-                    </div>
-                  </FadeIn>
+                          {block.captions?.[j] && (
+                            <span className={styles.blockCaption}>{block.captions[j]}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 );
               case 'pullQuote':
                 return (
-                  <FadeIn key={i} direction="up">
-                    <div className={styles.blockPullQuote}>
-                      <blockquote className={styles.blockPullQuoteText}>
-                        {block.text}
-                      </blockquote>
-                    </div>
-                  </FadeIn>
+                  <div key={i} className={styles.blockPullQuote}>
+                    <blockquote className={styles.blockPullQuoteText}>
+                      {block.text}
+                    </blockquote>
+                  </div>
                 );
               default:
                 return null;
@@ -142,27 +133,25 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
   if (gallery.length > 0) {
     return (
       <>
-        <FadeIn direction="up" threshold={0.05}>
-          <section className={styles.gallery}>
-            {gallery.map((img, i) => (
-              <div
-                key={i}
-                className={`${styles.galleryItem} ${i % 3 === 0 ? styles.galleryFull : ''} ${styles.clickable}`}
-                onClick={() => setLightboxIndex(i)}
-              >
-                <Image
-                  src={img.url}
-                  alt={img.alt ?? `${projectTitle}, gallery image ${i + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                  placeholder="blur"
-                  blurDataURL={WARM_BLUR}
-                />
-              </div>
-            ))}
-          </section>
-        </FadeIn>
+        <section className={styles.gallery}>
+          {gallery.map((img, i) => (
+            <div
+              key={i}
+              className={`${styles.galleryItem} ${i % 3 === 0 ? styles.galleryFull : ''} ${styles.clickable}`}
+              onClick={() => setLightboxIndex(i)}
+            >
+              <Image
+                src={img.url}
+                alt={img.alt ?? `${projectTitle}, gallery image ${i + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: 'cover' }}
+                placeholder="blur"
+                blurDataURL={WARM_BLUR}
+              />
+            </div>
+          ))}
+        </section>
 
         {lightboxIndex !== null && (
           <Lightbox

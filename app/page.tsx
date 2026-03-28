@@ -154,23 +154,19 @@ export default async function HomePage() {
           {/* Right — press recognition */}
           <div className={styles.recognitionCol}>
             <span className="label">Press &amp; Recognition</span>
-            <div className={styles.recognitionLines}>
-              <FadeUpReveal delay={0}>
+            <FadeUpReveal>
+              <div className={styles.recognitionLines}>
                 <p className={styles.recognitionLine}>
                   Named one of India&apos;s 50 Most Talented Young Architects Under 35 by <em>Architects &amp; Interiors India</em>.
                 </p>
-              </FadeUpReveal>
-              <FadeUpReveal delay={0.1}>
                 <p className={styles.recognitionLine}>
                   Honoured at the <em>iGEN Design Forum</em> among 50 young practitioners shaping Indian architecture.
                 </p>
-              </FadeUpReveal>
-              <FadeUpReveal delay={0.2}>
                 <p className={styles.recognitionLine}>
                   Featured in <em>DuPont India &amp; Corian®</em> Women Leadership in Architecture &amp; Design.
                 </p>
-              </FadeUpReveal>
-            </div>
+              </div>
+            </FadeUpReveal>
           </div>
 
         </div>
