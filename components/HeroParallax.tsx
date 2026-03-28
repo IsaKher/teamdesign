@@ -1,19 +1,18 @@
 'use client';
-import { useEffect } from 'react';
+import { useRef } from 'react';
+import { useAnimationFrame } from 'framer-motion';
 
 export default function HeroParallax() {
-  useEffect(() => {
-    const imageWrap = document.querySelector('[data-hero-parallax]') as HTMLElement | null;
-    if (!imageWrap) return;
+  const imageWrapRef = useRef<HTMLElement | null>(null);
 
-    const handleScroll = () => {
-      const y = window.scrollY;
-      imageWrap.style.transform = `translateY(${y * 0.22}px)`;
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useAnimationFrame(() => {
+    // Resolve the element once, then reuse the ref
+    if (!imageWrapRef.current) {
+      imageWrapRef.current = document.querySelector('[data-hero-parallax]') as HTMLElement | null;
+    }
+    if (!imageWrapRef.current) return;
+    imageWrapRef.current.style.transform = `translateY(${window.scrollY * 0.22}px)`;
+  });
 
   return null;
 }
