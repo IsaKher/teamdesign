@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: ogTitle,
       description: desc,
       siteName: 'Team Design Architects',
-      ...(project.mainImage ? { images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.title }] } : {}),
+      ...(project.mainImage ? { images: [{ url: project.mainImage, width: 1200, height: 800, alt: project.mainImageAlt ?? project.title }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
@@ -84,11 +84,25 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
     url: `${BASE}/portfolio/${params.slug}`,
   };
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home',      item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${BASE}/portfolio` },
+      { '@type': 'ListItem', position: 3, name: project.title, item: `${BASE}/portfolio/${params.slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero */}
@@ -97,7 +111,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
           {project.mainImage ? (
             <Image
               src={project.mainImage}
-              alt={`${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
+              alt={project.mainImageAlt ?? `${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
               fill
               priority
               sizes="100vw"

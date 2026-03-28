@@ -40,8 +40,9 @@ export interface SanityProjectDetail {
   area: string;
   description: string;
   mainImage: string | null;
+  mainImageAlt: string | null;
   mainImageLqip: string | null;
-  gallery: string[];
+  gallery: { url: string; alt: string | null }[];
   contentBlocks: ContentBlock[];
   testimonial: { quote: string; author: string; title: string } | null;
   related: { slug: string; title: string; type: string; image: string | null; lqip: string | null }[];
@@ -130,12 +131,15 @@ interface RawSanityBlock {
   _type: string;
   text?: string;
   imageUrl?: string | null;
+  imageAlt?: string | null;
   imageLqip?: string | null;
   caption?: string;
   imageLeftUrl?: string | null;
+  imageLeftAlt?: string | null;
   imageLeftLqip?: string | null;
   captionLeft?: string;
   imageRightUrl?: string | null;
+  imageRightAlt?: string | null;
   imageRightLqip?: string | null;
   captionRight?: string;
 }
@@ -151,12 +155,13 @@ function transformContentBlocks(raw: RawSanityBlock[]): ContentBlock[] {
           return { type: 'pullQuote', text: block.text ?? '' };
         case 'fullWidthImageBlock':
           if (!block.imageUrl) return null;
-          return { type: 'fullWidthImage', src: block.imageUrl, caption: block.caption, lqip: block.imageLqip };
+          return { type: 'fullWidthImage', src: block.imageUrl, alt: block.imageAlt, caption: block.caption, lqip: block.imageLqip };
         case 'halfWidthImagesBlock':
           if (!block.imageLeftUrl || !block.imageRightUrl) return null;
           return {
             type: 'halfWidthImages',
             images: [block.imageLeftUrl, block.imageRightUrl],
+            alts: [block.imageLeftAlt, block.imageRightAlt],
             captions: [block.captionLeft ?? '', block.captionRight ?? ''],
             lqips: [block.imageLeftLqip, block.imageRightLqip],
           };
@@ -211,18 +216,22 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
       area,
       description,
       "mainImage": mainImage.asset->url,
+      "mainImageAlt": mainImage.alt,
       "mainImageLqip": mainImage.asset->metadata.lqip,
-      "gallery": gallery[].asset->url,
+      "gallery": gallery[]{ "url": asset->url, "alt": alt, "lqip": asset->metadata.lqip },
       "contentBlocks": contentBlocks[] {
         _type,
         text,
         "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
         "imageLqip": image.asset->metadata.lqip,
         caption,
         "imageLeftUrl": imageLeft.asset->url,
+        "imageLeftAlt": imageLeft.alt,
         "imageLeftLqip": imageLeft.asset->metadata.lqip,
         captionLeft,
         "imageRightUrl": imageRight.asset->url,
+        "imageRightAlt": imageRight.alt,
         "imageRightLqip": imageRight.asset->metadata.lqip,
         captionRight
       },
@@ -247,7 +256,7 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
 
   return {
     ...raw,
-    gallery: raw.gallery?.filter(Boolean) ?? [],
+    gallery: raw.gallery?.filter((g: { url: string | null }) => g?.url) ?? [],
     contentBlocks: transformContentBlocks(raw.contentBlocks ?? []),
     related: raw.related?.filter(Boolean) ?? [],
   };
@@ -298,6 +307,7 @@ export interface SanityTeamMember {
   award: string | null;
   founding: number | null;
   photoUrl: string | null;
+  photoAlt: string | null;
   photoLqip: string | null;
   orderRank: number;
 }
@@ -314,6 +324,7 @@ export async function getTeamMembers(): Promise<SanityTeamMember[]> {
       award,
       founding,
       "photoUrl": photo.asset->url,
+      "photoAlt": photo.alt,
       "photoLqip": photo.asset->metadata.lqip,
       orderRank
     }`,

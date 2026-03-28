@@ -104,7 +104,6 @@ const schemaOrgJsonLd = {
       },
       areaServed: [
         { '@type': 'City', name: 'Mumbai' },
-        { '@type': 'City', name: 'Mumbai' },
         { '@type': 'State', name: 'Maharashtra' },
         { '@type': 'Country', name: 'India' },
       ],
@@ -131,6 +130,22 @@ const schemaOrgJsonLd = {
         '@type': 'EducationalOrganization',
         name: 'Rachana Sansad Academy of Architecture',
         address: { '@type': 'PostalAddress', addressLocality: 'Mumbai' },
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://teamdesign.in/#website',
+      url: 'https://teamdesign.in',
+      name: 'Team Design Architects',
+      description: 'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
+      publisher: { '@id': 'https://teamdesign.in/#business' },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://teamdesign.in/portfolio?type={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
       },
     },
   ],

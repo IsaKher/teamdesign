@@ -26,7 +26,7 @@ export default defineType({
     defineField({ name: 'education', title: 'Education / Credentials', type: 'string' }),
     defineField({ name: 'award', title: 'Award / Recognition (optional)', type: 'string' }),
     defineField({ name: 'founding', title: 'Practice Founded Year (principal only)', type: 'number' }),
-    defineField({ name: 'photo', title: 'Photo', type: 'image', options: { hotspot: true } }),
+    defineField({ name: 'photo', title: 'Photo', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] }),
     defineField({ name: 'orderRank', title: 'Display Order', type: 'number' }),
   ],
   preview: {

@@ -10,7 +10,7 @@ import type { ContentBlock } from '@/lib/projectData';
 
 interface Props {
   contentBlocks?: ContentBlock[];
-  gallery: string[];
+  gallery: { url: string; alt: string | null }[];
   projectTitle: string;
 }
 
@@ -31,8 +31,8 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
       }
     });
   } else {
-    gallery.forEach((src) => {
-      allImages.push({ src });
+    gallery.forEach((img) => {
+      allImages.push({ src: img.url });
     });
   }
 
@@ -65,7 +65,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
                       >
                         <FadeImage
                           src={block.src}
-                          alt={block.caption ?? `${projectTitle} — image ${i + 1}`}
+                          alt={block.alt ?? block.caption ?? `${projectTitle} — image ${i + 1}`}
                           fill
                           sizes="100vw"
                           style={{ objectFit: 'cover' }}
@@ -94,7 +94,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
                             >
                               <FadeImage
                                 src={src}
-                                alt={block.captions?.[j] ?? `${projectTitle} — image ${j + 1}`}
+                                alt={block.alts?.[j] ?? block.captions?.[j] ?? `${projectTitle} — image ${j + 1}`}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 style={{ objectFit: 'cover' }}
@@ -144,15 +144,15 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
       <>
         <FadeIn direction="up" threshold={0.05}>
           <section className={styles.gallery}>
-            {gallery.map((src, i) => (
+            {gallery.map((img, i) => (
               <div
                 key={i}
                 className={`${styles.galleryItem} ${i % 3 === 0 ? styles.galleryFull : ''} ${styles.clickable}`}
                 onClick={() => setLightboxIndex(i)}
               >
                 <Image
-                  src={src}
-                  alt={`${projectTitle}, gallery image ${i + 1}`}
+                  src={img.url}
+                  alt={img.alt ?? `${projectTitle}, gallery image ${i + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}

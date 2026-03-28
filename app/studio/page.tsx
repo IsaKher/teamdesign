@@ -1,9 +1,27 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import styles from './page.module.css';
 import { CORE_VALUES, SERVICES, WARM_BLUR } from '@/lib/siteContent';
 import DrawingSection from './DrawingSection';
 
-export const metadata = { title: 'Studio' };
+export const metadata: Metadata = {
+  title: 'Studio',
+  description: 'Twenty-five years of architecture and interiors — built across India, rooted in Mumbai. Learn about the Team Design practice, our values, and our services.',
+  keywords: ['architecture studio Mumbai', 'architecture practice India', 'Team Design history', 'Mumbai architect studio'],
+  alternates: { canonical: 'https://teamdesign.in/studio' },
+  openGraph: {
+    title: 'Studio — Team Design Architects',
+    description: 'Twenty-five years of architecture and interiors — built across India, rooted in Mumbai.',
+    url: 'https://teamdesign.in/studio',
+    images: [{ url: 'https://teamdesign.in/studio-story.webp', width: 1200, height: 800, alt: 'Team Design Studio — Architecture & Interiors, Mumbai' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Studio — Team Design Architects',
+    description: 'Twenty-five years of architecture and interiors — built across India, rooted in Mumbai.',
+    images: ['https://teamdesign.in/studio-story.webp'],
+  },
+};
 
 export default function StudioPage() {
   return (

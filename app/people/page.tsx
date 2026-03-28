@@ -1,6 +1,26 @@
 export const revalidate = 0;
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'People',
+  description: 'Meet the team behind Team Design Architects — led by Principal Architect Tasadduq Kher. 25+ years building across Mumbai, Maharashtra, and India.',
+  keywords: ['Team Design Architects team', 'Tasadduq Kher architect', 'Mumbai architecture firm team', 'principal architect Mumbai'],
+  alternates: { canonical: 'https://teamdesign.in/people' },
+  openGraph: {
+    title: 'People — Team Design Architects',
+    description: 'Meet the team behind Team Design Architects — led by Principal Architect Tasadduq Kher. 25+ years building across Mumbai and India.',
+    url: 'https://teamdesign.in/people',
+    images: [{ url: 'https://teamdesign.in/tasadduq-kher.webp', width: 900, height: 1200, alt: 'Tasadduq Kher — Principal Architect, Team Design' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'People — Team Design Architects',
+    description: 'Meet the team behind Team Design Architects, led by Principal Architect Tasadduq Kher.',
+    images: ['https://teamdesign.in/tasadduq-kher.webp'],
+  },
+};
 import MemberImage from './MemberImage';
 import styles from './page.module.css';
 import { getTeamMembers, type SanityTeamMember } from '@/lib/sanity';
@@ -30,7 +50,7 @@ export default async function PeoplePage() {
             <div className={styles.principalImage}>
               <Image
                 src={principal.photoUrl ?? '/tasadduq-kher.webp'}
-                alt={principal.name}
+                alt={principal.photoAlt ?? `${principal.name} — Principal Architect, Team Design`}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 40vw"

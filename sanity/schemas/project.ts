@@ -35,7 +35,7 @@ export default defineType({
       to: [{ type: 'testimonial' }],
     }),
     defineField({ name: 'mainImage', title: 'Main Image', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] }),
-    defineField({ name: 'gallery', title: 'Photo Gallery', type: 'array', of: [{ type: 'image', options: { hotspot: true } }] }),
+    defineField({ name: 'gallery', title: 'Photo Gallery', type: 'array', of: [{ type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] }] }),
     defineField({
       name: 'contentBlocks',
       title: 'Content Blocks (Project Detail Layout)',
@@ -55,7 +55,7 @@ export default defineType({
           name: 'fullWidthImageBlock',
           title: 'Full Width Image',
           fields: [
-            { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
+            { name: 'image', title: 'Image', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] },
             { name: 'caption', title: 'Caption', type: 'string' },
           ],
           preview: { select: { title: 'caption', media: 'image' } },
@@ -65,9 +65,9 @@ export default defineType({
           name: 'halfWidthImagesBlock',
           title: 'Half Width Images (2-up)',
           fields: [
-            { name: 'imageLeft', title: 'Left Image', type: 'image', options: { hotspot: true } },
+            { name: 'imageLeft', title: 'Left Image', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] },
             { name: 'captionLeft', title: 'Left Caption', type: 'string' },
-            { name: 'imageRight', title: 'Right Image', type: 'image', options: { hotspot: true } },
+            { name: 'imageRight', title: 'Right Image', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] },
             { name: 'captionRight', title: 'Right Caption', type: 'string' },
           ],
           preview: { select: { title: 'captionLeft', media: 'imageLeft' } },

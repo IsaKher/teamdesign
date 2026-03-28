@@ -6,10 +6,25 @@ import FadeIn from '@/components/FadeIn';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
-export const metadata = {
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'How We Work',
-  description:
-    'The Team Design process — from first meeting to handover. Discover how we approach Discovery, Concept, Design Development, Technical Documentation, and Site Supervision.',
+  description: 'The Team Design process — from first meeting to handover. Discover how we approach Discovery, Concept, Design Development, Technical Documentation, and Site Supervision.',
+  keywords: ['architecture design process', 'how architects work', 'Team Design process', 'architecture project phases Mumbai'],
+  alternates: { canonical: 'https://teamdesign.in/process' },
+  openGraph: {
+    title: 'How We Work — Team Design Architects',
+    description: 'From first meeting to handover — the five phases of the Team Design process.',
+    url: 'https://teamdesign.in/process',
+    images: [{ url: 'https://teamdesign.in/studio-sketch.webp', width: 1200, height: 800, alt: 'Team Design — Architectural Process & Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How We Work — Team Design Architects',
+    description: 'From first meeting to handover — the five phases of the Team Design process.',
+    images: ['https://teamdesign.in/studio-sketch.webp'],
+  },
 };
 
 const PHASES = [
