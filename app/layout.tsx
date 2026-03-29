@@ -4,7 +4,6 @@ import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import CustomCursor from '@/components/CustomCursor';
 import SmoothScroll from '@/components/SmoothScroll';
 
 const cormorant = Cormorant_Garamond({
@@ -161,7 +160,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <CustomCursor />
         <SmoothScroll />
         <Navigation />
         <main>{children}</main>
