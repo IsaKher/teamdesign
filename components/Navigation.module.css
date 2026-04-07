@@ -104,13 +104,6 @@
   gap: clamp(16px, 2.2vw, 40px);
 }
 
-/* Wrapper for each link — needed for hover events */
-.navItem {
-  display: flex;
-  align-items: center;
-  height: var(--nav-height);
-}
-
 .link {
   font-family: var(--font-sans);
   font-size: var(--size-nav);
@@ -132,52 +125,6 @@
 .active { opacity: 1; }
 .transparent .active { color: rgba(244, 238, 230, 1) !important; }
 .solid .active        { color: var(--color-text-primary) !important; }
-
-/* ─── Sub-row — nav bar extension ──────────────────────────── */
-/*
- * Sits directly below .inner inside the same <header>.
- * Because it shares the header's background, the extension looks
- * like one seamless widening of the nav bar.
- */
-.subRow {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0 clamp(24px, 5vw, 72px);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.22s ease, opacity 0.18s ease;
-  box-sizing: border-box;
-}
-
-.subRowVisible {
-  max-height: 56px;
-  opacity: 1;
-}
-
-/* Subtle separator between main row and sub-row */
-.transparent .subRowVisible { border-top: 1px solid rgba(244, 238, 230, 0.08); }
-.solid .subRowVisible        { border-top: 1px solid var(--color-rule); }
-
-.subLink {
-  font-family: var(--font-sans);
-  font-size: var(--size-nav);
-  font-weight: 400;
-  letter-spacing: var(--tracking-nav);
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 16px 0;
-  white-space: nowrap;
-  transition: color 0.18s ease;
-}
-
-.transparent .subLink { color: rgba(244, 238, 230, 0.60); }
-.solid .subLink        { color: var(--color-text-secondary); }
-
-.transparent .subLink:hover { color: rgba(244, 238, 230, 1); }
-.solid .subLink:hover        { color: var(--color-text-primary); }
 
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {
@@ -218,26 +165,6 @@
   border-bottom: 1px solid var(--color-rule);
 }
 
-.mobileSublinks {
-  display: flex;
-  flex-direction: column;
-  padding: 4px 0 12px 0;
-  border-bottom: 1px solid var(--color-rule);
-}
-
-.mobileSublinkItem {
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  padding: 8px 0 8px 24px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.mobileSublinkItem:hover { color: var(--color-text-primary); }
-
 .mobileContact {
   margin-top: 24px;
 }
@@ -259,7 +186,6 @@
 
 @media (max-width: 768px) {
   .linksRight { display: none; }
-  .subRow     { display: none; }
   .burger     { display: flex; }
 
   /* Slide-in backdrop */

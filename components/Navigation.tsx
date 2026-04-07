@@ -8,27 +8,16 @@ import styles from './Navigation.module.css';
 import { STUDIO } from '@/lib/siteContent';
 
 const navItems = [
-  {
-    label: 'Portfolio',
-    href: '/portfolio',
-  },
-  {
-    label: 'Studio',
-    href: '/studio',
-    dropdown: [
-      { label: 'Team',    href: '/people'  },
-      { label: 'Process', href: '/process' },
-    ],
-  },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Studio',    href: '/studio'    },
+  { label: 'Process',   href: '/process'   },
+  { label: 'Team',      href: '/people'    },
+  { label: 'Contact',   href: '/contact'   },
 ];
 
-const rightItems = navItems;
-
 export default function Navigation() {
-  const [scrolled, setScrolled]       = useState(false);
-  const [menuOpen, setMenuOpen]       = useState(false);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const isHeroPage = pathname === '/' || pathname.startsWith('/portfolio/');
@@ -41,15 +30,11 @@ export default function Navigation() {
 
   useEffect(() => {
     setMenuOpen(false);
-    setHoveredItem(null);
   }, [pathname]);
-
-  const activeDropdown = navItems.find(item => item.href === hoveredItem)?.dropdown ?? null;
 
   return (
     <header
       className={`${styles.nav} ${scrolled || !isHeroPage ? styles.solid : styles.transparent} ${menuOpen ? styles.menuOpen : ''}`}
-      onMouseLeave={() => setHoveredItem(null)}
     >
       {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
@@ -68,22 +53,17 @@ export default function Navigation() {
           </span>
         </Link>
 
-        {/* Right — Contact + mobile burger */}
+        {/* Right — nav links + mobile burger */}
         <div className={styles.navRight}>
           <nav className={`${styles.links} ${styles.linksRight}`}>
-            {rightItems.map((item) => (
-              <div
+            {navItems.map((item) => (
+              <Link
                 key={item.href}
-                className={styles.navItem}
-                onMouseEnter={() => setHoveredItem(item.dropdown ? item.href : null)}
+                href={item.href}
+                className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
               >
-                <Link
-                  href={item.href}
-                  className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
-                >
-                  {item.label}
-                </Link>
-              </div>
+                {item.label}
+              </Link>
             ))}
           </nav>
 
@@ -99,22 +79,13 @@ export default function Navigation() {
 
       </div>
 
-      {/* ─── Sub-row — nav bar extends down when Work / Studio hovered ── */}
-      <div className={`${styles.subRow} ${activeDropdown ? styles.subRowVisible : ''}`}>
-        {(activeDropdown ?? []).map((sub) => (
-          <Link key={sub.href} href={sub.href} className={styles.subLink}>
-            {sub.label}
-          </Link>
-        ))}
-      </div>
-
       {/* ─── Mobile backdrop ───────────────────────────────────────── */}
       <div
         className={`${styles.mobileBackdrop} ${menuOpen ? styles.mobileBackdropVisible : ''}`}
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* ─── Mobile menu — always rendered, slides in/out ──────────── */}
+      {/* ─── Mobile menu ───────────────────────────────────────────── */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
         <button
           className={styles.mobileClose}
@@ -124,20 +95,9 @@ export default function Navigation() {
           ✕
         </button>
         {navItems.map((item) => (
-          <div key={item.href}>
-            <Link href={item.href} className={styles.mobileLink}>
-              {item.label}
-            </Link>
-            {item.dropdown && (
-              <div className={styles.mobileSublinks}>
-                {item.dropdown.map((sub) => (
-                  <Link key={sub.href} href={sub.href} className={styles.mobileSublinkItem}>
-                    {sub.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          <Link key={item.href} href={item.href} className={styles.mobileLink}>
+            {item.label}
+          </Link>
         ))}
         <div className={styles.mobileContact}>
           <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
