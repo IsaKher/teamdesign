@@ -172,6 +172,37 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ─── How We Work ───────────────────────────────────────────── */}
+      <section className={styles.processSection}>
+        <FadeUpReveal>
+          <div className={styles.sectionHeader}>
+            <div>
+              <span className="label">How We Work</span>
+              <h2 className={styles.sectionTitle}>A process built<br />around your project.</h2>
+            </div>
+            <Link href="/process" className={styles.viewAll}>Full Process →</Link>
+          </div>
+        </FadeUpReveal>
+
+        <div className={styles.processRows}>
+          {[
+            { number: '01', title: 'Discovery',               subtitle: 'Understanding you, your site, and your ambition.' },
+            { number: '02', title: 'Concept Design',          subtitle: 'Finding the idea that will hold everything together.' },
+            { number: '03', title: 'Design Development',      subtitle: 'Turning a concept into a building you can build.' },
+            { number: '04', title: 'Technical Documentation', subtitle: 'The instruction manual for your contractor.' },
+            { number: '05', title: 'Site Supervision',        subtitle: 'Ensuring what was designed is what gets built.' },
+          ].map((phase) => (
+            <Link key={phase.number} href="/process" className={styles.processRow}>
+              <div className={styles.processLeft}>
+                <span className={styles.processNumber}>{phase.number}</span>
+                <span className={styles.processTitle}>{phase.title}</span>
+              </div>
+              <p className={styles.processSubtitle}>{phase.subtitle}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* ─── Principal ─────────────────────────────────────────────────── */}
       <section className={styles.principal}>
         <div className={styles.principalInner}>
