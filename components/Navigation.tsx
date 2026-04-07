@@ -54,10 +54,7 @@ export default function Navigation() {
       {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
 
-        {/* Left — intentional empty space */}
-        <div />
-
-        {/* Center — Wordmark */}
+        {/* Left — Logo */}
         <Link href="/" className={styles.wordmark} aria-label="Team Design Architects — home">
           <span className={styles.seal}>
             <Image

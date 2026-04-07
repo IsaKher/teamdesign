@@ -20,13 +20,13 @@
   border-bottom: 1px solid var(--color-rule);
 }
 
-/* ─── Main nav row — 3-column grid: links | logo | links ───── */
+/* ─── Main nav row — logo left, links right ────────────────── */
 .inner {
   width: 100%;
   height: var(--nav-height);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 clamp(24px, 5vw, 72px);
   max-width: 1440px;
   margin: 0 auto;
