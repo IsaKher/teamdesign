@@ -37,44 +37,100 @@
 }
 
 /* ─── Phases ─────────────────────────────────────────────────────────────── */
-.phases {
+.phasesTop  { height: 80px; }
+.phasesBottom { height: 80px; }
+
+.phaseWrapper {
   padding: 0 var(--margin-page);
 }
 
 .phase {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 64px;
-  align-items: start;
-  padding: 64px 0;
-  border-bottom: 1px solid var(--color-rule);
+  grid-template-columns: 80px 1fr;
+  gap: 0 48px;
 }
 
-.phase:first-child {
-  border-top: 1px solid var(--color-rule);
-}
-
-/* ─── Left column ──────────────────────────────────────────────────────── */
 .phaseLeft {
-  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
+}
+
+/* ─── Parallax panels ────────────────────────────────────────────────────── */
+.parallaxPanel {
+  width: 100%;
+  height: 58vh;
+  min-height: 420px;
+  background-attachment: fixed;
+  background-size: cover;
+  /* Position 30% from top — keeps the image centred on interesting content
+     and pushes the bottom edge (where watermarks sit) below the panel */
+  background-position: center 30%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle warm overlay to keep brand colour harmony */
+.parallaxPanel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 225, 214, 0.12);
+  pointer-events: none;
 }
 
 .phaseNumber {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.phaseLine {
+  width: 1px;
+  flex: 1;
+  background: var(--color-rule);
+  margin-top: 16px;
+  min-height: 40px;
+}
+
+.phase:last-child .phaseLine { display: none; }
+
+.phaseRight {
+  padding-top: 48px;
+  padding-bottom: 80px; /* panels provide the visual separation between phases */
+}
+
+/* Last phase — no panel follows, just needs a little room before phasesBottom */
+.phase:last-child .phaseRight { padding-bottom: 40px; }
+
+.phaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.phaseDuration {
   display: block;
   font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  opacity: 0.55;
+  opacity: 0.6;
   margin-bottom: 16px;
 }
 
 .phaseTitle {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 2.4vw, 36px);
+  font-size: clamp(28px, 3vw, 42px);
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: var(--tracking-heading);
   color: var(--color-text-primary);
   margin-bottom: 16px;
@@ -85,44 +141,26 @@
   font-size: var(--size-body);
   font-weight: 300;
   font-style: italic;
-  line-height: 1.55;
   color: var(--color-text-secondary);
-}
-
-/* ─── Right column ─────────────────────────────────────────────────────── */
-.phaseRight {
-  padding-top: 4px;
-}
-
-.phaseDuration {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  opacity: 0.55;
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .phaseDesc {
   font-family: var(--font-sans);
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: clamp(16px, 1.1vw, 18px);
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.75;
   letter-spacing: var(--tracking-body);
   color: var(--color-text-secondary);
-  max-width: 620px;
+  max-width: 680px;
   margin-bottom: 40px;
 }
 
 .deliverables {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 28px;
-  border-top: 1px solid var(--color-rule);
-  max-width: 520px;
+  background: var(--color-ground-dark);
+  padding: 32px 36px;
+  border-radius: 2px;
+  max-width: 600px;
 }
 
 .deliverablesLabel {
@@ -132,8 +170,8 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  opacity: 0.55;
-  margin-bottom: 6px;
+  opacity: 0.6;
+  margin-bottom: 18px;
 }
 
 .deliverablesList {
@@ -142,7 +180,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .deliverableItem {
@@ -157,32 +195,16 @@
 }
 
 .deliverableDot {
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--color-text-secondary);
   opacity: 0.4;
   flex-shrink: 0;
 }
 
-/* ─── Parallax panels ────────────────────────────────────────────────────── */
-.parallaxPanel {
-  width: 100%;
-  height: 52vh;
-  min-height: 380px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center 30%;
-  position: relative;
-  overflow: hidden;
-}
-
-.parallaxPanel::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(232, 225, 214, 0.12);
-  pointer-events: none;
+.phaseRule {
+  display: none; /* vertical line handled by phaseLeft */
 }
 
 /* ─── CTA ────────────────────────────────────────────────────────────────── */
@@ -255,26 +277,16 @@
 .ctaWhatsApp:hover { opacity: 0.7; }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .phase { grid-template-columns: 200px 1fr; gap: 40px; }
-}
-
 @media (max-width: 768px) {
-  .phase {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 48px 0;
-  }
-  .phaseSubtitle { display: none; }
+  .phase { grid-template-columns: 1fr; gap: 0; }
+  .phaseLeft { flex-direction: row; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .phaseLine { width: 100%; height: 1px; min-height: auto; margin: 0; flex: 1; }
+  .deliverables { padding: 24px; }
+  /* On mobile, fixed background-attachment doesn't scroll — fall back to cover */
   .parallaxPanel {
     background-attachment: scroll;
     background-position: center center;
     height: 45vw;
-    min-height: 240px;
+    min-height: 260px;
   }
-}
-
-@media (max-width: 600px) {
-  .phase { padding: 36px 0; }
-  .deliverables { max-width: 100%; }
 }
