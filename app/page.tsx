@@ -28,7 +28,7 @@ export default async function HomePage() {
         <HeroParallax />
         <div className={styles.heroImageWrap} data-hero-parallax>
           <HeroCarousel />
-          <div className={styles.heroOverlayLeft} />
+          <div className={styles.heroOverlayBottom} />
         </div>
 
         <section className={styles.hero}>

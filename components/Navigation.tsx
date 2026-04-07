@@ -58,7 +58,7 @@ export default function Navigation() {
         <div />
 
         {/* Center — Wordmark */}
-        <Link href="/" className={styles.wordmark}>
+        <Link href="/" className={styles.wordmark} aria-label="Team Design Architects — home">
           <span className={styles.seal}>
             <Image
               src="/logo.png"
@@ -69,8 +69,6 @@ export default function Navigation() {
               priority
             />
           </span>
-          <span className={styles.divider} />
-          <span className={styles.firmName}>Team Design</span>
         </Link>
 
         {/* Right — Contact + mobile burger */}
