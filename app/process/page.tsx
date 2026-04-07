@@ -2,7 +2,6 @@ export const revalidate = 0;
 
 import Link from 'next/link';
 import styles from './page.module.css';
-import FadeIn from '@/components/FadeIn';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
@@ -127,58 +126,43 @@ export default async function ProcessPage() {
         </div>
       </div>
 
-      {/* Phases interleaved with parallax panels */}
-      <div className={styles.phasesTop} />
+      {/* Phases */}
+      <div className={styles.phases}>
+        {PHASES.map((phase) => (
+          <div key={phase.number} className={styles.phase}>
+            {/* Left — number + title */}
+            <div className={styles.phaseLeft}>
+              <span className={styles.phaseNumber}>{phase.number}</span>
+              <h2 className={styles.phaseTitle}>{phase.title}</h2>
+              <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
+            </div>
 
-      {PHASES.map((phase, i) => (
-        <div key={phase.number}>
-          <section className={styles.phaseWrapper}>
-            <FadeIn direction="up" delay={0.05} threshold={0.08}>
-              <div className={styles.phase}>
-                <div className={styles.phaseLeft}>
-                  <span className={styles.phaseNumber}>{phase.number}</span>
-                  {i < PHASES.length - 1 && <div className={styles.phaseLine} />}
-                </div>
-
-                <div className={styles.phaseRight}>
-                  <div className={styles.phaseHeader}>
-                    <div>
-                      <span className={styles.phaseDuration}>{phase.duration}</span>
-                      <h2 className={styles.phaseTitle}>{phase.title}</h2>
-                      <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
-                    </div>
-                  </div>
-
-                  <p className={styles.phaseDesc}>{phase.description}</p>
-
-                  <div className={styles.deliverables}>
-                    <span className={styles.deliverablesLabel}>Deliverables</span>
-                    <ul className={styles.deliverablesList}>
-                      {phase.deliverables.map((d) => (
-                        <li key={d} className={styles.deliverableItem}>
-                          <span className={styles.deliverableDot} />
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+            {/* Right — description + deliverables */}
+            <div className={styles.phaseRight}>
+              <span className={styles.phaseDuration}>{phase.duration}</span>
+              <p className={styles.phaseDesc}>{phase.description}</p>
+              <div className={styles.deliverables}>
+                <span className={styles.deliverablesLabel}>Deliverables</span>
+                <ul className={styles.deliverablesList}>
+                  {phase.deliverables.map((d) => (
+                    <li key={d} className={styles.deliverableItem}>
+                      <span className={styles.deliverableDot} />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </FadeIn>
-          </section>
+            </div>
+          </div>
+        ))}
+      </div>
 
-          {/* Parallax image panel between phases */}
-          {i < PHASES.length - 1 && (
-            <div
-              className={styles.parallaxPanel}
-              style={{ backgroundImage: `url(${PARALLAX_IMAGES[i]})` }}
-              aria-hidden="true"
-            />
-          )}
-        </div>
-      ))}
-
-      <div className={styles.phasesBottom} />
+      {/* Parallax image — single break between phases and CTA */}
+      <div
+        className={styles.parallaxPanel}
+        style={{ backgroundImage: `url(${PARALLAX_IMAGES[0]})` }}
+        aria-hidden="true"
+      />
 
       {/* CTA */}
       <section className={styles.cta}>
