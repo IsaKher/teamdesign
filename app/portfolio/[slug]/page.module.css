@@ -76,22 +76,21 @@
 }
 
 .contentInner {
-  max-width: var(--body-max-width);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 0;
 }
 
 .storyBeat {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 32px;
+  grid-template-columns: 200px 1fr;
+  gap: 64px;
   align-items: start;
-  padding-bottom: 48px;
+  padding: 48px 0;
   border-bottom: 1px solid var(--color-rule);
 }
 
-.storyBeat:last-child { border-bottom: none; padding-bottom: 0; }
+.storyBeat:first-child { border-top: 1px solid var(--color-rule); }
 
 .storyLabel {
   font-family: var(--font-sans);
@@ -109,10 +108,10 @@
   font-weight: 300;
   line-height: var(--lh-body);
   color: var(--color-text-secondary);
+  max-width: 660px;
 }
 
 .whatsappInline {
-  max-width: var(--body-max-width);
   margin-top: 48px;
   padding-top: 32px;
   border-top: 1px solid var(--color-rule);
@@ -148,9 +147,14 @@
   color: var(--color-text-primary);
 }
 
-@media (max-width: 600px) {
-  .storyBeat { grid-template-columns: 1fr; gap: 10px; }
+@media (max-width: 768px) {
+  .storyBeat { grid-template-columns: 1fr; gap: 12px; padding: 36px 0; }
   .storyLabel { padding-top: 0; }
+  .para { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .storyBeat { padding: 28px 0; }
 }
 
 /* ─── Editorial Content Blocks ──────────────────────────────── */
