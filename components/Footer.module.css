@@ -48,11 +48,12 @@
 }
 
 .name {
-  font-family: var(--font-serif);
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-family: var(--font-sans);
+  font-size: 13px;
   font-weight: 300;
   color: rgba(244, 238, 230, 0.80);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .meta {

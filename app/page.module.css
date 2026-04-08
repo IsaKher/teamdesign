@@ -233,7 +233,7 @@
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
 .portfolioSection {
-  padding: var(--margin-section) var(--margin-page);
+  padding: 96px var(--margin-page) var(--margin-section);
 }
 
 .sectionHeader {
