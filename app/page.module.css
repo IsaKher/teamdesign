@@ -137,8 +137,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 16px;
-  margin-top: 40px;
+  padding: 56px var(--margin-page);
+  background: var(--color-ground);
 }
 
 .heroCta {
@@ -146,20 +148,18 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.95);
-  background: rgba(20, 16, 12, 0.48);
-  border: 1px solid rgba(244, 238, 230, 0.55);
+  color: var(--color-ground);
+  background: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
   padding: 14px 32px;
   min-width: 220px;
   text-decoration: none;
   text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .heroCta:hover {
-  background: rgba(20, 16, 12, 0.72);
-  border-color: rgba(244, 238, 230, 0.90);
+  background: var(--color-text-secondary);
+  border-color: var(--color-text-secondary);
 }
 
 .heroCtaSecondary {
@@ -167,20 +167,18 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.95);
-  background: rgba(20, 16, 12, 0.48);
-  border: 1px solid rgba(244, 238, 230, 0.55);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-text-primary);
   padding: 14px 32px;
   min-width: 220px;
   text-decoration: none;
   text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .heroCtaSecondary:hover {
-  background: rgba(20, 16, 12, 0.72);
-  border-color: rgba(244, 238, 230, 0.90);
+  background: var(--color-text-primary);
+  color: var(--color-ground);
 }
 
 

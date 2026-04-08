@@ -31,16 +31,7 @@ export default async function HomePage() {
           <div className={styles.heroOverlayBottom} />
         </div>
 
-        <section className={styles.hero}>
-          <div className={styles.heroText}>
-            <h1 className={styles.heroTitle}>Team Design</h1>
-            <p className={styles.heroPositioning}>Private homes and institutional buildings. Thirty years of practice in Mumbai.</p>
-            <div className={styles.heroCtas}>
-              <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
-              <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
-            </div>
-          </div>
-        </section>
+        <section className={styles.hero} />
 
         <section className={styles.statBar}>
           {[
@@ -55,6 +46,12 @@ export default async function HomePage() {
             </div>
           ))}
         </section>
+      </div>
+
+      {/* ─── Hero CTAs ─────────────────────────────────────────────────── */}
+      <div className={styles.heroCtas}>
+        <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
+        <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
       </div>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
