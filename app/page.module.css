@@ -150,6 +150,7 @@
   background: rgba(20, 16, 12, 0.48);
   border: 1px solid rgba(244, 238, 230, 0.55);
   padding: 14px 32px;
+  min-width: 220px;
   text-decoration: none;
   text-align: center;
   backdrop-filter: blur(8px);
@@ -170,6 +171,7 @@
   background: rgba(20, 16, 12, 0.48);
   border: 1px solid rgba(244, 238, 230, 0.55);
   padding: 14px 32px;
+  min-width: 220px;
   text-decoration: none;
   text-align: center;
   backdrop-filter: blur(8px);
