@@ -72,6 +72,21 @@
 .transparent .divider { background: rgba(244, 238, 230, 0.22); }
 .solid .divider        { background: var(--color-rule); }
 
+/* Tagline beside logo */
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color var(--transition-nav);
+  line-height: 1.5;
+}
+
+.transparent .tagline { color: rgba(244, 238, 230, 0.92); }
+.solid .tagline        { color: var(--color-text-primary); }
+
 /* Firm name — Josefin Sans geometric, architectural */
 .firmName {
   font-family: var(--font-display);

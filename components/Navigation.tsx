@@ -39,7 +39,7 @@ export default function Navigation() {
       {/* ─── Main nav row ──────────────────────────────────────────── */}
       <div className={styles.inner}>
 
-        {/* Left — Logo */}
+        {/* Left — Logo + tagline */}
         <Link href="/" className={styles.wordmark} aria-label="Team Design Architects — home">
           <span className={styles.seal}>
             <Image
@@ -51,6 +51,8 @@ export default function Navigation() {
               priority
             />
           </span>
+          <span className={styles.divider} />
+          <span className={styles.tagline}>Architecture &amp; Interior Design<br />Mumbai</span>
         </Link>
 
         {/* Right — nav links + mobile burger */}

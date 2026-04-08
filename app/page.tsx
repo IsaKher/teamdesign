@@ -33,7 +33,6 @@ export default async function HomePage() {
 
         <section className={styles.hero}>
           <div className={styles.heroText}>
-            <span className={styles.heroLabel}>Architecture &amp; Interior Design · Mumbai</span>
             <h1 className={styles.heroTitle}>Team Design</h1>
             <p className={styles.heroPositioning}>Private homes and institutional buildings. Thirty years of practice in Mumbai.</p>
             <div className={styles.heroCtas}>
