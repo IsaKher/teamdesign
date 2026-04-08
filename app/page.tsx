@@ -66,14 +66,7 @@ export default async function HomePage() {
           </div>
         </FadeUpReveal>
 
-        <div className={styles.categoryLinks}>
-          <Link href="/portfolio?type=Residential" className={styles.categoryLink}>Residential</Link>
-          <Link href="/portfolio?type=Commercial" className={styles.categoryLink}>Commercial</Link>
-          <Link href="/portfolio?type=Institutional" className={styles.categoryLink}>Institutional</Link>
-          <Link href="/portfolio?type=Interiors" className={styles.categoryLink}>Interiors</Link>
-        </div>
-
-        {hasFeatured && <div className={styles.projectGrid}>
+{hasFeatured && <div className={styles.projectGrid}>
 
           {/* ── Lead project — full-width cinematic strip ── */}
           <FadeUpReveal>
