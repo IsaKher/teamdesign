@@ -1,4 +1,4 @@
-/* ─── Nav shell — min-height so it can expand for the sub-row ─ */
+/* ─── Nav shell ────────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0;
@@ -20,33 +20,76 @@
   border-bottom: 1px solid var(--color-rule);
 }
 
-/* ─── Main nav row — logo left, links right ────────────────── */
+/* ─── 3-column grid: [left links] [logo] [right links] ──── */
 .inner {
   width: 100%;
   height: var(--nav-height);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 0 clamp(24px, 5vw, 72px);
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* ─── Wordmark ─────────────────────────────────────────────── */
-.wordmark {
+/* ─── Left nav links ───────────────────────────────────────── */
+.linksLeft {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: clamp(24px, 3vw, 52px);
+  padding-right: clamp(20px, 3vw, 48px);
+  will-change: transform, opacity;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.4s  ease;
+}
+
+/* ─── Right nav links + burger ─────────────────────────────── */
+.navRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(16px, 2vw, 32px);
+}
+
+.linksRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(24px, 3vw, 52px);
+  padding-left: clamp(20px, 3vw, 48px);
+  will-change: transform, opacity;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.4s  ease;
+}
+
+/* ─── Collapsed scroll state ───────────────────────────────── */
+.collapsed .linksLeft {
+  transform: translateX(140px);
+  opacity: 0;
+  pointer-events: none;
+}
+.collapsed .linksRight {
+  transform: translateX(-140px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─── Centred logo ─────────────────────────────────────────── */
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  flex-shrink: 0;
-  min-width: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .seal {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 112px;
+  height: 112px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -56,69 +99,12 @@
   filter: brightness(0) invert(1);
   transition: filter var(--transition-nav);
 }
-
 .solid .logoImage {
   filter: brightness(0);
   transition: filter var(--transition-nav);
 }
 
-.divider {
-  display: block;
-  width: 1px;
-  height: 26px;
-  flex-shrink: 0;
-}
-
-.transparent .divider { background: rgba(244, 238, 230, 0.22); }
-.solid .divider        { background: var(--color-rule); }
-
-/* Tagline beside logo */
-.tagline {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: color var(--transition-nav);
-  line-height: 1.5;
-}
-
-.transparent .tagline { color: rgba(244, 238, 230, 0.92); }
-.solid .tagline        { color: var(--color-text-primary); }
-
-/* Firm name — Josefin Sans geometric, architectural */
-.firmName {
-  font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 300;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: color var(--transition-nav);
-}
-
-.transparent .firmName { color: rgba(244, 238, 230, 0.95); }
-.solid .firmName        { color: var(--color-text-primary); }
-
-/* ─── Desktop nav links ────────────────────────────────────── */
-.links {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 2.2vw, 40px);
-}
-
-.linksLeft  { justify-content: flex-start; }
-.linksRight { justify-content: flex-end; }
-
-/* Right column — wraps right links + mobile burger */
-.navRight {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: clamp(16px, 2.2vw, 40px);
-}
-
+/* ─── Nav link styles ──────────────────────────────────────── */
 .link {
   font-family: var(--font-sans);
   font-size: var(--size-nav);
@@ -128,9 +114,10 @@
   transition: opacity 0.3s ease, color var(--transition-nav);
   position: relative;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-.transparent .link { color: rgba(244, 238, 230, 0.95); }
+.transparent .link { color: rgba(244, 238, 230, 0.85); }
 .solid .link        { color: var(--color-text-primary); }
 
 .link:hover { opacity: 1 !important; }
@@ -147,6 +134,9 @@
   flex-direction: column;
   gap: 5px;
   padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .burger span {
@@ -161,14 +151,10 @@
 .solid .burger        { color: var(--color-text-primary); }
 
 /* ─── Mobile backdrop ──────────────────────────────────────── */
-.mobileBackdrop {
-  display: none;
-}
+.mobileBackdrop { display: none; }
 
 /* ─── Mobile menu ──────────────────────────────────────────── */
-.mobileMenu {
-  display: none;
-}
+.mobileMenu { display: none; }
 
 .mobileLink {
   display: block;
@@ -176,6 +162,7 @@
   font-size: 28px;
   font-weight: 300;
   color: var(--color-text-primary);
+  text-decoration: none;
   padding: 12px 0;
   border-bottom: 1px solid var(--color-rule);
 }
@@ -183,27 +170,24 @@
 .mobileContact {
   margin-top: 24px;
 }
-
 .mobileContact a {
   font-family: var(--font-sans);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
+  text-decoration: none;
 }
 
 /* ─── Responsive ───────────────────────────────────────────── */
-
-@media (max-width: 1024px) {
-  .firmName { display: none; }
-  .divider  { display: none; }
-}
-
 @media (max-width: 768px) {
+  .linksLeft  { display: none; }
   .linksRight { display: none; }
   .burger     { display: flex; }
 
-  /* Slide-in backdrop */
+  /* On mobile, right column is just the burger */
+  .navRight { justify-content: flex-end; }
+
   .mobileBackdrop {
     display: block;
     position: fixed;
@@ -219,7 +203,6 @@
     pointer-events: auto;
   }
 
-  /* Close button inside panel */
   .mobileClose {
     position: absolute;
     top: 24px;
@@ -228,11 +211,13 @@
     color: var(--color-text-secondary);
     padding: 8px;
     line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
     transition: color 0.2s ease;
   }
   .mobileClose:hover { color: var(--color-text-primary); }
 
-  /* Slide-in panel from right */
   .mobileMenu {
     display: flex;
     flex-direction: column;
@@ -249,9 +234,7 @@
     overflow-y: auto;
     border-left: 1px solid var(--color-rule);
   }
-  .mobileMenuOpen {
-    transform: translateX(0);
-  }
+  .mobileMenuOpen { transform: translateX(0); }
 
   .menuOpen .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .menuOpen .burger span:nth-child(2) { opacity: 0; }

@@ -1,64 +1,92 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
 import { STUDIO } from '@/lib/siteContent';
 
-const navItems = [
+const leftItems = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Studio',    href: '/studio'    },
+];
+
+const rightItems = [
   { label: 'Process',   href: '/process'   },
-  { label: 'Team',      href: '/people'    },
   { label: 'Contact',   href: '/contact'   },
 ];
 
+const allItems = [...leftItems, ...rightItems];
+
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
+  const pathname   = usePathname();
 
   const isHeroPage = pathname === '/' || pathname.startsWith('/portfolio/');
 
+  /* Direct DOM class manipulation — no React re-render on scroll */
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const el = headerRef.current;
+    if (!el) return;
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+    const update = () => {
+      const y = window.scrollY;
+      const scrolled  = y > 40;
+      const collapsed = y > 80;
+
+      el.classList.toggle(styles.solid,       scrolled || !isHeroPage);
+      el.classList.toggle(styles.transparent, !scrolled && isHeroPage);
+      el.classList.toggle(styles.collapsed,   collapsed);
+    };
+
+    update(); // sync initial state after mount
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, [isHeroPage]);
+
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   return (
     <header
-      className={`${styles.nav} ${scrolled || !isHeroPage ? styles.solid : styles.transparent} ${menuOpen ? styles.menuOpen : ''}`}
+      ref={headerRef}
+      className={`${styles.nav} ${isHeroPage ? styles.transparent : styles.solid} ${menuOpen ? styles.menuOpen : ''}`}
     >
-      {/* ─── Main nav row ──────────────────────────────────────────── */}
+      {/* ─── Desktop row ───────────────────────────────────────────── */}
       <div className={styles.inner}>
 
-        {/* Left — Logo + tagline */}
-        <Link href="/" className={styles.wordmark} aria-label="Team Design Architects — home">
+        {/* Left links */}
+        <nav className={styles.linksLeft} aria-label="Primary navigation left">
+          {leftItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`${styles.link} ${pathname.startsWith(item.href) ? styles.active : ''}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Centred logo */}
+        <Link href="/" className={styles.logoWrap} aria-label="Team Design Architects — home">
           <span className={styles.seal}>
             <Image
               src="/logo.png"
               alt="Team Design Architects"
               fill
-              sizes="80px"
+              sizes="112px"
               className={styles.logoImage}
               priority
             />
           </span>
-          <span className={styles.divider} />
-          <span className={styles.tagline}>Architecture &amp; Interior Design<br />Mumbai</span>
         </Link>
 
-        {/* Right — nav links + mobile burger */}
+        {/* Right links + mobile burger */}
         <div className={styles.navRight}>
-          <nav className={`${styles.links} ${styles.linksRight}`}>
-            {navItems.map((item) => (
+          <nav className={styles.linksRight} aria-label="Primary navigation right">
+            {rightItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -69,7 +97,6 @@ export default function Navigation() {
             ))}
           </nav>
 
-          {/* Mobile toggle */}
           <button
             className={styles.burger}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -89,17 +116,9 @@ export default function Navigation() {
 
       {/* ─── Mobile menu ───────────────────────────────────────────── */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
-        <button
-          className={styles.mobileClose}
-          onClick={() => setMenuOpen(false)}
-          aria-label="Close menu"
-        >
-          ✕
-        </button>
-        {navItems.map((item) => (
-          <Link key={item.href} href={item.href} className={styles.mobileLink}>
-            {item.label}
-          </Link>
+        <button className={styles.mobileClose} onClick={() => setMenuOpen(false)} aria-label="Close menu">✕</button>
+        {allItems.map((item) => (
+          <Link key={item.href} href={item.href} className={styles.mobileLink}>{item.label}</Link>
         ))}
         <div className={styles.mobileContact}>
           <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
