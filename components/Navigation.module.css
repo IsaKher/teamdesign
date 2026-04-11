@@ -181,12 +181,24 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
+  /* Switch to flex so logo is truly centred */
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
   .linksLeft  { display: none; }
   .linksRight { display: none; }
   .burger     { display: flex; }
 
-  /* On mobile, right column is just the burger */
-  .navRight { justify-content: flex-end; }
+  /* Burger pinned to right edge, logo stays centred */
+  .navRight {
+    position: absolute;
+    right: clamp(24px, 5vw, 48px);
+    justify-content: flex-end;
+  }
 
   .mobileBackdrop {
     display: block;
