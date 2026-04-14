@@ -9,12 +9,12 @@ const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
 
 const SLIDES = [
   {
-    src: `${CDN}/image-26e77afc3a2262b794b1cc394cd674635200be8f-6720x4480-jpg`,
+    src: `${CDN}/26e77afc3a2262b794b1cc394cd674635200be8f-6720x4480.jpg?w=1920&auto=format&q=85`,
     alt: 'Luthra Group — Boardroom',
     position: 'center center',
   },
   {
-    src: `${CDN}/image-73613e248e1376b2ad904a4ab8d11d6d89d68524-2560x1707-jpg`,
+    src: `${CDN}/73613e248e1376b2ad904a4ab8d11d6d89d68524-2560x1707.jpg?w=1920&auto=format&q=85`,
     alt: 'Maharaja Agrasen Palace — Exterior',
     position: 'center center',
   },
@@ -29,7 +29,7 @@ const SLIDES = [
     position: 'center center',
   },
   {
-    src: `${CDN}/image-8ba841543531aeb3d4b7a973fd2cedb8aae4c66e-7360x4912-jpg`,
+    src: `${CDN}/8ba841543531aeb3d4b7a973fd2cedb8aae4c66e-7360x4912.jpg?w=1920&auto=format&q=85`,
     alt: 'Unilazer Ventures — Boardroom',
     position: 'center center',
   },
