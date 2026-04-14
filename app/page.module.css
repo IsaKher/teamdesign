@@ -133,15 +133,7 @@
     0 8px 48px rgba(0, 0, 0, 0.60);
 }
 
-.heroCtas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding: 56px var(--margin-page);
-  background: var(--color-ground);
-}
+/* .heroCtas wrapper removed — CTAs now live inside .statCta */
 
 .heroCta {
   font-family: var(--font-sans);
@@ -151,8 +143,8 @@
   color: var(--color-ground);
   background: var(--color-text-primary);
   border: 1px solid var(--color-text-primary);
-  padding: 14px 32px;
-  min-width: 220px;
+  padding: 13px 28px;
+  min-width: 200px;
   text-decoration: none;
   text-align: center;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -170,8 +162,8 @@
   color: var(--color-text-primary);
   background: transparent;
   border: 1px solid var(--color-text-primary);
-  padding: 14px 32px;
-  min-width: 220px;
+  padding: 13px 28px;
+  min-width: 200px;
   text-decoration: none;
   text-align: center;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -185,8 +177,8 @@
 /* ─── Stat Bar ─────────────────────────────────────────────────────────── */
 .statBar {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-content: center;
+  grid-template-columns: repeat(4, 1fr) auto;
+  align-items: center;
   background: var(--color-ground);
   border-bottom: 1px solid var(--color-rule);
   padding: 48px var(--margin-page);
@@ -202,7 +194,15 @@
 }
 
 .stat:first-child { padding-left: 0; }
-.stat:last-child { border-right: none; }
+
+/* CTA column — right side of stat bar */
+.statCta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 0 0 40px;
+  border-left: 1px solid var(--color-rule);
+}
 
 .statValue {
   font-family: var(--font-serif);
@@ -922,6 +922,7 @@
 /* ─── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .statBar { grid-template-columns: repeat(2, 1fr); }
+  .statCta { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--color-rule); padding: 32px 0 0; flex-direction: row; justify-content: center; gap: 16px; }
   .credentialsInner { grid-template-columns: 1fr; gap: 48px; }
   .principalInner { grid-template-columns: 1fr; }
   .principalImageWrap { aspect-ratio: 3/4; max-height: 480px; }
@@ -939,13 +940,8 @@
   .stat { padding: 0 16px; gap: 8px; }
   .statValue { font-size: clamp(28px, 8vw, 40px); }
 
-  /* ── CTAs: stacked, full width ── */
-  .heroCtas {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 32px var(--margin-page);
-    gap: 12px;
-  }
+  /* ── CTAs inside stat bar: stack vertically, full width ── */
+  .statCta { flex-direction: column; align-items: stretch; gap: 12px; }
   .heroCta    { min-width: 0; text-align: center; padding: 16px; }
   .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
 

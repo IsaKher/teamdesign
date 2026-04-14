@@ -33,7 +33,7 @@ export default async function HomePage() {
         <section className={styles.hero} />
       </div>
 
-      {/* ─── Stat Bar (cream background, below hero) ───────────────────── */}
+      {/* ─── Stat Bar + CTAs (cream background, below hero) ──────────────── */}
       <section className={styles.statBar}>
         {[
           { value: settings?.yearsInPractice ?? '25+',        label: 'Years in Practice' },
@@ -46,13 +46,12 @@ export default async function HomePage() {
             <span className={styles.statLabel}>{stat.label}</span>
           </div>
         ))}
+        {/* CTA column — lives inside stat bar for contextual placement */}
+        <div className={styles.statCta}>
+          <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
+          <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
+        </div>
       </section>
-
-      {/* ─── Hero CTAs ─────────────────────────────────────────────────── */}
-      <div className={styles.heroCtas}>
-        <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
-        <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
-      </div>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
       <section className={styles.portfolioSection}>
