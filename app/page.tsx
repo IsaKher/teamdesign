@@ -23,30 +23,30 @@ export default async function HomePage() {
   const hasFeatured = featuredProjects.length >= 4;
   return (
     <>
-      {/* ─── Hero + Stats (one shared image) ──────────────────────────── */}
+      {/* ─── Hero ──────────────────────────────────────────────────────── */}
       <div className={styles.heroWrapper}>
         <HeroParallax />
         <div className={styles.heroImageWrap} data-hero-parallax>
           <HeroCarousel />
           <div className={styles.heroOverlayBottom} />
         </div>
-
         <section className={styles.hero} />
-
-        <section className={styles.statBar}>
-          {[
-            { value: settings?.yearsInPractice ?? '25+',       label: 'Years in Practice' },
-            { value: settings?.projectCount    ?? '300+',      label: 'Projects Completed' },
-            { value: settings?.clientCount     ?? '500+',      label: 'Clients Served' },
-            { value: settings?.sqftCompleted   ?? '20L+ sq ft', label: 'Built Space' },
-          ].map((stat, i) => (
-            <div key={i} className={styles.stat}>
-              <span className={styles.statValue}>{stat.value}</span>
-              <span className={styles.statLabel}>{stat.label}</span>
-            </div>
-          ))}
-        </section>
       </div>
+
+      {/* ─── Stat Bar (cream background, below hero) ───────────────────── */}
+      <section className={styles.statBar}>
+        {[
+          { value: settings?.yearsInPractice ?? '25+',        label: 'Years in Practice' },
+          { value: settings?.projectCount    ?? '300+',       label: 'Projects Completed' },
+          { value: settings?.clientCount     ?? '500+',       label: 'Clients Served' },
+          { value: settings?.sqftCompleted   ?? '20L+ sq ft', label: 'Built Space' },
+        ].map((stat, i) => (
+          <div key={i} className={styles.stat}>
+            <span className={styles.statValue}>{stat.value}</span>
+            <span className={styles.statLabel}>{stat.label}</span>
+          </div>
+        ))}
+      </section>
 
       {/* ─── Hero CTAs ─────────────────────────────────────────────────── */}
       <div className={styles.heroCtas}>
@@ -161,37 +161,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── How We Work ───────────────────────────────────────────── */}
-      <section className={styles.processSection}>
-        <FadeUpReveal>
-          <div className={styles.sectionHeader}>
-            <div>
-              <span className="label">How We Work</span>
-              <h2 className={styles.sectionTitle}>A process built<br />around your project.</h2>
-            </div>
-            <Link href="/process" className={styles.viewAll}>Full Process →</Link>
-          </div>
-        </FadeUpReveal>
-
-        <div className={styles.processRows}>
-          {[
-            { number: '01', title: 'Discovery',               subtitle: 'Understanding you, your site, and your ambition.' },
-            { number: '02', title: 'Concept Design',          subtitle: 'Finding the idea that will hold everything together.' },
-            { number: '03', title: 'Design Development',      subtitle: 'Turning a concept into a building you can build.' },
-            { number: '04', title: 'Technical Documentation', subtitle: 'The instruction manual for your contractor.' },
-            { number: '05', title: 'Site Supervision',        subtitle: 'Ensuring what was designed is what gets built.' },
-          ].map((phase) => (
-            <Link key={phase.number} href="/process" className={styles.processRow}>
-              <div className={styles.processLeft}>
-                <span className={styles.processNumber}>{phase.number}</span>
-                <span className={styles.processTitle}>{phase.title}</span>
-              </div>
-              <p className={styles.processSubtitle}>{phase.subtitle}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* ─── Principal ─────────────────────────────────────────────────── */}
       <section className={styles.principal}>
         <div className={styles.principalInner}>
@@ -233,6 +202,36 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ─── How We Work ───────────────────────────────────────────── */}
+      <section className={styles.processSection}>
+        <FadeUpReveal>
+          <div className={styles.sectionHeader}>
+            <div>
+              <span className="label">How We Work</span>
+              <h2 className={styles.sectionTitle}>A process built<br />around your project.</h2>
+            </div>
+            <Link href="/process" className={styles.viewAll}>Full Process →</Link>
+          </div>
+        </FadeUpReveal>
+
+        <div className={styles.processRows}>
+          {[
+            { number: '01', title: 'Discovery',               subtitle: 'Understanding you, your site, and your ambition.' },
+            { number: '02', title: 'Concept Design',          subtitle: 'Finding the idea that will hold everything together.' },
+            { number: '03', title: 'Design Development',      subtitle: 'Turning a concept into a building you can build.' },
+            { number: '04', title: 'Technical Documentation', subtitle: 'The instruction manual for your contractor.' },
+            { number: '05', title: 'Site Supervision',        subtitle: 'Ensuring what was designed is what gets built.' },
+          ].map((phase) => (
+            <Link key={phase.number} href="/process" className={styles.processRow}>
+              <div className={styles.processLeft}>
+                <span className={styles.processNumber}>{phase.number}</span>
+                <span className={styles.processTitle}>{phase.title}</span>
+              </div>
+              <p className={styles.processSubtitle}>{phase.subtitle}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* ─── Interiors CTA ─────────────────────────────────────────────── */}
       <section className={styles.interiorsCta}>

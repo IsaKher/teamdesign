@@ -184,13 +184,12 @@
 
 /* ─── Stat Bar ─────────────────────────────────────────────────────────── */
 .statBar {
-  position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
-  min-height: 28vw;
-  padding: 56px var(--margin-page);
+  background: var(--color-ground);
+  border-bottom: 1px solid var(--color-rule);
+  padding: 48px var(--margin-page);
   gap: 1px;
 }
 
@@ -199,7 +198,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 0 32px;
-  border-right: 1px solid rgba(244, 238, 230, 0.08);
+  border-right: 1px solid var(--color-rule);
 }
 
 .stat:first-child { padding-left: 0; }
@@ -209,12 +208,8 @@
   font-family: var(--font-serif);
   font-size: clamp(36px, 3.5vw, 52px);
   font-weight: 300;
-  color: rgba(244, 238, 230, 1);
+  color: var(--color-text-primary);
   line-height: 1;
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.95),
-    0 4px 24px rgba(0, 0, 0, 0.80),
-    0 8px 64px rgba(0, 0, 0, 0.60);
 }
 
 .statLabel {
@@ -222,11 +217,7 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.72);
-  text-shadow:
-    0 1px 4px  rgba(0, 0, 0, 0.95),
-    0 4px 24px rgba(0, 0, 0, 0.80),
-    0 8px 64px rgba(0, 0, 0, 0.60);
+  color: var(--color-text-secondary);
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
@@ -306,7 +297,7 @@
 
 .projectHeroImageWrap {
   position: relative;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--color-ground-dark);
 }
