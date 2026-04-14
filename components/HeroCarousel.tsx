@@ -5,14 +5,34 @@ import Image from 'next/image';
 import styles from './HeroCarousel.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
+const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
+
 const SLIDES = [
-  { src: '/projects/mohan-shenoi-residence/3.jpg',   alt: 'Mohan Shenoi Residence — Living Room',     position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/6.jpg',   alt: 'Mohan Shenoi Residence — Mumbai',          position: 'center center' },
-  { src: '/projects/jhaveri-zaveri-residence/2.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
-  { src: '/projects/jhaveri-zaveri-residence/4.jpg', alt: 'Jhaveri Zaveri Residence — Entrance Foyer', position: 'center center' },
-  { src: '/projects/rahul-sanjana-residence/1.jpg',  alt: 'Rahul & Sanjana Residence — Mumbai',       position: 'center center' },
-  { src: '/projects/mohan-shenoi-residence/1.jpg',   alt: 'Mohan Shenoi Residence — Mumbai',          position: 'center center' },
-  { src: '/projects/jhaveri-zaveri-residence/1.jpg', alt: 'Jhaveri Zaveri Residence — Mumbai',        position: 'center center' },
+  {
+    src: `${CDN}/image-26e77afc3a2262b794b1cc394cd674635200be8f-6720x4480-jpg`,
+    alt: 'Luthra Group — Boardroom',
+    position: 'center center',
+  },
+  {
+    src: `${CDN}/image-73613e248e1376b2ad904a4ab8d11d6d89d68524-2560x1707-jpg`,
+    alt: 'Maharaja Agrasen Palace — Exterior',
+    position: 'center center',
+  },
+  {
+    src: '/projects/rahul-sanjana-residence/1.jpg',
+    alt: 'Rahul & Sanjana Residence — Living Room',
+    position: 'center center',
+  },
+  {
+    src: '/projects/usha-shenoi-residence/1.jpg',
+    alt: 'Usha Shenoi Residence — Living Room',
+    position: 'center center',
+  },
+  {
+    src: `${CDN}/image-8ba841543531aeb3d4b7a973fd2cedb8aae4c66e-7360x4912-jpg`,
+    alt: 'Unilazer Ventures — Boardroom',
+    position: 'center center',
+  },
 ];
 
 const INTERVAL = 5500;  // ms between transitions
