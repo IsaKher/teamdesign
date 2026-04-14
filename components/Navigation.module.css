@@ -180,12 +180,20 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
+  /* Restore blur on mobile — looks better; taller bar covers the blur edge */
+  .transparent {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    min-height: 100px;
+  }
+
   /* Switch to flex so logo is truly centred */
   .inner {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 100px;
   }
 
   .linksLeft  { display: none; }
