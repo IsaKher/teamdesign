@@ -931,25 +931,28 @@
 }
 
 @media (max-width: 600px) {
-  .statBar { grid-template-columns: repeat(2, 1fr); padding: 40px var(--margin-page); }
-  .stat { padding: 0 16px; }
+  /* ── Hero: shorter so stat bar is visible below the fold ── */
+  .hero { height: 62vh; min-height: 420px; }
+
+  /* ── Stat bar: tighter, 2×2 grid ── */
+  .statBar { grid-template-columns: repeat(2, 1fr); padding: 36px var(--margin-page); }
+  .stat { padding: 0 16px; gap: 8px; }
+  .statValue { font-size: clamp(28px, 8vw, 40px); }
+
+  /* ── CTAs: stacked, full width ── */
+  .heroCtas {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px var(--margin-page);
+    gap: 12px;
+  }
+  .heroCta    { min-width: 0; text-align: center; padding: 16px; }
+  .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
+
+  /* ── Sections ── */
   .sectionHeader { flex-direction: column; align-items: flex-start; gap: 16px; }
   .clientItem { flex-direction: column; }
   .clientProject { text-align: left; max-width: 100%; }
-  /* Hero polish */
-  .hero { height: 85vh; min-height: 520px; }
-  .heroText {
-    bottom: 40px;
-    left: var(--margin-page);
-    right: var(--margin-page);
-    text-align: center;
-  }
-  .heroTitle { letter-spacing: 0.08em; }
-  .heroLabel { font-size: 9px; white-space: nowrap; }
-  .heroPhilosophy { font-size: clamp(17px, 4.5vw, 19px); }
-  .heroCtas { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
-  .heroCta { text-align: center; padding: 16px; }
-  .heroCtaSecondary { text-align: center; padding: 16px; }
   .projectHeroImageWrap { aspect-ratio: 1/1; }
   .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
   .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
