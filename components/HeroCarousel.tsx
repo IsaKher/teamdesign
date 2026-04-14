@@ -9,8 +9,8 @@ const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
 
 const SLIDES = [
   {
-    src: `${CDN}/26e77afc3a2262b794b1cc394cd674635200be8f-6720x4480.jpg?w=1920&auto=format&q=85`,
-    alt: 'Luthra Group — Boardroom',
+    src: `${CDN}/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg?w=1920&auto=format&q=85`,
+    alt: 'Luthra Group — Reception',
     position: 'center center',
   },
   {
@@ -29,8 +29,8 @@ const SLIDES = [
     position: 'center center',
   },
   {
-    src: `${CDN}/8ba841543531aeb3d4b7a973fd2cedb8aae4c66e-7360x4912.jpg?w=1920&auto=format&q=85`,
-    alt: 'Unilazer Ventures — Boardroom',
+    src: `${CDN}/90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg?w=1920&auto=format&q=85`,
+    alt: 'Unilazer Ventures — Office',
     position: 'center center',
   },
 ];
