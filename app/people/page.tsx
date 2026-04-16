@@ -1,4 +1,4 @@
-export const revalidate = 0;
+export const revalidate = 3600;
 
 import type { Metadata } from 'next';
 import Image from 'next/image';
