@@ -941,12 +941,17 @@
   .heroWrapper { display: none; }
   .filmstripWrap { display: block; }
 
-  /* ── Stat bar: 2×2 grid, single centre vertical divider ── */
-  .statBar { grid-template-columns: repeat(2, 1fr); padding: 44px var(--margin-page) 48px; gap: 0; }
+  /* ── Stat bar: 2×2 grid, single unbroken centre vertical divider ── */
+  .statBar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 44px var(--margin-page) 48px;
+    gap: 0;
+    border-bottom: none; /* remove the bottom rule */
+  }
   /* Reset all desktop border overrides */
   .stat { padding: 24px 20px; gap: 12px; border-right: none; border-bottom: none; }
   .stat:first-child { padding-left: 20px; } /* undo desktop padding-left: 0 */
-  /* Only left-column items get a right divider — creates one clean centre line */
+  /* Left-column cells get a right border — with gap:0 it forms one continuous line */
   .stat:nth-child(odd) { border-right: 1px solid var(--color-rule); }
   .statValue { font-size: clamp(32px, 9vw, 44px); }
   .statLabel { font-size: 10px; }
@@ -956,9 +961,10 @@
   .heroCta    { min-width: 0; text-align: center; padding: 16px; }
   .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
 
-  /* ── Portfolio section: 2-column tile grid ── */
-  .portfolioSection { padding: 44px var(--margin-page) 48px; }
-  .sectionHeader { flex-direction: column; align-items: flex-start; gap: 16px; }
+  /* ── Portfolio section: tiles go edge-to-edge like portfolio page ── */
+  .portfolioSection { padding: 44px 0 48px; }
+  /* Header keeps its indent; tiles beneath it bleed to screen edges */
+  .sectionHeader { padding: 0 var(--margin-page); flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
   .sectionTitle { font-size: clamp(24px, 6vw, 32px); }
 
   /* Switch projectGrid to a real 2-col grid — tiles flush against each other */
@@ -984,9 +990,9 @@
   /* projectRow becomes invisible to the grid — its children flow in directly */
   .projectRow { display: contents; }
 
-  /* Supporting tile text — flush tiles with minimal meta */
+  /* Supporting tile text — small side indent so text doesn't hit screen edge */
   .projectImageWrap { aspect-ratio: 4/3; }
-  .projectMeta { padding: 8px 0 4px; gap: 3px; }
+  .projectMeta { padding: 8px 10px 4px; gap: 3px; }
   .projectType { font-size: 8px; letter-spacing: 0.08em; }
   .projectTitle { font-size: 13px; line-height: 1.3; }
   .projectClient { display: none; }
