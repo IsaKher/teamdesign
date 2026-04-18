@@ -948,16 +948,17 @@
     gap: 0;
     border-bottom: none; /* remove the bottom rule */
   }
-  /* Reset all desktop border overrides */
-  .stat { padding: 24px 20px; gap: 12px; border-right: none; border-bottom: none; }
-  .stat:first-child { padding-left: 20px; } /* undo desktop padding-left: 0 */
+  /* Reset all desktop border overrides; tighter padding gives columns more width */
+  .stat { padding: 24px 12px; gap: 12px; border-right: none; border-bottom: none; }
+  .stat:first-child { padding-left: 12px; } /* undo desktop padding-left: 0 */
   /* Left-column cells get a right border — with gap:0 it forms one continuous line */
   .stat:nth-child(odd) { border-right: 1px solid var(--color-rule); }
-  .statValue { font-size: clamp(32px, 9vw, 44px); }
+  /* Smaller font so "20L+ sq ft" never wraps */
+  .statValue { font-size: clamp(26px, 7.5vw, 44px); }
   .statLabel { font-size: 10px; }
 
-  /* ── CTAs inside stat bar: stack vertically, full width ── */
-  .statCta { flex-direction: column; align-items: stretch; gap: 12px; }
+  /* ── CTAs inside stat bar: stack vertically, full width, no top rule ── */
+  .statCta { flex-direction: column; align-items: stretch; gap: 12px; border-top: none; padding-top: 0; }
   .heroCta    { min-width: 0; text-align: center; padding: 16px; }
   .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
 
