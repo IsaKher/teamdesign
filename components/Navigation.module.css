@@ -149,8 +149,8 @@
 .mobileWordmark {
   display: none;
   font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
