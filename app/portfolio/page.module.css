@@ -114,12 +114,25 @@
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(28, 22, 18, 0);
+  /* Subtle always-on gradient — keeps text legible and gives cards depth */
+  background: linear-gradient(
+    to top,
+    rgba(28, 22, 18, 0.35) 0%,
+    rgba(28, 22, 18, 0.05) 40%,
+    transparent 65%
+  );
   transition: background 0.8s ease;
   padding: 18px 20px;
 }
 
-.card:hover .cardOverlay { background: rgba(28, 22, 18, 0.52); }
+.card:hover .cardOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(28, 22, 18, 0.75) 0%,
+    rgba(28, 22, 18, 0.35) 48%,
+    transparent 78%
+  );
+}
 
 /* "View →" — top-right, drops in from above */
 .viewLabel {
@@ -212,7 +225,14 @@
 @media (hover: none) {
   .viewLabel { opacity: 1; transform: translateY(0); }
   .cardTagline { opacity: 1; transform: translateY(0); }
-  .cardOverlay { background: rgba(28, 22, 18, 0.30); }
+  .cardOverlay {
+    background: linear-gradient(
+      to top,
+      rgba(28, 22, 18, 0.55) 0%,
+      rgba(28, 22, 18, 0.15) 48%,
+      transparent 72%
+    );
+  }
 }
 
 @media (max-width: 600px) {

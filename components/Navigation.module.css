@@ -129,6 +129,22 @@
 .transparent .active { color: rgba(244, 238, 230, 1) !important; }
 .solid .active        { color: var(--color-text-primary) !important; }
 
+/* Sliding underline — grows from left to right on hover, static on active */
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  transition: right 0.35s ease;
+}
+.transparent .link::after { background: rgba(244, 238, 230, 0.65); }
+.solid .link::after        { background: var(--color-text-primary); }
+
+.link:hover::after         { right: 0; }
+.active::after             { right: 0 !important; opacity: 0.45; }
+
 /* ─── Mobile wordmark (hidden on desktop) ──────────────────── */
 .mobileWordmark {
   display: none;

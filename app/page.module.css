@@ -249,18 +249,21 @@
 
 .viewAll {
   font-family: var(--font-sans);
-  font-size: var(--size-label);
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  /* Always-visible subtle underline — becomes warmer on hover */
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease, letter-spacing 0.3s ease;
 }
 .viewAll:hover {
   color: var(--color-text-primary);
-  border-bottom-color: var(--color-text-primary);
+  border-bottom-color: var(--color-text-secondary);
+  letter-spacing: calc(var(--tracking-label) + 0.02em);
 }
 
 .categoryLinks {
@@ -403,11 +406,12 @@
 .projectCard {
   display: block;
   text-decoration: none;
+  position: relative;
 }
 
 .projectImageWrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--color-ground-dark);
 }
@@ -423,7 +427,13 @@
 .projectOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(28, 22, 18, 0);
+  /* Subtle always-on base so type/title text is legible without hover */
+  background: linear-gradient(
+    to top,
+    rgba(20, 16, 12, 0.60) 0%,
+    rgba(20, 16, 12, 0.18) 45%,
+    transparent 70%
+  );
   transition: background 0.8s ease;
   display: flex;
   align-items: flex-end;
@@ -432,7 +442,12 @@
 }
 
 .projectCard:hover .projectOverlay {
-  background: rgba(28, 22, 18, 0.52);
+  background: linear-gradient(
+    to top,
+    rgba(20, 16, 12, 0.88) 0%,
+    rgba(20, 16, 12, 0.52) 50%,
+    transparent 80%
+  );
 }
 
 .viewHint {
@@ -473,10 +488,15 @@
 }
 
 .projectMeta {
-  padding: 20px 0 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
+  z-index: 2;
 }
 
 .projectType {
@@ -484,27 +504,23 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: rgba(244, 238, 230, 0.65);
 }
 
 .projectTitle {
   font-family: var(--font-serif);
   font-size: var(--size-project-title);
   font-weight: 400;
-  color: var(--color-text-primary);
+  color: rgba(244, 238, 230, 0.95);
   line-height: 1.3;
-  transition: color 0.25s ease;
-}
-
-.projectCard:hover .projectTitle {
-  color: var(--color-text-secondary);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .projectClient {
   font-family: var(--font-sans);
   font-size: var(--size-meta);
   letter-spacing: 0.08em;
-  color: var(--color-text-secondary);
+  color: rgba(244, 238, 230, 0.50);
   text-transform: uppercase;
 }
 
@@ -676,8 +692,19 @@
 
 .processLeft {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 20px;
+}
+
+/* Warm dot marker to the left of each process number — desktop timeline node */
+.processLeft::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-secondary);
+  flex-shrink: 0;
+  opacity: 0.65;
 }
 
 .processNumber {
@@ -921,7 +948,15 @@
 @media (hover: none) {
   .projectCardTagline { opacity: 1; transform: translateY(0); }
   .projectHeroTagline { opacity: 1; transform: translateY(0); }
-  .projectOverlay { background: rgba(28, 22, 18, 0.30); }
+  /* Stronger gradient on touch where hover never fires */
+  .projectOverlay {
+    background: linear-gradient(
+      to top,
+      rgba(20, 16, 12, 0.70) 0%,
+      rgba(20, 16, 12, 0.22) 50%,
+      transparent 75%
+    );
+  }
 }
 
 /* ─── Responsive ───────────────────────────────────────────────────────── */
@@ -932,6 +967,8 @@
   .principalInner { grid-template-columns: 1fr; }
   .principalImageWrap { aspect-ratio: 3/4; max-height: 480px; }
   .projectRow { grid-template-columns: 1fr; }
+  /* Single-column stack on tablet: landscape ratio works better than portrait */
+  .projectImageWrap { aspect-ratio: 4/3; }
   .projectHeroImageWrap { aspect-ratio: 4/3; }
   .projectHeroContent { left: 24px; right: 24px; bottom: 24px; }
 }
@@ -1003,10 +1040,8 @@
   /* projectRow becomes invisible to the grid — its children flow in directly */
   .projectRow { display: contents; }
 
-  /* Supporting tiles: portrait + type/title float onto the image as overlay */
-  .projectCard { position: relative; }
+  /* Supporting tiles: portrait ratio + max-strength gradient (no hover on mobile) */
   .projectImageWrap { aspect-ratio: 3/4; }
-  /* Replace the flat hover:none tint with a proper bottom-to-top gradient */
   .projectOverlay {
     background: linear-gradient(
       to top,
@@ -1015,20 +1050,13 @@
       transparent 80%
     );
   }
-  /* Float the meta div over the bottom of the image */
-  .projectMeta {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 10px 12px;
-    background: none;
-    z-index: 2;
-    gap: 3px;
-  }
-  .projectType { font-size: 8px; letter-spacing: 0.08em; color: rgba(244,238,230,0.65); }
-  .projectTitle { font-size: 13px; line-height: 1.25; color: rgba(244,238,230,0.95); }
+  /* Tighter padding and smaller type on small screens */
+  .projectMeta { padding: 10px 10px 12px; gap: 3px; }
+  .projectType { font-size: 8px; letter-spacing: 0.08em; }
+  .projectTitle { font-size: 13px; line-height: 1.25; }
   .projectClient { display: none; }
+  /* Mobile uses row ::before/::after nodes — suppress the desktop dot */
+  .processLeft::before { display: none; }
 
   /* ── Credentials: stack with breathing room ── */
   .credentials { padding: 48px var(--margin-page); }
