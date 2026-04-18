@@ -1041,10 +1041,57 @@
   .principalName { font-size: clamp(28px, 7vw, 38px); }
   .principalCredentials { grid-template-columns: 1fr; gap: 20px; }
 
-  /* ── Process: compact ── */
+  /* ── Process: vertical timeline ── */
   .processSection { padding: 48px var(--margin-page); }
-  .processRow { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
-  .processLeft { gap: 12px; }
+  .processRows { position: relative; margin-top: 28px; }
+  /* Connecting line — runs from first dot to last */
+  .processRows::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    bottom: 24px;
+    width: 1px;
+    background: var(--color-rule);
+    pointer-events: none;
+  }
+  .processRow {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 0 28px 40px;
+    border: none;
+    position: relative;
+  }
+  .processRow:first-child { border-top: none; }
+  /* Outer ring of each timeline node */
+  .processRow::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-ground);
+    border: 1px solid var(--color-rule);
+    box-sizing: border-box;
+  }
+  /* Inner filled dot */
+  .processRow::after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-text-secondary);
+  }
+  .processLeft { flex-direction: column; gap: 3px; align-items: flex-start; }
+  .processNumber { font-size: 9px; }
+  .processTitle { font-size: 18px; }
+  .processSubtitle { font-size: 14px; }
 
   /* ── Interiors CTA: remove on mobile — not needed ── */
   .interiorsCta { display: none; }

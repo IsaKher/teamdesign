@@ -149,7 +149,8 @@
   display: none;
   flex-direction: column;
   gap: 5px;
-  padding: 8px;
+  /* Minimum 44×44px touch target (WCAG 2.5.5) */
+  padding: 16px 11px;
   background: none;
   border: none;
   cursor: pointer;

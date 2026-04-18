@@ -1,0 +1,38 @@
+/* Desktop: extra paragraph always visible, toggle hidden */
+.extra { display: block; }
+
+.toggle {
+  display: none;
+}
+
+/* Mobile: collapse extra paragraph, show toggle button */
+@media (max-width: 600px) {
+  .extra {
+    display: none;
+    overflow: hidden;
+  }
+
+  .extra.open {
+    display: block;
+  }
+
+  .toggle {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--size-label);
+    font-weight: 400;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-top: -8px; /* pull up closer to preceding paragraph */
+  }
+
+  .toggle:hover {
+    color: var(--color-text-primary);
+  }
+}

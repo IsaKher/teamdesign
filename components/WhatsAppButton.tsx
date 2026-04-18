@@ -1,10 +1,27 @@
 'use client';
+
+import { usePathname } from 'next/navigation';
 import styles from './WhatsAppButton.module.css';
 import { STUDIO } from '@/lib/siteContent';
 
+/** Convert a URL slug like "maharaja-agrasen-palace" → "Maharaja Agrasen Palace" */
+function slugToTitle(slug: string): string {
+  return slug
+    .split('-')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
 export default function WhatsAppButton({ number = STUDIO.whatsappNumber }: { number?: string }) {
-  const message = encodeURIComponent("Hello, I'd like to discuss a project with Team Design Architects.");
-  const href = `https://wa.me/${number}?text=${message}`;
+  const pathname = usePathname();
+
+  // Detect /portfolio/[slug] pages and pre-fill a project-specific message
+  const projectMatch = pathname?.match(/^\/portfolio\/([^/]+)$/);
+  const message = projectMatch
+    ? `Hello, I came across the ${slugToTitle(projectMatch[1])} project on your website and I'd like to enquire about a similar project with Team Design Architects.`
+    : "Hello, I'd like to discuss a project with Team Design Architects.";
+
+  const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 
   return (
     <a

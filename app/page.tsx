@@ -10,6 +10,7 @@ import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
 import HeroFilmstrip from '@/components/HeroFilmstrip';
+import ReadMoreBio from '@/components/ReadMoreBio';
 import { WARM_BLUR } from '@/lib/siteContent';
 import { getFeaturedProjects, getTestimonials, getSiteSettings } from '@/lib/sanity';
 
@@ -189,9 +190,11 @@ export default async function HomePage() {
             <p className={styles.principalBio}>
               Tasadduq Kher founded Team Design in 1996 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over 25 years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
             </p>
-            <p className={styles.principalBio}>
-              His approach begins with understanding how people live and work — then finding the design logic that serves those needs precisely. The result is work that is quiet rather than declarative, and enduring rather than fashionable.
-            </p>
+            <ReadMoreBio>
+              <p className={styles.principalBio}>
+                His approach begins with understanding how people live and work — then finding the design logic that serves those needs precisely. The result is work that is quiet rather than declarative, and enduring rather than fashionable.
+              </p>
+            </ReadMoreBio>
             <div className={styles.principalCredentials}>
               <div className={styles.credential}>
                 <span className={styles.credValue}>B.Arch</span>
