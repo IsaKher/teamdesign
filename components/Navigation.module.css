@@ -133,15 +133,16 @@
 .mobileWordmark {
   display: none;
   font-family: var(--font-serif);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   white-space: nowrap;
   transition: color var(--transition-nav);
 }
-.transparent .mobileWordmark { color: rgba(244, 238, 230, 0.92); }
-.solid .mobileWordmark       { color: var(--color-text-primary); }
+/* Always white on mobile regardless of scroll state */
+.transparent .mobileWordmark { color: rgba(244, 238, 230, 1); }
+.solid .mobileWordmark       { color: rgba(244, 238, 230, 1); }
 
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {
@@ -200,12 +201,16 @@
   .seal         { display: none; }
   .mobileWordmark { display: block; }
 
+  /* Lock nav to 60px on mobile — overrides the global min-height: var(--nav-height) */
+  .nav { min-height: 60px; }
+
   /* Compact nav height now that seal is gone */
   .transparent {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     min-height: 60px;
   }
+  .solid { min-height: 60px; }
 
   /* Switch to flex so wordmark is truly centred */
   .inner {
