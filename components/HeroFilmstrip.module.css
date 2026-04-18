@@ -1,0 +1,109 @@
+/* ─── Mobile filmstrip hero ──────────────────────────────────────────────── */
+/* This component is only rendered on mobile (hidden on desktop via page.module.css) */
+
+.section {
+  background: #14100C;
+  padding-top: 160px; /* clear the fixed nav */
+  padding-bottom: 36px;
+}
+
+/* ─── Header row ──────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 22px 18px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.35);
+}
+
+.viewAll {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: rgba(244, 238, 230, 0.42);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+.viewAll:hover { color: rgba(244, 238, 230, 0.72); }
+
+/* ─── Horizontal strip ────────────────────────────────────────────────────── */
+.strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 22px 4px;
+  scrollbar-width: none;
+}
+.strip::-webkit-scrollbar { display: none; }
+
+/* ─── Individual card ─────────────────────────────────────────────────────── */
+.card {
+  flex-shrink: 0;
+  width: 260px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imageWrap {
+  position: relative;
+  width: 260px;
+  height: 174px; /* ~3:2 landscape ratio */
+  overflow: hidden;
+  background: #2a2520;
+}
+
+/* ─── Card text ───────────────────────────────────────────────────────────── */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 2px;
+}
+
+.type {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.30);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(244, 238, 230, 0.80);
+  line-height: 1.25;
+}
+
+/* Trailing spacer so the last card doesn't sit flush against the edge */
+.endSpacer {
+  width: 12px;
+  flex-shrink: 0;
+}
+
+/* ─── Swipe hint ──────────────────────────────────────────────────────────── */
+.swipeHint {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 18px 22px 0;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.18);
+}

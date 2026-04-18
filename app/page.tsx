@@ -9,6 +9,7 @@ import FadeUpReveal from '@/components/FadeUpReveal';
 import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
+import HeroFilmstrip from '@/components/HeroFilmstrip';
 import { WARM_BLUR } from '@/lib/siteContent';
 import { getFeaturedProjects, getTestimonials, getSiteSettings } from '@/lib/sanity';
 
@@ -31,6 +32,11 @@ export default async function HomePage() {
           <div className={styles.heroOverlayBottom} />
         </div>
         <section className={styles.hero} />
+      </div>
+
+      {/* ─── Mobile filmstrip hero — hidden on desktop ───────────────────── */}
+      <div className={styles.filmstripWrap}>
+        <HeroFilmstrip />
       </div>
 
       {/* ─── Stat Bar + CTAs (cream background, below hero) ──────────────── */}

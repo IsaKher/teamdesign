@@ -1,12 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from './HeroCarousel.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
-// Sanity CDN already serves optimised images — unoptimized=true skips the
-// second Vercel /_next/image pass so there's only one network hop.
 const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
 
 const SLIDES = [
@@ -38,16 +36,42 @@ const SLIDES = [
 ];
 
 const INTERVAL = 5500;
+// Preload the next slide this many ms before it becomes current
+const PRELOAD_AHEAD = 2000;
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
+  // Only the slides we've started loading — starts with just slide 0
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0]));
+  const preloadTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Advance slides
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent(c => (c + 1) % SLIDES.length);
     }, INTERVAL);
     return () => clearInterval(timer);
   }, []);
+
+  // Whenever the current slide changes, schedule a just-in-time preload
+  // of the next slide — fires 2 s before it becomes visible
+  useEffect(() => {
+    if (preloadTimerRef.current) clearTimeout(preloadTimerRef.current);
+
+    const next = (current + 1) % SLIDES.length;
+    preloadTimerRef.current = setTimeout(() => {
+      setLoaded(prev => {
+        if (prev.has(next)) return prev;
+        const updated = new Set(prev);
+        updated.add(next);
+        return updated;
+      });
+    }, INTERVAL - PRELOAD_AHEAD);
+
+    return () => {
+      if (preloadTimerRef.current) clearTimeout(preloadTimerRef.current);
+    };
+  }, [current]);
 
   return (
     <div className={styles.wrap}>
@@ -56,17 +80,19 @@ export default function HeroCarousel() {
           key={i}
           className={`${styles.slide} ${i === current ? styles.active : ''}`}
         >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: slide.position }}
-            priority={i <= 1}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-            quality={85}
-          />
+          {loaded.has(i) && (
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              style={{ objectFit: 'cover', objectPosition: slide.position }}
+              priority={i === 0}
+              placeholder="blur"
+              blurDataURL={WARM_BLUR}
+              quality={85}
+            />
+          )}
         </div>
       ))}
     </div>

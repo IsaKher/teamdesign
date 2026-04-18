@@ -133,6 +133,10 @@
     0 8px 48px rgba(0, 0, 0, 0.60);
 }
 
+/* ─── Mobile filmstrip wrapper ──────────────────────────────────────────── */
+/* Desktop: hidden — carousel handles the hero there */
+.filmstripWrap { display: none; }
+
 /* .heroCtas wrapper removed — CTAs now live inside .statCta */
 
 .heroCta {
@@ -933,8 +937,9 @@
 }
 
 @media (max-width: 600px) {
-  /* ── Hero: shorter so stat bar is visible below the fold ── */
-  .hero { height: 62vh; min-height: 420px; }
+  /* ── Hero: carousel hidden on mobile — filmstrip replaces it ── */
+  .heroWrapper { display: none; }
+  .filmstripWrap { display: block; }
 
   /* ── Stat bar: tighter, 2×2 grid ── */
   .statBar { grid-template-columns: repeat(2, 1fr); padding: 36px var(--margin-page); }
