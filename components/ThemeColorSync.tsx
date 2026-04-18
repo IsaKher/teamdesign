@@ -31,12 +31,9 @@ export default function ThemeColorSync() {
     // Initialise — hero / filmstrip are dark
     apply(DARK);
 
-    // On mobile (≤600px) the entire homepage is dark-themed, so the
-    // status-bar colour never flips — it stays dark for the full page.
-    // On desktop/tablet the filmstrip is hidden and the cream sections begin
-    // at ~420 px scroll, so we flip back to cream there.
-    const isMobile = window.matchMedia('(max-width: 600px)').matches;
-    const THRESHOLD = isMobile ? Infinity : 420;
+    // Threshold: the mobile filmstrip section is ~440px tall.
+    // Once scrolled past it we are into the cream-background content area.
+    const THRESHOLD = 420;
 
     let last = window.scrollY > THRESHOLD;
 
