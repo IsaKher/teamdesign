@@ -3,7 +3,7 @@
 
 .section {
   background: #14100C;
-  padding-top: 160px; /* clear the fixed nav */
+  padding-top: 60px; /* clear the fixed nav (now 60px) */
   padding-bottom: 36px;
 }
 
@@ -17,11 +17,11 @@
 
 .eyebrow {
   font-family: var(--font-sans);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.35);
+  color: rgba(244, 238, 230, 0.65);
 }
 
 .viewAll {
@@ -49,18 +49,18 @@
 /* ─── Individual card ─────────────────────────────────────────────────────── */
 .card {
   flex-shrink: 0;
-  width: 260px;
+  width: 290px;
   scroll-snap-align: start;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .imageWrap {
   position: relative;
-  width: 260px;
-  height: 174px; /* ~3:2 landscape ratio */
+  width: 290px;
+  height: 194px; /* ~3:2 landscape ratio */
   overflow: hidden;
   background: #2a2520;
 }
@@ -78,14 +78,14 @@
   font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.30);
+  color: rgba(244, 238, 230, 0.50);
 }
 
 .name {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.80);
+  color: rgba(244, 238, 230, 0.92);
   line-height: 1.25;
 }
 

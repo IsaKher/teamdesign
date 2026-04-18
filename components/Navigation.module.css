@@ -129,6 +129,20 @@
 .transparent .active { color: rgba(244, 238, 230, 1) !important; }
 .solid .active        { color: var(--color-text-primary) !important; }
 
+/* ─── Mobile wordmark (hidden on desktop) ──────────────────── */
+.mobileWordmark {
+  display: none;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color var(--transition-nav);
+}
+.transparent .mobileWordmark { color: rgba(244, 238, 230, 0.92); }
+.solid .mobileWordmark       { color: var(--color-text-primary); }
+
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {
   display: none;
@@ -182,20 +196,24 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Restore blur on mobile — looks better; taller bar covers the blur edge */
+  /* Wordmark replaces the circular seal on mobile */
+  .seal         { display: none; }
+  .mobileWordmark { display: block; }
+
+  /* Compact nav height now that seal is gone */
   .transparent {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    min-height: 160px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-height: 60px;
   }
 
-  /* Switch to flex so logo is truly centred */
+  /* Switch to flex so wordmark is truly centred */
   .inner {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 160px;
+    height: 60px;
   }
 
   .linksLeft  { display: none; }

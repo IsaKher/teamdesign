@@ -69,7 +69,7 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* Centred logo */}
+        {/* Centred logo — desktop shows seal, mobile shows wordmark */}
         <Link href="/" className={styles.logoWrap} aria-label="Team Design Architects — home">
           <span className={styles.seal}>
             <Image
@@ -81,6 +81,7 @@ export default function Navigation() {
               priority
             />
           </span>
+          <span className={styles.mobileWordmark}>Team Design</span>
         </Link>
 
         {/* Right links + mobile burger */}

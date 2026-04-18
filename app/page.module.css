@@ -941,26 +941,57 @@
   .heroWrapper { display: none; }
   .filmstripWrap { display: block; }
 
-  /* ── Stat bar: tighter, 2×2 grid ── */
-  .statBar { grid-template-columns: repeat(2, 1fr); padding: 36px var(--margin-page); }
-  .stat { padding: 0 16px; gap: 8px; }
-  .statValue { font-size: clamp(28px, 8vw, 40px); }
+  /* ── Stat bar: 2×2 grid with breathing room ── */
+  .statBar { grid-template-columns: repeat(2, 1fr); padding: 44px var(--margin-page) 48px; gap: 0; }
+  .stat { padding: 20px 16px; gap: 12px; }
+  .statValue { font-size: clamp(32px, 9vw, 44px); }
+  .statLabel { font-size: 10px; }
 
   /* ── CTAs inside stat bar: stack vertically, full width ── */
   .statCta { flex-direction: column; align-items: stretch; gap: 12px; }
   .heroCta    { min-width: 0; text-align: center; padding: 16px; }
   .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
 
-  /* ── Sections ── */
+  /* ── Portfolio section: project tiles ── */
+  .portfolioSection { padding: 44px var(--margin-page) 48px; }
   .sectionHeader { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .sectionTitle { font-size: clamp(24px, 6vw, 32px); }
+
+  /* Lead card — 4:3 tile, overlay content stays but is tighter */
+  .projectHeroImageWrap { aspect-ratio: 4/3; }
+  .projectHeroContent { left: 20px; right: 20px; bottom: 20px; }
+  .projectHeroTitle { font-size: clamp(18px, 5vw, 24px); }
+  .projectHeroTagline { display: none; } /* cleaner without tagline on mobile */
+
+  /* Supporting tiles: single column with good vertical gap */
+  .projectRow { grid-template-columns: 1fr; gap: 40px; }
+  .projectImageWrap { aspect-ratio: 4/3; }
+  .projectMeta { padding: 14px 0 0; }
+  .projectTitle { font-size: clamp(16px, 4.5vw, 20px); }
+
+  /* ── Credentials: stack with breathing room ── */
+  .credentials { padding: 48px var(--margin-page); }
+  .credentialsInner { gap: 40px; }
+
+  /* ── Principal: tighter, portrait full-width ── */
+  .principal { padding: 48px var(--margin-page); }
+  .principalInner { gap: 28px; }
+  .principalImageWrap { aspect-ratio: 4/5; max-height: 420px; }
+  .principalName { font-size: clamp(28px, 7vw, 38px); }
+  .principalCredentials { grid-template-columns: 1fr; gap: 20px; }
+
+  /* ── Process: compact ── */
+  .processSection { padding: 48px var(--margin-page); }
+  .processRow { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
+  .processLeft { gap: 12px; }
+
+  /* ── Interiors CTA: remove on mobile — not needed ── */
+  .interiorsCta { display: none; }
+
+  /* ── Other ── */
   .clientItem { flex-direction: column; }
   .clientProject { text-align: left; max-width: 100%; }
-  .projectHeroImageWrap { aspect-ratio: 1/1; }
-  .projectHeroTitle { font-size: clamp(20px, 5vw, 30px); }
   .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
   .categoryLink { text-align: center; }
-  .portfolioSection { padding: 56px var(--margin-page); }
-  .credentials { padding: 56px var(--margin-page); }
-  .principal { padding: 56px var(--margin-page); }
-  .recognition { padding: 56px var(--margin-page); }
+  .recognition { padding: 48px var(--margin-page); }
 }
