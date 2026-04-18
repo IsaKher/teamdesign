@@ -50,6 +50,9 @@ export default async function HomePage() {
         <HeroFilmstrip />
       </div>
 
+      {/* ─── Page content — wrapper used for mobile dark-theme variable override ─ */}
+      <div className={styles.pageContent}>
+
       {/* ─── Stat Bar + CTAs (cream background, below hero) ──────────────── */}
       <section className={styles.statBar}>
         {[
@@ -272,6 +275,8 @@ export default async function HomePage() {
           <Link href="/portfolio?type=Interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
         </div>
       </section>
+
+      </div>{/* /pageContent */}
     </>
   );
 }

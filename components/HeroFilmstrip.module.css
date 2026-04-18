@@ -41,6 +41,11 @@
   transition: transform 0.18s ease-out;
   /* Slight rounded corners add depth to the 3-D effect */
   border-radius: 3px;
+  /* Layered shadow — suggests the card is elevated/floating above the surface */
+  box-shadow:
+    0 2px  8px  rgba(0, 0, 0, 0.45),
+    0 8px  24px rgba(0, 0, 0, 0.55),
+    0 18px 52px rgba(0, 0, 0, 0.40);
 }
 
 /* ─── Text overlay (sits inside the image) ───────────────────────────────── */

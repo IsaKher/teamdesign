@@ -894,6 +894,10 @@
   .recognitionItem { grid-template-columns: 1fr; gap: 8px; }
 }
 
+/* ─── Page content wrapper (used for mobile dark-theme scoping) ─────────── */
+/* No-op on desktop — only takes effect inside the 600px media query below   */
+.pageContent {}
+
 /* ─── Interiors CTA ────────────────────────────────────────────────────── */
 .interiorsCta {
   position: relative;
@@ -1130,4 +1134,37 @@
   .categoryLinks { gap: 6px; display: grid; grid-template-columns: 1fr 1fr; }
   .categoryLink { text-align: center; }
   .recognition { padding: 48px var(--margin-page); }
+
+  /* ════════════════════════════════════════════════════════════════════════
+     MOBILE DARK THEME — homepage sections below the filmstrip
+     Override CSS custom properties at the wrapper level so every child
+     element that uses those variables flips automatically.
+     cream ↔ dark / brown → muted cream
+     ════════════════════════════════════════════════════════════════════════ */
+  .pageContent {
+    /* Backgrounds: cream → near-black */
+    --color-ground:      #1C1612;
+    --color-ground-dark: #14100C;
+    /* Text: dark → cream */
+    --color-text-primary:   rgba(244, 238, 230, 0.95);
+    /* Labels / secondary: brown → muted cream */
+    --color-text-secondary: rgba(244, 238, 230, 0.48);
+    /* Borders / rules: warm mid-tone → subtle light line */
+    --color-rule: rgba(244, 238, 230, 0.12);
+    /* Section background to match (body bg is still cream, so this fills any gaps) */
+    background: #1C1612;
+  }
+
+  /* The .credentials section uses --color-ground-dark which is now #14100C ✓ */
+  /* The .statBar ::before divider uses --color-rule → subtle light ✓ */
+  /* The .processRows ::before connecting line uses --color-rule → subtle light ✓ */
+
+  /* Timeline ring: dark center matches dark section bg */
+  .processRow::before { background: var(--color-ground); }
+
+  /* Inner timeline dot: slightly brighter than --color-text-secondary so it reads */
+  .processRow::after { background: rgba(244, 238, 230, 0.60); }
+
+  /* CTA buttons: now cream-on-dark (variables already flipped, no extra rule needed) */
+  /* .heroCta → background: cream, color: dark ✓ */
 }
