@@ -1,5 +1,6 @@
 export const revalidate = 3600;
 
+import type { Viewport } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -11,8 +12,14 @@ import MagneticButton from '@/components/MagneticButton';
 import HeroCarousel from '@/components/HeroCarousel';
 import HeroFilmstrip from '@/components/HeroFilmstrip';
 import ReadMoreBio from '@/components/ReadMoreBio';
+import ThemeColorSync from '@/components/ThemeColorSync';
 import { WARM_BLUR } from '@/lib/siteContent';
 import { getFeaturedProjects, getTestimonials, getSiteSettings } from '@/lib/sanity';
+
+/** SSR-time theme colour — dark to match the hero/filmstrip before JS runs */
+export const viewport: Viewport = {
+  themeColor: '#14100C',
+};
 
 export default async function HomePage() {
   const [featuredProjects, testimonials, settings] = await Promise.all([
@@ -25,6 +32,9 @@ export default async function HomePage() {
   const hasFeatured = featuredProjects.length >= 4;
   return (
     <>
+      {/* Syncs iOS/Android status-bar theme-color with scroll position */}
+      <ThemeColorSync />
+
       {/* ─── Hero ──────────────────────────────────────────────────────── */}
       <div className={styles.heroWrapper}>
         <HeroParallax />

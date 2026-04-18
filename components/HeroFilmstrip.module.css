@@ -3,45 +3,19 @@
 
 .section {
   background: #14100C;
-  padding-top: 60px; /* clear the fixed nav (now 60px) */
-  padding-bottom: 36px;
+  padding-top: 60px;     /* clear the fixed 60 px mobile nav */
+  padding-bottom: 28px;
 }
-
-/* ─── Header row ──────────────────────────────────────────────────────────── */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 22px 18px;
-}
-
-.eyebrow {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.92);
-}
-
-.viewAll {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  color: rgba(244, 238, 230, 0.65);
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  transition: color 0.2s ease;
-}
-.viewAll:hover { color: rgba(244, 238, 230, 0.92); }
 
 /* ─── Horizontal strip ────────────────────────────────────────────────────── */
 .strip {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 0 22px 4px;
+  /* Side padding = (viewport − card) / 2 so the centred card sits flush */
+  padding: 22px calc(50% - 140px) 20px;
   scrollbar-width: none;
 }
 .strip::-webkit-scrollbar { display: none; }
@@ -49,50 +23,68 @@
 /* ─── Individual card ─────────────────────────────────────────────────────── */
 .card {
   flex-shrink: 0;
-  width: 290px;
-  scroll-snap-align: start;
+  width: 280px;
+  scroll-snap-align: center;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
+/* ─── Image frame (the element that gets the 3-D transform) ──────────────── */
 .imageWrap {
   position: relative;
-  width: 290px;
-  height: 194px; /* ~3:2 landscape ratio */
+  width: 280px;
+  height: 264px;                       /* taller now that the header is gone */
   overflow: hidden;
   background: #2a2520;
+  will-change: transform;
+  transform-origin: center center;
+  /* Soft transition so the card "catches up" after each rAF tick */
+  transition: transform 0.18s ease-out;
+  /* Slight rounded corners add depth to the 3-D effect */
+  border-radius: 3px;
 }
 
-/* ─── Card text ───────────────────────────────────────────────────────────── */
-.meta {
+/* ─── Text overlay (sits inside the image) ───────────────────────────────── */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 44px 16px 18px;
+  background: linear-gradient(
+    to top,
+    rgba(20, 16, 12, 0.82) 0%,
+    rgba(20, 16, 12, 0.22) 60%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 0 2px;
+  pointer-events: none;
 }
 
 .type {
   font-family: var(--font-sans);
   font-size: 9px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.50);
+  color: rgba(244, 238, 230, 0.55);
 }
 
 .name {
   font-family: var(--font-serif);
   font-size: 17px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.92);
+  color: rgba(244, 238, 230, 0.93);
   line-height: 1.25;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 }
 
-/* Trailing spacer so the last card doesn't sit flush against the edge */
+/* ─── Trailing spacer — mirrors the left padding so last card can centre ─── */
 .endSpacer {
-  width: 12px;
+  /* calc(50% - 140px) minus the gap already applied by flex gap */
+  width: calc(50% - 140px - 12px);
   flex-shrink: 0;
+  min-width: 8px;
 }
 
 /* ─── Swipe hint ──────────────────────────────────────────────────────────── */
@@ -100,10 +92,10 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 18px 22px 0;
+  padding: 14px 22px 0;
   font-family: var(--font-sans);
   font-size: 9px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.52);
+  color: rgba(244, 238, 230, 0.40);
 }
