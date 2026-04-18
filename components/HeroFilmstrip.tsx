@@ -13,7 +13,7 @@ const PROJECTS = [
     slug: 'luthra-group',
   },
   {
-    src: `${CDN}/73613e248e1376b2ad904a4ab8d11d6d89d68524-2560x1707.jpg`,
+    src: `${CDN}/a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png`,
     name: 'Maharaja Agrasen Palace',
     type: 'Institutional',
     slug: 'maharaja-agrasen-palace',
