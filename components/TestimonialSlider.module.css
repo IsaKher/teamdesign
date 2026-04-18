@@ -105,7 +105,20 @@
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .slider {
-    min-height: 260px;
+  .slider { min-height: 240px; }
+}
+
+@media (max-width: 600px) {
+  .slider { min-height: 0; } /* let content drive height on mobile */
+  .slide { gap: 16px; padding-right: 0; }
+  .quote {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0;
   }
+  .author { padding-top: 14px; gap: 3px; }
+  .authorName { font-size: 14px; }
+  .authorTitle { font-size: 10px; }
+  .progressBar { margin-top: 18px; }
+  .dots { margin-top: 14px; gap: 6px; }
 }

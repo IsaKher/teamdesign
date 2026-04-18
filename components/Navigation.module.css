@@ -140,9 +140,9 @@
   white-space: nowrap;
   transition: color var(--transition-nav);
 }
-/* Always white on mobile regardless of scroll state */
+/* Adaptive: white on dark hero, dark on cream solid nav */
 .transparent .mobileWordmark { color: rgba(244, 238, 230, 1); }
-.solid .mobileWordmark       { color: rgba(244, 238, 230, 1); }
+.solid .mobileWordmark       { color: var(--color-text-primary); }
 
 /* ─── Mobile burger ────────────────────────────────────────── */
 .burger {

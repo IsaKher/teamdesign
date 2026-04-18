@@ -44,8 +44,8 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: 48px;
-  background: linear-gradient(to right, transparent, var(--color-ground));
+  width: 72px;
+  background: linear-gradient(to right, transparent, var(--color-ground) 75%);
   pointer-events: none;
   display: none;
 }
@@ -216,14 +216,26 @@
 }
 
 @media (max-width: 600px) {
-  .pageHero { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px; }
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  /* Fix: nav is 60px on mobile, not 136px (--nav-height) */
+  .pageHero { padding-top: 100px; padding-bottom: 40px; }
+
+  /* 2-col grid, flush tiles */
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
   .cardImage { aspect-ratio: 3 / 4; }
-  .cardMeta { padding: 12px 10px 20px; }
-  .cardTitle { font-size: 15px; }
+  .cardMeta { padding: 10px 8px 16px; }
+  .cardType { font-size: 9px; }
+  .cardTitle { font-size: 13px; line-height: 1.3; }
+
+  /* Remove redundant overlay info — cardMeta below already shows client/location */
+  .cardTagline { display: none; }
+  .viewLabel { display: none; }
+
+  /* Simplify card details row */
   .cardDetails { flex-direction: column; gap: 1px; font-size: 9px; }
+
+  /* Filter bar */
   .filterBar { padding: 0 var(--margin-page); }
-  .filterBtn { padding: 16px 20px; }
+  .filterBtn { padding: 14px 18px; font-size: 10px; }
 }
 
 .emptyState {
