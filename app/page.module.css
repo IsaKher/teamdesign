@@ -943,24 +943,37 @@
 
   /* ── Stat bar: 2×2 grid, single unbroken centre vertical divider ── */
   .statBar {
+    position: relative;
     grid-template-columns: repeat(2, 1fr);
     padding: 44px var(--margin-page) 48px;
     gap: 0;
-    border-bottom: none; /* remove the bottom rule */
+    border-bottom: none;
   }
-  /* Reset all desktop border overrides; tighter padding gives columns more width */
+  /* True single line: pseudo-element on container, perfectly centred.
+     bottom: 48px (bar padding) + 126px (CTA: 28 padding-top + 43 btn + 12 gap + 43 btn) = 174px */
+  .statBar::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 44px;
+    bottom: 176px;
+    width: 1px;
+    background: var(--color-rule);
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* Reset all desktop border overrides — line comes from ::before now */
   .stat { padding: 24px 12px; gap: 12px; border-right: none; border-bottom: none; }
-  .stat:first-child { padding-left: 12px; } /* undo desktop padding-left: 0 */
-  /* Left-column cells get a right border — with gap:0 it forms one continuous line */
-  .stat:nth-child(odd) { border-right: 1px solid var(--color-rule); }
+  .stat:first-child { padding-left: 12px; }
   /* Smaller font so "20L+ sq ft" never wraps */
   .statValue { font-size: clamp(26px, 7.5vw, 44px); }
   .statLabel { font-size: 10px; }
 
-  /* ── CTAs inside stat bar: stack vertically, full width, no top rule ── */
-  .statCta { flex-direction: column; align-items: stretch; gap: 12px; border-top: none; padding-top: 0; }
+  /* ── CTAs inside stat bar: stack vertically, more space above ── */
+  .statCta { flex-direction: column; align-items: stretch; gap: 12px; border-top: none; padding-top: 28px; position: relative; z-index: 1; }
   .heroCta    { min-width: 0; text-align: center; padding: 16px; }
-  .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
+  /* Solid background so the centre line can't bleed through the transparent border */
+  .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; background: var(--color-ground); }
 
   /* ── Portfolio section: tiles go edge-to-edge like portfolio page ── */
   .portfolioSection { padding: 44px 0 48px; }
