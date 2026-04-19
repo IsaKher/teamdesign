@@ -429,8 +429,8 @@
   color: var(--color-text-secondary);
 }
 
-/* ─── Services — specification table ────────────────────── */
-.specSection {
+/* ─── Services — 2×2 card grid ──────────────────────────── */
+.servicesSection {
   padding: var(--margin-section) var(--margin-page);
   display: flex;
   flex-direction: column;
@@ -438,7 +438,7 @@
   background: var(--color-ground-dark);
 }
 
-.specHeader {
+.servicesHeader {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -451,80 +451,36 @@
   color: var(--color-text-primary);
 }
 
-.specTable {
-  width: 100%;
-}
-
-/* Column layout: Ref | Service | Type | Scope | Description */
-.specHeadRow,
-.specRow {
+/* 2×2 grid — 2px gap matches the rest of the site's grid language */
+.serviceCards {
   display: grid;
-  grid-template-columns: 40px 1.6fr 1fr 0.8fr 2fr;
-  gap: 0 24px;
-  align-items: baseline;
-  padding: 14px 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
 }
 
-.specHeadRow {
-  border-bottom: 1.5px solid var(--color-text-primary);
-  padding-bottom: 10px;
+.serviceCard {
+  background: var(--color-ground);
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Top hairline to anchor each card visually */
+  border-top: 2px solid var(--color-rule);
 }
 
-.specHeadRow span {
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-}
-
-.specRow {
-  border-bottom: 1px solid var(--color-rule);
-}
-
-.specRef {
+.serviceCardTitle {
   font-family: var(--font-serif);
-  font-size: 13px;
-  font-style: italic;
-  color: var(--color-text-secondary);
-  opacity: 0.60;
-  align-self: center;
-}
-
-.specTitle {
-  font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: clamp(20px, 1.8vw, 26px);
   font-weight: 400;
   color: var(--color-text-primary);
   line-height: 1.2;
 }
 
-.specType {
+.serviceCardDesc {
   font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  align-self: center;
-}
-
-.specScope {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  align-self: center;
-}
-
-.specDesc {
-  font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 1.65;
+  line-height: var(--lh-body);
   color: var(--color-text-secondary);
 }
 
@@ -539,26 +495,22 @@
   .titleCell:nth-child(3) { border-top: 1px solid var(--color-text-primary); }
   .titleCell:nth-child(4) { border-right: none; border-top: 1px solid var(--color-text-primary); }
   .titleCellCoords { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--color-text-primary); align-items: flex-start; }
-  .specHeadRow,
-  .specRow      { grid-template-columns: 40px 1fr 1fr; }
-  .specScope, .specDesc { display: none; }
 }
 
 @media (max-width: 600px) {
-  .pageHero     { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 48px; }
-  .drawing      { padding: 0 24px 48px; }
-  .processSteps { grid-template-columns: 1fr; }
-  .serviceGrid  { grid-template-columns: 1fr; }
-  .titleBlock   { grid-template-columns: 1fr 1fr; }
+  .pageHero       { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 48px; }
+  .drawing        { padding: 0 24px 48px; }
+  .processSteps   { grid-template-columns: 1fr; }
+  .serviceGrid    { grid-template-columns: 1fr; }
+  .serviceCards   { grid-template-columns: 1fr; }
+  .serviceCard    { padding: 32px 24px; }
+  .titleBlock     { grid-template-columns: 1fr 1fr; }
   .annotA, .annotB, .annotC { display: none; }
-  .annotatedPara { grid-template-columns: 1fr; }
-  .paraNote     { display: none; }
-  .specHeadRow,
-  .specRow      { grid-template-columns: 40px 1fr; }
-  .specType     { display: none; }
-  .pullQuote    { padding: 56px var(--margin-page); }
-  .story        { padding: 56px var(--margin-page); }
-  .process      { padding: 56px var(--margin-page); }
-  .services     { padding: 56px var(--margin-page); }
-  .specSection  { padding: 56px var(--margin-page); }
+  .annotatedPara  { grid-template-columns: 1fr; }
+  .paraNote       { display: none; }
+  .pullQuote      { padding: 56px var(--margin-page); }
+  .story          { padding: 56px var(--margin-page); }
+  .process        { padding: 56px var(--margin-page); }
+  .services       { padding: 56px var(--margin-page); }
+  .servicesSection { padding: 56px var(--margin-page); }
 }

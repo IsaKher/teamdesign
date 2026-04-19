@@ -25,7 +25,7 @@ export const STATS = [
   { value: '25+', label: 'Years in Practice' },
   { value: '300+', label: 'Projects Completed' },
   { value: '500+', label: 'Clients Served' },
-  { value: '20L+ sq ft', label: 'Built Space' },
+  { value: '2M+ sq ft', label: 'Built Space' },
 ];
 
 export const SELECTED_CLIENTS = [

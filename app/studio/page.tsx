@@ -84,7 +84,7 @@ export default function StudioPage() {
                 <span className={styles.statLbl}>Clients</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statVal}>20L+</span>
+                <span className={styles.statVal}>2M+</span>
                 <span className={styles.statLbl}>Sq Ft Built</span>
               </div>
             </div>
@@ -119,27 +119,17 @@ export default function StudioPage() {
         </div>
       </section>
 
-{/* ─── Services — specification table ──────────────────────── */}
-      <section className={styles.specSection}>
-        <div className={styles.specHeader}>
+{/* ─── Services — 2×2 card grid ───────────────────────────── */}
+      <section className={styles.servicesSection}>
+        <div className={styles.servicesHeader}>
           <span className={styles.sectionLabel}>What We Do</span>
           <h2 className={styles.awardsTitle}>Services</h2>
         </div>
-        <div className={styles.specTable}>
-          <div className={styles.specHeadRow}>
-            <span>Ref</span>
-            <span>Service</span>
-            <span>Type</span>
-            <span>Scope</span>
-            <span>Description</span>
-          </div>
+        <div className={styles.serviceCards}>
           {SERVICES.map((s, i) => (
-            <div key={i} className={styles.specRow}>
-              <span className={styles.specRef}>{String(i + 1).padStart(2, '0')}</span>
-              <span className={styles.specTitle}>{s.title}</span>
-              <span className={styles.specType}>{s.type}</span>
-              <span className={styles.specScope}>{s.year}</span>
-              <span className={styles.specDesc}>{s.body}</span>
+            <div key={i} className={styles.serviceCard}>
+              <h3 className={styles.serviceCardTitle}>{s.title}</h3>
+              <p className={styles.serviceCardDesc}>{s.body}</p>
             </div>
           ))}
         </div>

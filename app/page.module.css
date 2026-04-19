@@ -163,18 +163,17 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: var(--color-ground);
-  background: var(--color-text-primary);
-  border: 1px solid var(--color-text-primary);
-  padding: 13px 28px;
-  min-width: 200px;
+  color: var(--color-text-secondary);
   text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  /* Subtle always-visible underline — same treatment as .viewAll */
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease, letter-spacing 0.3s ease;
 }
 .heroCtaSecondary:hover {
-  background: var(--color-text-secondary);
-  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-text-secondary);
+  letter-spacing: calc(var(--tracking-label) + 0.02em);
 }
 
 
@@ -223,6 +222,28 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
+}
+
+/* ─── Value proposition ────────────────────────────────────────────────── */
+.valuePropWrap {
+  padding: 52px var(--margin-page) 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.valueProp {
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 1.55vw, 21px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.005em;
+  line-height: 1.4;
+  white-space: nowrap; /* single line at tablet+ */
+}
+
+@media (max-width: 768px) {
+  .valueProp { white-space: normal; }
+  .valuePropWrap { padding-top: 36px; }
 }
 
 /* ─── Selected Work ────────────────────────────────────────────────────── */
@@ -978,6 +999,9 @@
   .heroWrapper { display: none; }
   .filmstripWrap { display: block; }
 
+  /* Value prop is established by the filmstrip on mobile — hide to avoid redundancy */
+  .valuePropWrap { display: none; }
+
   /* ── Stat bar: 2×2 grid, single unbroken centre vertical divider ── */
   .statBar {
     position: relative;
@@ -1007,9 +1031,10 @@
   .statLabel { font-size: 10px; }
 
   /* ── CTAs inside stat bar: stack vertically, more space above ── */
-  .statCta { flex-direction: column; align-items: stretch; gap: 12px; border-top: none; padding-top: 44px; position: relative; z-index: 1; }
-  .heroCta    { min-width: 0; text-align: center; padding: 16px; }
-  .heroCtaSecondary { min-width: 0; text-align: center; padding: 16px; }
+  .statCta { flex-direction: column; align-items: stretch; gap: 16px; border-top: none; padding-top: 44px; position: relative; z-index: 1; }
+  .heroCta { min-width: 0; text-align: center; padding: 16px; }
+  /* Secondary is now a text link — reset inherited stretch alignment */
+  .heroCtaSecondary { align-self: center; }
 
   /* ── Portfolio section: tiles go edge-to-edge like portfolio page ── */
   .portfolioSection { padding: 44px 0 48px; }

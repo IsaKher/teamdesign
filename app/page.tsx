@@ -56,7 +56,7 @@ export default async function HomePage() {
           { value: settings?.yearsInPractice ?? '25+',        label: 'Years in Practice' },
           { value: settings?.projectCount    ?? '300+',       label: 'Projects Completed' },
           { value: settings?.clientCount     ?? '500+',       label: 'Clients Served' },
-          { value: settings?.sqftCompleted   ?? '20L+ sq ft', label: 'Built Space' },
+          { value: settings?.sqftCompleted   ?? '2M+ sq ft',  label: 'Built Space' },
         ].map((stat, i) => (
           <div key={i} className={styles.stat}>
             <span className={styles.statValue}>{stat.value}</span>
@@ -66,9 +66,16 @@ export default async function HomePage() {
         {/* CTA column — lives inside stat bar for contextual placement */}
         <div className={styles.statCta}>
           <MagneticButton><Link href="/portfolio" className={styles.heroCta}>View Our Work</Link></MagneticButton>
-          <MagneticButton><Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link></MagneticButton>
+          <Link href="/contact" className={styles.heroCtaSecondary}>Discuss a Project →</Link>
         </div>
       </section>
+
+      {/* ─── Value proposition ─────────────────────────────────────────── */}
+      <div className={styles.valuePropWrap}>
+        <h1 className={styles.valueProp}>
+          Twenty-five years of architecture and interiors — from homes to institutions, across India.
+        </h1>
+      </div>
 
       {/* ─── Selected Work ─────────────────────────────────────────────── */}
       <section className={styles.portfolioSection}>
