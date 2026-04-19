@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import SmoothScroll from '@/components/SmoothScroll';
+import PageTransition from '@/components/PageTransition';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -162,7 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SmoothScroll />
         <Navigation />
-        <main>{children}</main>
+        <main><PageTransition>{children}</PageTransition></main>
         <Footer />
         <WhatsAppButton />
       </body>

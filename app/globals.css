@@ -136,3 +136,12 @@ button:focus-visible {
 @media (hover: hover) and (pointer: fine) {
   *, *::before, *::after { cursor: none !important; }
 }
+
+/* ─── Hide WhatsApp button when contact form is focused (mobile) ─────────── */
+@media (max-width: 768px) {
+  body:has([data-contact-form]:focus-within) [data-whatsapp-button] {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+}

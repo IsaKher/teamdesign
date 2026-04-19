@@ -163,7 +163,7 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
             </a>
           </div>
         ) : (
-          <form className={styles.form} onSubmit={handleSubmit} noValidate>
+          <form className={styles.form} onSubmit={handleSubmit} noValidate data-contact-form>
             <input
               name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true"
               style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
@@ -224,10 +224,10 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
                 <label htmlFor="budget" className={styles.label}>Approximate Budget</label>
                 <select id="budget" name="budget" className={styles.select}>
                   <option value="">Prefer not to say</option>
-                  <option value="under-50l">Under ₹50 Lakhs</option>
-                  <option value="50l-1cr">₹50L – ₹1 Crore</option>
+                  <option value="under-1cr">Under ₹1 Crore</option>
                   <option value="1cr-3cr">₹1 – ₹3 Crore</option>
-                  <option value="3cr-plus">₹3 Crore+</option>
+                  <option value="3cr-10cr">₹3 – ₹10 Crore</option>
+                  <option value="10cr-plus">₹10 Crore+</option>
                 </select>
               </div>
               <div className={styles.field}>

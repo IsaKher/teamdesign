@@ -17,6 +17,20 @@ export function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 
+/** Append Sanity CDN transform params for thumbnail use (card grids, nav, teams) */
+export function thumbUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (!url.startsWith('https://cdn.sanity.io')) return url;
+  return `${url}?w=800&q=72&auto=format&fit=max`;
+}
+
+/** Append Sanity CDN transform params for hero / full-width use */
+export function heroUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (!url.startsWith('https://cdn.sanity.io')) return url;
+  return `${url}?w=1600&q=82&auto=format&fit=max`;
+}
+
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 export interface SanityProject {
@@ -155,12 +169,12 @@ function transformContentBlocks(raw: RawSanityBlock[]): ContentBlock[] {
           return { type: 'pullQuote', text: block.text ?? '' };
         case 'fullWidthImageBlock':
           if (!block.imageUrl) return null;
-          return { type: 'fullWidthImage', src: block.imageUrl, alt: block.imageAlt, caption: block.caption, lqip: block.imageLqip };
+          return { type: 'fullWidthImage', src: heroUrl(block.imageUrl) ?? block.imageUrl, alt: block.imageAlt, caption: block.caption, lqip: block.imageLqip };
         case 'halfWidthImagesBlock':
           if (!block.imageLeftUrl || !block.imageRightUrl) return null;
           return {
             type: 'halfWidthImages',
-            images: [block.imageLeftUrl, block.imageRightUrl],
+            images: [thumbUrl(block.imageLeftUrl) ?? block.imageLeftUrl, thumbUrl(block.imageRightUrl) ?? block.imageRightUrl],
             alts: [block.imageLeftAlt, block.imageRightAlt],
             captions: [block.captionLeft ?? '', block.captionRight ?? ''],
             lqips: [block.imageLeftLqip, block.imageRightLqip],
@@ -187,7 +201,7 @@ export async function getAllProjectSlugs(): Promise<string[]> {
 
 /** Full list for portfolio grid page — only published */
 export async function getAllProjects(): Promise<SanityProject[]> {
-  return client.fetch(
+  const rows = await client.fetch(
     `*[_type == "project" && isPublished == true] | order(orderRank asc) {
       "slug": slug.current,
       title,
@@ -202,6 +216,7 @@ export async function getAllProjects(): Promise<SanityProject[]> {
     {},
     { next: { tags: [CACHE_TAG] } }
   );
+  return rows.map((p: SanityProject) => ({ ...p, image: thumbUrl(p.image) }));
 }
 
 /** Single project detail page */
@@ -256,15 +271,16 @@ export async function getProjectBySlug(slug: string): Promise<SanityProjectDetai
 
   return {
     ...raw,
-    gallery: raw.gallery?.filter((g: { url: string | null }) => g?.url) ?? [],
+    mainImage: heroUrl(raw.mainImage),
+    gallery: raw.gallery?.filter((g: { url: string | null }) => g?.url).map((g: { url: string; alt: string | null; lqip?: string | null }) => ({ ...g, url: thumbUrl(g.url) ?? g.url })) ?? [],
     contentBlocks: transformContentBlocks(raw.contentBlocks ?? []),
-    related: raw.related?.filter(Boolean) ?? [],
+    related: raw.related?.filter(Boolean).map((r: { slug: string; title: string; type: string; image: string | null; lqip: string | null }) => ({ ...r, image: thumbUrl(r.image) })) ?? [],
   };
 }
 
 /** Lightweight list for prev/next navigation — only published */
 export async function getAllProjectsForNav(): Promise<{ slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }[]> {
-  return client.fetch(
+  const rows = await client.fetch(
     `*[_type == "project" && isPublished == true] | order(orderRank asc) {
       "slug": slug.current,
       title,
@@ -276,11 +292,12 @@ export async function getAllProjectsForNav(): Promise<{ slug: string; title: str
     {},
     { next: { tags: [CACHE_TAG] } }
   );
+  return rows.map((item: { slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }) => ({ ...item, mainImage: thumbUrl(item.mainImage) }));
 }
 
 /** Featured projects for homepage grid — only published */
 export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
-  return client.fetch(
+  const rows = await client.fetch(
     `*[_type == "project" && isPublished == true && isFeatured == true] | order(orderRank asc) [0...4] {
       "slug": slug.current,
       title,
@@ -294,6 +311,7 @@ export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
     {},
     { next: { tags: [CACHE_TAG] } }
   );
+  return rows.map((p: SanityFeaturedProject) => ({ ...p, image: thumbUrl(p.image) }));
 }
 
 // ─── Team Member types & query ───────────────────────────────────────────────
@@ -314,7 +332,7 @@ export interface SanityTeamMember {
 
 /** All team members ordered by display rank */
 export async function getTeamMembers(): Promise<SanityTeamMember[]> {
-  return client.fetch(
+  const rows = await client.fetch(
     `*[_type == "teamMember"] | order(orderRank asc) {
       name,
       role,
@@ -331,6 +349,7 @@ export async function getTeamMembers(): Promise<SanityTeamMember[]> {
     {},
     { next: { tags: [CACHE_TAG] } }
   );
+  return rows.map((m: SanityTeamMember) => ({ ...m, photoUrl: thumbUrl(m.photoUrl) }));
 }
 
 /** Testimonials for homepage slider */

@@ -53,10 +53,10 @@ export default async function HomePage() {
       {/* ─── Stat Bar + CTAs (cream background, below hero) ──────────────── */}
       <section className={styles.statBar}>
         {[
-          { value: settings?.yearsInPractice ?? '25+',        label: 'Years in Practice' },
-          { value: settings?.projectCount    ?? '300+',       label: 'Projects Completed' },
-          { value: settings?.clientCount     ?? '500+',       label: 'Clients Served' },
-          { value: settings?.sqftCompleted   ?? '2M+ sq ft',  label: 'Built Space' },
+          { value: settings?.yearsInPractice ?? '25+',        label: 'Years' },
+          { value: settings?.projectCount    ?? '300+',       label: 'Projects' },
+          { value: settings?.clientCount     ?? '500+',       label: 'Clients' },
+          { value: settings?.sqftCompleted   ?? '2M+ sq ft',  label: 'Sq Ft' },
         ].map((stat, i) => (
           <div key={i} className={styles.stat}>
             <span className={styles.statValue}>{stat.value}</span>

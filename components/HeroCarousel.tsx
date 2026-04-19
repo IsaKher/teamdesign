@@ -6,15 +6,16 @@ import styles from './HeroCarousel.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
 
 const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
+const q = (path: string) => `${CDN}/${path}?w=1600&q=80&auto=format&fit=max`;
 
 const SLIDES = [
   {
-    src: `${CDN}/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg`,
+    src: q('bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg'),
     alt: 'Luthra Group — Reception',
     position: 'center center',
   },
   {
-    src: `${CDN}/a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png`,
+    src: q('a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png'),
     alt: 'Maharaja Agrasen Palace — Exterior',
     position: 'center center',
   },
@@ -29,7 +30,7 @@ const SLIDES = [
     position: 'center center',
   },
   {
-    src: `${CDN}/90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg`,
+    src: q('90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg'),
     alt: 'Unilazer Ventures — Office',
     position: 'center center',
   },
