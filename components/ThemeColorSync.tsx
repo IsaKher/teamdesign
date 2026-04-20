@@ -31,9 +31,10 @@ export default function ThemeColorSync() {
     // Initialise — hero / filmstrip are dark
     apply(DARK);
 
-    // Threshold: the mobile filmstrip section is ~440px tall.
+    // Threshold: the mobile category filmstrip is ~520px tall (60px nav +
+    // 22px strip padding + 380px cards + 20px + 40px swipe hint).
     // Once scrolled past it we are into the cream-background content area.
-    const THRESHOLD = 420;
+    const THRESHOLD = 540;
 
     let last = window.scrollY > THRESHOLD;
 

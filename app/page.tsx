@@ -5,52 +5,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import FadeIn from '@/components/FadeIn';
 import FadeUpReveal from '@/components/FadeUpReveal';
-import HeroParallax from '@/components/HeroParallax';
 import MagneticButton from '@/components/MagneticButton';
-import HeroCarousel from '@/components/HeroCarousel';
-import HeroFilmstrip from '@/components/HeroFilmstrip';
+import CategoryFilmstrip from '@/components/CategoryFilmstrip';
 import ReadMoreBio from '@/components/ReadMoreBio';
 import ThemeColorSync from '@/components/ThemeColorSync';
 import { WARM_BLUR } from '@/lib/siteContent';
-import { getFeaturedProjects, getTestimonials, getSiteSettings } from '@/lib/sanity';
+import { getTestimonials, getSiteSettings } from '@/lib/sanity';
 
-/** SSR-time theme colour — dark to match the hero/filmstrip before JS runs */
+/** SSR-time theme colour — dark to match the filmstrip before JS runs */
 export const viewport: Viewport = {
   themeColor: '#14100C',
 };
 
 export default async function HomePage() {
-  const [featuredProjects, testimonials, settings] = await Promise.all([
-    getFeaturedProjects(),
+  const [testimonials, settings] = await Promise.all([
     getTestimonials(),
     getSiteSettings(),
   ]);
 
-  // Safety guard — don't render the portfolio section until we have projects
-  const hasFeatured = featuredProjects.length >= 4;
   return (
     <>
       {/* Syncs iOS/Android status-bar theme-color with scroll position */}
       <ThemeColorSync />
 
-      {/* ─── Hero ──────────────────────────────────────────────────────── */}
-      <div className={styles.heroWrapper}>
-        <HeroParallax />
-        <div className={styles.heroImageWrap} data-hero-parallax>
-          <HeroCarousel />
-          <div className={styles.heroOverlayBottom} />
-        </div>
-        <section className={styles.hero} />
-      </div>
+      {/* ─── Category filter filmstrip ────────────────────────────────────── */}
+      <CategoryFilmstrip />
 
-      {/* ─── Mobile filmstrip hero — hidden on desktop ───────────────────── */}
-      <div className={styles.filmstripWrap}>
-        <HeroFilmstrip />
-      </div>
-
-      {/* ─── Stat Bar + CTAs (cream background, below hero) ──────────────── */}
+      {/* ─── Stat Bar + CTAs ─────────────────────────────────────────────── */}
       <section className={styles.statBar}>
         {[
           { value: settings?.yearsInPractice ?? '25+',        label: 'Years' },
@@ -70,90 +52,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Value proposition ─────────────────────────────────────────── */}
-      <div className={styles.valuePropWrap}>
-        <h1 className={styles.valueProp}>
-          Twenty-five years of architecture and interiors — from homes to institutions, across India.
-        </h1>
-      </div>
-
-      {/* ─── Selected Work ─────────────────────────────────────────────── */}
-      <section className={styles.portfolioSection}>
-        <FadeUpReveal>
-          <div className={styles.sectionHeader}>
-            <div>
-              <span className="label">Portfolio</span>
-              <h2 className={styles.sectionTitle}>Selected Work</h2>
-            </div>
-            <Link href="/portfolio" className={styles.viewAll}>View Portfolio →</Link>
-          </div>
-        </FadeUpReveal>
-
-{hasFeatured && <div className={styles.projectGrid}>
-
-          {/* ── Lead project — full-width cinematic strip ── */}
-          <FadeUpReveal>
-            <Link href={`/portfolio/${featuredProjects[0].slug}`} className={styles.projectHeroCard}>
-              <div className={styles.projectHeroImageWrap}>
-                {featuredProjects[0].image && (
-                  <Image
-                    src={featuredProjects[0].image}
-                    alt={featuredProjects[0].title}
-                    fill
-                    priority
-                    sizes="100vw"
-                    style={{ objectFit: 'cover' }}
-                    className={styles.projectHeroImage}
-                    placeholder="blur"
-                    blurDataURL={featuredProjects[0].lqip ?? WARM_BLUR}
-                  />
-                )}
-                <div className={styles.projectHeroOverlay} />
-                <div className={styles.projectHeroContent}>
-                  <span className={styles.projectHeroType}>{featuredProjects[0].type}</span>
-                  <h3 className={styles.projectHeroTitle}>{featuredProjects[0].title}</h3>
-                  <p className={styles.projectHeroTagline}>{featuredProjects[0].tagline}</p>
-                  <span className={styles.projectHeroViewHint}>View →</span>
-                </div>
-              </div>
-            </Link>
-          </FadeUpReveal>
-
-          {/* ── Supporting three ── */}
-          <div className={styles.projectRow}>
-            {featuredProjects.slice(1).map((project, i) => (
-              <FadeUpReveal key={project.slug} delay={i * 0.1}>
-                <Link href={`/portfolio/${project.slug}`} className={styles.projectCard}>
-                  <div className={styles.projectImageWrap}>
-                    {project.image && <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 900px) 100vw, 33vw"
-                      style={{ objectFit: 'cover' }}
-                      className={styles.projectImage}
-                      placeholder="blur"
-                      blurDataURL={project.lqip ?? WARM_BLUR}
-                    />}
-                    <div className={styles.projectOverlay}>
-                      <span className={styles.viewHint}>View →</span>
-                      <p className={styles.projectCardTagline}>{project.tagline}</p>
-                    </div>
-                  </div>
-                  <div className={styles.projectMeta}>
-                    <span className={styles.projectType}>{project.type}</span>
-                    <h3 className={styles.projectTitle}>{project.title}</h3>
-                    <span className={styles.projectClient}>{project.client} · {project.location}</span>
-                  </div>
-                </Link>
-              </FadeUpReveal>
-            ))}
-          </div>
-
-        </div>}
-      </section>
-
-      {/* ─── Credentials ───────────────────────────────────────────────── */}
+      {/* ─── Credentials — directly below stats to reinforce trust ──────── */}
       <section className={styles.credentials}>
         <div className={styles.credentialsInner}>
 
@@ -184,7 +83,14 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Principal ─────────────────────────────────────────────────── */}
+      {/* ─── Value proposition ───────────────────────────────────────────── */}
+      <div className={styles.valuePropWrap}>
+        <h1 className={styles.valueProp}>
+          Twenty-five years of architecture and interiors — from homes to institutions, across India.
+        </h1>
+      </div>
+
+      {/* ─── Principal ───────────────────────────────────────────────────── */}
       <section className={styles.principal}>
         <div className={styles.principalInner}>
           <div className={styles.principalImageCol}>
@@ -227,7 +133,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── How We Work ───────────────────────────────────────────── */}
+      {/* ─── How We Work ─────────────────────────────────────────────────── */}
       <section className={styles.processSection}>
         <FadeUpReveal>
           <div className={styles.sectionHeader}>
@@ -258,7 +164,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Interiors CTA ─────────────────────────────────────────────── */}
+      {/* ─── Interiors CTA ───────────────────────────────────────────────── */}
       <section className={styles.interiorsCta}>
         <div className={styles.interiorsImageWrap}>
           <Image
