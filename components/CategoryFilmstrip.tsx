@@ -35,6 +35,7 @@ const CATEGORIES = [
 export default function CategoryFilmstrip() {
   const stripRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const dotRefs  = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
     const strip = stripRef.current;
@@ -46,15 +47,31 @@ export default function CategoryFilmstrip() {
       const stripRect   = strip!.getBoundingClientRect();
       const stripCenter = stripRect.left + stripRect.width / 2;
 
-      cardRefs.current.forEach((card) => {
+      // 3-D coverflow + active-dot tracking in one pass
+      let activeIdx = 0;
+      let minDist   = Infinity;
+
+      cardRefs.current.forEach((card, i) => {
         if (!card) return;
         const rect       = card.getBoundingClientRect();
         const cardCenter = rect.left + rect.width / 2;
-        // Normalised offset: -1 (far left) → 0 (centred) → +1 (far right)
+
+        // 3-D transform
         const t       = Math.max(-1, Math.min(1, (cardCenter - stripCenter) / (stripRect.width * 0.55)));
         const rotateY = t * 24;
         const scale   = 1 - Math.abs(t) * 0.10;
         card.style.transform = `perspective(900px) rotateY(${rotateY}deg) scale(${scale})`;
+
+        // Track which card is closest to centre
+        const dist = Math.abs(cardCenter - stripCenter);
+        if (dist < minDist) { minDist = dist; activeIdx = i; }
+      });
+
+      // Update indicator dots — active dot stretches, others fade
+      dotRefs.current.forEach((dot, i) => {
+        if (!dot) return;
+        dot.style.opacity   = i === activeIdx ? '1'          : '0.28';
+        dot.style.transform = i === activeIdx ? 'scaleX(2.8)' : 'scaleX(1)';
       });
     }
 
@@ -123,12 +140,24 @@ export default function CategoryFilmstrip() {
         <div className={styles.endSpacer} aria-hidden />
       </div>
 
-      {/* Swipe nudge — mobile only, hidden on desktop via CSS */}
-      <div className={styles.swipeHint}>
-        <span>Swipe to explore</span>
-        <svg width="18" height="8" viewBox="0 0 18 8" fill="none" aria-hidden="true">
-          <path d="M1 4h16M11 1l6 3-6 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      {/* ─── Indicator bar — dots + hint label, shown on both breakpoints ─── */}
+      <div className={styles.indicator}>
+        <div className={styles.dots}>
+          {CATEGORIES.map((_, i) => (
+            <span
+              key={i}
+              ref={el => { dotRefs.current[i] = el; }}
+              className={styles.dot}
+            />
+          ))}
+        </div>
+        <span className={styles.hintLabel}>
+          <span className={styles.hintDesktop}>Drag to explore</span>
+          <span className={styles.hintMobile}>Swipe to explore</span>
+          <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden="true">
+            <path d="M1 3h14M9 1l6 2-6 2" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
       </div>
     </section>
   );

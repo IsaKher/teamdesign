@@ -25,6 +25,8 @@ export default function Navigation() {
   const pathname   = usePathname();
 
   const isHeroPage = pathname === '/' || pathname.startsWith('/portfolio/');
+  // Only the home page gets the reversed collapse (links hidden at top, revealed on scroll)
+  const isHomePage = pathname === '/';
 
   /* Direct DOM class manipulation — no React re-render on scroll */
   useEffect(() => {
@@ -33,25 +35,28 @@ export default function Navigation() {
 
     const update = () => {
       const y = window.scrollY;
-      const scrolled  = y > 40;
-      const collapsed = y > 80;
+      const scrolled = y > 40;
+      // Filmstrip section height: ~520px mobile, ~680px desktop
+      const filmstripBottom = window.innerWidth <= 768 ? 520 : 680;
+      const pastFilmstrip   = y > filmstripBottom;
 
       el.classList.toggle(styles.solid,       scrolled || !isHeroPage);
       el.classList.toggle(styles.transparent, !scrolled && isHeroPage);
-      el.classList.toggle(styles.collapsed,   collapsed);
+      // Reversed on home page: collapsed (links hidden) at top, links revealed on scroll
+      el.classList.toggle(styles.collapsed,   isHomePage && !pastFilmstrip);
     };
 
     update(); // sync initial state after mount
     window.addEventListener('scroll', update, { passive: true });
     return () => window.removeEventListener('scroll', update);
-  }, [isHeroPage]);
+  }, [isHeroPage, isHomePage]);
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   return (
     <header
       ref={headerRef}
-      className={`${styles.nav} ${isHeroPage ? styles.transparent : styles.solid} ${menuOpen ? styles.menuOpen : ''}`}
+      className={`${styles.nav} ${isHeroPage ? styles.transparent : styles.solid} ${isHomePage ? styles.collapsed : ''} ${menuOpen ? styles.menuOpen : ''}`}
     >
       {/* ─── Desktop row ───────────────────────────────────────────── */}
       <div className={styles.inner}>

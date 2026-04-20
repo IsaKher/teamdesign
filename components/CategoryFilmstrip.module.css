@@ -6,7 +6,7 @@
   overflow: hidden;
   /* Clear the fixed desktop nav (136px) so cards start below it */
   padding-top: var(--nav-height);
-  padding-bottom: 28px;
+  padding-bottom: 0;
 }
 
 /* ─── Horizontal scrolling strip ─────────────────────────────────────────── */
@@ -103,10 +103,53 @@
   min-width: 8px;
 }
 
-/* ─── Swipe hint (hidden on desktop) ────────────────────────────────────── */
-.swipeHint {
-  display: none;
+/* ─── Indicator bar — dots + hint label ──────────────────────────────────── */
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 22px 22px;
 }
+
+/* ─── Progress dots ─────────────────────────────────────────────────────── */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  display: block;
+  width: 5px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(244, 238, 230, 0.65);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.28s ease;
+  transform-origin: center center;
+}
+
+/* ─── Hint label (text + arrow) — white, elevated ────────────────────────── */
+.hintLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  /* Layered shadow gives an elevated, lifted-off-surface feel */
+  text-shadow:
+    0 1px 0    rgba(0, 0, 0, 0.70),
+    0 2px 6px  rgba(0, 0, 0, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.30);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
+}
+
+/* ─── Desktop shows "Drag", mobile shows "Swipe" ─────────────────────────── */
+.hintMobile { display: none; }
 
 /* ─── Mobile overrides (≤600px) ─────────────────────────────────────────── */
 @media (max-width: 600px) {
@@ -144,15 +187,7 @@
     font-size: 26px;
   }
 
-  .swipeHint {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 14px 22px 4px;
-    font-family: var(--font-sans);
-    font-size: 9px;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: rgba(244, 238, 230, 0.40);
-  }
+  /* Swap hint text for mobile */
+  .hintDesktop { display: none; }
+  .hintMobile  { display: inline; }
 }
