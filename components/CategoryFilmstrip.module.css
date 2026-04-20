@@ -2,7 +2,7 @@
 /* Shown on both desktop and mobile — replaces the full-screen hero carousel */
 
 .section {
-  background: #14100C;
+  background: #3D3028;
   overflow: hidden;
   /* Clear the fixed desktop nav (136px) so cards start below it */
   padding-top: var(--nav-height);
@@ -37,7 +37,7 @@
   width: 340px;
   height: 500px;
   overflow: hidden;
-  background: #2a2520;
+  background: #3D3028;
   will-change: transform;
   transform-origin: center center;
   transition: transform 0.18s ease-out;

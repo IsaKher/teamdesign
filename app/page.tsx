@@ -15,7 +15,7 @@ import { getTestimonials, getSiteSettings } from '@/lib/sanity';
 
 /** SSR-time theme colour — dark to match the filmstrip before JS runs */
 export const viewport: Viewport = {
-  themeColor: '#14100C',
+  themeColor: '#3D3028',
 };
 
 export default async function HomePage() {
