@@ -52,11 +52,11 @@
     0 8px  24px rgba(0, 0, 0, 0.55),
     0 18px 52px rgba(0, 0, 0, 0.40);
 
-  /* ─── Reflection — desktop only, fades into the brunette floor ── */
-  -webkit-box-reflect: below 5px linear-gradient(
-    transparent       0%,
-    rgba(59, 30, 8, 0.30) 50%,
-    rgba(59, 30, 8, 0.92) 100%
+  /* ─── Reflection — desktop only, short soft smear into the floor ── */
+  -webkit-box-reflect: below 3px linear-gradient(
+    transparent           0%,
+    rgba(59, 30, 8, 0.50) 15%,
+    rgba(59, 30, 8, 0.95) 32%
   );
 }
 
