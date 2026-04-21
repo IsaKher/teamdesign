@@ -222,12 +222,12 @@
   /* Lock nav to 60px on mobile — overrides the global min-height: var(--nav-height) */
   .nav { min-height: 60px; }
 
-  /* Mobile keeps a dark frosted background for wordmark legibility */
+  /* Mobile: fully transparent at top — matches desktop behaviour */
   .transparent {
-    background: rgba(20, 16, 12, 0.30);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(244, 238, 230, 0.06);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid transparent;
     min-height: 60px;
   }
   .solid { min-height: 60px; }

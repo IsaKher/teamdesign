@@ -556,6 +556,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .testimonialCol {
@@ -902,35 +903,29 @@
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--color-rule);
   margin-top: 0;
+  align-items: center;
 }
 
 .recognitionLogo {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 22px 20px 22px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
   border-right: 1px solid var(--color-rule);
 }
-.recognitionLogo:first-child  { padding-left: 0; }
-.recognitionLogo:not(:first-child) { padding-left: 20px; }
-.recognitionLogo:last-child   { border-right: none; }
+.recognitionLogo:last-child { border-right: none; }
 
-.recognitionLogoLabel {
-  font-family: var(--font-sans);
-  font-size: 8px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  opacity: 0.75;
+/* ─── Logo image container (fill-mode, fixed height) ─────────────────── */
+.recognitionLogoImgWrap {
+  position: relative;
+  width: 100%;
+  height: 60px;
 }
 
-.recognitionLogoName {
-  font-family: var(--font-serif);
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--color-text-primary);
-  line-height: 1.35;
+/* ─── The actual logo image ──────────────────────────────────────────── */
+.recognitionLogoImg {
+  /* Removes white logo backgrounds on the cream section background */
+  mix-blend-mode: multiply;
 }
 
 .recognitionFooter {
@@ -1191,13 +1186,14 @@
     margin-top: 0;
   }
   .recognitionLogo {
-    padding: 14px 0;
+    padding: 16px 0;
     border-right: none;
     border-bottom: 1px solid var(--color-rule);
+    justify-content: flex-start;
   }
-  .recognitionLogo:not(:first-child) { padding-left: 0; }
-  .recognitionLogo:last-child { border-bottom: none; padding-bottom: 4px; }
-  .recognitionLogoName { font-size: 13px; }
+  .recognitionLogo:last-child { border-bottom: none; }
+  .recognitionLogoImgWrap { height: 48px; }
+  .recognitionLogoImg { object-position: left center !important; }
 
   /* ── Interiors CTA: remove on mobile — not needed ── */
   .interiorsCta { display: none; }

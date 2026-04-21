@@ -81,16 +81,40 @@ export default async function HomePage() {
               {/* ─── Press logo strip ─────────────────────────────── */}
               <div className={styles.recognitionLogos}>
                 <div className={styles.recognitionLogo}>
-                  <span className={styles.recognitionLogoLabel}>50 Under 35</span>
-                  <span className={styles.recognitionLogoName}>Architects &amp; Interiors India</span>
+                  <div className={styles.recognitionLogoImgWrap}>
+                    <Image
+                      src="/logos/ai-india.png"
+                      alt="Architect and Interiors India"
+                      fill
+                      sizes="(max-width: 600px) 140px, 180px"
+                      className={styles.recognitionLogoImg}
+                      style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                    />
+                  </div>
                 </div>
                 <div className={styles.recognitionLogo}>
-                  <span className={styles.recognitionLogoLabel}>Young Practitioners</span>
-                  <span className={styles.recognitionLogoName}>iGEN Design Forum</span>
+                  <div className={styles.recognitionLogoImgWrap}>
+                    <Image
+                      src="/logos/igen-forum.png"
+                      alt="iGEN Design Forum"
+                      fill
+                      sizes="(max-width: 600px) 80px, 100px"
+                      className={styles.recognitionLogoImg}
+                      style={{ objectFit: 'contain', objectPosition: 'center center' }}
+                    />
+                  </div>
                 </div>
                 <div className={styles.recognitionLogo}>
-                  <span className={styles.recognitionLogoLabel}>Women in Architecture</span>
-                  <span className={styles.recognitionLogoName}>DuPont India &amp; Corian®</span>
+                  <div className={styles.recognitionLogoImgWrap}>
+                    <Image
+                      src="/logos/dupont-corian.jpg"
+                      alt="DuPont India and Corian"
+                      fill
+                      sizes="(max-width: 600px) 160px, 200px"
+                      className={styles.recognitionLogoImg}
+                      style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                    />
+                  </div>
                 </div>
               </div>
             </FadeUpReveal>
