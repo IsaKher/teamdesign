@@ -1,0 +1,38 @@
+/* Desktop: transparent to grid so the wrapped paragraphs remain direct grid items */
+.extra {
+  display: contents;
+}
+
+.toggle {
+  display: none;
+}
+
+/* Mobile: collapse wrapped paragraphs behind a toggle button */
+@media (max-width: 600px) {
+  .extra {
+    display: none;
+  }
+
+  .extra.open {
+    display: block;
+  }
+
+  .toggle {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--size-label);
+    font-weight: 400;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    padding: 4px 0 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .toggle:hover {
+    color: var(--color-text-primary);
+  }
+}
