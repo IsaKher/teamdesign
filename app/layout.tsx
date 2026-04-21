@@ -106,16 +106,16 @@ const schemaOrgJsonLd = {
         { '@type': 'AdministrativeArea', name: 'Maharashtra' },
         { '@type': 'Country', name: 'India' },
       ],
-      serviceType: [
-        'Residential Architecture',
-        'Commercial Architecture',
-        'Institutional Architecture',
-        'Interior Design',
-        'Urban Planning',
-      ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Architectural & Interior Design Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Institutional Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Urban Planning' } },
+        ],
       },
       sameAs: ['https://teamdesign.in'],
     },
