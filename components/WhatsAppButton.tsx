@@ -15,7 +15,8 @@ function slugToTitle(slug: string): string {
 export default function WhatsAppButton({ number = STUDIO.whatsappNumber }: { number?: string }) {
   const pathname = usePathname();
 
-  // Detect /portfolio/[slug] pages and pre-fill a project-specific message
+  // Hide entirely on the contact page — the form is right there
+  if (pathname === '/contact') return null;
   const projectMatch = pathname?.match(/^\/portfolio\/([^/]+)$/);
   const message = projectMatch
     ? `Hello, I came across the ${slugToTitle(projectMatch[1])} project on your website and I'd like to enquire about a similar project with Team Design Architects.`

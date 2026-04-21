@@ -5,19 +5,19 @@
   z-index: 999;
   display: flex;
   align-items: center;
-  gap: 10px;
   background: var(--color-whatsapp);
   color: #fff;
   border-radius: 50px;
-  padding: 14px 14px;
+  padding: 14px;
   box-shadow: 0 4px 24px rgba(26, 92, 56, 0.35);
-  transition: background 0.35s ease, padding 0.35s ease;
   overflow: hidden;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
   background: var(--color-whatsapp-hover);
-  padding: 14px 20px;
+  box-shadow: 0 6px 32px rgba(26, 92, 56, 0.45);
 }
 
 .icon {
@@ -34,27 +34,29 @@
   height: 26px;
 }
 
+/* Zero-width by default so the button is icon-only circle */
 .label {
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.06em;
   white-space: nowrap;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
   overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.32s ease, opacity 0.2s ease, margin-left 0.32s ease;
+  margin-left: 0;
 }
 
 .button:hover .label {
+  max-width: 140px;
   opacity: 1;
-  transform: translateX(0);
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
   .button {
     bottom: 24px;
-    right: auto;
-    left: 20px;
+    right: 20px;
   }
 }
