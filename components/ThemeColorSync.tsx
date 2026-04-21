@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 
-const DARK  = '#3D3028';
+const DARK  = '#3B1E08';
 const LIGHT = '#F4EEE6';
 
 /**

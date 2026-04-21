@@ -2,7 +2,7 @@
 /* Shown on both desktop and mobile — replaces the full-screen hero carousel */
 
 .section {
-  background: #3D3028;
+  background: #3B1E08;
   overflow: hidden;
   /* Clear the fixed desktop nav (136px) so cards start below it */
   padding-top: var(--nav-height);
@@ -17,7 +17,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   /* Side padding = (viewport − card) / 2 so the centred card sits flush */
-  padding: 22px calc(50% - 170px) 20px;
+  padding: 22px calc(50% - 240px) 20px;
   scrollbar-width: none;
   align-items: center;
 }
@@ -26,7 +26,7 @@
 /* ─── Card link (flex item + snap target) ─────────────────────────────────── */
 .card {
   flex-shrink: 0;
-  width: 340px;
+  width: 480px;
   scroll-snap-align: center;
   text-decoration: none;
 }
@@ -34,10 +34,10 @@
 /* ─── Image frame (the element that receives the 3-D transform via ref) ───── */
 .imageWrap {
   position: relative;
-  width: 340px;
-  height: 500px;
+  width: 480px;
+  height: 340px;
   overflow: hidden;
-  background: #3D3028;
+  background: #3B1E08;
   will-change: transform;
   transform-origin: center center;
   transition: transform 0.18s ease-out;
@@ -98,7 +98,7 @@
 
 /* ─── Trailing spacer — mirrors left padding so last card can centre-snap ─── */
 .endSpacer {
-  width: calc(50% - 170px - 12px);
+  width: calc(50% - 240px - 12px);
   flex-shrink: 0;
   min-width: 8px;
 }

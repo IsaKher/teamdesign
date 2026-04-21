@@ -36,8 +36,8 @@ export default function Navigation() {
     const update = () => {
       const y = window.scrollY;
       const scrolled = y > 40;
-      // Filmstrip section height: ~520px mobile, ~680px desktop
-      const filmstripBottom = window.innerWidth <= 768 ? 520 : 680;
+      // Reveal links once user is mid-way through the filmstrip (~300px scroll)
+      const filmstripBottom = 300;
       const pastFilmstrip   = y > filmstripBottom;
 
       el.classList.toggle(styles.solid,       scrolled || !isHeroPage);

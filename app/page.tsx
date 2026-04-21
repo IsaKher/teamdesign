@@ -15,7 +15,7 @@ import { getTestimonials, getSiteSettings } from '@/lib/sanity';
 
 /** SSR-time theme colour — dark to match the filmstrip before JS runs */
 export const viewport: Viewport = {
-  themeColor: '#3D3028',
+  themeColor: '#3B1E08',
 };
 
 export default async function HomePage() {
@@ -76,6 +76,22 @@ export default async function HomePage() {
                 <p className={styles.recognitionLine}>
                   Featured in <em>DuPont India &amp; Corian®</em> Women Leadership in Architecture &amp; Design.
                 </p>
+              </div>
+
+              {/* ─── Press logo strip ─────────────────────────────── */}
+              <div className={styles.recognitionLogos}>
+                <div className={styles.recognitionLogo}>
+                  <span className={styles.recognitionLogoLabel}>50 Under 35</span>
+                  <span className={styles.recognitionLogoName}>Architects &amp; Interiors India</span>
+                </div>
+                <div className={styles.recognitionLogo}>
+                  <span className={styles.recognitionLogoLabel}>Young Practitioners</span>
+                  <span className={styles.recognitionLogoName}>iGEN Design Forum</span>
+                </div>
+                <div className={styles.recognitionLogo}>
+                  <span className={styles.recognitionLogoLabel}>Women in Architecture</span>
+                  <span className={styles.recognitionLogoName}>DuPont India &amp; Corian®</span>
+                </div>
               </div>
             </FadeUpReveal>
           </div>
@@ -164,27 +180,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Interiors CTA ───────────────────────────────────────────────── */}
-      <section className={styles.interiorsCta}>
-        <div className={styles.interiorsImageWrap}>
-          <Image
-            src="/interiors-cta.webp"
-            alt="Team Design Architects — Studio wall of architectural sketches and drawings, Mumbai"
-            width={1536}
-            height={1024}
-            sizes="100vw"
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-            placeholder="blur"
-            blurDataURL={WARM_BLUR}
-          />
-          <div className={styles.interiorsOverlay} />
-        </div>
-        <div className={styles.interiorsContent}>
-          <span className="label" style={{ color: 'rgba(244,238,230,0.55)' }}>Interior Design</span>
-          <h2 className={styles.interiorsTitle}>Spaces that feel<br />like they belong to you.</h2>
-          <Link href="/portfolio?type=Interiors" className={styles.interiorsLink}>View Interiors Work →</Link>
-        </div>
-      </section>
 
     </>
   );
