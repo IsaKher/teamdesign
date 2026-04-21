@@ -99,6 +99,56 @@
   color: rgba(244, 238, 230, 0.50);
 }
 
+/* ─── Shelf — physical 3-D ledge grounding the cards ───────────────────── */
+/* DOM ORDER: shelf is before .strip, so the transparent strip paints over  */
+/* it. The strip has no background, so the shelf shows through the padding  */
+/* area below the cards.                                                    */
+/*                                                                          */
+/* POSITIONING: bottom + height = strip padding-bottom (80px on desktop).  */
+/* This lands the element's TOP exactly at the card-base level.            */
+.shelf {
+  position: absolute;
+  bottom: 10px;    /* element bottom = 10px from section bottom           */
+  left: 0;
+  right: 0;
+  height: 70px;    /* element top = 10+70 = 80px from section bottom = card base */
+  pointer-events: none;
+  /* Reading top→bottom: lit top edge → dark shelf face → deep shadow     */
+  background: linear-gradient(to bottom,
+    rgba(238, 168, 65, 0.90)  0px,   /* bright lit top edge (card base)   */
+    rgba(238, 168, 65, 0.48)  3px,   /* edge fading                       */
+    rgba(92,  50,  15, 0.85)  6px,   /* shelf front face — dark warm wood */
+    rgba(68,  38,  11, 0.70) 16px,   /* front face base                   */
+    rgba(14,   7,   2, 0.75) 18px,   /* deep cast shadow starts           */
+    rgba(10,   5,   2, 0.30) 40px,   /* shadow dissipating                */
+    transparent               70px
+  );
+}
+
+/* ─── Receding shelf surface — visible in the margins behind cards ──────── */
+.shelf::before {
+  content: '';
+  position: absolute;
+  top: -150px;       /* extends 150px above card base into the card area  */
+  left: 0;
+  right: 0;
+  height: 150px;
+  background:
+    /* Warm centre bloom — glows behind the active card */
+    radial-gradient(ellipse 52% 100% at 50% 100%, rgba(148, 84, 28, 0.60), transparent 100%),
+    /* Base surface tone */
+    linear-gradient(to top,
+      rgba(104, 58, 18, 0.60) 0%,
+      rgba(78,  44, 14, 0.30) 40%,
+      transparent             100%
+    );
+  /* Tilt top away from viewer — surface recedes into the background       */
+  transform: perspective(700px) rotateX(-20deg);
+  transform-origin: bottom center;
+  /* Trapezoid: wider at front (bottom), narrower at back (top)           */
+  clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+}
+
 /* ─── Trailing spacer — mirrors left padding so last card can centre-snap ─── */
 .endSpacer {
   width: calc(50% - 380px - 16px);
@@ -183,12 +233,15 @@
 
 /* ─── Medium desktop / laptop (601px – 1199px) ──────────────────────────── */
 @media (max-width: 1199px) and (min-width: 601px) {
-  .strip    { padding: 22px calc(50% - 240px) 64px; gap: 12px; }
-  .card     { width: 480px; }
+  .strip     { padding: 22px calc(50% - 240px) 64px; gap: 12px; }
+  .card      { width: 480px; }
   .imageWrap { width: 480px; height: 340px; }
   .endSpacer { width: calc(50% - 240px - 12px); }
-  .content  { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
-  .name     { font-size: clamp(28px, 2.2vw, 38px); }
+  .content   { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
+  .name      { font-size: clamp(28px, 2.2vw, 38px); }
+  /* Medium strip padding-bottom = 64px → bottom + height = 64 */
+  .shelf         { bottom: 8px; height: 56px; }
+  .shelf::before { top: -110px; height: 110px; }
 }
 
 /* ─── Mobile overrides (≤600px) ─────────────────────────────────────────── */
@@ -220,6 +273,9 @@
   }
 
   .name { font-size: 26px; }
+
+  /* No shelf on mobile */
+  .shelf { display: none; }
 
   /* Pill sits lower on mobile to stay clear of card text */
   .pill { bottom: 18px; }

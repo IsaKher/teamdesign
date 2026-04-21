@@ -110,6 +110,9 @@ export default function CategoryFilmstrip() {
 
   return (
     <section className={styles.section}>
+      {/* ─── Shelf — 3-D surface that grounds the cards physically ──────── */}
+      <div className={styles.shelf} aria-hidden />
+
       <div ref={stripRef} className={styles.strip}>
         {CATEGORIES.map((cat, i) => (
           <Link
