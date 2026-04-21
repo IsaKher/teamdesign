@@ -278,8 +278,10 @@
 
   .name { font-size: 26px; }
 
-  /* No shelf on mobile */
-  .shelf { display: none; }
+  /* Mobile shelf — same lit ledge, scaled for 60px strip padding-bottom   */
+  /* bottom + height = 60 → top of element = card base                    */
+  .shelf         { bottom: 8px; height: 52px; }
+  .shelf::before { top: -80px; height: 80px; }
 
   /* Pill sits lower on mobile to stay clear of card text */
   .pill { bottom: 18px; }

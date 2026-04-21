@@ -86,6 +86,27 @@
   text-decoration: none;
   position: relative;
   z-index: 2;
+  /* Shadow follows the logo shape via drop-shadow — transitions between nav states */
+  transition: filter var(--transition-nav);
+}
+
+/* Transparent nav: deep shadow against the dark hero/filmstrip background */
+.transparent .logoWrap {
+  filter:
+    drop-shadow(0  6px 18px rgba(0, 0, 0, 0.60))
+    drop-shadow(0  2px  5px rgba(0, 0, 0, 0.45));
+}
+/* Solid nav: softer shadow on cream background */
+.solid .logoWrap {
+  filter:
+    drop-shadow(0  4px 12px rgba(28, 22, 18, 0.22))
+    drop-shadow(0  1px  4px rgba(28, 22, 18, 0.16));
+}
+
+/* ─── Gentle float animation ───────────────────────────────── */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-4px); }
 }
 
 .seal {
@@ -95,6 +116,9 @@
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
+  /* Floating bob — slow, calm, barely-there */
+  animation: logoFloat 5s ease-in-out infinite;
+  will-change: transform;
 }
 
 .transparent .logoImage {
