@@ -735,7 +735,6 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  opacity: 0.5;
   flex-shrink: 0;
 }
 
@@ -1176,7 +1175,7 @@
     background: var(--color-text-secondary);
   }
   .processLeft { flex-direction: column; gap: 3px; align-items: flex-start; }
-  .processNumber { font-size: 9px; }
+  .processNumber { font-size: 11px; }
   .processTitle { font-size: 18px; }
   .processSubtitle { font-size: 14px; }
 
