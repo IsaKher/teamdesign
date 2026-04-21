@@ -59,13 +59,7 @@ export default async function HomePage() {
       <section className={styles.credentials}>
         <div className={styles.credentialsInner}>
 
-          {/* Left — testimonials */}
-          <div className={styles.testimonialCol}>
-            <span className="label">From Our Clients</span>
-            <TestimonialSlider testimonials={testimonials} interval={6000} />
-          </div>
-
-          {/* Right — press recognition */}
+          {/* Press recognition — first in DOM so it stacks above testimonials on mobile */}
           <div className={styles.recognitionCol}>
             <span className="label">Press &amp; Recognition</span>
             <FadeUpReveal>
@@ -121,6 +115,12 @@ export default async function HomePage() {
                 </div>
               </div>
             </FadeUpReveal>
+          </div>
+
+          {/* Testimonials — second in DOM so they stack below recognition on mobile */}
+          <div className={styles.testimonialCol}>
+            <span className="label">From Our Clients</span>
+            <TestimonialSlider testimonials={testimonials} interval={6000} />
           </div>
 
         </div>

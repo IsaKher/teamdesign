@@ -589,6 +589,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  order: 1; /* desktop: testimonials left */
+}
+
+@media (max-width: 900px) {
+  .testimonialCol { order: 2; } /* mobile: testimonials below recognition */
 }
 
 .recognitionCol {

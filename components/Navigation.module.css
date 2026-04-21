@@ -41,8 +41,9 @@
   justify-content: flex-end;
   gap: clamp(24px, 3vw, 52px);
   padding-right: clamp(20px, 3vw, 48px);
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity   0.4s  ease;
+  /* 0.3s delay on reveal so cream background settles before links slide in */
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+              opacity   0.45s ease 0.3s;
 }
 
 /* ─── Right nav links + burger ─────────────────────────────── */
@@ -59,8 +60,8 @@
   justify-content: flex-start;
   gap: clamp(24px, 3vw, 52px);
   padding-left: clamp(20px, 3vw, 48px);
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity   0.4s  ease;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+              opacity   0.45s ease 0.3s;
 }
 
 /* ─── Collapsed scroll state ───────────────────────────────── */
@@ -68,11 +69,13 @@
   transform: translateX(140px);
   opacity: 0;
   pointer-events: none;
+  transition-delay: 0s; /* no delay when hiding */
 }
 .collapsed .linksRight {
   transform: translateX(-140px);
   opacity: 0;
   pointer-events: none;
+  transition-delay: 0s; /* no delay when hiding */
 }
 
 /* ─── Centred logo ─────────────────────────────────────────── */
