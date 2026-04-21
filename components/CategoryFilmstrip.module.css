@@ -12,12 +12,13 @@
 /* ─── Horizontal scrolling strip ─────────────────────────────────────────── */
 .strip {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  /* Side padding = (viewport − card) / 2 so the centred card sits flush */
-  padding: 22px calc(50% - 240px) 20px;
+  /* Side padding = (viewport − card) / 2 so the centred card sits flush.
+     Base = large desktop (≥1200px): 760px wide card → half = 380px       */
+  padding: 32px calc(50% - 380px) 28px;
   scrollbar-width: none;
   align-items: center;
 }
@@ -26,7 +27,7 @@
 /* ─── Card link (flex item + snap target) ─────────────────────────────────── */
 .card {
   flex-shrink: 0;
-  width: 480px;
+  width: 760px;
   scroll-snap-align: center;
   text-decoration: none;
 }
@@ -34,8 +35,8 @@
 /* ─── Image frame (the element that receives the 3-D transform via ref) ───── */
 .imageWrap {
   position: relative;
-  width: 480px;
-  height: 340px;
+  width: 760px;
+  height: 520px;
   overflow: hidden;
   background: #3B1E08;
   will-change: transform;
@@ -66,19 +67,19 @@
 /* ─── Category name + CTA ───────────────────────────────────────────────── */
 .content {
   position: absolute;
-  bottom: 28px;
-  left: 28px;
-  right: 28px;
+  bottom: 36px;
+  left: 40px;
+  right: 40px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   pointer-events: none;
 }
 
 .name {
   font-family: var(--font-serif);
-  font-size: clamp(28px, 2.2vw, 38px);
+  font-size: clamp(32px, 3vw, 52px);
   font-weight: 300;
   font-style: italic;
   color: rgba(244, 238, 230, 0.97);
@@ -98,7 +99,7 @@
 
 /* ─── Trailing spacer — mirrors left padding so last card can centre-snap ─── */
 .endSpacer {
-  width: calc(50% - 240px - 12px);
+  width: calc(50% - 380px - 16px);
   flex-shrink: 0;
   min-width: 8px;
 }
@@ -150,6 +151,16 @@
 
 /* ─── Desktop shows "Drag", mobile shows "Swipe" ─────────────────────────── */
 .hintMobile { display: none; }
+
+/* ─── Medium desktop / laptop (601px – 1199px) ──────────────────────────── */
+@media (max-width: 1199px) and (min-width: 601px) {
+  .strip    { padding: 22px calc(50% - 240px) 20px; gap: 12px; }
+  .card     { width: 480px; }
+  .imageWrap { width: 480px; height: 340px; }
+  .endSpacer { width: calc(50% - 240px - 12px); }
+  .content  { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
+  .name     { font-size: clamp(28px, 2.2vw, 38px); }
+}
 
 /* ─── Mobile overrides (≤600px) ─────────────────────────────────────────── */
 @media (max-width: 600px) {
