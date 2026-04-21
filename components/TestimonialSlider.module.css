@@ -70,15 +70,17 @@
 
 .progressFill {
   height: 100%;
-  width: 0%;
+  width: 100%;
   background: var(--color-text-secondary);
+  transform: scaleX(0);
+  transform-origin: left center;
   animation: fillProgress linear forwards;
   animation-play-state: running;
 }
 
 @keyframes fillProgress {
-  from { width: 0%; }
-  to   { width: 100%; }
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
 /* ─── Dot navigation ─────────────────────────────────────────── */

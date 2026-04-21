@@ -89,6 +89,7 @@ function PortfolioContent({ projects }: Props) {
                   className={styles.img}
                   placeholder="blur"
                   blurDataURL={project.lqip ?? WARM_BLUR}
+                  priority={i < 3}
                 />
               ) : (
                 <div className={styles.imagePlaceholder} />
