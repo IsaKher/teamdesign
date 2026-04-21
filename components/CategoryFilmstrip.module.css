@@ -34,6 +34,24 @@
   width: 760px;
   scroll-snap-align: center;
   text-decoration: none;
+  position: relative; /* anchor for the floor glow */
+}
+
+/* ─── Floor glow — warm amber bloom cast onto the brunette surface ──────── */
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: -6%;
+  right: -6%;
+  height: 60px;
+  background: radial-gradient(
+    ellipse 80% 100% at 50% 0%,
+    rgba(195, 115, 38, 0.30) 0%,
+    transparent              100%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ─── Image frame (the element that receives the 3-D transform via ref) ───── */
@@ -52,12 +70,6 @@
     0 8px  24px rgba(0, 0, 0, 0.55),
     0 18px 52px rgba(0, 0, 0, 0.40);
 
-  /* ─── Reflection — desktop only, short soft smear into the floor ── */
-  -webkit-box-reflect: below 3px linear-gradient(
-    transparent           0%,
-    rgba(59, 30, 8, 0.50) 15%,
-    rgba(59, 30, 8, 0.95) 32%
-  );
 }
 
 /* ─── Gradient overlay ──────────────────────────────────────────────────── */
@@ -220,8 +232,6 @@
   .imageWrap {
     width: 280px;
     height: 380px;
-    /* No reflection on mobile */
-    -webkit-box-reflect: none;
   }
 
   .endSpacer {
@@ -238,6 +248,9 @@
   .name {
     font-size: 26px;
   }
+
+  /* No floor glow on mobile */
+  .card::after { display: none; }
 
   /* Show mobile indicator strip, hide desktop pill */
   .indicator {
