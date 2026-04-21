@@ -80,7 +80,7 @@ const schemaOrgJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['ArchitecturalService', 'LocalBusiness'],
+      '@type': ['ProfessionalService', 'LocalBusiness'],
       '@id': 'https://teamdesign.in/#business',
       name: 'Team Design Architects',
       alternateName: 'Team Design',
@@ -103,7 +103,7 @@ const schemaOrgJsonLd = {
       },
       areaServed: [
         { '@type': 'City', name: 'Mumbai' },
-        { '@type': 'State', name: 'Maharashtra' },
+        { '@type': 'AdministrativeArea', name: 'Maharashtra' },
         { '@type': 'Country', name: 'India' },
       ],
       serviceType: [
@@ -140,10 +140,7 @@ const schemaOrgJsonLd = {
       publisher: { '@id': 'https://teamdesign.in/#business' },
       potentialAction: {
         '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://teamdesign.in/portfolio?type={search_term_string}',
-        },
+        target: 'https://teamdesign.in/portfolio?type={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
     },
