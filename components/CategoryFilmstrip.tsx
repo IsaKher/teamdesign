@@ -126,7 +126,7 @@ export default function CategoryFilmstrip() {
           <div
             key={cat.type}
             ref={(el) => { cardRefs.current[i] = el; }}
-            className={styles.cardWrapper}
+            className={`${styles.cardWrapper} ${i === activeIndex ? styles.cardActive : ''}`}
             style={getWrapStyle(i)}
           >
             <Link href={`/portfolio?type=${cat.type}`} className={styles.card}>
