@@ -144,7 +144,7 @@ export default function CategoryFilmstrip() {
                 <div className={styles.overlay} />
                 <div className={styles.content}>
                   <h2 className={styles.name}>{cat.label}</h2>
-                  <span className={styles.cta}>View all →</span>
+                  <span className={styles.cta}>{cat.label} →</span>
                 </div>
               </div>
             </Link>

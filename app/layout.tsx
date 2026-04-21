@@ -54,12 +54,25 @@ export const metadata: Metadata = {
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
+    images: [
+      {
+        url: 'https://teamdesign.in/hero-building.webp',
+        width: 1536,
+        height: 1024,
+        alt: 'Team Design Architects — Architecture & Interior Design, Mumbai',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design — Mumbai. 25+ years, 300+ projects.',
+    images: ['https://teamdesign.in/hero-building.webp'],
+  },
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
   },
   robots: {
     index: true,

@@ -19,10 +19,13 @@ export const viewport: Viewport = {
 };
 
 export default async function HomePage() {
-  const [testimonials, settings] = await Promise.all([
+  const [rawTestimonials, settings] = await Promise.all([
     getTestimonials(),
     getSiteSettings(),
   ]);
+  const testimonials = rawTestimonials.filter(
+    (t, i, arr) => arr.findIndex(x => x.quote === t.quote) === i
+  );
 
   return (
     <>
@@ -128,6 +131,17 @@ export default async function HomePage() {
         <h1 className={styles.valueProp}>
           Twenty-five years of architecture and interiors — from homes to institutions, across India.
         </h1>
+        <div className={styles.introText}>
+          <p>
+            Team Design is an architecture and interior design practice based in Mumbai. Founded by Tasadduq Kher in 1996, the studio has spent twenty-five years shaping the built environment — from private homes and luxury residences to commercial offices, retail spaces, and large-scale institutional buildings across India.
+          </p>
+          <p>
+            Architecture and interiors are treated as a single discipline here. Every project — whether a family home in the Mumbai suburbs or a multi-storey commercial development in the city — is considered from structure to finish, with the same care given to how a space is experienced as to how it is built.
+          </p>
+          <p>
+            With over 300 completed projects spanning residential, commercial, and institutional work, Team Design brings the same rigour to every scale of commission, across Mumbai, Maharashtra, and beyond.
+          </p>
+        </div>
       </div>
 
       {/* ─── Principal ───────────────────────────────────────────────────── */}
@@ -151,7 +165,7 @@ export default async function HomePage() {
             <span className="label">Principal Architect</span>
             <h2 className={styles.principalName}>Tasadduq Kher</h2>
             <p className={styles.principalBio}>
-              Tasadduq Kher founded Team Design in 1996 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over 25 years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
+              Tasadduq Kher founded Team Design in 1996 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over twenty-five years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
             </p>
             <ReadMoreBio>
               <p className={styles.principalBio}>
