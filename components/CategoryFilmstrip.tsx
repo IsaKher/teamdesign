@@ -35,17 +35,16 @@ export default function CategoryFilmstrip() {
     let raf: number;
 
     function update() {
-      const stripRect   = strip!.getBoundingClientRect();
-      const stripCenter = stripRect.left + stripRect.width / 2;
+      // Use scrollLeft + offsetLeft — avoids getBoundingClientRect forced reflow
+      const scrollCenter = strip!.scrollLeft + strip!.clientWidth / 2;
 
       let newActive = 0;
       let minDist   = Infinity;
 
       cardRefs.current.forEach((card, i) => {
         if (!card) return;
-        const rect       = card.getBoundingClientRect();
-        const cardCenter = rect.left + rect.width / 2;
-        const dist       = Math.abs(cardCenter - stripCenter);
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const dist       = Math.abs(cardCenter - scrollCenter);
         if (dist < minDist) { minDist = dist; newActive = i; }
       });
 
@@ -94,22 +93,23 @@ export default function CategoryFilmstrip() {
   }, []);
 
   // ─── Derive inline transform/opacity from active index ────────────────────
-  // perspective: 1200px lives on .strip in CSS, so transforms here are plain
-  // rotateY / translateZ / scale — no perspective() function needed.
+  // perspective() is in the transform string rather than on .strip in CSS.
+  // This makes 3-D work on iOS Safari, which ignores the CSS perspective
+  // property on overflow:auto scroll containers during composited scroll.
   function getWrapStyle(i: number): React.CSSProperties {
     const offset = i - activeIndex;
     const abs    = Math.abs(offset);
 
     if (abs === 0) {
-      return { transform: 'rotateY(0deg) translateZ(0px) scale(1)', opacity: 1 };
+      return { transform: 'perspective(1200px) rotateY(0deg) translateZ(0px) scale(1)', opacity: 1 };
     }
     if (abs === 1) {
       const ry = offset < 0 ? 35 : -35;
-      return { transform: `rotateY(${ry}deg) translateZ(-80px) scale(0.88)`, opacity: 0.6 };
+      return { transform: `perspective(1200px) rotateY(${ry}deg) translateZ(-80px) scale(0.88)`, opacity: 0.6 };
     }
     // 2+ positions away
     const ry = offset < 0 ? 50 : -50;
-    return { transform: `rotateY(${ry}deg) translateZ(-80px) scale(0.75)`, opacity: 0.35 };
+    return { transform: `perspective(1200px) rotateY(${ry}deg) translateZ(-80px) scale(0.75)`, opacity: 0.35 };
   }
 
   return (
@@ -135,7 +135,7 @@ export default function CategoryFilmstrip() {
                   src={cat.src}
                   alt={`${cat.label} — Team Design`}
                   fill
-                  sizes="(max-width: 600px) 280px, 340px"
+                  sizes="(max-width: 600px) 280px, (max-width: 1199px) 480px, 760px"
                   style={{ objectFit: 'cover' }}
                   placeholder="blur"
                   blurDataURL={WARM_BLUR}

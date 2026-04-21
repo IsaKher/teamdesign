@@ -23,9 +23,6 @@
   padding: 32px calc(50% - 380px) 80px;
   scrollbar-width: none;
   align-items: center;
-  /* Perspective container — direct children receive 3-D rotateY/translateZ */
-  perspective: 1200px;
-  perspective-origin: center center;
 }
 .strip::-webkit-scrollbar { display: none; }
 
