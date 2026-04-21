@@ -29,7 +29,9 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20,16,12,0.35), transparent 60%);
+  background:
+    linear-gradient(to bottom, rgba(20,16,12,0.55) 0%, rgba(20,16,12,0) 28%),
+    linear-gradient(to top,    rgba(20,16,12,0.35) 0%, transparent 60%);
 }
 
 .header {
