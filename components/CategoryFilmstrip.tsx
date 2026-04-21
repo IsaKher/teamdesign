@@ -33,9 +33,10 @@ const CATEGORIES = [
 ];
 
 export default function CategoryFilmstrip() {
-  const stripRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const dotRefs  = useRef<(HTMLSpanElement | null)[]>([]);
+  const stripRef      = useRef<HTMLDivElement>(null);
+  const cardRefs      = useRef<(HTMLDivElement | null)[]>([]);
+  const dotRefs       = useRef<(HTMLSpanElement | null)[]>([]);  // mobile strip
+  const dotRefsPill   = useRef<(HTMLSpanElement | null)[]>([]);  // desktop pill
 
   useEffect(() => {
     const strip = stripRef.current;
@@ -67,11 +68,13 @@ export default function CategoryFilmstrip() {
         if (dist < minDist) { minDist = dist; activeIdx = i; }
       });
 
-      // Update indicator dots — active dot stretches, others fade
-      dotRefs.current.forEach((dot, i) => {
-        if (!dot) return;
-        dot.style.opacity   = i === activeIdx ? '1'          : '0.28';
-        dot.style.transform = i === activeIdx ? 'scaleX(2.8)' : 'scaleX(1)';
+      // Update both dot sets — active dot stretches, others fade
+      [dotRefs.current, dotRefsPill.current].forEach(refs => {
+        refs.forEach((dot, i) => {
+          if (!dot) return;
+          dot.style.opacity   = i === activeIdx ? '1'           : '0.28';
+          dot.style.transform = i === activeIdx ? 'scaleX(2.8)' : 'scaleX(1)';
+        });
       });
     }
 
@@ -140,7 +143,26 @@ export default function CategoryFilmstrip() {
         <div className={styles.endSpacer} aria-hidden />
       </div>
 
-      {/* ─── Indicator bar — dots + hint label, shown on both breakpoints ─── */}
+      {/* ─── Desktop: frosted oval pill — floats over the filmstrip ─────────── */}
+      <div className={styles.pill}>
+        <div className={styles.pillDots}>
+          {CATEGORIES.map((_, i) => (
+            <span
+              key={i}
+              ref={el => { dotRefsPill.current[i] = el; }}
+              className={styles.dot}
+            />
+          ))}
+        </div>
+        <span className={styles.pillHint}>
+          Swipe to explore
+          <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden="true">
+            <path d="M1 3h14M9 1l6 2-6 2" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+      </div>
+
+      {/* ─── Mobile: indicator strip — dots above, label below ───────────── */}
       <div className={styles.indicator}>
         <div className={styles.dots}>
           {CATEGORIES.map((_, i) => (
@@ -152,8 +174,7 @@ export default function CategoryFilmstrip() {
           ))}
         </div>
         <span className={styles.hintLabel}>
-          <span className={styles.hintDesktop}>Drag to explore</span>
-          <span className={styles.hintMobile}>Swipe to explore</span>
+          Swipe to explore
           <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden="true">
             <path d="M1 3h14M9 1l6 2-6 2" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
