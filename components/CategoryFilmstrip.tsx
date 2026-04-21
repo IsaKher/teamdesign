@@ -143,8 +143,14 @@ export default function CategoryFilmstrip() {
                 />
                 <div className={styles.overlay} />
                 <div className={styles.content}>
-                  <h2 className={styles.name}>{cat.label}</h2>
-                  <span className={styles.cta}>{cat.label} →</span>
+                  <h2 className={styles.name}>
+                    {cat.label}
+                    <span className={styles.arrow} aria-hidden="true">
+                      <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5h20M15 1l6 4-6 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </h2>
                 </div>
               </div>
             </Link>

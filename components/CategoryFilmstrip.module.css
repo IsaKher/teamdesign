@@ -56,31 +56,23 @@
     0 18px 52px rgba(0, 0, 0, 0.40);
 }
 
-/* ─── Gradient overlay ──────────────────────────────────────────────────── */
+/* ─── Gradient overlay — even vignette to work with centred text ────────── */
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(20, 16, 12, 0.90) 0%,
-    rgba(20, 16, 12, 0.42) 48%,
-    rgba(20, 16, 12, 0.08) 70%,
-    transparent            100%
-  );
+  background: radial-gradient(ellipse at center, rgba(20, 16, 12, 0.28) 0%, rgba(20, 16, 12, 0.72) 100%);
   pointer-events: none;
   z-index: 1;
 }
 
-/* ─── Category name + CTA ───────────────────────────────────────────────── */
+/* ─── Category name — centred on card ───────────────────────────────────── */
 .content {
   position: absolute;
-  bottom: 36px;
-  left: 40px;
-  right: 40px;
+  inset: 0;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 
@@ -94,14 +86,16 @@
   letter-spacing: -0.01em;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.cta {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.50);
+.arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0.65;
+  flex-shrink: 0;
 }
 
 /* ─── Shelf — physical 3-D ledge grounding the cards ───────────────────── */
