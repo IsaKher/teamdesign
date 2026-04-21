@@ -23,27 +23,36 @@
   padding: 32px calc(50% - 380px) 80px;
   scrollbar-width: none;
   align-items: center;
+  /* Perspective container — direct children receive 3-D rotateY/translateZ */
+  perspective: 1200px;
+  perspective-origin: center center;
 }
 .strip::-webkit-scrollbar { display: none; }
 
-/* ─── Card link (flex item + snap target) ─────────────────────────────────── */
-.card {
+/* ─── Card wrapper — flex item, snap target, 3-D transform receiver ─────────── */
+.cardWrapper {
   flex-shrink: 0;
   width: 760px;
   scroll-snap-align: center;
-  text-decoration: none;
+  transform-origin: center center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
 }
 
-/* ─── Image frame (the element that receives the 3-D transform via ref) ───── */
+/* ─── Card link — fills wrapper, no layout of its own ──────────────────────── */
+.card {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* ─── Image frame — sized box, no transform (transforms live on .cardWrapper) ─ */
 .imageWrap {
   position: relative;
   width: 760px;
   height: 520px;
   overflow: hidden;
   background: #3B1E08;
-  will-change: transform;
-  transform-origin: center center;
-  transition: transform 0.18s ease-out;
   border-radius: 3px;
   box-shadow:
     0 2px  8px  rgba(0, 0, 0, 0.45),
@@ -233,12 +242,12 @@
 
 /* ─── Medium desktop / laptop (601px – 1199px) ──────────────────────────── */
 @media (max-width: 1199px) and (min-width: 601px) {
-  .strip     { padding: 22px calc(50% - 240px) 64px; gap: 12px; }
-  .card      { width: 480px; }
-  .imageWrap { width: 480px; height: 340px; }
-  .endSpacer { width: calc(50% - 240px - 12px); }
-  .content   { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
-  .name      { font-size: clamp(28px, 2.2vw, 38px); }
+  .strip       { padding: 22px calc(50% - 240px) 64px; gap: 12px; }
+  .cardWrapper { width: 480px; }
+  .imageWrap   { width: 480px; height: 340px; }
+  .endSpacer   { width: calc(50% - 240px - 12px); }
+  .content     { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
+  .name        { font-size: clamp(28px, 2.2vw, 38px); }
   /* Medium strip padding-bottom = 64px → bottom + height = 64 */
   .shelf         { bottom: 8px; height: 56px; }
   .shelf::before { top: -110px; height: 110px; }
@@ -256,7 +265,7 @@
     padding: 22px calc(50% - 140px) 60px;
   }
 
-  .card { width: 280px; }
+  .cardWrapper { width: 280px; }
 
   .imageWrap {
     width: 280px;
