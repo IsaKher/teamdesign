@@ -1063,8 +1063,9 @@
   .heroWrapper { display: none; }
   .filmstripWrap { display: block; }
 
-  /* Value prop is established by the filmstrip on mobile — hide to avoid redundancy */
-  .valuePropWrap { display: none; }
+  /* Value prop + intro: visible on mobile, single-column layout */
+  .valuePropWrap { display: block; padding: 36px var(--margin-page) 0; }
+  .introText { grid-template-columns: 1fr; gap: 16px; padding-bottom: 36px; }
 
   /* ── Stat bar: 2×2 grid, single unbroken centre vertical divider ── */
   .statBar {
