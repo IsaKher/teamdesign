@@ -11,16 +11,13 @@
   border-radius: 50px;
   padding: 14px 14px;
   box-shadow: 0 4px 24px rgba(26, 92, 56, 0.35);
-  transition: background 0.35s ease, padding 0.35s ease, gap 0.35s ease;
+  transition: background 0.35s ease, padding 0.35s ease;
   overflow: hidden;
-  max-width: 54px;
 }
 
 .button:hover {
   background: var(--color-whatsapp-hover);
   padding: 14px 20px;
-  max-width: 200px;
-  gap: 10px;
 }
 
 .icon {
@@ -44,14 +41,14 @@
   letter-spacing: 0.06em;
   white-space: nowrap;
   opacity: 0;
-  max-width: 0;
-  transition: opacity 0.25s ease 0.1s, max-width 0.35s ease;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
   overflow: hidden;
 }
 
 .button:hover .label {
   opacity: 1;
-  max-width: 120px;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {

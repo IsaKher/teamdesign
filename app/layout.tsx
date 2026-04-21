@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import SmoothScroll from '@/components/SmoothScroll';
-import PageTransition from '@/components/PageTransition';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -90,7 +89,7 @@ const schemaOrgJsonLd = {
       url: 'https://teamdesign.in',
       telephone: '+91-9876543210',
       foundingDate: '1996',
-      image: 'https://teamdesign.in/hero-building.png',
+      image: 'https://teamdesign.in/hero-building.webp',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Mumbai',
@@ -166,7 +165,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SmoothScroll />
         <Navigation />
-        <main><PageTransition>{children}</PageTransition></main>
+        <main>{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
