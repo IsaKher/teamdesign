@@ -58,15 +58,15 @@
   transition: box-shadow 0.4s ease;
 }
 
-/* ─── Bottom-up warm light wash — fades in when card is active ─────────── */
+/* ─── Bottom-up warm white light wash — fades in when card is active ───── */
 .imageWrap::after {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 90% 50% at 50% 120%,
-    rgba(255, 160, 70, 0.28) 0%,
-    rgba(230, 130, 50, 0.10) 45%,
+    ellipse 100% 60% at 50% 110%,
+    rgba(255, 248, 220, 0.55) 0%,
+    rgba(255, 245, 210, 0.20) 45%,
     transparent 70%
   );
   mix-blend-mode: screen;
@@ -76,14 +76,14 @@
   transition: opacity 0.4s ease;
 }
 
-/* ─── Active card — warm amber spill light + face wash ─────────────────── */
+/* ─── Active card — warm white spill light + face wash ─────────────────── */
 .cardActive .imageWrap {
   box-shadow:
     0 2px  8px  rgba(0, 0, 0, 0.45),
     0 8px  24px rgba(0, 0, 0, 0.55),
     0 18px 52px rgba(0, 0, 0, 0.40),
-    0 28px 55px rgba(210, 115, 35, 0.45),
-    0 48px 90px rgba(190, 95,  20, 0.22);
+    0 28px 60px rgba(255, 245, 210, 0.35),
+    0 50px 100px rgba(255, 240, 200, 0.18);
 }
 
 .cardActive .imageWrap::after {
