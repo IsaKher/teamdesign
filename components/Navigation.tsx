@@ -14,6 +14,7 @@ const leftItems = [
 
 const rightItems = [
   { label: 'Process',   href: '/process'   },
+  { label: 'Fees',      href: '/fees'      },
   { label: 'Contact',   href: '/contact'   },
 ];
 
