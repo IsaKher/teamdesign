@@ -1,5 +1,6 @@
 export const revalidate = 3600;
 
+import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -38,14 +39,15 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Fees & Engagement — Team Design Architects',
-    description: 'COA-compliant architectural fees in Mumbai. Transparent schedule, estimator and full engagement terms.',
+    description:
+      'COA-compliant architectural fees in Mumbai. Transparent schedule, estimator and full engagement terms.',
     images: ['https://teamdesign.in/hero-building.webp'],
   },
 };
 
 const STRIP_ITEMS = [
   { num: '01', text: 'COA-compliant minimums — we meet or exceed the mandatory scale in every engagement.' },
-  { num: '02', text: 'Phase-linked payments — you pay for what\'s done before we proceed to the next stage.' },
+  { num: '02', text: "Phase-linked payments — you pay for what's done before we proceed to the next stage." },
   { num: '03', text: 'GFC drawings released only after 70% of pre-construction fees are bank-confirmed.' },
   { num: '04', text: 'NOC issued only after all outstanding fees and dues are fully cleared.' },
   { num: '05', text: 'GST at 18% is always additional. Every figure on this page is exclusive.' },
@@ -69,7 +71,6 @@ const FEE_CARDS = [
       'Snagging, handover & as-built drawings',
     ],
     coa: 'COA mandatory minimum: 7.5% · Team Design minimum: 8%',
-    dark: false,
   },
   {
     tag: 'Interior Architecture',
@@ -87,7 +88,6 @@ const FEE_CARDS = [
       'Snagging, handover & as-built record',
     ],
     coa: 'COA mandatory minimum: 7.5% · Billed on interior works cost only — independent of structural shell fee',
-    dark: true,
   },
   {
     tag: 'Commercial Architecture',
@@ -104,7 +104,6 @@ const FEE_CARDS = [
       'Contractor coordination & site supervision',
     ],
     coa: 'COA mandatory minimum: 5% · Rate reflects complexity of commercial engagements',
-    dark: false,
   },
   {
     tag: 'Institutional Architecture',
@@ -121,7 +120,6 @@ const FEE_CARDS = [
       'Site supervision',
     ],
     coa: 'COA mandatory minimum: 5% · Identical buildings on same campus: 50% reduction',
-    dark: false,
   },
 ];
 
@@ -257,55 +255,46 @@ const EXCLUDED = [
 
 const POLICIES = [
   {
-    icon: '©',
     title: 'Intellectual Property',
     body: 'All drawings, models, and design documents are the IP of Team Design until all fees are settled. Protected under Sections 13 and 57 of the Indian Copyright Act. On full settlement, the client receives a non-exclusive, non-transferable licence to construct on the specified site only. Reuse on another plot requires a separate licensing fee.',
     warn: false,
   },
   {
-    icon: '◎',
     title: 'GFC Drawing Gate',
     body: "During review phases, all drawings are issued as low-resolution, watermarked PDFs: 'Not For Construction.' Native CAD files and final GFC sets are released only after 70% of the estimated total fee is bank-confirmed. This is the firm's primary protection against clients who exit after receiving working drawings.",
     warn: false,
   },
   {
-    icon: '⊘',
     title: 'NOC on Termination',
     body: 'Municipal authorities require a No Objection Certificate (NOC) from the original architect before a new firm can legally take over. The NOC is issued strictly upon full clearance of all outstanding fees, interest, and dues for completed stages. This prevents clients from replacing the architect without settling their obligations.',
     warn: true,
   },
   {
-    icon: '◻',
     title: 'Vastu Policy',
     body: 'Vastu compliance is not assumed. If required, all parameters must be declared in writing before concept design begins. External Vastu consultants must provide written sign-off at Concept Approval. Vastu-driven changes after floor plan sign-off constitute a change of brief and trigger a Redesign Fee at the standard day rate.',
     warn: false,
   },
   {
-    icon: '↺',
     title: 'Revision & Scope',
     body: 'Two consolidated revision rounds are included per phase. A round requires a single written set of comments. Piecemeal or sequential requests, and redesigns after phase sign-off, are billed at ₹15,000/day. No scope changes are valid without a written Change Order signed by both parties.',
     warn: false,
   },
   {
-    icon: '⧗',
     title: 'Suspension & Termination',
     body: 'Suspension for 30+ days or invoice unpaid beyond 15 days allows immediate suspension of services. Resumption after 90 days requires fresh financial assessment and a remobilization fee. On termination: all phase fees due immediately + 20% kill fee on balance. Design retainer non-refundable in all cases.',
     warn: true,
   },
   {
-    icon: '₹',
     title: 'Late Payment',
     body: 'Invoices are raised the exact day a milestone is submitted. Invoices unpaid beyond 15 days attract compound interest at 2% per month. This is stated in the Letter of Appointment. Persistent non-payment constitutes breach of the commercial agreement and triggers service suspension.',
     warn: false,
   },
   {
-    icon: '⚖',
     title: 'Liability Cap',
     body: "Team Design's aggregate liability is capped at the total professional fees received for the specific project. We bear no liability for construction defects arising from a contractor's unilateral deviation from GFC drawings. Structural liability rests with the licensed structural engineer of record.",
     warn: false,
   },
   {
-    icon: '✉',
     title: 'Letter of Appointment',
     body: 'No work commences without a signed Letter of Appointment confirming scope, fee basis, payment schedule, exclusions, and revision policy. Verbal agreements are not recognised. Governed by the Indian Contract Act, 1872.',
     warn: false,
@@ -315,6 +304,7 @@ const POLICIES = [
 export default async function FeesPage() {
   const settings = await getSiteSettings();
   const whatsapp = settings?.whatsapp ?? STUDIO.whatsappNumber;
+  void whatsapp; // available if needed later
 
   return (
     <>
@@ -358,7 +348,9 @@ export default async function FeesPage() {
           </p>
         </FadeIn>
       </div>
-      <FeesEstimator />
+      <div className={styles.estimatorOuter}>
+        <FeesEstimator />
+      </div>
 
       {/* ─── Fee structure ─────────────────────────────────────────────── */}
       <div className={styles.section}>
@@ -376,10 +368,7 @@ export default async function FeesPage() {
         <FadeIn direction="up" delay={0.08}>
           <div className={styles.feeGrid}>
             {FEE_CARDS.map((card, i) => (
-              <div
-                key={i}
-                className={`${styles.feeCard}${card.dark ? ` ${styles.feeCardDark}` : ''}`}
-              >
+              <div key={i} className={styles.feeCard}>
                 <span className={styles.feeCardTag}>{card.tag}</span>
                 <p className={styles.feeCardType}>{card.type}</p>
                 <p className={styles.feeCardDesc}>{card.desc}</p>
@@ -436,51 +425,57 @@ export default async function FeesPage() {
 
       {/* ─── Payment schedule ──────────────────────────────────────────── */}
       <div className={styles.section}>
-        <p className={styles.sectionLabel}>Payment Schedule</p>
-        <div className={styles.schedGrid}>
-          <FadeIn direction="up" delay={0.05}>
-            <div>
-              <h2 className={styles.sectionTitle}>
-                Staged payments,<br /><em>phase by phase.</em>
-              </h2>
-              <p className={styles.sectionIntro} style={{ marginBottom: 20 }}>
-                Every payment is linked to a deliverable — invoiced on the exact day a milestone is
-                submitted. Work on the next phase begins only after the invoice is fully settled.
-              </p>
-              <div className={styles.schedNote}>
-                A non-refundable design retainer of 5–10% of the estimated total fee is payable at
-                appointment — before any work commences. This covers initial site analysis and
-                mobilisation. Non-refundable under all circumstances.
-              </div>
-              <div className={styles.gfcGate}>
-                <span className={styles.gfcIcon}>◎</span>
-                <p className={styles.gfcText}>
-                  <strong>GFC Drawing Release Gate:</strong> Native CAD files and final un-watermarked
-                  Good for Construction drawings are transmitted only after{' '}
-                  <strong>70% of the estimated total fee has been realised in our bank account.</strong>{' '}
-                  During review, drawings are issued as low-resolution PDFs marked &ldquo;Not For
-                  Construction.&rdquo; Non-negotiable.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+        <FadeIn direction="up" delay={0.05}>
+          <p className={styles.sectionLabel}>Payment Schedule</p>
+          <h2 className={styles.sectionTitle}>
+            Staged payments, <em>phase by phase.</em>
+          </h2>
+          <p className={styles.sectionIntro}>
+            Every payment is linked to a deliverable — invoiced on the exact day a milestone is submitted.
+            Work on the next phase begins only after the invoice is fully settled.
+          </p>
+          <div className={styles.schedNote}>
+            A non-refundable design retainer of 5–10% of the estimated total fee is payable at
+            appointment — before any work commences. This covers initial site analysis and mobilisation.
+            Non-refundable under all circumstances.
+          </div>
+        </FadeIn>
 
-          <FadeIn direction="up" delay={0.1}>
-            <div>
-              {STAGES.map(s => (
-                <div key={s.num} className={styles.stageItem}>
-                  <span className={styles.stageNum}>{s.num}</span>
-                  <div>
-                    <p className={styles.stageName}>{s.name}</p>
-                    <p className={styles.stageTrigger}>{s.trigger}</p>
-                    <p className={styles.stageCumulative}>Cumulative: {s.cum}</p>
+        <FadeIn direction="up" delay={0.1}>
+          <div className={styles.timeline}>
+            {STAGES.map((stage, i) => (
+              <Fragment key={stage.num}>
+                <div className={styles.timelineStage}>
+                  <div className={styles.timelineNodeCol}>
+                    <div className={styles.timelineDot} />
+                    {i < STAGES.length - 1 && <div className={styles.timelineConnector} />}
                   </div>
-                  <span className={styles.stagePct}>{s.pct}</span>
+                  <div className={styles.timelineBody}>
+                    <span className={styles.timelineStageNum}>{stage.num}</span>
+                    <p className={styles.timelineStageName}>{stage.name}</p>
+                    <p className={styles.timelineStageTrigger}>{stage.trigger}</p>
+                    <p className={styles.timelineStageCum}>Cumulative: {stage.cum}</p>
+                  </div>
+                  <span className={styles.timelinePct}>{stage.pct}</span>
                 </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
+
+                {/* GFC gate marker appears after stage 05 */}
+                {i === 4 && (
+                  <div className={styles.gfcGateMarker}>
+                    <span className={styles.gfcGateMarkerLabel}>
+                      GFC Drawing Gate — 70% Threshold
+                    </span>
+                    <p className={styles.gfcGateMarkerText}>
+                      Native CAD files and final un-watermarked Good for Construction drawings are released
+                      only after 70% of the estimated total fee is confirmed in our bank account.
+                      Non-negotiable.
+                    </p>
+                  </div>
+                )}
+              </Fragment>
+            ))}
+          </div>
+        </FadeIn>
       </div>
 
       {/* ─── Included / Excluded ───────────────────────────────────────── */}
@@ -495,26 +490,30 @@ export default async function FeesPage() {
       <FadeIn direction="up" delay={0.05}>
         <div className={styles.ieGrid} style={{ borderBottom: '1px solid var(--color-rule)' }}>
           <div className={`${styles.iePanel} ${styles.ieIncluded}`}>
-            <p className={styles.iePanelHeader}>✓&nbsp;&nbsp;Included in the professional fee</p>
-            <ul className={styles.ieList}>
-              {INCLUDED.map((item, i) => (
-                <li key={i} className={styles.ieItem}>
-                  <span className={styles.ieMark}>✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className={styles.iePanelInner}>
+              <p className={styles.iePanelHeader}>✓&nbsp;&nbsp;Included in the professional fee</p>
+              <ul className={styles.ieList}>
+                {INCLUDED.map((item, i) => (
+                  <li key={i} className={styles.ieItem}>
+                    <span className={styles.ieMark}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className={`${styles.iePanel} ${styles.ieExcluded}`}>
-            <p className={styles.iePanelHeader}>—&nbsp;&nbsp;Excluded / billed separately</p>
-            <ul className={styles.ieList}>
-              {EXCLUDED.map((item, i) => (
-                <li key={i} className={styles.ieItem}>
-                  <span className={styles.ieMark}>—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className={styles.iePanelInner}>
+              <p className={styles.iePanelHeader}>—&nbsp;&nbsp;Excluded / billed separately</p>
+              <ul className={styles.ieList}>
+                {EXCLUDED.map((item, i) => (
+                  <li key={i} className={styles.ieItem}>
+                    <span className={styles.ieMark}>—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </FadeIn>
@@ -528,17 +527,38 @@ export default async function FeesPage() {
           </h2>
         </FadeIn>
         <FadeIn direction="up" delay={0.08}>
-          <div className={styles.policiesGrid}>
-            {POLICIES.map((p, i) => (
-              <div
-                key={i}
-                className={`${styles.policyCard}${p.warn ? ` ${styles.policyCardWarn}` : ''}`}
-              >
-                <div className={styles.policyIcon}>{p.icon}</div>
-                <p className={styles.policyTitle}>{p.title}</p>
-                <p className={styles.policyBody}>{p.body}</p>
-              </div>
-            ))}
+          <div className={styles.policiesList}>
+            {/* Left column: policies 01–05 */}
+            <div className={styles.policiesCol}>
+              {POLICIES.slice(0, 5).map((p, i) => (
+                <div
+                  key={i}
+                  className={`${styles.policyItem}${p.warn ? ` ${styles.policyItemWarn}` : ''}`}
+                >
+                  <span className={styles.policyItemNum}>0{i + 1}</span>
+                  <div>
+                    <p className={styles.policyItemTitle}>{p.title}</p>
+                    <p className={styles.policyItemBody}>{p.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right column: policies 06–09 */}
+            <div className={styles.policiesCol}>
+              {POLICIES.slice(5).map((p, i) => (
+                <div
+                  key={i}
+                  className={`${styles.policyItem}${p.warn ? ` ${styles.policyItemWarn}` : ''}`}
+                >
+                  <span className={styles.policyItemNum}>0{i + 6}</span>
+                  <div>
+                    <p className={styles.policyItemTitle}>{p.title}</p>
+                    <p className={styles.policyItemBody}>{p.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeIn>
       </div>
@@ -568,14 +588,6 @@ export default async function FeesPage() {
             <Link href="/contact" className={styles.ctaPrimary}>
               Discuss a Project
             </Link>
-            <a
-              href={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Hi, I'd like to discuss a project and understand your fees.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ctaSecondary}
-            >
-              WhatsApp Studio →
-            </a>
           </div>
         </div>
       </div>
