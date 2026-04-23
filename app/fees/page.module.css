@@ -294,7 +294,7 @@
 }
 
 .serviceCard {
-  padding: 48px 44px 40px;
+  padding: 64px 52px 56px;
   border-right: 1px solid var(--color-rule);
   border-bottom: 1px solid var(--color-rule);
   display: flex;
@@ -765,17 +765,15 @@
 
 /* ─── FAQ ────────────────────────────────────────────────────────────────── */
 .faqList {
-  display: flex;
-  flex-direction: column;
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .faqItem {
   border-top: 1px solid var(--color-rule);
-}
-
-.faqItem:last-child {
-  border-bottom: 1px solid var(--color-rule);
 }
 
 .faqQuestion {
@@ -822,60 +820,6 @@
   padding-bottom: 24px;
   max-width: 640px;
 }
-
-/* ─── First Meeting Callout ──────────────────────────────────────────────── */
-.firstMeeting {
-  background: #3B1E08;
-  padding: 80px var(--margin-page);
-}
-
-.firstMeetingInner {
-  max-width: 640px;
-}
-
-.firstMeetingEyebrow {
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: #C4956A;
-  margin-bottom: 20px;
-}
-
-.firstMeetingTitle {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 4.5vw, 64px);
-  font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: var(--tracking-display);
-  color: #F4EEE6;
-  margin-bottom: 20px;
-}
-
-.firstMeetingBody {
-  font-family: var(--font-sans);
-  font-size: var(--size-body);
-  font-weight: 300;
-  line-height: var(--lh-body);
-  letter-spacing: var(--tracking-body);
-  color: rgba(244, 238, 230, 0.6);
-  max-width: 500px;
-  margin-bottom: 40px;
-}
-
-.firstMeetingCta {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: #F4EEE6;
-  border-bottom: 1px solid rgba(244, 238, 230, 0.4);
-  padding-bottom: 3px;
-  transition: opacity 0.2s;
-}
-
-.firstMeetingCta:hover { opacity: 0.6; }
 
 /* ─── CTA ────────────────────────────────────────────────────────────────── */
 .cta {
@@ -1042,6 +986,8 @@
     opacity: 0.75;
     margin-top: 4px;
   }
+
+  .faqList { grid-template-columns: 1fr; gap: 0; }
 
   /* Included section stacks vertically */
   .includedSection { grid-template-columns: 1fr; }

@@ -422,22 +422,6 @@ export default async function FeesPage() {
         <FAQAccordion />
       </section>
 
-      {/* ─── First Meeting Callout ────────────────────────────────────────── */}
-      <div className={styles.firstMeeting}>
-        <div className={styles.firstMeetingInner}>
-          <p className={styles.firstMeetingEyebrow}>No cost. No commitment.</p>
-          <h2 className={styles.firstMeetingTitle}>
-            The first meeting is free.
-          </h2>
-          <p className={styles.firstMeetingBody}>
-            Tell us about your project. We&apos;ll listen, ask the right questions, and give you an honest picture of what an engagement would look like — before any paperwork.
-          </p>
-          <Link href="/contact" className={styles.firstMeetingCta}>
-            Book a conversation →
-          </Link>
-        </div>
-      </div>
-
       {/* ─── CTA ─────────────────────────────────────────────────────────── */}
       <section className={styles.cta}>
         <div className={styles.ctaInner}>
