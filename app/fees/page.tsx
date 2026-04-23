@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
 import FeeEstimator from './FeeEstimator';
+import FAQAccordion from './FAQAccordion';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
@@ -407,6 +408,35 @@ export default async function FeesPage() {
           </div>
         </div>
       </section>
+
+      {/* ─── FAQ ─────────────────────────────────────────────────────────── */}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionLabel}>Common Questions</span>
+          <span className={styles.sectionRule} />
+        </div>
+        <h2 className={styles.sectionTitle}>
+          Things people<br />
+          <em className={styles.titleItalic}>ask us.</em>
+        </h2>
+        <FAQAccordion />
+      </section>
+
+      {/* ─── First Meeting Callout ────────────────────────────────────────── */}
+      <div className={styles.firstMeeting}>
+        <div className={styles.firstMeetingInner}>
+          <p className={styles.firstMeetingEyebrow}>No cost. No commitment.</p>
+          <h2 className={styles.firstMeetingTitle}>
+            The first meeting is free.
+          </h2>
+          <p className={styles.firstMeetingBody}>
+            Tell us about your project. We&apos;ll listen, ask the right questions, and give you an honest picture of what an engagement would look like — before any paperwork.
+          </p>
+          <Link href="/contact" className={styles.firstMeetingCta}>
+            Book a conversation →
+          </Link>
+        </div>
+      </div>
 
       {/* ─── CTA ─────────────────────────────────────────────────────────── */}
       <section className={styles.cta}>

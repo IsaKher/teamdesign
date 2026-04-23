@@ -764,6 +764,120 @@
   color: var(--color-text-secondary);
 }
 
+/* ─── FAQ ────────────────────────────────────────────────────────────────── */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+}
+
+.faqItem {
+  border-top: 1px solid var(--color-rule);
+}
+
+.faqItem:last-child {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  transition: opacity 0.2s;
+}
+
+.faqQuestion:hover { opacity: 0.65; }
+
+.faqIcon {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.faqIconOpen {
+  transform: rotate(45deg);
+}
+
+.faqAnswer {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  padding-bottom: 24px;
+  max-width: 640px;
+}
+
+/* ─── First Meeting Callout ──────────────────────────────────────────────── */
+.firstMeeting {
+  background: #3B1E08;
+  padding: 80px var(--margin-page);
+}
+
+.firstMeetingInner {
+  max-width: 640px;
+}
+
+.firstMeetingEyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: #C4956A;
+  margin-bottom: 20px;
+}
+
+.firstMeetingTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: #F4EEE6;
+  margin-bottom: 20px;
+}
+
+.firstMeetingBody {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: rgba(244, 238, 230, 0.6);
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.firstMeetingCta {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: #F4EEE6;
+  border-bottom: 1px solid rgba(244, 238, 230, 0.4);
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
+}
+
+.firstMeetingCta:hover { opacity: 0.6; }
+
 /* ─── CTA ────────────────────────────────────────────────────────────────── */
 .cta {
   padding: 100px var(--margin-page);
