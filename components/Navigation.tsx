@@ -14,6 +14,7 @@ const leftItems = [
 
 const rightItems = [
   { label: 'Process',   href: '/process'   },
+  { label: 'Fees',      href: '/fees'      },
   { label: 'Contact',   href: '/contact'   },
 ];
 
@@ -36,8 +37,8 @@ export default function Navigation() {
     const update = () => {
       const y = window.scrollY;
       const scrolled = y > 40;
-      // Reveal links once user is mid-way through the filmstrip (~300px scroll)
-      const filmstripBottom = 300;
+      // Nav turns cream at 40px; links reveal at 100px — small gap so transitions don't coincide
+      const filmstripBottom = 100;
       const pastFilmstrip   = y > filmstripBottom;
 
       el.classList.toggle(styles.solid,       scrolled || !isHeroPage);

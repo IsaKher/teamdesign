@@ -246,6 +246,32 @@
   .valuePropWrap { padding-top: 36px; }
 }
 
+.introText {
+  margin-top: 28px;
+  padding-bottom: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 48px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.introText p {
+  font-family: var(--font-sans);
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .introText {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 36px;
+  }
+}
+
 /* ─── Selected Work ────────────────────────────────────────────────────── */
 .portfolioSection {
   padding: 96px var(--margin-page) var(--margin-section);
@@ -563,6 +589,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  order: 1; /* desktop: testimonials left */
+}
+
+@media (max-width: 900px) {
+  .testimonialCol { order: 2; } /* mobile: testimonials below recognition */
 }
 
 .recognitionCol {
@@ -735,7 +766,6 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  opacity: 0.5;
   flex-shrink: 0;
 }
 
@@ -1033,8 +1063,9 @@
   .heroWrapper { display: none; }
   .filmstripWrap { display: block; }
 
-  /* Value prop is established by the filmstrip on mobile — hide to avoid redundancy */
-  .valuePropWrap { display: none; }
+  /* Value prop + intro: visible on mobile, single-column layout */
+  .valuePropWrap { display: block; padding: 36px var(--margin-page) 0; }
+  .introText { grid-template-columns: 1fr; gap: 16px; padding-bottom: 36px; }
 
   /* ── Stat bar: 2×2 grid, single unbroken centre vertical divider ── */
   .statBar {
@@ -1176,7 +1207,7 @@
     background: var(--color-text-secondary);
   }
   .processLeft { flex-direction: column; gap: 3px; align-items: flex-start; }
-  .processNumber { font-size: 9px; }
+  .processNumber { font-size: 11px; }
   .processTitle { font-size: 18px; }
   .processSubtitle { font-size: 14px; }
 

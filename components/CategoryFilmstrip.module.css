@@ -20,7 +20,7 @@
   /* Side padding = (viewport − card) / 2 so the centred card sits flush.
      Base = large desktop (≥1200px): 760px wide card → half = 380px
      Extra bottom padding gives the pill room to float                    */
-  padding: 32px calc(50% - 380px) 80px;
+  padding: 32px calc(50% - 380px) 100px;
   scrollbar-width: none;
   align-items: center;
 }
@@ -33,7 +33,6 @@
   scroll-snap-align: center;
   transform-origin: center center;
   transition: transform 0.4s ease, opacity 0.4s ease;
-  will-change: transform, opacity;
 }
 
 /* ─── Card link — fills wrapper, no layout of its own ──────────────────────── */
@@ -72,7 +71,7 @@
   z-index: 1;
 }
 
-/* ─── Category name + CTA ───────────────────────────────────────────────── */
+/* ─── Category name — bottom of card, centre-aligned ────────────────────── */
 .content {
   position: absolute;
   bottom: 36px;
@@ -81,7 +80,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
   pointer-events: none;
 }
 
@@ -95,14 +94,16 @@
   letter-spacing: -0.01em;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.cta {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.50);
+.arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0.65;
+  flex-shrink: 0;
 }
 
 /* ─── Shelf — physical 3-D ledge grounding the cards ───────────────────── */
@@ -117,7 +118,7 @@
   bottom: 10px;    /* element bottom = 10px from section bottom           */
   left: 0;
   right: 0;
-  height: 70px;    /* element top = 10+70 = 80px from section bottom = card base */
+  height: 90px;    /* element top = 10+90 = 100px from section bottom = card base */
   pointer-events: none;
   /* Reading top→bottom: shelf front face → cast shadow beneath cards      */
   background: linear-gradient(to bottom,
@@ -125,7 +126,7 @@
     rgba(68,  38,  11, 0.70) 10px,   /* front face base                   */
     rgba(14,   7,   2, 0.75) 12px,   /* deep cast shadow starts           */
     rgba(10,   5,   2, 0.30) 35px,   /* shadow dissipating                */
-    transparent               70px
+    transparent               90px
   );
 }
 
@@ -167,9 +168,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 9px 18px 9px 16px;
+  gap: 10px;
+  padding: 12px 20px;
   background: rgba(255, 248, 240, 0.10);
   backdrop-filter: blur(18px) saturate(1.5);
   -webkit-backdrop-filter: blur(18px) saturate(1.5);
@@ -237,14 +239,14 @@
 
 /* ─── Medium desktop / laptop (601px – 1199px) ──────────────────────────── */
 @media (max-width: 1199px) and (min-width: 601px) {
-  .strip       { padding: 22px calc(50% - 240px) 64px; gap: 12px; }
+  .strip       { padding: 22px calc(50% - 240px) 84px; gap: 12px; }
   .cardWrapper { width: 480px; }
   .imageWrap   { width: 480px; height: 340px; }
   .endSpacer   { width: calc(50% - 240px - 12px); }
   .content     { bottom: 28px; left: 28px; right: 28px; gap: 8px; }
   .name        { font-size: clamp(28px, 2.2vw, 38px); }
-  /* Medium strip padding-bottom = 64px → bottom + height = 64 */
-  .shelf         { bottom: 8px; height: 56px; }
+  /* Medium strip padding-bottom = 84px → bottom + height = 84 */
+  .shelf         { bottom: 8px; height: 76px; }
   .shelf::before { top: -110px; height: 110px; }
 }
 
@@ -257,7 +259,7 @@
 
   /* Extra bottom padding so the pill has room to float */
   .strip {
-    padding: 22px calc(50% - 140px) 60px;
+    padding: 22px calc(50% - 140px) 80px;
   }
 
   .cardWrapper { width: 280px; }
@@ -278,9 +280,9 @@
 
   .name { font-size: 26px; }
 
-  /* Mobile shelf — same lit ledge, scaled for 60px strip padding-bottom   */
-  /* bottom + height = 60 → top of element = card base                    */
-  .shelf         { bottom: 8px; height: 52px; }
+  /* Mobile shelf — same lit ledge, scaled for 80px strip padding-bottom   */
+  /* bottom + height = 80 → top of element = card base                    */
+  .shelf         { bottom: 8px; height: 72px; }
   .shelf::before { top: -80px; height: 80px; }
 
   /* Pill sits lower on mobile to stay clear of card text */

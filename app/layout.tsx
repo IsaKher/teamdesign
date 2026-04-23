@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import SmoothScroll from '@/components/SmoothScroll';
-import PageTransition from '@/components/PageTransition';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -55,12 +54,25 @@ export const metadata: Metadata = {
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
+    images: [
+      {
+        url: 'https://teamdesign.in/hero-building.webp',
+        width: 1536,
+        height: 1024,
+        alt: 'Team Design Architects — Architecture & Interior Design, Mumbai',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design — Mumbai. 25+ years, 300+ projects.',
+    images: ['https://teamdesign.in/hero-building.webp'],
+  },
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
   },
   robots: {
     index: true,
@@ -81,7 +93,7 @@ const schemaOrgJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['ArchitecturalService', 'LocalBusiness'],
+      '@type': ['ProfessionalService', 'LocalBusiness'],
       '@id': 'https://teamdesign.in/#business',
       name: 'Team Design Architects',
       alternateName: 'Team Design',
@@ -90,7 +102,7 @@ const schemaOrgJsonLd = {
       url: 'https://teamdesign.in',
       telephone: '+91-9876543210',
       foundingDate: '1996',
-      image: 'https://teamdesign.in/hero-building.png',
+      image: 'https://teamdesign.in/hero-building.webp',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Mumbai',
@@ -104,19 +116,19 @@ const schemaOrgJsonLd = {
       },
       areaServed: [
         { '@type': 'City', name: 'Mumbai' },
-        { '@type': 'State', name: 'Maharashtra' },
+        { '@type': 'AdministrativeArea', name: 'Maharashtra' },
         { '@type': 'Country', name: 'India' },
-      ],
-      serviceType: [
-        'Residential Architecture',
-        'Commercial Architecture',
-        'Institutional Architecture',
-        'Interior Design',
-        'Urban Planning',
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Architectural & Interior Design Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Institutional Architecture' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Urban Planning' } },
+        ],
       },
       sameAs: ['https://teamdesign.in'],
     },
@@ -141,10 +153,7 @@ const schemaOrgJsonLd = {
       publisher: { '@id': 'https://teamdesign.in/#business' },
       potentialAction: {
         '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://teamdesign.in/portfolio?type={search_term_string}',
-        },
+        target: 'https://teamdesign.in/portfolio?type={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
     },
@@ -166,7 +175,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SmoothScroll />
         <Navigation />
-        <main><PageTransition>{children}</PageTransition></main>
+        <main>{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
