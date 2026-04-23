@@ -544,7 +544,6 @@
 .stairsWrap {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .stairStep {
@@ -951,7 +950,10 @@
   .addOnGrid { grid-template-columns: 1fr 1fr; }
   .addOnCard:nth-child(2) { border-right: none; }
   .addOnCard:nth-child(3) { border-top: 1px solid var(--color-rule); }
-  /* Reduce stair indent on tablet so it doesn't overflow */
+}
+
+/* Tablet only — reduce indent, hide description in staircase bars */
+@media (min-width: 769px) and (max-width: 1024px) {
   .stairStep { height: auto; min-height: 72px; padding: 16px 28px; }
   .stairDesc { display: none; }
 }
@@ -973,71 +975,72 @@
   /* ── Vertical timeline on mobile ── */
   .stairsWrap {
     position: relative;
-    padding-left: 36px;
-    overflow: visible;
+    padding-left: 32px;
   }
 
   /* Vertical connecting line */
   .stairsWrap::before {
     content: '';
     position: absolute;
-    left: 7px;
-    top: 10px;
-    bottom: 32px;
+    left: 4px;
+    top: 14px;
+    bottom: 36px;
     width: 1px;
     background: var(--color-rule);
   }
 
   .stairStep {
     margin-left: 0 !important;
-    background: transparent;
-    border-bottom: none;
-    height: auto;
-    min-height: auto;
-    padding: 0 0 40px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    background: transparent !important;
+    border-bottom: none !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 0 36px 0 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px;
     position: relative;
   }
 
-  .stairStep:last-child { padding-bottom: 0; }
+  .stairStep:last-child { padding-bottom: 0 !important; }
 
-  /* Dot on the timeline */
+  /* Amber dot per stage */
   .stairStep::before {
     content: '';
     position: absolute;
-    left: -32px;
-    top: 8px;
+    left: -28px;
+    top: 6px;
     width: 9px;
     height: 9px;
     border-radius: 50%;
     background: #C4956A;
-    flex-shrink: 0;
   }
 
   .stairNum {
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary) !important;
     opacity: 0.5;
+    margin-bottom: 2px;
   }
 
   .stairPct {
-    font-size: 36px;
-    color: var(--color-text-primary);
+    font-size: 32px !important;
+    color: var(--color-text-primary) !important;
     text-align: left;
     min-width: auto;
+    order: -1;
   }
 
   .stairTitle {
-    color: var(--color-text-primary);
-    font-size: 18px;
+    color: var(--color-text-primary) !important;
+    font-size: 17px !important;
     min-width: auto;
   }
 
   .stairDesc {
-    display: block;
-    color: var(--color-text-secondary);
+    display: block !important;
+    color: var(--color-text-secondary) !important;
     opacity: 0.75;
+    margin-top: 4px;
   }
 
   /* Included section stacks vertically */
