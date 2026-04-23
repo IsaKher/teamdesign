@@ -540,148 +540,123 @@
   max-width: 900px;
 }
 
-/* ─── Payment Stages ─────────────────────────────────────────────────────── */
-.stagesTrack {
-  position: relative;
+/* ─── Payment Staircase ──────────────────────────────────────────────────── */
+.stairsWrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.stagesArrow {
+.stairStep {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-direction: row-reverse;
+  gap: 32px;
+  padding: 0 44px;
+  height: 88px;
+  background: #3B1E08;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
 }
 
-.arrowLine {
-  display: block;
-  flex: 1;
-  height: 1px;
-  background: var(--color-rule);
-  position: relative;
-  max-width: 120px;
-}
+.stairStep:last-child { border-bottom: none; }
 
-.arrowLine::before {
-  content: '←';
-  position: absolute;
-  left: -2px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 10px;
-  color: var(--color-rule);
-  line-height: 1;
-}
-
-.arrowLabel {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  opacity: 0.45;
-}
-
-/* Steps go right → left on screen */
-.stagesRow {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 0;
-  justify-content: flex-start;
-}
-
-.stageItem {
-  flex: 1;
-  min-width: 0;
-  position: relative;
-}
-
-.stageCard {
-  border: 1px solid var(--color-rule);
-  border-radius: 8px;
-  padding: 28px 24px;
-  background: var(--color-ground);
-  margin-right: 8px;
-  height: 100%;
-}
-
-.stageItem:last-child .stageCard { margin-right: 0; }
-
-.stageNum {
-  display: block;
+.stairNum {
   font-family: var(--font-sans);
   font-size: 10px;
   letter-spacing: 0.14em;
-  color: var(--color-text-secondary);
-  opacity: 0.5;
-  margin-bottom: 12px;
+  color: rgba(244, 238, 230, 0.28);
+  flex-shrink: 0;
+  width: 22px;
 }
 
-.stagePct {
+.stairTitle {
   font-family: var(--font-serif);
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(17px, 1.5vw, 22px);
   font-weight: 300;
-  line-height: 1;
-  color: var(--color-text-primary);
-  margin-bottom: 12px;
+  color: #F4EEE6;
+  flex-shrink: 0;
+  min-width: 200px;
 }
 
-.stageTitle {
-  font-family: var(--font-serif);
-  font-size: clamp(16px, 1.4vw, 20px);
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--color-text-primary);
-  margin-bottom: 10px;
-}
-
-.stageDesc {
+.stairDesc {
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 300;
-  line-height: 1.65;
-  color: var(--color-text-secondary);
-  opacity: 0.75;
+  line-height: 1.55;
+  color: rgba(244, 238, 230, 0.42);
+  flex: 1;
 }
 
-/* ─── What's Included ────────────────────────────────────────────────────── */
+.stairPct {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 300;
+  color: #C4956A;
+  flex-shrink: 0;
+  text-align: right;
+  min-width: 52px;
+}
+
+/* ─── What's Included (split panel) ─────────────────────────────────────── */
 .includedSection {
-  padding: 80px var(--margin-page);
-  border-bottom: 1px solid var(--color-rule);
-  background: var(--color-ground-dark);
-}
-
-.includedInner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  border-bottom: 1px solid var(--color-rule);
 }
 
-.includedColLabel {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: var(--size-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  margin-bottom: 32px;
+.includedPanelLight {
+  padding: 80px var(--margin-page);
+  background: var(--color-ground);
+  border-right: 1px solid var(--color-rule);
+}
+
+.includedPanelDark {
+  padding: 80px var(--margin-page);
+  background: #3B1E08;
+}
+
+.includedHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-text-primary);
+  margin-bottom: 48px;
+}
+
+.includedItalic {
+  font-style: italic;
+  color: #B8A898;
+}
+
+.includedHeadingDark {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: #F4EEE6;
+  margin-bottom: 48px;
+}
+
+.includedItalicDark {
+  font-style: italic;
+  color: rgba(244, 238, 230, 0.3);
 }
 
 .includedList {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
 }
 
 .includedItem {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--color-rule);
+  gap: 20px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-top: 1px solid var(--color-rule);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 300;
@@ -689,12 +664,47 @@
   color: var(--color-text-secondary);
 }
 
-.includedItem:first-child { border-top: 1px solid var(--color-rule); }
+.includedItem:last-child { border-bottom: 1px solid var(--color-rule); }
 
-.includedCheck {
+.includedListDark {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.includedItemDark {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(244, 238, 230, 0.6);
+}
+
+.includedItemDark:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+
+.includedNum {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.1em;
   color: var(--color-rule);
   flex-shrink: 0;
-  margin-top: 1px;
+  width: 20px;
+  padding-top: 2px;
+}
+
+.includedNumDark {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(244, 238, 230, 0.18);
+  flex-shrink: 0;
+  width: 20px;
+  padding-top: 2px;
 }
 
 /* ─── How We Protect Both Parties ────────────────────────────────────────── */
@@ -827,8 +837,9 @@
   .addOnGrid { grid-template-columns: 1fr 1fr; }
   .addOnCard:nth-child(2) { border-right: none; }
   .addOnCard:nth-child(3) { border-top: 1px solid var(--color-rule); }
-  .stagesRow { flex-wrap: wrap; }
-  .stageItem { flex: 1 1 calc(33.3% - 8px); }
+  /* Reduce stair indent on tablet so it doesn't overflow */
+  .stairStep { height: auto; min-height: 72px; padding: 16px 28px; }
+  .stairDesc { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -845,11 +856,13 @@
   .addOnCard { border-right: none; border-bottom: 1px solid var(--color-rule); }
   .addOnCard:last-child { border-bottom: none; }
 
-  .stagesRow { flex-direction: column; }
-  .stageItem { flex: 1 1 100%; }
-  .stageCard { margin-right: 0; margin-bottom: 8px; }
+  /* Collapse staircase indent on mobile */
+  .stairStep { margin-left: 0 !important; padding: 16px 24px; height: auto; min-height: 64px; }
+  .stairDesc { display: none; }
 
-  .includedInner { grid-template-columns: 1fr; gap: 48px; }
+  /* Included section stacks vertically */
+  .includedSection { grid-template-columns: 1fr; }
+  .includedPanelLight { border-right: none; border-bottom: 1px solid var(--color-rule); }
 
   .protectGrid { grid-template-columns: 1fr; }
   .protectCol { border-right: none; border-bottom: 1px solid var(--color-rule); padding: 40px var(--margin-page); }

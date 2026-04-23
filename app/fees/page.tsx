@@ -332,52 +332,51 @@ export default async function FeesPage() {
           You never pay for work that hasn&apos;t been done. Each payment is linked to a completed, approved deliverable — so our incentives are always aligned with yours.
         </p>
 
-        <div className={styles.stagesTrack}>
-          {/* Arrow direction indicator */}
-          <div className={styles.stagesArrow}>
-            <span className={styles.arrowLine} />
-            <span className={styles.arrowLabel}>payment flow</span>
-          </div>
-          <div className={styles.stagesRow}>
-            {PAYMENT_STAGES.map((stage) => (
-              <div key={stage.step} className={styles.stageItem}>
-                <div className={styles.stageCard}>
-                  <span className={styles.stageNum}>{stage.step}</span>
-                  <div className={styles.stagePct}>{stage.pct}</div>
-                  <h4 className={styles.stageTitle}>{stage.title}</h4>
-                  <p className={styles.stageDesc}>{stage.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className={styles.stairsWrap}>
+          {PAYMENT_STAGES.map((stage, i) => (
+            <div
+              key={stage.step}
+              className={styles.stairStep}
+              style={{ marginLeft: `${i * 68}px` }}
+            >
+              <span className={styles.stairNum}>{stage.step}</span>
+              <h4 className={styles.stairTitle}>{stage.title}</h4>
+              <p className={styles.stairDesc}>{stage.desc}</p>
+              <span className={styles.stairPct}>{stage.pct}</span>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ─── What's Included ─────────────────────────────────────────────── */}
       <section className={styles.includedSection}>
-        <div className={styles.includedInner}>
-          <div className={styles.includedCol}>
-            <span className={styles.includedColLabel}>Included in all engagements</span>
-            <ul className={styles.includedList}>
-              {INCLUDED_ITEMS.map((item) => (
-                <li key={item} className={styles.includedItem}>
-                  <span className={styles.includedCheck}>—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.includedCol}>
-            <span className={styles.includedColLabel}>Not included — billed separately</span>
-            <ul className={styles.includedList}>
-              {NOT_INCLUDED.map((item) => (
-                <li key={item} className={styles.includedItem}>
-                  <span className={styles.includedCheck}>—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className={styles.includedPanelLight}>
+          <h3 className={styles.includedHeading}>
+            In every<br />
+            <em className={styles.includedItalic}>engagement.</em>
+          </h3>
+          <ol className={styles.includedList}>
+            {INCLUDED_ITEMS.map((item, i) => (
+              <li key={item} className={styles.includedItem}>
+                <span className={styles.includedNum}>{String(i + 1).padStart(2, '0')}</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className={styles.includedPanelDark}>
+          <h3 className={styles.includedHeadingDark}>
+            Never<br />
+            <em className={styles.includedItalicDark}>assumed.</em>
+          </h3>
+          <ol className={styles.includedListDark}>
+            {NOT_INCLUDED.map((item, i) => (
+              <li key={item} className={styles.includedItemDark}>
+                <span className={styles.includedNumDark}>{String(i + 1).padStart(2, '0')}</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
