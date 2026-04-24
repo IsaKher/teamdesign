@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -23,6 +23,8 @@ const STUDIOS = [
   },
 ];
 
+type Studio = typeof STUDIOS[number];
+
 /* Auto-fits the viewport to show both pins with breathing room */
 function BoundsHandler() {
   const map = useMap();
@@ -31,6 +33,42 @@ function BoundsHandler() {
     map.fitBounds(bounds, { padding: [80, 120] });
   }, [map]);
   return null;
+}
+
+/* Opens its popup immediately on mount and keeps it open */
+function PermanentMarker({ studio, pin }: { studio: Studio; pin: L.DivIcon }) {
+  const markerRef = useRef<L.Marker>(null);
+
+  useEffect(() => {
+    // Defer one tick so the map tile layer is ready
+    const id = setTimeout(() => markerRef.current?.openPopup(), 0);
+    return () => clearTimeout(id);
+  }, []);
+
+  return (
+    <Marker ref={markerRef} position={studio.position} icon={pin}>
+      <Popup
+        autoClose={false}
+        closeButton={false}
+        minWidth={220}
+      >
+        <span className={styles.popupLabel}>{studio.label}</span>
+        <address className={styles.popupAddress}>
+          {studio.lines.map((line, i) => (
+            <span key={i}>{line}{i < studio.lines.length - 1 && <br />}</span>
+          ))}
+        </address>
+        <a
+          href={studio.directionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.popupDirections}
+        >
+          Get Directions →
+        </a>
+      </Popup>
+    </Marker>
+  );
 }
 
 export default function StudioMap() {
@@ -54,6 +92,7 @@ export default function StudioMap() {
         center={[19.05, 72.92]}
         zoom={11}
         scrollWheelZoom={false}
+        closePopupOnClick={false}
         className={styles.map}
       >
         <TileLayer
@@ -61,24 +100,7 @@ export default function StudioMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
         {STUDIOS.map(studio => (
-          <Marker key={studio.id} position={studio.position} icon={pin}>
-            <Popup minWidth={220}>
-              <span className={styles.popupLabel}>{studio.label}</span>
-              <address className={styles.popupAddress}>
-                {studio.lines.map((line, i) => (
-                  <span key={i}>{line}{i < studio.lines.length - 1 && <br />}</span>
-                ))}
-              </address>
-              <a
-                href={studio.directionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.popupDirections}
-              >
-                Get Directions →
-              </a>
-            </Popup>
-          </Marker>
+          <PermanentMarker key={studio.id} studio={studio} pin={pin} />
         ))}
         <BoundsHandler />
       </MapContainer>

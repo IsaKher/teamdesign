@@ -38,19 +38,6 @@
   box-shadow: none;
 }
 
-.mapWrap :global(.leaflet-popup-close-button) {
-  color: rgba(20, 16, 12, 0.30) !important;
-  font-size: 18px !important;
-  padding: 5px 8px !important;
-  top: 4px !important;
-  right: 4px !important;
-  transition: color 0.2s;
-}
-
-.mapWrap :global(.leaflet-popup-close-button:hover) {
-  color: rgba(20, 16, 12, 0.75) !important;
-}
-
 /* ─── Popup content ───────────────────────────────────────────────────── */
 .popupLabel {
   display: block;
