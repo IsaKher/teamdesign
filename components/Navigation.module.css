@@ -92,8 +92,8 @@
 
 .seal {
   position: relative;
-  width: 172px;
-  height: 172px;
+  width: 152px;
+  height: 152px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
