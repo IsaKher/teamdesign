@@ -13,8 +13,38 @@ function sanitize(str: string): string {
 // ─── Field length limits (characters) ────────────────────────────────────────
 const LIMITS = { name: 100, phone: 20, email: 254, type: 50, project: 2000 };
 
+// ─── Rate limiter (in-memory, per serverless instance) ───────────────────────
+// Limits each IP to 5 submissions per 60-second window.
+const rateMap = new Map<string, { count: number; reset: number }>();
+const RATE = { window: 60_000, max: 5 };
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now > entry.reset) {
+    rateMap.set(ip, { count: 1, reset: now + RATE.window });
+    return false;
+  }
+  if (entry.count >= RATE.max) return true;
+  entry.count++;
+  return false;
+}
+
+// ─── Email format validation ──────────────────────────────────────────────────
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(request: NextRequest) {
   try {
+    // ─── 0. Rate limit ───────────────────────────────────────────────────────
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please wait a moment and try again.' },
+        { status: 429 }
+      );
+    }
+
     // ─── 1. CSRF: verify the request comes from our own site ─────────────────
     //    Browsers always send the Origin header for cross-site POST requests.
     //    If it's missing or wrong, we reject immediately.
@@ -41,7 +71,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // ─── 4. Length limits — reject oversized payloads ────────────────────────
+    // ─── 4. Email format validation ───────────────────────────────────────────
+    if (email && !EMAIL_RE.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address.' },
+        { status: 400 }
+      );
+    }
+
+    // ─── 5. Length limits — reject oversized payloads ────────────────────────
     if (
       name.length > LIMITS.name ||
       (phone && phone.length > LIMITS.phone) ||
@@ -55,7 +93,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // ─── 5. Sanitize all inputs before any further use ───────────────────────
+    // ─── 6. Sanitize all inputs before any further use ───────────────────────
     const safe = {
       name:    sanitize(name),
       phone:   sanitize(phone   ?? ''),
@@ -74,13 +112,7 @@ export async function POST(request: NextRequest) {
     //   text: `Name: ${safe.name}\nPhone: ${safe.phone || '—'}\nEmail: ${safe.email || '—'}\nProject Type: ${safe.type || '—'}\n\nMessage:\n${safe.project || '—'}`,
     // });
 
-    // ─── Option B: Log submission (current placeholder) ──────────────────────
-    console.log('[Contact Form Submission]', {
-      ...safe,
-      timestamp: new Date().toISOString(),
-    });
-
-    // ─── Option C: Nodemailer — now uses sanitized `safe.*` variables ─────────
+    // ─── Option B: Nodemailer ─────────────────────────────────────────────────
     // Requires: npm install nodemailer @types/nodemailer
     // Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS in .env.local
     /*
@@ -103,6 +135,8 @@ export async function POST(request: NextRequest) {
       `,
     });
     */
+
+    void safe; // suppress unused-variable warning until email sending is wired up
 
     return NextResponse.json({ success: true });
   } catch (error) {
