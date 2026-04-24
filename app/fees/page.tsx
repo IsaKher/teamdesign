@@ -21,93 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-const SERVICE_CARDS = [
-  {
-    category: 'Residential Architecture',
-    title: 'Independent Homes & Bungalows',
-    subtitle: 'Private residences, villas, duplex homes, farmhouses.',
-    pct: '8–10',
-    costBase: 'of construction cost',
-    items: [
-      'Discovery, concept, design development',
-      'Complete working drawings + specifications',
-      '2 consolidated revision rounds per phase',
-      'Statutory submission drawings (MCGM / MHADA)',
-      '3D massing model & reference visualisations',
-      'Site supervision throughout construction',
-      'Snagging, handover & as-built drawings',
-    ],
-    note: 'COA mandatory minimum: 7.5% · Team Design minimum: 8%',
-  },
-  {
-    category: 'Interior Architecture',
-    title: 'Interiors, Fit-Outs & Refurbishments',
-    subtitle: 'Residential interiors, retail, hospitality, offices, religious spaces.',
-    pct: '10–12',
-    costBase: 'of cost of interior works',
-    items: [
-      'Space planning & concept design',
-      'Material palette & finish specifications',
-      'Detailed joinery, ceiling & flooring drawings',
-      '3D reference renders (photorealistic is separate)',
-      'Procurement advisory & FF&E coordination',
-      'Site supervision of all interior works',
-      'Snagging, handover & as-built record',
-    ],
-    note: 'COA mandatory minimum: 7.5% · Billed on interior works cost only — independent of structural shell fee',
-  },
-  {
-    category: 'Commercial Architecture',
-    title: 'Offices, Retail, Banking & Hospitality',
-    subtitle: 'Corporate campuses, banking fit-outs, retail, mixed-use developments.',
-    pct: '6–8',
-    costBase: 'of construction cost',
-    items: [
-      'Site analysis & brief development',
-      'Complete architectural design',
-      'Corporate design guidelines (if applicable)',
-      'Full construction documentation',
-      'Regulatory compliance & approvals',
-      'Contractor coordination & site supervision',
-    ],
-    note: 'COA mandatory minimum: 5% · Rate reflects complexity of commercial engagements',
-  },
-  {
-    category: 'Institutional Architecture',
-    title: 'Education, Healthcare & Civic',
-    subtitle: 'Schools, colleges, campus extensions, healthcare facilities, civic buildings.',
-    pct: '6–8',
-    costBase: 'of construction cost',
-    items: [
-      'Masterplan & campus integration study',
-      'Accessibility & statutory compliance',
-      'Full architectural documentation',
-      'Sustainable design support (IGBC / GRIHA)',
-      'Full consultant coordination',
-      'Site supervision',
-    ],
-    note: 'COA mandatory minimum: 5% · Identical buildings on same campus: 50% reduction',
-  },
-];
-
-const ADDITIONAL_CHARGES = [
-  {
-    label: 'Documentation & Communication',
-    value: '+10% of fee',
-    desc: 'Mandatory in all engagements per COA regulations. Covers drawing prints, courier, coordination correspondence, and full project records throughout.',
-  },
-  {
-    label: 'GST',
-    value: '+18% on fee',
-    desc: 'Applicable on all professional fees and documentation charges per Indian tax law. Invoiced with full GST-compliant documentation and breakdown.',
-  },
-  {
-    label: 'Reimbursables',
-    value: 'At actuals',
-    desc: 'Travel, accommodation, physical models, and authority submission fees at actual cost with receipts. Advisory: ₹15,000/day outstation · ₹5,000/day local.',
-  },
-];
-
 const ADD_ONS = [
   {
     category: 'Visualisation',
@@ -174,45 +87,6 @@ const PAYMENT_STAGES = [
   },
 ];
 
-const INCLUDED_ITEMS = [
-  'All design team meetings and client presentations',
-  'Site visits at all critical construction stages',
-  'Coordination with structural and MEP consultants',
-  'Regulatory drawings for statutory submissions',
-  'Material and finish schedules',
-  'Contractor tender document support',
-  'Shop drawing review',
-  'Snagging list and defects documentation',
-  'As-built drawings at project completion',
-  'Full project file and correspondence record',
-];
-
-const NOT_INCLUDED = [
-  'Structural, MEP, and specialist consultant fees',
-  'Government statutory fees and stamp duty',
-  'Photorealistic renders (separate add-on)',
-  '3D walkthroughs (separate add-on)',
-  'Physical models',
-  'Government liaisoning attendance',
-  'Post-occupation advisory services',
-];
-
-const PROTECTIONS_CLIENT = [
-  { text: 'Phase-linked payments — you pay only for work completed before proceeding to the next stage' },
-  { text: 'GFC drawings released only after 70% of pre-construction fees are bank-confirmed' },
-  { text: 'Written confirmation required before any scope change is executed' },
-  { text: 'All deliverables documented and dated with full project records maintained throughout' },
-  { text: 'COA-compliant fee minimums — we meet or exceed the mandatory scale in every engagement' },
-];
-
-const PROTECTIONS_PRACTICE = [
-  { text: 'NOC issued only after all outstanding fees and dues are fully cleared' },
-  { text: 'No concept-only engagements — we see every project through to site completion' },
-  { text: 'Post-approval design changes triggered by the client are billed at day rates' },
-  { text: 'Government liaisoning is a segregated service — never assumed within the architectural fee' },
-  { text: 'GST at 18% is always additional — every figure on this page is exclusive' },
-];
-
 export default async function FeesPage() {
   const settings = await getSiteSettings();
   const whatsapp = settings?.whatsapp ?? STUDIO.whatsappNumber;
@@ -250,58 +124,17 @@ export default async function FeesPage() {
         <FeeEstimator />
       </section>
 
-      {/* ─── Professional Fees by Service Type ───────────────────────────── */}
+      {/* ─── Premium Add-ons ─────────────────────────────────────────────── */}
       <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionLabel}>Premium Add-on Services</span>
+          <span className={styles.sectionRule} />
+        </div>
         <h2 className={styles.sectionTitle}>
-          Professional fees{' '}
-          <em className={styles.titleItalic}>by service type</em>
+          Optional{' '}
+          <em className={styles.titleItalic}>add-on services.</em>
         </h2>
         <p className={styles.sectionSub}>
-          All fees are a percentage of the actual construction cost — the total value of works on which we render professional services, excluding land. COA mandatory minimums are noted on each card.
-        </p>
-
-        <div className={styles.serviceGrid}>
-          {SERVICE_CARDS.map((card) => (
-            <div key={card.title} className={styles.serviceCard}>
-              <span className={styles.cardCategory}>{card.category}</span>
-              <h3 className={styles.cardTitle}>{card.title}</h3>
-              <p className={styles.cardSubtitle}>{card.subtitle}</p>
-              <div className={styles.cardPct}>
-                <sup className={styles.pctSign}>%</sup>
-                <span className={styles.pctRange}>{card.pct}</span>
-              </div>
-              <span className={styles.pctLabel}>{card.costBase}</span>
-              <ul className={styles.cardList}>
-                {card.items.map((item) => (
-                  <li key={item} className={styles.cardItem}>
-                    <span className={styles.cardDash}>—</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className={styles.cardFooter}>
-                <span className={styles.cardNote}>{card.note}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional charges */}
-        <div className={styles.chargesGrid}>
-          {ADDITIONAL_CHARGES.map((c) => (
-            <div key={c.label} className={styles.chargeCard}>
-              <span className={styles.chargeLabel}>{c.label}</span>
-              <div className={styles.chargeValue}>{c.value}</div>
-              <p className={styles.chargeDesc}>{c.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Premium Add-ons ─────────────────────────────────────────────── */}
-      <section className={styles.addOnSection}>
-        <span className={styles.addOnBanner}>Premium add-on services — not included in base fee</span>
-        <p className={styles.addOnIntro}>
           The following are billed separately. Requesting them without prior written agreement does not constitute an entitlement.
         </p>
         <div className={styles.addOnGrid}>
@@ -346,66 +179,6 @@ export default async function FeesPage() {
               <span className={styles.stairPct}>{stage.pct}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ─── What's Included ─────────────────────────────────────────────── */}
-      <section className={styles.includedSection}>
-        <div className={styles.includedPanelLight}>
-          <h3 className={styles.includedHeading}>
-            In every<br />
-            <em className={styles.includedItalic}>engagement.</em>
-          </h3>
-          <ol className={styles.includedList}>
-            {INCLUDED_ITEMS.map((item, i) => (
-              <li key={item} className={styles.includedItem}>
-                <span className={styles.includedNum}>{String(i + 1).padStart(2, '0')}</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className={styles.includedPanelDark}>
-          <h3 className={styles.includedHeadingDark}>
-            Never<br />
-            <em className={styles.includedItalicDark}>assumed.</em>
-          </h3>
-          <ol className={styles.includedListDark}>
-            {NOT_INCLUDED.map((item, i) => (
-              <li key={item} className={styles.includedItemDark}>
-                <span className={styles.includedNumDark}>{String(i + 1).padStart(2, '0')}</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ─── How We Protect Both Parties ─────────────────────────────────── */}
-      <section className={styles.protectSection}>
-        <h2 className={styles.sectionTitle} style={{ paddingLeft: 'var(--margin-page)', paddingRight: 'var(--margin-page)' }}>
-          How we protect<br />
-          <em className={styles.titleItalic}>both parties.</em>
-        </h2>
-        <div className={styles.protectGrid}>
-          <div className={styles.protectCol}>
-            <span className={styles.protectColLabel}>For our clients</span>
-            {PROTECTIONS_CLIENT.map((p) => (
-              <div key={p.text} className={styles.protectItem}>
-                <span className={styles.protectDash}>—</span>
-                <p className={styles.protectText}>{p.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.protectCol}>
-            <span className={styles.protectColLabel}>For the practice</span>
-            {PROTECTIONS_PRACTICE.map((p) => (
-              <div key={p.text} className={styles.protectItem}>
-                <span className={styles.protectDash}>—</span>
-                <p className={styles.protectText}>{p.text}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

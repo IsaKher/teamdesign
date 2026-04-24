@@ -52,6 +52,8 @@ export default function FeeEstimator() {
 
   const cr  = CONSTRUCTION_RATES[type];
   const fr  = FEE_RATES[type];
+  // Percentage of slider travel — drives the amber fill on the track
+  const sliderPct = `${Math.round(((area - 300) / (15000 - 300)) * 100)}%`;
 
   const constLow  = cr.low  * area;
   const constHigh = cr.high * area;
@@ -83,6 +85,7 @@ export default function FeeEstimator() {
             value={area}
             onChange={e => setArea(Number(e.target.value))}
             className={styles.slider}
+            style={{ '--pct': sliderPct } as React.CSSProperties}
             aria-label="Built-up area in square feet"
           />
           <div className={styles.sliderLabels}>
