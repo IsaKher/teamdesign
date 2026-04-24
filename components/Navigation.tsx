@@ -81,7 +81,7 @@ export default function Navigation() {
               src="/logo.png"
               alt="Team Design Architects"
               fill
-              sizes="148px"
+              sizes="172px"
               className={styles.logoImage}
               priority
             />
