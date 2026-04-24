@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
 };
 import ContactClient from './ContactClient';
+import StudioMapWrapper from '@/components/StudioMapWrapper';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
@@ -48,55 +49,7 @@ export default async function ContactPage() {
 
       {/* ─── Map ─────────────────────────────────────────────────────────── */}
       <div className={styles.mapSection}>
-        <div className={styles.mapGrid}>
-          <div className={styles.mapCard}>
-            <span className={styles.mapCardLabel}>Parel Studio</span>
-            <div className={styles.mapEmbed}>
-              <iframe
-                src="https://maps.google.com/maps?q=18.9919709,72.8314168&output=embed&z=17"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Parel Studio location"
-              />
-            </div>
-            <a
-              href="https://maps.app.goo.gl/ygVTjd4QU5RYgFLS6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mapDirections}
-            >
-              Get Directions →
-            </a>
-          </div>
-
-          <div className={styles.mapCard}>
-            <span className={styles.mapCardLabel}>Kopar Khairane Studio</span>
-            <div className={styles.mapEmbed}>
-              <iframe
-                src="https://maps.google.com/maps?q=A-145+Pawane+Village+MIDC+Kopar+Khairane+Mumbai+400710&output=embed&z=15"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kopar Khairane Studio location"
-              />
-            </div>
-            <a
-              href={STUDIO.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mapDirections}
-            >
-              Get Directions →
-            </a>
-          </div>
-        </div>
+        <StudioMapWrapper />
       </div>
     </>
   );

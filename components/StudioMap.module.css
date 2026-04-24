@@ -1,0 +1,88 @@
+/* ─── Map wrapper ─────────────────────────────────────────────────────── */
+.mapWrap {
+  width: 100%;
+  height: 520px;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── Warm tile treatment ─────────────────────────────────────────────── */
+/* Shifts the Positron palette from cool grey toward cream/parchment.      */
+/* Scoped to tile pane only so markers, controls and popup stay neutral.   */
+.mapWrap :global(.leaflet-tile-pane) {
+  filter: sepia(30%) saturate(1.2) brightness(0.97) hue-rotate(5deg);
+}
+
+/* ─── Popup shell ─────────────────────────────────────────────────────── */
+.mapWrap :global(.leaflet-popup-content-wrapper) {
+  background: #F4EEE6;
+  border-radius: 2px;
+  box-shadow:
+    0 2px 8px  rgba(20, 16, 12, 0.12),
+    0 8px 28px rgba(20, 16, 12, 0.10);
+  border: 1px solid rgba(20, 16, 12, 0.08);
+  padding: 0;
+}
+
+.mapWrap :global(.leaflet-popup-content) {
+  margin: 0;
+  padding: 20px 24px 22px;
+}
+
+.mapWrap :global(.leaflet-popup-tip) {
+  background: #F4EEE6;
+  box-shadow: none;
+}
+
+.mapWrap :global(.leaflet-popup-close-button) {
+  color: rgba(20, 16, 12, 0.30) !important;
+  font-size: 18px !important;
+  padding: 5px 8px !important;
+  top: 4px !important;
+  right: 4px !important;
+  transition: color 0.2s;
+}
+
+.mapWrap :global(.leaflet-popup-close-button:hover) {
+  color: rgba(20, 16, 12, 0.75) !important;
+}
+
+/* ─── Popup content ───────────────────────────────────────────────────── */
+.popupLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+
+.popupAddress {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  margin-bottom: 14px;
+}
+
+.popupDirections {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #C4956A;
+  transition: opacity 0.2s;
+}
+
+.popupDirections:hover {
+  opacity: 0.7;
+}
