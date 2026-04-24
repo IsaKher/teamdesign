@@ -13,8 +13,8 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Team Design Architects"
-              width={72}
-              height={72}
+              width={152}
+              height={152}
               className={styles.sealImage}
             />
           </Link>
