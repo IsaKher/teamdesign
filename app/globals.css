@@ -132,10 +132,6 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-/* ─── Custom cursor — hide native pointer on hover-capable devices ───────── */
-@media (hover: hover) and (pointer: fine) {
-  *, *::before, *::after { cursor: none !important; }
-}
 
 /* ─── Hide WhatsApp button when contact form is focused (mobile) ─────────── */
 @media (max-width: 768px) {
