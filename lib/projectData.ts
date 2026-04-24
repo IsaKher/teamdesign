@@ -1,3 +1,13 @@
+/**
+ * LEGACY — PROJECT_DATA is no longer rendered. All project content is fetched
+ * from Sanity via lib/sanity.ts. The static data below contains stale
+ * WordPress image URLs (teamdesign.in/wp-content/…) that are no longer hosted.
+ *
+ * The type exports (ContentBlock, Project, RelatedProject, Testimonial) are
+ * still used by lib/sanity.ts and components/ProjectContent.tsx.
+ * When time allows, move them to lib/types.ts and delete PROJECT_DATA.
+ */
+
 export interface RelatedProject {
   slug: string;
   title: string;

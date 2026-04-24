@@ -5,6 +5,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import SmoothScroll from '@/components/SmoothScroll';
+import { getSiteSettings } from '@/lib/sanity';
+import { STUDIO } from '@/lib/siteContent';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -160,7 +162,10 @@ const schemaOrgJsonLd = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings = await getSiteSettings();
+  const phone = settings?.phone ?? STUDIO.phone;
+
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${josefinSans.variable}`}>
       <head>
@@ -174,7 +179,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <SmoothScroll />
-        <Navigation />
+        <Navigation phone={phone} />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />

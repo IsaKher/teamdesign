@@ -19,7 +19,8 @@ const rightItems = [
 
 const allItems = [...leftItems, ...rightItems];
 
-export default function Navigation() {
+/** phone — the studio phone number from Sanity, falls back to STUDIO.phone */
+export default function Navigation({ phone = STUDIO.phone }: { phone?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const pathname   = usePathname();
@@ -127,7 +128,7 @@ export default function Navigation() {
           <Link key={item.href} href={item.href} className={styles.mobileLink}>{item.label}</Link>
         ))}
         <div className={styles.mobileContact}>
-          <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>Call Studio</a>
+          <a href={`tel:${phone.replace(/\s/g, '')}`}>Call Studio</a>
         </div>
       </div>
     </header>

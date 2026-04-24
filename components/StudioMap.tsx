@@ -40,9 +40,13 @@ function PermanentMarker({ studio, pin }: { studio: Studio; pin: L.DivIcon }) {
   const markerRef = useRef<L.Marker>(null);
 
   useEffect(() => {
-    // Defer one tick so the map tile layer is ready
-    const id = setTimeout(() => markerRef.current?.openPopup(), 0);
-    return () => clearTimeout(id);
+    const marker = markerRef.current;
+    if (!marker) return;
+    // Use Leaflet's 'add' event — fires after the marker is fully attached to
+    // the map layer, so openPopup() is guaranteed to find a valid parent pane.
+    const onAdd = () => marker.openPopup();
+    marker.on('add', onAdd);
+    return () => void marker.off('add', onAdd);
   }, []);
 
   return (

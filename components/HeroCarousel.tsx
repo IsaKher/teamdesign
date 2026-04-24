@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './HeroCarousel.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
@@ -37,42 +37,31 @@ const SLIDES = [
 ];
 
 const INTERVAL = 5500;
-// Preload the next slide this many ms before it becomes current
-const PRELOAD_AHEAD = 2000;
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
-  // Only the slides we've started loading — starts with just slide 0
-  const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0]));
-  const preloadTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Track which slide indexes have been added to the DOM (i.e. started loading).
+  // Start with slides 0 and 1 so the first transition is instant.
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0, 1]));
 
-  // Advance slides
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent(c => (c + 1) % SLIDES.length);
+      setCurrent(c => {
+        const next = (c + 1) % SLIDES.length;
+        // As soon as we advance, queue the slide AFTER next so it has the
+        // full interval window (5.5 s) to load before it becomes current.
+        setLoaded(prev => {
+          const afterNext = (next + 1) % SLIDES.length;
+          if (prev.has(afterNext)) return prev;
+          const updated = new Set(prev);
+          updated.add(afterNext);
+          return updated;
+        });
+        return next;
+      });
     }, INTERVAL);
     return () => clearInterval(timer);
   }, []);
-
-  // Whenever the current slide changes, schedule a just-in-time preload
-  // of the next slide — fires 2 s before it becomes visible
-  useEffect(() => {
-    if (preloadTimerRef.current) clearTimeout(preloadTimerRef.current);
-
-    const next = (current + 1) % SLIDES.length;
-    preloadTimerRef.current = setTimeout(() => {
-      setLoaded(prev => {
-        if (prev.has(next)) return prev;
-        const updated = new Set(prev);
-        updated.add(next);
-        return updated;
-      });
-    }, INTERVAL - PRELOAD_AHEAD);
-
-    return () => {
-      if (preloadTimerRef.current) clearTimeout(preloadTimerRef.current);
-    };
-  }, [current]);
 
   return (
     <div className={styles.wrap}>

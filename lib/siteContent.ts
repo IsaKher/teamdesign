@@ -1,10 +1,13 @@
 // Warm beige blur placeholder for next/image — avoids grey flash on load
 export const WARM_BLUR = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxJyBoZWlnaHQ9JzEnPjxyZWN0IGZpbGw9JyNFREU1RDgnIHdpZHRoPScxJyBoZWlnaHQ9JzEnLz48L3N2Zz4=' as const;
 
-// ─── Studio constants ────────────────────────────────────────────────────────
+// ─── Studio constants ─────────────────────────────────────────────────────────
+// These values are used as fallbacks when Sanity is unavailable.
+// Live contact info (phone, email, whatsapp, social URLs) is managed in Sanity
+// under siteSettings — update it there; no redeploy needed.
 export const STUDIO = {
-  phone: '+91 98765 43210',
-  whatsappNumber: '919876543210',
+  phone: '+91 22 2774 6767',
+  whatsappNumber: '912227746767',
   email: 'studio@teamdesign.in',
   address: {
     line1: 'A-145/6A, Pawane Village Midc Road T.T.C. Industrial Area',
@@ -142,13 +145,5 @@ export const SERVICES = [
 ];
 
 // ─── Careers ─────────────────────────────────────────────────────────────────
-export interface Job {
-  title: string;
-  type: 'Full-time' | 'Intern';
-  duration?: string;
-  brief: string;
-  linkedinUrl?: string;
-}
-
-// Empty = no openings. Add entries here when a position goes live.
-export const JOBS: Job[] = [];
+// Job listings are now managed entirely in Sanity (type: "job", isOpen: true).
+// Use getJobs() from @/lib/sanity — no static list needed here.

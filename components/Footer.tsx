@@ -2,8 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import { STUDIO } from '@/lib/siteContent';
+import { getSiteSettings } from '@/lib/sanity';
 
-export default function Footer() {
+export default async function Footer() {
+  const settings = await getSiteSettings();
+  // Fall back to siteContent.ts constants if Sanity is unavailable
+  const phone = settings?.phone    ?? STUDIO.phone;
+  const email = settings?.email    ?? STUDIO.email;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -22,8 +28,8 @@ export default function Footer() {
             <span className={styles.name}>Team Design Architects</span>
             <span className={styles.meta}>
               Mumbai, India&ensp;·&ensp;
-              <a href={`mailto:${STUDIO.email}`}>{STUDIO.email}</a>&ensp;·&ensp;
-              <a href={`tel:${STUDIO.phone.replace(/\s/g, '')}`}>{STUDIO.phone}</a>
+              <a href={`mailto:${email}`}>{email}</a>&ensp;·&ensp;
+              <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a>
             </span>
           </div>
         </div>
