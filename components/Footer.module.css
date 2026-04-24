@@ -1,5 +1,5 @@
 .footer {
-  background: var(--color-text-primary);
+  background: #3B1E08;
   color: rgba(244, 238, 230, 0.55);
   padding: 48px var(--margin-page) 36px;
 }
@@ -12,7 +12,7 @@
   justify-content: space-between;
   gap: 40px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(244, 238, 230, 0.08);
+  border-bottom: 1px solid rgba(244, 238, 230, 0.12);
 }
 
 /* ─── Left ─────────────────────────────────────────────────────── */
@@ -38,7 +38,8 @@
   width: 152px;
   height: 152px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* Invert to white, then add a cast shadow so the seal floats off the surface */
+  filter: brightness(0) invert(1) drop-shadow(0 3px 10px rgba(10, 5, 1, 0.55));
 }
 
 .firmInfo {
@@ -54,14 +55,16 @@
   color: rgba(244, 238, 230, 0.80);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(10, 5, 1, 0.9), 0 2px 10px rgba(10, 5, 1, 0.55);
 }
 
 .meta {
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.58);  /* ↑ was 0.38 — WCAG AA ~5.4:1 on #1C1612 */
+  color: rgba(244, 238, 230, 0.58);
   letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(10, 5, 1, 0.9), 0 2px 10px rgba(10, 5, 1, 0.55);
 }
 
 .meta a {
@@ -89,9 +92,10 @@
   font-weight: 400;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.58);  /* ↑ was 0.40 — WCAG AA ~5.4:1 on #1C1612 */
+  color: rgba(244, 238, 230, 0.58);
   text-decoration: none;
   transition: color 0.2s ease;
+  text-shadow: 0 1px 0 rgba(10, 5, 1, 0.9), 0 2px 10px rgba(10, 5, 1, 0.55);
 }
 
 .nav a:hover {
@@ -108,7 +112,8 @@
   font-family: var(--font-sans);
   font-size: var(--size-meta);
   letter-spacing: 0.07em;
-  color: rgba(244, 238, 230, 0.50);  /* ↑ was 0.22 — WCAG AA ~4.6:1 on #1C1612 */
+  color: rgba(244, 238, 230, 0.50);
+  text-shadow: 0 1px 0 rgba(10, 5, 1, 0.9), 0 2px 8px rgba(10, 5, 1, 0.45);
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────── */
