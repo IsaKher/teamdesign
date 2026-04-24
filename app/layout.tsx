@@ -1,3 +1,4 @@
+// layout
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, DM_Sans, Josefin_Sans } from 'next/font/google';
 import './globals.css';
