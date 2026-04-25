@@ -33,20 +33,25 @@ export default function CategoryFilmstrip() {
     if (!strip) return;
 
     let raf: number;
+    let snapTimer: number | null = null;
+    let isTouching = false;
+    let isProgrammaticScroll = false;
 
-    function update() {
-      // Use scrollLeft + offsetLeft — avoids getBoundingClientRect forced reflow
+    function nearestCardIndex(): number {
       const scrollCenter = strip!.scrollLeft + strip!.clientWidth / 2;
-
-      let newActive = 0;
-      let minDist   = Infinity;
-
+      let idx = 0;
+      let minDist = Infinity;
       cardRefs.current.forEach((card, i) => {
         if (!card) return;
         const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-        const dist       = Math.abs(cardCenter - scrollCenter);
-        if (dist < minDist) { minDist = dist; newActive = i; }
+        const dist = Math.abs(cardCenter - scrollCenter);
+        if (dist < minDist) { minDist = dist; idx = i; }
       });
+      return idx;
+    }
+
+    function update() {
+      const newActive = nearestCardIndex();
 
       // Only call setState (→ re-render) when the active card index changes
       if (newActive !== activeIdxRef.current) {
@@ -64,9 +69,35 @@ export default function CategoryFilmstrip() {
       });
     }
 
+    /** Snap to the nearest card centre. Skipped while the user is mid-touch
+     *  so we don't fight their gesture. CSS scroll-snap is unreliable here
+     *  because the snap targets have 3-D transforms applied each frame, so
+     *  iOS Safari computes snap points from the transformed positions. */
+    function snapToNearest() {
+      if (isTouching) return;
+      const idx = nearestCardIndex();
+      const card = cardRefs.current[idx];
+      if (!card) return;
+      const target = card.offsetLeft + card.offsetWidth / 2 - strip!.clientWidth / 2;
+      if (Math.abs(target - strip!.scrollLeft) < 1) return;
+      isProgrammaticScroll = true;
+      strip!.scrollTo({ left: target, behavior: 'smooth' });
+      // Clear flag once the smooth scroll likely settled
+      window.setTimeout(() => { isProgrammaticScroll = false; }, 450);
+    }
+
+    function scheduleSnap() {
+      if (snapTimer !== null) window.clearTimeout(snapTimer);
+      snapTimer = window.setTimeout(snapToNearest, 90);
+    }
+
     function onScroll() {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(update);
+      // Defer snap until momentum scroll settles. While the user is touching
+      // we keep rescheduling; once they lift and momentum decays, the timer
+      // finally fires and we lock to the nearest card.
+      if (!isProgrammaticScroll) scheduleSnap();
     }
 
     // Desktop: vertical mouse-wheel → horizontal scroll
@@ -79,16 +110,33 @@ export default function CategoryFilmstrip() {
       }
     }
 
-    strip.addEventListener('scroll',  onScroll, { passive: true });
-    strip.addEventListener('wheel',   onWheel,  { passive: false });
-    window.addEventListener('resize', onScroll, { passive: true });
+    function onTouchStart() {
+      isTouching = true;
+      if (snapTimer !== null) { window.clearTimeout(snapTimer); snapTimer = null; }
+    }
+    function onTouchEnd() {
+      isTouching = false;
+      // After lift, give iOS momentum a moment to start, then schedule snap
+      scheduleSnap();
+    }
+
+    strip.addEventListener('scroll',     onScroll,     { passive: true });
+    strip.addEventListener('wheel',      onWheel,      { passive: false });
+    strip.addEventListener('touchstart', onTouchStart, { passive: true });
+    strip.addEventListener('touchend',   onTouchEnd,   { passive: true });
+    strip.addEventListener('touchcancel',onTouchEnd,   { passive: true });
+    window.addEventListener('resize',    onScroll,     { passive: true });
     requestAnimationFrame(update);
 
     return () => {
-      strip.removeEventListener('scroll',  onScroll);
-      strip.removeEventListener('wheel',   onWheel);
-      window.removeEventListener('resize', onScroll);
+      strip.removeEventListener('scroll',     onScroll);
+      strip.removeEventListener('wheel',      onWheel);
+      strip.removeEventListener('touchstart', onTouchStart);
+      strip.removeEventListener('touchend',   onTouchEnd);
+      strip.removeEventListener('touchcancel',onTouchEnd);
+      window.removeEventListener('resize',    onScroll);
       cancelAnimationFrame(raf);
+      if (snapTimer !== null) window.clearTimeout(snapTimer);
     };
   }, []);
 
