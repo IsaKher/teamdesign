@@ -79,7 +79,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
     ...(project.mainImage ? { image: project.mainImage } : {}),
     dateCreated: String(project.year),
     locationCreated: { '@type': 'Place', name: project.location },
-    author: { '@type': 'Organization', name: 'Team Design Architects', url: 'https://teamdesign.in' },
+    author: { '@type': 'Organization', name: 'Team Design Architects', url: BASE },
     genre: project.type,
     url: `${BASE}/portfolio/${params.slug}`,
   };

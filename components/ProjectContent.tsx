@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Lightbox, { LightboxImage } from './Lightbox';
 import styles from '../app/portfolio/[slug]/page.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
-import type { ContentBlock } from '@/lib/projectData';
+import type { ContentBlock } from '@/lib/types';
 
 interface Props {
   contentBlocks?: ContentBlock[];

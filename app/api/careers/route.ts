@@ -48,9 +48,9 @@ export async function POST(request: NextRequest) {
     // ─── 1. CSRF: verify the request comes from our own site ─────────────────
     //    Browsers always send the Origin header for cross-site POST requests.
     //    If it's missing or wrong, we reject immediately.
-    const origin = request.headers.get('origin') ?? '';
+    const origin = request.headers.get('origin');
     const siteUrl = process.env.SITE_URL ?? 'https://teamdesign.in';
-    if (!origin.startsWith(siteUrl)) {
+    if (!origin || !origin.startsWith(siteUrl)) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
 

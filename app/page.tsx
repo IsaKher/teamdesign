@@ -25,7 +25,7 @@ export default async function HomePage() {
     getSiteSettings(),
   ]);
   const testimonials = rawTestimonials.filter(
-    (t, i, arr) => arr.findIndex(x => x.quote === t.quote) === i
+    (t, i, arr) => arr.findIndex(x => x.quote === t.quote && x.name === t.name && x.title === t.title) === i
   );
 
   return (

@@ -8,6 +8,8 @@ import SmoothScroll from '@/components/SmoothScroll';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? STUDIO.site;
+
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['300', '400', '500'],
@@ -46,19 +48,19 @@ export const metadata: Metadata = {
     'Team Design Architects',
     'Tasadduq Kher architect',
   ],
-  authors: [{ name: 'Team Design Architects', url: 'https://teamdesign.in' }],
+  authors: [{ name: 'Team Design Architects', url: SITE }],
   creator: 'Team Design Architects',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://teamdesign.in',
+    url: SITE,
     siteName: 'Team Design Architects',
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
     images: [
       {
-        url: 'https://teamdesign.in/hero-building.webp',
+        url: `${SITE}/hero-building.webp`,
         width: 1536,
         height: 1024,
         alt: 'Team Design Architects — Architecture & Interior Design, Mumbai',
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
     title: 'Team Design Architects',
     description:
       'Architecture & Interior Design — Mumbai. 25+ years, 300+ projects.',
-    images: ['https://teamdesign.in/hero-building.webp'],
+    images: [`${SITE}/hero-building.webp`],
   },
   icons: {
     icon: '/logo.png',
@@ -81,7 +83,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://teamdesign.in',
+    canonical: SITE,
   },
 };
 
@@ -96,15 +98,15 @@ const schemaOrgJsonLd = {
   '@graph': [
     {
       '@type': ['ProfessionalService', 'LocalBusiness'],
-      '@id': 'https://teamdesign.in/#business',
+      '@id': `${SITE}/#business`,
       name: 'Team Design Architects',
       alternateName: 'Team Design',
       description:
         'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
-      url: 'https://teamdesign.in',
+      url: SITE,
       telephone: '+91-9876543210',
       foundingDate: '1996',
-      image: 'https://teamdesign.in/hero-building.webp',
+      image: `${SITE}/hero-building.webp`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Mumbai',
@@ -132,14 +134,14 @@ const schemaOrgJsonLd = {
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Urban Planning' } },
         ],
       },
-      sameAs: ['https://teamdesign.in'],
+      sameAs: [SITE],
     },
     {
       '@type': 'Person',
-      '@id': 'https://teamdesign.in/people#tasadduq-kher',
+      '@id': `${SITE}/people#tasadduq-kher`,
       name: 'Tasadduq Kher',
       jobTitle: 'Principal Architect',
-      worksFor: { '@id': 'https://teamdesign.in/#business' },
+      worksFor: { '@id': `${SITE}/#business` },
       alumniOf: {
         '@type': 'EducationalOrganization',
         name: 'Rachana Sansad Academy of Architecture',
@@ -148,14 +150,14 @@ const schemaOrgJsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://teamdesign.in/#website',
-      url: 'https://teamdesign.in',
+      '@id': `${SITE}/#website`,
+      url: SITE,
       name: 'Team Design Architects',
       description: 'Architecture & Interior Design practice based in Mumbai. 25+ years, 300+ projects.',
-      publisher: { '@id': 'https://teamdesign.in/#business' },
+      publisher: { '@id': `${SITE}/#business` },
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://teamdesign.in/portfolio?type={search_term_string}',
+        target: `${SITE}/portfolio?type={search_term_string}`,
         'query-input': 'required name=search_term_string',
       },
     },

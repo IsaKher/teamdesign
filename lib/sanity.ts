@@ -2,13 +2,22 @@ import { cache } from 'react';
 import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import type { ContentBlock } from '@/lib/projectData';
+import type { ContentBlock } from '@/lib/types';
+
+export type { ContentBlock } from '@/lib/types';
 
 // ─── Client ──────────────────────────────────────────────────────────────────
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production';
+
+if (!projectId) {
+  throw new Error('Missing NEXT_PUBLIC_SANITY_PROJECT_ID — set it in .env.local and Vercel environment variables.');
+}
+
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'il220i1c',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId,
+  dataset,
   apiVersion: '2024-01-01',
   useCdn: false,
 });

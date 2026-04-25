@@ -11,7 +11,7 @@ function sanitize(str: string): string {
 }
 
 // ─── Field length limits (characters) ────────────────────────────────────────
-const LIMITS = { name: 100, phone: 20, email: 254, type: 50, project: 2000 };
+const LIMITS = { name: 100, phone: 20, email: 254, type: 50, project: 2000, budget: 30, timeline: 30 };
 
 // ─── Rate limiter (in-memory, per serverless instance) ───────────────────────
 // Limits each IP to 5 submissions per 60-second window.
@@ -48,14 +48,14 @@ export async function POST(request: NextRequest) {
     // ─── 1. CSRF: verify the request comes from our own site ─────────────────
     //    Browsers always send the Origin header for cross-site POST requests.
     //    If it's missing or wrong, we reject immediately.
-    const origin = request.headers.get('origin') ?? '';
+    const origin = request.headers.get('origin');
     const siteUrl = process.env.SITE_URL ?? 'https://teamdesign.in';
-    if (!origin.startsWith(siteUrl)) {
+    if (!origin || !origin.startsWith(siteUrl)) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
 
     const body = await request.json();
-    const { name, phone, email, project, type, website } = body;
+    const { name, phone, email, project, type, budget, timeline, website } = body;
 
     // ─── 2. Honeypot: bots fill every field; humans never touch "website" ─────
     //    We silently return success so bots think they succeeded.
@@ -85,7 +85,9 @@ export async function POST(request: NextRequest) {
       (phone && phone.length > LIMITS.phone) ||
       (email && email.length > LIMITS.email) ||
       (type && type.length > LIMITS.type) ||
-      (project && project.length > LIMITS.project)
+      (project && project.length > LIMITS.project) ||
+      (budget && budget.length > LIMITS.budget) ||
+      (timeline && timeline.length > LIMITS.timeline)
     ) {
       return NextResponse.json(
         { error: 'One or more fields exceed the maximum allowed length.' },
@@ -95,11 +97,13 @@ export async function POST(request: NextRequest) {
 
     // ─── 6. Sanitize all inputs before any further use ───────────────────────
     const safe = {
-      name:    sanitize(name),
-      phone:   sanitize(phone   ?? ''),
-      email:   sanitize(email   ?? ''),
-      type:    sanitize(type    ?? ''),
-      project: sanitize(project ?? ''),
+      name:     sanitize(name),
+      phone:    sanitize(phone    ?? ''),
+      email:    sanitize(email    ?? ''),
+      type:     sanitize(type     ?? ''),
+      project:  sanitize(project  ?? ''),
+      budget:   sanitize(budget   ?? ''),
+      timeline: sanitize(timeline ?? ''),
     };
 
     // ─── Option A: Send via Resend ───────────────────────────────────────────
