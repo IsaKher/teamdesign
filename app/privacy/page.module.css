@@ -1,0 +1,151 @@
+/* ─── Hero ───────────────────────────────────────────────────────────────── */
+.pageHero {
+  padding: calc(var(--nav-height) + 80px) var(--margin-page) 60px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.heroInner { max-width: 720px; }
+
+.heroLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+}
+
+.heroItalic {
+  font-style: italic;
+  color: #B8A898;
+  letter-spacing: 0.03em;
+}
+
+.heroSub {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}
+
+.updated {
+  display: block;
+  margin-top: 20px;
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Body ───────────────────────────────────────────────────────────────── */
+.body {
+  padding: 80px var(--margin-page) 120px;
+}
+
+.bodyInner {
+  max-width: 720px;
+}
+
+.section + .section {
+  margin-top: 56px;
+}
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  color: var(--color-text-primary);
+  margin-bottom: 18px;
+}
+
+.section h3 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.section p {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.section li {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-primary);
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.section li::before {
+  content: '·';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.section a {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.section a:hover {
+  color: var(--color-text-primary);
+}
+
+.section em {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .pageHero {
+    padding: calc(var(--nav-height) + 40px) 24px 40px;
+  }
+  .body {
+    padding: 56px 24px 80px;
+  }
+}

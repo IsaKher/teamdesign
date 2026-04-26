@@ -229,6 +229,29 @@
 
 .textarea { resize: vertical; min-height: 160px; }
 
+.privacyNotice {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  max-width: 480px;
+}
+
+.privacyNotice a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.privacyNotice a:hover {
+  color: var(--color-text-secondary);
+}
+
 .submit {
   align-self: flex-start;
   font-family: var(--font-sans);

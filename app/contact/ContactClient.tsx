@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 interface ContactInfo {
@@ -251,6 +252,10 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
             </div>
 
             {status === 'error' && <p className={styles.errorMessage}>{errorMsg}</p>}
+
+            <p className={styles.privacyNotice}>
+              Your details are used only to respond to your enquiry. See our <Link href="/privacy">privacy policy</Link>.
+            </p>
 
             <button type="submit" className={styles.submit} disabled={status === 'submitting'}>
               {status === 'submitting' ? 'Sending...' : 'Send Message →'}

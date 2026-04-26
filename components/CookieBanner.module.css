@@ -1,0 +1,283 @@
+/* ─── Banner ─────────────────────────────────────────────────────────────── */
+.banner {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 18px 24px;
+  background: rgba(28, 22, 18, 0.96);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid rgba(244, 238, 230, 0.10);
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  color: rgba(244, 238, 230, 0.92);
+  animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.text {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: rgba(244, 238, 230, 0.85);
+}
+
+.text a {
+  color: rgba(244, 238, 230, 1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.text a:hover {
+  color: #E8C8A4;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btnGhost,
+.btnPrimary,
+.btnLink {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.btnLink {
+  background: none;
+  border: none;
+  padding: 8px 4px;
+  color: rgba(244, 238, 230, 0.65);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(244, 238, 230, 0.35);
+}
+
+.btnLink:hover {
+  color: rgba(244, 238, 230, 0.95);
+  text-decoration-color: rgba(244, 238, 230, 0.7);
+}
+
+.btnGhost {
+  background: transparent;
+  border: 1px solid rgba(244, 238, 230, 0.35);
+  color: rgba(244, 238, 230, 0.85);
+  padding: 9px 18px;
+}
+
+.btnGhost:hover {
+  border-color: rgba(244, 238, 230, 0.65);
+  color: rgba(244, 238, 230, 1);
+}
+
+.btnPrimary {
+  background: rgba(244, 238, 230, 0.95);
+  border: 1px solid rgba(244, 238, 230, 0.95);
+  color: #1C1612;
+  padding: 9px 20px;
+}
+
+.btnPrimary:hover {
+  background: #fff;
+  border-color: #fff;
+}
+
+/* ─── Manage panel ───────────────────────────────────────────────────────── */
+.managePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.manageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.manageTitle {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(244, 238, 230, 0.95);
+}
+
+.manageClose {
+  background: none;
+  border: none;
+  color: rgba(244, 238, 230, 0.55);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.manageClose:hover { color: rgba(244, 238, 230, 0.95); }
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(244, 238, 230, 0.10);
+}
+
+.toggleRow:last-of-type { border-bottom: 1px solid rgba(244, 238, 230, 0.10); }
+
+.toggleInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.toggleLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(244, 238, 230, 0.95);
+  margin-bottom: 4px;
+}
+
+.toggleHint {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(244, 238, 230, 0.60);
+}
+
+.required {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.45);
+  white-space: nowrap;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: rgba(244, 238, 230, 0.20);
+  border-radius: 999px;
+  transition: background 0.25s ease;
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 3px;
+  top: 3px;
+  background: #F4EEE6;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.toggle input:checked + .toggleSlider {
+  background: #8B5E3C;
+}
+
+.toggle input:checked + .toggleSlider::before {
+  transform: translateX(16px);
+}
+
+.manageActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .banner {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .btnGhost, .btnPrimary {
+    flex: 1;
+    text-align: center;
+    padding: 11px 16px;
+  }
+
+  .btnLink {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    margin-top: 4px;
+  }
+
+  .manageActions {
+    flex-direction: column-reverse;
+  }
+
+  .manageActions .btnGhost,
+  .manageActions .btnPrimary {
+    width: 100%;
+  }
+}

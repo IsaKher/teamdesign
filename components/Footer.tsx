@@ -47,6 +47,11 @@ export default async function Footer() {
 
       <div className={styles.bottom}>
         <span>© {new Date().getFullYear()} Team Design Architects &amp; Interior Designers</span>
+        <span className={styles.legal}>
+          <Link href="/privacy">Privacy</Link>
+          <span aria-hidden="true">·</span>
+          <Link href="/terms">Terms</Link>
+        </span>
         <span>Est. 1996 · Mumbai</span>
       </div>
     </footer>
