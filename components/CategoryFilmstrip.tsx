@@ -69,26 +69,45 @@ export default function CategoryFilmstrip() {
       });
     }
 
-    /** Snap to the nearest card centre. Skipped while the user is mid-touch
-     *  so we don't fight their gesture. CSS scroll-snap is unreliable here
-     *  because the snap targets have 3-D transforms applied each frame, so
-     *  iOS Safari computes snap points from the transformed positions. */
+    /** Snap to the nearest card centre with a custom RAF tween.
+     *  scrollTo({behavior:'smooth'}) is browser-controlled (~500ms on most
+     *  engines); our hand-rolled tween hits ~220ms with an ease-out cubic
+     *  for a snappier feel. Skipped while the user is mid-touch so we
+     *  don't fight their gesture. */
+    let snapAnim: number | null = null;
     function snapToNearest() {
       if (isTouching) return;
       const idx = nearestCardIndex();
       const card = cardRefs.current[idx];
       if (!card) return;
+      const start = strip!.scrollLeft;
       const target = card.offsetLeft + card.offsetWidth / 2 - strip!.clientWidth / 2;
-      if (Math.abs(target - strip!.scrollLeft) < 1) return;
+      const delta = target - start;
+      if (Math.abs(delta) < 1) return;
+
       isProgrammaticScroll = true;
-      strip!.scrollTo({ left: target, behavior: 'smooth' });
-      // Clear flag once the smooth scroll likely settled
-      window.setTimeout(() => { isProgrammaticScroll = false; }, 450);
+      const duration = 220;
+      const t0 = performance.now();
+      // Ease-out cubic: fast start, gentle settle
+      const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+
+      if (snapAnim !== null) cancelAnimationFrame(snapAnim);
+      function tick(now: number) {
+        const t = Math.min(1, (now - t0) / duration);
+        strip!.scrollLeft = start + delta * ease(t);
+        if (t < 1) {
+          snapAnim = requestAnimationFrame(tick);
+        } else {
+          snapAnim = null;
+          isProgrammaticScroll = false;
+        }
+      }
+      snapAnim = requestAnimationFrame(tick);
     }
 
     function scheduleSnap() {
       if (snapTimer !== null) window.clearTimeout(snapTimer);
-      snapTimer = window.setTimeout(snapToNearest, 90);
+      snapTimer = window.setTimeout(snapToNearest, 50);
     }
 
     function onScroll() {
