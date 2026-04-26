@@ -136,6 +136,9 @@ export default function CategoryFilmstrip() {
                   alt={`${cat.label} — Team Design`}
                   fill
                   sizes="(max-width: 600px) 280px, (max-width: 1199px) 480px, 760px"
+                  /* Quality 70 (default 75) trims the LCP payload ~15% with
+                     no perceptual loss at card size. */
+                  quality={70}
                   style={{ objectFit: 'cover' }}
                   placeholder="blur"
                   blurDataURL={WARM_BLUR}

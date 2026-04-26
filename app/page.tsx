@@ -30,6 +30,20 @@ export default async function HomePage() {
 
   return (
     <>
+      {/*
+        Preload hint for the LCP carousel image. Next.js doesn't auto-generate
+        a preload tag for fill-mode images, so we add it manually for the first
+        category card. Mobile widths first since most traffic is mobile and
+        LCP audits target mobile.
+      */}
+      <link
+        rel="preload"
+        as="image"
+        imageSrcSet="/_next/image?url=%2Fprojects%2Frahul-sanjana-residence%2F1.jpg&w=384&q=70 384w, /_next/image?url=%2Fprojects%2Frahul-sanjana-residence%2F1.jpg&w=640&q=70 640w, /_next/image?url=%2Fprojects%2Frahul-sanjana-residence%2F1.jpg&w=1080&q=70 1080w"
+        imageSizes="(max-width: 600px) 280px, (max-width: 1199px) 480px, 760px"
+        fetchPriority="high"
+      />
+
       {/* Syncs iOS/Android status-bar theme-color with scroll position */}
       <ThemeColorSync />
 
