@@ -257,9 +257,9 @@
     padding-bottom: 0;
   }
 
-  /* Extra bottom padding so the pill has room to float */
+  /* Extra bottom padding so the pill has breathing room below the carousel */
   .strip {
-    padding: 22px calc(50% - 140px) 80px;
+    padding: 22px calc(50% - 140px) 110px;
   }
 
   .cardWrapper { width: 280px; }
@@ -280,11 +280,11 @@
 
   .name { font-size: 26px; }
 
-  /* Mobile shelf — same lit ledge, scaled for 80px strip padding-bottom   */
-  /* bottom + height = 80 → top of element = card base                    */
-  .shelf         { bottom: 8px; height: 72px; }
+  /* Mobile shelf — same lit ledge, scaled for 110px strip padding-bottom  */
+  /* bottom + height = 110 → top of element = card base                   */
+  .shelf         { bottom: 8px; height: 102px; }
   .shelf::before { top: -80px; height: 80px; }
 
   /* Pill sits lower on mobile to stay clear of card text */
-  .pill { bottom: 18px; }
+  .pill { bottom: 22px; }
 }
