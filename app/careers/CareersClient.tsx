@@ -205,8 +205,10 @@ export default function CareersClient({ jobs, contact }: { jobs: SanityJob[]; co
                   <input id="name" name="name" type="text"
                     className={`${styles.input} ${fieldErrors.name ? styles.inputError : ''}`}
                     placeholder="Rahul Mehta"
+                    aria-invalid={!!fieldErrors.name}
+                    aria-describedby={fieldErrors.name ? 'careers-name-error' : undefined}
                     onChange={() => fieldErrors.name && setFieldErrors(p => ({ ...p, name: '' }))} />
-                  {fieldErrors.name && <span className={styles.fieldError}>{fieldErrors.name}</span>}
+                  {fieldErrors.name && <span id="careers-name-error" className={styles.fieldError} role="alert">{fieldErrors.name}</span>}
                 </div>
                 <div className={styles.field}>
                   <label htmlFor="phone" className={styles.label}>Phone / WhatsApp</label>
@@ -221,8 +223,10 @@ export default function CareersClient({ jobs, contact }: { jobs: SanityJob[]; co
                 <input id="email" name="email" type="email"
                   className={`${styles.input} ${fieldErrors.email ? styles.inputError : ''}`}
                   placeholder="rahul@example.com"
+                  aria-invalid={!!fieldErrors.email}
+                  aria-describedby={fieldErrors.email ? 'careers-email-error' : undefined}
                   onChange={() => fieldErrors.email && setFieldErrors(p => ({ ...p, email: '' }))} />
-                {fieldErrors.email && <span className={styles.fieldError}>{fieldErrors.email}</span>}
+                {fieldErrors.email && <span id="careers-email-error" className={styles.fieldError} role="alert">{fieldErrors.email}</span>}
               </div>
 
               <div className={styles.field}>
@@ -245,9 +249,11 @@ export default function CareersClient({ jobs, contact }: { jobs: SanityJob[]; co
                 <input id="portfolio" name="portfolio" type="url"
                   className={`${styles.input} ${fieldErrors.portfolio ? styles.inputError : ''}`}
                   placeholder="Behance, Google Drive, Issuu, or personal site"
+                  aria-invalid={!!fieldErrors.portfolio}
+                  aria-describedby={fieldErrors.portfolio ? 'portfolio-error portfolio-hint' : 'portfolio-hint'}
                   onChange={() => fieldErrors.portfolio && setFieldErrors(p => ({ ...p, portfolio: '' }))} />
-                {fieldErrors.portfolio && <span className={styles.fieldError}>{fieldErrors.portfolio}</span>}
-                <span className={styles.fieldHint}>Any link we can open — Google Drive, Behance, Issuu, Dropbox, or your own website</span>
+                {fieldErrors.portfolio && <span id="portfolio-error" className={styles.fieldError} role="alert">{fieldErrors.portfolio}</span>}
+                <span id="portfolio-hint" className={styles.fieldHint}>Any link we can open — Google Drive, Behance, Issuu, Dropbox, or your own website</span>
               </div>
 
               <div className={styles.field}>
@@ -257,7 +263,7 @@ export default function CareersClient({ jobs, contact }: { jobs: SanityJob[]; co
                 <span className={styles.fieldHint}>3–4 sentences is plenty. No cover letter needed.</span>
               </div>
 
-              {status === 'error' && <p className={styles.errorMessage}>{errorMsg}</p>}
+              {status === 'error' && <p className={styles.errorMessage} role="alert" aria-live="assertive">{errorMsg}</p>}
 
               <div className={styles.submitRow}>
                 <button type="submit" className={styles.submit} disabled={status === 'submitting'}>

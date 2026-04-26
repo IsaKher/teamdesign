@@ -181,9 +181,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body>
+        {/* First focusable element — keyboard users tab here to jump past nav */}
+        <a href="#main-content" className="skipLink">Skip to content</a>
         <SmoothScroll />
         <Navigation phone={phone} />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
         <WhatsAppButton />
         <CookieBanner />

@@ -178,9 +178,11 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
                   id="name" name="name" type="text"
                   className={`${styles.input} ${fieldErrors.name ? styles.inputError : ''}`}
                   placeholder="Priya Sharma"
+                  aria-invalid={!!fieldErrors.name}
+                  aria-describedby={fieldErrors.name ? 'name-error' : undefined}
                   onChange={() => fieldErrors.name && setFieldErrors(p => ({ ...p, name: '' }))}
                 />
-                {fieldErrors.name && <span className={styles.fieldError}>{fieldErrors.name}</span>}
+                {fieldErrors.name && <span id="name-error" className={styles.fieldError} role="alert">{fieldErrors.name}</span>}
               </div>
               <div className={styles.field}>
                 <label htmlFor="phone" className={styles.label}>Phone / WhatsApp</label>
@@ -196,9 +198,11 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
                 id="email" name="email" type="email"
                 className={`${styles.input} ${fieldErrors.email ? styles.inputError : ''}`}
                 placeholder="priya@example.com"
+                aria-invalid={!!fieldErrors.email}
+                aria-describedby={fieldErrors.email ? 'email-error' : undefined}
                 onChange={() => fieldErrors.email && setFieldErrors(p => ({ ...p, email: '' }))}
               />
-              {fieldErrors.email && <span className={styles.fieldError}>{fieldErrors.email}</span>}
+              {fieldErrors.email && <span id="email-error" className={styles.fieldError} role="alert">{fieldErrors.email}</span>}
             </div>
 
             <div className={styles.field}>
@@ -251,7 +255,7 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
               />
             </div>
 
-            {status === 'error' && <p className={styles.errorMessage}>{errorMsg}</p>}
+            {status === 'error' && <p className={styles.errorMessage} role="alert" aria-live="assertive">{errorMsg}</p>}
 
             <p className={styles.privacyNotice}>
               Your details are used only to respond to your enquiry. See our <Link href="/privacy">privacy policy</Link>.

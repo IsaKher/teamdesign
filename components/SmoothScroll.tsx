@@ -7,6 +7,11 @@ export default function SmoothScroll() {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Honour the user's motion preference — Lenis adds a non-standard easing
+    // to scroll, which can disorient users who set prefers-reduced-motion.
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     lenisRef.current = new Lenis({
       duration: 0.9,
       easing: (t: number) => 1 - Math.pow(1 - t, 4),

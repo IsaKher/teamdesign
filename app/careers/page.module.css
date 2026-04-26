@@ -371,8 +371,9 @@
 .fieldHint {
   font-size: 12px;
   font-weight: 300;
+  /* opacity removed: combined with the brown it dropped contrast below 4.5:1.
+     Darkened --color-text-secondary now passes AA on its own. */
   color: var(--color-text-secondary);
-  opacity: 0.7;
 }
 
 /* ─── Role radio cards ───────────────────────────────────────────────────── */
