@@ -35,3 +35,6 @@ next-env.d.ts
 
 # sanity
 .sanity/
+
+# claude code worktrees (local agent scratch — not source-controlled)
+.claude/worktrees/
