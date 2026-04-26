@@ -1,133 +1,53 @@
-'use client';
-
-import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './CategoryFilmstrip.module.css';
 import { WARM_BLUR } from '@/lib/siteContent';
+import CategoryFilmstripBehavior from './CategoryFilmstripBehavior';
+import type { CSSProperties } from 'react';
 
 const CDN = 'https://cdn.sanity.io/images/il220i1c/production';
 const q = (path: string) => `${CDN}/${path}?w=800&q=75&auto=format&fit=max`;
 
-const CATEGORIES = [
+export const CATEGORIES = [
   { type: 'Residential',   label: 'Residential',   src: '/projects/rahul-sanjana-residence/1.jpg' },
   { type: 'Commercial',    label: 'Commercial',    src: q('90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg') },
   { type: 'Institutional', label: 'Institutional', src: q('a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png') },
   { type: 'Interiors',     label: 'Interiors',     src: q('bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg') },
 ];
 
-export default function CategoryFilmstrip() {
-  // ─── Active-index state drives the 3-D transform on each card ─────────────
-  // Only triggers a re-render when the active card actually changes, not on
-  // every scroll frame — so React work is minimal during scrolling.
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const stripRef     = useRef<HTMLDivElement>(null);
-  const activeIdxRef = useRef(0);                           // shadow of state, safe in RAF
-  const cardRefs     = useRef<(HTMLDivElement | null)[]>([]);  // cardWrapper divs
-  const dotRefs      = useRef<(HTMLSpanElement | null)[]>([]);
-  const dotRefsPill  = useRef<(HTMLSpanElement | null)[]>([]);
-
-  useEffect(() => {
-    const strip = stripRef.current;
-    if (!strip) return;
-
-    let raf: number;
-
-    function update() {
-      // Use scrollLeft + offsetLeft — avoids getBoundingClientRect forced reflow
-      const scrollCenter = strip!.scrollLeft + strip!.clientWidth / 2;
-
-      let newActive = 0;
-      let minDist   = Infinity;
-
-      cardRefs.current.forEach((card, i) => {
-        if (!card) return;
-        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-        const dist       = Math.abs(cardCenter - scrollCenter);
-        if (dist < minDist) { minDist = dist; newActive = i; }
-      });
-
-      // Only call setState (→ re-render) when the active card index changes
-      if (newActive !== activeIdxRef.current) {
-        activeIdxRef.current = newActive;
-        setActiveIndex(newActive);
-      }
-
-      // Dots: direct DOM manipulation — no React overhead on every frame
-      [dotRefs.current, dotRefsPill.current].forEach(refs => {
-        refs.forEach((dot, i) => {
-          if (!dot) return;
-          dot.style.opacity   = i === newActive ? '1'           : '0.28';
-          dot.style.transform = i === newActive ? 'scaleX(2.8)' : 'scaleX(1)';
-        });
-      });
-    }
-
-    function onScroll() {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(update);
-    }
-
-    // Desktop: vertical mouse-wheel → horizontal scroll
-    function onWheel(e: WheelEvent) {
-      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
-        e.preventDefault();
-        strip!.scrollLeft += e.deltaY * 0.8;
-        cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(update);
-      }
-    }
-
-    strip.addEventListener('scroll',  onScroll, { passive: true });
-    strip.addEventListener('wheel',   onWheel,  { passive: false });
-    window.addEventListener('resize', onScroll, { passive: true });
-    requestAnimationFrame(update);
-
-    return () => {
-      strip.removeEventListener('scroll',  onScroll);
-      strip.removeEventListener('wheel',   onWheel);
-      window.removeEventListener('resize', onScroll);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-
-  // ─── Derive inline transform/opacity from active index ────────────────────
-  // perspective() is in the transform string rather than on .strip in CSS.
-  // This makes 3-D work on iOS Safari, which ignores the CSS perspective
-  // property on overflow:auto scroll containers during composited scroll.
-  function getWrapStyle(i: number): React.CSSProperties {
-    const offset = i - activeIndex;
-    const abs    = Math.abs(offset);
-
-    if (abs === 0) {
-      return { transform: 'perspective(1200px) rotateY(0deg) translateZ(0px) scale(1)', opacity: 1 };
-    }
-    if (abs === 1) {
-      const ry = offset < 0 ? 35 : -35;
-      return { transform: `perspective(1200px) rotateY(${ry}deg) translateZ(-80px) scale(0.88)`, opacity: 0.6 };
-    }
-    // 2+ positions away
-    const ry = offset < 0 ? 50 : -50;
-    return { transform: `perspective(1200px) rotateY(${ry}deg) translateZ(-80px) scale(0.75)`, opacity: 0.35 };
+/** Initial 3-D transform per card, with active=0 baked in.
+ *  Server-rendered so the carousel paints immediately — no JS required for
+ *  the first frame. The client behavior takes over after hydration. */
+function initialWrapStyle(i: number): CSSProperties {
+  if (i === 0) {
+    return { transform: 'perspective(1200px) rotateY(0deg) translateZ(0px) scale(1)', opacity: 1 };
   }
+  if (i === 1) {
+    return { transform: 'perspective(1200px) rotateY(-35deg) translateZ(-80px) scale(0.88)', opacity: 0.6 };
+  }
+  // i >= 2
+  return { transform: 'perspective(1200px) rotateY(-50deg) translateZ(-80px) scale(0.75)', opacity: 0.35 };
+}
 
+/**
+ * Server component — renders the full filmstrip markup statically.
+ * The LCP image is painted as soon as HTML arrives; no hydration wait.
+ * Behavior (scroll listening, active-card detection, dot updates) lives
+ * in CategoryFilmstripBehavior, which hydrates separately and attaches
+ * to this DOM via data-attributes. That keeps JS off the LCP path.
+ */
+export default function CategoryFilmstrip() {
   return (
-    <section className={styles.section}>
-      {/* ─── Shelf — 3-D surface that grounds the cards physically ──────── */}
+    <section className={styles.section} data-filmstrip>
       <div className={styles.shelf} aria-hidden />
 
-      {/* ─── strip: perspective container + horizontal scroll ────────────── */}
-      <div ref={stripRef} className={styles.strip}>
+      <div className={styles.strip} data-filmstrip-strip>
         {CATEGORIES.map((cat, i) => (
-          /* cardWrapper receives the 3-D transform as a direct child of the
-             perspective container (.strip), so no transform-style: preserve-3d
-             is required on intermediate elements.                            */
           <div
             key={cat.type}
-            ref={(el) => { cardRefs.current[i] = el; }}
             className={styles.cardWrapper}
-            style={getWrapStyle(i)}
+            data-filmstrip-card={i}
+            style={initialWrapStyle(i)}
           >
             <Link href={`/portfolio?type=${cat.type}`} className={styles.card}>
               <div className={styles.imageWrap}>
@@ -136,8 +56,6 @@ export default function CategoryFilmstrip() {
                   alt={`${cat.label} — Team Design`}
                   fill
                   sizes="(max-width: 600px) 280px, (max-width: 1199px) 480px, 760px"
-                  /* Quality 70 (default 75) trims the LCP payload ~15% with
-                     no perceptual loss at card size. */
                   quality={70}
                   style={{ objectFit: 'cover' }}
                   placeholder="blur"
@@ -163,11 +81,18 @@ export default function CategoryFilmstrip() {
         <div className={styles.endSpacer} aria-hidden />
       </div>
 
-      {/* ─── Desktop: frosted oval pill ──────────────────────────────────── */}
+      {/* Desktop: frosted oval pill — initial dot states baked in for active=0 */}
       <div className={styles.pill}>
         <div className={styles.pillDots}>
           {CATEGORIES.map((_, i) => (
-            <span key={i} ref={el => { dotRefsPill.current[i] = el; }} className={styles.dot} />
+            <span
+              key={i}
+              data-filmstrip-dot-pill={i}
+              className={styles.dot}
+              style={i === 0
+                ? { opacity: 1, transform: 'scaleX(2.8)' }
+                : { opacity: 0.28, transform: 'scaleX(1)' }}
+            />
           ))}
         </div>
         <span className={styles.pillHint}>
@@ -178,11 +103,18 @@ export default function CategoryFilmstrip() {
         </span>
       </div>
 
-      {/* ─── Mobile: indicator strip ─────────────────────────────────────── */}
+      {/* Mobile indicator strip — currently hidden via CSS but kept for a11y/fallback */}
       <div className={styles.indicator}>
         <div className={styles.dots}>
           {CATEGORIES.map((_, i) => (
-            <span key={i} ref={el => { dotRefs.current[i] = el; }} className={styles.dot} />
+            <span
+              key={i}
+              data-filmstrip-dot={i}
+              className={styles.dot}
+              style={i === 0
+                ? { opacity: 1, transform: 'scaleX(2.8)' }
+                : { opacity: 0.28, transform: 'scaleX(1)' }}
+            />
           ))}
         </div>
         <span className={styles.hintLabel}>
@@ -192,6 +124,10 @@ export default function CategoryFilmstrip() {
           </svg>
         </span>
       </div>
+
+      {/* Client-only behavior — finds the section above by data-attribute and
+          attaches scroll/wheel listeners. Hydrates after the LCP paints. */}
+      <CategoryFilmstripBehavior />
     </section>
   );
 }

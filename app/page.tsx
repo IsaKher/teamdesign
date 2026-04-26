@@ -31,10 +31,10 @@ export default async function HomePage() {
   return (
     <>
       {/*
-        Preload hint for the LCP carousel image. Next.js doesn't auto-generate
-        a preload tag for fill-mode images, so we add it manually for the first
-        category card. Mobile widths first since most traffic is mobile and
-        LCP audits target mobile.
+        Preload hint for the LCP carousel image. Now that CategoryFilmstrip is
+        a server component, Next/Image's priority preload + this explicit hint
+        both fire before any JS — covering the case where Next 14's <Image fill>
+        doesn't auto-generate the preload tag.
       */}
       <link
         rel="preload"
