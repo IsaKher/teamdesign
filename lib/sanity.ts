@@ -228,7 +228,7 @@ export async function getAllProjectSlugs(): Promise<string[]> {
 export async function getAllProjects(): Promise<SanityProject[]> {
   try {
     const rows = await client.fetch(
-      `*[_type == "project" && isPublished == true] | order(orderRank asc) {
+      `*[_type == "project" && isPublished != false] | order(orderRank asc) {
         "slug": slug.current,
         title,
         client,
@@ -319,7 +319,7 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
 export async function getAllProjectsForNav(): Promise<{ slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }[]> {
   try {
     const rows = await client.fetch(
-      `*[_type == "project" && isPublished == true] | order(orderRank asc) {
+      `*[_type == "project" && isPublished != false] | order(orderRank asc) {
         "slug": slug.current,
         title,
         "type": projectType,
@@ -341,7 +341,7 @@ export async function getAllProjectsForNav(): Promise<{ slug: string; title: str
 export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
   try {
     const rows = await client.fetch(
-      `*[_type == "project" && isPublished == true && isFeatured == true] | order(orderRank asc) [0...4] {
+      `*[_type == "project" && isPublished != false && isFeatured == true] | order(orderRank asc) [0...4] {
         "slug": slug.current,
         title,
         client,
