@@ -55,6 +55,15 @@ export interface SanityProject {
   lqip: string | null;
 }
 
+export interface RelatedProjectCard {
+  slug: string;
+  title: string;
+  type: string;
+  location: string;
+  image: string | null;
+  lqip: string | null;
+}
+
 export interface SanityProjectDetail {
   title: string;
   client: string;
@@ -69,7 +78,10 @@ export interface SanityProjectDetail {
   gallery: { url: string; alt: string | null }[];
   contentBlocks: ContentBlock[];
   testimonial: { quote: string; author: string; title: string } | null;
-  related: { slug: string; title: string; type: string; image: string | null; lqip: string | null }[];
+  /** Editor-curated related projects (Sanity reference array). Always wins. */
+  related: RelatedProjectCard[];
+  /** Auto-discovered: same location preferred, same type as fallback. */
+  autoRelated: RelatedProjectCard[];
 }
 
 // ─── Site Settings ───────────────────────────────────────────────────────────
@@ -292,6 +304,26 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
           "slug": slug.current,
           title,
           "type": projectType,
+          location,
+          "image": mainImage.asset->url,
+          "lqip": mainImage.asset->metadata.lqip
+        },
+        // Auto-discovered related projects: same location preferred, same
+        // projectType as fallback. select() pushes location matches to the
+        // top so the renderer can show "More projects in <city>" first.
+        "autoRelated": *[
+          _type == "project"
+          && isPublished != false
+          && slug.current != ^.slug.current
+          && (location == ^.location || projectType == ^.projectType)
+        ] | order(
+          select(location == ^.location => 0, 1),
+          orderRank asc
+        ) [0...6] {
+          "slug": slug.current,
+          title,
+          "type": projectType,
+          location,
           "image": mainImage.asset->url,
           "lqip": mainImage.asset->metadata.lqip
         }
@@ -307,7 +339,8 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
       mainImage: heroUrl(raw.mainImage),
       gallery: raw.gallery?.filter((g: { url: string | null }) => g?.url).map((g: { url: string; alt: string | null; lqip?: string | null }) => ({ ...g, url: thumbUrl(g.url) ?? g.url })) ?? [],
       contentBlocks: transformContentBlocks(raw.contentBlocks ?? []),
-      related: raw.related?.filter(Boolean).map((r: { slug: string; title: string; type: string; image: string | null; lqip: string | null }) => ({ ...r, image: thumbUrl(r.image) })) ?? [],
+      related: raw.related?.filter(Boolean).map((r: RelatedProjectCard) => ({ ...r, image: thumbUrl(r.image) })) ?? [],
+      autoRelated: raw.autoRelated?.filter(Boolean).map((r: RelatedProjectCard) => ({ ...r, image: thumbUrl(r.image) })) ?? [],
     };
   } catch (err) {
     console.error('[Sanity] getProjectBySlug failed:', err);

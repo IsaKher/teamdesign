@@ -26,7 +26,19 @@ export default defineType({
     defineField({ name: 'education', title: 'Education / Credentials', type: 'string' }),
     defineField({ name: 'award', title: 'Award / Recognition (optional)', type: 'string' }),
     defineField({ name: 'founding', title: 'Practice Founded Year (principal only)', type: 'number' }),
-    defineField({ name: 'photo', title: 'Photo', type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', title: 'Alt Text', type: 'string' }] }),
+    defineField({
+      name: 'photo',
+      title: 'Photo',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [{
+        name: 'alt',
+        title: 'Alt Text',
+        type: 'string',
+        description: 'Describe the photo for screen readers and SEO. e.g. "Tasadduq Kher, Principal Architect, in the studio."',
+        validation: (Rule) => Rule.required().warning('Alt text is recommended for accessibility'),
+      }],
+    }),
     defineField({ name: 'orderRank', title: 'Display Order', type: 'number' }),
   ],
   preview: {

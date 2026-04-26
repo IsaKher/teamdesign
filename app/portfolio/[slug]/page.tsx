@@ -222,34 +222,53 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         </div>
       </section>
 
-      {/* Related */}
-      {project.related.length > 0 && (
-        <section className={styles.related}>
-          <div className={styles.relatedHeader}>
-            <span className="label">Continue Browsing</span>
-            <h2 className={styles.relatedTitle}>Related Projects</h2>
-          </div>
-          <div className={styles.relatedGrid}>
-            {project.related.map((r) => r.image && (
-              <Link key={r.slug} href={`/portfolio/${r.slug}`} className={styles.relatedCard}>
-                <div className={styles.relatedImage}>
-                  <Image
-                    src={r.image}
-                    alt={`${r.title} — ${r.type} by Team Design Architects`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    style={{ objectFit: 'cover' }}
-                    placeholder="blur"
-                    blurDataURL={r.lqip ?? WARM_BLUR}
-                  />
-                </div>
-                <span className={styles.relatedType}>{r.type}</span>
-                <span className={styles.relatedName}>{r.title}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      {/* Related — editor-curated wins, auto-discovered fills remaining slots */}
+      {(() => {
+        const seen = new Set<string>([params.slug]);
+        const merged: typeof project.related = [];
+        for (const r of [...project.related, ...project.autoRelated]) {
+          if (!seen.has(r.slug) && merged.length < 3) {
+            merged.push(r);
+            seen.add(r.slug);
+          }
+        }
+        if (merged.length === 0) return null;
+
+        // Contextual header: location-based when at least one match shares
+        // the city; type-based otherwise.
+        const sharesCity = merged.some(r => r.location && r.location === project.location);
+        const headerText = sharesCity
+          ? `More projects in ${project.location}`
+          : `More ${project.type} projects`;
+
+        return (
+          <section className={styles.related}>
+            <div className={styles.relatedHeader}>
+              <span className="label">Continue Browsing</span>
+              <h2 className={styles.relatedTitle}>{headerText}</h2>
+            </div>
+            <div className={styles.relatedGrid}>
+              {merged.map((r) => r.image && (
+                <Link key={r.slug} href={`/portfolio/${r.slug}`} className={styles.relatedCard}>
+                  <div className={styles.relatedImage}>
+                    <Image
+                      src={r.image}
+                      alt={`${r.title} — ${r.type} by Team Design Architects`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      style={{ objectFit: 'cover' }}
+                      placeholder="blur"
+                      blurDataURL={r.lqip ?? WARM_BLUR}
+                    />
+                  </div>
+                  <span className={styles.relatedType}>{r.type}</span>
+                  <span className={styles.relatedName}>{r.title}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Project nav */}
       <nav className={styles.projectNav}>

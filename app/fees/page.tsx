@@ -10,7 +10,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Fees & Engagement',
-  description: 'Transparent, COA-compliant fee structures for residential, commercial, institutional, and interior architecture. Use our fee estimator to get an indicative range.',
+  description: 'Transparent, COA-compliant architect fees for residential, commercial, and interior projects in Mumbai. Use the estimator for an indicative range.',
   keywords: ['architect fees Mumbai', 'architecture fee structure India', 'COA fee schedule', 'architect cost Mumbai', 'Team Design fees'],
   alternates: { canonical: 'https://teamdesign.in/fees' },
   openGraph: {
@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     description: 'Transparent, phase-linked fee structures for every project type. COA-compliant. No surprises.',
     url: 'https://teamdesign.in/fees',
     images: [{ url: 'https://teamdesign.in/studio-sketch.webp', width: 1200, height: 800, alt: 'Team Design Architects — Fees & Engagement' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fees & Engagement — Team Design Architects',
+    description: 'Transparent, phase-linked architect fees. COA-compliant. No surprises.',
+    images: ['https://teamdesign.in/studio-sketch.webp'],
   },
 };
 

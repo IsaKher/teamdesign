@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How We Work',
-  description: 'The Team Design process — from first meeting to handover. Discover how we approach Discovery, Concept, Design Development, Technical Documentation, and Site Supervision.',
+  description: 'How Team Design takes a project from first meeting to handover — Discovery, Concept, Design Development, Technical Documentation, and Site Supervision.',
   keywords: ['architecture design process', 'how architects work', 'Team Design process', 'architecture project phases Mumbai'],
   alternates: { canonical: 'https://teamdesign.in/process' },
   openGraph: {

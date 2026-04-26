@@ -1,4 +1,7 @@
 import { MetadataRoute } from 'next';
+import { STUDIO } from '@/lib/siteContent';
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? STUDIO.site;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,9 +9,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/studio-cms/', '/api/'],
+        // Block both bare and trailing-slash forms so misbehaving crawlers
+        // can't waste budget on the redirect chain.
+        disallow: ['/studio-cms', '/studio-cms/', '/api', '/api/'],
       },
     ],
-    sitemap: 'https://teamdesign.in/sitemap.xml',
+    sitemap: `${SITE}/sitemap.xml`,
+    host: SITE,
   };
 }
