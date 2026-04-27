@@ -1,0 +1,213 @@
+.section {
+  padding: calc(var(--nav-height) + 80px) var(--margin-page) 120px;
+}
+
+.inner {
+  max-width: 720px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+}
+
+.italic {
+  font-style: italic;
+  color: #B8A898;
+  letter-spacing: 0.03em;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.4vw, 18px);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-primary);
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.bodyEmphasis {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ─── What happens next ────────────────────────────────────────── */
+.expectations {
+  margin-bottom: 72px;
+}
+
+.expectationsTitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.expectationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.expectationsList li {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.step {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1;
+}
+
+.stepText {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-primary);
+}
+
+/* ─── Urgent / WhatsApp block ──────────────────────────────────── */
+.urgent {
+  padding: 32px;
+  background: var(--color-ground-dark);
+  border-left: 2px solid var(--color-text-secondary);
+  margin-bottom: 72px;
+}
+
+.urgentLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+.urgentText {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.urgentLinks {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.urgentWhatsapp {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-whatsapp);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-whatsapp);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.urgentWhatsapp:hover {
+  color: var(--color-whatsapp-hover);
+  border-color: var(--color-whatsapp-hover);
+}
+
+.urgentEmail {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.urgentEmail:hover {
+  color: var(--color-text-primary);
+}
+
+/* ─── Continue browsing ────────────────────────────────────────── */
+.links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-rule);
+}
+
+.linkRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-rule);
+  text-decoration: none;
+  transition: padding-left 0.3s ease;
+}
+
+.linkRow:hover {
+  padding-left: 8px;
+}
+
+.linkLabel {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 300;
+  color: var(--color-text-primary);
+}
+
+.linkArrow {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--color-text-secondary);
+  transition: transform 0.3s ease;
+}
+
+.linkRow:hover .linkArrow {
+  transform: translateX(6px);
+}
+
+@media (max-width: 700px) {
+  .section { padding: calc(var(--nav-height) + 32px) 24px 80px; }
+  .urgent { padding: 24px; }
+  .expectationsList li { grid-template-columns: 48px 1fr; gap: 16px; }
+}

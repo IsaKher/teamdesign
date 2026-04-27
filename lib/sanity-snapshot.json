@@ -1,0 +1,975 @@
+{
+  "builtAt": "2026-04-27T00:01:52.821Z",
+  "projects": [
+    {
+      "area": "150,000 sq ft",
+      "client": "Mr. Ritesh Mandani",
+      "image": null,
+      "location": "Raipur, Chhattisgarh",
+      "lqip": null,
+      "slug": "wedding-destination-raipur",
+      "title": "Wedding Destination",
+      "type": "Commercial",
+      "year": 2014
+    },
+    {
+      "area": "15,000 sq ft",
+      "client": "Bengali Cultural Association",
+      "image": null,
+      "location": "Kharghar, Mumbai",
+      "lqip": null,
+      "slug": "kalimata-mandir-navi-mumbai",
+      "title": "Temple Building — Goddess Kali",
+      "type": "Institutional",
+      "year": 2017
+    },
+    {
+      "area": "1,500,000 sq ft",
+      "client": "Institute of Technology and Management",
+      "image": null,
+      "location": "Bicholim, Goa",
+      "lqip": null,
+      "slug": "service-industry-campus-goa",
+      "title": "Service Industry Education Campus",
+      "type": "Institutional",
+      "year": 2009
+    },
+    {
+      "area": "15,000 sq ft",
+      "client": "Private Clients",
+      "image": null,
+      "location": "Lonavala, Maharashtra",
+      "lqip": null,
+      "slug": "mist-view-bungalows-lonavala",
+      "title": "Mist View Bungalows",
+      "type": "Bungalows",
+      "year": 2010
+    },
+    {
+      "area": "85,000 sq ft",
+      "client": "Institute of Technology and Management",
+      "image": null,
+      "location": "Mumbai",
+      "lqip": null,
+      "slug": "mba-hostel-towers-itm",
+      "title": "MBA Hostel Towers — ITM",
+      "type": "Institutional",
+      "year": 2005
+    },
+    {
+      "area": "12,000 sq ft",
+      "client": "Mr. Harsh Mariwala",
+      "image": null,
+      "location": "Lonavala, Maharashtra",
+      "lqip": null,
+      "slug": "mariwala-estate-annexe-lonavala",
+      "title": "Mariwala Estate Annexe",
+      "type": "Bungalows",
+      "year": 2016
+    },
+    {
+      "area": "6,000 sq ft",
+      "client": "Mr. S Merchant",
+      "image": null,
+      "location": "Tirupur, India",
+      "lqip": null,
+      "slug": "villa-merchant-tirupur",
+      "title": "Luxurious 5BHK Villa",
+      "type": "Residential",
+      "year": 2017
+    },
+    {
+      "area": "6,500 sq ft",
+      "client": "J&K Bank",
+      "image": null,
+      "location": "Samba, J&K State",
+      "lqip": null,
+      "slug": "jk-bank-branch-samba",
+      "title": "J&K Bank Branch Building",
+      "type": "Commercial",
+      "year": 2018
+    },
+    {
+      "area": "5,876 sq mt",
+      "client": "Institute of Technology and Management",
+      "image": null,
+      "location": "Kharghar, Mumbai",
+      "lqip": null,
+      "slug": "college-campus-extension-itm",
+      "title": "College Campus Extension — ITM",
+      "type": "Institutional",
+      "year": 2014
+    },
+    {
+      "area": "1,50,000 sqft",
+      "client": "Agrawal Global Foundation",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png",
+      "location": "Lonavala, India",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADDUlEQVR4nAXB63PaBAAA8Pxvftk5/WDpBoWWkAQSEkhaCI80MB7lDQspjURe4107PVtvd1rPw43hdJ4f5u3Oefaksy3l2fIq0Enhi78fcNGddvofrob/XY/m/fG83RvX6xf/1C9a3VF/fDeeLae3y8ntcjRdDieL4WTZv1l0B/Pz7qzenABn7UmjO73s3DTaw/r7y1q1VsqkC+nkj999//btu4vLXn90O57eDSeLwc3daLIYTRdXo3mjNztt3QDvm+OTs97vb95Vnteelvd3GFor+wxfW7FR2r2Q7/Dg4PWrX0/+rp83OmeNTrN9PRjNBuN5+/r2vDMBTi+Hf/x5evTts/he7JFpE5Z8orz/kWblY936AwqWm7Wwj6GLolA5Pn5eqdSq1ZOT+lV/0ht+aF3NgL/qrV9+e/P04CC+y7msBlIpo+QrFrXCTZMuE2XCVHq5xLWpLSbjX+8Xv9ov1qov/z1rNruj89YAOP6hcnR4+GW5kE2JkR07q1Nb4DWHDuFc27teh3/baEYUTgpNf86XculyPvPs6Jvqi5c/v3r904saIPCRbEos5VPpL2JBJ7NNwBZI5iI10R2W9z4KsDSDrjv0SCzo5sPe3ZBH4IKxSIAL+bmQH/A5rEI0kBKjcT7oY2kWV1lUUqcO4pxW3mMLbBsZjYLFNvx2k91CmUi1mUINBGLQa1x2BtBrVfQmyjKk22Gy07gVB2lw1Yoq3AzlsRttRpxSSrbAVZbGt/RqWClFQLlWDRIYbGUsAKiQQBsSGFrFsDVM/RCHJJjivnr9UxSVoVo5Aj3YeHgPlN7TamSkDiJxRIfBBAYh8LoSUgIsTbA0wRhQ0xaypVduEgoSk+IaKYFvEASoJ0ASVxpIldWkdTvMIa/D77a5bGYLTekJDOAfB4RoOM6HBS4Qi3iiIWfYZwt62JDPHvTZAl4m5Gf5xzuiEE0l4ulkIpUQxbgQi/EcFwF4QRSTmWyuUMjnc0/SqaSwt+uPROzBMOMNGB0ewunBw5wtk0mUyuVCsZzNl9K5YjJbSDzJ/Q850MvAKWYL/AAAAABJRU5ErkJggg==",
+      "slug": "maharaja-agrasen-palace",
+      "title": "Maharaja Agrasen Palace",
+      "type": "Institutional",
+      "year": 2022
+    },
+    {
+      "area": "20,000 sq ft",
+      "client": "NRB Bearings",
+      "image": null,
+      "location": "Aurangabad, India",
+      "lqip": null,
+      "slug": "nrb-bearings-guest-house-aurangabad",
+      "title": "Guest House — NRB Bearings",
+      "type": "Commercial",
+      "year": 2011
+    },
+    {
+      "area": "75,000 sq ft",
+      "client": "South Kanara Brahmin's Association",
+      "image": null,
+      "location": "Mumbai",
+      "lqip": null,
+      "slug": "gokul-cultural-centre-mumbai",
+      "title": "Gokul Cultural Centre",
+      "type": "Institutional",
+      "year": 2017
+    },
+    {
+      "area": "2,500 sqft",
+      "client": "Luthra Group",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg",
+      "location": "Mumbai, India",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQAEB//EACMQAAEDBAEEAwAAAAAAAAAAAAECAwQABREhEwYHEnEUMaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMhEhMx/9oADAMBAAIRAxEAPwBi29RGfGW7xJYaSMkDf7SUufGjseT2Fo8chYOvRoGxMN8nxEoAZOyMfdF9w5TkG2qVGwlLSwQnGj7qNyi6JQYk9ZsuoadlBwYwtIVqquSyut7op3I4gMDQTVRdVmPyqan/2Q==",
+      "slug": "luthra-group",
+      "title": "Luthra Group",
+      "type": "Commercial Interiors",
+      "year": 2017
+    },
+    {
+      "area": null,
+      "client": "Unilazer Ventures Private Limited",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg",
+      "location": "Mumbai, India",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGAf/EACUQAAIBBAAEBwAAAAAAAAAAAAECAwAEBREGEiFBFCIjMVFhgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQMAEwIEMVH/2gAMAwEAAhEDEQA/AG+LvpJmeE3cGQgUAkKpDUwbIWthNAwJiMnb3A/ajuEZRBE92E9aRyOh0APiqu3SGctJcQrIT5hvsfqo7Ea5YQcZUW3YrBGUVXUkfiJCI2cMeYMo6Gisyc5S6IRFCgDQ1vVFNQDyFb7P/9k=",
+      "slug": "unilazer-ventures",
+      "title": "Unilazer Ventures",
+      "type": "Commercial Interiors",
+      "year": 2017
+    },
+    {
+      "area": "1,500 sq ft",
+      "client": "Private Client",
+      "image": null,
+      "location": "Mandwa, Alibaug",
+      "lqip": null,
+      "slug": "glass-kitchen-alibaug",
+      "title": "Glass Kitchen",
+      "type": "Bungalows",
+      "year": 2014
+    },
+    {
+      "area": "300,000 sq ft",
+      "client": "Institute of Technology & Management",
+      "image": null,
+      "location": "Kamptee, Nagpur",
+      "lqip": null,
+      "slug": "college-engineering-management-nagpur",
+      "title": "College for Engineering & Management",
+      "type": "Institutional",
+      "year": 2010
+    },
+    {
+      "area": "3,000 sq ft",
+      "client": "Mr. Y Sulliya",
+      "image": null,
+      "location": "Ahmedabad",
+      "lqip": null,
+      "slug": "bungalow-ahmedabad",
+      "title": "Bungalow in Ahmedabad",
+      "type": "Bungalows",
+      "year": 2014
+    },
+    {
+      "area": "8,000 sq ft",
+      "client": "Mr. Gautam Bhandari",
+      "image": null,
+      "location": "Bhinmal, Rajasthan",
+      "lqip": null,
+      "slug": "bhandari-house-bhinmal",
+      "title": "Bhandari House",
+      "type": "Bungalows",
+      "year": 2013
+    },
+    {
+      "area": "10,000 sq ft",
+      "client": "Venus Wires",
+      "image": null,
+      "location": "Khopoli, Maharashtra",
+      "lqip": null,
+      "slug": "venus-wires-office-khopoli",
+      "title": "Building for Precision Metals — Venus Wires",
+      "type": "Commercial",
+      "year": 2009
+    },
+    {
+      "area": "6,500 sq ft",
+      "client": "Jammu & Kashmir Bank",
+      "image": null,
+      "location": "Srinagar, J&K",
+      "lqip": null,
+      "slug": "womens-bank-branch-srinagar",
+      "title": "Women's Bank Branch — J&K Bank",
+      "type": "Institutional",
+      "year": 2018
+    },
+    {
+      "area": "1,500 sq ft",
+      "client": "Mumbai Builder",
+      "image": null,
+      "location": "Mumbai",
+      "lqip": null,
+      "slug": "show-flat-mumbai",
+      "title": "Show Flat",
+      "type": "Residential",
+      "year": 2014
+    },
+    {
+      "area": "6,500 sq ft",
+      "client": "Unilazer Ventures Pvt Ltd & Swades Foundation",
+      "image": null,
+      "location": "Worli, Mumbai",
+      "lqip": null,
+      "slug": "unilazer-ventures-office",
+      "title": "Office for Unilazer Ventures",
+      "type": "Commercial",
+      "year": 2014
+    },
+    {
+      "area": "70,000 sq ft",
+      "client": "Jammu & Kashmir Bank",
+      "image": null,
+      "location": "Bandra Kurla Complex, Mumbai",
+      "lqip": null,
+      "slug": "jk-bank-nbc-bkc",
+      "title": "National Business Centre — J&K Bank",
+      "type": "Commercial",
+      "year": 2013
+    },
+    {
+      "area": "4,000 sq ft",
+      "client": "Jammu & Kashmir Bank",
+      "image": null,
+      "location": "Shopian, J&K",
+      "lqip": null,
+      "slug": "high-networth-branch-shopian",
+      "title": "High Networth Bank Branch",
+      "type": "Concept",
+      "year": 2017
+    },
+    {
+      "area": "13,000 sq ft",
+      "client": "HDFC Bank",
+      "image": null,
+      "location": "Narhwal, Jammu",
+      "lqip": null,
+      "slug": "hdfc-bank-office-jammu",
+      "title": "HDFC Bank Corporate Office",
+      "type": "Commercial",
+      "year": 2015
+    },
+    {
+      "area": "15,000 sq ft",
+      "client": "Indian Family",
+      "image": null,
+      "location": "Thane",
+      "lqip": null,
+      "slug": "garden-glory-penthouse-thane",
+      "title": "Garden Glory Penthouse",
+      "type": "Residential",
+      "year": 2013
+    },
+    {
+      "area": "2,500 sq ft",
+      "client": "Jammu & Kashmir Bank",
+      "image": null,
+      "location": "Airport Terminal, Srinagar",
+      "lqip": null,
+      "slug": "airport-lounge-srinagar",
+      "title": "Executive Airport Lounge — J&K Bank",
+      "type": "Concept",
+      "year": 2013
+    },
+    {
+      "area": "10,000 sq ft",
+      "client": "Private Client",
+      "image": null,
+      "location": "Mumbai",
+      "lqip": null,
+      "slug": "exclusive-villa-mumbai",
+      "title": "Exclusive Villa",
+      "type": "Residential",
+      "year": 2016
+    },
+    {
+      "area": "2,000 sq ft",
+      "client": "J&K Bank",
+      "image": null,
+      "location": "Lal Chowk, Srinagar",
+      "lqip": null,
+      "slug": "electronic-bank-lobby-srinagar",
+      "title": "Electronic Bank Lobby — J&K Bank",
+      "type": "Concept",
+      "year": 2018
+    },
+    {
+      "area": "2,600 sq mt",
+      "client": "Mr. Kishore Mariwala",
+      "image": null,
+      "location": "Kemps Corner, Mumbai",
+      "lqip": null,
+      "slug": "kishore-mariwala-home-mumbai",
+      "title": "Contemporary Modern Home",
+      "type": "Residential",
+      "year": 2009
+    },
+    {
+      "area": "3,500 sq mt",
+      "client": "Gordon Serrao",
+      "image": null,
+      "location": "Vashi, Mumbai",
+      "lqip": null,
+      "slug": "gordon-serrao-home-navi-mumbai",
+      "title": "Classic Modern Home",
+      "type": "Residential",
+      "year": 2012
+    },
+    {
+      "area": "20,000 sq mt",
+      "client": "Mr. N Suryavanshi",
+      "image": null,
+      "location": "Vadodara, India",
+      "lqip": null,
+      "slug": "cinemarc-cinema-theatre",
+      "title": "Cinemarc Cinema Theatre",
+      "type": "Commercial",
+      "year": 2015
+    },
+    {
+      "area": "40,000 sq ft",
+      "client": "Bakir Qudrati",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/2e1de3842f186aa4fe1ec46a3b8d0e234b33a6dd-1536x1024.png",
+      "location": "Indore, Madhya Pradesh",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9ElEQVR4nAXBbVPaBgAA4Pyl3Xq369n23FWnpS8TtIghkJRASAiQNwIhCRHyAgmBBCRCCkL1mEKpdetWZtvNq7fdeTfvets+7P/seYDsi4jMEHa11LfV8UFz0rOPutbQMV7atYFV6TfKns53q2xbzhs8LudgFt3F9p5Ft9bDgVWAxSCJShlCvluXRx1zfNAcusbLljps1Ya2MrTEgcF7Naar5FtiRmcTIgFScDAV3oxvrQEMGinikF4kh442H3tno4MjV/dNeWQrk/b+2JaG9UJPyboi7pZxi0crZJSGg8lwIB7aAAoYKOWQrsq/eXX427v55dsf5kP3uKOdesbCNxcD47QjjwymVyGdMmFwSQGPZuFtdPcp/PwJoFAJs0S8cmufLs5u/7y6ufp1OZ9cTDrvp96n+eD314cfp86PvnZsC70qUy/iZRJmkiAR38GiIcDgUq5Mnvb0Pz789N+/f/9ze3P1bnY58z+fj25+nny5PPmyHH+edd701SNLcBSqymICidBJkER2gVoWsrnYickup73r94vr5dsP5ye/TL3LU+/6tffXxcHteWvpS8cmPbaKfYNvCKRCJ3kiTqEgICABNbHucdsDEe7JqXGzvBg5U8+cONWpI82a1MJK+8JenQz15PSowbcrebWAl7MvmFQUoHdX6eAdEVwpRh5w4EODgjydd6sFU6IsMdcspZwS2qAhMRVqMJCvUd19ql7KSPkEl44BePABvPFVMvA19vSbzM5qKbElEaCQiQskUsogPB7j0xCPRflkWKNivkYdqoxVJqVcgsMgoIB8T0OPy9i2mgfrTKzOxHl0G956GN68v7NxL7h2N7R2d+/RPSL8nZaP+Trb1zlbysl5lMUgwORTnUpu0pZnfe2sK08aTJ2BsZ31yOZKZHMFDNyPP/sWe77BIkGVRtpS1lHopkRVmDSHw0CVRh2FOunq52P3zNOODNZTMhaPajSs0ojBJS2BaIpZW6bcaqFTK7b2Cw2Rluk0m4b/B/KheewG/9MpAAAAAElFTkSuQmCC",
+      "slug": "qudrati-greens-indore",
+      "title": "Qudrati Greens",
+      "type": "Commercial",
+      "year": 2026
+    },
+    {
+      "area": "15,000 sq ft",
+      "client": "Nikhil Gupta",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/b0ce7d480a1a1f974ffe7bb3536c895f677fb8ab-1672x941.png",
+      "location": "Awas, Alibaug",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVR4nAGfAmD9AMnX5sbV5crY58nZ677T67HO667N7LLR7rfU8LrW8b3X8cHZ8sbb88vf89Hi89bl9Nvo9eLq9erv9u/z9wC+y9a9zdvM2eba5O/T4fG/1/C10u+21PC61vK92PLB2vPF2/PJ3vTO4fXV5fXb6fbg6/fk7ffo7vXo7PAAkJmRm6amusTM1d3k3eXtz9/wwNnxv9nywdnxw9frx9jrzN7w0eP11eb22+j24Or14enx3ePpztPUur64AF1fSGptXo2Rjquvsbq+wrvDzLbG07rL2cLQ3MbN1snP1s7W3s7X387W3NHV2s7R08XGxbCxr5GSiXZ4ZABHSTFSVD5sbWCDg36Qj4+Xl5mbnJ2fnZutq6rCwcLKyMm9urisqKOyrqjAubK5samlnpaGg3loaldbXkEAODwoQEcxTFRDaGxkioeFlZGPlI2HjYF2l4yFura1yMTDrKOdj4J4oJWMvbKovrGoopmSdnVqV15GVVs6AC00IDA6JjE+LEpSRHNzaX57cXdxZXRsXoB6b5ucmKmqp5SQiHNsYXVvZI6IfJqTiIaCeF1fUUVNM0tTLwApNCEtOCYtOCc1PStFTDhJTjtESDZISTlQVEVdZVllbWJbYVNGSTo/QjRKTz9ZW0pWWEdGSjo/Ri5DTCoAKzYkLzknMTooLjglLzolLzonLzooMDonMzwpOUQsPEguO0UtNkAoOEApPUcvRUw3TFE/TlNHTFFHR09BACUvGyYxGyYyHCUyHCc0HCg1HSk3Hik2HSo2HC87HDVBHTdCHzZBHzhCITtFJT1GKUFJM0ZNQEhPSUdPTQAZJBAaJRAbJxEcKBMeLBMgLhMhLRQgLRMgLRMhLhQmMRUnMhUkMBQhLhQhLRQjLhQjLhckLxkmMCApMyZMHU3Evkcr8AAAAABJRU5ErkJggg==",
+      "slug": "nikhil-gupta-bungalow",
+      "title": "Nikhil Gupta's Bungalow",
+      "type": "Residential",
+      "year": 2026
+    },
+    {
+      "area": "2,500 sq ft",
+      "client": "Rupen Jhaveri & Binaisha Zaveri",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/f3d57a3afa3a6f0c3080f448454c58020f728f12-2400x1600.jpg",
+      "location": "Mumbai",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEBf/EACEQAAICAwACAgMAAAAAAAAAAAECAwQABRESUQYhEzFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgME/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQAREiL/2gAMAwEAAhEDEQA/AFdDaS6u9IYrQkifvFc86f7m9t0LcdiTZRJXijiLhvLvT65hn57TiOggt1wYDJH+Yqvsn3gmbcWlrRKzBvBegnM5o8zcfTK9NsW2taSw8SQ8lZFUk/YH6OWd345Xr3tRBYlgUO46fH6GWUCLf//Z",
+      "slug": "jhaveri-zaveri-residence",
+      "title": "Jhaveri Zaveri Residence",
+      "type": "Interiors",
+      "year": 2019
+    },
+    {
+      "area": "5,000 sq ft",
+      "client": "Mohan Shenoi",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/ca14bc2b2993c7abad13299b24eeb4490ca56f44-2400x1600.jpg",
+      "location": "Mumbai",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwb/xAAiEAABBAICAgMBAAAAAAAAAAADAQIEBQAREiEGFDJhcaH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAAH/xAAdEQABBAIDAAAAAAAAAAAAAAABAAIDERIhIjGx/9oADAMBAAIRAxEAPwDWr8lBW+PPtrUrisVUbxE3btrlyutx3UGNNruTYxt9ETTusi1w4IGEjegJzFVPkuOyY46l42RG8WlTet9J+ZmNGiq76T1pUj90n3pf5hnFWsye2cTU4va4YVJG7I6SsYBaOXq//9k=",
+      "slug": "mohan-shenoi-residence",
+      "title": "Mohan Shenoi Residence",
+      "type": "Interiors",
+      "year": 2022
+    },
+    {
+      "area": "2,500 sq ft",
+      "client": "Rahul & Sanjana Shenoi",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/6badfa4dfbebf40b5b0bd6189b8b4bb528d452ad-2400x1600.jpg",
+      "location": "Mumbai",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYEBf/EACAQAAICAgEFAQAAAAAAAAAAAAIDAQQAEQUGITE0UaH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAZEQADAQEBAAAAAAAAAAAAAAABAhEAMSH/2gAMAwEAAhEDEQA/AFVSeItENG4s0gsSlRfZ8xGVXDtqckz2FKkfpx+ZM0F171WrJoEZsI2yRnzOYbXSVSuCmV3vCSjvoszMPfNRRzdfqNa63JmCXLMJiCgone8ZJp40agyuGmyNzOz7zjBsjUzmarLBe7//2Q==",
+      "slug": "rahul-sanjana-residence",
+      "title": "Rahul & Sanjana Residence",
+      "type": "Interiors",
+      "year": 2017
+    },
+    {
+      "area": "2,500 sq ft",
+      "client": "Usha Shenoi",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/fded14ae94dbca04324a3dbb0c27e5cc34c46694-2400x1600.jpg",
+      "location": "Mumbai",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQFBgf/xAAiEAACAgIBAwUAAAAAAAAAAAABAgMEAAUREiExFEFRceH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMhMUFR/9oADAMBAAIRAxEAPwC4rrzoNf6ieRZq454Unh/3Iza7VAsy1qcsxChuzgDv4xxw29p2IbTspgUurL8/WZdeuXtZu44orbvG55IYDAmuCV+j+530lS2EECP1IG5DeOfbDH56FSdlkmrq7lQSThkqvilosdEnlM//2Q==",
+      "slug": "usha-shenoi-residence",
+      "title": "Usha Shenoi Residence",
+      "type": "Interiors",
+      "year": 2016
+    },
+    {
+      "area": "2,500 sq ft",
+      "client": "Pedder Johnson Properties Pvt Ltd",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/a1e0e059ef91fcfefeeb1734f66bcbee012f174a-7360x4912.jpg",
+      "location": "Mumbai",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EACMQAAIBBAEEAwEAAAAAAAAAAAEDAgAEBREhBhITMSJBYXH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oADAMBAAIRAxEAPwBjBzQq2dBj4eWB+C5S0T/Kat79c3zTcwCpjegZcmtYfD2QlG9YkMuQOJS+qh+psUWZu5aLt0TOW9A+vwVnZdZU0oXtl43p7zr2RRUl009tlioJDJM1InukeaKShw//2Q==",
+      "slug": "pedder-johnson-properties-mumbai",
+      "title": "Pedder Johnson Properties",
+      "type": "Commercial Interiors",
+      "year": 2017
+    }
+  ],
+  "projectSlugs": [
+    "mist-view-bungalows-lonavala",
+    "mba-hostel-towers-itm",
+    "jk-bank-branch-samba",
+    "college-engineering-management-nagpur",
+    "venus-wires-office-khopoli",
+    "unilazer-ventures-office",
+    "airport-lounge-srinagar",
+    "kishore-mariwala-home-mumbai",
+    "cinemarc-cinema-theatre",
+    "usha-shenoi-residence",
+    "pedder-johnson-properties-mumbai",
+    "mariwala-estate-annexe-lonavala",
+    "gokul-cultural-centre-mumbai",
+    "bungalow-ahmedabad",
+    "show-flat-mumbai",
+    "hdfc-bank-office-jammu",
+    "garden-glory-penthouse-thane",
+    "qudrati-greens-indore",
+    "nikhil-gupta-bungalow",
+    "jhaveri-zaveri-residence",
+    "mohan-shenoi-residence",
+    "rahul-sanjana-residence",
+    "maharaja-agrasen-palace",
+    "unilazer-ventures",
+    "luthra-group",
+    "wedding-destination-raipur",
+    "kalimata-mandir-navi-mumbai",
+    "service-industry-campus-goa",
+    "villa-merchant-tirupur",
+    "college-campus-extension-itm",
+    "nrb-bearings-guest-house-aurangabad",
+    "glass-kitchen-alibaug",
+    "bhandari-house-bhinmal",
+    "womens-bank-branch-srinagar",
+    "jk-bank-nbc-bkc",
+    "high-networth-branch-shopian",
+    "exclusive-villa-mumbai",
+    "electronic-bank-lobby-srinagar",
+    "gordon-serrao-home-navi-mumbai"
+  ],
+  "navProjects": [
+    {
+      "location": "Raipur, Chhattisgarh",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "wedding-destination-raipur",
+      "title": "Wedding Destination",
+      "type": "Commercial"
+    },
+    {
+      "location": "Kharghar, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "kalimata-mandir-navi-mumbai",
+      "title": "Temple Building — Goddess Kali",
+      "type": "Institutional"
+    },
+    {
+      "location": "Bicholim, Goa",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "service-industry-campus-goa",
+      "title": "Service Industry Education Campus",
+      "type": "Institutional"
+    },
+    {
+      "location": "Lonavala, Maharashtra",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "mist-view-bungalows-lonavala",
+      "title": "Mist View Bungalows",
+      "type": "Bungalows"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "mba-hostel-towers-itm",
+      "title": "MBA Hostel Towers — ITM",
+      "type": "Institutional"
+    },
+    {
+      "location": "Lonavala, Maharashtra",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "mariwala-estate-annexe-lonavala",
+      "title": "Mariwala Estate Annexe",
+      "type": "Bungalows"
+    },
+    {
+      "location": "Tirupur, India",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "villa-merchant-tirupur",
+      "title": "Luxurious 5BHK Villa",
+      "type": "Residential"
+    },
+    {
+      "location": "Samba, J&K State",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "jk-bank-branch-samba",
+      "title": "J&K Bank Branch Building",
+      "type": "Commercial"
+    },
+    {
+      "location": "Kharghar, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "college-campus-extension-itm",
+      "title": "College Campus Extension — ITM",
+      "type": "Institutional"
+    },
+    {
+      "location": "Lonavala, India",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png",
+      "mainImageLqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADDUlEQVR4nAXB63PaBAAA8Pxvftk5/WDpBoWWkAQSEkhaCI80MB7lDQspjURe4107PVtvd1rPw43hdJ4f5u3Oefaksy3l2fIq0Enhi78fcNGddvofrob/XY/m/fG83RvX6xf/1C9a3VF/fDeeLae3y8ntcjRdDieL4WTZv1l0B/Pz7qzenABn7UmjO73s3DTaw/r7y1q1VsqkC+nkj999//btu4vLXn90O57eDSeLwc3daLIYTRdXo3mjNztt3QDvm+OTs97vb95Vnteelvd3GFor+wxfW7FR2r2Q7/Dg4PWrX0/+rp83OmeNTrN9PRjNBuN5+/r2vDMBTi+Hf/x5evTts/he7JFpE5Z8orz/kWblY936AwqWm7Wwj6GLolA5Pn5eqdSq1ZOT+lV/0ht+aF3NgL/qrV9+e/P04CC+y7msBlIpo+QrFrXCTZMuE2XCVHq5xLWpLSbjX+8Xv9ov1qov/z1rNruj89YAOP6hcnR4+GW5kE2JkR07q1Nb4DWHDuFc27teh3/baEYUTgpNf86XculyPvPs6Jvqi5c/v3r904saIPCRbEos5VPpL2JBJ7NNwBZI5iI10R2W9z4KsDSDrjv0SCzo5sPe3ZBH4IKxSIAL+bmQH/A5rEI0kBKjcT7oY2kWV1lUUqcO4pxW3mMLbBsZjYLFNvx2k91CmUi1mUINBGLQa1x2BtBrVfQmyjKk22Gy07gVB2lw1Yoq3AzlsRttRpxSSrbAVZbGt/RqWClFQLlWDRIYbGUsAKiQQBsSGFrFsDVM/RCHJJjivnr9UxSVoVo5Aj3YeHgPlN7TamSkDiJxRIfBBAYh8LoSUgIsTbA0wRhQ0xaypVduEgoSk+IaKYFvEASoJ0ASVxpIldWkdTvMIa/D77a5bGYLTekJDOAfB4RoOM6HBS4Qi3iiIWfYZwt62JDPHvTZAl4m5Gf5xzuiEE0l4ulkIpUQxbgQi/EcFwF4QRSTmWyuUMjnc0/SqaSwt+uPROzBMOMNGB0ewunBw5wtk0mUyuVCsZzNl9K5YjJbSDzJ/Q850MvAKWYL/AAAAABJRU5ErkJggg==",
+      "slug": "maharaja-agrasen-palace",
+      "title": "Maharaja Agrasen Palace",
+      "type": "Institutional"
+    },
+    {
+      "location": "Aurangabad, India",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "nrb-bearings-guest-house-aurangabad",
+      "title": "Guest House — NRB Bearings",
+      "type": "Commercial"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "gokul-cultural-centre-mumbai",
+      "title": "Gokul Cultural Centre",
+      "type": "Institutional"
+    },
+    {
+      "location": "Mumbai, India",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQAEB//EACMQAAEDBAEEAwAAAAAAAAAAAAECAwQABREhEwYHEnEUMaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMhEhMx/9oADAMBAAIRAxEAPwBi29RGfGW7xJYaSMkDf7SUufGjseT2Fo8chYOvRoGxMN8nxEoAZOyMfdF9w5TkG2qVGwlLSwQnGj7qNyi6JQYk9ZsuoadlBwYwtIVqquSyut7op3I4gMDQTVRdVmPyqan/2Q==",
+      "slug": "luthra-group",
+      "title": "Luthra Group",
+      "type": "Commercial Interiors"
+    },
+    {
+      "location": "Mumbai, India",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGAf/EACUQAAIBBAAEBwAAAAAAAAAAAAECAwAEBREGEiFBFCIjMVFhgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQMAEwIEMVH/2gAMAwEAAhEDEQA/AG+LvpJmeE3cGQgUAkKpDUwbIWthNAwJiMnb3A/ajuEZRBE92E9aRyOh0APiqu3SGctJcQrIT5hvsfqo7Ea5YQcZUW3YrBGUVXUkfiJCI2cMeYMo6Gisyc5S6IRFCgDQ1vVFNQDyFb7P/9k=",
+      "slug": "unilazer-ventures",
+      "title": "Unilazer Ventures",
+      "type": "Commercial Interiors"
+    },
+    {
+      "location": "Mandwa, Alibaug",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "glass-kitchen-alibaug",
+      "title": "Glass Kitchen",
+      "type": "Bungalows"
+    },
+    {
+      "location": "Kamptee, Nagpur",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "college-engineering-management-nagpur",
+      "title": "College for Engineering & Management",
+      "type": "Institutional"
+    },
+    {
+      "location": "Ahmedabad",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "bungalow-ahmedabad",
+      "title": "Bungalow in Ahmedabad",
+      "type": "Bungalows"
+    },
+    {
+      "location": "Bhinmal, Rajasthan",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "bhandari-house-bhinmal",
+      "title": "Bhandari House",
+      "type": "Bungalows"
+    },
+    {
+      "location": "Khopoli, Maharashtra",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "venus-wires-office-khopoli",
+      "title": "Building for Precision Metals — Venus Wires",
+      "type": "Commercial"
+    },
+    {
+      "location": "Srinagar, J&K",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "womens-bank-branch-srinagar",
+      "title": "Women's Bank Branch — J&K Bank",
+      "type": "Institutional"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "show-flat-mumbai",
+      "title": "Show Flat",
+      "type": "Residential"
+    },
+    {
+      "location": "Worli, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "unilazer-ventures-office",
+      "title": "Office for Unilazer Ventures",
+      "type": "Commercial"
+    },
+    {
+      "location": "Bandra Kurla Complex, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "jk-bank-nbc-bkc",
+      "title": "National Business Centre — J&K Bank",
+      "type": "Commercial"
+    },
+    {
+      "location": "Shopian, J&K",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "high-networth-branch-shopian",
+      "title": "High Networth Bank Branch",
+      "type": "Concept"
+    },
+    {
+      "location": "Narhwal, Jammu",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "hdfc-bank-office-jammu",
+      "title": "HDFC Bank Corporate Office",
+      "type": "Commercial"
+    },
+    {
+      "location": "Thane",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "garden-glory-penthouse-thane",
+      "title": "Garden Glory Penthouse",
+      "type": "Residential"
+    },
+    {
+      "location": "Airport Terminal, Srinagar",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "airport-lounge-srinagar",
+      "title": "Executive Airport Lounge — J&K Bank",
+      "type": "Concept"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "exclusive-villa-mumbai",
+      "title": "Exclusive Villa",
+      "type": "Residential"
+    },
+    {
+      "location": "Lal Chowk, Srinagar",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "electronic-bank-lobby-srinagar",
+      "title": "Electronic Bank Lobby — J&K Bank",
+      "type": "Concept"
+    },
+    {
+      "location": "Kemps Corner, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "kishore-mariwala-home-mumbai",
+      "title": "Contemporary Modern Home",
+      "type": "Residential"
+    },
+    {
+      "location": "Vashi, Mumbai",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "gordon-serrao-home-navi-mumbai",
+      "title": "Classic Modern Home",
+      "type": "Residential"
+    },
+    {
+      "location": "Vadodara, India",
+      "mainImage": null,
+      "mainImageLqip": null,
+      "slug": "cinemarc-cinema-theatre",
+      "title": "Cinemarc Cinema Theatre",
+      "type": "Commercial"
+    },
+    {
+      "location": "Indore, Madhya Pradesh",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/2e1de3842f186aa4fe1ec46a3b8d0e234b33a6dd-1536x1024.png",
+      "mainImageLqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9ElEQVR4nAXBbVPaBgAA4Pyl3Xq369n23FWnpS8TtIghkJRASAiQNwIhCRHyAgmBBCRCCkL1mEKpdetWZtvNq7fdeTfvets+7P/seYDsi4jMEHa11LfV8UFz0rOPutbQMV7atYFV6TfKns53q2xbzhs8LudgFt3F9p5Ft9bDgVWAxSCJShlCvluXRx1zfNAcusbLljps1Ya2MrTEgcF7Naar5FtiRmcTIgFScDAV3oxvrQEMGinikF4kh442H3tno4MjV/dNeWQrk/b+2JaG9UJPyboi7pZxi0crZJSGg8lwIB7aAAoYKOWQrsq/eXX427v55dsf5kP3uKOdesbCNxcD47QjjwymVyGdMmFwSQGPZuFtdPcp/PwJoFAJs0S8cmufLs5u/7y6ufp1OZ9cTDrvp96n+eD314cfp86PvnZsC70qUy/iZRJmkiAR38GiIcDgUq5Mnvb0Pz789N+/f/9ze3P1bnY58z+fj25+nny5PPmyHH+edd701SNLcBSqymICidBJkER2gVoWsrnYickup73r94vr5dsP5ye/TL3LU+/6tffXxcHteWvpS8cmPbaKfYNvCKRCJ3kiTqEgICABNbHucdsDEe7JqXGzvBg5U8+cONWpI82a1MJK+8JenQz15PSowbcrebWAl7MvmFQUoHdX6eAdEVwpRh5w4EODgjydd6sFU6IsMdcspZwS2qAhMRVqMJCvUd19ql7KSPkEl44BePABvPFVMvA19vSbzM5qKbElEaCQiQskUsogPB7j0xCPRflkWKNivkYdqoxVJqVcgsMgoIB8T0OPy9i2mgfrTKzOxHl0G956GN68v7NxL7h2N7R2d+/RPSL8nZaP+Trb1zlbysl5lMUgwORTnUpu0pZnfe2sK08aTJ2BsZ31yOZKZHMFDNyPP/sWe77BIkGVRtpS1lHopkRVmDSHw0CVRh2FOunq52P3zNOODNZTMhaPajSs0ojBJS2BaIpZW6bcaqFTK7b2Cw2Rluk0m4b/B/KheewG/9MpAAAAAElFTkSuQmCC",
+      "slug": "qudrati-greens-indore",
+      "title": "Qudrati Greens",
+      "type": "Commercial"
+    },
+    {
+      "location": "Awas, Alibaug",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/b0ce7d480a1a1f974ffe7bb3536c895f677fb8ab-1672x941.png",
+      "mainImageLqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVR4nAGfAmD9AMnX5sbV5crY58nZ677T67HO667N7LLR7rfU8LrW8b3X8cHZ8sbb88vf89Hi89bl9Nvo9eLq9erv9u/z9wC+y9a9zdvM2eba5O/T4fG/1/C10u+21PC61vK92PLB2vPF2/PJ3vTO4fXV5fXb6fbg6/fk7ffo7vXo7PAAkJmRm6amusTM1d3k3eXtz9/wwNnxv9nywdnxw9frx9jrzN7w0eP11eb22+j24Or14enx3ePpztPUur64AF1fSGptXo2Rjquvsbq+wrvDzLbG07rL2cLQ3MbN1snP1s7W3s7X387W3NHV2s7R08XGxbCxr5GSiXZ4ZABHSTFSVD5sbWCDg36Qj4+Xl5mbnJ2fnZutq6rCwcLKyMm9urisqKOyrqjAubK5samlnpaGg3loaldbXkEAODwoQEcxTFRDaGxkioeFlZGPlI2HjYF2l4yFura1yMTDrKOdj4J4oJWMvbKovrGoopmSdnVqV15GVVs6AC00IDA6JjE+LEpSRHNzaX57cXdxZXRsXoB6b5ucmKmqp5SQiHNsYXVvZI6IfJqTiIaCeF1fUUVNM0tTLwApNCEtOCYtOCc1PStFTDhJTjtESDZISTlQVEVdZVllbWJbYVNGSTo/QjRKTz9ZW0pWWEdGSjo/Ri5DTCoAKzYkLzknMTooLjglLzolLzonLzooMDonMzwpOUQsPEguO0UtNkAoOEApPUcvRUw3TFE/TlNHTFFHR09BACUvGyYxGyYyHCUyHCc0HCg1HSk3Hik2HSo2HC87HDVBHTdCHzZBHzhCITtFJT1GKUFJM0ZNQEhPSUdPTQAZJBAaJRAbJxEcKBMeLBMgLhMhLRQgLRMgLRMhLhQmMRUnMhUkMBQhLhQhLRQjLhQjLhckLxkmMCApMyZMHU3Evkcr8AAAAABJRU5ErkJggg==",
+      "slug": "nikhil-gupta-bungalow",
+      "title": "Nikhil Gupta's Bungalow",
+      "type": "Residential"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f3d57a3afa3a6f0c3080f448454c58020f728f12-2400x1600.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEBf/EACEQAAICAwACAgMAAAAAAAAAAAECAwQABRESUQYhEzFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgME/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQAREiL/2gAMAwEAAhEDEQA/AFdDaS6u9IYrQkifvFc86f7m9t0LcdiTZRJXijiLhvLvT65hn57TiOggt1wYDJH+Yqvsn3gmbcWlrRKzBvBegnM5o8zcfTK9NsW2taSw8SQ8lZFUk/YH6OWd345Xr3tRBYlgUO46fH6GWUCLf//Z",
+      "slug": "jhaveri-zaveri-residence",
+      "title": "Jhaveri Zaveri Residence",
+      "type": "Interiors"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/ca14bc2b2993c7abad13299b24eeb4490ca56f44-2400x1600.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwb/xAAiEAABBAICAgMBAAAAAAAAAAADAQIEBQAREiEGFDJhcaH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAAH/xAAdEQABBAIDAAAAAAAAAAAAAAABAAIDERIhIjGx/9oADAMBAAIRAxEAPwDWr8lBW+PPtrUrisVUbxE3btrlyutx3UGNNruTYxt9ETTusi1w4IGEjegJzFVPkuOyY46l42RG8WlTet9J+ZmNGiq76T1pUj90n3pf5hnFWsye2cTU4va4YVJG7I6SsYBaOXq//9k=",
+      "slug": "mohan-shenoi-residence",
+      "title": "Mohan Shenoi Residence",
+      "type": "Interiors"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/6badfa4dfbebf40b5b0bd6189b8b4bb528d452ad-2400x1600.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYEBf/EACAQAAICAgEFAQAAAAAAAAAAAAIDAQQAEQUGITE0UaH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAZEQADAQEBAAAAAAAAAAAAAAABAhEAMSH/2gAMAwEAAhEDEQA/AFVSeItENG4s0gsSlRfZ8xGVXDtqckz2FKkfpx+ZM0F171WrJoEZsI2yRnzOYbXSVSuCmV3vCSjvoszMPfNRRzdfqNa63JmCXLMJiCgone8ZJp40agyuGmyNzOz7zjBsjUzmarLBe7//2Q==",
+      "slug": "rahul-sanjana-residence",
+      "title": "Rahul & Sanjana Residence",
+      "type": "Interiors"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/fded14ae94dbca04324a3dbb0c27e5cc34c46694-2400x1600.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQFBgf/xAAiEAACAgIBAwUAAAAAAAAAAAABAgMEAAUREiExFEFRceH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAICAwEAAAAAAAAAAAAAAAABAgMhMUFR/9oADAMBAAIRAxEAPwC4rrzoNf6ieRZq454Unh/3Iza7VAsy1qcsxChuzgDv4xxw29p2IbTspgUurL8/WZdeuXtZu44orbvG55IYDAmuCV+j+530lS2EECP1IG5DeOfbDH56FSdlkmrq7lQSThkqvilosdEnlM//2Q==",
+      "slug": "usha-shenoi-residence",
+      "title": "Usha Shenoi Residence",
+      "type": "Interiors"
+    },
+    {
+      "location": "Mumbai",
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/a1e0e059ef91fcfefeeb1734f66bcbee012f174a-7360x4912.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EACMQAAIBBAEEAwEAAAAAAAAAAAEDAgAEBREhBhITMSJBYXH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oADAMBAAIRAxEAPwBjBzQq2dBj4eWB+C5S0T/Kat79c3zTcwCpjegZcmtYfD2QlG9YkMuQOJS+qh+psUWZu5aLt0TOW9A+vwVnZdZU0oXtl43p7zr2RRUl009tlioJDJM1InukeaKShw//2Q==",
+      "slug": "pedder-johnson-properties-mumbai",
+      "title": "Pedder Johnson Properties",
+      "type": "Commercial Interiors"
+    }
+  ],
+  "featured": [
+    {
+      "client": "Agrawal Global Foundation",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/a9037d6e7ba9ac0b80496e087d60795ecc650c8b-1536x1024.png",
+      "location": "Lonavala, India",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADDUlEQVR4nAXB63PaBAAA8Pxvftk5/WDpBoWWkAQSEkhaCI80MB7lDQspjURe4107PVtvd1rPw43hdJ4f5u3Oefaksy3l2fIq0Enhi78fcNGddvofrob/XY/m/fG83RvX6xf/1C9a3VF/fDeeLae3y8ntcjRdDieL4WTZv1l0B/Pz7qzenABn7UmjO73s3DTaw/r7y1q1VsqkC+nkj999//btu4vLXn90O57eDSeLwc3daLIYTRdXo3mjNztt3QDvm+OTs97vb95Vnteelvd3GFor+wxfW7FR2r2Q7/Dg4PWrX0/+rp83OmeNTrN9PRjNBuN5+/r2vDMBTi+Hf/x5evTts/he7JFpE5Z8orz/kWblY936AwqWm7Wwj6GLolA5Pn5eqdSq1ZOT+lV/0ht+aF3NgL/qrV9+e/P04CC+y7msBlIpo+QrFrXCTZMuE2XCVHq5xLWpLSbjX+8Xv9ov1qov/z1rNruj89YAOP6hcnR4+GW5kE2JkR07q1Nb4DWHDuFc27teh3/baEYUTgpNf86XculyPvPs6Jvqi5c/v3r904saIPCRbEos5VPpL2JBJ7NNwBZI5iI10R2W9z4KsDSDrjv0SCzo5sPe3ZBH4IKxSIAL+bmQH/A5rEI0kBKjcT7oY2kWV1lUUqcO4pxW3mMLbBsZjYLFNvx2k91CmUi1mUINBGLQa1x2BtBrVfQmyjKk22Gy07gVB2lw1Yoq3AzlsRttRpxSSrbAVZbGt/RqWClFQLlWDRIYbGUsAKiQQBsSGFrFsDVM/RCHJJjivnr9UxSVoVo5Aj3YeHgPlN7TamSkDiJxRIfBBAYh8LoSUgIsTbA0wRhQ0xaypVduEgoSk+IaKYFvEASoJ0ASVxpIldWkdTvMIa/D77a5bGYLTekJDOAfB4RoOM6HBS4Qi3iiIWfYZwt62JDPHvTZAl4m5Gf5xzuiEE0l4ulkIpUQxbgQi/EcFwF4QRSTmWyuUMjnc0/SqaSwt+uPROzBMOMNGB0ewunBw5wtk0mUyuVCsZzNl9K5YjJbSDzJ/Q850MvAKWYL/AAAAABJRU5ErkJggg==",
+      "slug": "maharaja-agrasen-palace",
+      "tagline": null,
+      "title": "Maharaja Agrasen Palace",
+      "type": "Institutional"
+    },
+    {
+      "client": "Luthra Group",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg",
+      "location": "Mumbai, India",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQAEB//EACMQAAEDBAEEAwAAAAAAAAAAAAECAwQABREhEwYHEnEUMaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMhEhMx/9oADAMBAAIRAxEAPwBi29RGfGW7xJYaSMkDf7SUufGjseT2Fo8chYOvRoGxMN8nxEoAZOyMfdF9w5TkG2qVGwlLSwQnGj7qNyi6JQYk9ZsuoadlBwYwtIVqquSyut7op3I4gMDQTVRdVmPyqan/2Q==",
+      "slug": "luthra-group",
+      "tagline": null,
+      "title": "Luthra Group",
+      "type": "Commercial Interiors"
+    },
+    {
+      "client": "Unilazer Ventures Private Limited",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/90eff17ceae1de12db6a918460f2fc430ccec55f-7360x4912.jpg",
+      "location": "Mumbai, India",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGAf/EACUQAAIBBAAEBwAAAAAAAAAAAAECAwAEBREGEiFBFCIjMVFhgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQMAEwIEMVH/2gAMAwEAAhEDEQA/AG+LvpJmeE3cGQgUAkKpDUwbIWthNAwJiMnb3A/ajuEZRBE92E9aRyOh0APiqu3SGctJcQrIT5hvsfqo7Ea5YQcZUW3YrBGUVXUkfiJCI2cMeYMo6Gisyc5S6IRFCgDQ1vVFNQDyFb7P/9k=",
+      "slug": "unilazer-ventures",
+      "tagline": null,
+      "title": "Unilazer Ventures",
+      "type": "Commercial Interiors"
+    },
+    {
+      "client": "Bakir Qudrati",
+      "image": "https://cdn.sanity.io/images/il220i1c/production/2e1de3842f186aa4fe1ec46a3b8d0e234b33a6dd-1536x1024.png",
+      "location": "Indore, Madhya Pradesh",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9ElEQVR4nAXBbVPaBgAA4Pyl3Xq369n23FWnpS8TtIghkJRASAiQNwIhCRHyAgmBBCRCCkL1mEKpdetWZtvNq7fdeTfvets+7P/seYDsi4jMEHa11LfV8UFz0rOPutbQMV7atYFV6TfKns53q2xbzhs8LudgFt3F9p5Ft9bDgVWAxSCJShlCvluXRx1zfNAcusbLljps1Ya2MrTEgcF7Naar5FtiRmcTIgFScDAV3oxvrQEMGinikF4kh442H3tno4MjV/dNeWQrk/b+2JaG9UJPyboi7pZxi0crZJSGg8lwIB7aAAoYKOWQrsq/eXX427v55dsf5kP3uKOdesbCNxcD47QjjwymVyGdMmFwSQGPZuFtdPcp/PwJoFAJs0S8cmufLs5u/7y6ufp1OZ9cTDrvp96n+eD314cfp86PvnZsC70qUy/iZRJmkiAR38GiIcDgUq5Mnvb0Pz789N+/f/9ze3P1bnY58z+fj25+nny5PPmyHH+edd701SNLcBSqymICidBJkER2gVoWsrnYickup73r94vr5dsP5ye/TL3LU+/6tffXxcHteWvpS8cmPbaKfYNvCKRCJ3kiTqEgICABNbHucdsDEe7JqXGzvBg5U8+cONWpI82a1MJK+8JenQz15PSowbcrebWAl7MvmFQUoHdX6eAdEVwpRh5w4EODgjydd6sFU6IsMdcspZwS2qAhMRVqMJCvUd19ql7KSPkEl44BePABvPFVMvA19vSbzM5qKbElEaCQiQskUsogPB7j0xCPRflkWKNivkYdqoxVJqVcgsMgoIB8T0OPy9i2mgfrTKzOxHl0G956GN68v7NxL7h2N7R2d+/RPSL8nZaP+Trb1zlbysl5lMUgwORTnUpu0pZnfe2sK08aTJ2BsZ31yOZKZHMFDNyPP/sWe77BIkGVRtpS1lHopkRVmDSHw0CVRh2FOunq52P3zNOODNZTMhaPajSs0ojBJS2BaIpZW6bcaqFTK7b2Cw2Rluk0m4b/B/KheewG/9MpAAAAAElFTkSuQmCC",
+      "slug": "qudrati-greens-indore",
+      "tagline": null,
+      "title": "Qudrati Greens",
+      "type": "Commercial"
+    }
+  ],
+  "settings": {
+    "clientCount": "500+",
+    "email": "studio@teamdesign.in",
+    "instagramUrl": "https://www.instagram.com/teamdesign2004/",
+    "linkedinUrl": "https://www.linkedin.com/company/teamdesign",
+    "phone": "+91 98765 43210",
+    "projectCount": "300+",
+    "sqftCompleted": "2M+ sq ft",
+    "whatsapp": "919876543210",
+    "yearsInPractice": "25+"
+  },
+  "testimonials": [
+    {
+      "name": "Kishore V. Mariwala",
+      "project": "Mariwala Estate Annexe",
+      "quote": "Team Design managed the entire project lifecycle — from concept and design to contractor management, budget adherence, and on-time delivery. The result exceeded every expectation.",
+      "title": "Industrialist"
+    },
+    {
+      "name": "S K Samanta",
+      "project": "College Campus Extension — ITM",
+      "quote": "Team Design brought extensive experience in campus development and institutional projects. Their approach to integrating the new building with the existing campus was exactly what we needed.",
+      "title": "ITM Group"
+    },
+    {
+      "name": "Kishore V. Mariwala",
+      "project": "Contemporary Modern Home",
+      "quote": "Team Design managed the entire project lifecycle — from concept and design to contractor management, budget adherence, and on-time delivery. The result exceeded every expectation.",
+      "title": "Industrialist, Founder of Marico"
+    },
+    {
+      "name": "Gordon Serrao",
+      "project": "Classic Modern Home",
+      "quote": "Team Design showed great professionalism from start to completion. The quality of their work and their commitment to the client is truly commendable.",
+      "title": "Hotelier"
+    }
+  ],
+  "jobs": [],
+  "teamMembers": [
+    {
+      "award": null,
+      "bio": "Tasadduq founded the practice in 1996, beginning his career under Architect P K Das as mentor. A former visiting professor at the Academy of Architecture, Mumbai for nearly a decade, he believes deeply that the quality of our surroundings affects the quality of our lives. His expertise spans acknowledged design talent, mentoring the design team, and demonstrated success across 25+ years of practice.",
+      "education": "B.Arch, Rachana Sansad Academy of Architecture, Mumbai",
+      "founding": 1996,
+      "name": "Tasadduq Kher",
+      "orderRank": 1,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Founder & Principal Architect",
+      "tier": "principal"
+    },
+    {
+      "award": "Top 50 Architects Under 35 — Architects & Interiors India, 2016",
+      "bio": "Zainab co-drives the design direction of the practice alongside Tasadduq. Registered with the Council of Architecture, New Delhi, she was recognised by Architects & Interiors India magazine in 2016 as one of India's top 50 architects under the age of 35. Her intellectually rigorous approach to the analysis and interpretation of a client brief informs every project she leads.",
+      "education": "B.Arch with Honours, Academy of Architecture, Mumbai (2004)",
+      "founding": null,
+      "name": "Zainab (Xen)",
+      "orderRank": 2,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Partner & Head of Design",
+      "tier": "featured"
+    },
+    {
+      "award": null,
+      "bio": "With over 10 years in construction and project management, Ali focuses on technical details, analyses, budgets, specifications, measurements, site supervision, and final acceptance.",
+      "education": null,
+      "founding": null,
+      "name": "Ali",
+      "orderRank": 3,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Project Manager / Project Head",
+      "tier": "core"
+    },
+    {
+      "award": null,
+      "bio": "Over 15 years in interior fit-out works, Mustafa also runs his own construction company. He believes every finished project — big or small — is the product of a team, and that the right partnerships and respect for everyone's role are crucial in achieving a great result.",
+      "education": null,
+      "founding": null,
+      "name": "Mustafa",
+      "orderRank": 4,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Construction Partner / Project Head",
+      "tier": "core"
+    },
+    {
+      "award": null,
+      "bio": "Associated with Team Design since 2016, Taher's thesis on rehabilitation centres for widows introduced a social dimension to his practice that has never left.",
+      "education": null,
+      "founding": null,
+      "name": "Taher",
+      "orderRank": 5,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Junior Architect",
+      "tier": "core"
+    },
+    {
+      "award": null,
+      "bio": "Sarrah brings a meticulous and organised approach to both design coordination and operational flow within the studio.",
+      "education": null,
+      "founding": null,
+      "name": "Sarrah Patanwala",
+      "orderRank": 6,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Design & Operations",
+      "tier": "core"
+    },
+    {
+      "award": null,
+      "bio": null,
+      "education": null,
+      "founding": null,
+      "name": "Hamid",
+      "orderRank": 7,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Head of Transportation",
+      "tier": "operations"
+    },
+    {
+      "award": null,
+      "bio": null,
+      "education": null,
+      "founding": null,
+      "name": "Vijay",
+      "orderRank": 8,
+      "photoAlt": null,
+      "photoLqip": null,
+      "photoUrl": null,
+      "role": "Head of Day-to-Day Management",
+      "tier": "operations"
+    }
+  ]
+}

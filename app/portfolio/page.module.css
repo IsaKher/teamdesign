@@ -270,3 +270,202 @@
   font-family: var(--font-sans);
   font-size: var(--size-body);
 }
+
+/* ─── Refine bar (search + chips) ────────────────────────────────────────── */
+/* Sits under the primary type filters. Editorial quiet — no buttons, no
+   borders, just a hairline rule and small type. */
+
+.refineBar {
+  padding: 20px var(--margin-page) 24px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.refineRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.searchWrap {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-rule);
+  transition: border-color 0.2s ease;
+}
+
+.searchWrap:focus-within {
+  border-color: var(--color-text-primary);
+}
+
+.searchIcon {
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  color: var(--color-text-primary);
+  padding: 4px 0;
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.searchInput::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  background: var(--color-text-secondary);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 3l8 8M11 3l-8 8' stroke='%23000' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 3l8 8M11 3l-8 8' stroke='%23000' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  cursor: pointer;
+}
+
+.refineToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.refineToggle:hover { color: var(--color-text-primary); }
+.refineToggleOpen { color: var(--color-text-primary); }
+
+.refineCaret {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-text-secondary);
+}
+
+.refineDot {
+  position: absolute;
+  top: 4px;
+  right: -10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-secondary);
+}
+
+.clearAll {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.clearAll:hover { color: var(--color-text-primary); }
+
+/* Chip groups */
+.refinePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.chipGroup {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.chipGroupLabel {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding-top: 4px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.chipOn {
+  background: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-ground);
+}
+
+.chipOn:hover {
+  background: #2e2620;
+  border-color: #2e2620;
+}
+
+.resultCount {
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 700px) {
+  .refineBar { padding: 16px 24px 20px; }
+  .chipGroup { grid-template-columns: 1fr; gap: 8px; }
+  .searchWrap { min-width: 0; width: 100%; }
+}
+

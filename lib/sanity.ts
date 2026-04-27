@@ -3,8 +3,40 @@ import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import type { ContentBlock } from '@/lib/types';
+import snapshot from '@/lib/sanity-snapshot.json';
 
 export type { ContentBlock } from '@/lib/types';
+
+/**
+ * Resilience helper. Tries the Sanity fetch; on failure or empty result
+ * (when an empty fallback would mean "no content"), returns the build-time
+ * snapshot instead. Logs the fall-back so deploy logs make it obvious.
+ *
+ * The snapshot is captured by scripts/snapshot-sanity.mjs which runs as
+ * `prebuild`. If a snapshot couldn't be captured (Sanity also down at
+ * build time and no previous snapshot exists), we degrade to an empty
+ * shape rather than throwing.
+ */
+async function withFallback<T>(
+  key: keyof typeof snapshot,
+  fetcher: () => Promise<T>,
+  treatEmptyAsFailure = true,
+): Promise<T> {
+  try {
+    const fresh = await fetcher();
+    const isEmpty = treatEmptyAsFailure && (
+      (Array.isArray(fresh) && fresh.length === 0) ||
+      fresh === null ||
+      fresh === undefined
+    );
+    if (!isEmpty) return fresh;
+    console.warn(`[Sanity] '${String(key)}' returned empty — using snapshot from ${snapshot.builtAt ?? 'unknown build'}`);
+    return snapshot[key] as T;
+  } catch (err) {
+    console.error(`[Sanity] '${String(key)}' failed, using snapshot from ${snapshot.builtAt ?? 'unknown build'}:`, err);
+    return snapshot[key] as T;
+  }
+}
 
 // ─── Client ──────────────────────────────────────────────────────────────────
 
@@ -100,26 +132,14 @@ export interface SanitySiteSettings {
 
 /** Global site settings — contact info & stats */
 export async function getSiteSettings(): Promise<SanitySiteSettings | null> {
-  try {
-    return await client.fetch(
-      `*[_type == "siteSettings"][0] {
-        phone,
-        email,
-        whatsapp,
-        linkedinUrl,
-        instagramUrl,
-        yearsInPractice,
-        projectCount,
-        clientCount,
-        sqftCompleted
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-  } catch (err) {
-    console.error('[Sanity] getSiteSettings failed:', err);
-    return null;
-  }
+  return withFallback('settings', () => client.fetch(
+    `*[_type == "siteSettings"][0] {
+      phone, email, whatsapp, linkedinUrl, instagramUrl,
+      yearsInPractice, projectCount, clientCount, sqftCompleted
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ), false /* settings is a single object, falsy is OK */);
 }
 
 // ─── Jobs ─────────────────────────────────────────────────────────────────────
@@ -134,22 +154,13 @@ export interface SanityJob {
 
 /** Currently open job listings */
 export async function getJobs(): Promise<SanityJob[]> {
-  try {
-    return await client.fetch(
-      `*[_type == "job" && isOpen == true] | order(orderRank asc) {
-        title,
-        type,
-        duration,
-        brief,
-        linkedinUrl
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-  } catch (err) {
-    console.error('[Sanity] getJobs failed:', err);
-    return [];
-  }
+  return withFallback('jobs', () => client.fetch(
+    `*[_type == "job" && isOpen == true] | order(orderRank asc) {
+      title, type, duration, brief, linkedinUrl
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ), false /* an empty job list is a valid live state */);
 }
 
 export interface SanityTestimonial {
@@ -224,41 +235,28 @@ const CACHE_TAG = 'sanity';
 
 /** All project slugs — for generateStaticParams */
 export async function getAllProjectSlugs(): Promise<string[]> {
-  try {
-    return await client.fetch(
-      `*[_type == "project"].slug.current`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-  } catch (err) {
-    console.error('[Sanity] getAllProjectSlugs failed:', err);
-    return [];
-  }
+  return withFallback('projectSlugs', () => client.fetch(
+    `*[_type == "project"].slug.current`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
 }
 
 /** Full list for portfolio grid page — only published */
 export async function getAllProjects(): Promise<SanityProject[]> {
-  try {
-    const rows = await client.fetch(
-      `*[_type == "project" && isPublished != false] | order(orderRank asc) {
-        "slug": slug.current,
-        title,
-        client,
-        "type": projectType,
-        location,
-        year,
-        area,
-        "image": mainImage.asset->url,
-        "lqip": mainImage.asset->metadata.lqip
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-    return rows.map((p: SanityProject) => ({ ...p, image: thumbUrl(p.image) }));
-  } catch (err) {
-    console.error('[Sanity] getAllProjects failed:', err);
-    return [];
-  }
+  const rows = await withFallback<SanityProject[]>('projects', () => client.fetch(
+    `*[_type == "project" && isPublished != false] | order(orderRank asc) {
+      "slug": slug.current,
+      title, client, "type": projectType, location, year, area,
+      "image": mainImage.asset->url,
+      "lqip": mainImage.asset->metadata.lqip
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+  // The snapshot stores raw URLs; the live fetch does too. Apply thumb
+  // transformation either way so cards always get sized correctly.
+  return rows.map((p) => ({ ...p, image: thumbUrl(p.image) }));
 }
 
 /** Single project detail page.
@@ -350,48 +348,34 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
 
 /** Lightweight list for prev/next navigation — only published */
 export async function getAllProjectsForNav(): Promise<{ slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }[]> {
-  try {
-    const rows = await client.fetch(
-      `*[_type == "project" && isPublished != false] | order(orderRank asc) {
-        "slug": slug.current,
-        title,
-        "type": projectType,
-        location,
-        "mainImage": mainImage.asset->url,
-        "mainImageLqip": mainImage.asset->metadata.lqip
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-    return rows.map((item: { slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null }) => ({ ...item, mainImage: thumbUrl(item.mainImage) }));
-  } catch (err) {
-    console.error('[Sanity] getAllProjectsForNav failed:', err);
-    return [];
-  }
+  type NavRow = { slug: string; title: string; type: string; location: string; mainImage: string | null; mainImageLqip: string | null };
+  const rows = await withFallback<NavRow[]>('navProjects', () => client.fetch(
+    `*[_type == "project" && isPublished != false] | order(orderRank asc) {
+      "slug": slug.current,
+      title, "type": projectType, location,
+      "mainImage": mainImage.asset->url,
+      "mainImageLqip": mainImage.asset->metadata.lqip
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+  return rows.map((item) => ({ ...item, mainImage: thumbUrl(item.mainImage) }));
 }
 
 /** Featured projects for homepage grid — only published */
 export async function getFeaturedProjects(): Promise<SanityFeaturedProject[]> {
-  try {
-    const rows = await client.fetch(
-      `*[_type == "project" && isPublished != false && isFeatured == true] | order(orderRank asc) [0...4] {
-        "slug": slug.current,
-        title,
-        client,
-        "type": projectType,
-        location,
-        "image": mainImage.asset->url,
-        "lqip": mainImage.asset->metadata.lqip,
-        "tagline": shortDescription
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-    return rows.map((p: SanityFeaturedProject) => ({ ...p, image: thumbUrl(p.image) }));
-  } catch (err) {
-    console.error('[Sanity] getFeaturedProjects failed:', err);
-    return [];
-  }
+  const rows = await withFallback<SanityFeaturedProject[]>('featured', () => client.fetch(
+    `*[_type == "project" && isPublished != false && isFeatured == true] | order(orderRank asc) [0...4] {
+      "slug": slug.current,
+      title, client, "type": projectType, location,
+      "image": mainImage.asset->url,
+      "lqip": mainImage.asset->metadata.lqip,
+      "tagline": shortDescription
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+  return rows.map((p) => ({ ...p, image: thumbUrl(p.image) }));
 }
 
 // ─── Team Member types & query ───────────────────────────────────────────────
@@ -412,46 +396,30 @@ export interface SanityTeamMember {
 
 /** All team members ordered by display rank */
 export async function getTeamMembers(): Promise<SanityTeamMember[]> {
-  try {
-    const rows = await client.fetch(
-      `*[_type == "teamMember"] | order(orderRank asc) {
-        name,
-        role,
-        tier,
-        bio,
-        education,
-        award,
-        founding,
-        "photoUrl": photo.asset->url,
-        "photoAlt": photo.alt,
-        "photoLqip": photo.asset->metadata.lqip,
-        orderRank
-      }`,
-      {},
-      { next: { tags: [CACHE_TAG] } }
-    );
-    return rows.map((m: SanityTeamMember) => ({ ...m, photoUrl: thumbUrl(m.photoUrl) }));
-  } catch (err) {
-    console.error('[Sanity] getTeamMembers failed:', err);
-    return [];
-  }
+  const rows = await withFallback<SanityTeamMember[]>('teamMembers', () => client.fetch(
+    `*[_type == "teamMember"] | order(orderRank asc) {
+      name, role, tier, bio, education, award, founding,
+      "photoUrl": photo.asset->url,
+      "photoAlt": photo.alt,
+      "photoLqip": photo.asset->metadata.lqip,
+      orderRank
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+  return rows.map((m) => ({ ...m, photoUrl: thumbUrl(m.photoUrl) }));
 }
 
 /** Testimonials for homepage slider */
 export async function getTestimonials(): Promise<SanityTestimonial[]> {
-  try {
-    return await client.fetch(
-      `*[_type == "testimonial"] | order(orderRank asc) {
-        quote,
-        "name": clientName,
-        "title": clientTitle,
-        "project": projectName
-      }`,
-      {},
+  return withFallback<SanityTestimonial[]>('testimonials', () => client.fetch(
+    `*[_type == "testimonial"] | order(orderRank asc) {
+      quote,
+      "name": clientName,
+      "title": clientTitle,
+      "project": projectName
+    }`,
+    {},
       { next: { tags: [CACHE_TAG] } }
-    );
-  } catch (err) {
-    console.error('[Sanity] getTestimonials failed:', err);
-    return [];
-  }
+  ));
 }

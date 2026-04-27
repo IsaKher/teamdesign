@@ -1,0 +1,103 @@
+.section {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: calc(var(--nav-height) + 80px) var(--margin-page) 120px;
+}
+
+.inner {
+  max-width: 640px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+.italic {
+  font-style: italic;
+  color: #B8A898;
+  letter-spacing: 0.03em;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin-bottom: 56px;
+}
+
+/* Three suggested destinations — quiet rows, hairline rules */
+.links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-rule);
+}
+
+.linkPrimary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--color-rule);
+  text-decoration: none;
+  transition: padding-left 0.3s ease;
+}
+
+.linkPrimary:hover {
+  padding-left: 8px;
+}
+
+.linkLabel {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  letter-spacing: 0.005em;
+}
+
+.linkLabel::after {
+  content: ' →';
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-left: 6px;
+  transition: margin-left 0.3s ease;
+}
+
+.linkPrimary:hover .linkLabel::after {
+  margin-left: 12px;
+}
+
+.linkHint {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: calc(var(--nav-height) + 40px) 24px 80px;
+    min-height: auto;
+  }
+}

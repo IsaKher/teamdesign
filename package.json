@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/snapshot-sanity.mjs",
     "build": "next build",
     "start": "next start",
     "build-start": "next build && next start",

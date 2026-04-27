@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 
 interface ContactInfo {
@@ -22,7 +23,10 @@ function validateContact(name: string, email: string): FieldErrors {
 }
 
 export default function ContactClient({ contact }: { contact: ContactInfo }) {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const router = useRouter();
+  // No 'success' state — on success we navigate to /thank-you so analytics
+  // and conversion tools can attribute the goal to a distinct URL.
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
@@ -67,8 +71,10 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
         const err = await res.json();
         throw new Error(err.error || 'Submission failed');
       }
-      setStatus('success');
       form.reset();
+      // Hard navigation to a distinct URL — clean conversion-tracking signal,
+      // and the user can't double-submit by hitting back.
+      router.push('/thank-you');
     } catch (err: unknown) {
       clearTimeout(timeout);
       setStatus('error');
@@ -149,22 +155,11 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
         </div>
       </div>
 
-      {/* Contact form */}
+      {/* Contact form — on success the user is navigated to /thank-you */}
       <div className={styles.formCol}>
         <span className={styles.formLabel}>Send a Message</span>
 
-        {status === 'success' ? (
-          <div className={styles.successMessage}>
-            <p className={styles.successTitle}>Message received.</p>
-            <p className={styles.successText}>
-              Thank you — we&apos;ll be in touch within one business day. For a faster response, please WhatsApp us directly.
-            </p>
-            <a href={waLink} className={styles.successWhatsapp} target="_blank" rel="noopener noreferrer">
-              Continue on WhatsApp →
-            </a>
-          </div>
-        ) : (
-          <form className={styles.form} onSubmit={handleSubmit} noValidate data-contact-form>
+        <form className={styles.form} onSubmit={handleSubmit} noValidate data-contact-form>
             <input
               name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true"
               style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
@@ -265,7 +260,6 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
               {status === 'submitting' ? 'Sending...' : 'Send Message →'}
             </button>
           </form>
-        )}
       </div>
     </div>
   );
