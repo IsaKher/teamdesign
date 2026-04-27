@@ -144,7 +144,15 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('[Contact Form Error]', error);
+    // Structured JSON log — Vercel's log explorer treats one line per JSON
+    // object, so timestamp/route/error/stack become filterable fields.
+    console.error(JSON.stringify({
+      level: 'error',
+      timestamp: new Date().toISOString(),
+      route: '/api/contact',
+      error: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    }));
     return NextResponse.json(
       { error: 'Something went wrong. Please try calling or WhatsApp instead.' },
       { status: 500 }

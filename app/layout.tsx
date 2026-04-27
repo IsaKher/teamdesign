@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import SmoothScroll from '@/components/SmoothScroll';
 import CookieBanner from '@/components/CookieBanner';
+import ConsentGatedAnalytics from '@/components/ConsentGatedAnalytics';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
@@ -189,6 +190,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Footer />
         <WhatsAppButton />
         <CookieBanner />
+        {/* Mounts Vercel Analytics + Speed Insights only when the user has
+            consented via the cookie banner. */}
+        <ConsentGatedAnalytics />
       </body>
     </html>
   );
