@@ -263,6 +263,41 @@ export async function getAllProjects(): Promise<SanityProject[]> {
  *  Wrapped with React cache() so generateMetadata and the page component
  *  share the same result within one request — no double fetch to Sanity. */
 export const getProjectBySlug = cache(async function getProjectBySlug(slug: string): Promise<SanityProjectDetail | null> {
+  // Build a SanityProjectDetail from a raw snapshot entry.
+  // The snapshot stores the same field shape produced by the projectDetails
+  // GROQ query (raw CDN URLs, RawSanityBlock array) so the same transform
+  // pipeline applies. autoRelated is omitted — snapshot has no cross-project
+  // GROQ sub-query, so we simply return an empty array there.
+  function buildFromSnapshot(raw: Record<string, unknown>): SanityProjectDetail {
+    type GalleryItem = { url: string; alt: string | null; lqip?: string | null };
+    const gallery   = (raw.gallery      as GalleryItem[]      | null) ?? [];
+    const blocks    = (raw.contentBlocks as RawSanityBlock[]  | null) ?? [];
+    const related   = (raw.related      as Array<RelatedProjectCard & { image: string | null }> | null) ?? [];
+    return {
+      title:          raw.title        as string,
+      client:         raw.client       as string,
+      type:           raw.type         as string,
+      location:       raw.location     as string,
+      year:           raw.year         as number,
+      area:           raw.area         as string,
+      description:    raw.description  as string,
+      mainImage:      heroUrl(raw.mainImage    as string | null),
+      mainImageAlt:  (raw.mainImageAlt  as string | null) ?? null,
+      mainImageLqip: (raw.mainImageLqip as string | null) ?? null,
+      gallery:        gallery.filter((g) => g?.url).map((g) => ({ ...g, url: thumbUrl(g.url) ?? g.url })),
+      contentBlocks:  transformContentBlocks(blocks),
+      testimonial:   (raw.testimonial  as { quote: string; author: string; title: string } | null) ?? null,
+      related:        related.filter(Boolean).map((r) => ({ ...r, image: thumbUrl(r.image) })),
+      autoRelated:    [],
+    };
+  }
+
+  // Cast so TypeScript accepts projectDetails — it's present in the JSON
+  // once the prebuild snapshot script has run, but the inferred type lags
+  // until the next full compile cycle.
+  type SnapshotWithDetails = typeof snapshot & { projectDetails: Record<string, unknown> };
+  const snapshotDetails = (snapshot as SnapshotWithDetails).projectDetails ?? {};
+
   try {
     const raw = await client.fetch(
       `*[_type == "project" && slug.current == $slug][0] {
@@ -330,7 +365,16 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
       { next: { tags: [CACHE_TAG] } }
     );
 
-    if (!raw) return null;
+    if (!raw) {
+      // Sanity returned no document (quota can cause empty responses).
+      // Try the build-time snapshot before surfacing a 404.
+      const snapRaw = snapshotDetails[slug] as Record<string, unknown> | undefined;
+      if (snapRaw) {
+        console.warn(`[Sanity] getProjectBySlug('${slug}') returned null — using snapshot from ${snapshot.builtAt ?? 'unknown'}`);
+        return buildFromSnapshot(snapRaw);
+      }
+      return null;
+    }
 
     return {
       ...raw,
@@ -341,7 +385,12 @@ export const getProjectBySlug = cache(async function getProjectBySlug(slug: stri
       autoRelated: raw.autoRelated?.filter(Boolean).map((r: RelatedProjectCard) => ({ ...r, image: thumbUrl(r.image) })) ?? [],
     };
   } catch (err) {
-    console.error('[Sanity] getProjectBySlug failed:', err);
+    console.error(`[Sanity] getProjectBySlug('${slug}') failed:`, err);
+    const snapRaw = snapshotDetails[slug] as Record<string, unknown> | undefined;
+    if (snapRaw) {
+      console.warn(`[Sanity] getProjectBySlug('${slug}') using snapshot from ${snapshot.builtAt ?? 'unknown'}`);
+      return buildFromSnapshot(snapRaw);
+    }
     return null;
   }
 });

@@ -51,6 +51,36 @@ const queries = {
     "mainImage": mainImage.asset->url,
     "mainImageLqip": mainImage.asset->metadata.lqip
   }`,
+  // Full detail data for every project — used as fallback in getProjectBySlug
+  // when the runtime Sanity fetch fails (quota exceeded, outage, etc.)
+  projectDetails: `*[_type == "project" && isPublished != false] {
+    "slug": slug.current,
+    title, client, "type": projectType, location, year, area, description,
+    "mainImage": mainImage.asset->url,
+    "mainImageAlt": mainImage.alt,
+    "mainImageLqip": mainImage.asset->metadata.lqip,
+    "gallery": gallery[]{ "url": asset->url, "alt": alt, "lqip": asset->metadata.lqip },
+    "contentBlocks": contentBlocks[] {
+      _type, text,
+      "imageUrl": image.asset->url,
+      "imageAlt": image.alt,
+      "imageLqip": image.asset->metadata.lqip,
+      caption,
+      "imageLeftUrl": imageLeft.asset->url,
+      "imageLeftAlt": imageLeft.alt,
+      "imageLeftLqip": imageLeft.asset->metadata.lqip,
+      captionLeft,
+      "imageRightUrl": imageRight.asset->url,
+      "imageRightAlt": imageRight.alt,
+      "imageRightLqip": imageRight.asset->metadata.lqip,
+      captionRight
+    },
+    "testimonial": testimonial->{ quote, "author": clientName, "title": clientTitle },
+    "related": relatedProjects[]->{
+      "slug": slug.current, title, "type": projectType, location,
+      "image": mainImage.asset->url, "lqip": mainImage.asset->metadata.lqip
+    }
+  }`,
   featured: `*[_type == "project" && isPublished != false && isFeatured == true] | order(orderRank asc) [0...4] {
     "slug": slug.current,
     title, client, "type": projectType, location,
@@ -79,14 +109,20 @@ const queries = {
 
 async function main() {
   try {
-    const [projects, projectSlugs, navProjects, featured, settings, testimonials, jobs, teamMembers] =
+    const [projects, projectSlugs, navProjects, projectDetailsArr, featured, settings, testimonials, jobs, teamMembers] =
       await Promise.all(Object.values(queries).map((q) => client.fetch(q)));
+
+    // Store project details as a slug-keyed map for O(1) lookup at runtime
+    const projectDetails = Object.fromEntries(
+      projectDetailsArr.map((p) => [p.slug, p])
+    );
 
     const snapshot = {
       builtAt: new Date().toISOString(),
       projects,
       projectSlugs,
       navProjects,
+      projectDetails,
       featured,
       settings,
       testimonials,
@@ -96,7 +132,7 @@ async function main() {
 
     writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2));
 
-    const counts = `${projects.length} projects, ${testimonials.length} testimonials, ${teamMembers.length} team members, ${jobs.length} jobs`;
+    const counts = `${projects.length} projects (${projectDetailsArr.length} with detail), ${testimonials.length} testimonials, ${teamMembers.length} team members, ${jobs.length} jobs`;
     console.log(`[snapshot] ✓ ${counts} → lib/sanity-snapshot.json`);
   } catch (err) {
     const existing = existsSync(SNAPSHOT_PATH);
@@ -109,8 +145,8 @@ async function main() {
       // Write an empty skeleton so the import in lib/sanity.ts succeeds
       writeFileSync(SNAPSHOT_PATH, JSON.stringify({
         builtAt: null,
-        projects: [], projectSlugs: [], navProjects: [], featured: [],
-        settings: null, testimonials: [], jobs: [], teamMembers: [],
+        projects: [], projectSlugs: [], navProjects: [], projectDetails: {},
+        featured: [], settings: null, testimonials: [], jobs: [], teamMembers: [],
       }, null, 2));
     }
   }
