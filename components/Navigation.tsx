@@ -82,7 +82,7 @@ export default function Navigation({ phone = STUDIO.phone }: { phone?: string })
               src="/logo.png"
               alt="Team Design Architects"
               fill
-              sizes="152px"
+              sizes="200px"
               className={styles.logoImage}
               priority
             />
