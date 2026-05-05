@@ -1,12 +1,12 @@
 {
-  "builtAt": "2026-04-28T00:22:14.392Z",
+  "builtAt": "2026-05-05T22:13:20.293Z",
   "projects": [
     {
       "area": "150,000 sq ft",
       "client": "Mr. Ritesh Mandani",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/dd9fcd2f200b7b3a121458f9dffe88d88abb3b86-1500x1026.jpg",
       "location": "Raipur, Chhattisgarh",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAgX/xAAkEAACAgEEAAcBAAAAAAAAAAABAgMEAAUGETESExYhIjIzYf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAeEQACAQMFAAAAAAAAAAAAAAABAgADEZESExQiUv/aAAwDAQACEQMRAD8AY13de4NIvwparQvFY/OKLscYtDuDcNuOW1pcK14gxV0kfn5DvNvQv6vZgsX7ScRfUICO86Hp+kr+NTMpPYDng85mAdu1zmE0wF0mSi29wgsZbbl2JY8P7YZZro9ILx5RP9LHDJ8d/RzE2ln/2Q==",
       "slug": "wedding-destination-raipur",
       "title": "Wedding Destination",
       "type": "Commercial",
@@ -15,9 +15,9 @@
     {
       "area": "15,000 sq ft",
       "client": "Bengali Cultural Association",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/74f42b415d09b0f7bc8bbe27555e2f4cb5a4db3f-1920x1206.jpg",
       "location": "Kharghar, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHBAb/xAAgEAACAQMFAQEAAAAAAAAAAAABAwIABAUGERIhMRMU/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAdEQEAAgICAwAAAAAAAAAAAAABAAIDEQQUMZHw/9oADAMBAAIRAxEAPwDBhbXEX1vF6bsGEvCRtsabW+LtJNZEzh8ljkWk9AVO45MqgIKTCEB4AfKb426e9JBbIAjyqXdypBnFoeZ1LdJ6dysv0zyoWSOOwHXVFSHK6yvbO/bbrUswWeI3JoqXfI2sqfe4upjDWp//2Q==",
       "slug": "kalimata-mandir-navi-mumbai",
       "title": "Temple Building — Goddess Kali",
       "type": "Institutional",
@@ -26,9 +26,9 @@
     {
       "area": "1,500,000 sq ft",
       "client": "Institute of Technology and Management",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/b90231f629088654219340c11cc95c9ea343b7e5-902x677.jpg",
       "location": "Bicholim, Goa",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQT/xAAjEAACAQQBBAMBAAAAAAAAAAABAwIABAURBhIUIUEHUWFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJjI/IXKcqvtMm9aGK92511f2puHL8wgMxzb9k0S8mPon9rphxrMpzMA5CwXSECQ0Hdbmo8etrsW13bXXfJkYskuegJfn3QP+OuLsXCZlsknZ2TRS/GZa3VbdFndXIUCfE4RJ3RQf//Z",
       "slug": "service-industry-campus-goa",
       "title": "Service Industry Education Campus",
       "type": "Institutional",
@@ -37,9 +37,9 @@
     {
       "area": "15,000 sq ft",
       "client": "Private Clients",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/f7e4b14947f8f9bf348fb86061764cef7a1b8577-1920x1275.jpg",
       "location": "Lonavala, Maharashtra",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwYH/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIEAAMFEQYhEjFRE//EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABwRAAIDAAMBAAAAAAAAAAAAAAECAAMRBAUSUf/aAAwDAQACEQMRAD8AsgZWCAGY3VH0oac2OYYWMCGkMSvvSnqpCqylSq+OvWqyHMUtwmVLFpA0gbdyO9fKCdndYcybtxUUbseZDI8KyklpcyN+95wNuVPdFc8t8jvx0FoR4zBegTbFFRtsJ3yIAqfTP//Z",
       "slug": "mist-view-bungalows-lonavala",
       "title": "Mist View Bungalows",
       "type": "Bungalows",
@@ -48,9 +48,9 @@
     {
       "area": "85,000 sq ft",
       "client": "Institute of Technology and Management",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/05c3fa374fd15597e3d9784017df76c21f3e4742-1920x1380.jpg",
       "location": "Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAUGERITIRQiMUFRYdH/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhESMRP/2gAMAwEAAhEDEQA/AHpmmQu2piOIigHXV6O/isuCXiRNefYlr6ie6gD7d6Vl4yeXl1wdVFCYjEUAoChtR3XAScrlxHpbCX5KXD5QttfEg0cpvVrg6gs0+lhFccHRcSPrkKKifxlyUSXLvPKifXqH9oqvYHLP/9k=",
       "slug": "mba-hostel-towers-itm",
       "title": "MBA Hostel Towers — ITM",
       "type": "Institutional",
@@ -59,9 +59,9 @@
     {
       "area": "12,000 sq ft",
       "client": "Mr. Harsh Mariwala",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/4774e037cd4ebd3ad44601891a1a80cc4b11329d-1920x1440.jpg",
       "location": "Lonavala, Maharashtra",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAjEAABBAIBBAMBAAAAAAAAAAABAgMEBQARBwYTITESIjNB/8QAFQEBAQAAAAAAAAAAAAAAAAAABAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgADERIhMf/aAAwDAQACEQMRAD8AsHE17Wwrawk20lLCUfg0P6D7xlyNyFAmIYiwV/FhLgWs68kj1rFMXi12Nt2VYpSsjWkI2Bi2042ecWe1OCin1sawzWHli+RCVoV1z3M56jvEybeQ8PsFHYJGGTsOkbBqY62vtkpVrYUPOGVVEAEKwOz/2Q==",
       "slug": "mariwala-estate-annexe-lonavala",
       "title": "Mariwala Estate Annexe",
       "type": "Bungalows",
@@ -70,9 +70,9 @@
     {
       "area": "6,000 sq ft",
       "client": "Mr. S Merchant",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/ffde4260e7f01213e8f09048b6876337d2e25bcf-1200x750.jpg",
       "location": "Tirupur, India",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACMQAAMAAgECBwEAAAAAAAAAAAECAwAEBREiBhITISMxMkH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIDBBEh/9oADAMBAAIRAxEAPwCSNL7a0bTlJkmvmJZuhxXhln5Cuw+/sGbKpKzLAjKY8bCPqlDT5P13feRvx2vOzUmGVz/Q2HvPdv1lWFQh86TcEu8yevTtOGZr8PrUcsxqWJ9+84YyNypSRi9eW+n/2Q==",
       "slug": "villa-merchant-tirupur",
       "title": "Luxurious 5BHK Villa",
       "type": "Residential",
@@ -81,9 +81,9 @@
     {
       "area": "6,500 sq ft",
       "client": "J&K Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/e955d5027b5fe1e1962ed99dd65155a5ada00848-1920x1205.jpg",
       "location": "Samba, J&K State",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACYQAAIBAwIFBQEAAAAAAAAAAAECAwAEBREhBgcSE3EUFSIxMmH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AKhzJ4qymMlWPCyF7hHPdiYfpf5SG85lXEeJjTGSSe4IV7ySoSF1O4FVbIYW2vGPqVWTfbVdx4NKl4HxiSgga6nqPUoJPmpzS5hxg797rGxTM5LMNT50orfZWEdvAI0PxH1tRSkov//Z",
       "slug": "jk-bank-branch-samba",
       "title": "J&K Bank Branch Building",
       "type": "Commercial",
@@ -92,9 +92,9 @@
     {
       "area": "5,876 sq mt",
       "client": "Institute of Technology and Management",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/5eeb889b64c5afb2d8fd58e7164c82c43291209b-1920x1440.jpg",
       "location": "Kharghar, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAhEAACAQMEAwEAAAAAAAAAAAABAgMABAUGERITITFBUf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBBP/EABwRAAICAgMAAAAAAAAAAAAAAAASARECYQMTIf/aAAwDAQACEQMRAD8Atstrdr3J99pdyizI26/VJ81qom27IXKyKw88t9x+UkGLMYIjcHf4wrFe4h5LZ04AMTuGDeqPiZy5XbyyNilUVcGq8bLErScg/wBBFFc5bGSxMVErH77opHt0Z00f/9k=",
       "slug": "college-campus-extension-itm",
       "title": "College Campus Extension — ITM",
       "type": "Institutional",
@@ -114,9 +114,9 @@
     {
       "area": "20,000 sq ft",
       "client": "NRB Bearings",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/2e4d3758298853abe67168904e9589f36790439b-1000x750.jpg",
       "location": "Aurangabad, India",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHCP/EACIQAAEEAgIBBQAAAAAAAAAAAAMBAgQFABESIQYUMkFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAHBEAAgICAwAAAAAAAAAAAAAAAAERIQIDBBRB/9oADAMBAAIRAxEAPwCxmjFKZXOI3TU3vFiXYiFYKswm47umab3vJv4tcy4wSOmWE05Xr7efWMci5iT/AETTDIHgu3Ki7+MV8hqGqCWvG1kOVXJh2URJMMvMKqqIqfaYZnS4tbGqtJUWpsjBiIRXNb+4ZfeXshPQpo//2Q==",
       "slug": "nrb-bearings-guest-house-aurangabad",
       "title": "Guest House — NRB Bearings",
       "type": "Commercial",
@@ -125,9 +125,9 @@
     {
       "area": "75,000 sq ft",
       "client": "South Kanara Brahmin's Association",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
       "location": "Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
       "slug": "gokul-cultural-centre-mumbai",
       "title": "Gokul Cultural Centre",
       "type": "Institutional",
@@ -158,9 +158,9 @@
     {
       "area": "1,500 sq ft",
       "client": "Private Client",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/1f7ba619133ead0f71426b4e146b5443a0fd62b0-1200x750.jpg",
       "location": "Mandwa, Alibaug",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAgEAACAgICAgMAAAAAAAAAAAABAgMRAAQFEgYxISKx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDBP/EABkRAAIDAQAAAAAAAAAAAAAAAAARARIhUf/aAAwDAQACEQMRAD8AyqDd6TSmR40oUoZclyGxM0cbanRzf36rVDEPLSXyTIVUqBXrGfjrM0jqSQoHwB6zElpTELeQ5Db1tgxxq0ooHsPzDLQgRge0aE3VkYYWjgnJ/9k=",
       "slug": "glass-kitchen-alibaug",
       "title": "Glass Kitchen",
       "type": "Bungalows",
@@ -169,9 +169,9 @@
     {
       "area": "300,000 sq ft",
       "client": "Institute of Technology & Management",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/cb59a27300e0b4f523c8535154d48ea8f2fd4f15-1000x750.jpg",
       "location": "Kamptee, Nagpur",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEBf/EACAQAAEEAgIDAQAAAAAAAAAAAAECAwQFABEGIRQxQWH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwX/xAAaEQACAwEBAAAAAAAAAAAAAAABAgADEgQR/9oADAMBAAIRAxEAPwAxJ5NZUjcaVAd29sJUF9gg50jzu1tE+PJcbS2r2UDRwJbS1WNY22wgodSsDsjMNJFmRnyH39pKjr7hFcrXmVetXs17FtlaWKJSgxKWEaHW8sOzS+JCtr3+5YHTma6nmAAM/9k=",
       "slug": "college-engineering-management-nagpur",
       "title": "College for Engineering & Management",
       "type": "Institutional",
@@ -180,9 +180,9 @@
     {
       "area": "3,000 sq ft",
       "client": "Mr. Y Sulliya",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/017035ddcb7cb98cfed9620047b32e7371c8e1a6-1000x750.jpg",
       "location": "Ahmedabad",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQRAAUGBxIxYSEiMv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMREiFB/9oADAMBAAIRAxEAPwBKdyblc6LDg8fceDKEV2IULKQPN4jpN9u9G9IXMkobdfFG3Ao2PWai8gSwtJERpKkeCgVk9uIUHZ7YzCktH4+guveBqx27l1ROMtIPUl5uKhOxbQuSP0q6vDJ6cnWIcQGISCnsFkk+cMQsvrMzjdz/2Q==",
       "slug": "bungalow-ahmedabad",
       "title": "Bungalow in Ahmedabad",
       "type": "Bungalows",
@@ -191,9 +191,9 @@
     {
       "area": "8,000 sq ft",
       "client": "Mr. Gautam Bhandari",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/73dff28e874e32e92031e96fe53bfb4ceed6c128-1200x750.jpg",
       "location": "Bhinmal, Rajasthan",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGBAX/xAAkEAACAgIBAwQDAAAAAAAAAAABAgMEABEFBhMhEhQiMSNx8f/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABwRAAEDBQAAAAAAAAAAAAAAAAABAhESISIxQf/aAAwDAQACEQMRAD8AjOb6lNa1Aa0JlquAS4Pn+Zo5Hm4k9o9CN54pN9wsdaxOKdY7KN2omCRlFVl2AP1nUNvQAFetofX4/rBdUlpKxXhI2usmSw6x1/iDobG8Me7WjltSuR6SW3pfAwzQ3SSAf//Z",
       "slug": "bhandari-house-bhinmal",
       "title": "Bhandari House",
       "type": "Bungalows",
@@ -202,9 +202,9 @@
     {
       "area": "10,000 sq ft",
       "client": "Venus Wires",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
       "location": "Khopoli, Maharashtra",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
       "slug": "venus-wires-office-khopoli",
       "title": "Building for Precision Metals — Venus Wires",
       "type": "Commercial",
@@ -213,9 +213,9 @@
     {
       "area": "6,500 sq ft",
       "client": "Jammu & Kashmir Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/8bf46e43e23a00d3001f42149843452056bc1af4-1200x900.jpg",
       "location": "Srinagar, J&K",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCBQYH/8QAIhAAAgEEAgIDAQAAAAAAAAAAAQIDAAQFEQYSITEWIlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIREzFB/9oADAMBAAIRAxEAPwC+uLuS0ZPMYjbwo7VHK8ts8XjYpepk7kj+EilRhYbyKKWVmZW869VnuV8TW4tkt2uZI4kYshB3on9qKZp4T4VU576PfPZ5vurIin0NborkUmMyNu7Rxyd0U6DFvYopdAW0/9k=",
       "slug": "womens-bank-branch-srinagar",
       "title": "Women's Bank Branch — J&K Bank",
       "type": "Institutional",
@@ -224,9 +224,9 @@
     {
       "area": "1,500 sq ft",
       "client": "Mumbai Builder",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/facc80cb969d23935581204bcf5e800270cea1a8-1920x1281.jpg",
       "location": "Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAUH/8QAIxAAAQMDAwUBAAAAAAAAAAAAAQIDBAAFBhESIQcUIjFRQf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGREAAwEBAQAAAAAAAAAAAAAAAAECEQNB/9oADAMBAAIRAxEAPwBzt1zhphKiqLZCdfH4aQslyKK86uOElG3gjdV7p8W7rfbqzJaGkdQKSk8nX7WzneM2hyCqT2gTIJCd6DoaiVL9LENacrd6mXGOsssLabbb8QkIH5RUZ+AwO5UUyHwDzp7op105YC4vT//Z",
       "slug": "show-flat-mumbai",
       "title": "Show Flat",
       "type": "Residential",
@@ -235,9 +235,9 @@
     {
       "area": "6,500 sq ft",
       "client": "Unilazer Ventures Pvt Ltd & Swades Foundation",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/f93a17de2f930cfd0198d55914ff1b4d5bf4fcd2-1920x1281.jpg",
       "location": "Worli, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAnEAABAwIEBQUAAAAAAAAAAAABAgMEABEFEhMxBhQVISIjQVFxgf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBA//EABsRAAIDAAMAAAAAAAAAAAAAAAABAgMRITFh/9oADAMBAAIRAxEAPwC2zEbXFD1zb3uLUqRHb0A4U5UbZiaw86pWHLZJOmpJBF6532E9GhMXUUI+Tv8AdDK2GPEKOqTa5ImKY1FjSQyPLIkC4HailcQRWeeT4AemNv2ioprOjTPT/9k=",
       "slug": "unilazer-ventures-office",
       "title": "Office for Unilazer Ventures",
       "type": "Commercial",
@@ -246,9 +246,9 @@
     {
       "area": "70,000 sq ft",
       "client": "Jammu & Kashmir Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/2e0db01857b20488141650d22bd0c50086aea265-1920x1281.jpg",
       "location": "Bandra Kurla Complex, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAlEAABAwMDAwUAAAAAAAAAAAACAQMEAAUhBhESEzFRFBUiMtH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAISAyH/2gAMAwEAAhEDEQA/AGbrTSUCdaXpZ4JkFJFFc7eKwcLS9n9xhk6WzfR6q8ixjzVzqDU8yZYJLpIIN/VGhwiftK20amkSLtEA2h4IXEk5YJN+y1lWduglvGy18Y8ohxXGE9IrJsj8UUSxiiptpiQ0gNE1FbbE05cR7b0U2SE2Z//Z",
       "slug": "jk-bank-nbc-bkc",
       "title": "National Business Centre — J&K Bank",
       "type": "Commercial",
@@ -257,9 +257,9 @@
     {
       "area": "4,000 sq ft",
       "client": "Jammu & Kashmir Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/d7c225a826060b1731bd66f1c9316ed696f3552e-1920x1440.jpg",
       "location": "Shopian, J&K",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACcQAAEDAwIEBwAAAAAAAAAAAAECAwQABREGEhMhJDEUIjJBUYGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAbEQADAAIDAAAAAAAAAAAAAAAAAQISITFBUf/aAAwDAQACEQMRAD8A0NR3iO+hMa4xA/klAUTzSR8GsSFpS2zJvTylqQT6CcY+6itCDqCM881H4DJUeECvJGe9VTXFWWDbG7Y11JUfGFZzuGeWDUVTNN9Dp0khLtpi2sTVNuDCh38279optSS0Trlx2Ya2gpA3JDoxu96KDB+jqtcH/9k=",
       "slug": "high-networth-branch-shopian",
       "title": "High Networth Bank Branch",
       "type": "Concept",
@@ -268,9 +268,9 @@
     {
       "area": "13,000 sq ft",
       "client": "HDFC Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/566610b42a79406020cd20a59011c63ea8a4d32e-1920x1281.jpg",
       "location": "Narhwal, Jammu",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHBf/EACEQAAICAwABBQEAAAAAAAAAAAECAwQABREhBhYiMVFC/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEBf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhEhAzH/2gAMAwEAAhEDEQA/AK5V0db27HemnRCyk8Y86fzJ96psT1iErJCGZgqsx7zuaVwyW4Iqc00hrhB8O+MU3WtgshGYFXXhDA/mZ/SF7HCuLa9Jvs9jtal6WGawhZT/ACvjmGM7fTiXYzOZ36x79YYHHRqarT//2Q==",
       "slug": "hdfc-bank-office-jammu",
       "title": "HDFC Bank Corporate Office",
       "type": "Commercial",
@@ -279,9 +279,9 @@
     {
       "area": "15,000 sq ft",
       "client": "Indian Family",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/a61cbe81d4e2c36c3dd0fcb3dd817b9026307572-1920x1281.jpg",
       "location": "Thane",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACIQAAIBBAICAwEAAAAAAAAAAAEDAgAEBREGEiFRFCIkcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEhETUf/aAAwDAQACEQMRAD8AoaeVYuLVQbKQm46hHrrdMbnLoYqYZcxSqI2RHwNf2sfLsJbOWp6PzsSN7hEfYeqlGOyTszyKdhIlNkoklUTvvr2aC40WWLUrsolxkcaGHq5cx77iikjOO42czL48QT5OqKPsXCtT/9k=",
       "slug": "garden-glory-penthouse-thane",
       "title": "Garden Glory Penthouse",
       "type": "Residential",
@@ -290,9 +290,9 @@
     {
       "area": "2,500 sq ft",
       "client": "Jammu & Kashmir Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/c136687ca049ae36542c19a848d8f52a88d8bc2e-1263x823.jpg",
       "location": "Airport Terminal, Srinagar",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAFB//EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQFABEHBhITMSFRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgAREjFBUf/aAAwDAQACEQMRAD8AfczyGqmpggNhyQ2olI3rasD1HUtvLofPGiyklpfa4sfIH2Mb81xZAdY1LHhJUotloE7/AHeZPD00XFE9WvsNoC3yC6n3gspLZHEVchb7nTumqdM+hgylyHO51oKO/e8sT1NaxW17MSOD42xodx2csTI8h3P/2Q==",
       "slug": "airport-lounge-srinagar",
       "title": "Executive Airport Lounge — J&K Bank",
       "type": "Concept",
@@ -301,9 +301,9 @@
     {
       "area": "10,000 sq ft",
       "client": "Private Client",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/07978e7e6f1dec9424a65dfb6a3d3eaed454a7c5-1920x1281.jpg",
       "location": "Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBv/EACIQAAEEAgIBBQAAAAAAAAAAAAECAwQRAAUGEiETFDEycf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhFBITH/2gAMAwEAAhEDEQA/ANBxXmb07XkSI7TTlilEEgjHuu370uXNLi4jcVpAKHFGheT7h3LXmOPvh2Iw9QDabFUMX7QHaa2Y0kmO27R6o8hP5gThxDwdN0VHV801xij3syP64UQa+MMh0CGxHjhvoV9T9lHycM2q0vcP/9k=",
       "slug": "exclusive-villa-mumbai",
       "title": "Exclusive Villa",
       "type": "Residential",
@@ -312,9 +312,9 @@
     {
       "area": "2,000 sq ft",
       "client": "J&K Bank",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/bae88a035bcd39048e4d23fe792b1290bb774fdc-1500x900.jpg",
       "location": "Lal Chowk, Srinagar",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAf/xAAgEAACAQQCAwEAAAAAAAAAAAABAgADBBEhE0EFImEx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIEBf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/ANgbyN0Lm4wXKldZ2M/IgvS9NOakreuyR3EK4YnJ39kDqMzNzkGoSSxu+SnU6w5GISzQACaA/YR1OwL/2Q==",
       "slug": "electronic-bank-lobby-srinagar",
       "title": "Electronic Bank Lobby — J&K Bank",
       "type": "Concept",
@@ -323,9 +323,9 @@
     {
       "area": "2,600 sq mt",
       "client": "Mr. Kishore Mariwala",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/d4b5bf331dce70a98e80ce22e960be8a176e94ca-1715x1139.jpg",
       "location": "Kemps Corner, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUIBv/EACIQAAIBBAIBBQAAAAAAAAAAAAECAwAEBRESIQYHExUigf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGxEAAgIDAQAAAAAAAAAAAAAAAREAAgMhMRL/2gAMAwEAAhEDEQA/AFWel+OtWurRSpWVVCt2pBNa3jj1ihknujsKGdVQnQ/KnvM+bZl7mIrOqIDvgF6p9ceo2Xt8YYuMRkkjBEoHFloNcSAe469iWtSgLpLJ/aktZlkheMMrHqipJkzGXDbGTuQG+2gx63RVzio+Q49rs//Z",
       "slug": "kishore-mariwala-home-mumbai",
       "title": "Contemporary Modern Home",
       "type": "Residential",
@@ -334,9 +334,9 @@
     {
       "area": "3,500 sq mt",
       "client": "Gordon Serrao",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/5d4bac0a6fc5fb3c08b0cfd566b010e76e55237a-1920x1281.jpg",
       "location": "Vashi, Mumbai",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACMQAAIBAwQBBQAAAAAAAAAAAAECAwAEBQYREiETIjFBUXH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAQL/xAAbEQEAAQUBAAAAAAAAAAAAAAABAAIREiFBA//aAAwDAQACEQMRAD8An30ssOQyc1gVLxHn4nfYMPoU5FmZctoa6yapFbSRKwCjs7ilLXAwZfL3clzI4Ak24r1V3L6SsI8FK1oXtwoIKKfS36KK8sU2XtEqlO9mM05kbkYeBpZhKzgvuffv4orOoWt18UbEIvQAorTg8kSq+mf/2Q==",
       "slug": "gordon-serrao-home-navi-mumbai",
       "title": "Classic Modern Home",
       "type": "Residential",
@@ -345,9 +345,9 @@
     {
       "area": "20,000 sq mt",
       "client": "Mr. N Suryavanshi",
-      "image": null,
+      "image": "https://cdn.sanity.io/images/il220i1c/production/9896d59dd62a8c1f9801d109496b905bf18e0f48-1920x1275.jpg",
       "location": "Vadodara, India",
-      "lqip": null,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwf/xAAiEAABBAIBBQEBAAAAAAAAAAABAgMEBQAREgYUITFhE0H/xAAVAQEBAAAAAAAAAAAAAAAAAAAEA//EABwRAAICAgMAAAAAAAAAAAAAAAABAxECUSExwf/aAAwDAQACEQMRAD8AZq6ygg21o9WtjiHilscPHj+DFerb4w6yVIYja/IaPP0c1iw3I1lYq7graRJWUt8QBs/cl+uZTqqR9DiuaSd6PrBT2pKQqN4ZRLfPhzyT1DbTX1vM9uhBOgMMnZK0qeJDaU/E+BhiUlXRBt7P/9k=",
       "slug": "cinemarc-cinema-theatre",
       "title": "Cinemarc Cinema Theatre",
       "type": "Commercial",
@@ -475,72 +475,72 @@
   "navProjects": [
     {
       "location": "Raipur, Chhattisgarh",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/dd9fcd2f200b7b3a121458f9dffe88d88abb3b86-1500x1026.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAgX/xAAkEAACAgEEAAcBAAAAAAAAAAABAgMEAAUGETESExYhIjIzYf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAeEQACAQMFAAAAAAAAAAAAAAABAgADEZESExQiUv/aAAwDAQACEQMRAD8AY13de4NIvwparQvFY/OKLscYtDuDcNuOW1pcK14gxV0kfn5DvNvQv6vZgsX7ScRfUICO86Hp+kr+NTMpPYDng85mAdu1zmE0wF0mSi29wgsZbbl2JY8P7YZZro9ILx5RP9LHDJ8d/RzE2ln/2Q==",
       "slug": "wedding-destination-raipur",
       "title": "Wedding Destination",
       "type": "Commercial"
     },
     {
       "location": "Kharghar, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/74f42b415d09b0f7bc8bbe27555e2f4cb5a4db3f-1920x1206.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHBAb/xAAgEAACAQMFAQEAAAAAAAAAAAABAwIABAUGERIhMRMU/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAdEQEAAgICAwAAAAAAAAAAAAABAAIDEQQUMZHw/9oADAMBAAIRAxEAPwDBhbXEX1vF6bsGEvCRtsabW+LtJNZEzh8ljkWk9AVO45MqgIKTCEB4AfKb426e9JBbIAjyqXdypBnFoeZ1LdJ6dysv0zyoWSOOwHXVFSHK6yvbO/bbrUswWeI3JoqXfI2sqfe4upjDWp//2Q==",
       "slug": "kalimata-mandir-navi-mumbai",
       "title": "Temple Building — Goddess Kali",
       "type": "Institutional"
     },
     {
       "location": "Bicholim, Goa",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/b90231f629088654219340c11cc95c9ea343b7e5-902x677.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQT/xAAjEAACAQQBBAMBAAAAAAAAAAABAwIABAURBhIUIUEHUWFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJjI/IXKcqvtMm9aGK92511f2puHL8wgMxzb9k0S8mPon9rphxrMpzMA5CwXSECQ0Hdbmo8etrsW13bXXfJkYskuegJfn3QP+OuLsXCZlsknZ2TRS/GZa3VbdFndXIUCfE4RJ3RQf//Z",
       "slug": "service-industry-campus-goa",
       "title": "Service Industry Education Campus",
       "type": "Institutional"
     },
     {
       "location": "Lonavala, Maharashtra",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f7e4b14947f8f9bf348fb86061764cef7a1b8577-1920x1275.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwYH/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIEAAMFEQYhEjFRE//EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABwRAAIDAAMBAAAAAAAAAAAAAAECAAMRBAUSUf/aAAwDAQACEQMRAD8AsgZWCAGY3VH0oac2OYYWMCGkMSvvSnqpCqylSq+OvWqyHMUtwmVLFpA0gbdyO9fKCdndYcybtxUUbseZDI8KyklpcyN+95wNuVPdFc8t8jvx0FoR4zBegTbFFRtsJ3yIAqfTP//Z",
       "slug": "mist-view-bungalows-lonavala",
       "title": "Mist View Bungalows",
       "type": "Bungalows"
     },
     {
       "location": "Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/05c3fa374fd15597e3d9784017df76c21f3e4742-1920x1380.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAUGERITIRQiMUFRYdH/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhESMRP/2gAMAwEAAhEDEQA/AHpmmQu2piOIigHXV6O/isuCXiRNefYlr6ie6gD7d6Vl4yeXl1wdVFCYjEUAoChtR3XAScrlxHpbCX5KXD5QttfEg0cpvVrg6gs0+lhFccHRcSPrkKKifxlyUSXLvPKifXqH9oqvYHLP/9k=",
       "slug": "mba-hostel-towers-itm",
       "title": "MBA Hostel Towers — ITM",
       "type": "Institutional"
     },
     {
       "location": "Lonavala, Maharashtra",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/4774e037cd4ebd3ad44601891a1a80cc4b11329d-1920x1440.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAjEAABBAIBBAMBAAAAAAAAAAABAgMEBQARBwYTITESIjNB/8QAFQEBAQAAAAAAAAAAAAAAAAAABAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgADERIhMf/aAAwDAQACEQMRAD8AsHE17Wwrawk20lLCUfg0P6D7xlyNyFAmIYiwV/FhLgWs68kj1rFMXi12Nt2VYpSsjWkI2Bi2042ecWe1OCin1sawzWHli+RCVoV1z3M56jvEybeQ8PsFHYJGGTsOkbBqY62vtkpVrYUPOGVVEAEKwOz/2Q==",
       "slug": "mariwala-estate-annexe-lonavala",
       "title": "Mariwala Estate Annexe",
       "type": "Bungalows"
     },
     {
       "location": "Tirupur, India",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/ffde4260e7f01213e8f09048b6876337d2e25bcf-1200x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACMQAAMAAgECBwEAAAAAAAAAAAECAwAEBREiBhITISMxMkH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIDBBEh/9oADAMBAAIRAxEAPwCSNL7a0bTlJkmvmJZuhxXhln5Cuw+/sGbKpKzLAjKY8bCPqlDT5P13feRvx2vOzUmGVz/Q2HvPdv1lWFQh86TcEu8yevTtOGZr8PrUcsxqWJ9+84YyNypSRi9eW+n/2Q==",
       "slug": "villa-merchant-tirupur",
       "title": "Luxurious 5BHK Villa",
       "type": "Residential"
     },
     {
       "location": "Samba, J&K State",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/e955d5027b5fe1e1962ed99dd65155a5ada00848-1920x1205.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACYQAAIBAwIFBQEAAAAAAAAAAAECAwAEBREhBgcSE3EUFSIxMmH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AKhzJ4qymMlWPCyF7hHPdiYfpf5SG85lXEeJjTGSSe4IV7ySoSF1O4FVbIYW2vGPqVWTfbVdx4NKl4HxiSgga6nqPUoJPmpzS5hxg797rGxTM5LMNT50orfZWEdvAI0PxH1tRSkov//Z",
       "slug": "jk-bank-branch-samba",
       "title": "J&K Bank Branch Building",
       "type": "Commercial"
     },
     {
       "location": "Kharghar, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/5eeb889b64c5afb2d8fd58e7164c82c43291209b-1920x1440.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAhEAACAQMEAwEAAAAAAAAAAAABAgMABAUGERITITFBUf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBBP/EABwRAAICAgMAAAAAAAAAAAAAAAASARECYQMTIf/aAAwDAQACEQMRAD8Atstrdr3J99pdyizI26/VJ81qom27IXKyKw88t9x+UkGLMYIjcHf4wrFe4h5LZ04AMTuGDeqPiZy5XbyyNilUVcGq8bLErScg/wBBFFc5bGSxMVErH77opHt0Z00f/9k=",
       "slug": "college-campus-extension-itm",
       "title": "College Campus Extension — ITM",
       "type": "Institutional"
@@ -555,16 +555,16 @@
     },
     {
       "location": "Aurangabad, India",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/2e4d3758298853abe67168904e9589f36790439b-1000x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHCP/EACIQAAEEAgIBBQAAAAAAAAAAAAMBAgQFABESIQYUMkFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAHBEAAgICAwAAAAAAAAAAAAAAAAERIQIDBBRB/9oADAMBAAIRAxEAPwCxmjFKZXOI3TU3vFiXYiFYKswm47umab3vJv4tcy4wSOmWE05Xr7efWMci5iT/AETTDIHgu3Ki7+MV8hqGqCWvG1kOVXJh2URJMMvMKqqIqfaYZnS4tbGqtJUWpsjBiIRXNb+4ZfeXshPQpo//2Q==",
       "slug": "nrb-bearings-guest-house-aurangabad",
       "title": "Guest House — NRB Bearings",
       "type": "Commercial"
     },
     {
       "location": "Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
       "slug": "gokul-cultural-centre-mumbai",
       "title": "Gokul Cultural Centre",
       "type": "Institutional"
@@ -587,144 +587,144 @@
     },
     {
       "location": "Mandwa, Alibaug",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/1f7ba619133ead0f71426b4e146b5443a0fd62b0-1200x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAgEAACAgICAgMAAAAAAAAAAAABAgMRAAQFEgYxISKx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDBP/EABkRAAIDAQAAAAAAAAAAAAAAAAARARIhUf/aAAwDAQACEQMRAD8AyqDd6TSmR40oUoZclyGxM0cbanRzf36rVDEPLSXyTIVUqBXrGfjrM0jqSQoHwB6zElpTELeQ5Db1tgxxq0ooHsPzDLQgRge0aE3VkYYWjgnJ/9k=",
       "slug": "glass-kitchen-alibaug",
       "title": "Glass Kitchen",
       "type": "Bungalows"
     },
     {
       "location": "Kamptee, Nagpur",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/cb59a27300e0b4f523c8535154d48ea8f2fd4f15-1000x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEBf/EACAQAAEEAgIDAQAAAAAAAAAAAAECAwQFABEGIRQxQWH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwX/xAAaEQACAwEBAAAAAAAAAAAAAAABAgADEgQR/9oADAMBAAIRAxEAPwAxJ5NZUjcaVAd29sJUF9gg50jzu1tE+PJcbS2r2UDRwJbS1WNY22wgodSsDsjMNJFmRnyH39pKjr7hFcrXmVetXs17FtlaWKJSgxKWEaHW8sOzS+JCtr3+5YHTma6nmAAM/9k=",
       "slug": "college-engineering-management-nagpur",
       "title": "College for Engineering & Management",
       "type": "Institutional"
     },
     {
       "location": "Ahmedabad",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/017035ddcb7cb98cfed9620047b32e7371c8e1a6-1000x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQRAAUGBxIxYSEiMv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMREiFB/9oADAMBAAIRAxEAPwBKdyblc6LDg8fceDKEV2IULKQPN4jpN9u9G9IXMkobdfFG3Ao2PWai8gSwtJERpKkeCgVk9uIUHZ7YzCktH4+guveBqx27l1ROMtIPUl5uKhOxbQuSP0q6vDJ6cnWIcQGISCnsFkk+cMQsvrMzjdz/2Q==",
       "slug": "bungalow-ahmedabad",
       "title": "Bungalow in Ahmedabad",
       "type": "Bungalows"
     },
     {
       "location": "Bhinmal, Rajasthan",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/73dff28e874e32e92031e96fe53bfb4ceed6c128-1200x750.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGBAX/xAAkEAACAgIBAwQDAAAAAAAAAAABAgMEABEFBhMhEhQiMSNx8f/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABwRAAEDBQAAAAAAAAAAAAAAAAABAhESISIxQf/aAAwDAQACEQMRAD8AjOb6lNa1Aa0JlquAS4Pn+Zo5Hm4k9o9CN54pN9wsdaxOKdY7KN2omCRlFVl2AP1nUNvQAFetofX4/rBdUlpKxXhI2usmSw6x1/iDobG8Me7WjltSuR6SW3pfAwzQ3SSAf//Z",
       "slug": "bhandari-house-bhinmal",
       "title": "Bhandari House",
       "type": "Bungalows"
     },
     {
       "location": "Khopoli, Maharashtra",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
       "slug": "venus-wires-office-khopoli",
       "title": "Building for Precision Metals — Venus Wires",
       "type": "Commercial"
     },
     {
       "location": "Srinagar, J&K",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/8bf46e43e23a00d3001f42149843452056bc1af4-1200x900.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCBQYH/8QAIhAAAgEEAgIDAQAAAAAAAAAAAQIDAAQFEQYSITEWIlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIREzFB/9oADAMBAAIRAxEAPwC+uLuS0ZPMYjbwo7VHK8ts8XjYpepk7kj+EilRhYbyKKWVmZW869VnuV8TW4tkt2uZI4kYshB3on9qKZp4T4VU576PfPZ5vurIin0NborkUmMyNu7Rxyd0U6DFvYopdAW0/9k=",
       "slug": "womens-bank-branch-srinagar",
       "title": "Women's Bank Branch — J&K Bank",
       "type": "Institutional"
     },
     {
       "location": "Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/facc80cb969d23935581204bcf5e800270cea1a8-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAUH/8QAIxAAAQMDAwUBAAAAAAAAAAAAAQIDBAAFBhESIQcUIjFRQf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGREAAwEBAQAAAAAAAAAAAAAAAAECEQNB/9oADAMBAAIRAxEAPwBzt1zhphKiqLZCdfH4aQslyKK86uOElG3gjdV7p8W7rfbqzJaGkdQKSk8nX7WzneM2hyCqT2gTIJCd6DoaiVL9LENacrd6mXGOsssLabbb8QkIH5RUZ+AwO5UUyHwDzp7op105YC4vT//Z",
       "slug": "show-flat-mumbai",
       "title": "Show Flat",
       "type": "Residential"
     },
     {
       "location": "Worli, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f93a17de2f930cfd0198d55914ff1b4d5bf4fcd2-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAnEAABAwIEBQUAAAAAAAAAAAABAgMEABEFEhMxBhQVISIjQVFxgf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBA//EABsRAAIDAAMAAAAAAAAAAAAAAAABAgMRITFh/9oADAMBAAIRAxEAPwC2zEbXFD1zb3uLUqRHb0A4U5UbZiaw86pWHLZJOmpJBF6532E9GhMXUUI+Tv8AdDK2GPEKOqTa5ImKY1FjSQyPLIkC4HailcQRWeeT4AemNv2ioprOjTPT/9k=",
       "slug": "unilazer-ventures-office",
       "title": "Office for Unilazer Ventures",
       "type": "Commercial"
     },
     {
       "location": "Bandra Kurla Complex, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/2e0db01857b20488141650d22bd0c50086aea265-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAlEAABAwMDAwUAAAAAAAAAAAACAQMEAAUhBhESEzFRFBUiMtH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAISAyH/2gAMAwEAAhEDEQA/AGbrTSUCdaXpZ4JkFJFFc7eKwcLS9n9xhk6WzfR6q8ixjzVzqDU8yZYJLpIIN/VGhwiftK20amkSLtEA2h4IXEk5YJN+y1lWduglvGy18Y8ohxXGE9IrJsj8UUSxiiptpiQ0gNE1FbbE05cR7b0U2SE2Z//Z",
       "slug": "jk-bank-nbc-bkc",
       "title": "National Business Centre — J&K Bank",
       "type": "Commercial"
     },
     {
       "location": "Shopian, J&K",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/d7c225a826060b1731bd66f1c9316ed696f3552e-1920x1440.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACcQAAEDAwIEBwAAAAAAAAAAAAECAwQABREGEhMhJDEUIjJBUYGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAbEQADAAIDAAAAAAAAAAAAAAAAAQISITFBUf/aAAwDAQACEQMRAD8A0NR3iO+hMa4xA/klAUTzSR8GsSFpS2zJvTylqQT6CcY+6itCDqCM881H4DJUeECvJGe9VTXFWWDbG7Y11JUfGFZzuGeWDUVTNN9Dp0khLtpi2sTVNuDCh38279optSS0Trlx2Ya2gpA3JDoxu96KDB+jqtcH/9k=",
       "slug": "high-networth-branch-shopian",
       "title": "High Networth Bank Branch",
       "type": "Concept"
     },
     {
       "location": "Narhwal, Jammu",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/566610b42a79406020cd20a59011c63ea8a4d32e-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHBf/EACEQAAICAwABBQEAAAAAAAAAAAECAwQABREhBhYiMVFC/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEBf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhEhAzH/2gAMAwEAAhEDEQA/AK5V0db27HemnRCyk8Y86fzJ96psT1iErJCGZgqsx7zuaVwyW4Iqc00hrhB8O+MU3WtgshGYFXXhDA/mZ/SF7HCuLa9Jvs9jtal6WGawhZT/ACvjmGM7fTiXYzOZ36x79YYHHRqarT//2Q==",
       "slug": "hdfc-bank-office-jammu",
       "title": "HDFC Bank Corporate Office",
       "type": "Commercial"
     },
     {
       "location": "Thane",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/a61cbe81d4e2c36c3dd0fcb3dd817b9026307572-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACIQAAIBBAICAwEAAAAAAAAAAAEDAgAEBREGEiFRFCIkcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEhETUf/aAAwDAQACEQMRAD8AoaeVYuLVQbKQm46hHrrdMbnLoYqYZcxSqI2RHwNf2sfLsJbOWp6PzsSN7hEfYeqlGOyTszyKdhIlNkoklUTvvr2aC40WWLUrsolxkcaGHq5cx77iikjOO42czL48QT5OqKPsXCtT/9k=",
       "slug": "garden-glory-penthouse-thane",
       "title": "Garden Glory Penthouse",
       "type": "Residential"
     },
     {
       "location": "Airport Terminal, Srinagar",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/c136687ca049ae36542c19a848d8f52a88d8bc2e-1263x823.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAFB//EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQFABEHBhITMSFRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgAREjFBUf/aAAwDAQACEQMRAD8AfczyGqmpggNhyQ2olI3rasD1HUtvLofPGiyklpfa4sfIH2Mb81xZAdY1LHhJUotloE7/AHeZPD00XFE9WvsNoC3yC6n3gspLZHEVchb7nTumqdM+hgylyHO51oKO/e8sT1NaxW17MSOD42xodx2csTI8h3P/2Q==",
       "slug": "airport-lounge-srinagar",
       "title": "Executive Airport Lounge — J&K Bank",
       "type": "Concept"
     },
     {
       "location": "Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/07978e7e6f1dec9424a65dfb6a3d3eaed454a7c5-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBv/EACIQAAEEAgIBBQAAAAAAAAAAAAECAwQRAAUGEiETFDEycf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhFBITH/2gAMAwEAAhEDEQA/ANBxXmb07XkSI7TTlilEEgjHuu370uXNLi4jcVpAKHFGheT7h3LXmOPvh2Iw9QDabFUMX7QHaa2Y0kmO27R6o8hP5gThxDwdN0VHV801xij3syP64UQa+MMh0CGxHjhvoV9T9lHycM2q0vcP/9k=",
       "slug": "exclusive-villa-mumbai",
       "title": "Exclusive Villa",
       "type": "Residential"
     },
     {
       "location": "Lal Chowk, Srinagar",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/bae88a035bcd39048e4d23fe792b1290bb774fdc-1500x900.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAf/xAAgEAACAQQCAwEAAAAAAAAAAAABAgADBBEhE0EFImEx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIEBf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/ANgbyN0Lm4wXKldZ2M/IgvS9NOakreuyR3EK4YnJ39kDqMzNzkGoSSxu+SnU6w5GISzQACaA/YR1OwL/2Q==",
       "slug": "electronic-bank-lobby-srinagar",
       "title": "Electronic Bank Lobby — J&K Bank",
       "type": "Concept"
     },
     {
       "location": "Kemps Corner, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/d4b5bf331dce70a98e80ce22e960be8a176e94ca-1715x1139.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUIBv/EACIQAAIBBAIBBQAAAAAAAAAAAAECAwAEBRESIQYHExUigf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGxEAAgIDAQAAAAAAAAAAAAAAAREAAgMhMRL/2gAMAwEAAhEDEQA/AFWel+OtWurRSpWVVCt2pBNa3jj1ihknujsKGdVQnQ/KnvM+bZl7mIrOqIDvgF6p9ceo2Xt8YYuMRkkjBEoHFloNcSAe469iWtSgLpLJ/aktZlkheMMrHqipJkzGXDbGTuQG+2gx63RVzio+Q49rs//Z",
       "slug": "kishore-mariwala-home-mumbai",
       "title": "Contemporary Modern Home",
       "type": "Residential"
     },
     {
       "location": "Vashi, Mumbai",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/5d4bac0a6fc5fb3c08b0cfd566b010e76e55237a-1920x1281.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACMQAAIBAwQBBQAAAAAAAAAAAAECAwAEBQYREiETIjFBUXH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAQL/xAAbEQEAAQUBAAAAAAAAAAAAAAABAAIREiFBA//aAAwDAQACEQMRAD8An30ssOQyc1gVLxHn4nfYMPoU5FmZctoa6yapFbSRKwCjs7ilLXAwZfL3clzI4Ak24r1V3L6SsI8FK1oXtwoIKKfS36KK8sU2XtEqlO9mM05kbkYeBpZhKzgvuffv4orOoWt18UbEIvQAorTg8kSq+mf/2Q==",
       "slug": "gordon-serrao-home-navi-mumbai",
       "title": "Classic Modern Home",
       "type": "Residential"
     },
     {
       "location": "Vadodara, India",
-      "mainImage": null,
-      "mainImageLqip": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/9896d59dd62a8c1f9801d109496b905bf18e0f48-1920x1275.jpg",
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwf/xAAiEAABBAIBBQEBAAAAAAAAAAABAgMEBQAREgYUITFhE0H/xAAVAQEBAAAAAAAAAAAAAAAAAAAEA//EABwRAAICAgMAAAAAAAAAAAAAAAABAxECUSExwf/aAAwDAQACEQMRAD8AZq6ygg21o9WtjiHilscPHj+DFerb4w6yVIYja/IaPP0c1iw3I1lYq7graRJWUt8QBs/cl+uZTqqR9DiuaSd6PrBT2pKQqN4ZRLfPhzyT1DbTX1vM9uhBOgMMnZK0qeJDaU/E+BhiUlXRBt7P/9k=",
       "slug": "cinemarc-cinema-theatre",
       "title": "Cinemarc Cinema Theatre",
       "type": "Commercial"
@@ -873,11 +873,27 @@
         }
       ],
       "description": "Located at 2,200 feet elevation near Tungarli Lake, this development comprises four bungalows on a 25,000 sq ft plot. Each features extensive living spaces with large terraces, four bedrooms, kitchen, bathrooms, and servants quarters.\n\nThe outdoor terrace is private and the form of each house shields it from the neighbour. Designed with Vaastu principles and south-facing roofs for solar panels, the project integrates sustainable living with the natural setting of the Western Ghats.\n\nThe project demonstrates how sensitive site planning can achieve privacy and individuality within a multi-unit development — each bungalow occupies its own distinct position on the hillside, connected by landscaped paths rather than shared walls.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCBQf/xAAjEAACAQQCAAcAAAAAAAAAAAABAgMABAUREkEGBxMUMkKB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABsRAAIDAAMAAAAAAAAAAAAAAAECAAMEESEx/9oADAMBAAIRAxEAPwCPnDcvIkk0JESRFVBT7bpT8J5pPfJaXauH+QkQ63+Ur43OZHOOLO+uC8AHLjrsd1YtYLFcxSiQ+oewNaoVuyNyfYmQMOpo0+VtkcCKSTjroGile1yt1BCI1cEDsqKKbbNJJIaEZq5//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/e6c317ac801daf30012da43a9dd7160e4c741704-1920x1275.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAgEAACAQQDAQEBAAAAAAAAAAABAgMABAURBhIhURMj/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAIDERL/2gAMAwEAAhEDEQA/AN/IzFZZnKFyqrHcFd+AGli5ywlWZZGQs/pI8FStzkLrI8xaO/lM6T/2dWGgW+6pfn849lm5beG2h/FPOuqHTGtn0y6WQ4SmeSBnJQjrvyiuankl2ruAqa7HQ+UULk9iFjk//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/c62cfd1e6df25e00f1725fc8c990f3073cbddad3-1920x1275.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAf/EACUQAAEEAQMCBwAAAAAAAAAAAAMBAgQRAAUGEiFBBxQkMTJRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAHBEBAAEEAwAAAAAAAAAAAAAAAQACAxEhBBMi/9oADAMBAAIRAxEAPwByJKAKYojmEFipaOf3X6zJM8XlzvVqNYPui/L8yK8OtxFk636yOKQqBdXPql171iO7NyHmR1EYI2utbeNeN0vTpgTi+QWL7t6JQM1NDorxhXjdYZP7aO8mkjctXa4YWq2CktS5Mz//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/0d36ccd198fc9641bdb30f0923dbec1d8e83d611-1920x1275.jpg"
+        }
+      ],
       "location": "Lonavala, Maharashtra",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f7e4b14947f8f9bf348fb86061764cef7a1b8577-1920x1275.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwYH/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIEAAMFEQYhEjFRE//EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABwRAAIDAAMBAAAAAAAAAAAAAAECAAMRBAUSUf/aAAwDAQACEQMRAD8AsgZWCAGY3VH0oac2OYYWMCGkMSvvSnqpCqylSq+OvWqyHMUtwmVLFpA0gbdyO9fKCdndYcybtxUUbseZDI8KyklpcyN+95wNuVPdFc8t8jvx0FoR4zBegTbFFRtsJ3yIAqfTP//Z",
       "related": null,
       "slug": "mist-view-bungalows-lonavala",
       "testimonial": null,
@@ -971,11 +987,22 @@
         }
       ],
       "description": "This twin hostel building — 11 floors and 16 floors each — provides each student with a handsomely furnished private living area and bath, plus a shared study space. Students also share access to a beautiful podium with comfortable lounges, a computer lab, gym facility, and common study rooms.\n\nThe facility was created to accommodate growing enrollment at Institute of Technology and Management, one of Mumbai's respected colleges offering degrees in Business Management, Hospitality, and Engineering.\n\nStudent accommodation at this scale risks becoming anonymous. The design resists this through careful treatment of the common spaces — the ground-floor courtyard, the sky terraces at alternate floors, the social kitchen alcoves — that give each resident a sense of neighbourhood within the larger building.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAFB//EACEQAAEEAgMAAwEAAAAAAAAAAAECAwQFABEGEyEiIzFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIRITH/2gAMAwEAAhEDEQA/AMlNm5KvJNfGfYjhsD7FejGvF359FU2MqxmtWRSdteeAfzOdSeMxZTnapxxLutFQPpxhxuvTEhLj9inG1AAhWTOVcKWrY+q7dVpDRJcShKj8SE/mWG4jxhNdTKQEb3liU80Dhp//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/852826fa4dc4c1624157b608aca4cb6b61a22f1c-1920x1275.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMHBf/EACEQAAEEAQUBAQEAAAAAAAAAAAECAwQFAAYREiExcRWB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIE/8QAGhEBAAMBAQEAAAAAAAAAAAAAAQACEQMxQf/aAAwDAQACEQMRAD8AqbECAwQUSAy8e+l7HfHw185a0LlB/h1sfR9xGla6JY0zE2Wwhch5PJSz6PmSXXa7HRq5kyns3ghTh5MuDkk/30YTQMyMa+zct9fSaq5sIeyFpbfUElQ8HXWGT+uac1FH/TnPESHjurgkAYZD0ufZpqcsNJ//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/78e5224d00f0dd34158e1681637197eb701164ff-1920x1275.jpg"
+        }
+      ],
       "location": "Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/05c3fa374fd15597e3d9784017df76c21f3e4742-1920x1380.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAUGERITIRQiMUFRYdH/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhESMRP/2gAMAwEAAhEDEQA/AHpmmQu2piOIigHXV6O/isuCXiRNefYlr6ie6gD7d6Vl4yeXl1wdVFCYjEUAoChtR3XAScrlxHpbCX5KXD5QttfEg0cpvVrg6gs0+lhFccHRcSPrkKKifxlyUSXLvPKifXqH9oqvYHLP/9k=",
       "related": null,
       "slug": "mba-hostel-towers-itm",
       "testimonial": null,
@@ -1069,11 +1096,22 @@
         }
       ],
       "description": "This project is an initiative taken by J&K Bank to improve the banking experience for the industrialists of Jammu & Samba. The building of ground plus one storey houses a full-fledged bank branch at the lower level — with an electronic ATM lobby having 24×7 direct access from the road.\n\nThe upper level houses a cluster office along with a business centre that will encourage businessmen and provide a fully equipped space to hold important business collaborations and meetings, helping take their business further.\n\nThe design balances institutional credibility with accessibility — the ATM lobby is designed for frictionless 24-hour use, while the upper floor business centre carries the warmth and discretion required for high-value client meetings. The two programmes are distinct in character but unified by a consistent material language.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAEDBQYHCP/EACQQAAIBAwMDBQAAAAAAAAAAAAECBAADEQUGEiEiMRMUFUGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQEC/9oADAMBAAIRAxEAPwDoKdqlmPJvIZIa8gLeiG7vyqDtDempanul4k28qxO7AAxjHjrWiXNEi/JPNCL7lhg3OPXFMptvTxcZlsWlY+WCAGjOhElDkK1olb4YciM8s0UsLSIseyVRBgkk9Puim6o//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/40f2139202618ee25266478588edb6e5fda355f5-1920x1205.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAYH/8QAIxAAAgEEAQMFAAAAAAAAAAAAAQIDAAQGESEFElETMTJBcf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAGREBAAIDAAAAAAAAAAAAAAAAAAERAhJh/9oADAMBAAIRAxEAPwDtGb5TLj0kXZBLcmQnhD8aT0jLmv7SF2imilkk7Qh3wPO611xYh5CWcH9UGoSwG9CTQHhRUjPiarFm7+jy5PP3RTre1Cx6Lsx370UuSn//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/8feca1193addc57a9dd6b6a5317ab40761c00b35-1920x1205.jpg"
+        }
+      ],
       "location": "Samba, J&K State",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/e955d5027b5fe1e1962ed99dd65155a5ada00848-1920x1205.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACYQAAIBAwIFBQEAAAAAAAAAAAECAwAEBREhBgcSE3EUFSIxMmH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AKhzJ4qymMlWPCyF7hHPdiYfpf5SG85lXEeJjTGSSe4IV7ySoSF1O4FVbIYW2vGPqVWTfbVdx4NKl4HxiSgga6nqPUoJPmpzS5hxg797rGxTM5LMNT50orfZWEdvAI0PxH1tRSkov//Z",
       "related": null,
       "slug": "jk-bank-branch-samba",
       "testimonial": null,
@@ -1167,11 +1205,27 @@
         }
       ],
       "description": "This 14-acre property is situated in Kamptee, 20km from the bustling city of Nagpur. Kamptee has an old and very picturesque army cantonment area. The campus is designed to accommodate a management institute and an engineering college in the first phase, totalling 400,000 sq ft.\n\nThe project was part-built as inherited, so Team Design built on the existing building footprint and completed the building with a stunning front entrance gate along with the entire site planning and landscape.\n\nThe challenge was to give coherence to a campus that had begun without a master plan. The solution establishes a clear arrival sequence — from gate to courtyard to building entrance — that makes the campus feel intentional and complete, while the new wings continue the architectural language of the inherited structures.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAgDBQYH/8QAIBAAAgICAgMBAQAAAAAAAAAAAQIDBAAFESEHEjEGQf/EABcBAAMBAAAAAAAAAAAAAAAAAAACAwX/xAAdEQACAgEFAAAAAAAAAAAAAAABAgADBBITFSFh/9oADAMBAAIRAxEAPwDZJ5C3dCq8rTrMEHPDr9y9/P8AlS1bqNJe1yhlI7RvozjMd6GZWqTsx5Xvjng5PVWKqpFZnUt2ezmc2eqnsGBuUKRpjRaLdxbbXJbRDGGJHqfowxbI9vsYl9Ybs0afxVYgYY/IVeye4J//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/b039719002b4d984967643cbd311e031bb23c303-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHAv/EACMQAAIBBAEEAwEAAAAAAAAAAAECAwAEBRESBhMhMQcXQXH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABwRAAICAgMAAAAAAAAAAAAAAAECABEDEjEyQv/aAAwDAQACEQMRAD8Af4r5CM9ojz2TOQPLKfdb+1sGjpA/eilkPELx35qBHqXKWcBx8pBRCeXE6O/7S+Rzd8ZoVK3AfkG36qffIvbiN1xAmpV+scj1Q+clkxmQkS0cBo1K60KKlkt3mJX5S3UrNrW+5+UUNyfUQdQKqf/Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/dd8ebc585d30db1395653bda5cf7ec4f84d0a0db-1000x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACMQAAEEAgEDBQAAAAAAAAAAAAECAwQRAAUGEhMhByMxMmH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAeEQABBAEFAAAAAAAAAAAAAAACAAEDETESITJBsf/aAAwDAQACEQMRAD8AUxuTzdRBWuFICS4qlEkGsR7D1Z28hZjsS+m0ltXj5/cORQmVFLEdJWhHmyas5HS+MPd1L6FALBurFZnxSjm9lQRho6tWcPYSHYrS++qykE+4B5wzDU6mYrXskzG0Gvr0XWGCUo3hKIxu3P1f/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a888368bed58e26c4a035d23780e5132dac455f0-1000x750.jpg"
+        }
+      ],
       "location": "Kamptee, Nagpur",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/cb59a27300e0b4f523c8535154d48ea8f2fd4f15-1000x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEBf/EACAQAAEEAgIDAQAAAAAAAAAAAAECAwQFABEGIRQxQWH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwX/xAAaEQACAwEBAAAAAAAAAAAAAAABAgADEgQR/9oADAMBAAIRAxEAPwAxJ5NZUjcaVAd29sJUF9gg50jzu1tE+PJcbS2r2UDRwJbS1WNY22wgodSsDsjMNJFmRnyH39pKjr7hFcrXmVetXs17FtlaWKJSgxKWEaHW8sOzS+JCtr3+5YHTma6nmAAM/9k=",
       "related": null,
       "slug": "college-engineering-management-nagpur",
       "testimonial": null,
@@ -1265,11 +1319,17 @@
         }
       ],
       "description": "Precision Metal Pvt. Ltd — exporters, suppliers, and manufacturers of steel bars and bright bars — have their manufacturing sheds on a 14-acre property in Khopoli, about 80km from Mumbai. The project was to design an office building that would cater to the overall needs of today's small corporate house.\n\nThis mid-sized office building offers a grand space and enables employees to work with leisure and complete peace of mind. The design responds to the industrial character of the surrounding site while asserting a civic quality appropriate to a client-facing headquarters building.\n\nThe building demonstrates that corporate architecture at the scale of an industrial estate can still be thoughtful and dignified — it need not apologise for its context, but it need not be defined by it either.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcBBAUG/8QAJBAAAgEDBAEFAQAAAAAAAAAAAQIDAAQFBhESITETFCJBYbH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAHBEAAgIDAQEAAAAAAAAAAAAAAQIAAyEiMQQU/9oADAMBAAIRAxEAPwCdL6iuMZhbdrVfXLEhlc/vmtq+1beuI1FvGnM9sD2v7Sww+SkxWMi5r7gRyMVDHj5+quDVr5UNA1mkWw5ckc7/AMrL+i5dRyVGtDmdrc3kUcxAIJPyJY9k0UkdYalycWeuEin4INtlA8dUUs+a59g3YYtqXBE//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/94640122dd3c96f6c7a4a480fcbaa3be9e6f3e3f-1200x797.jpg"
+        }
+      ],
       "location": "Khopoli, Maharashtra",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
       "related": null,
       "slug": "venus-wires-office-khopoli",
       "testimonial": null,
@@ -1363,11 +1423,27 @@
         }
       ],
       "description": "Completed in just 60 days, this office in the heart of Mumbai's business hub flaunts a distinct personality via clean lines and a simple palette. With the company being predominantly media-based and partially an NGO, several key elements like vibrant colours in the form of graphics on the walls build an abstract connect — yet the ambience remains present-day and chic to cater to the other business clientele.\n\nFaced with the challenge of completing the exercise from start to handover in just 60 days, the onus was on quick and effective delivery. Choice of material and colour was worked out to sport à la mode refinement.\n\nThe 600 sq mt office space sports executive cabins in the centre with staff along its periphery. Glass walls open up the area, allowing natural light to flood the space. Clean lines dress the office with a focus on functionality without compromising on storage, security and privacy. Yellow Jaisalmer stone slabs light up the floor and add zing to the interiors.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACEQAAIBBAEFAQAAAAAAAAAAAAECAwAEBREhBhIjMXGB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQF/8QAGhEBAAIDAQAAAAAAAAAAAAAAAQACAxETIf/aAAwDAQACEQMRAD8AvILm1ixMqyxBlVSR2+/ylkV1ZSQwyoreQcI7AEfamHyk7WjICBtDs1E9KtcNn4Y5LqV4YnLKjHjdZ/Qa+Sxx2HU2W3yCwqyQMVQN6B4opICDsga+UUjK6haE/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/81986c6f072fa2ffaa357dc1431a1b165ea02898-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAwf/xAAiEAACAQQBBQEBAAAAAAAAAAABAgMABAUREgYTImGBIUH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAgP/xAAaEQACAgMAAAAAAAAAAAAAAAAAAgEREhNR/9oADAMBAAIRAxEAPwC8trggmKVW8Dx5ldA/a1sL2C+Lqh7fEb2/4D9rn/U2byFvi4rmC4KSRuG1rYPoikuLzl/1Nmlmv5iscQ8YIhxQEf3VFqy42JOs5VRf9QZZ7HIdhApUKNEGilNxGkkpZ12fdFY7F4Xrnp//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/7e2903d2d2dd8ed5bbcc106578075386c3c232d1-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGAv/EACQQAAMAAgIBAgcAAAAAAAAAAAECAwAEBREhBkESFCIxUWFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwX/xAAbEQACAgMBAAAAAAAAAAAAAAABAwATAgRBUf/aAAwDAQACEQMRAD8Ab8XvUsXiduHIQUAkKpD/ANxg3IauhaDAmRp7HyBkd6RqISfbCd2o5Hg9AD8ZV66RuWpsRWhP1AH2P6yOxGuWEHGVFt2KwRlFW3SfzFCJs4Y/EGUeDhmeTuU2iERQoA6H36wxqByFb7P/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/daaec939564ca4edcbf70a484488bb13b26ee0f5-1920x1281.jpg"
+        }
+      ],
       "location": "Worli, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f93a17de2f930cfd0198d55914ff1b4d5bf4fcd2-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAnEAABAwIEBQUAAAAAAAAAAAABAgMEABEFEhMxBhQVISIjQVFxgf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBA//EABsRAAIDAAMAAAAAAAAAAAAAAAABAgMRITFh/9oADAMBAAIRAxEAPwC2zEbXFD1zb3uLUqRHb0A4U5UbZiaw86pWHLZJOmpJBF6532E9GhMXUUI+Tv8AdDK2GPEKOqTa5ImKY1FjSQyPLIkC4HailcQRWeeT4AemNv2ioprOjTPT/9k=",
       "related": null,
       "slug": "unilazer-ventures-office",
       "testimonial": null,
@@ -1461,11 +1537,27 @@
         }
       ],
       "description": "Travel is meant to be a rich experience — a means of engaging with culture, cuisine, and pleasure. This executive airport lounge for J&K Bank was conceived as a space that embodies the art and culture of the Kashmir Valley, giving travellers departing from Srinagar a final encounter with the region's remarkable design heritage.\n\nThe brief emphasised finding the ultimate in pre-flight comfort at an airport lounge that invites you to stay awhile. The design draws on Kashmiri craft traditions — carved wood, papier-mâché, and the intricate geometric patterns of the region — translated into a contemporary hospitality setting.\n\nThe result is a lounge that feels unmistakably of its place: specific to Srinagar in the way that the best airport environments honour their cities rather than erasing them.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EACMQAAICAgICAQUAAAAAAAAAAAIDAQQABQYRBxITISIxYYH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAZEQADAAMAAAAAAAAAAAAAAAAAARECITH/2gAMAwEAAhEDEQA/AMN/Pw+M9O1VUmFL5HtQ+xf3GuMbvWaTRWW8momBhPss2jMy2OvxGU3x3XWvgms+wSg1+0wQ9/XvHbOvTf26q1sFuSI+8iYRMF+swmkPDkJSvyPx5qlsTxu0YEPfYp7jDLJYpVKBxXq1ELUIx0IhERGGOEqP/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/34ee7a3a176d27e995b8bb0a0b8140e78f597f07-1263x823.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHBf/EACQQAAICAQMEAgMAAAAAAAAAAAEDAgQABRESBhMUMSFRBzJB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/8QAGxEAAwACAwAAAAAAAAAAAAAAAAECERIxQVH/2gAMAwEAAhEDEQA/AJbS1hXjJg54k3ckRkfY/mbFS8+y+2qrXHdWN4xXEHYZXtV/C3Tr76bgm+HbAjFcduPxj2udFoGlsbQtSpTgkrBSsAn49n7wrT6QstcNkUnc0ePHy9e4vI3nED9T9YYto/QFC8hzLdl83RdOBkNhy2PvDLpJnNen/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/33726ef536230514717f08a1baf5091db9ff97d4-1263x823.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAFB//EACQQAAICAQIFBQAAAAAAAAAAAAECAwQABREGEiExYRMUIkFR/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABsRAAICAwEAAAAAAAAAAAAAAAECACEDERJB/9oADAMBAAIRAxEAPwAvQ06rRrzvaeSMIAY9h3J+s0uHb0Vy17R76oU6rGBuX8H8x/rVKvBNPMsS8qHlCbdMHyzUorQs1dLqw2yArTAbk9e+CLriNxgRsq1E8vDWn2H9R9OVmPchMs7vosUb6TTYxpu0Sk/Hxli+VN6hemHs/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a518b2f0192a158b618466a65b99fae7bba80865-1263x823.jpg"
+        }
+      ],
       "location": "Airport Terminal, Srinagar",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/c136687ca049ae36542c19a848d8f52a88d8bc2e-1263x823.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAFB//EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQFABEHBhITMSFRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgAREjFBUf/aAAwDAQACEQMRAD8AfczyGqmpggNhyQ2olI3rasD1HUtvLofPGiyklpfa4sfIH2Mb81xZAdY1LHhJUotloE7/AHeZPD00XFE9WvsNoC3yC6n3gspLZHEVchb7nTumqdM+hgylyHO51oKO/e8sT1NaxW17MSOD42xodx2csTI8h3P/2Q==",
       "related": null,
       "slug": "airport-lounge-srinagar",
       "testimonial": null,
@@ -1559,11 +1651,27 @@
         }
       ],
       "description": "Evolving design sensibilities are truly taking over, blurring boundaries in a holistic global outlook. The design augments the plush feel of the rest of the home as it is replicated in other elements such as blinds and ceiling.\n\nEach room stands in signature attendance — every detail meeting a special character of the users. Every colour, every picture, every kitchen utensil, every artifact, every piece of furniture and fabric was specifically chosen to make the home unique to its owner.\n\nThe project is one of the firm's most personally meaningful commissions — a private residence for Kishore Mariwala, founder of Marico, designed at the scale and quality befitting its address in South Mumbai. The completed home represents over two decades of working relationship between the client and the firm.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBv/EACMQAAEDBQAABwAAAAAAAAAAAAMBAgQABQYRIRIiI0FSkeH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQT/xAAWEQEBAQAAAAAAAAAAAAAAAAARAQD/2gAMAwEAAhEDEQA/AJ/guRzW+hdIxXBbwe98/KqePSYs0ZHFa4TB/FdbrI2jHxWiGpmSDGe32IvPqmka4vI5wUGxjVTvhTW6y0tTOOUZDaTXG6FkQZjAgdxGKu15RTwEWO5nmEm0VUoqJkXf/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/026a5a89ade6606017f854f59afc82ffeb805378-1715x1139.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcBBQYI/8QAJhAAAQMCBAYDAAAAAAAAAAAAAgEDBAAFBhESEwcWITEyUSKBof/EABYBAQEBAAAAAAAAAAAAAAAAAAUDBP/EABoRAAIDAQEAAAAAAAAAAAAAAAACAQNRFBP/2gAMAwEAAhEDEQA/AIs5OybTbBiSGxLYTcHV1q45gZw2EcjNkmHJCo64SatA5flc6NYuuEV2GUQtk4/xQkXunpa3NpNy7MnMmmThv+YL4r9UQlU0tLaKPb7RCYOQ+JtgNc0vLQp2yJzrRSidwta3C1FHDNfSUVo6FwhzNp//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/1c2334409c39e4e838db0687c091ddfc5db92f50-1715x1139.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACUQAAICAQIEBwAAAAAAAAAAAAECAwQABQYREhMxISJBUWGBsf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBA//EABsRAAICAwEAAAAAAAAAAAAAAAABAhESITFh/9oADAMBAAIRAxEAPwBlZkrRaQbbhlbvzMQMTaXvWxqzNFGPLB4KZX/MnpbPVtGGwnWjPo5J4ZSbY0etVuTSsoliYgrCVAC/eD5p9E1B1o3VLVu8sksxQNzlRw9hhie/vOzpFuWrBUrNGGJHFe3xhlUvDNySdWf/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/865e662886ac3b266fe1521b47786599df924953-1715x1139.jpg"
+        }
+      ],
       "location": "Kemps Corner, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/d4b5bf331dce70a98e80ce22e960be8a176e94ca-1715x1139.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUIBv/EACIQAAIBBAIBBQAAAAAAAAAAAAECAwAEBRESIQYHExUigf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGxEAAgIDAQAAAAAAAAAAAAAAAREAAgMhMRL/2gAMAwEAAhEDEQA/AFWel+OtWurRSpWVVCt2pBNa3jj1ihknujsKGdVQnQ/KnvM+bZl7mIrOqIDvgF6p9ceo2Xt8YYuMRkkjBEoHFloNcSAe469iWtSgLpLJ/aktZlkheMMrHqipJkzGXDbGTuQG+2gx63RVzio+Q49rs//Z",
       "related": null,
       "slug": "kishore-mariwala-home-mumbai",
       "testimonial": {
@@ -1661,11 +1769,22 @@
         }
       ],
       "description": "This project was fast-paced with a clear design brief. Approximately 20,000 sq ft of space on the top floor of a new shopping complex was given to Team Design to design into a modern cineplex.\n\nBold use of colour, clear circulation patterns, and all other services were carefully thought through and designed to suit the needs of the end user and to the satisfaction of the client.\n\nThe cinema sits within a retail complex, and the design had to establish a distinct identity for the cineplex — a destination in its own right — while drawing visitors through the retail floors to reach it. The arrival sequence, from ground-floor entrance to upper-floor auditorium, is as much a part of the experience as the auditorium itself.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYI/8QAIRAAAgICAgEFAAAAAAAAAAAAAQMCEQAEBSEGEzFRgZL/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQQF/8QAHhEAAgIBBQEAAAAAAAAAAAAAAQMAEQIEISJhkaH/2gAMAwEAAhEDEQA/AObE8WzbYCqAiT7i+sZr8c3ALEVzAHdHINCbhKIDaF/GP9p7oQhJLSs1RoXeSszYDQqaiVaYjlfyZ93H+lMxkhpI+sMut2NqU7OwfzhjGefUClF7E+Cf/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/5f93c4130736064520052d7c7274e7a1cd8f5e0c-1920x1275.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACMQAAICAQIGAwAAAAAAAAAAAAECAwQABREGEhMUMVEHIbH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwX/xAAfEQACAgIBBQAAAAAAAAAAAAABAgARAyEEEzFBYcH/2gAMAwEAAhEDEQA/AJl8d1HqXL0c8wVEIVWdvzG3UeJLGkzzLDV60CAczex7xHraj2du8IYgBzEDdt9s0msTTRjrSFlZRuPGEZ2XK1dh7mkBjPGQE7N+PsqPCsq69pC3u8krlmIMYA+tsMWtEtGrp6RQoFXffzhlRmWtkwB6gOqn/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/ff547bb3e75b09e6ea77d5d51fe9e86313ab559c-1920x1275.jpg"
+        }
+      ],
       "location": "Vadodara, India",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/9896d59dd62a8c1f9801d109496b905bf18e0f48-1920x1275.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwf/xAAiEAABBAIBBQEBAAAAAAAAAAABAgMEBQAREgYUITFhE0H/xAAVAQEBAAAAAAAAAAAAAAAAAAAEA//EABwRAAICAgMAAAAAAAAAAAAAAAABAxECUSExwf/aAAwDAQACEQMRAD8AZq6ygg21o9WtjiHilscPHj+DFerb4w6yVIYja/IaPP0c1iw3I1lYq7graRJWUt8QBs/cl+uZTqqR9DiuaSd6PrBT2pKQqN4ZRLfPhzyT1DbTX1vM9uhBOgMMnZK0qeJDaU/E+BhiUlXRBt7P/9k=",
       "related": null,
       "slug": "cinemarc-cinema-theatre",
       "testimonial": null,
@@ -1961,11 +2080,27 @@
         }
       ],
       "description": "Mariwala Estate, a 70,000 sq ft sprawl, is located in the embrace of Mother Nature — just a couple of kilometres from the Mumbai-Pune Expressway, away from the common din and yet connected to the market, hospital, bank and a Jain temple.\n\nThe existing structure required strengthening while preserving its Art Deco character. New additions include a clubhouse, cantilever lap pool, staff quarters, and redesigned landscape. The gallery provides views of mountains, waterfalls, and the scenic Lonavala skies.\n\nThe project is a study in the art of the annexe — how to add to a beloved existing structure without diminishing it. Each new element was tested against the question of whether it improves the estate as a whole, and only those that passed were retained in the final design.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAj/xAAfEAACAQQDAQEAAAAAAAAAAAABAgMABAUREhMhFEH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A6Ty1wGjMaF1ZTvz9qfYX2XkuojJbr8mzyYHZqhmbBshD0pIIgCDsD2nY21ktYOourKB5oUG9dEA0UmNGVdcqKD//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a635a08dfe4dca0e22e03d5a1278c6e4aaf9f2a5-1920x1357.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMEBgj/xAAjEAABBAIBBAMBAAAAAAAAAAABAgMEEQAFEgYTIjEHIXFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQACEiL/2gAMAwEAAhEDEQA/AM2p1bq2ytCVKA/gyZpdBM2cjtMqQ1RAJcVxrLX0x1pI0ivCJGeTwLfFxFgivf7iom/XHW5JaaaDiyaUUXR/MydtRkZsn40XHcCH9xCK6B8VWPvDETeqdjLe7jhY5UE2G69YYds+b//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a14d660f08fb83e1b5b04f7e5e27e70551e99b5b-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgj/xAAhEAACAgICAQUAAAAAAAAAAAABAgMRAAQSIQYFEzFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBIf/aAAwDAQACEQMRAD8A6eYqhcl+Jv8AcR7/AJbqen7SwTsJOXwU7x1up78ckRC0R0fu8nX8WWWaN5JEIU3VZO28FXryLNAkqghXFi8M1EvGNV66FdYZQ//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/d00b3a8b33de4f7bb73e592913abc93eee70c867-1920x1357.jpg"
+        }
+      ],
       "location": "Lonavala, Maharashtra",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/4774e037cd4ebd3ad44601891a1a80cc4b11329d-1920x1440.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAjEAABBAIBBAMBAAAAAAAAAAABAgMEBQARBwYTITESIjNB/8QAFQEBAQAAAAAAAAAAAAAAAAAABAP/xAAbEQACAwADAAAAAAAAAAAAAAABAgADERIhMf/aAAwDAQACEQMRAD8AsHE17Wwrawk20lLCUfg0P6D7xlyNyFAmIYiwV/FhLgWs68kj1rFMXi12Nt2VYpSsjWkI2Bi2042ecWe1OCin1sawzWHli+RCVoV1z3M56jvEybeQ8PsFHYJGGTsOkbBqY62vtkpVrYUPOGVVEAEKwOz/2Q==",
       "related": null,
       "slug": "mariwala-estate-annexe-lonavala",
       "testimonial": {
@@ -2047,11 +2182,17 @@
         }
       ],
       "description": "The Kanada community wanted to redevelop a plot that housed an existing temple and marriage hall with a multi-storey building that utilises the FSI potential of the site. Keeping the sensitivity of the devotees and the people associated with it in mind, the new building aligns itself to the axis of the new temple and is designed to look both traditional and modern.\n\nThe building houses air-conditioned marriage halls, dining spaces, a dance academy, other training rooms, administrative offices, and a guest house with fully equipped bedrooms on the top floor.\n\nThe project posed a particular challenge: honouring the religious and community significance of the original temple while accommodating a contemporary mixed-use programme within a single cohesive architectural language. The solution carefully layers the secular and sacred so that each is enhanced by proximity to the other.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAEEBQYHAv/EACYQAAIBAwMEAQUAAAAAAAAAAAECAwAEBQYREhMhMVEiI0FSYXH/xAAXAQEBAQEAAAAAAAAAAAAAAAAFBAID/8QAHxEAAgEEAgMAAAAAAAAAAAAAAAECAwQhMRITERRB/9oADAMBAAIRAxEAPwCEx+GIkRWX4gjf+Vpcum0m6kuHg6dvAgEgJ8kDuRRqm3gsraEQW/RZuzN+Vc2mWksM7cxJGZFuFWMgnsNx5pqvfNSTWgqlaqUXyeRpJpy1nCSKpXko3Bb70Vd4rSKKMK1uHPsmiuvsyWibrX0x7JZvM3RMmTXlCp2Qq243/VJm9R/Wna0idbkxqYXPjlUfd5N0JQRjj63pot200qrxUbn1vQvXji2NLBecLq69hxsCXck0k4HyI90VlOWzM8F88ajsPTEUVI6sIvxk2ppLR//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/70f39c5b2fea6356aa12a162f44f526162e2ada1-1344x1920.jpg"
+        }
+      ],
       "location": "Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
       "related": null,
       "slug": "gokul-cultural-centre-mumbai",
       "testimonial": null,
@@ -2145,11 +2286,27 @@
         }
       ],
       "description": "This property sits in the lush green city of Ahmedabad on a 6,500 sq ft plot. The design brief was a modern and well-designed 4-bedroom bungalow with a large east-facing sun terrace and large common living spaces. Architecture, interiors, and landscape were all part of the scope.\n\nThe bungalow has been meticulously planned, offering a perfect symphony of elegance and privacy. The east terrace captures the morning sun while shielding the primary rooms from the intense afternoon heat — a climatic response that is also responsible for the house's most distinctive external gesture.\n\nThe project demonstrates the firm's commitment to integrated design: the architectural envelope, the interior palette, and the landscape were developed as a single composition, with each element reinforcing the others.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGAwf/xAAiEAACAgEDBAMAAAAAAAAAAAABAgMRAAQxMgUTIUEUImH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABkRAAIDAQAAAAAAAAAAAAAAAAABAhESMf/aAAwDAQACEQMRAD8A7QsHemmSRGjQG+6Gq/HgVjwfEGrSKzT8WY2CfeY9adjNoLPI0f0Vk1G7S9TMMjExLbBb2IOTnJrgW6LPWaRFmApdhsMMQ6mak+54j1hjzYj/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/adefe3a890893cb9e70f800c6136cba3c89a24e1-1247x676.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYEBQcI/8QAJBAAAgEDAwMFAAAAAAAAAAAAAQIDAAQFBhETISIxBxJBYYH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAZEQEBAAMBAAAAAAAAAAAAAAABABESIQL/2gAMAwEAAhEDEQA/AGKT1Ae7xkoyN9JazMpYQFgrH6qBpbWotojBDeJEZG67P3UlYjHS6ivpbiAxyJbSDbkGzMBVZlcFeY/PNeHjjLvyLH5G35WW+eEwx1un9OaoaXGjlLe5GK7t8+OtFZLhNS2px6C55RIDt2+KKu3oihf/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/84da2cd439ea7054c190f95ee0f92906cc4e8b4c-784x577.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAkEAACAQMDAwUAAAAAAAAAAAABAgQAAwUGESEHEnEUIkFRYf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBA//EAB0RAAEDBQEAAAAAAAAAAAAAAAMAAhEBBBIUIXH/2gAMAwEAAhEDEQA/ANUHPS5Go3Ei2ViLyhY7bjxVfjZFmZaDFlV2Y7D83pVqqZBx2HkS79tQyoexivO/xSLp7moM3G2DdmC3ODH2N5qjuysJnPqzfbDePGPF0P0o+6KnMpq2JjpjR5N4G4ACe1eKKX2xV7KM1i04v//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/54f63807fb772f5d532cbdfa498b13a76efcaff8-526x417.jpg"
+        }
+      ],
       "location": "Ahmedabad",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/017035ddcb7cb98cfed9620047b32e7371c8e1a6-1000x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGAv/EACIQAAEEAgEEAwAAAAAAAAAAAAECAwQRAAUGBxIxYSEiMv/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMREiFB/9oADAMBAAIRAxEAPwBKdyblc6LDg8fceDKEV2IULKQPN4jpN9u9G9IXMkobdfFG3Ao2PWai8gSwtJERpKkeCgVk9uIUHZ7YzCktH4+guveBqx27l1ROMtIPUl5uKhOxbQuSP0q6vDJ6cnWIcQGISCnsFkk+cMQsvrMzjdz/2Q==",
       "related": null,
       "slug": "bungalow-ahmedabad",
       "testimonial": null,
@@ -2243,11 +2400,22 @@
         }
       ],
       "description": "Located in Mumbai, this 3BHK apartment was designed as a sample flat for future buyers. The challenge was to design a modern space with all corners and niches put to optimum use, and to evolve a space that one can call home sweet home.\n\nThe design balances aspiration with domesticity: the flat had to inspire potential buyers while remaining believably livable. Every storage decision was made visible, every awkward corner resolved, and every room staged to suggest the quality of life available within its compact footprint.\n\nThe result is a flat that works hard for its size — intelligent planning makes it feel larger than its area suggests, while material choices ensure it photographs and presents with warmth rather than the clinical sterility that too often defines show homes.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAfEAACAQUAAwEAAAAAAAAAAAABAgMABAURIRIxMlH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAQL/xAAYEQADAQEAAAAAAAAAAAAAAAAAARECEv/aAAwDAQACEQMRAD8A6kOZgndY5oBpDpjvRp2fI461dVVndubVR63Wd/CsOGNwAhkYksfEdpCXHW2UxkckyFX8fpDo0GtRUWlKuK9tnQGB9p67+0VGYe0FjatDHK7KHJBY9orXTJD/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/6c7523ceaa9221af238147f6919481cc1057984d-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAgEAABAwQDAQEAAAAAAAAAAAABAgMEAAUREgYTITFR/8QAFgEBAQEAAAAAAAAAAAAAAAAABQAB/8QAGhEBAAIDAQAAAAAAAAAAAAAAAQACAxExE//aAAwDAQACEQMRAD8AoonLWp60ypGA8ga5R5mmPbr62zEbUyE9nWCXD6TkUtuJcMtq5Gj5dcGhV6rAyKYEC3RZ8RSC2Wg0nXCDjIFA+gu68jtsSBW3ZDelImPuPPK2UVfSaKw0W8PKL41ACHVIHv5RUjMAn//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/bdf49fd9dc35bd4ea70c8c3493ce12566b6d9fe4-1920x1281.jpg"
+        }
+      ],
       "location": "Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/facc80cb969d23935581204bcf5e800270cea1a8-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAUH/8QAIxAAAQMDAwUBAAAAAAAAAAAAAQIDBAAFBhESIQcUIjFRQf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGREAAwEBAQAAAAAAAAAAAAAAAAECEQNB/9oADAMBAAIRAxEAPwBzt1zhphKiqLZCdfH4aQslyKK86uOElG3gjdV7p8W7rfbqzJaGkdQKSk8nX7WzneM2hyCqT2gTIJCd6DoaiVL9LENacrd6mXGOsssLabbb8QkIH5RUZ+AwO5UUyHwDzp7op105YC4vT//Z",
       "related": null,
       "slug": "show-flat-mumbai",
       "testimonial": null,
@@ -2341,11 +2509,27 @@
         }
       ],
       "description": "Ever-changing space requirements. Real estate costs. Talent retention. Sustainability goals. The modern corporate office must respond to all of these simultaneously — and do so within a budget that leaves no room for waste.\n\nThe 13,000 sq ft project incorporates private offices, open workstations, a reception and waiting area, break room, kitchenette, cafeteria, and other support spaces. Specialised training and presentation rooms accommodate the training of working staff and presentations to potential clients.\n\nThe design creates a workplace that balances the efficiency HDFC Bank requires with an environment that attracts and retains talent — warm enough to feel like a place where people choose to spend time, and disciplined enough to make that time productive.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACEQAAICAQQDAQEAAAAAAAAAAAECAwQABQYRIRITURQx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIEBf/EABkRAQADAQEAAAAAAAAAAAAAAAEAAhEhA//aAAwDAQACEQMRAD8Ad7Q0+lp+3R7LkEUoJKRuQOcHsS2WZCfAjvgHrj7mzRtraVftxS3K/tdegWY5YzaLSXzeOIIWQIePgzPtTQyW09Cq6Sa0Pb1K7R9tmBHk8iCxJ7wxzA/4kMMIUIDz/MMYAOwWVeT/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/114b218333cdc9d27dde9f2c12465fa78fb6c7cb-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/EACMQAAIBAwMEAwAAAAAAAAAAAAEDAgAEBQYREiEiQVExQpH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIRITFh/9oADAMBAAIRAxEAPwDN427k+1IKtjLtBid6saY05jlNL8rzaSN1wXt8+zSdO4dCrF5EpELjIj3+0/TN3N0GJmBxl58igyqTesXeV0XriWFgzjKzc0j7cgKKebNBEewdBt7oq7Xhlwf/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/5cac4b72c4d69958fed5173130701f1d83ec1057-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAF/8QAIBAAAQQCAwEBAQAAAAAAAAAAAQIDBAUAEQYSQSExE//EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABcRAQADAAAAAAAAAAAAAAAAAAABERL/2gAMAwEAAhEDEQA/ANyss3YjjanWHWXOpOz+azRs7YxIwCULIfQF6QfpSfMOcSoY95WS5b0iYhxpY6beKvfd465VxyLZN1SHluIbaICg2epX89OBk9gUyTMDx/hAeUgjYIyw/wAw6Ud/IgsGQttGiCX1D9yzMwrl/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/cf8c178308a6e448c5782ea51ffa0f97e68ee5b8-1920x1281.jpg"
+        }
+      ],
       "location": "Narhwal, Jammu",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/566610b42a79406020cd20a59011c63ea8a4d32e-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHBf/EACEQAAICAwABBQEAAAAAAAAAAAECAwQABREhBhYiMVFC/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEBf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhEhAzH/2gAMAwEAAhEDEQA/AK5V0db27HemnRCyk8Y86fzJ96psT1iErJCGZgqsx7zuaVwyW4Iqc00hrhB8O+MU3WtgshGYFXXhDA/mZ/SF7HCuLa9Jvs9jtal6WGawhZT/ACvjmGM7fTiXYzOZ36x79YYHHRqarT//2Q==",
       "related": null,
       "slug": "hdfc-bank-office-jammu",
       "testimonial": null,
@@ -2439,11 +2623,27 @@
         }
       ],
       "description": "In a city starved of green spaces, this penthouse in Thane, Maharashtra boasts an expansive 10,000 sq ft terrace garden surrounding just 5,000 sq ft of actual livable space. The home centres on a terrace garden, transforming the living area into an oasis of calm.\n\nThe 6-bedroom layout includes dining, living, study, kitchen, and servant quarters, all enveloped in greenery. All rooms open to corridors overlooking gardens and terraces. Floor-to-ceiling glass doors in the entrance corridor provide sweeping views of the terrace beyond. White garden furniture provides freshness among the plants.\n\nA neutral interior palette serves as backdrop, with colour introduced through rugs, jaali designs, and soft furnishings. Warm and ambient lighting bestows a homely feel. Sustainable features include power-efficient LED fixtures, VRV/HVAC equipment, green-certified sanitary ware, and natural greenery ensuring environmental responsibility throughout.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMHBAX/xAAlEAACAQQABAcAAAAAAAAAAAABAgQAAwURBhIiMQchIzJBYZL/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAwT/xAAbEQACAgMBAAAAAAAAAAAAAAABAgARAxNBcf/aAAwDAQACEQMRAD8A7fDdzn4SgzJ9wvdfpLnuaXknuv0RkJ3obPloH5qU+H2fnZ2XjsfJuFI8M86hD7j91YMvcaMEkqdlzyMp7GjVxANRiLPdMOxUbEsLI9e3+aK3R5bpZUKABqitWryTJM//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/4dbd671cccbff5a2992d40f0e5a23101a165cde5-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYBBQf/xAAkEAACAQQBAgcAAAAAAAAAAAABAgMABAUREiEiBhMxQXGBkf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABoRAAICAwAAAAAAAAAAAAAAAAABAxETFFH/2gAMAwEAAhEDEQA/AGOJZbZyjLtSO4joKi6jRlJXgqj3LUsXORyF74e8+a7YKoOo0XiP2kjG5+9uMyHlkLBN9pOwfqgcFVbFcnDWExpkUMOoPoQaKo2zzShWW3SIcQOKMQPmirrmMrP/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/891ca0c52d6091f88139d6e015b5d9e792221a5e-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACQQAAICAgEDBAMAAAAAAAAAAAECAwQABREGEzESISJBMlFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIRIf/aAAwDAQACEQMRAD8A26eWzHpbscsbxrAw7cj8kuD+sQG5LLf7SToYvth95L9L7LZbhDXt7CwyBePy84+WBNVWdVAmkmHAdx7p/MjTXJQcNI3sUNdI4aaqJH4HzYecMiL/AFNt+/6FuFUjARQFHgYYpWpDbLP/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/54771ef3ea51b88cf4dff3d6b278385f1391704b-1920x1281.jpg"
+        }
+      ],
       "location": "Thane",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/a61cbe81d4e2c36c3dd0fcb3dd817b9026307572-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACIQAAIBBAICAwEAAAAAAAAAAAEDAgAEBREGEiFRFCIkcf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEhETUf/aAAwDAQACEQMRAD8AoaeVYuLVQbKQm46hHrrdMbnLoYqYZcxSqI2RHwNf2sfLsJbOWp6PzsSN7hEfYeqlGOyTszyKdhIlNkoklUTvvr2aC40WWLUrsolxkcaGHq5cx77iikjOO42czL48QT5OqKPsXCtT/9k=",
       "related": null,
       "slug": "garden-glory-penthouse-thane",
       "testimonial": null,
@@ -3542,11 +3742,27 @@
         }
       ],
       "description": "Create a destination for weddings on a 7 acres property — by designing breathtaking landscape pockets of different sizes depending on the scale of the event and the brief given by the client, along with banquet halls, theme restaurants and fully furnished accommodation with ample parking space.\n\nThe design draws on the detailing and intricacies of rich Rajasthani Architecture, reinterpreted through a contemporary lens. The result is a campus that is simultaneously rooted in Indian cultural tradition and unmistakably modern in its execution.\n\nEach event space has been conceived to accommodate gatherings of varying scales, from intimate family ceremonies to large public celebrations, with landscaped corridors between them that allow events to run in parallel without interference.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQP/xAAjEAABAwQCAQUAAAAAAAAAAAACAQMEAAUGERIhcQciMTJR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB4RAAIBAwUAAAAAAAAAAAAAAAABAgMSMRMUQVGh/9oADAMBAAIRAxEAPwDPSo4tuempNejga+0EPab8ap3l6W68xwhx3YZPrtdqZcl8bpZkmMtWbLSt5vEbLyqQcelGuj2MQVQdE8J/HNC7rNFOy2OBnRUc8ka9gjoPGJXKC2qL9Sc7SiqRzFWkNeUl4l/VKip7ePXoNI//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a709719a1b63b83c6946e95bb521770a8ff22a82-1500x1026.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACYQAAEDAwMCBwAAAAAAAAAAAAECAwQABQYREiEHMRMUMkFhcdH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAbEQABBQEBAAAAAAAAAAAAAAACAAEDBBEhFP/aAAwDAQACEQMRAD8Av3LI7bEbjrRudLitChKSSKzmSZS+3Ja8pEdjpbVqFOdnRTlrtlzyNpMyHObhts8bQ3yfjiot3x65Srw6HpyHOwAUTon6ovYZh1+qtXjE8Zlr7XlFqlQm3ZDngOn1II96KQtHTSTKgocXNZB1I0G78opBuSYsPVj1f//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/7602891a193cd11673b13e4adf3abfef6c851551-1421x972.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAUI/8QAIxAAAQMEAQQDAAAAAAAAAAAAAgEDBAAFBhEhFCIxURIVQf/EABYBAQEBAAAAAAAAAAAAAAAAAAQDBf/EABwRAAEEAwEAAAAAAAAAAAAAAAEAAgMREiFBIv/aAAwDAQACEQMRAD8Ajyi/zshnH9vJ6WI2SuNOuLpWxTxx7pVTqQAnkCPNjn3/ADBe4k91byi0lObcgvPkhNHwQ+FVKzscuLb11tlnZjixISQLJOjyKp+rqgMp3VoiXAViCE1WXHSukAJbLclkDVdAqboroFtYFrZaitRyEBFNIOtUVcQt6jums+Rpf//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/60adf9087e6a564c8aa29d373732a2d37bf8d66a-1421x972.jpg"
+        }
+      ],
       "location": "Raipur, Chhattisgarh",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/dd9fcd2f200b7b3a121458f9dffe88d88abb3b86-1500x1026.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAgX/xAAkEAACAgEEAAcBAAAAAAAAAAABAgMEAAUGETESExYhIjIzYf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAeEQACAQMFAAAAAAAAAAAAAAABAgADEZESExQiUv/aAAwDAQACEQMRAD8AY13de4NIvwparQvFY/OKLscYtDuDcNuOW1pcK14gxV0kfn5DvNvQv6vZgsX7ScRfUICO86Hp+kr+NTMpPYDng85mAdu1zmE0wF0mSi29wgsZbbl2JY8P7YZZro9ILx5RP9LHDJ8d/RzE2ln/2Q==",
       "related": null,
       "slug": "wedding-destination-raipur",
       "testimonial": null,
@@ -3640,11 +3856,22 @@
         }
       ],
       "description": "A temple designed after extensive research on Kalimata temples across India. The structure incorporates East Indian and Bengal architectural elements — a stilted floor for cultural performances, first floor residential space, and a rooftop courtyard fronting the main temple.\n\nThe design honours the spiritual gravity of its programme while serving a large and growing devotee community. The formal vocabulary of Hindu temple architecture — the vertical hierarchy of the shikara, the processional logic of the mandapa — is translated into a contemporary material language that connects to its Bengali roots.\n\nThe building is experienced as much as seen: the transition from the bright forecourt into the cool interior of the sanctum, the quality of light at different times of day, the acoustic character of the space under prayer. The temple has become a significant community landmark in Kharghar since its completion.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBBAb/xAAlEAACAQQABAcAAAAAAAAAAAABAgMABAYRBRITUSEiMTNhcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EAB4RAAICAQUBAAAAAAAAAAAAAAERAAIDBAUUFTJR/9oADAMBAAIRAxEAPwBpDhFxGNsuj81YfFugqiX3GOgBS63yie9RI5ZbhmB8GJHp2pn1pkQy29xLG5HMS3m/BurO2GWroFJMWiDZs5LYo4Omh2fuisjxK/na8cniF8Cez6FFA7uH5h4h+z//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/4710d0ea5f3e9bea5025bea4313aa88ad98f1f56-1920x1385.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGBf/EACIQAAIBAwQCAwAAAAAAAAAAAAECAwAEEQUGEiETUTFBYf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAHBEAAQQDAQAAAAAAAAAAAAAAAQACESEDBRIU/9oADAMBAAIRAxEAPwDUttuFY/J06+1Oabi0GNlULIjOTjiDUNtrUBYQLZqkzr8sxnOWNO3muPG5EMITv6Y0x3TY6NKPzsDBJtXC7OeUcul/CaKhRum5wOUeT78hoqM78zTUow4Islf/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/f2a04e94fa0c034107f5634f3f85beccfa2dd36f-1920x1203.jpg"
+        }
+      ],
       "location": "Kharghar, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/74f42b415d09b0f7bc8bbe27555e2f4cb5a4db3f-1920x1206.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHBAb/xAAgEAACAQMFAQEAAAAAAAAAAAABAwIABAUGERIhMRMU/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAdEQEAAgICAwAAAAAAAAAAAAABAAIDEQQUMZHw/9oADAMBAAIRAxEAPwDBhbXEX1vF6bsGEvCRtsabW+LtJNZEzh8ljkWk9AVO45MqgIKTCEB4AfKb426e9JBbIAjyqXdypBnFoeZ1LdJ6dysv0zyoWSOOwHXVFSHK6yvbO/bbrUswWeI3JoqXfI2sqfe4upjDWp//2Q==",
       "related": null,
       "slug": "kalimata-mandir-navi-mumbai",
       "testimonial": null,
@@ -3738,11 +3965,22 @@
         }
       ],
       "description": "The shape of this 70-acre plot with a north-east constricted mouth helped generate the concept of five fingers radiating from the entrance. Each finger functions as a separate institute — covering hospitality, management, health sciences, banking training, and a centre of excellence.\n\nThe layout radiates from the entrance through zones of common facilities, a forest area, institute space, and residential units surrounded by a service road. The five-finger concept allows each institute to maintain its own identity while sharing infrastructure and connecting back to a common arrival sequence.\n\nAt 1.5 million square feet, this is one of the largest projects in the firm's portfolio. The scale demanded a planning logic that was both legible from the air and navigable on foot — the radiating geometry provides both.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACQQAAEDAwQBBQAAAAAAAAAAAAECAwQABRIHESFRYQYUFSMx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB0RAAIBBAMAAAAAAAAAAAAAAAACAQMEEkERE1L/2gAMAwEAAhEDEQA/AIrn6/ct33rZktMlWICXArno0p/VK5rntOe1EWKU7BJHKj3RLt0yeoZxYjbWWWBAIy7pUuwGTiZjjasTuAEflYsZSOMirPS2pqJ1FnqG5jKPkJoqD4tAABdVx4FFL2t7BD2+1P/Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/4cafdcd78a84b2ea458536c3814d146ccd0c97eb-802x602.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGBQf/xAAlEAACAQMDAgcAAAAAAAAAAAABAgMABAUGBxEhYRIUFSIxMlH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ASye8eoMdfLE0EJjdeAWX6k0hdbuahs1YyrBcGTogKccGpfEa1tbjLk5PHRrjVHSNVDOx/ea2dQaywEmOf0jHvHerwY2lQFRQVVruXnTbRN5KNyy8k+H47UVzaPWyNEhubERTce4Rnoe9FB//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/e7ed5be63e6f18ceb3aa566a161e064721445a1d-1002x752.jpg"
+        }
+      ],
       "location": "Bicholim, Goa",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/b90231f629088654219340c11cc95c9ea343b7e5-902x677.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQT/xAAjEAACAQQBBAMBAAAAAAAAAAABAwIABAURBhIUIUEHUWFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJjI/IXKcqvtMm9aGK92511f2puHL8wgMxzb9k0S8mPon9rphxrMpzMA5CwXSECQ0Hdbmo8etrsW13bXXfJkYskuegJfn3QP+OuLsXCZlsknZ2TRS/GZa3VbdFndXIUCfE4RJ3RQf//Z",
       "related": null,
       "slug": "service-industry-campus-goa",
       "testimonial": null,
@@ -3836,11 +4074,22 @@
         }
       ],
       "description": "Designed strictly as per Vaastu and climate, this 5BHK bungalow is designed tastefully to meet the client's every requirement. With two rooms on the ground floor, the master suite and three kids' rooms along with a separate study and family room were designed on the first floor.\n\nThe large cantilever roofs give climatic protection and also serve as a signature feature from the front elevation. The dining room on the ground floor extends into the garden area and allows a peaceful evening sit-out on fair weather days.\n\nThe design orientates main living spaces to catch the prevailing breeze, with deep overhangs that shade glazed elevations from direct sun while admitting diffused light throughout the day. Materials are responsive to the Tamil Nadu climate: cool stone floors, lime render on the exterior, and heavy masonry walls that moderate the internal temperature.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgT/xAAjEAACAgIBAwUBAAAAAAAAAAABBAIDAAURITFxBhIUIjPR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/8QAHBEAAgICAwAAAAAAAAAAAAAAAAIBEQQTFCFB/9oADAMBAAIRAxEAPwDSrC7euUvhONUmetYs7nyM7BBSexijYwZNGP5xyP3msgGYsfIZNlZ+vMhwPA4xBY82s7FipiwXA9JnjnDGW792Ywi1VFHvPUamr2Nqko+6UO55wxLXqqXQWGJ2ztmeZEkfzDHz3j0mpD//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/6904b0b1d8808ee92e6d3862a8b5f072121ac60c-1200x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADBf/EACEQAAEDBAIDAQAAAAAAAAAAAAECAwQABQYREhMVITFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgME/8QAHREAAgIBBQAAAAAAAAAAAAAAAAECERIDBCEikf/aAAwDAQACEQMRAD8Abj2U+SsrrU1xSLi2ClzgNg/tcbHcmkIakx401YZbSepBSN73WD0duJf5LEYdbb6Rz19NEuUONa18YjKAVD2pQ2awaTjisVQox62KTPyW5gyIF0b6d8dKGiCPtVEhFbrAUXXE+/iToVVN7VN3x4FxR//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/7c74063156aa742a20947f9b533b82b5e48c3324-1200x750.jpg"
+        }
+      ],
       "location": "Tirupur, India",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/ffde4260e7f01213e8f09048b6876337d2e25bcf-1200x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACMQAAMAAgECBwEAAAAAAAAAAAECAwAEBREiBhITISMxMkH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQP/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIDBBEh/9oADAMBAAIRAxEAPwCSNL7a0bTlJkmvmJZuhxXhln5Cuw+/sGbKpKzLAjKY8bCPqlDT5P13feRvx2vOzUmGVz/Q2HvPdv1lWFQh86TcEu8yevTtOGZr8PrUcsxqWJ9+84YyNypSRi9eW+n/2Q==",
       "related": null,
       "slug": "villa-merchant-tirupur",
       "testimonial": null,
@@ -3934,11 +4183,27 @@
         }
       ],
       "description": "Fifteen years after the ITM Kharghar campus was built, growth in student intake demand, coupled with an FSI limit increase for institutional projects, necessitated an expansion to the building in the complex. The challenge in extending this campus was threefold: demolish a part of the complex to create room for a bigger building; enable the campus to operate unhindered while construction work is in progress; continue the language and style of the architecture in the new building so that the whole design has a cohesive appearance.\n\nThe design establishes a dialogue with the existing structures through shared material references while introducing a clearer organisational logic — a central spine that connects new and old, with faculty offices and seminar rooms branching off either side.\n\nThis project was followed, in 2005, by the adjacent MBA Hostel Towers, which brought a further 85,000 sq ft of student accommodation to the same campus. Team Design's decade-long involvement with ITM represents one of the firm's deepest institutional relationships.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBP/EACQQAAIBBAIABwEAAAAAAAAAAAECAwAEERIFBhMhIiMxMkGh/8QAFQEBAQAAAAAAAAAAAAAAAAAABAL/xAAbEQACAgMBAAAAAAAAAAAAAAABAgADERIhUf/aAAwDAQACEQMRAD8ArvJdwQyzx6axqMK2ftSNyXY9+at/cCRuNWyf7SkvLpcv4Zdlk+TkZFZuwGArBJbSs0g9JyuAKMguNmzHnklggTAHZSdkbzwGz+0Ug2HZruG0jiktg5QY2DYyKKbkw+s//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/dfb96f8b6a700356442afa941eda85fc9c8572fc-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAj/xAAfEAACAAcBAQEAAAAAAAAAAAABAgADBAUREiETUSL/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8A5otst0qEmeXqAM6/YpVdJMrAulIyEd4sZaK5TaRl/KEAcOOiHNfpnlqu23cnaDSmVdI8idoVIOM9gh73J3OXlqx+mCGpD//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/15c5868228744f9e9ab63da0e2ce80ebd156209a-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCBQf/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABAUSESEGMRMiYf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBBf/EABsRAQEAAwADAAAAAAAAAAAAAAECAAMRBBIx/9oADAMBAAIRAxEAPwDV7vym3yuBNvj5ZIQ6/WUjgCkPF5uWweVZr5pVY8AFqoMdkLr4VgZN4ANdQ2vVRaz5mLqiqh9Kx5rP3OyqVeZZYk59xtfyuyjOsk5De+u6KT5MTDK2zhefwUU8eR6gL3BqZXpn/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/6c64e757220dca3cf90b38a6ec98a1feb899b1c7-1320x990.jpg"
+        }
+      ],
       "location": "Kharghar, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/5eeb889b64c5afb2d8fd58e7164c82c43291209b-1920x1440.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBAf/xAAhEAACAQMEAwEAAAAAAAAAAAABAgMABAUGERITITFBUf/EABYBAQEBAAAAAAAAAAAAAAAAAAUBBP/EABwRAAICAgMAAAAAAAAAAAAAAAASARECYQMTIf/aAAwDAQACEQMRAD8Atstrdr3J99pdyizI26/VJ81qom27IXKyKw88t9x+UkGLMYIjcHf4wrFe4h5LZ04AMTuGDeqPiZy5XbyyNilUVcGq8bLErScg/wBBFFc5bGSxMVErH77opHt0Z00f/9k=",
       "related": null,
       "slug": "college-campus-extension-itm",
       "testimonial": {
@@ -4036,11 +4301,27 @@
         }
       ],
       "description": "NRB Bearings, based in Aurangabad, provide world-class bearing solutions to Indian and global markets. The project was to design a guest house building that would house their important officials.\n\nThe building infrastructure is state of the art with amenities including a gym, business centre, and an open terrace garden at the podium level — to which a leading café chain was given access, creating an active ground-level presence for the building.\n\nThe brief called for a facility that would impress senior guests while remaining practical for extended stays. The suite arrangement balances the hotel-like quality expected by visiting executives with the comfort and ease of serviced accommodation, avoiding the impersonality of a corporate hotel.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYIBQf/xAAjEAACAgIBAwUBAAAAAAAAAAABAgMEABEFBhIhBxMWMUEi/8QAFgEBAQEAAAAAAAAAAAAAAAAABAID/8QAHBEAAgEFAQAAAAAAAAAAAAAAAAECBBESE1EU/9oADAMBAAIRAxEAPwDZf1Gpz8tWpcbTZ2lXvLyHQUa3rGrpqxHaD3LBCxuvdov4U5PnC87DBL78lUGwD/Mi/Yxq+axNXEJeaOLRBQKNHf1mm2WV2ydccbJHcngLMSgBX884ZPbdf9Sxajr8kDEo0u0/MMSqlcDeeXT/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/d1d4af9f5184dfa75eec0736e3a4db3560fce764-1000x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcBAwYI/8QAJBAAAgIBAwMFAQAAAAAAAAAAAQMCBAAFBiEREhMHMVFhcZH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAdEQACAgEFAAAAAAAAAAAAAAABAgADIRETFDFR/9oADAMBAAIRAxEAPwDc7o3rZ0rWzQihbliAl3n7ydA3DC/C9duALQiPXxx98Ugu2BYWWtkwgdD3c8fuXz1m2tNlFLsVF4IkAOf7it7KdR1B61K5GYw4eqOkkHxJBiCRzLnDOe2KsqZKMXRAB+MMnln2Y7az/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/6803ca7df4e4267c4e0a33e7e4036f27de6f9669-1000x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCBQf/xAAiEAABAwQCAgMAAAAAAAAAAAABAgMEAAURIQYSE0EyccH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAgT/xAAYEQADAQEAAAAAAAAAAAAAAAAAARIhAv/aAAwDAQACEQMRAD8ATuOeOKpLkiGXEEjDo31q55Db25tvkTorQS8jRHrX7S81ezDuDDDKdH5DGsfVN0i9My7JIQlJQ6UHIA0az1WoRPlrDOlNZOVDfuipuODuaKUg/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/24aa92122faec4ba9ca57242f3b3dd38f2eabf70-1000x750.jpg"
+        }
+      ],
       "location": "Aurangabad, India",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/2e4d3758298853abe67168904e9589f36790439b-1000x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHCP/EACIQAAEEAgIBBQAAAAAAAAAAAAMBAgQFABESIQYUMkFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAHBEAAgICAwAAAAAAAAAAAAAAAAERIQIDBBRB/9oADAMBAAIRAxEAPwCxmjFKZXOI3TU3vFiXYiFYKswm47umab3vJv4tcy4wSOmWE05Xr7efWMci5iT/AETTDIHgu3Ki7+MV8hqGqCWvG1kOVXJh2URJMMvMKqqIqfaYZnS4tbGqtJUWpsjBiIRXNb+4ZfeXshPQpo//2Q==",
       "related": null,
       "slug": "nrb-bearings-guest-house-aurangabad",
       "testimonial": null,
@@ -4134,11 +4415,27 @@
         }
       ],
       "description": "Using nature as the basis for design — a building must grow, as nature grows, from the inside out. Nature grows from the idea of a seed and reaches out to its surroundings. A building is akin to an organism and mirrors the beauty and complexity of nature.\n\nThe client, being a chef herself, wanted to develop a part of the property into a dedicated kitchen facility cum study cum relaxation groove, right opposite an existing swimming pool. The building was designed to be a \"no-building\" — surrounded by four large trees at four corners with glass walls that embrace the beauty of nature at any given time.\n\nThe result is a small structure with an outsized relationship to its site: from inside, the four trees become the walls, and the garden beyond becomes the room. The kitchen operates as much outdoors as in, with operable glass panels that dissolve the boundary entirely when the weather allows.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHAwb/xAAkEAABBAIABQUAAAAAAAAAAAABAAIDBAURBiEiMmETFDFxgf/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBf/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMREyEi/9oADAMBAAIRAxEAPwCW4PHYMRgWbxrF4Aezu/Vtm7WNDhVY8Tsi36bmjvHlIAA49QB+wut4XhgDHk14XHW9lu1nZIcem9jxcvrQjpcBZPJVmWqMEcsEg2CGfHhCo17O3qvt4az2wxtib0sGhvnzQq5WAz//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/55f656fae90564f2c0510de76407e77c85cf6dfb-1200x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQDBQYH/8QAIhAAAgEEAgEFAAAAAAAAAAAAAQIDAAQFEQYSIhMhMUFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIF/8QAGREAAwADAAAAAAAAAAAAAAAAAAIRARMh/9oADAMBAAIRAxEAPwDjGJwcbFyr+RXYXWyKnucQtk8rzyLDJ12g+903heVZHGTLHbC2KjQ84gTTHLb18kY7m4ji9WX2Youqz8s1LVuGMyeLu3uu7yCQsoPYH5oqwMQTSqzAD9opNjB0/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/3bbcc705b54c205862570662588ab4fe55c84a34-1200x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBP/EACIQAAIBBAEEAwAAAAAAAAAAAAECEQADBAUhBhITIjFRYf/EABYBAQEBAAAAAAAAAAAAAAAAAAQBA//EAB0RAAICAQUAAAAAAAAAAAAAAAACARITESExUWH/2gAMAwEAAhEDEQA/AIxptLkavb2H85R1aPSZinPWlg7MoCche2AHumeKY73KuXtiLzBQ/dPqIp11Rg2Th2XhpZATz+URFvo88kd6bE2saTHCkNkrweODRW97Kh2An5+6KRhnszy+H//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/079ae45c537ec326841fe5712b05b70dae2f0968-1200x750.jpg"
+        }
+      ],
       "location": "Mandwa, Alibaug",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/1f7ba619133ead0f71426b4e146b5443a0fd62b0-1200x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBgf/xAAgEAACAgICAgMAAAAAAAAAAAABAgMRAAQFEgYxISKx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDBP/EABkRAAIDAQAAAAAAAAAAAAAAAAARARIhUf/aAAwDAQACEQMRAD8AyqDd6TSmR40oUoZclyGxM0cbanRzf36rVDEPLSXyTIVUqBXrGfjrM0jqSQoHwB6zElpTELeQ5Db1tgxxq0ooHsPzDLQgRge0aE3VkYYWjgnJ/9k=",
       "related": null,
       "slug": "glass-kitchen-alibaug",
       "testimonial": null,
@@ -4232,11 +4529,27 @@
         }
       ],
       "description": "A house is not just an enclosure within four walls; it is a place which gives true satisfaction and comfort — called home. The design was conceived to make two identical 4-bedroom villas with large living spaces and a family area at each level.\n\nLocated in Bhinmal in Rajasthan, the design draws on the formal traditions of the region — thick walls, sheltered courtyard spaces, and carefully positioned openings that modulate the Rajasthani climate. Each villa is independent in plan but shares a common architectural language, creating a sense of family continuity within the compound.\n\nThe project is a reminder that the finest residential architecture is measured not by its ambition but by how naturally it becomes home to the people who live in it.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYEBQf/xAAgEAACAgICAgMAAAAAAAAAAAABAgMEABESMQUGEyJi/8QAFgEBAQEAAAAAAAAAAAAAAAAABAID/8QAGhEAAwADAQAAAAAAAAAAAAAAAAECAxETEv/aAAwDAQACEQMRAD8Az/35/jhijq2WjcH7BeycXqHkr6KkVpw6hgeXHTaywqwK0bpKzShUJHM70chVIzZlAldyOtA5ayZHT9MycQlpIdIa6yRK4I0w33hi06vGxVJZQB+sMV3sNxk//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a847a1de3ee46954d200b2929e80f161e6e7cc30-1200x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGBQf/xAAhEAABBAICAwEBAAAAAAAAAAABAgMEBQAhBhESMWEiNP/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAbEQEAAgIDAAAAAAAAAAAAAAABAAIDMRESUv/aAAwDAQACEQMRAD8AT5tYKiRXGYMVuLKQ4AC6T+hk/UcokRrdLF6xH8fDtISSAT9xm9eXeXbNhYqK5CSn1oHr12Mx+ftpsOQrlvDxcISOkaTr5kQvpYy0dEp5tlJffK4kMNtdaCSSMM6LGabTWVoDaP5Wyde9YZi65PUDQXmf/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/de4b22e7d7d6a560d8c745a65236573e8fc7b32a-1200x750.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUI/8QAHxAAAgEEAwEBAAAAAAAAAAAAAQIAAwQSIQURYTEi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOnOQvRZhPyGy9mc1+atQkMwZR8UaB9j/IUDXakVxBU/WEqawyYYv0Ce29gPUsjSQuBl1uEloADehCB//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/254ef14729fc428af69af946ef4354ed1bd5d7b1-1754x1240.jpg"
+        }
+      ],
       "location": "Bhinmal, Rajasthan",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/73dff28e874e32e92031e96fe53bfb4ceed6c128-1200x750.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGBAX/xAAkEAACAgIBAwQDAAAAAAAAAAABAgMEABEFBhMhEhQiMSNx8f/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABwRAAEDBQAAAAAAAAAAAAAAAAABAhESISIxQf/aAAwDAQACEQMRAD8AjOb6lNa1Aa0JlquAS4Pn+Zo5Hm4k9o9CN54pN9wsdaxOKdY7KN2omCRlFVl2AP1nUNvQAFetofX4/rBdUlpKxXhI2usmSw6x1/iDobG8Me7WjltSuR6SW3pfAwzQ3SSAf//Z",
       "related": null,
       "slug": "bhandari-house-bhinmal",
       "testimonial": null,
@@ -4330,11 +4643,22 @@
         }
       ],
       "description": "The design of this 6,500 sq ft, ground plus three floor premise embodies the true essence of the women of Jammu and Kashmir. The concept revolves around the logo colours of the bank, metamorphosed into feminine pastel shades, which also demarcate the four seasons of the region.\n\nThe ground floor reflects the shades of autumn, the first floor sings the hues of spring, the second floor honours the glory of winter, and the third floor tells the story of summer. All these elements were carefully thought and implemented by means of fabrics, graphics, lattice work, and light fixtures.\n\nThe layout allows women from all walks of life — a young mother with a newborn, a senior citizen on a wheelchair, a professional, or a teenager — to conduct banking operations with ease and satisfaction.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwYA/8QAIBAAAQQCAgMBAAAAAAAAAAAAAQIDBBEABRIxBiEiFP/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGhEAAgMBAQAAAAAAAAAAAAAAAQIAAxEiUv/aAAwDAQACEQMRAD8At1NxC0S48zyAtQCwKxNVBZ2CAIzqHCVcR9dZMP8Ah8edNS/Idc6rilVXlN49ro2hr8iPkGyCezk9Q9RH3OYWz0a40otqcbugfRzYsmEy++t1tK0BZsjkT7zYT3qGIiJUxUEz/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/b90164737a8c5a7d4cd5eba70547b3b1b51eb0ab-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACMQAAIBAwMEAwAAAAAAAAAAAAECBAADBQYRIRIUMVEiI2H/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEDEv/aAAwDAQACEQMRAD8AvYXb4eEguZFQCTs3lSB+00hzBLjLej5Gx0tyNnHI91Gy8QmQwnaMzKAhChW2HNR2iNG5I6qsRlm/QilGVzv8T6qaOit5otS5RuGWwjXZQcSHIKA8NxRTORhZYFpLEtUt27aoAV38UU3uEHjP/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/5f8ac60f297679569d0f847c1fe06919263c1ca6-1920x1440.jpg"
+        }
+      ],
       "location": "Srinagar, J&K",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/8bf46e43e23a00d3001f42149843452056bc1af4-1200x900.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCBQYH/8QAIhAAAgEEAgIDAQAAAAAAAAAAAQIDAAQFEQYSITEWIlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIREzFB/9oADAMBAAIRAxEAPwC+uLuS0ZPMYjbwo7VHK8ts8XjYpepk7kj+EilRhYbyKKWVmZW869VnuV8TW4tkt2uZI4kYshB3on9qKZp4T4VU576PfPZ5vurIin0NborkUmMyNu7Rxyd0U6DFvYopdAW0/9k=",
       "related": null,
       "slug": "womens-bank-branch-srinagar",
       "testimonial": null,
@@ -4428,11 +4752,27 @@
         }
       ],
       "description": "The challenge was to strike the right balance between the 'Kashmiri Art and Crafts' and the present-day 'Contemporary Look and Feel' in the business capital of India.\n\nThe design incorporated walnut wood lattices, Paper Mache panels, carved furniture, and bidri metal artifacts imported from Srinagar. At 70,000 sq ft across multiple floors, the project demanded a coherent design language that could hold together at scale — from the imposing double-height banking hall to the more intimate private consultation rooms on the upper floors.\n\nThe palette is deliberately restrained — walnut, stone, and polished metal — allowing the architecture to provide the assurance a financial institution requires while the Kashmiri craft elements bring warmth, regional identity, and the unmistakable quality of handwork that no corporate formula can replicate.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFAv/EACMQAAEDAwQCAwAAAAAAAAAAAAEAAgMEERIFEyExBiJRUoH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQIRUQP/2gAMAwEAAhEDEQA/AKc7pHzBzBiAbWPR/U06XNWR41OoM2TzgzhakoGuq8jK/AG+F+E6taI2N2/W3wi2p0XEyRP4Tp7pCXVEAJ+xuUKrEG7bcmhxt2UKr0vphxPD/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/00914ac691dd3ab58670d2b1ae686e13d11b785c-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACIQAAIBBAICAwEAAAAAAAAAAAECBAADBREGEhMhIjFBUf/EABYBAQEBAAAAAAAAAAAAAAAAAAQBAv/EABkRAAMBAQEAAAAAAAAAAAAAAAABAhEDMv/aAAwDAQACEQMRAD8A0xdo8mxRvy49u+qsUY9NHY/d0rhEtYdr96Bdcx+/U2Wbfy/oqnHhvhuIyYsOTcCu5csfv3+Uxx3Ex1xbpeHl8pDMSNUG+0amkJmKx6yRO5VfWQeiWgCN+zRTEzjMGRIdn8o0eoAb6FFbfdb5IpP/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/417ce3b7ab4b74cb86b9cd58a4ecd5dcd1be5fb1-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACIQAAEDBAEFAQAAAAAAAAAAAAIBAwQABRESIQYTMUFRYf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQISMRH/2gAMAwEAAhEDEQA/AHnVMYLzEbhRDEpjZo6goXKJ9pq5dolus7IOxl7yatkeOSJaj+j5zlwm9wUFl9xNVcHlcfKevsjcZq2xxVFlFyReSJU/fVZ+vS6isZiUgXjIm8a5x5oqBuMd2HcJLMaU8DQuLqOc4opLMNEf/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/8de2f2a77b45e5740baa94ad8709b22ed86937c5-1920x1281.jpg"
+        }
+      ],
       "location": "Bandra Kurla Complex, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/2e0db01857b20488141650d22bd0c50086aea265-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAlEAABAwMDAwUAAAAAAAAAAAACAQMEAAUhBhESEzFRFBUiMtH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAISAyH/2gAMAwEAAhEDEQA/AGbrTSUCdaXpZ4JkFJFFc7eKwcLS9n9xhk6WzfR6q8ixjzVzqDU8yZYJLpIIN/VGhwiftK20amkSLtEA2h4IXEk5YJN+y1lWduglvGy18Y8ohxXGE9IrJsj8UUSxiiptpiQ0gNE1FbbE05cR7b0U2SE2Z//Z",
       "related": null,
       "slug": "jk-bank-nbc-bkc",
       "testimonial": null,
@@ -4526,11 +4866,22 @@
         }
       ],
       "description": "Standing in bank queues is redundant, and there has been an increasing need for banks that offer a lounge-like treatment to high net worth individuals. Team Design is helping J&K Bank set up these premium premises across the state and beyond, making a statement about how banking can feel at its best.\n\nThe bank is designed to offer personal attention to every customer and deliver a consistent banking experience across all channels. The design features an 'Elite' reception, waiting lounge, relationship manager office, and business rooms to give premium customers an elegant and private experience.\n\nThis concept demonstrates how the bank branch — traditionally a civic space defined by queues and counters — can be reimagined as a place of discretion and ease, where the transaction is almost incidental to the quality of the environment.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIBAAAgICAgIDAAAAAAAAAAAAAQIDEQAEBTEGIRITIv/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAECEQMSMUH/2gAMAwEAAhEDEQA/ALk6onKw6a/oSEj531WOT1DrMFhjM5Jr0RmX4/x2SGaaXZ3JWklZmsMfRPeUeO0I+PZT987OBQJa8hlcnF6dFp+GoTx+copZUsi++sZF3X2p5y43J0FdBqxhbKUf/9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/7612abfafdd6a8a9649cacfc7642cb7109fe716d-1920x1440.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYEBQf/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAUGERIhQRMUIjFRYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABkRAQADAQEAAAAAAAAAAAAAAAEAERJRIf/aAAwDAQACEQMRAD8AiZNiRUmdNE9rx2HAlSVek/lM2GPG54xOt97leYabb2hQGyk9utZTnsiXPmJltylpBVzW2ToKPzVTJvF1lsNwGpBYZJBUlo8SofdTsjSRbo8j9ItNmS8oAFWu5PvRSkWpBA4vqAAA60UbD2Is5P/Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/bc64db03dc9af7f484c6f308c48004b61931424e-1920x1440.jpg"
+        }
+      ],
       "location": "Shopian, J&K",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/d7c225a826060b1731bd66f1c9316ed696f3552e-1920x1440.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EACcQAAEDAwIEBwAAAAAAAAAAAAECAwQABREGEhMhJDEUIjJBUYGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAbEQADAAIDAAAAAAAAAAAAAAAAAQISITFBUf/aAAwDAQACEQMRAD8A0NR3iO+hMa4xA/klAUTzSR8GsSFpS2zJvTylqQT6CcY+6itCDqCM881H4DJUeECvJGe9VTXFWWDbG7Y11JUfGFZzuGeWDUVTNN9Dp0khLtpi2sTVNuDCh38279optSS0Trlx2Ya2gpA3JDoxu96KDB+jqtcH/9k=",
       "related": null,
       "slug": "high-networth-branch-shopian",
       "testimonial": null,
@@ -4624,11 +4975,27 @@
         }
       ],
       "description": "Man and nature have always been locked together in a perpetual battle — man trying to civilise the world, and nature being a force to be reckoned with. What happens when an unstoppable force meets an immovable object? 'Symbiosis' is the answer.\n\nThis design merges contemporary and organic aesthetics into a luxurious apartment. The concept separates two floors: the lower level contains living, kitchen, and entertainment spaces, while bedrooms occupy the upper floor for privacy. The architects incorporated abundant windows with dark flooring and accent lines, complemented by bright furnishings, colourful wall art, and wood-panelled walls to balance monochromatic tones.\n\nThe result is a home that feels simultaneously disciplined and alive — a space in which the owners' collections, personalities, and daily routines are all given room to breathe.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACUQAAICAgAEBwEAAAAAAAAAAAECAwQABQYREhMHFCEiMUFRYf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxEAAQUBAQAAAAAAAAAAAAAAAQACAwQRIWH/2gAMAwEAAhEDEQA/AHDivc7HTJXSB6tqedulehSSo/SMl+32WzPFNE7C1M8qzoRGfaoBP0MoniOJtNaqTaqY1+6wRl6Qw5Ylvo04isG5esz+bikVUkU/Hr+ZPknjYcVKJjy3cHU+W972Z2RYByH9wzEg0zxdxLF2Sw6uQHZQDywwBtepIpEjV//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/9900afee275625574558130ce8d6d275003d5407-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EACIQAAIBBAICAwEAAAAAAAAAAAEDAgAEBREGEiEiFjEyQv/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAHBEAAgICAwAAAAAAAAAAAAAAAQIAAxIhERMx/9oADAMBAAIRAxEAPwBuVtRi7dVwBFiCNyjE+1J4Y1UbzLXezGMpx6QmfP53qoraxln+U4vHuuGKS8Ht18/VQ5GHx3leTsbImS7Z/oWef5qRWoZMx5LFxxfrOzzNUXm8atcIvW8M0CREbFFZ9HIF0IscsTYQNnZFFIBhCu5//9k=",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/cde18b50a761f7b2c7eda12b27195248a3c4d27a-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGBQf/xAAkEAACAgEDBAIDAAAAAAAAAAABAwIEAAUREgYhMUETFBVhcf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQIAQQMRFBL/2gAMAwEAAhEDEQA/ALH8zWVeVUS4NZMCQ4+gcb7wSLjFxlNsByMZDYHILRNUXp1SxZRTWfhYYiMiST/TmwnqixefNLa6gAOYMe3j1+8lti2wY1KqZNL5Fx7d3VHuLDcK9/EY9gMM4fq3X+vo1S3BdqHANlxBgDsN/GGPzmH1IKn/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/756828d130a909643da9ef9194165fa87ae3cd29-1920x1281.jpg"
+        }
+      ],
       "location": "Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/07978e7e6f1dec9424a65dfb6a3d3eaed454a7c5-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBv/EACIQAAEEAgIBBQAAAAAAAAAAAAECAwQRAAUGEiETFDEycf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAhFBITH/2gAMAwEAAhEDEQA/ANBxXmb07XkSI7TTlilEEgjHuu370uXNLi4jcVpAKHFGheT7h3LXmOPvh2Iw9QDabFUMX7QHaa2Y0kmO27R6o8hP5gThxDwdN0VHV801xij3syP64UQa+MMh0CGxHjhvoV9T9lHycM2q0vcP/9k=",
       "related": null,
       "slug": "exclusive-villa-mumbai",
       "testimonial": null,
@@ -4722,11 +5089,22 @@
         }
       ],
       "description": "The E-Lobby is a new facility provided by leading banks to empower customers to conduct banking transactions as per their convenience, without any time restriction — saving time, eliminating queues, and offering additional services that ATMs do not provide.\n\nThe challenge was to design a space that was state-of-the-art and confidently modern, while also inheriting the corporate brand and keeping in mind the cultural heritage of the region. This generated soft forms that reflect the gentleness of the people, whites that depict the magic of snow, digital lines on the floor that signify today's tech era, and three colours that speak to the brand.\n\nA much-talked-about design waiting to be built — this concept demonstrates how banking infrastructure can become a cultural landmark rather than a generic utility.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQP/xAAjEAACAgEDBAMBAAAAAAAAAAABAgMEBQAGERITIUEVMVEl/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBpuSttbbNKhHYrzWaGQU/0QfMTD1xrlPf+I2zDd2nRW9jrKtFISvVJI/6w9DTvZ1Ovl71vB5KJLGOkiZ+2456W4+1Po6i4Gk2tiLVXESyJFNZkRus9XAHgcfmoNK4CGKFcglhrhQNL2jwoY/Y40amGJZiWJJPkk6NUf//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/8c910d2c24de04067b5279cb66db9da373b5de2d-1920x1152.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIAwb/xAAhEAACAgIBBAMAAAAAAAAAAAABAgMEAAUSBhMhQSJRYv/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABgRAAMBAQAAAAAAAAAAAAAAAAABEQIh/9oADAMBAAIRAxEAPwBsWdxpGrlrOyqvGP2PGc7sNx05JEoo7CuJOXyBf1k72CUcoCeI+zmXMjMypwmUDSs0Wg5R9l1JPlsMRtbaW4YgkUzKo9YY6kCdP//Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/5ee7fdbf77fb4e58b171d66d4a77868d92e051af-1500x900.jpg"
+        }
+      ],
       "location": "Lal Chowk, Srinagar",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/bae88a035bcd39048e4d23fe792b1290bb774fdc-1500x900.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAf/xAAgEAACAQQCAwEAAAAAAAAAAAABAgADBBEhE0EFImEx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIEBf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/ANgbyN0Lm4wXKldZ2M/IgvS9NOakreuyR3EK4YnJ39kDqMzNzkGoSSxu+SnU6w5GISzQACaA/YR1OwL/2Q==",
       "related": null,
       "slug": "electronic-bank-lobby-srinagar",
       "testimonial": null,
@@ -4820,11 +5198,27 @@
         }
       ],
       "description": "Located in Vashi, a suburb of Mumbai, this is a home filled with contemporary warmth that is inviting, cosy, and elegant all at the same time. This was achieved by creating a palette of earth tones combined with a variety of textures running the gamut from smoothly polished to rough and weathered.\n\nThe family room is a prime example of how textures and warm shades can create a sophisticated and warm feel. The interiors avoid the extremes of either cool minimalism or heavy traditionalism, finding instead a register that feels effortlessly lived-in from the moment the family moves in.\n\nThe project comes with the endorsement of the client himself — Gordon Serrao, a hotelier whose professional life is spent evaluating the quality of hospitality environments, praised the professionalism of the Team Design process from first meeting to handover.",
-      "gallery": null,
+      "gallery": [
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcCBQb/xAAkEAABAwMEAQUAAAAAAAAAAAABAgMEAAURBhITIRQiMTJhcf/EABYBAQEBAAAAAAAAAAAAAAAAAAUAA//EABoRAQACAwEAAAAAAAAAAAAAAAEAAgMREiH/2gAMAwEAAhEDEQA/AC26kisypaLmtDbTDnGlxAzuNa1NwjLbHA4Fendk9dUv9Q2iFb3y3HZIHyJKvc/dWwPncMZ0AHhA3p6OPyirWqe1iAK6ZG6a1bgyyzxIXgZzvFFI/VbL0K/SmBIKwhWASmitjEpvqXeI85n/2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/a1bf2413894a6618820a3b18ee8e10f987d656ea-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAfEAABAwUBAQEAAAAAAAAAAAABAgMEAAUREjETIQb/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAHREAAgEEAwAAAAAAAAAAAAAAAAECAxESUSEiI//aAAwDAQACEQMRAD8Ay8SpSpLEiE4ps+ZJCRkKOadZ/wBTN922Z0YJ2Ou2vabbbUidHaU4+6nUfAg4rsgW5MqOp2Q4pZSSkADHKlpLzto0W4ctkG8SHG5yw0lGh+jNFWJlmYcdyVL5jtFI77Azif/Z",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/074dac78de5d3d436944082c51d9c637e805faa1-1920x1281.jpg"
+        },
+        {
+          "alt": null,
+          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAlEAABAwMDAwUAAAAAAAAAAAABAgMEABESBQYhExVxFBYiMYH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQQF/8QAHREBAAIBBQEAAAAAAAAAAAAAAQACEQMEIkGxwf/aAAwDAQACEQMRAD8AqTrHQSv1DkVzi5sMVHxXP9wByewmM3046xldQ5reRsaA9q4lqkSskoxCM/j5tU+vS+jr7cJyQtxgAqHFiP2luyjkpx+w0W9UbGTyIbkntd2eKwCo8kiik9y6M33VzF5wCw4+6KzQe2WKZn//2Q==",
+          "url": "https://cdn.sanity.io/images/il220i1c/production/1d989e5c99112ec530883f05ac14fefef56b82e0-1920x1281.jpg"
+        }
+      ],
       "location": "Vashi, Mumbai",
-      "mainImage": null,
+      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/5d4bac0a6fc5fb3c08b0cfd566b010e76e55237a-1920x1281.jpg",
       "mainImageAlt": null,
-      "mainImageLqip": null,
+      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACMQAAIBAwQBBQAAAAAAAAAAAAECAwAEBQYREiETIjFBUXH/xAAWAQEBAQAAAAAAAAAAAAAAAAAFAQL/xAAbEQEAAQUBAAAAAAAAAAAAAAABAAIREiFBA//aAAwDAQACEQMRAD8An30ssOQyc1gVLxHn4nfYMPoU5FmZctoa6yapFbSRKwCjs7ilLXAwZfL3clzI4Ak24r1V3L6SsI8FK1oXtwoIKKfS36KK8sU2XtEqlO9mM05kbkYeBpZhKzgvuffv4orOoWt18UbEIvQAorTg8kSq+mf/2Q==",
       "related": null,
       "slug": "gordon-serrao-home-navi-mumbai",
       "testimonial": {
