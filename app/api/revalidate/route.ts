@@ -12,9 +12,12 @@ const SECRET = process.env.SANITY_REVALIDATE_SECRET;
 //   Authorization: Bearer <SANITY_REVALIDATE_SECRET>
 //
 export async function POST(req: NextRequest) {
-  // Strip "Bearer " prefix if present, then compare.
-  const secret =
+  // Accept secret via Authorization header OR ?secret= query param
+  // (Sanity's webhook UI supports query params but not custom headers via API)
+  const headerSecret =
     req.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ?? null;
+  const querySecret = req.nextUrl.searchParams.get('secret');
+  const secret = headerSecret ?? querySecret;
 
   if (!SECRET || secret !== SECRET) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 });
