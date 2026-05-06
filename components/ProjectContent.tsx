@@ -16,10 +16,23 @@ interface Props {
 export default function ProjectContent({ contentBlocks, gallery, projectTitle }: Props) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  // Detect whether we have real image blocks (not just text/pullquote blocks).
+  // Imported projects often have paragraph+pullquote contentBlocks but no
+  // image blocks — we want to fall through to the gallery in that case.
+  const hasImageBlocks = contentBlocks?.some(
+    (b) => b.type === 'fullWidthImage' || b.type === 'halfWidthImages',
+  ) ?? false;
+
+  // Text-only blocks rendered above the gallery for imported projects
+  const textOnlyBlocks = hasImageBlocks ? [] : (contentBlocks ?? []).filter(
+    (b): b is Extract<ContentBlock, { type: 'paragraph' | 'pullQuote' }> =>
+      b.type === 'paragraph' || b.type === 'pullQuote',
+  );
+
   // Build the flat list of lightbox images from all image blocks
   const allImages: LightboxImage[] = [];
 
-  if (contentBlocks && contentBlocks.length > 0) {
+  if (hasImageBlocks && contentBlocks) {
     contentBlocks.forEach((block) => {
       if (block.type === 'fullWidthImage') {
         allImages.push({ src: block.src, caption: block.caption });
@@ -39,7 +52,7 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
   const imageIndexMap = new Map<string, number>();
   allImages.forEach((img, i) => imageIndexMap.set(img.src, i));
 
-  if (contentBlocks && contentBlocks.length > 0) {
+  if (hasImageBlocks && contentBlocks) {
     return (
       <>
         <section className={styles.blocks}>
@@ -133,6 +146,23 @@ export default function ProjectContent({ contentBlocks, gallery, projectTitle }:
   if (gallery.length > 0) {
     return (
       <>
+        {/* Paragraph / pull-quote blocks for projects that have text but no image blocks */}
+        {textOnlyBlocks.length > 0 && (
+          <section className={styles.blocks}>
+            {textOnlyBlocks.map((block, i) =>
+              block.type === 'paragraph' ? (
+                <div key={i} className={styles.blockPara}>
+                  <p className={styles.blockParaText}>{block.text}</p>
+                </div>
+              ) : (
+                <div key={i} className={styles.blockPullQuote}>
+                  <blockquote className={styles.blockPullQuoteText}>{block.text}</blockquote>
+                </div>
+              ),
+            )}
+          </section>
+        )}
+
         <section className={styles.gallery}>
           {gallery.map((img, i) => (
             <div
