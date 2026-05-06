@@ -93,8 +93,8 @@ export default async function HomePage() {
             },
             geo: {
               '@type': 'GeoCoordinates',
-              latitude: 19.1077,
-              longitude: 73.0081,
+              latitude: 19.0933,
+              longitude: 73.0212,
             },
             foundingDate: '1996',
             founder: {
