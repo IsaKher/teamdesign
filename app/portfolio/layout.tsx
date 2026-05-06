@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://teamdesign.in/portfolio',
+    canonical: 'https://teamdesignarchitects.com/portfolio',
   },
 };
 

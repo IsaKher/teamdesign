@@ -1,6 +1,6 @@
 export const revalidate = 3600;
 
-import type { Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -17,6 +17,43 @@ import { getTestimonials, getSiteSettings } from '@/lib/sanity';
 /** SSR-time theme colour — dark to match the filmstrip before JS runs */
 export const viewport: Viewport = {
   themeColor: '#3B1E08',
+};
+
+export const metadata: Metadata = {
+  title: 'Architecture & Interior Design — Mumbai | Team Design Architects',
+  description:
+    'Team Design Architects — architecture and interior design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work across India.',
+  keywords: [
+    'architect Mumbai',
+    'architecture firm Mumbai',
+    'interior design Mumbai',
+    'residential architect India',
+    'commercial architect Mumbai',
+    'Team Design Architects',
+    'Tasadduq Kher',
+  ],
+  alternates: { canonical: 'https://teamdesignarchitects.com/' },
+  openGraph: {
+    title: 'Team Design Architects — Architecture & Interior Design, Mumbai',
+    description:
+      'Architecture and interior design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work.',
+    url: 'https://teamdesignarchitects.com/',
+    images: [
+      {
+        url: 'https://teamdesignarchitects.com/hero-building.webp',
+        width: 1536,
+        height: 1024,
+        alt: 'Team Design Architects — Architecture & Interior Design, Mumbai',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Team Design Architects — Architecture & Interior Design, Mumbai',
+    description:
+      'Architecture and interior design practice based in Mumbai. 25+ years, 300+ projects.',
+    images: ['https://teamdesignarchitects.com/hero-building.webp'],
+  },
 };
 
 export default async function HomePage() {

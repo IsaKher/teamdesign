@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Your enquiry has been sent. A member of the team will reply within one to two business days.',
   // Don't index the conversion page — only meaningful when reached via the form
   robots: { index: false, follow: false },
-  alternates: { canonical: 'https://teamdesign.in/thank-you' },
+  alternates: { canonical: 'https://teamdesignarchitects.com/thank-you' },
 };
 
 export default async function ThankYouPage() {

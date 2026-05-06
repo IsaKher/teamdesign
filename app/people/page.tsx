@@ -7,18 +7,18 @@ export const metadata: Metadata = {
   title: 'People',
   description: 'Meet the team behind Team Design Architects — led by Principal Architect Tasadduq Kher. 25+ years building across Mumbai, Maharashtra, and India.',
   keywords: ['Team Design Architects team', 'Tasadduq Kher architect', 'Mumbai architecture firm team', 'principal architect Mumbai'],
-  alternates: { canonical: 'https://teamdesign.in/people' },
+  alternates: { canonical: 'https://teamdesignarchitects.com/people' },
   openGraph: {
     title: 'People — Team Design Architects',
     description: 'Meet the team behind Team Design Architects — led by Principal Architect Tasadduq Kher. 25+ years building across Mumbai and India.',
-    url: 'https://teamdesign.in/people',
-    images: [{ url: 'https://teamdesign.in/tasadduq-kher.webp', width: 900, height: 1200, alt: 'Tasadduq Kher — Principal Architect, Team Design' }],
+    url: 'https://teamdesignarchitects.com/people',
+    images: [{ url: 'https://teamdesignarchitects.com/tasadduq-kher.webp', width: 900, height: 1200, alt: 'Tasadduq Kher — Principal Architect, Team Design' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'People — Team Design Architects',
     description: 'Meet the team behind Team Design Architects, led by Principal Architect Tasadduq Kher.',
-    images: ['https://teamdesign.in/tasadduq-kher.webp'],
+    images: ['https://teamdesignarchitects.com/tasadduq-kher.webp'],
   },
 };
 import MemberImage from './MemberImage';
@@ -39,7 +39,7 @@ export default async function PeoplePage() {
       {/* Page header */}
       <div className={styles.pageHero}>
         <span className={styles.pageLabel}>The Practice</span>
-        <h1 className={styles.pageTitle}>People</h1>
+        <h1 className={styles.pageTitle}>Architects & Designers</h1>
         <p className={styles.pageSubtitle}>Architecture is made by people, not firms. Meet the team behind Team Design.</p>
       </div>
 

@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
     //    Browsers always send the Origin header for cross-site POST requests.
     //    If it's missing or wrong, we reject immediately.
     const origin = request.headers.get('origin');
-    const siteUrl = process.env.SITE_URL ?? 'https://teamdesign.in';
+    const siteUrl = process.env.SITE_URL ?? 'https://teamdesignarchitects.com';
     if (!origin || !origin.startsWith(siteUrl)) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }

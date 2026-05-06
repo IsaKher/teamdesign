@@ -1,9 +1,46 @@
 export const revalidate = 3600;
 
+import type { Metadata } from 'next';
 import styles from './page.module.css';
 import CareersClient from './CareersClient';
 import { getJobs, getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
+
+export const metadata: Metadata = {
+  title: 'Careers — Join the Practice',
+  description:
+    'Work with Team Design Architects in Mumbai. We are an architecture and interior design studio looking for architects, designers, and interns with a passion for craft.',
+  keywords: [
+    'architecture jobs Mumbai',
+    'architect jobs India',
+    'interior design jobs Mumbai',
+    'architecture internship Mumbai',
+    'Team Design careers',
+    'architecture firm hiring Mumbai',
+  ],
+  alternates: { canonical: 'https://teamdesignarchitects.com/careers' },
+  openGraph: {
+    title: 'Careers — Team Design Architects',
+    description:
+      'Join a Mumbai architecture and interior design studio with 25+ years of practice. We are looking for architects, designers, and interns.',
+    url: 'https://teamdesignarchitects.com/careers',
+    images: [
+      {
+        url: 'https://teamdesignarchitects.com/studio-story.webp',
+        width: 1200,
+        height: 800,
+        alt: 'Team Design Studio — Mumbai',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Careers — Team Design Architects',
+    description:
+      'Join a Mumbai architecture and interior design studio with 25+ years of practice.',
+    images: ['https://teamdesignarchitects.com/studio-story.webp'],
+  },
+};
 
 export default async function CareersPage() {
   const [jobs, settings] = await Promise.all([getJobs(), getSiteSettings()]);

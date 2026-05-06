@@ -5,7 +5,7 @@ import styles from '../privacy/page.module.css';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms governing the use of the Team Design Architects website.',
-  alternates: { canonical: 'https://teamdesign.in/terms' },
+  alternates: { canonical: 'https://teamdesignarchitects.com/terms' },
   robots: { index: true, follow: true },
 };
 

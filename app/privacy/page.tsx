@@ -5,7 +5,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'How Team Design Architects collects, uses, and protects your information when you visit our website or get in touch.',
-  alternates: { canonical: 'https://teamdesign.in/privacy' },
+  alternates: { canonical: 'https://teamdesignarchitects.com/privacy' },
   robots: { index: true, follow: true },
 };
 
