@@ -134,6 +134,44 @@ export default function StudioPage() {
           ))}
         </div>
       </section>
+
+      {/* ─── Sustainability ──────────────────────────────────────── */}
+      <section className={styles.sustainSection}>
+        <div className={styles.sustainInner}>
+          <div className={styles.sustainLabelCol}>
+            <span className={styles.sectionLabel}>Sustainable Design</span>
+          </div>
+          <div className={styles.sustainContent}>
+            <h2 className={styles.sustainTitle}>
+              Buildings that belong to their climate.
+            </h2>
+            <div className={styles.sustainBody}>
+              <p>
+                Sustainable design has been part of our practice since the beginning — not as a certification target, but as a consequence of building well. A building that responds to its orientation, captures natural light, and uses materials suited to its climate will always outperform one that fights its environment.
+              </p>
+              <p>
+                In practice, this means passive cooling strategies before mechanical ones, cross-ventilation layouts, thermally massive walls where the local climate rewards them, and careful solar shading that keeps interiors comfortable without sealing them off from the sky. We have worked on projects from hillside residences in Srinagar — where insulation and heat retention are critical — to coastal homes in Kerala, where humidity control and prevailing sea breezes shape every floor plan.
+              </p>
+              <p>
+                Where clients require formal certification, we provide support for IGBC and GRIHA compliance — including rainwater harvesting design, solar power integration, low-VOC material specifications, and documentation for green building ratings. But the goal is always the same: a building that is efficient because it is considered, not because it has been engineered into compliance.
+              </p>
+            </div>
+            <div className={styles.sustainPillars}>
+              {[
+                { label: 'Passive Design',      desc: 'Orientation, natural ventilation, and solar shading before mechanical systems.' },
+                { label: 'Climate Response',    desc: 'Strategies tuned to local conditions — from arid inland sites to humid coastlines.' },
+                { label: 'Eco Materials',       desc: 'Low-VOC finishes, locally sourced stone and timber, and reduced embodied carbon.' },
+                { label: 'IGBC / GRIHA Ready', desc: 'Documentation and design support for Indian green building certifications.' },
+              ].map((p) => (
+                <div key={p.label} className={styles.sustainPillar}>
+                  <span className={styles.sustainPillarLabel}>{p.label}</span>
+                  <p className={styles.sustainPillarDesc}>{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,0 +1,199 @@
+/* ─── Page Hero ──────────────────────────────────────────────── */
+.pageHero {
+  padding: calc(var(--nav-height) + 80px) var(--margin-page) 72px;
+}
+
+.pageLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 7vw, 96px);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  line-height: var(--lh-body);
+}
+
+/* ─── Posts section ──────────────────────────────────────────── */
+.postsSection {
+  padding: 0 var(--margin-page) var(--margin-section);
+}
+
+.empty {
+  padding: 80px 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+
+/* 3-column grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px;
+}
+
+/* First post spans full width */
+.grid > *:first-child {
+  grid-column: 1 / -1;
+}
+
+.grid > *:first-child .cardImageWrap {
+  aspect-ratio: 16 / 7;
+}
+
+.grid > *:first-child .cardTitle {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+/* ─── Card ───────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card:hover .cardTitle {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.card:hover .cardImageWrap img {
+  transform: scale(1.025);
+}
+
+.cardImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-ground-dark);
+}
+
+.cardImageWrap img {
+  transition: transform 0.5s ease;
+}
+
+.cardImagePlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-ground-dark) 0%, var(--color-rule) 100%);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cardCategory {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: var(--color-ground-dark);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.cardDate,
+.cardReadTime {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.cardReadTime::before {
+  content: '·';
+  margin-right: 12px;
+  color: var(--color-rule);
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.cardExcerpt {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardLink {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid > *:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageHero {
+    padding-top: calc(var(--nav-height) + 40px);
+    padding-bottom: 48px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid > *:first-child .cardImageWrap {
+    aspect-ratio: 4 / 3;
+  }
+  .grid > *:first-child .cardTitle {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+}

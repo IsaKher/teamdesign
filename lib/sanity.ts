@@ -472,3 +472,84 @@ export async function getTestimonials(): Promise<SanityTestimonial[]> {
       { next: { tags: [CACHE_TAG] } }
   ));
 }
+
+// ─── Journal Posts ────────────────────────────────────────────────────────────
+
+export interface SanityJournalPost {
+  slug: string;
+  title: string;
+  publishedAt: string;
+  category: string | null;
+  excerpt: string | null;
+  coverImage: string | null;
+  coverImageAlt: string | null;
+  coverImageLqip: string | null;
+  readTime: number | null;
+}
+
+export interface SanityJournalPostFull extends SanityJournalPost {
+  body: ContentBlock[];
+}
+
+/** Listing of all published journal posts, newest first */
+export async function getJournalPosts(): Promise<SanityJournalPost[]> {
+  const rows = await withFallback<SanityJournalPost[]>('journalPosts', () => client.fetch(
+    `*[_type == "journalPost" && isPublished != false] | order(publishedAt desc) {
+      "slug": slug.current,
+      title,
+      publishedAt,
+      category,
+      excerpt,
+      "coverImage": coverImage.asset->url,
+      "coverImageAlt": coverImage.alt,
+      "coverImageLqip": coverImage.asset->metadata.lqip,
+      readTime
+    }`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+  return rows.map((p) => ({ ...p, coverImage: thumbUrl(p.coverImage) }));
+}
+
+/** Slugs only — used for generateStaticParams */
+export async function getJournalPostSlugs(): Promise<string[]> {
+  return withFallback<string[]>('journalPostSlugs', () => client.fetch(
+    `*[_type == "journalPost" && isPublished != false].slug.current`,
+    {},
+    { next: { tags: [CACHE_TAG] } }
+  ));
+}
+
+/** Full journal post for the article detail page */
+export const getJournalPostBySlug = cache(async (slug: string): Promise<SanityJournalPostFull | null> => {
+  try {
+    const raw = await client.fetch(
+      `*[_type == "journalPost" && slug.current == $slug && isPublished != false][0] {
+        "slug": slug.current,
+        title,
+        publishedAt,
+        category,
+        excerpt,
+        "coverImage": coverImage.asset->url,
+        "coverImageAlt": coverImage.alt,
+        "coverImageLqip": coverImage.asset->metadata.lqip,
+        readTime,
+        body[] {
+          ...,
+          _type == "image" => {
+            ...,
+            "url": asset->url,
+            "lqip": asset->metadata.lqip
+          }
+        }
+      }`,
+      { slug },
+      { next: { tags: [CACHE_TAG] } }
+    );
+    if (!raw) return null;
+    return { ...raw, coverImage: heroUrl(raw.coverImage) };
+  } catch (err) {
+    console.error(`[Sanity] getJournalPostBySlug('${slug}') failed:`, err);
+    return null;
+  }
+});

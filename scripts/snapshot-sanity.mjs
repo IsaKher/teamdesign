@@ -105,11 +105,23 @@ const queries = {
     "photoLqip": photo.asset->metadata.lqip,
     orderRank
   }`,
+  journalPosts: `*[_type == "journalPost" && isPublished != false] | order(publishedAt desc) {
+    "slug": slug.current,
+    title,
+    publishedAt,
+    category,
+    excerpt,
+    "coverImage": coverImage.asset->url,
+    "coverImageAlt": coverImage.alt,
+    "coverImageLqip": coverImage.asset->metadata.lqip,
+    readTime
+  }`,
+  journalPostSlugs: `*[_type == "journalPost" && isPublished != false].slug.current`,
 };
 
 async function main() {
   try {
-    const [projects, projectSlugs, navProjects, projectDetailsArr, featured, settings, testimonials, jobs, teamMembers] =
+    const [projects, projectSlugs, navProjects, projectDetailsArr, featured, settings, testimonials, jobs, teamMembers, journalPosts, journalPostSlugs] =
       await Promise.all(Object.values(queries).map((q) => client.fetch(q)));
 
     // Store project details as a slug-keyed map for O(1) lookup at runtime
@@ -128,11 +140,13 @@ async function main() {
       testimonials,
       jobs,
       teamMembers,
+      journalPosts,
+      journalPostSlugs,
     };
 
     writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2));
 
-    const counts = `${projects.length} projects (${projectDetailsArr.length} with detail), ${testimonials.length} testimonials, ${teamMembers.length} team members, ${jobs.length} jobs`;
+    const counts = `${projects.length} projects (${projectDetailsArr.length} with detail), ${testimonials.length} testimonials, ${teamMembers.length} team members, ${jobs.length} jobs, ${journalPosts.length} journal posts`;
     console.log(`[snapshot] ✓ ${counts} → lib/sanity-snapshot.json`);
   } catch (err) {
     const existing = existsSync(SNAPSHOT_PATH);
@@ -147,6 +161,7 @@ async function main() {
         builtAt: null,
         projects: [], projectSlugs: [], navProjects: [], projectDetails: {},
         featured: [], settings: null, testimonials: [], jobs: [], teamMembers: [],
+        journalPosts: [], journalPostSlugs: [],
       }, null, 2));
     }
   }

@@ -490,6 +490,83 @@
   color: var(--color-text-secondary);
 }
 
+/* ─── Sustainability ─────────────────────────────────────────── */
+.sustainSection {
+  padding: var(--margin-section) var(--margin-page);
+}
+
+.sustainInner {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sustainLabelCol {
+  padding-top: 6px;
+}
+
+.sustainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sustainTitle {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  max-width: 560px;
+}
+
+.sustainBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+}
+
+.sustainBody p {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+}
+
+.sustainPillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.sustainPillar {
+  background: var(--color-ground-dark);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 2px solid var(--color-rule);
+}
+
+.sustainPillarLabel {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.sustainPillarDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 900px) {
   .storyInner   { grid-template-columns: 1fr; }
@@ -501,6 +578,8 @@
   .titleCell:nth-child(3) { border-top: 1px solid var(--color-text-primary); }
   .titleCell:nth-child(4) { border-right: none; border-top: 1px solid var(--color-text-primary); }
   .titleCellCoords { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--color-text-primary); align-items: flex-start; }
+  .sustainInner { grid-template-columns: 1fr; gap: 32px; }
+  .sustainPillars { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -519,4 +598,7 @@
   .process        { padding: 56px var(--margin-page); }
   .services       { padding: 56px var(--margin-page); }
   .servicesSection { padding: 56px var(--margin-page); }
+  .sustainSection  { padding: 56px var(--margin-page); }
+  .sustainPillars  { grid-template-columns: 1fr; }
+  .sustainPillar   { padding: 24px 20px; }
 }
