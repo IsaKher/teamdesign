@@ -1,11 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const GA_ID = 'G-D6MV8606E5';
+declare function gtag(...args: unknown[]): void;
 
 const STORAGE_KEY = 'td_cookie_consent_v1';
 const CONSENT_EVENT = 'td:cookie-consent';
@@ -45,11 +44,20 @@ export default function ConsentGatedAnalytics() {
       }
     }
 
-    setAnalyticsOn(readConsent());
+    function applyConsent(analytics: boolean) {
+      setAnalyticsOn(analytics);
+      if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+          analytics_storage: analytics ? 'granted' : 'denied',
+        });
+      }
+    }
+
+    applyConsent(readConsent());
 
     function onConsent(e: Event) {
       const detail = (e as CustomEvent<ConsentRecord>).detail;
-      setAnalyticsOn(detail?.analytics === true);
+      applyConsent(detail?.analytics === true);
     }
 
     window.addEventListener(CONSENT_EVENT, onConsent);
@@ -60,19 +68,7 @@ export default function ConsentGatedAnalytics() {
 
   return (
     <>
-      {/* Google Analytics 4 — consent-gated */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
-        `}
-      </Script>
+      {/* Vercel Analytics + Speed Insights — still consent-gated */}
       <Analytics />
       <SpeedInsights />
     </>

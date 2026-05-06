@@ -174,6 +174,31 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJsonLd) }}
         />
+        {/*
+          GA4 Consent Mode v2 — tag is present on every page so Google can
+          detect it, but analytics_storage defaults to 'denied' until the
+          user accepts via the cookie banner. ConsentGatedAnalytics calls
+          gtag('consent','update',...) when the user makes their choice.
+        */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-D6MV8606E5"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                wait_for_update: 500
+              });
+              gtag('js', new Date());
+              gtag('config', 'G-D6MV8606E5');
+            `,
+          }}
+        />
       </head>
       <body>
         {/* First focusable element — keyboard users tab here to jump past nav */}
