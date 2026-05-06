@@ -471,6 +471,16 @@
   max-width: 640px;
 }
 
+/* Collapsed state — content stays in the DOM for crawlers,
+   but is visually and interactively hidden */
+.faqAnswerHidden {
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+}
+
 /* ─── CTA — dark close ───────────────────────────────────────────────────── */
 .cta {
   padding: 100px var(--margin-page);

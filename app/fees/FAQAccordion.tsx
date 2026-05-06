@@ -49,9 +49,10 @@ export default function FAQAccordion() {
             <span>{item.q}</span>
             <span className={`${styles.faqIcon} ${open === i ? styles.faqIconOpen : ''}`}>+</span>
           </button>
-          {open === i && (
-            <p className={styles.faqAnswer}>{item.a}</p>
-          )}
+          {/* Always rendered — hidden via CSS so crawlers can read all answers */}
+          <p className={`${styles.faqAnswer} ${open === i ? '' : styles.faqAnswerHidden}`}>
+            {item.a}
+          </p>
         </div>
       ))}
     </div>
