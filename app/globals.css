@@ -139,35 +139,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 }
 
-/* ─── Focus styles (keyboard navigation) ────────────────────────────────── */
-/* Default: warm-brown ring on the light ground. Strong enough for AA on
-   light surfaces; falls back to a light-cream ring on known dark sections. */
+/* ─── Focus styles ───────────────────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--color-text-secondary);
-  outline-offset: 3px;
-  border-radius: 1px;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-text-secondary);
-  outline-offset: 4px;
-}
-
-/* Inputs / textareas / selects — slightly inset, no offset overlap */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--color-text-secondary);
-  outline-offset: 2px;
-}
-
-/* On dark surfaces (footer, filmstrip section) the warm brown disappears.
-   These overrides give a high-contrast cream ring instead. */
-footer :focus-visible,
-[class*='CategoryFilmstrip_section'] :focus-visible {
-  outline: 2px solid var(--color-focus-light);
-  outline-offset: 4px;
+  outline: none;
 }
 
 /* ─── Skip-to-content link ───────────────────────────────────────────────── */

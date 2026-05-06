@@ -299,7 +299,7 @@
 }
 
 .searchWrap:focus-within {
-  border-color: var(--color-text-primary);
+  border-color: var(--color-rule);
 }
 
 .searchIcon {
