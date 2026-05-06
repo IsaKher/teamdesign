@@ -260,6 +260,7 @@ function PortfolioContent({ projects }: Props) {
                 <div className={styles.imagePlaceholder} />
               )}
               <div className={styles.cardOverlay}>
+                <span className={styles.cardTypeBadge}>{project.type}</span>
                 <span className={styles.viewLabel}>View →</span>
                 <span className={styles.cardTagline}>{project.client} · {project.location}</span>
               </div>

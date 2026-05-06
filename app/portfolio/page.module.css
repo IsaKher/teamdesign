@@ -82,7 +82,7 @@
 
 .filterActive {
   color: var(--color-text-primary) !important;
-  border-bottom-color: var(--color-text-primary) !important;
+  border-bottom-color: var(--color-text-secondary) !important;
 }
 
 /* ─── Project Grid ─────────────────────────────────────────────── */
@@ -132,6 +132,20 @@
     rgba(28, 22, 18, 0.35) 48%,
     transparent 78%
   );
+}
+
+/* Type badge — top-left of image, always visible */
+.cardTypeBadge {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: rgba(244, 238, 230, 0.80);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
 
 /* "View →" — top-right, drops in from above */
@@ -249,6 +263,7 @@
   /* Remove redundant overlay info — cardMeta below already shows client/location */
   .cardTagline { display: none; }
   .viewLabel { display: none; }
+  .cardTypeBadge { display: none; }
 
   /* Simplify card details row */
   .cardDetails { flex-direction: column; gap: 1px; font-size: 9px; }
@@ -293,13 +308,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--color-rule);
+  padding: 8px 14px;
+  border: 1px solid var(--color-rule);
+  background: var(--color-ground-dark);
   transition: border-color 0.2s ease;
 }
 
 .searchWrap:focus-within {
-  border-color: var(--color-rule);
+  border-color: var(--color-text-secondary);
 }
 
 .searchIcon {
