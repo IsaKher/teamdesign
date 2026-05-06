@@ -34,6 +34,7 @@
 /* ─── Architectural Drawing ──────────────────────────────── */
 .drawing {
   padding: 0 var(--margin-page) 80px;
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .drawingFrame {
@@ -99,7 +100,7 @@
 
 .annotText {
   font-family: var(--font-sans);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -323,6 +324,19 @@
   letter-spacing: 0.01em;
 }
 
+.pullQuoteText::before,
+.pullQuoteText::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--color-text-secondary);
+  margin: 0 auto;
+}
+
+.pullQuoteText::before { margin-bottom: 32px; }
+.pullQuoteText::after  { margin-top: 32px; }
+
 /* ─── Core Values — inverted triangle ───────────────────── */
 .process {
   padding: var(--margin-section) var(--margin-page);
@@ -357,8 +371,8 @@
 /* Row 2 — 2 cards, inset one column each side */
 .processStep:nth-child(4) { grid-column: 2 / 4; grid-row: 2; }
 .processStep:nth-child(5) { grid-column: 4 / 6; grid-row: 2; }
-/* Row 3 — 1 card, centred */
-.processStep:nth-child(6) { grid-column: 3 / 5; grid-row: 3; }
+/* Row 3 — 1 card, wider centre to reduce isolation */
+.processStep:nth-child(6) { grid-column: 2 / 6; grid-row: 3; }
 
 .processStep {
   background: var(--color-ground-dark);
@@ -497,13 +511,26 @@
 
 .sustainInner {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 80px;
+  grid-template-columns: clamp(32px, 4vw, 48px) 1fr;
+  gap: 64px;
   align-items: start;
 }
 
+/* Rotated vertical label — mirrors the paraNote annotation style
+   used in the founding story section */
 .sustainLabelCol {
+  display: flex;
+  justify-content: center;
   padding-top: 6px;
+}
+
+.sustainLabelCol .sectionLabel {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  letter-spacing: 0.18em;
+  color: rgba(28, 22, 18, 0.40);
+  font-size: 9px;
+  user-select: none;
 }
 
 .sustainContent {
@@ -578,7 +605,15 @@
   .titleCell:nth-child(3) { border-top: 1px solid var(--color-text-primary); }
   .titleCell:nth-child(4) { border-right: none; border-top: 1px solid var(--color-text-primary); }
   .titleCellCoords { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--color-text-primary); align-items: flex-start; }
-  .sustainInner { grid-template-columns: 1fr; gap: 32px; }
+  .sustainInner { grid-template-columns: 1fr; gap: 24px; }
+  .sustainLabelCol { justify-content: flex-start; }
+  .sustainLabelCol .sectionLabel {
+    writing-mode: horizontal-tb;
+    transform: none;
+    letter-spacing: var(--tracking-label);
+    color: var(--color-text-secondary);
+    font-size: var(--size-label);
+  }
   .sustainPillars { grid-template-columns: 1fr 1fr; }
 }
 
