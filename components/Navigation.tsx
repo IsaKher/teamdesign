@@ -10,7 +10,6 @@ import { STUDIO } from '@/lib/siteContent';
 const leftItems = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Studio',    href: '/studio'    },
-  { label: 'Journal',   href: '/journal'   },
 ];
 
 const rightItems = [
