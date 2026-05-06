@@ -121,7 +121,8 @@ export default defineType({
       category: 'category',
       media: 'coverImage',
     },
-    prepare({ title, category, media }: { title?: string; category?: string; media?: unknown }) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    prepare({ title, category, media }: { title?: string; category?: string; media?: any }) {
       return {
         title: title ?? 'Untitled',
         subtitle: category ?? 'No category',
