@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-05T22:13:20.293Z",
+  "builtAt": "2026-05-06T00:47:22.029Z",
   "projects": [
     {
       "area": "150,000 sq ft",
@@ -123,17 +123,6 @@
       "year": 2011
     },
     {
-      "area": "75,000 sq ft",
-      "client": "South Kanara Brahmin's Association",
-      "image": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
-      "location": "Mumbai",
-      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
-      "slug": "gokul-cultural-centre-mumbai",
-      "title": "Gokul Cultural Centre",
-      "type": "Institutional",
-      "year": 2017
-    },
-    {
       "area": "2,500 sqft",
       "client": "Luthra Group",
       "image": "https://cdn.sanity.io/images/il220i1c/production/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg",
@@ -198,17 +187,6 @@
       "title": "Bhandari House",
       "type": "Bungalows",
       "year": 2013
-    },
-    {
-      "area": "10,000 sq ft",
-      "client": "Venus Wires",
-      "image": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
-      "location": "Khopoli, Maharashtra",
-      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
-      "slug": "venus-wires-office-khopoli",
-      "title": "Building for Precision Metals — Venus Wires",
-      "type": "Commercial",
-      "year": 2009
     },
     {
       "area": "6,500 sq ft",
@@ -436,7 +414,6 @@
     "mba-hostel-towers-itm",
     "jk-bank-branch-samba",
     "college-engineering-management-nagpur",
-    "venus-wires-office-khopoli",
     "unilazer-ventures-office",
     "airport-lounge-srinagar",
     "kishore-mariwala-home-mumbai",
@@ -444,7 +421,6 @@
     "usha-shenoi-residence",
     "pedder-johnson-properties-mumbai",
     "mariwala-estate-annexe-lonavala",
-    "gokul-cultural-centre-mumbai",
     "bungalow-ahmedabad",
     "show-flat-mumbai",
     "hdfc-bank-office-jammu",
@@ -562,14 +538,6 @@
       "type": "Commercial"
     },
     {
-      "location": "Mumbai",
-      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
-      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
-      "slug": "gokul-cultural-centre-mumbai",
-      "title": "Gokul Cultural Centre",
-      "type": "Institutional"
-    },
-    {
       "location": "Mumbai, India",
       "mainImage": "https://cdn.sanity.io/images/il220i1c/production/bbff8295b9476da488520cfc8a2a7b557e0b574d-6725x4485.jpg",
       "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQAEB//EACMQAAEDBAEEAwAAAAAAAAAAAAECAwQABREhEwYHEnEUMaH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAQACAgMAAAAAAAAAAAAAAAEAAgMhEhMx/9oADAMBAAIRAxEAPwBi29RGfGW7xJYaSMkDf7SUufGjseT2Fo8chYOvRoGxMN8nxEoAZOyMfdF9w5TkG2qVGwlLSwQnGj7qNyi6JQYk9ZsuoadlBwYwtIVqquSyut7op3I4gMDQTVRdVmPyqan/2Q==",
@@ -616,14 +584,6 @@
       "slug": "bhandari-house-bhinmal",
       "title": "Bhandari House",
       "type": "Bungalows"
-    },
-    {
-      "location": "Khopoli, Maharashtra",
-      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
-      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
-      "slug": "venus-wires-office-khopoli",
-      "title": "Building for Precision Metals — Venus Wires",
-      "type": "Commercial"
     },
     {
       "location": "Srinagar, J&K",
@@ -1232,110 +1192,6 @@
       "title": "College for Engineering & Management",
       "type": "Institutional",
       "year": 2010
-    },
-    "venus-wires-office-khopoli": {
-      "area": "10,000 sq ft",
-      "client": "Venus Wires",
-      "contentBlocks": [
-        {
-          "_type": "paragraphBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "A 10,000 sq ft office building for a precision steel manufacturer on a 14-acre industrial property in Khopoli — designed to assert a civic quality appropriate to a client-facing headquarters while responding honestly to its industrial context."
-        },
-        {
-          "_type": "fullWidthImageBlock",
-          "caption": "A precision steel manufacturer's office on a 14-acre industrial site. The building was designed to have civic quality — to look like it belonged to its neighbourhood, not just to the factory behind it.",
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": null
-        },
-        {
-          "_type": "pullQuoteBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "Corporate architecture at the scale of an industrial estate can still be thoughtful and dignified — it need not apologise for its context, but it need not be defined by it either."
-        },
-        {
-          "_type": "fullWidthImageBlock",
-          "caption": "The reception lobby was the point of encounter with clients and visitors. It needed to reflect the precision of what was made in the buildings behind it.",
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": null
-        },
-        {
-          "_type": "paragraphBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "A grand entrance space enables employees to work with leisure and complete peace of mind — a reminder that the quality of the working environment is itself a form of operational investment."
-        }
-      ],
-      "description": "Precision Metal Pvt. Ltd — exporters, suppliers, and manufacturers of steel bars and bright bars — have their manufacturing sheds on a 14-acre property in Khopoli, about 80km from Mumbai. The project was to design an office building that would cater to the overall needs of today's small corporate house.\n\nThis mid-sized office building offers a grand space and enables employees to work with leisure and complete peace of mind. The design responds to the industrial character of the surrounding site while asserting a civic quality appropriate to a client-facing headquarters building.\n\nThe building demonstrates that corporate architecture at the scale of an industrial estate can still be thoughtful and dignified — it need not apologise for its context, but it need not be defined by it either.",
-      "gallery": [
-        {
-          "alt": null,
-          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcBBAUG/8QAJBAAAgEDBAEFAQAAAAAAAAAAAQIDAAQFBhESITETFCJBYbH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAHBEAAgIDAQEAAAAAAAAAAAAAAQIAAyEiMQQU/9oADAMBAAIRAxEAPwCdL6iuMZhbdrVfXLEhlc/vmtq+1beuI1FvGnM9sD2v7Sww+SkxWMi5r7gRyMVDHj5+quDVr5UNA1mkWw5ckc7/AMrL+i5dRyVGtDmdrc3kUcxAIJPyJY9k0UkdYalycWeuEin4INtlA8dUUs+a59g3YYtqXBE//9k=",
-          "url": "https://cdn.sanity.io/images/il220i1c/production/94640122dd3c96f6c7a4a480fcbaa3be9e6f3e3f-1200x797.jpg"
-        }
-      ],
-      "location": "Khopoli, Maharashtra",
-      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/644ab142c8936a3865e8a299ece4d96db70280c4-1200x900.jpg",
-      "mainImageAlt": null,
-      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIDBAAFERITIQYHFSNCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAMAAgMAAAAAAAAAAAAAAAABAgMRITFR/9oADAMBAAIRAxEAPwAfxt5jW9fkarQDQUR2O/Yt+5k5VpLpKySBpbsgPuGQHiv1xwCa7XDjmknUJ3IB7YkKEFSRbNZ5JOtEQVb44VS9Nsqx1G5U8DmlLB6bW6hXfgMsDraiErRIyNui8csZWvSGu2f/2Q==",
-      "related": null,
-      "slug": "venus-wires-office-khopoli",
-      "testimonial": null,
-      "title": "Building for Precision Metals — Venus Wires",
-      "type": "Commercial",
-      "year": 2009
     },
     "unilazer-ventures-office": {
       "area": "6,500 sq ft",
@@ -2111,94 +1967,6 @@
       "title": "Mariwala Estate Annexe",
       "type": "Bungalows",
       "year": 2016
-    },
-    "gokul-cultural-centre-mumbai": {
-      "area": "75,000 sq ft",
-      "client": "South Kanara Brahmin's Association",
-      "contentBlocks": [
-        {
-          "_type": "paragraphBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "A mixed-use cultural centre for the South Kanara Brahmin's Association in Mumbai — new temple, marriage halls, dining spaces, dance academy, and guest house, all within a single building that honours its sacred programme while serving a contemporary community."
-        },
-        {
-          "_type": "fullWidthImageBlock",
-          "caption": "A building that holds a temple, two marriage halls, a dance academy, and a guest house — without any one function diminishing the others. The section is the design.",
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": null
-        },
-        {
-          "_type": "pullQuoteBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "The solution carefully layers the secular and sacred so that each is enhanced by proximity to the other — the hall and the temple in quiet dialogue."
-        },
-        {
-          "_type": "paragraphBlock",
-          "caption": null,
-          "captionLeft": null,
-          "captionRight": null,
-          "imageAlt": null,
-          "imageLeftAlt": null,
-          "imageLeftLqip": null,
-          "imageLeftUrl": null,
-          "imageLqip": null,
-          "imageRightAlt": null,
-          "imageRightLqip": null,
-          "imageRightUrl": null,
-          "imageUrl": null,
-          "text": "The building aligns itself to the axis of the existing temple and is designed to look both traditional and modern — a formal commitment that demanded precision in every material and proportional decision."
-        }
-      ],
-      "description": "The Kanada community wanted to redevelop a plot that housed an existing temple and marriage hall with a multi-storey building that utilises the FSI potential of the site. Keeping the sensitivity of the devotees and the people associated with it in mind, the new building aligns itself to the axis of the new temple and is designed to look both traditional and modern.\n\nThe building houses air-conditioned marriage halls, dining spaces, a dance academy, other training rooms, administrative offices, and a guest house with fully equipped bedrooms on the top floor.\n\nThe project posed a particular challenge: honouring the religious and community significance of the original temple while accommodating a contemporary mixed-use programme within a single cohesive architectural language. The solution carefully layers the secular and sacred so that each is enhanced by proximity to the other.",
-      "gallery": [
-        {
-          "alt": null,
-          "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAEEBQYHAv/EACYQAAIBAwMEAQUAAAAAAAAAAAECAwAEBQYREhMhMVEiI0FSYXH/xAAXAQEBAQEAAAAAAAAAAAAAAAAFBAID/8QAHxEAAgEEAgMAAAAAAAAAAAAAAAECAwQhMRITERRB/9oADAMBAAIRAxEAPwCEx+GIkRWX4gjf+Vpcum0m6kuHg6dvAgEgJ8kDuRRqm3gsraEQW/RZuzN+Vc2mWksM7cxJGZFuFWMgnsNx5pqvfNSTWgqlaqUXyeRpJpy1nCSKpXko3Bb70Vd4rSKKMK1uHPsmiuvsyWibrX0x7JZvM3RMmTXlCp2Qq243/VJm9R/Wna0idbkxqYXPjlUfd5N0JQRjj63pot200qrxUbn1vQvXji2NLBecLq69hxsCXck0k4HyI90VlOWzM8F88ajsPTEUVI6sIvxk2ppLR//Z",
-          "url": "https://cdn.sanity.io/images/il220i1c/production/70f39c5b2fea6356aa12a162f44f526162e2ada1-1344x1920.jpg"
-        }
-      ],
-      "location": "Mumbai",
-      "mainImage": "https://cdn.sanity.io/images/il220i1c/production/f20ce75718c804108617a2570bff6e9638936952-1344x1920.jpg",
-      "mainImageAlt": null,
-      "mainImageLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAUGAQQHCP/EACcQAAEEAgECBQUAAAAAAAAAAAEAAgMEBRESBiEHExUykSMxUWFx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUA/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEFCFhE0FR/9oADAMBAAIRAxEAPwC1yVGPG0Xywx8WRs27vvkVq4imMrjRZjIa8u0ATrsmfiVO6nQZHEwNZOCHD8KNwN+eCKrByHk8tH+qhLWTjmpPgBj0sZYrkuR+cRI8kkbQupVK1J1WEmNjTwGxtCdv+gm2f08/XeobWRivi6TIJG8YST7AlDrEz8ZWqwOa2WHbi8nWz+lnqKw2nb+jEOLxvRP2SX1JxcNxt+VGljTVFb1RVS5zqElogtNYwNA0TtCnBkXgewfKFvH2akf/2Q==",
-      "related": null,
-      "slug": "gokul-cultural-centre-mumbai",
-      "testimonial": null,
-      "title": "Gokul Cultural Centre",
-      "type": "Institutional",
-      "year": 2017
     },
     "bungalow-ahmedabad": {
       "area": "3,000 sq ft",
