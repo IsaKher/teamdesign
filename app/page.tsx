@@ -213,6 +213,7 @@ export default async function HomePage() {
                 blurDataURL={WARM_BLUR}
               />
             </div>
+            <p className={styles.principalCaption}>Mumbai, 1996–present</p>
           </div>
 
           <FadeUpReveal delay={0.1} className={styles.principalTextCol}>

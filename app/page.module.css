@@ -66,8 +66,8 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   padding: 0 var(--margin-page);
 }
 
@@ -178,7 +178,7 @@
 .stat {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   padding: 0 32px;
   border-right: 1px solid var(--color-rule);
 }
@@ -209,6 +209,7 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-secondary);
+  opacity: 0.7;
 }
 
 /* ─── Value proposition ────────────────────────────────────────────────── */
@@ -219,7 +220,7 @@
 
 .valueProp {
   font-family: var(--font-serif);
-  font-size: clamp(15px, 1.55vw, 21px);
+  font-size: clamp(17px, 1.8vw, 24px);
   font-weight: 300;
   font-style: italic;
   color: var(--color-text-secondary);
@@ -718,7 +719,7 @@
 
 .processRow {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px 1fr auto;
   gap: 64px;
   align-items: baseline;
   padding: 28px 0;
@@ -729,6 +730,22 @@
 
 .processRow:first-child { border-top: 1px solid var(--color-rule); }
 .processRow:hover { opacity: 0.6; }
+
+/* Arrow affordance — reveals on hover to signal the row is a link */
+.processRow::after {
+  content: '→';
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  align-self: center;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.processRow:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .processLeft {
   display: flex;
@@ -775,6 +792,7 @@
 
 @media (max-width: 768px) {
   .processRow { grid-template-columns: 1fr; gap: 8px; }
+  .processRow::after { display: none; }
   .processLeft { gap: 14px; }
 }
 
@@ -792,6 +810,16 @@
 }
 
 .principalImageCol {}
+
+.principalCaption {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  margin-top: 14px;
+}
 
 .principalImageWrap {
   position: relative;
@@ -1182,8 +1210,9 @@
     border: 1px solid var(--color-rule);
     box-sizing: border-box;
   }
-  /* Inner filled dot */
+  /* Inner filled dot — re-enable after display:none set at 768px breakpoint */
   .processRow::after {
+    display: block;
     content: '';
     position: absolute;
     left: 13px;
@@ -1192,6 +1221,9 @@
     height: 4px;
     border-radius: 50%;
     background: var(--color-text-secondary);
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
   .processLeft { flex-direction: column; gap: 3px; align-items: flex-start; }
   .processNumber { font-size: 11px; }
