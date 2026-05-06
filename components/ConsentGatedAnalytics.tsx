@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const GA_ID = 'G-7ZMY3J3689';
+const GA_ID = 'G-D6MV8606E5';
 
 const STORAGE_KEY = 'td_cookie_consent_v1';
 const CONSENT_EVENT = 'td:cookie-consent';
