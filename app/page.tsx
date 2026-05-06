@@ -20,9 +20,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Architecture & Interior Design — Mumbai | Team Design Architects',
+  title: 'Architecture & Interior Design, Mumbai | Team Design',
   description:
-    'Team Design Architects — architecture and interior design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work across India.',
+    'Architecture and interior design practice based in Mumbai. 25+ years, 300+ projects across residential, commercial, and institutional work in India.',
   keywords: [
     'architect Mumbai',
     'architecture firm Mumbai',

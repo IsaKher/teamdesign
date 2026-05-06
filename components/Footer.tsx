@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 import { STUDIO } from '@/lib/siteContent';
 import { getSiteSettings } from '@/lib/sanity';
+import ObfuscatedEmail from './ObfuscatedEmail';
 
 export default async function Footer() {
   const settings = await getSiteSettings();
@@ -28,7 +29,11 @@ export default async function Footer() {
             <span className={styles.name}>Team Design Architects</span>
             <span className={styles.meta}>
               Mumbai, India&ensp;·&ensp;
-              <a href={`mailto:${email}`}>{email}</a>&ensp;·&ensp;
+              <ObfuscatedEmail
+                user={email.split('@')[0]}
+                domain={email.split('@')[1]}
+                className={styles.emailLink}
+              />&ensp;·&ensp;
               <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a>
             </span>
           </div>

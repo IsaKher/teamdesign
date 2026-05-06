@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, DM_Sans, Josefin_Sans } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -27,12 +27,6 @@ const dmSans = DM_Sans({
   display: 'swap',
 });
 
-const josefinSans = Josefin_Sans({
-  subsets: ['latin'],
-  weight: ['100', '300'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -171,7 +165,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const phone = settings?.phone ?? STUDIO.phone;
 
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${josefinSans.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <head>
         {/* Warm up Sanity CDN connection before the browser needs it — free LCP win */}
         <link rel="preconnect" href="https://cdn.sanity.io" />
