@@ -83,7 +83,7 @@ export default function CookieBanner() {
       {view === 'banner' ? (
         <>
           <p className={styles.text}>
-            We use a small number of cookies — one to remember this choice, and (if you accept) anonymous analytics that help us understand which pages people read. We don&rsquo;t use advertising or tracking cookies. See our <Link href="/privacy">privacy policy</Link>.
+            We use cookies to remember this choice and (if you accept) to run Google Analytics, which helps us understand which pages people visit. We don&rsquo;t use advertising or tracking cookies. See our <Link href="/privacy">privacy policy</Link>.
           </p>
           <div className={styles.actions}>
             <button
@@ -137,7 +137,7 @@ export default function CookieBanner() {
             <div className={styles.toggleInfo}>
               <span className={styles.toggleLabel}>Analytics</span>
               <span className={styles.toggleHint}>
-                Anonymous, aggregated stats — page views, country, device type. Helps us see which work resonates and where the site is slow.
+                Google Analytics — page views, traffic sources, country, and device type. Data is sent to Google. Helps us understand which work resonates and improve the site.
               </span>
             </div>
             <label className={styles.toggle}>
