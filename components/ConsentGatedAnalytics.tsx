@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+
+const GA_ID = 'G-7ZMY3J3689';
 
 const STORAGE_KEY = 'td_cookie_consent_v1';
 const CONSENT_EVENT = 'td:cookie-consent';
@@ -57,6 +60,19 @@ export default function ConsentGatedAnalytics() {
 
   return (
     <>
+      {/* Google Analytics 4 — consent-gated */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}
+      </Script>
       <Analytics />
       <SpeedInsights />
     </>
