@@ -99,6 +99,74 @@ export default async function FeesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Is the first meeting free?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. The initial consultation carries no fee and no commitment. We listen to your project, ask the right questions, and tell you honestly whether and how we can help. If we\'re not the right fit, we\'ll say so.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can I hire you for just one phase — concept design only?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. We don\'t offer concept-only or partial engagements. We take on projects we can see through to completion. This protects the integrity of the design and ensures the building that gets built is the one that was designed.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What happens if I want to change the design after it\'s been approved?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Two consolidated revision rounds are included per phase. Changes requested after client sign-off — including scope changes, programme changes, or reversals of approved decisions — are treated as new work and billed at day rates.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do fees increase if the project budget grows?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Fees are a percentage of the actual construction cost, so they scale with the scope of works. This alignment is intentional — if the project grows, so does our workload. If it shrinks, so does our fee.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What exactly is included in site supervision?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Regular site visits at critical construction stages, review of contractor shop drawings, issuing clarifications and variation orders, snagging and defects documentation, and as-built drawings at handover. Government liaisoning — physical attendance at MCGM, MHADA, or other authorities — is a separate, segregated service.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Are your fees negotiable?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We meet or exceed the COA mandatory minimums on every project — these are non-negotiable by law. Our rates reflect 25+ years of practice, a full in-house team, and a commitment to seeing every project through to completion. We compete on quality and transparency, not on undercutting.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'When is GST charged and how is it invoiced?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'GST at 18% is applicable on all professional fees and documentation charges under Indian tax law. It is always invoiced separately with full GST-compliant documentation. Every figure on this page is exclusive of GST.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <div className={styles.pageHero}>
         <div className={styles.heroInner}>

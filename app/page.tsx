@@ -73,10 +73,11 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': ['LocalBusiness', 'ProfessionalService'],
+            '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
             name: 'Team Design Architects',
+            alternateName: 'Team Design',
             description:
-              'Architecture and interior design practice based in Mumbai, India. Founded 1996 by Tasadduq Kher. 300+ completed projects, 2M+ sq ft built. COA-registered.',
+              'Architecture and interior design practice based in Mumbai, India. Founded in 1996 by Tasadduq Kher. 300+ completed projects across residential, commercial, and institutional sectors. COA-registered.',
             url: 'https://teamdesignarchitects.com',
             logo: 'https://teamdesignarchitects.com/logo.png',
             image: 'https://teamdesignarchitects.com/hero-building.webp',
@@ -106,7 +107,8 @@ export default async function HomePage() {
                 address: { '@type': 'PostalAddress', addressLocality: 'Mumbai', addressCountry: 'IN' },
               },
             },
-            areaServed: { '@type': 'Country', name: 'India' },
+            areaServed: ['Mumbai', 'Maharashtra', 'India'],
+            knowsAbout: ['Architecture', 'Interior Design', 'Sustainable Design', 'IGBC', 'GRIHA', 'Residential Architecture', 'Commercial Architecture', 'Institutional Architecture'],
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
               name: 'Architecture & Design Services',
@@ -122,9 +124,7 @@ export default async function HomePage() {
               'iGEN Design Forum — 50 young practitioners shaping Indian architecture',
               'Featured in DuPont India & Corian Women Leadership in Architecture & Design',
             ],
-            sameAs: [
-              'https://teamdesignarchitects.com',
-            ],
+            sameAs: ['https://teamdesignarchitects.com'],
           }),
         }}
       />

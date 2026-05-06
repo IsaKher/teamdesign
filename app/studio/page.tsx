@@ -26,6 +26,35 @@ export const metadata: Metadata = {
 export default function StudioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Tasadduq Kher',
+            jobTitle: 'Principal Architect',
+            description: "Principal Architect and founder of Team Design Architects. Named one of India's 50 Most Talented Young Architects Under 35 by Architects & Interiors India. 25+ years of practice across residential, commercial, and institutional architecture.",
+            worksFor: {
+              '@type': 'Organization',
+              name: 'Team Design Architects',
+              url: 'https://teamdesignarchitects.com',
+            },
+            alumniOf: {
+              '@type': 'EducationalOrganization',
+              name: 'Rachana Sansad Academy of Architecture',
+              address: { '@type': 'PostalAddress', addressLocality: 'Mumbai', addressCountry: 'IN' },
+            },
+            knowsAbout: ['Architecture', 'Interior Design', 'Sustainable Design', 'IGBC', 'GRIHA', 'Residential Architecture', 'Commercial Architecture'],
+            award: [
+              "Named one of India's 50 Most Talented Young Architects Under 35 — Architects & Interiors India",
+              'iGEN Design Forum — 50 young practitioners shaping Indian architecture',
+              'Featured in DuPont India & Corian Women Leadership in Architecture & Design',
+            ],
+            url: 'https://teamdesignarchitects.com/studio',
+          }),
+        }}
+      />
       {/* ─── Page Hero ───────────────────────────────────────────── */}
       <div className={styles.pageHero}>
         <span className={styles.pageLabel}>About the Practice</span>

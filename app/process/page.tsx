@@ -116,6 +116,50 @@ export default async function ProcessPage() {
   const whatsapp = settings?.whatsapp ?? STUDIO.whatsappNumber;
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: "How to Work With an Architect — Team Design's 5-Phase Process",
+            description: 'Team Design takes every project through five structured phases, from the initial brief to post-occupancy handover. Architecture is not a commodity — each phase has defined deliverables, client sign-off points, and a clear scope.',
+            totalTime: 'P6M',
+            step: [
+              {
+                '@type': 'HowToStep',
+                position: 1,
+                name: 'Discovery',
+                text: 'Site visit, client brief, space programme, and project timeline. We spend time understanding who you are, how you live or work, what this building must accomplish, and what it must feel like. Duration: 2–4 weeks. Deliverables: site analysis report, client brief document, preliminary space programme, project timeline and fee proposal.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 2,
+                name: 'Concept Design',
+                text: 'Multiple design directions explored and tested against brief, budget, and site logic. Presented as sketches, moodboards, and models. Refined until the design direction is locked. Duration: 4–6 weeks. Deliverables: concept sketches and diagrams, moodboard and material references, preliminary floor plans and sections, outline cost estimate.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 3,
+                name: 'Design Development',
+                text: 'Complete design resolution — every room, detail, and material decided. Structural and MEP coordination, regulatory submission preparation, 3D renders and walkthroughs. Duration: 6–10 weeks. Deliverables: detailed architectural drawings, interior design specifications, 3D renders and walkthroughs, coordinated structural and MEP drawings, regulatory submission package.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 4,
+                name: 'Technical Documentation',
+                text: 'Full construction documentation package — working drawings, schedules, specifications, and Bill of Quantities. The documents contractors price from and build from. Duration: 4–6 weeks. Deliverables: construction drawings across all disciplines, material and finish schedules, door/window/joinery schedules, Bill of Quantities, tender documents and contractor evaluation.',
+              },
+              {
+                '@type': 'HowToStep',
+                position: 5,
+                name: 'Site Supervision',
+                text: 'Regular site visits, shop drawing review, variation control, and handover documentation. Design does not end when drawings are issued — we remain on site through construction to ensure the building that gets built is the one that was designed. Duration: duration of construction. Deliverables: site inspection reports, shop drawing review, variation orders and cost control, snagging and defects list, handover documentation and as-built drawings.',
+              },
+            ],
+          }),
+        }}
+      />
       {/* Page hero */}
       <div className={styles.pageHero}>
         <div className={styles.heroInner}>
