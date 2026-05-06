@@ -67,6 +67,68 @@ export default async function HomePage() {
 
   return (
     <>
+      {/* ─── Structured data — LocalBusiness + ProfessionalService ──────────── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': ['LocalBusiness', 'ProfessionalService'],
+            name: 'Team Design Architects',
+            description:
+              'Architecture and interior design practice based in Mumbai, India. Founded 1996 by Tasadduq Kher. 300+ completed projects, 2M+ sq ft built. COA-registered.',
+            url: 'https://teamdesignarchitects.com',
+            logo: 'https://teamdesignarchitects.com/logo.png',
+            image: 'https://teamdesignarchitects.com/hero-building.webp',
+            telephone: '+912227746767',
+            email: 'studio@teamdesign.in',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'A-145/6A, Pawane Village MIDC Road, Kopar Khairane',
+              addressLocality: 'Navi Mumbai',
+              addressRegion: 'Maharashtra',
+              postalCode: '400710',
+              addressCountry: 'IN',
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 19.1077,
+              longitude: 73.0081,
+            },
+            foundingDate: '1996',
+            founder: {
+              '@type': 'Person',
+              name: 'Tasadduq Kher',
+              jobTitle: 'Principal Architect',
+              alumniOf: {
+                '@type': 'EducationalOrganization',
+                name: 'Rachana Sansad Academy of Architecture',
+                address: { '@type': 'PostalAddress', addressLocality: 'Mumbai', addressCountry: 'IN' },
+              },
+            },
+            areaServed: { '@type': 'Country', name: 'India' },
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Architecture & Design Services',
+              itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Architectural Design' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sustainable Design' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Design Guidelines' } },
+              ],
+            },
+            award: [
+              "Named one of India's 50 Most Talented Young Architects Under 35 — Architects & Interiors India",
+              'iGEN Design Forum — 50 young practitioners shaping Indian architecture',
+              'Featured in DuPont India & Corian Women Leadership in Architecture & Design',
+            ],
+            sameAs: [
+              'https://teamdesignarchitects.com',
+            ],
+          }),
+        }}
+      />
+
       {/*
         Preload hint for the LCP carousel image. Now that CategoryFilmstrip is
         a server component, Next/Image's priority preload + this explicit hint

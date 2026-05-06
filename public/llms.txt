@@ -1,0 +1,41 @@
+# Team Design Architects
+
+> Architecture and interior design practice based in Mumbai, India.
+> Founded 1996 by Tasadduq Kher (Rachana Sansad Academy of Architecture).
+> 300+ completed projects, 500+ clients, 2M+ sq ft built. COA-registered.
+> Services: Architectural Design, Interior Design, Sustainable Design,
+> Corporate Design Guidelines.
+
+## Core Pages
+- [Home](https://teamdesignarchitects.com/): Practice overview, credentials, and principal biography
+- [Studio](https://teamdesignarchitects.com/studio): Firm history, values, services, and sustainability approach
+- [Portfolio](https://teamdesignarchitects.com/portfolio): Completed projects filtered by Residential, Commercial, Institutional, and Interiors
+- [Process](https://teamdesignarchitects.com/process): Five-phase project process with deliverables and typical timelines
+- [Fees](https://teamdesignarchitects.com/fees): COA-compliant fee structure with project cost estimator
+- [People](https://teamdesignarchitects.com/people): Principal architect and full team profiles
+- [Contact](https://teamdesignarchitects.com/contact): Inquiry form, WhatsApp, and studio address
+- [Journal](https://teamdesignarchitects.com/journal): Insights on architecture, process, materials, and sustainability
+
+## Principal
+Tasadduq Kher — B.Arch, Rachana Sansad Academy of Architecture, Mumbai.
+Founded Team Design in 1996. Named one of India's 50 Most Talented Young
+Architects Under 35 by Architects & Interiors India.
+
+## Notable Clients
+ICICI Bank, J&K Bank, Tata Capital, Kotak Mahindra Bank,
+Kishore V. Mariwala (Marico), Ronnie Screwvala (UTV / UpGrad), ITM Group
+
+## Awards & Recognition
+- Named one of India's 50 Most Talented Young Architects Under 35 — Architects & Interiors India
+- iGEN Design Forum — 50 young practitioners shaping Indian architecture
+- Featured in DuPont India & Corian Women Leadership in Architecture & Design
+
+## Contact
+- Phone: +91 22 2774 6767
+- Email: studio@teamdesign.in
+- Address: A-145/6A, Pawane Village MIDC Road, Kopar Khairane, Navi Mumbai 400710
+
+## Exclude
+- /admin
+- /studio-cms
+- /api
