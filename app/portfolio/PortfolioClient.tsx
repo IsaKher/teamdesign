@@ -247,7 +247,7 @@ function PortfolioContent({ projects }: Props) {
               {project.image ? (
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — ${project.type} by Team Design Architects, ${project.location}`}
                   fill
                   sizes="(max-width: 900px) 50vw, 33vw"
                   style={{ objectFit: 'cover' }}

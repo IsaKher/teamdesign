@@ -287,7 +287,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
           {nextProj.mainImage ? (
             <Image
               src={nextProj.mainImage}
-              alt={nextProj.title}
+              alt={`${nextProj.title} — ${nextProj.type} by Team Design Architects, ${nextProj.location}`}
               fill
               sizes="100vw"
               style={{ objectFit: 'cover' }}

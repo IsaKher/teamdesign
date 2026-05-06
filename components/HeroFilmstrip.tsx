@@ -98,7 +98,7 @@ export default function HeroFilmstrip() {
             >
               <Image
                 src={project.src}
-                alt={project.name}
+                alt={`${project.name} — ${project.type} by Team Design Architects`}
                 fill
                 sizes="280px"
                 style={{ objectFit: 'cover' }}
