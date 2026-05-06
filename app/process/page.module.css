@@ -18,7 +18,7 @@
 
 .heroTitle {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: var(--size-hero);
   font-weight: 300;
   line-height: 1.08;
   letter-spacing: var(--tracking-display);

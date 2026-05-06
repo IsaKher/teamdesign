@@ -15,7 +15,7 @@
 
 .pageTitle {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 10vw, 120px);
+  font-size: var(--size-hero);
   font-weight: 300;
   color: var(--color-text-primary);
   line-height: 1;
