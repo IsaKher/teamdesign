@@ -239,7 +239,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         }
         // 3. Scored fallback from allProjects (already fetched for prev/next nav)
         //    so the row never disappears even when Sanity autoRelated is empty
-        if (merged.length < 3) {
+        if (merged.length < 4) {
           const scored = allProjects
             .filter(p => !seen.has(p.slug))
             .map(p => ({
@@ -249,7 +249,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
             }))
             .sort((a, b) => b.score - a.score);
           for (const p of scored) {
-            if (merged.length >= 3) break;
+            if (merged.length >= 4) break;
             merged.push(p);
             seen.add(p.slug);
           }
@@ -298,37 +298,14 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         <Link href={`/portfolio/${prevProj.slug}`} className={styles.projectNavPrev}>
           <span>←</span><span>{prevProj.title}</span>
         </Link>
-        <span className={styles.projectNavCounter}>{position} / {TOTAL}</span>
-        <Link href="/portfolio" className={styles.projectNavAll}>
-          <span>Portfolio</span><span>→</span>
+        <Link href="/portfolio" className={styles.projectNavCounter}>
+          {position} / {TOTAL}
+        </Link>
+        <Link href={`/portfolio/${nextProj.slug}`} className={styles.projectNavNext}>
+          <span>{nextProj.title}</span><span>→</span>
         </Link>
       </nav>
 
-      {/* Next Project */}
-      <Link href={`/portfolio/${nextProj.slug}`} className={styles.nextProject}>
-        <div className={styles.nextProjectImageWrap}>
-          {nextProj.mainImage ? (
-            <Image
-              src={nextProj.mainImage}
-              alt={`${nextProj.title} — ${nextProj.type} by Team Design Architects, ${nextProj.location}`}
-              fill
-              sizes="100vw"
-              style={{ objectFit: 'cover' }}
-              placeholder="blur"
-              blurDataURL={nextProj.mainImageLqip ?? WARM_BLUR}
-              className={styles.nextProjectImage}
-            />
-          ) : (
-            <div style={{ position: 'absolute', inset: 0, background: 'var(--color-surface)' }} />
-          )}
-          <div className={styles.nextProjectOverlay} />
-        </div>
-        <div className={styles.nextProjectContent}>
-          <span className={styles.nextProjectLabel}>{position === TOTAL ? 'Back to Start' : 'Next Project'}</span>
-          <span className={styles.nextProjectTitle}>{nextProj.title}</span>
-          <span className={styles.nextProjectMeta}>{nextProj.type} · {nextProj.location}</span>
-        </div>
-      </Link>
     </>
   );
 }
