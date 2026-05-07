@@ -11,6 +11,11 @@ interface ContactInfo {
   whatsapp: string;
 }
 
+interface Props {
+  contact: ContactInfo;
+  initialType?: string;
+}
+
 type FieldErrors = Record<string, string>;
 
 function validateContact(name: string, email: string): FieldErrors {
@@ -22,7 +27,7 @@ function validateContact(name: string, email: string): FieldErrors {
   return e;
 }
 
-export default function ContactClient({ contact }: { contact: ContactInfo }) {
+export default function ContactClient({ contact, initialType = '' }: Props) {
   const router = useRouter();
   // No 'success' state — on success we navigate to /thank-you so analytics
   // and conversion tools can attribute the goal to a distinct URL.
@@ -212,7 +217,13 @@ export default function ContactClient({ contact }: { contact: ContactInfo }) {
                   { value: 'other', label: 'Not Sure Yet' },
                 ].map(({ value, label }) => (
                   <label key={value} className={styles.typeCard}>
-                    <input type="radio" name="type" value={value} className={styles.typeCardInput} />
+                    <input
+                      type="radio"
+                      name="type"
+                      value={value}
+                      className={styles.typeCardInput}
+                      defaultChecked={value === initialType}
+                    />
                     <span className={styles.typeCardLabel}>{label}</span>
                   </label>
                 ))}

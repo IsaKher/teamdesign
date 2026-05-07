@@ -26,7 +26,11 @@ import StudioMaps from '@/components/StudioMaps';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
-export default async function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: { type?: string; area?: string };
+}) {
   const settings = await getSiteSettings();
 
   const contact = {
@@ -45,7 +49,10 @@ export default async function ContactPage() {
         </p>
       </div>
 
-      <ContactClient contact={contact} />
+      <ContactClient
+        contact={contact}
+        initialType={searchParams.type ?? ''}
+      />
 
       {/* ─── Maps ────────────────────────────────────────────────────────── */}
       <StudioMaps />

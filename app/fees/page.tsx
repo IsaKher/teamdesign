@@ -27,33 +27,6 @@ export const metadata: Metadata = {
   },
 };
 
-const ADD_ONS = [
-  {
-    category: 'Visualisation',
-    title: 'Photorealistic 3D Renders',
-    price: '₹15,000 / view',
-    desc: 'Exterior or interior. One revision round per view included. Additional revisions billed separately.',
-  },
-  {
-    category: 'Visualisation',
-    title: 'Cinematic 3D Walkthrough',
-    price: '₹10,000 / 30 sec',
-    desc: 'Animated architectural walkthrough video. Custom assets, lighting & post-production included.',
-  },
-  {
-    category: 'Documentation',
-    title: 'Bill of Quantities (BOQ)',
-    price: 'Project-specific',
-    desc: 'Detailed material scheduling for rigorous contractor tendering and accurate budget control.',
-  },
-  {
-    category: 'Compliance',
-    title: 'Vastu Integration',
-    price: 'Day rate applicable',
-    desc: 'Requires all parameters in writing before concept begins. Post-approval changes trigger redesign fee.',
-  },
-];
-
 const PAYMENT_STAGES = [
   {
     step: '01',
@@ -108,59 +81,43 @@ export default async function FeesPage() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'Is the first meeting free?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. The initial consultation carries no fee and no commitment. We listen to your project, ask the right questions, and tell you honestly whether and how we can help. If we\'re not the right fit, we\'ll say so.',
-                },
+                name: 'How reliable is the fee estimate on this page?',
+                acceptedAnswer: { '@type': 'Answer', text: 'The estimator gives you a directional range based on current Mumbai market construction benchmarks — it\'s a starting point, not a commitment. Your actual fee depends on the confirmed scope, site conditions, and project complexity. The figure you will actually pay is agreed in a signed Letter of Appointment before any work begins.' },
               },
               {
                 '@type': 'Question',
-                name: 'Can I hire you for just one phase — concept design only?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'No. We don\'t offer concept-only or partial engagements. We take on projects we can see through to completion. This protects the integrity of the design and ensures the building that gets built is the one that was designed.',
-                },
+                name: 'I\'ve never hired an architect before. What does working with one actually look like?',
+                acceptedAnswer: { '@type': 'Answer', text: 'It starts with a free conversation — no preparation needed, no commitment required. We listen to what you want to build, what matters to you, and what you\'re working with. From there, the project moves through five structured phases — Discovery, Concept Design, Design Development, Technical Documentation, and Site Supervision — each with clear deliverables and your sign-off before we proceed.' },
               },
               {
                 '@type': 'Question',
-                name: 'What happens if I want to change the design after it\'s been approved?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Two consolidated revision rounds are included per phase. Changes requested after client sign-off — including scope changes, programme changes, or reversals of approved decisions — are treated as new work and billed at day rates.',
-                },
+                name: 'What\'s the difference between the architectural fee and the construction cost?',
+                acceptedAnswer: { '@type': 'Answer', text: 'The architectural fee is what you pay us — for design, drawings, coordination, and site supervision. The construction cost is what you pay the contractor who actually builds. These are entirely separate figures going to different parties. Our fee is calculated as a percentage of the construction cost.' },
               },
               {
                 '@type': 'Question',
-                name: 'Do fees increase if the project budget grows?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. Fees are a percentage of the actual construction cost, so they scale with the scope of works. This alignment is intentional — if the project grows, so does our workload. If it shrinks, so does our fee.',
-                },
+                name: 'How long does a project take from first meeting to completion?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Design and documentation typically takes 4–8 months. Construction varies widely — a residential interior might take 3–4 months; a new bungalow, 12–18 months. We give you a realistic timeline at the start of the project, not an optimistic one.' },
               },
               {
                 '@type': 'Question',
-                name: 'What exactly is included in site supervision?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Regular site visits at critical construction stages, review of contractor shop drawings, issuing clarifications and variation orders, snagging and defects documentation, and as-built drawings at handover. Government liaisoning — physical attendance at MCGM, MHADA, or other authorities — is a separate, segregated service.',
-                },
+                name: 'Can I hire you for just the design, and manage the construction myself?',
+                acceptedAnswer: { '@type': 'Answer', text: 'No. We only take on projects we can see through to completion. A building that is designed by one party and supervised by another almost always suffers. We stay on the project until handover.' },
               },
               {
                 '@type': 'Question',
-                name: 'Are your fees negotiable?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'We meet or exceed the COA mandatory minimums on every project — these are non-negotiable by law. Our rates reflect 25+ years of practice, a full in-house team, and a commitment to seeing every project through to completion. We compete on quality and transparency, not on undercutting.',
-                },
+                name: 'What happens if I want to make changes after the design is approved?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Two consolidated revision rounds are included in each phase. Changes requested after client sign-off are treated as new work and billed at day rates. We ask the right questions upfront so sign-offs mean something.' },
               },
               {
                 '@type': 'Question',
-                name: 'When is GST charged and how is it invoiced?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'GST at 18% is applicable on all professional fees and documentation charges under Indian tax law. It is always invoiced separately with full GST-compliant documentation. Every figure on this page is exclusive of GST.',
-                },
+                name: 'Do you work on projects outside Mumbai?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Yes. We have completed projects from Srinagar to Thrissur — hillside residences in Kashmir, coastal homes in Kerala, institutional buildings across Maharashtra. Distance has never been a constraint when the project is right.' },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is GST included in the figures shown, and how does payment work?',
+                acceptedAnswer: { '@type': 'Answer', text: 'All figures on this page exclude GST. GST at 18% applies to all professional fees and is invoiced separately with full documentation. Payment is structured in six stages, each linked to a completed and approved milestone.' },
               },
             ],
           }),
@@ -193,37 +150,9 @@ export default async function FeesPage() {
           <em className={styles.titleItalic}>fee range.</em>
         </h2>
         <p className={styles.sectionSub}>
-          Adjust for built-up area and project type. Figures include COA documentation charges and GST — based on current Mumbai construction cost benchmarks.
+          Answer two questions and get a ballpark in under a minute. Most people come here with no idea what to expect — that&apos;s exactly what this is for.
         </p>
         <FeeEstimator />
-      </section>
-
-      {/* ─── Premium Add-ons ─────────────────────────────────────────────── */}
-      <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionLabel}>Premium Add-on Services</span>
-          <span className={styles.sectionRule} />
-        </div>
-        <h2 className={styles.sectionTitle}>
-          Optional{' '}
-          <em className={styles.titleItalic}>add-on services.</em>
-        </h2>
-        <p className={styles.sectionSub}>
-          The following are billed separately. Requesting them without prior written agreement does not constitute an entitlement.
-        </p>
-        <div className={styles.addOnGrid}>
-          {ADD_ONS.map((item) => (
-            <div key={item.title} className={styles.addOnCard}>
-              <span className={styles.addOnCategory}>{item.category}</span>
-              <h3 className={styles.addOnTitle}>{item.title}</h3>
-              <div className={styles.addOnPrice}>{item.price}</div>
-              <p className={styles.addOnDesc}>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p className={styles.addOnDisclaimer}>
-          Government liaisoning — physical attendance at MCGM, MHADA, or other authorities — is a segregated service, never assumed within the architectural fee. The client bears sole responsibility for all statutory fees and approval timelines.
-        </p>
       </section>
 
       {/* ─── Payment Schedule ────────────────────────────────────────────── */}

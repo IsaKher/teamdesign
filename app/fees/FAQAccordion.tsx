@@ -5,32 +5,36 @@ import styles from './page.module.css';
 
 const FAQS = [
   {
-    q: 'Is the first meeting free?',
-    a: 'Yes. The initial consultation carries no fee and no commitment. We listen to your project, ask the right questions, and tell you honestly whether and how we can help. If we\'re not the right fit, we\'ll say so.',
+    q: 'How reliable is the fee estimate on this page?',
+    a: 'The estimator gives you a directional range based on current Mumbai market construction benchmarks — it\'s a starting point, not a commitment. Your actual fee depends on the confirmed scope, site conditions, and project complexity. The figure you will actually pay is agreed in a signed Letter of Appointment before any work begins. Treat this as a sense-check, not a quote.',
   },
   {
-    q: 'Can I hire you for just one phase — concept design only?',
-    a: 'No. We don\'t offer concept-only or partial engagements. We take on projects we can see through to completion. This protects the integrity of the design and ensures the building that gets built is the one that was designed.',
+    q: 'I\'ve never hired an architect before. What does working with one actually look like?',
+    a: 'It starts with a free conversation — no preparation needed, no commitment required. We listen to what you want to build, what matters to you, and what you\'re working with. If it\'s a fit, we send a fee proposal. From there, the project moves through five structured phases — Discovery, Concept Design, Design Development, Technical Documentation, and Site Supervision — each with clear deliverables and your sign-off before we proceed.',
   },
   {
-    q: 'What happens if I want to change the design after it\'s been approved?',
-    a: 'Two consolidated revision rounds are included per phase. Changes requested after client sign-off — including scope changes, programme changes, or reversals of approved decisions — are treated as new work and billed at day rates.',
+    q: 'What\'s the difference between the architectural fee and the construction cost?',
+    a: 'The architectural fee is what you pay us — for design, drawings, coordination, and site supervision. The construction cost is what you pay the contractor who actually builds. These are entirely separate figures going to different parties. Our fee is calculated as a percentage of the construction cost, so the two are related — but they are not the same thing.',
   },
   {
-    q: 'Do fees increase if the project budget grows?',
-    a: 'Yes. Fees are a percentage of the actual construction cost, so they scale with the scope of works. This alignment is intentional — if the project grows, so does our workload. If it shrinks, so does our fee.',
+    q: 'How long does a project take from first meeting to completion?',
+    a: 'It depends on scale and complexity. As a rough guide: design and documentation typically takes 4–8 months. Construction varies widely — a residential interior might take 3–4 months; a new bungalow, 12–18 months. We give you a realistic timeline at the start of the project, not an optimistic one. Delays in approvals, contractor availability, and client sign-offs are the most common variables.',
   },
   {
-    q: 'What exactly is included in site supervision?',
-    a: 'Regular site visits at critical construction stages, review of contractor shop drawings, issuing clarifications and variation orders, snagging and defects documentation, and as-built drawings at handover. Government liaisoning — physical attendance at MCGM, MHADA, or other authorities — is a separate, segregated service.',
+    q: 'Can I hire you for just the design, and manage the construction myself?',
+    a: 'No. We only take on projects we can see through to completion. A building that is designed by one party and supervised by another almost always suffers — decisions get made on site that contradict the design intent, and no one is accountable for the gap. We stay on the project until handover.',
   },
   {
-    q: 'Are your fees negotiable?',
-    a: 'We meet or exceed the COA mandatory minimums on every project — these are non-negotiable by law. Our rates reflect 25+ years of practice, a full in-house team, and a commitment to seeing every project through to completion. We compete on quality and transparency, not on undercutting.',
+    q: 'What happens if I want to make changes after the design is approved?',
+    a: 'Two consolidated revision rounds are included in each phase. If you want to change direction after signing off on a phase — reverse a decision, expand the scope, change the programme — that is treated as new work and billed at day rates. This is why our approval process is deliberate: we ask the right questions upfront so sign-offs mean something.',
   },
   {
-    q: 'When is GST charged and how is it invoiced?',
-    a: 'GST at 18% is applicable on all professional fees and documentation charges under Indian tax law. It is always invoiced separately with full GST-compliant documentation. Every figure on this page is exclusive of GST.',
+    q: 'Do you work on projects outside Mumbai?',
+    a: 'Yes. We have completed projects from Srinagar to Thrissur — hillside residences in Kashmir, coastal homes in Kerala, institutional buildings across Maharashtra. The studio is based in Mumbai but distance has never been a constraint when the project is right.',
+  },
+  {
+    q: 'Is GST included in the figures shown, and how does payment work?',
+    a: 'All figures on this page exclude GST. GST at 18% applies to all professional fees under Indian tax law and is invoiced separately with full GST-compliant documentation. Payment is structured in six stages, each linked to a completed and approved milestone — so you only ever pay for work that has been done and signed off.',
   },
 ];
 
