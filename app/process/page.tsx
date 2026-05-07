@@ -41,6 +41,11 @@ const PHASES = [
       'Preliminary space programme',
       'Project timeline & fee proposal',
     ],
+    clientRole: [
+      'Share site ownership documents and any existing surveys or drawings',
+      'Describe how you currently live or work — what you love and what frustrates you',
+      'Be available for a 2–3 hour site visit and initial briefing session',
+    ],
   },
   {
     number: '02',
@@ -54,6 +59,11 @@ const PHASES = [
       'Moodboard & material references',
       'Preliminary floor plans & sections',
       'Outline cost estimate',
+    ],
+    clientRole: [
+      'Attend two concept presentation sessions (in-studio or remote)',
+      'Consolidate all feedback and return it within 7 days of each presentation',
+      'Sign off on the chosen design direction before development begins',
     ],
   },
   {
@@ -70,6 +80,11 @@ const PHASES = [
       'Coordinated structural & MEP drawings',
       'Regulatory submission package',
     ],
+    clientRole: [
+      'Review and confirm material, finish, and fixture selections',
+      'Confirm your budget ceiling so documentation is calibrated correctly',
+      'Obtain any statutory permissions required by your local authority',
+    ],
   },
   {
     number: '04',
@@ -85,6 +100,11 @@ const PHASES = [
       'Bill of Quantities',
       'Tender documents & contractor evaluation',
     ],
+    clientRole: [
+      'Review and approve construction drawings before they are issued for tender',
+      'Appoint a structural consultant if not already engaged',
+      'Evaluate shortlisted contractors with us and confirm your appointment',
+    ],
   },
   {
     number: '05',
@@ -99,6 +119,11 @@ const PHASES = [
       'Variation orders & cost control',
       'Snagging & defects list',
       'Handover documentation & as-built drawings',
+    ],
+    clientRole: [
+      'Appoint and contract the selected contractor directly',
+      'Process contractor payment invoices on the agreed schedule',
+      'Be available for a weekly site update call or visit',
     ],
   },
 ];
@@ -196,16 +221,30 @@ export default async function ProcessPage() {
 
                   <p className={styles.phaseDesc}>{phase.description}</p>
 
-                  <div className={styles.deliverables}>
-                    <span className={styles.deliverablesLabel}>Deliverables</span>
-                    <ul className={styles.deliverablesList}>
-                      {phase.deliverables.map((d) => (
-                        <li key={d} className={styles.deliverableItem}>
-                          <span className={styles.deliverableDot} />
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className={styles.phaseBoxes}>
+                    <div className={styles.deliverables}>
+                      <span className={styles.deliverablesLabel}>Deliverables</span>
+                      <ul className={styles.deliverablesList}>
+                        {phase.deliverables.map((d) => (
+                          <li key={d} className={styles.deliverableItem}>
+                            <span className={styles.deliverableDot} />
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className={styles.clientRole}>
+                      <span className={styles.clientRoleLabel}>Your role</span>
+                      <ul className={styles.deliverablesList}>
+                        {phase.clientRole.map((c) => (
+                          <li key={c} className={styles.deliverableItem}>
+                            <span className={styles.clientRoleDot} />
+                            {c}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

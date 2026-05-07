@@ -222,21 +222,43 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         </div>
       </section>
 
-      {/* Related — editor-curated wins, auto-discovered fills remaining slots */}
+      {/* Similar Projects — editor-curated first, then auto-discovered, then
+          scored fallback from allProjects so the section never disappears */}
       {(() => {
+        type Card = { slug: string; title: string; type: string; location: string; image: string | null; lqip: string | null };
         const seen = new Set<string>([params.slug]);
-        const merged: typeof project.related = [];
-        for (const r of [...project.related, ...project.autoRelated]) {
-          if (!seen.has(r.slug) && merged.length < 3) {
-            merged.push(r);
-            seen.add(r.slug);
+        const merged: Card[] = [];
+
+        // 1. Editor-curated (highest priority)
+        for (const r of project.related) {
+          if (!seen.has(r.slug) && merged.length < 3) { merged.push(r); seen.add(r.slug); }
+        }
+        // 2. Auto-discovered via Sanity query (same location / same type)
+        for (const r of project.autoRelated) {
+          if (!seen.has(r.slug) && merged.length < 3) { merged.push(r); seen.add(r.slug); }
+        }
+        // 3. Scored fallback from allProjects (already fetched for prev/next nav)
+        //    so the row never disappears even when Sanity autoRelated is empty
+        if (merged.length < 3) {
+          const scored = allProjects
+            .filter(p => !seen.has(p.slug))
+            .map(p => ({
+              slug: p.slug, title: p.title, type: p.type,
+              location: p.location, image: p.mainImage, lqip: p.mainImageLqip,
+              score: (p.type === project.type ? 2 : 0) + (p.location === project.location ? 1 : 0),
+            }))
+            .sort((a, b) => b.score - a.score);
+          for (const p of scored) {
+            if (merged.length >= 3) break;
+            merged.push(p);
+            seen.add(p.slug);
           }
         }
+
         if (merged.length === 0) return null;
 
-        // Contextual header: location-based when at least one match shares
-        // the city; type-based otherwise.
-        const sharesCity = merged.some(r => r.location && r.location === project.location);
+        // Contextual header
+        const sharesCity = merged.some(r => r.location === project.location);
         const headerText = sharesCity
           ? `More projects in ${project.location}`
           : `More ${project.type} projects`;
@@ -244,7 +266,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         return (
           <section className={styles.related}>
             <div className={styles.relatedHeader}>
-              <span className="label">Continue Browsing</span>
+              <span className={styles.relatedEyebrow}>Continue Browsing</span>
               <h2 className={styles.relatedTitle}>{headerText}</h2>
             </div>
             <div className={styles.relatedGrid}>
@@ -263,6 +285,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                   </div>
                   <span className={styles.relatedType}>{r.type}</span>
                   <span className={styles.relatedName}>{r.title}</span>
+                  <span className={styles.relatedLocation}>{r.location}</span>
                 </Link>
               ))}
             </div>
