@@ -654,7 +654,6 @@
 
 /* ─── CTA ────────────────────────────────────────────────────────────────── */
 .cta {
-  border-top: 1px solid var(--color-rule);
   padding: 100px var(--margin-page);
 }
 
