@@ -67,8 +67,6 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
 
   const TOTAL = allProjects.length;
   const idx = allProjects.findIndex(p => p.slug === params.slug);
-  const position = idx + 1;
-  const prevProj = allProjects[(idx - 1 + TOTAL) % TOTAL];
   const nextProj = allProjects[(idx + 1) % TOTAL];
 
   const projectJsonLd = {
@@ -293,18 +291,6 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
         );
       })()}
 
-      {/* Project nav */}
-      <nav className={styles.projectNav}>
-        <Link href={`/portfolio/${prevProj.slug}`} className={styles.projectNavPrev}>
-          <span>←</span><span>{prevProj.title}</span>
-        </Link>
-        <Link href="/portfolio" className={styles.projectNavCounter}>
-          {position} / {TOTAL}
-        </Link>
-        <Link href={`/portfolio/${nextProj.slug}`} className={styles.projectNavNext}>
-          <span>{nextProj.title}</span><span>→</span>
-        </Link>
-      </nav>
 
     </>
   );
