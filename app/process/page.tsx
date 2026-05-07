@@ -103,6 +103,8 @@ const PHASES = [
   },
 ];
 
+const DISCOVERY_IMAGE = '/images/Discovery.png';
+
 // Parallax images shown between phases — narrative order
 const PARALLAX_IMAGES = [
   '/images/Concept%20Design.webp',           // after Discovery
@@ -173,6 +175,13 @@ export default async function ProcessPage() {
 
       {/* Phases interleaved with parallax panels */}
       <div className={styles.phasesTop} />
+
+      {/* Discovery stage image */}
+      <div
+        className={styles.parallaxPanel}
+        style={{ backgroundImage: `url(${DISCOVERY_IMAGE})` }}
+        aria-hidden="true"
+      />
 
       {PHASES.map((phase, i) => (
         <div key={phase.number}>
