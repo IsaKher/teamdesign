@@ -652,10 +652,10 @@
   margin: 0;
 }
 
-/* ─── CTA — dark close ───────────────────────────────────────────────────── */
+/* ─── CTA ────────────────────────────────────────────────────────────────── */
 .cta {
+  border-top: 1px solid var(--color-rule);
   padding: 100px var(--margin-page);
-  background: #3B1E08;
 }
 
 .ctaInner { max-width: 620px; }
@@ -666,7 +666,7 @@
   font-size: var(--size-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.5);
+  color: var(--color-text-secondary);
   margin-bottom: 16px;
 }
 
@@ -676,7 +676,7 @@
   font-weight: 300;
   line-height: var(--lh-display);
   letter-spacing: var(--tracking-heading);
-  color: #F4EEE6;
+  color: var(--color-text-primary);
   margin-bottom: 20px;
 }
 
@@ -686,7 +686,7 @@
   font-weight: 300;
   line-height: var(--lh-body);
   letter-spacing: var(--tracking-body);
-  color: rgba(244, 238, 230, 0.65);
+  color: var(--color-text-secondary);
   margin-bottom: 40px;
 }
 
@@ -703,8 +703,8 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   text-decoration: none;
-  color: #F4EEE6;
-  border-bottom: 1px solid rgba(244, 238, 230, 0.4);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   transition: opacity 0.2s;
 }
