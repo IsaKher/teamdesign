@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 import ContactClient from './ContactClient';
-import StudioMapWrapper from '@/components/StudioMapWrapper';
+import StudioMaps from '@/components/StudioMaps';
 import { getSiteSettings } from '@/lib/sanity';
 import { STUDIO } from '@/lib/siteContent';
 
@@ -47,10 +47,8 @@ export default async function ContactPage() {
 
       <ContactClient contact={contact} />
 
-      {/* ─── Map ─────────────────────────────────────────────────────────── */}
-      <div className={styles.mapSection}>
-        <StudioMapWrapper />
-      </div>
+      {/* ─── Maps ────────────────────────────────────────────────────────── */}
+      <StudioMaps />
     </>
   );
 }

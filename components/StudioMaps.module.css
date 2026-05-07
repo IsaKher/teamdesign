@@ -1,0 +1,89 @@
+/* ─── Two-column map grid ─────────────────────────────────────────────── */
+.mapsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--color-rule);
+}
+
+.studioCol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Divider between the two columns */
+.studioCol:first-child {
+  border-right: 1px solid var(--color-rule);
+}
+
+/* ─── Info strip above each map ───────────────────────────────────────── */
+.studioInfo {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--color-rule);
+  flex-wrap: wrap;
+}
+
+.studioLabel {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.studioAddress {
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.directionsLink {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.directionsLink:hover {
+  color: var(--color-text-primary);
+}
+
+/* ─── Map iframe ──────────────────────────────────────────────────────── */
+.mapWrap {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  display: block;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .mapsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studioCol:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .studioInfo {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .mapWrap {
+    height: 360px;
+  }
+}
