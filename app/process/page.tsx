@@ -103,12 +103,13 @@ const PHASES = [
   },
 ];
 
-// Parallax images shown between phases — narrative order
+// Parallax images shown after each phase — one per phase
 const PARALLAX_IMAGES = [
-  '/images/Concept%20Design.webp',           // after Discovery
-  '/images/Design%20Development.webp',       // after Concept Design
-  '/images/Technical%20Documentation.webp',  // after Design Development
-  '/images/Site%20Supervision.webp',         // after Technical Documentation
+  '/images/Discovery.jpg',                   // after Discovery
+  '/images/Concept%20Design.jpg',            // after Concept Design
+  '/images/Design%20Development.jpg',        // after Design Development
+  '/images/Technical%20Documentation.jpg',   // after Technical Documentation
+  '/images/Site%20Supervision.jpg',          // after Site Supervision
 ];
 
 export default async function ProcessPage() {
@@ -211,14 +212,12 @@ export default async function ProcessPage() {
             </FadeIn>
           </section>
 
-          {/* Parallax image panel between phases */}
-          {i < PHASES.length - 1 && (
-            <div
-              className={styles.parallaxPanel}
-              style={{ backgroundImage: `url(${PARALLAX_IMAGES[i]})` }}
-              aria-hidden="true"
-            />
-          )}
+          {/* Parallax image panel after each phase */}
+          <div
+            className={styles.parallaxPanel}
+            style={{ backgroundImage: `url(${PARALLAX_IMAGES[i]})` }}
+            aria-hidden="true"
+          />
         </div>
       ))}
 
