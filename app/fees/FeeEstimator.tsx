@@ -70,7 +70,6 @@ export default function FeeEstimator() {
   const [type, setType]               = useState<ProjectType | null>(null);
   const [area, setArea]               = useState<number>(1500);
   const [activePreset, setActivePreset] = useState<number | null>(null);
-  const [showBreakdown, setShowBreakdown] = useState(false);
 
   const sliderPct = `${Math.round(((area - 300) / (15000 - 300)) * 100)}%`;
 
@@ -213,39 +212,29 @@ export default function FeeEstimator() {
             </p>
           </div>
 
-          {/* Breakdown toggle */}
-          <button
-            className={styles.breakdownToggle}
-            onClick={() => setShowBreakdown(v => !v)}
-          >
-            <span>{showBreakdown ? 'Hide breakdown' : 'How is this calculated?'}</span>
-            <span className={`${styles.faqIcon} ${showBreakdown ? styles.faqIconOpen : ''}`}>+</span>
-          </button>
-
-          {showBreakdown && (
-            <div className={styles.feeBreakdown}>
-              <div className={styles.feeRow}>
-                <span>Est. construction / works cost</span>
-                <span>{fmtINR(constLow)} – {fmtINR(constHigh)}</span>
-              </div>
-              <div className={styles.feeRow}>
-                <span>Professional fee ({PCT_LABEL[type]} of works cost)</span>
-                <span>{fmtINR(feeLow)} – {fmtINR(feeHigh)}</span>
-              </div>
-              <div className={styles.feeRow}>
-                <span>Documentation charges (+10%)</span>
-                <span>{fmtINR(docLow)} – {fmtINR(docHigh)}</span>
-              </div>
-              <div className={styles.feeRow}>
-                <span>GST at 18%</span>
-                <span>{fmtINR(gstLow)} – {fmtINR(gstHigh)}</span>
-              </div>
-              <div className={`${styles.feeRow} ${styles.feeRowTotal}`}>
-                <span>Total payable (incl. GST)</span>
-                <span>{fmtINR(totalLow)} – {fmtINR(totalHigh)}</span>
-              </div>
+          {/* Breakdown — always visible */}
+          <div className={styles.feeBreakdown}>
+            <div className={styles.feeRow}>
+              <span>Est. construction / works cost</span>
+              <span>{fmtINR(constLow)} – {fmtINR(constHigh)}</span>
             </div>
-          )}
+            <div className={styles.feeRow}>
+              <span>Professional fee ({PCT_LABEL[type]} of works cost)</span>
+              <span>{fmtINR(feeLow)} – {fmtINR(feeHigh)}</span>
+            </div>
+            <div className={styles.feeRow}>
+              <span>Documentation charges (+10%)</span>
+              <span>{fmtINR(docLow)} – {fmtINR(docHigh)}</span>
+            </div>
+            <div className={styles.feeRow}>
+              <span>GST at 18%</span>
+              <span>{fmtINR(gstLow)} – {fmtINR(gstHigh)}</span>
+            </div>
+            <div className={`${styles.feeRow} ${styles.feeRowTotal}`}>
+              <span>Total payable (incl. GST)</span>
+              <span>{fmtINR(totalLow)} – {fmtINR(totalHigh)}</span>
+            </div>
+          </div>
 
           {/* CTA */}
           <div className={styles.estimatorCta}>
@@ -259,10 +248,10 @@ export default function FeeEstimator() {
 
           {/* Change links */}
           <div className={styles.changeLinks}>
-            <button className={styles.changeLink} onClick={() => { setStep(1); setShowBreakdown(false); }}>
+            <button className={styles.changeLink} onClick={() => setStep(1)}>
               ← Change project type
             </button>
-            <button className={styles.changeLink} onClick={() => { setStep(2); setShowBreakdown(false); }}>
+            <button className={styles.changeLink} onClick={() => setStep(2)}>
               ← Change size
             </button>
           </div>

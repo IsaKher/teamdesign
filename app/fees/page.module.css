@@ -147,7 +147,7 @@
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.4);
+  color: rgba(244, 238, 230, 0.70);
 }
 
 /* ─── Step content ───────────────────────────────────────────────────────── */
@@ -168,7 +168,7 @@
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.45);
+  color: rgba(244, 238, 230, 0.75);
   margin-bottom: 28px;
 }
 
@@ -417,7 +417,7 @@
   font-size: 13px;
   font-weight: 300;
   line-height: 1.75;
-  color: rgba(244, 238, 230, 0.55);
+  color: rgba(244, 238, 230, 0.80);
 }
 
 /* Breakdown toggle */
@@ -454,11 +454,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 13px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.6);
+  color: rgba(244, 238, 230, 0.90);
   letter-spacing: 0.01em;
 }
 
@@ -500,7 +500,7 @@
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 300;
-  color: rgba(244, 238, 230, 0.4);
+  color: rgba(244, 238, 230, 0.80);
   line-height: 1.5;
 }
 
@@ -518,7 +518,7 @@
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(244, 238, 230, 0.3);
+  color: rgba(244, 238, 230, 0.65);
   background: none;
   border: none;
   padding: 0;
@@ -526,7 +526,7 @@
   transition: color 0.2s;
 }
 
-.changeLink:hover { color: rgba(244, 238, 230, 0.6); }
+.changeLink:hover { color: rgba(244, 238, 230, 1.0); }
 
 /* ─── Payment Staircase ──────────────────────────────────────────────────── */
 .stairsWrap {
