@@ -8,11 +8,10 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import FadeUpReveal from '@/components/FadeUpReveal';
 import MagneticButton from '@/components/MagneticButton';
 import CategoryFilmstrip from '@/components/CategoryFilmstrip';
-import ReadMoreBio from '@/components/ReadMoreBio';
 import ReadMoreIntro from '@/components/ReadMoreIntro';
 import ThemeColorSync from '@/components/ThemeColorSync';
-import { WARM_BLUR } from '@/lib/siteContent';
-import { getTestimonials, getSiteSettings } from '@/lib/sanity';
+import { getTestimonials, getSiteSettings, getTeamMembers } from '@/lib/sanity';
+import TeamCarousel from '@/components/TeamCarousel';
 
 /** SSR-time theme colour — dark to match the filmstrip before JS runs */
 export const viewport: Viewport = {
@@ -57,9 +56,10 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [rawTestimonials, settings] = await Promise.all([
+  const [rawTestimonials, settings, teamMembers] = await Promise.all([
     getTestimonials(),
     getSiteSettings(),
+    getTeamMembers(),
   ]);
   const testimonials = rawTestimonials.filter(
     (t, i, arr) => arr.findIndex(x => x.quote === t.quote && x.name === t.name && x.title === t.title) === i
@@ -260,49 +260,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Principal ───────────────────────────────────────────────────── */}
-      <section className={styles.principal}>
-        <div className={styles.principalInner}>
-          <div className={styles.principalImageCol}>
-            <div className={styles.principalImageWrap}>
-              <Image
-                src="/tasadduq-kher.webp"
-                alt="Tasadduq Kher — Principal Architect"
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                placeholder="blur"
-                blurDataURL={WARM_BLUR}
-              />
-            </div>
-            <p className={styles.principalCaption}>Mumbai, 1996–present</p>
-          </div>
-
-          <FadeUpReveal delay={0.1} className={styles.principalTextCol}>
-            <span className="label">Principal Architect</span>
-            <h2 className={styles.principalName}>Tasadduq Kher</h2>
-            <p className={styles.principalBio}>
-              Tasadduq Kher founded Team Design in 1996 after graduating from Rachana Sansad Academy of Architecture — one of India&apos;s most respected architectural institutions. Over twenty-five years, he has led a practice that has shaped Mumbai&apos;s residential, commercial, and institutional landscape.
-            </p>
-            <ReadMoreBio>
-              <p className={styles.principalBio}>
-                His approach begins with understanding how people live and work — then finding the design logic that serves those needs precisely. The result is work that is quiet rather than declarative, and enduring rather than fashionable.
-              </p>
-            </ReadMoreBio>
-            <div className={styles.principalCredentials}>
-              <div className={styles.credential}>
-                <span className={styles.credValue}>B.Arch</span>
-                <span className={styles.credLabel}>Rachana Sansad Academy of Architecture, Mumbai</span>
-              </div>
-              <div className={styles.credential}>
-                <span className={styles.credValue}>1996</span>
-                <span className={styles.credLabel}>Year Practice Founded</span>
-              </div>
-            </div>
-            <Link href="/people" className={styles.principalLink}>Meet the Team →</Link>
-          </FadeUpReveal>
-        </div>
-      </section>
+      {/* ─── Team Carousel ───────────────────────────────────────────────── */}
+      <TeamCarousel members={teamMembers} />
 
       {/* ─── How We Work ─────────────────────────────────────────────────── */}
       <section className={styles.processSection}>

@@ -1,0 +1,242 @@
+/* ─── Section wrapper ────────────────────────────────────────────────────── */
+.section {
+  padding: var(--margin-section) var(--margin-page);
+}
+
+/* ─── Two-column layout ──────────────────────────────────────────────────── */
+.inner {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1200px;
+}
+
+/* ─── Left column: card stack + name tabs ───────────────────────────────── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── Card stack ─────────────────────────────────────────────────────────── */
+.stack {
+  position: relative;
+}
+
+/* Invisible sizer — gives the stack its natural height from the front card */
+.stackSizer {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Elliptical drop shadow beneath the stack */
+.shadow {
+  position: absolute;
+  bottom: -14px;
+  left: 6%;
+  right: -4%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(20, 16, 12, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── Card base reset (all cards are <button> elements) ─────────────────── */
+.cardFront,
+.cardBack,
+.cardHidden {
+  position: absolute;
+  overflow: hidden;
+  background: var(--color-ground-dark);
+  border: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: default;
+  display: block;
+}
+
+/* Front card — full size, on top */
+.cardFront {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Back card — peeks out to the right and below, dimmed */
+.cardBack {
+  top: 4%;
+  left: 5%;
+  right: -5%;
+  bottom: -4%;
+  z-index: 1;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.cardBack:hover {
+  opacity: 0.6;
+}
+
+/* Hidden cards — invisible, non-interactive */
+.cardHidden {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─── Placeholder initials (no photo) ───────────────────────────────────── */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  opacity: 0.3;
+}
+
+/* ─── Name tabs — one per member ─────────────────────────────────────────── */
+.nameTabs {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.nameTab {
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  padding: 6px 14px 6px 0;
+  margin-right: 14px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  line-height: 1;
+}
+.nameTab:hover {
+  color: var(--color-text-primary);
+}
+
+.nameTabActive {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-text-secondary);
+}
+
+/* ─── Right column: bio ──────────────────────────────────────────────────── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 3.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-text-primary);
+  margin-top: -4px;
+}
+
+.bio {
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  font-weight: 300;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-text-secondary);
+  max-width: var(--body-max-width);
+}
+
+/* ─── Divider + credentials ──────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--color-rule);
+}
+
+.credentials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 28px 32px;
+  padding-top: 4px;
+}
+
+.cred {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.credValue {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.credLabel {
+  font-family: var(--font-sans);
+  font-size: var(--size-meta);
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .left {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px var(--margin-page);
+  }
+  .inner {
+    gap: 28px;
+  }
+  .name {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+  .credentials {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
