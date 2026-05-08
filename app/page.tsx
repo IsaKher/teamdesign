@@ -64,6 +64,8 @@ export default async function HomePage() {
   const testimonials = rawTestimonials.filter(
     (t, i, arr) => arr.findIndex(x => x.quote === t.quote && x.name === t.name && x.title === t.title) === i
   );
+  // Homepage carousel shows only the two principals — Tasadduq & Zainab
+  const carouselMembers = teamMembers.filter(m => m.tier === 'principal' || m.tier === 'featured');
 
   return (
     <>
@@ -261,7 +263,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Team Carousel ───────────────────────────────────────────────── */}
-      <TeamCarousel members={teamMembers} />
+      <TeamCarousel members={carouselMembers} />
 
       {/* ─── How We Work ─────────────────────────────────────────────────── */}
       <section className={styles.processSection}>
