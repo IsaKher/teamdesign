@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-05-06T18:42:22.790Z",
+  "builtAt": "2026-05-08T01:10:38.301Z",
   "projects": [
     {
       "area": "150,000 sq ft",
@@ -5058,8 +5058,8 @@
       "name": "Tasadduq Kher",
       "orderRank": 1,
       "photoAlt": null,
-      "photoLqip": null,
-      "photoUrl": null,
+      "photoLqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCBAYH/8QAJhAAAgIBAwMDBQAAAAAAAAAAAQIDBAUABhESITETIkEUUXGBsf/EABcBAAMBAAAAAAAAAAAAAAAAAAMEBQL/xAAeEQACAgMAAwEAAAAAAAAAAAABAgARAwQhEkHB8P/aAAwDAQACEQMRAD8AjgMnubb1eDF46vCfUYguq+8E6q567uT6yu+We62PkPQzDsA3PjnTTaFzNU87XntUkl9pUBT8nwdP9/Xs7LgIxfpQxwSzKvRH3I7886URbTl8h1mNrXcVVEkEkk7ukjBiX+edGs3dqyrkbhC8hpmbxo0m+vbE/BNiqjrEPuCrlYJ7k8NfpbsjyAk/rWnl3Lmr0V2GcpL6EgVVKdvyeNM02DiMe7zuss8yjqVpHJ4I0tjyBq8PHEgZ4mdiPJ4OrWrjGPC4A/VJ+Xjr2VpqdyRy8xpKzd+ASP7o1y/MbmvPkZj6jefvo1LOw/oQ/lP/2Q==",
+      "photoUrl": "https://cdn.sanity.io/images/il220i1c/production/c210b1071ef74ac49c10fad52371bb7078f6c207-1024x1536.webp",
       "role": "Founder & Principal Architect",
       "tier": "principal"
     },
@@ -5068,11 +5068,11 @@
       "bio": "Zainab co-drives the design direction of the practice alongside Tasadduq. Registered with the Council of Architecture, New Delhi, she was recognised by Architects & Interiors India magazine in 2016 as one of India's top 50 architects under the age of 35. Her intellectually rigorous approach to the analysis and interpretation of a client brief informs every project she leads.",
       "education": "B.Arch with Honours, Academy of Architecture, Mumbai (2004)",
       "founding": null,
-      "name": "Zainab (Xen)",
+      "name": "Zainab Sarawala",
       "orderRank": 2,
       "photoAlt": null,
-      "photoLqip": null,
-      "photoUrl": null,
+      "photoLqip": "data:image/png;base64,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",
+      "photoUrl": "https://cdn.sanity.io/images/il220i1c/production/a5f9aa8e4fe91a5c2364fd2c0e5266b984b9a5cc-1086x1448.png",
       "role": "Partner & Head of Design",
       "tier": "featured"
     },
