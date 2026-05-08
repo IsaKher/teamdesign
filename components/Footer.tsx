@@ -42,6 +42,7 @@ export default async function Footer() {
         <nav className={styles.nav} aria-label="Footer navigation">
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/studio">Studio</Link>
+          <Link href="/people">People</Link>
           <Link href="/journal">Journal</Link>
           <Link href="/process">Process</Link>
           <Link href="/fees">Fees</Link>
